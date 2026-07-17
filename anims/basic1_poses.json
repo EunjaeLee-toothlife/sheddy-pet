@@ -1,0 +1,8 @@
+{
+  "name": "basic1_pose",
+  "ref": "refs/chibi_base.png",
+  "frames": [
+    "Pose: standing exactly like the reference, but her head is turned to HER RIGHT (viewer's left), looking sideways curiously with open eyes, small curious mouth, body still facing front, arms at her sides.",
+    "Pose: standing exactly like the reference, but her head is clearly rotated to face the RIGHT side of the frame: nose pointing right, we see more of her left cheek, pupils positioned at the right edge of her eyes, looking sideways curiously, small curious mouth, body still facing front, arms at her sides. The small lemon-slice hair clip stays in her bangs exactly where it is in the reference image, do not mirror the character."
+  ]
+}

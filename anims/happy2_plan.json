@@ -1,0 +1,31 @@
+{
+  "name": "happy2",
+  "base": "sprites/idle1_donor/donor_00.png",
+  "poses": {
+    "wave": "sprites/happy2_poses/happy2_pose_00.png"
+  },
+  "match_to_base": true,
+  "no_scale_poses": ["wave"],
+  "parts": {
+    "loop": [
+      { "img": "base" },
+      { "img": "base" },
+      { "img": "wave" },
+      { "img": "wave", "deg": 1.6, "dy": -0.5 },
+      { "img": "wave", "deg": 2.8, "dy": -1.0 },
+      { "img": "wave", "deg": 3.2, "dy": -1.2 },
+      { "img": "wave", "deg": 2.4, "dy": -0.8 },
+      { "img": "wave", "deg": 1.2, "dy": -0.4 },
+      { "img": "wave" },
+      { "img": "wave", "deg": -1.2, "dy": -0.4 },
+      { "img": "wave", "deg": -2.0, "dy": -0.8 },
+      { "img": "wave", "deg": -2.4, "dy": -1.0 },
+      { "img": "wave", "deg": -2.0, "dy": -0.8 },
+      { "img": "wave", "deg": -1.2, "dy": -0.4 },
+      { "img": "wave" },
+      { "img": "wave" },
+      { "img": "base" },
+      { "img": "base" }
+    ]
+  }
+}

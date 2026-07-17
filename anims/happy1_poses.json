@@ -1,0 +1,8 @@
+{
+  "name": "happy1_pose",
+  "ref": "refs/chibi_base.png",
+  "frames": [
+    "Pose: standing, both hands rising toward her chest mid-motion, fingers loosely open, eyes beginning to curve into happy arcs, smile starting to grow, cheeks slightly blushing.",
+    "Pose: standing, both hands clasped together in front of her chest, eyes closed in upward happy arcs, big joyful smile, rosy blushing cheeks, radiating happiness."
+  ]
+}

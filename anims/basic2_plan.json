@@ -1,0 +1,32 @@
+{
+  "name": "basic2",
+  "base": "sprites/idle1_donor/donor_00.png",
+  "poses": {
+    "mid": "sprites/basic2_poses/basic2_pose_00.png",
+    "full": "sprites/basic2_poses/basic2_pose_01.png"
+  },
+  "match_to_base": true,
+  "no_scale_poses": ["mid", "full"],
+  "parts": {
+    "loop": [
+      { "img": "base" },
+      { "img": "base" },
+      { "img": "mid" },
+      { "img": "mid" },
+      { "img": "full", "dy": -0.5 },
+      { "img": "full", "deg": 0.6, "dy": -1.2 },
+      { "img": "full", "deg": 1.2, "dy": -1.8 },
+      { "img": "full", "deg": 0.9, "dy": -2.2 },
+      { "img": "full", "deg": 0.3, "dy": -2.5 },
+      { "img": "full", "deg": -0.3, "dy": -2.5 },
+      { "img": "full", "deg": -0.9, "dy": -2.2 },
+      { "img": "full", "deg": -1.2, "dy": -1.8 },
+      { "img": "full", "deg": -0.6, "dy": -1.2 },
+      { "img": "full", "dy": -0.8 },
+      { "img": "full", "dy": -0.4 },
+      { "img": "mid" },
+      { "img": "mid" },
+      { "img": "base" }
+    ]
+  }
+}

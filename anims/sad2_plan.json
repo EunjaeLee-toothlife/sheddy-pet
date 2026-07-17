@@ -1,0 +1,31 @@
+{
+  "name": "sad2",
+  "base": "sprites/idle1_donor/donor_00.png",
+  "poses": {
+    "crouch": "sprites/sad_poses/sad_pose_01.png"
+  },
+  "match_to_base": true,
+  "no_scale_poses": ["crouch"],
+  "parts": {
+    "loop": [
+      { "img": "crouch" },
+      { "img": "crouch", "dy": 0.25 },
+      { "img": "crouch", "dy": 0.5, "deg": 0.25 },
+      { "img": "crouch", "dy": 0.75, "deg": 0.5 },
+      { "img": "crouch", "dy": 1.0, "deg": 0.5 },
+      { "img": "crouch", "dy": 0.75, "deg": 0.25 },
+      { "img": "crouch", "dy": 0.5 },
+      { "img": "crouch", "dy": 0.25 },
+      { "img": "crouch" },
+      { "img": "crouch", "dy": 0.25, "deg": -0.25 },
+      { "img": "crouch", "dy": 0.5, "deg": -0.5 },
+      { "img": "crouch", "dy": 0.75, "deg": -0.5 },
+      { "img": "crouch", "dy": 1.0, "deg": -0.25 },
+      { "img": "crouch", "dy": 0.75 },
+      { "img": "crouch", "dy": 0.5 },
+      { "img": "crouch", "dy": 0.25 },
+      { "img": "crouch" },
+      { "img": "crouch" }
+    ]
+  }
+}

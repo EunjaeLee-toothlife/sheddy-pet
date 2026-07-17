@@ -1,0 +1,8 @@
+{
+  "name": "sad_pose",
+  "ref": "refs/chibi_base.png",
+  "frames": [
+    "Pose: standing dejected, head hanging down, shoulders slumped low, arms dangling limp, eyes downcast and teary with a sad pout, gloomy expression.",
+    "Pose: crouched down in a squat hugging her knees with both arms, chin resting on her knees, big teary puppy eyes looking down, sad sulking expression."
+  ]
+}

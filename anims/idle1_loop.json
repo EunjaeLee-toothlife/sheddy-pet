@@ -1,0 +1,15 @@
+{
+  "name": "idle1_loop",
+  "ref": "refs/chibi_base.png",
+  "frames": [
+    "Pose: standing relaxed in a neutral idle pose, arms hanging naturally at her sides, eyes open, soft neutral smile, body at its lowest resting point of a breathing cycle.",
+    "Pose: standing relaxed, mid-inhale of a gentle breathing cycle, chest and shoulders lifted very slightly, eyes open, soft neutral smile.",
+    "Pose: standing relaxed at the top of a gentle inhale, shoulders slightly raised, body a touch taller, eyes open, soft neutral smile, hair lifted very slightly.",
+    "Pose: standing relaxed, beginning to exhale, shoulders easing down, eyes half-closed in a sleepy blink, gentle smile.",
+    "Pose: standing relaxed, mid-exhale, shoulders settling down, eyes fully closed in a calm blink, content gentle smile.",
+    "Pose: standing relaxed, exhale finishing, shoulders low, eyes still closed, peaceful gentle smile, hair settling.",
+    "Pose: standing relaxed, eyes reopening halfway from a blink, shoulders at rest, soft neutral smile.",
+    "Pose: standing relaxed, eyes open again, starting a tiny new inhale, shoulders barely lifting, soft neutral smile.",
+    "Pose: standing relaxed in a neutral idle pose almost identical to the first frame, arms at her sides, eyes open, soft neutral smile, body at its lowest resting point."
+  ]
+}

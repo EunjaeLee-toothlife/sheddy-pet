@@ -1,0 +1,15 @@
+# ── Python ──────────────────────────────
+__pycache__/
+*.pyc
+
+# ── 디버그/검수용 임시 이미지 (툴이 재생성함) ──
+sprites/debug_*.png
+sprites/edge_check.png
+
+# ── 로컬 세션/도구 설정 ──────────────────
+.claude/
+
+# ── OS 잡파일 ───────────────────────────
+Thumbs.db
+Desktop.ini
+.DS_Store

@@ -1,0 +1,27 @@
+{
+  "name": "basic3",
+  "base": "sprites/idle1_donor/donor_00.png",
+  "poses": {},
+  "parts": {
+    "loop": [
+      { "img": "base" },
+      { "img": "base", "deg": 0.8, "dy": -0.25 },
+      { "img": "base", "deg": 1.5, "dy": -0.5 },
+      { "img": "base", "deg": 2.1, "dy": -0.7 },
+      { "img": "base", "deg": 2.4, "dy": -0.8 },
+      { "img": "base", "deg": 2.4, "dy": -0.8 },
+      { "img": "base", "deg": 2.1, "dy": -0.7 },
+      { "img": "base", "deg": 1.5, "dy": -0.5 },
+      { "img": "base", "deg": 0.8, "dy": -0.25 },
+      { "img": "base" },
+      { "img": "base", "deg": -0.8, "dy": -0.25 },
+      { "img": "base", "deg": -1.5, "dy": -0.5 },
+      { "img": "base", "deg": -2.1, "dy": -0.7 },
+      { "img": "base", "deg": -2.4, "dy": -0.8 },
+      { "img": "base", "deg": -2.4, "dy": -0.8 },
+      { "img": "base", "deg": -2.1, "dy": -0.7 },
+      { "img": "base", "deg": -1.5, "dy": -0.5 },
+      { "img": "base", "deg": -0.8, "dy": -0.25 }
+    ]
+  }
+}

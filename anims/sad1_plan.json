@@ -1,0 +1,30 @@
+{
+  "name": "sad1",
+  "base": "sprites/idle1_donor/donor_00.png",
+  "poses": {
+    "slump": "sprites/sad_poses/sad_pose_00.png"
+  },
+  "match_to_base": true,
+  "parts": {
+    "loop": [
+      { "img": "slump" },
+      { "img": "slump", "dy": 0.3 },
+      { "img": "slump", "dy": 0.6 },
+      { "img": "slump", "dy": 0.9 },
+      { "img": "slump", "dy": 1.2 },
+      { "img": "slump", "dy": 1.5 },
+      { "img": "slump", "dy": 1.8 },
+      { "img": "slump", "dy": 1.8 },
+      { "img": "slump", "dy": 1.5 },
+      { "img": "slump", "dy": 1.2 },
+      { "img": "slump", "dy": 0.9 },
+      { "img": "slump", "dy": 0.6 },
+      { "img": "slump", "dy": 0.3 },
+      { "img": "slump" },
+      { "img": "slump", "dy": 0.15 },
+      { "img": "slump", "dy": 0.3 },
+      { "img": "slump", "dy": 0.15 },
+      { "img": "slump" }
+    ]
+  }
+}

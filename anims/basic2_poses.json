@@ -1,0 +1,8 @@
+{
+  "name": "basic2_pose",
+  "ref": "refs/chibi_base.png",
+  "frames": [
+    "Pose: standing, both arms raised halfway up and outward, mid-motion of starting a big stretch, eyes half closed sleepy, mouth starting to open in a small yawn.",
+    "Pose: standing, both arms stretched straight up overhead in a big satisfying stretch, hands open, back arched slightly, eyes squeezed shut, wide open yawning mouth, sleepy blush."
+  ]
+}

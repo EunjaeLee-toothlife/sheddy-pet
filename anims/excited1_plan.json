@@ -1,0 +1,32 @@
+{
+  "name": "excited1",
+  "base": "sprites/idle1_donor/donor_00.png",
+  "poses": {
+    "crouch": "sprites/excited1_poses/excited1_pose_00.png",
+    "air": "sprites/excited1_poses/excited1_pose_01.png"
+  },
+  "match_to_base": true,
+  "no_scale_poses": ["crouch", "air"],
+  "parts": {
+    "loop": [
+      { "img": "base" },
+      { "img": "base" },
+      { "img": "crouch" },
+      { "img": "crouch" },
+      { "img": "crouch", "dy": 1.5 },
+      { "img": "crouch", "dy": 2.0 },
+      { "img": "air", "dy": -16 },
+      { "img": "air", "dy": -34 },
+      { "img": "air", "dy": -46 },
+      { "img": "air", "dy": -46 },
+      { "img": "air", "dy": -34 },
+      { "img": "air", "dy": -16 },
+      { "img": "crouch" },
+      { "img": "crouch" },
+      { "img": "base", "dy": -1.5 },
+      { "img": "base", "dy": -0.8 },
+      { "img": "base" },
+      { "img": "base" }
+    ]
+  }
+}

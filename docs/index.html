@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>Sheddy Pet Widget</title>
+<style>
+  /* OBS 브라우저 소스용: 배경 완전 투명 */
+  html, body { margin: 0; padding: 0; background: transparent; overflow: hidden; }
+  #stage { position: relative; width: 100vw; height: 100vh; }
+  #stage video {
+    position: absolute; inset: 0; width: 100%; height: 100%;
+    object-fit: contain; opacity: 0;
+  }
+  #stage video.visible { opacity: 1; }
+
+  /* 마우스 오버 시 나타나는 설정 버튼 */
+  #gearBtn {
+    position: fixed; top: 10px; left: 10px; z-index: 11;
+    width: 36px; height: 36px; border-radius: 50%;
+    background: rgba(30, 30, 34, .75); color: #fff;
+    border: none; cursor: pointer; font-size: 18px;
+    display: flex; align-items: center; justify-content: center;
+    opacity: 0; pointer-events: none; transition: opacity .25s;
+  }
+  #gearBtn.show { opacity: 1; pointer-events: auto; }
+
+  /* F2 또는 설정 버튼으로 여닫는 마이크 설정창 */
+  #settings {
+    position: fixed; top: 12px; left: 12px; z-index: 10;
+    background: rgba(30, 30, 34, .92); color: #eee;
+    font-family: "Segoe UI", sans-serif; font-size: 13px;
+    border-radius: 10px; padding: 14px 16px; width: 300px;
+    display: none; flex-direction: column; gap: 10px;
+    box-shadow: 0 4px 16px rgba(0,0,0,.4);
+  }
+  #settings.open { display: flex; }
+  #settings h3 { margin: 0; font-size: 14px; }
+  #settings label { display: flex; flex-direction: column; gap: 4px; }
+  #settings input[type=range] { width: 100%; }
+  /* OBS(CEF)는 select 팝업 미지원 → 클릭 목록으로 대체 */
+  #micList {
+    display: flex; flex-direction: column; gap: 2px;
+    max-height: 150px; overflow-y: auto;
+    background: rgba(0,0,0,.25); border-radius: 6px; padding: 4px;
+  }
+  .mic-item {
+    padding: 6px 8px; border-radius: 5px; cursor: pointer;
+    white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+  }
+  .mic-item:hover { background: rgba(255,255,255,.12); }
+  .mic-item.selected { background: #f5c518; color: #222; font-weight: 600; }
+  #levelWrap { height: 10px; background: #222; border-radius: 5px; overflow: hidden; position: relative; }
+  #levelBar { height: 100%; width: 0%; background: #4caf50; transition: width .05s linear; }
+  #levelThresh { position: absolute; top: 0; bottom: 0; width: 2px; background: #ff5252; }
+  #micStatus { font-size: 12px; color: #aaa; }
+</style>
+</head>
+<body>
+<div id="stage">
+  <!-- 더블 버퍼: 하나가 재생되는 동안 다른 쪽에 다음 클립을 미리 로드 -->
+  <video id="vidA" muted playsinline preload="auto"></video>
+  <video id="vidB" muted playsinline preload="auto"></video>
+</div>
+
+<!-- 마우스를 움직이면 나타나는 설정 버튼 (OBS: 소스 우클릭 → 상호작용) -->
+<button id="gearBtn" type="button" title="마이크 설정">⚙️</button>
+
+<div id="settings">
+  <h3>🎤 마이크 설정 <span style="font-weight:400;color:#888">(⚙️/F2로 닫기)</span></h3>
+  <label>입력 장치</label>
+  <div id="micList"><div class="mic-item selected">(마이크 끄기)</div></div>
+  <button id="micRefresh" type="button"
+          style="padding:5px 10px;border-radius:6px;border:none;cursor:pointer">
+    🔄 장치 목록 새로고침</button>
+  <label>감도 임계값 <span id="threshLabel"></span>
+    <input type="range" id="threshSlider" min="0.005" max="0.15" step="0.005">
+  </label>
+  <div id="levelWrap"><div id="levelBar"></div><div id="levelThresh"></div></div>
+  <div id="micStatus">마이크 꺼짐</div>
+</div>
+
+<script>
+"use strict";
+
+// ── 애니메이션 레지스트리 ─────────────────────────────────────
+// start/end가 없는 애니메이션은 loop만 등록하면 됨.
+// 파일이 준비되면 여기에 추가. BASE는 서버 배포 시 CDN 경로로 교체.
+const BASE = "sprites/";
+// weight: 주사위 가중치 (등록된 애니메이션끼리의 상대 비율)
+const ANIMS = {
+  idle1:    { loop: "anim_idle1_loop.webm", weight: 50 },
+  basic1:   { loop: "anim_basic1_loop.webm", weight: 8 },
+  basic2:   { loop: "anim_basic2_loop.webm", weight: 8 },
+  basic3:   { loop: "anim_basic3_loop.webm", weight: 8 },
+  happy1:   { start: "anim_happy1_start.webm", loop: "anim_happy1_loop.webm", end: "anim_happy1_end.webm", weight: 7 },
+  happy2:   { loop: "anim_happy2_loop.webm", weight: 7 },
+  excited1: { loop: "anim_excited1_loop.webm", weight: 4 },
+  sad1:     { loop: "anim_sad1_loop.webm", weight: 4 },
+  sad2:     { loop: "anim_sad2_loop.webm", weight: 4 },
+  talk:     { loop: "anim_talk_loop.webm", weight: 0 }, // 주사위 제외, 마이크 전용
+};
+const DEFAULT_STATE = "idle1";
+// loop 한 사이클이 끝날 때마다 이 확률로 주사위를 굴려 상태를 다시 뽑음
+// (안 굴리면 현재 loop를 한 번 더 재생)
+const REROLL_CHANCE = 0.35;
+// 감정(비-idle) 재생 후에는 idle을 최소 이 횟수만큼 돌아야 다음 감정 가능
+const MIN_IDLE_CYCLES = 2;
+// 감정에 진입하면 최소 이 사이클 수만큼 유지 (3사이클 × 1.8초 = 5.4초)
+const MIN_EMOTION_CYCLES = 3;
+
+// ── URL 옵션 ──────────────────────────────────────────────
+// ?state=happy1     시작 상태
+// ?hold=8           외부 명령(setPetState 등)으로 바뀐 상태를 주사위로부터 보호할 초
+// ?dice=0           주사위 굴리기 끄기 (외부 제어 전용 모드)
+// ?flip=1           좌우 반전
+const params = new URLSearchParams(location.search);
+const HOLD_SEC = Number(params.get("hold") || 8);
+const DICE_ON = params.get("dice") !== "0";
+if (params.get("flip") === "1") {
+  document.getElementById("stage").style.transform = "scaleX(-1)";
+}
+
+// ── 더블 버퍼 비디오 플레이어 ─────────────────────────────────
+const vids = [document.getElementById("vidA"), document.getElementById("vidB")];
+let front = 0; // 현재 화면에 보이는 쪽
+
+function backVid() { return vids[1 - front]; }
+
+function swap() {
+  vids[1 - front].classList.add("visible");
+  const old = vids[front];
+  old.classList.remove("visible");
+  old.onended = null; // 숨겨진 쪽이 사이클 콜백을 중복 발화하지 않도록
+  old.pause();
+  front = 1 - front;
+}
+
+// 뒤 버퍼에 클립을 로드하고, 재생 가능해지면 스왑해서 재생 시작
+function playClip(file, { loop = false, onEnded = null } = {}) {
+  const v = backVid();
+  v.loop = loop;
+  v.onended = null;
+  v.src = BASE + file;
+  v.load();
+  return new Promise(resolve => {
+    v.oncanplaythrough = () => {
+      v.oncanplaythrough = null;
+      if (onEnded) v.onended = onEnded;
+      v.play().then(() => { swap(); resolve(); }).catch(resolve);
+    };
+    v.onerror = () => { console.warn("clip load failed:", file); resolve(); };
+  });
+}
+
+// ── 상태 머신 + 주사위 ─────────────────────────────────────
+// 전환 규칙: 현재 상태의 end 재생 → 다음 상태의 start 재생 → loop
+// loop는 반복 재생하지 않고, 한 사이클이 끝날 때마다 주사위를 굴려
+// 상태를 유지할지(같은 loop 재생) 전환할지 결정한다.
+let current = null;      // 현재 상태 이름
+let transitioning = false;
+let queued = null;       // 전환 중 들어온 다음 요청
+let pinnedUntil = 0;     // 외부 명령으로 고정된 시각(ms) — 그때까지 주사위 정지
+let talkActive = false;  // 마이크 게이트 열림 여부
+let idleStreak = 0;      // 마지막 감정 이후 완주한 idle 사이클 수
+let emotionCycles = 0;   // 현재 감정 상태에서 완주한 사이클 수
+
+function rollDice() {
+  // 감정은 최소 유지 사이클을 채우기 전엔 끝나지 않음
+  if (current !== DEFAULT_STATE && emotionCycles < MIN_EMOTION_CYCLES) {
+    return current;
+  }
+  if (Math.random() >= REROLL_CHANCE) return current; // 유지
+  // 감정 상태에서 굴리면 무조건 idle로 복귀 (감정→감정 직행 금지)
+  if (current !== DEFAULT_STATE) return DEFAULT_STATE;
+  // 감정 직후에는 idle을 MIN_IDLE_CYCLES 이상 완주해야 다음 감정 허용
+  if (idleStreak < MIN_IDLE_CYCLES) return current;
+  const entries = Object.entries(ANIMS)
+    .filter(([, a]) => (a.weight ?? 1) > 0); // weight 0 = 주사위 제외
+  const total = entries.reduce((s, [, a]) => s + (a.weight ?? 1), 0);
+  let r = Math.random() * total;
+  for (const [name, a] of entries) {
+    r -= (a.weight ?? 1);
+    if (r <= 0) return name;
+  }
+  return current;
+}
+
+// loop 한 사이클이 끝났을 때
+function onCycleEnd() {
+  if (transitioning) return;
+  // 마이크에 신호가 들어오는 동안은 talk 상태를 계속 유지
+  if (talkActive) {
+    if (current !== "talk") { setState("talk", { pin: false }); return; }
+    const v = vids[front];
+    v.currentTime = 0;
+    v.play().catch(() => {});
+    return;
+  }
+  if (current === "talk") { setState(DEFAULT_STATE, { pin: false }); return; }
+  if (current === DEFAULT_STATE) idleStreak++; // idle 사이클 1회 완주
+  else emotionCycles++;                        // 감정 사이클 1회 완주
+  const next = (DICE_ON && Date.now() >= pinnedUntil) ? rollDice() : current;
+  if (next === current) {
+    // 같은 상태 유지: 같은 버퍼를 처음부터 다시 재생 (재로드 없음)
+    const v = vids[front];
+    v.currentTime = 0;
+    v.play().catch(() => {});
+  } else {
+    setState(next, { pin: false });
+  }
+}
+
+async function setState(name, { pin = true } = {}) {
+  if (!ANIMS[name]) { console.warn("unknown state:", name); return; }
+  if (transitioning) { queued = name; return; }
+  if (name === current) {
+    if (pin) pinnedUntil = Date.now() + HOLD_SEC * 1000;
+    return;
+  }
+  transitioning = true;
+  if (pin) pinnedUntil = Date.now() + HOLD_SEC * 1000;
+  if (name !== DEFAULT_STATE) { idleStreak = 0; emotionCycles = 0; } // 감정 진입
+
+  // 1) 현재 상태의 end 클립 (있으면) 재생하고 끝날 때까지 대기
+  const cur = current && ANIMS[current];
+  if (cur && cur.end) {
+    await new Promise(res => playClip(cur.end, { onEnded: res }));
+  }
+
+  // 2) 다음 상태의 start (있으면) → loop (사이클 끝마다 주사위)
+  const next = ANIMS[name];
+  if (next.start) {
+    await new Promise(res => playClip(next.start, { onEnded: res }));
+  }
+  current = name; // onCycleEnd가 참조하므로 loop 시작 전에 갱신
+  await playClip(next.loop, { onEnded: onCycleEnd });
+
+  transitioning = false;
+  if (queued) { const q = queued; queued = null; setState(q); }
+}
+
+// ── 외부 제어 인터페이스 ──────────────────────────────────────
+// 외부 명령은 HOLD_SEC 동안 주사위로부터 상태를 보호(pin)한다.
+// 1) 콘솔/OBS에서 직접: window.setPetState('happy1')
+window.setPetState = name => setState(name);
+
+// 2) postMessage: iframe이나 OBS custom code에서
+//    window.postMessage({ type: 'pet-state', state: 'happy1' }, '*')
+window.addEventListener("message", e => {
+  if (e.data && e.data.type === "pet-state") setState(e.data.state);
+});
+
+// 3) BroadcastChannel: 같은 서버의 컨트롤 페이지에서
+//    new BroadcastChannel('sheddy-pet').postMessage('happy1')
+try {
+  new BroadcastChannel("sheddy-pet").onmessage = e => setState(e.data);
+} catch (_) { /* 미지원 브라우저 */ }
+
+// ── 마이크 → 말하기(talk) 게이트 ─────────────────────────────
+// F2: 설정창 토글. 장치를 선택하면 마이크를 열고 RMS 레벨을 감시.
+// 노이즈 게이트: 임계값 초과 시 즉시 talk, 임계값 아래로 RELEASE_MS
+// 지속되면 해제. noiseSuppression/echoCancellation 제약으로 기본 필터 적용.
+const RELEASE_MS = 450;
+const settingsEl = document.getElementById("settings");
+const micList = document.getElementById("micList");
+const threshSlider = document.getElementById("threshSlider");
+const threshLabel = document.getElementById("threshLabel");
+const levelBar = document.getElementById("levelBar");
+const levelThresh = document.getElementById("levelThresh");
+const micStatus = document.getElementById("micStatus");
+
+let audioCtx = null, analyser = null, micStream = null, meterTimer = null;
+let lastLoudAt = 0;
+
+threshSlider.value = localStorage.getItem("petMicThresh") || "0.03";
+
+function threshold() { return Number(threshSlider.value); }
+
+function updateThreshUI() {
+  threshLabel.textContent = threshold().toFixed(3);
+  levelThresh.style.left = `${Math.min(100, threshold() / 0.15 * 100)}%`;
+}
+updateThreshUI();
+
+let micValue = localStorage.getItem("petMicDevice") || "__off__";
+
+function selectMic(id) {
+  micValue = id;
+  localStorage.setItem("petMicDevice", id);
+  renderMicHighlight();
+  startMic(id);
+}
+
+function renderMicHighlight() {
+  [...micList.children].forEach(row =>
+    row.classList.toggle("selected", row.dataset.id === micValue));
+}
+
+async function listDevices() {
+  const devs = await navigator.mediaDevices.enumerateDevices();
+  const items = [{ id: "__off__", label: "(마이크 끄기)" }];
+  devs.filter(d => d.kind === "audioinput").forEach((d, i) => {
+    // 권한 허용 전에는 label/deviceId가 빈 값으로 옴 — 기본 장치로 취급
+    items.push({
+      id: d.deviceId || "__default__",
+      label: d.label || `마이크 ${i + 1} (이름은 권한 허용 후 표시)`,
+    });
+  });
+  micList.innerHTML = "";
+  for (const it of items) {
+    const row = document.createElement("div");
+    row.className = "mic-item";
+    row.dataset.id = it.id;
+    row.textContent = it.label;
+    row.addEventListener("click", () => selectMic(it.id));
+    micList.appendChild(row);
+  }
+  renderMicHighlight();
+}
+
+function stopMic() {
+  clearInterval(meterTimer);
+  meterTimer = null;
+  if (micStream) { micStream.getTracks().forEach(t => t.stop()); micStream = null; }
+  analyser = null;
+  levelBar.style.width = "0%";
+  micStatus.textContent = "마이크 꺼짐";
+  if (talkActive) { talkActive = false; setState(DEFAULT_STATE, { pin: false }); }
+}
+
+async function startMic(deviceId) {
+  stopMic();
+  if (!deviceId || deviceId === "__off__") return;
+  try {
+    const audio = {
+      noiseSuppression: true,   // 간단한 노이즈 필터
+      echoCancellation: true,
+      autoGainControl: false,
+    };
+    // "__default__" = 권한 전 익명 장치 → 기본 마이크로 열기
+    if (deviceId !== "__default__") audio.deviceId = { exact: deviceId };
+    micStream = await navigator.mediaDevices.getUserMedia({ audio });
+    // 권한이 열렸으니 무조건 목록을 실제 라벨로 다시 그림
+    const track = micStream.getAudioTracks()[0];
+    const realId = (track.getSettings && track.getSettings().deviceId) || deviceId;
+    micValue = realId;
+    localStorage.setItem("petMicDevice", realId);
+    await listDevices();
+    audioCtx = audioCtx || new AudioContext();
+    await audioCtx.resume();
+    const src = audioCtx.createMediaStreamSource(micStream);
+    analyser = audioCtx.createAnalyser();
+    analyser.fftSize = 1024;
+    src.connect(analyser);
+    const buf = new Float32Array(analyser.fftSize);
+    micStatus.textContent = "마이크 감시 중";
+    meterTimer = setInterval(() => {
+      analyser.getFloatTimeDomainData(buf);
+      let sum = 0;
+      for (let i = 0; i < buf.length; i++) sum += buf[i] * buf[i];
+      const rms = Math.sqrt(sum / buf.length);
+      levelBar.style.width = `${Math.min(100, rms / 0.15 * 100)}%`;
+      levelBar.style.background = rms > threshold() ? "#ffb300" : "#4caf50";
+      const now = Date.now();
+      if (rms > threshold()) {
+        lastLoudAt = now;
+        if (!talkActive) {
+          talkActive = true;
+          micStatus.textContent = "🗣 말하는 중";
+          if (current !== "talk") setState("talk", { pin: false });
+        }
+      } else if (talkActive && now - lastLoudAt > RELEASE_MS) {
+        talkActive = false;
+        micStatus.textContent = "마이크 감시 중";
+        // 상태 복귀는 onCycleEnd가 처리 (입 다무는 타이밍이 자연스럽게 맞음)
+      }
+    }, 50);
+  } catch (e) {
+    micStatus.textContent = `마이크 오류: ${e.name}`;
+  }
+}
+
+document.getElementById("micRefresh").addEventListener("click", async () => {
+  // 권한을 한 번 열어 라벨을 확보한 뒤 목록을 다시 그림
+  try {
+    const tmp = await navigator.mediaDevices.getUserMedia({ audio: true });
+    tmp.getTracks().forEach(t => t.stop());
+  } catch (e) {
+    micStatus.textContent = `권한 거부됨: ${e.name}`;
+  }
+  await listDevices();
+});
+threshSlider.addEventListener("input", () => {
+  localStorage.setItem("petMicThresh", threshSlider.value);
+  updateThreshUI();
+});
+
+async function toggleSettings() {
+  settingsEl.classList.toggle("open");
+  if (settingsEl.classList.contains("open")) {
+    // 장치 라벨을 얻기 위해 권한을 한 번 요청
+    try {
+      const tmp = await navigator.mediaDevices.getUserMedia({ audio: true });
+      tmp.getTracks().forEach(t => t.stop());
+    } catch (_) { /* 거부돼도 목록은 시도 */ }
+    await listDevices();
+  }
+}
+
+window.addEventListener("keydown", e => {
+  if (e.code !== "F2") return;
+  e.preventDefault();
+  toggleSettings();
+});
+
+// 마우스가 움직이면 설정 버튼을 잠깐 보여줌 (2.5초 무동작 시 숨김)
+const gearBtn = document.getElementById("gearBtn");
+let gearTimer = null;
+window.addEventListener("mousemove", () => {
+  gearBtn.classList.add("show");
+  clearTimeout(gearTimer);
+  gearTimer = setTimeout(() => gearBtn.classList.remove("show"), 2500);
+});
+gearBtn.addEventListener("click", toggleSettings);
+
+// 장치 연결/해제 시 목록 갱신
+navigator.mediaDevices.addEventListener?.("devicechange", () => {
+  if (settingsEl.classList.contains("open")) listDevices();
+});
+
+// 저장된 장치가 있으면 자동 시작 (OBS는 권한 자동 허용)
+const savedDevice = localStorage.getItem("petMicDevice");
+if (savedDevice && savedDevice !== "__off__") {
+  navigator.mediaDevices.getUserMedia({ audio: true })
+    .then(tmp => { tmp.getTracks().forEach(t => t.stop()); return listDevices(); })
+    .then(() => startMic(savedDevice))
+    .catch(() => {});
+}
+
+// 시작
+setState(params.get("state") || DEFAULT_STATE);
+</script>
+</body>
+</html>

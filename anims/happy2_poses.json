@@ -1,0 +1,8 @@
+{
+  "name": "happy2_pose",
+  "ref": "refs/chibi_base.png",
+  "frames": [
+    "Pose: standing, her right arm (viewer's left) raised straight up high waving hello, open hand leaning slightly toward the LEFT edge of the image, big cheerful open-mouth smile, sparkling happy eyes, other arm relaxed at her side.",
+    "Pose: standing, her right arm (viewer's left) raised straight up high waving hello, open hand leaning slightly toward the RIGHT edge of the image, big cheerful open-mouth smile, sparkling happy eyes, other arm relaxed at her side."
+  ]
+}

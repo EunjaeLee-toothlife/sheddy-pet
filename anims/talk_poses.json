@@ -1,0 +1,8 @@
+{
+  "name": "talk_pose",
+  "ref": "refs/chibi_base.png",
+  "frames": [
+    "Pose: standing exactly like the reference with the same neutral expression and open eyes, but her mouth is WIDE OPEN as if speaking loudly mid-sentence, everything else identical to the reference.",
+    "Pose: standing exactly like the reference with the same neutral expression and open eyes, but her mouth is HALF OPEN in a small rounded shape as if murmuring, everything else identical to the reference."
+  ]
+}

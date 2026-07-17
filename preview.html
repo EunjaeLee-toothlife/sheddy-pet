@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>Sheddy Pet — Animation Preview</title>
+<style>
+  :root { --bg: #f7f3ea; --panel: #ffffff; --ink: #4a4238; --accent: #f5c518; }
+  * { box-sizing: border-box; margin: 0; }
+  body {
+    font-family: "Segoe UI", sans-serif; background: var(--bg); color: var(--ink);
+    display: flex; flex-direction: column; align-items: center; gap: 20px; padding: 32px 16px;
+  }
+  h1 { font-size: 20px; }
+  .controls {
+    display: flex; gap: 12px; align-items: center; flex-wrap: wrap; justify-content: center;
+    background: var(--panel); padding: 12px 20px; border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,.08);
+  }
+  select, button {
+    font-size: 14px; padding: 6px 12px; border-radius: 8px; border: 1px solid #ddd;
+    background: #fff; color: var(--ink); cursor: pointer;
+  }
+  button.primary { background: var(--accent); border-color: var(--accent); font-weight: 600; }
+  label { font-size: 13px; display: flex; align-items: center; gap: 6px; }
+  .stage-row { display: flex; gap: 24px; flex-wrap: wrap; justify-content: center; }
+  .stage {
+    display: flex; flex-direction: column; align-items: center; gap: 8px;
+    background: var(--panel); padding: 16px; border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,.08);
+  }
+  .stage h2 { font-size: 13px; font-weight: 600; color: #8a8070; }
+  .checker {
+    width: 384px; height: 384px; border-radius: 8px; overflow: hidden;
+    background:
+      repeating-conic-gradient(#e8e2d4 0% 25%, #f9f6ee 0% 50%) 0 0 / 32px 32px;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .checker img, .checker video { width: 100%; height: 100%; object-fit: contain; }
+  .meta { font-size: 12px; color: #8a8070; }
+</style>
+</head>
+<body>
+  <h1>🍋 Sheddy Pet — Animation Preview</h1>
+
+  <div class="controls">
+    <select id="animSelect"></select>
+    <button class="primary" id="playBtn">⏸ Pause</button>
+    <label>FPS <input type="range" id="fpsSlider" min="1" max="15" value="10">
+      <span id="fpsLabel">10</span></label>
+    <span class="meta" id="frameLabel">frame 0/0</span>
+  </div>
+
+  <div class="stage-row">
+    <div class="stage">
+      <h2>PNG 시퀀스 (10FPS 프레임 재생)</h2>
+      <div class="checker"><img id="frameImg" alt="frame"></div>
+    </div>
+    <div class="stage">
+      <h2>WebM (VP9 + alpha)</h2>
+      <div class="checker"><video id="webmVideo" autoplay loop muted playsinline></video></div>
+      <span class="meta" id="webmMeta"></span>
+    </div>
+  </div>
+
+<script>
+// 애니메이션 등록: 새 애니메이션을 만들면 여기에 한 줄 추가
+const seq = (dir, name, n = 18) => Array.from({ length: n }, (_, i) =>
+  `sprites/${dir}/${name}_${String(i).padStart(2, "0")}.png`);
+const ANIMATIONS = [
+  { name: "idle1 — loop", frames: seq("idle1_loop", "idle1_loop"), webm: "sprites/anim_idle1_loop.webm" },
+  { name: "basic1 두리번 — loop", frames: seq("basic1", "basic1_loop"), webm: "sprites/anim_basic1_loop.webm" },
+  { name: "basic2 기지개 — loop", frames: seq("basic2", "basic2_loop"), webm: "sprites/anim_basic2_loop.webm" },
+  { name: "basic3 흔들기 — loop", frames: seq("basic3", "basic3_loop"), webm: "sprites/anim_basic3_loop.webm" },
+  { name: "happy1 — start", frames: seq("happy1", "happy1_start", 6), webm: "sprites/anim_happy1_start.webm" },
+  { name: "happy1 — loop", frames: seq("happy1", "happy1_loop"), webm: "sprites/anim_happy1_loop.webm" },
+  { name: "happy1 — end", frames: seq("happy1", "happy1_end", 6), webm: "sprites/anim_happy1_end.webm" },
+  { name: "happy2 인사 — loop", frames: seq("happy2", "happy2_loop"), webm: "sprites/anim_happy2_loop.webm" },
+  { name: "excited1 점프 — loop", frames: seq("excited1", "excited1_loop"), webm: "sprites/anim_excited1_loop.webm" },
+  { name: "sad1 풀죽음 — loop", frames: seq("sad1", "sad1_loop"), webm: "sprites/anim_sad1_loop.webm" },
+  { name: "sad2 쪼그림 — loop", frames: seq("sad2", "sad2_loop"), webm: "sprites/anim_sad2_loop.webm" },
+  { name: "talk 앵알앵알 — loop", frames: seq("talk", "talk_loop"), webm: "sprites/anim_talk_loop.webm" },
+];
+
+const sel = document.getElementById("animSelect");
+const img = document.getElementById("frameImg");
+const video = document.getElementById("webmVideo");
+const webmMeta = document.getElementById("webmMeta");
+const playBtn = document.getElementById("playBtn");
+const fpsSlider = document.getElementById("fpsSlider");
+const fpsLabel = document.getElementById("fpsLabel");
+const frameLabel = document.getElementById("frameLabel");
+
+let current = null;
+let frameIdx = 0;
+let playing = true;
+let timer = null;
+let preloaded = [];
+
+ANIMATIONS.forEach((a, i) => {
+  const opt = document.createElement("option");
+  opt.value = i;
+  opt.textContent = a.name;
+  sel.appendChild(opt);
+});
+
+function load(idx) {
+  const bust = `?v=${Date.now()}`; // 파일 갱신 시 브라우저 캐시 무효화
+  current = { ...ANIMATIONS[idx], frames: ANIMATIONS[idx].frames.map(f => f + bust) };
+  frameIdx = 0;
+  preloaded = current.frames.map(src => { const im = new Image(); im.src = src; return im; });
+  if (current.webm) {
+    video.src = current.webm + bust;
+    video.style.display = "";
+    webmMeta.textContent = current.webm;
+  } else {
+    video.removeAttribute("src");
+    video.style.display = "none";
+    webmMeta.textContent = "WebM 없음";
+  }
+  restartTimer();
+}
+
+function tick() {
+  if (!current) return;
+  img.src = current.frames[frameIdx];
+  frameLabel.textContent = `frame ${frameIdx + 1}/${current.frames.length}`;
+  frameIdx = (frameIdx + 1) % current.frames.length;
+}
+
+function restartTimer() {
+  clearInterval(timer);
+  if (playing) {
+    tick();
+    timer = setInterval(tick, 1000 / Number(fpsSlider.value));
+  }
+}
+
+sel.addEventListener("change", () => load(Number(sel.value)));
+playBtn.addEventListener("click", () => {
+  playing = !playing;
+  playBtn.textContent = playing ? "⏸ Pause" : "▶ Play";
+  if (playing) { restartTimer(); video.play(); }
+  else { clearInterval(timer); video.pause(); }
+});
+fpsSlider.addEventListener("input", () => {
+  fpsLabel.textContent = fpsSlider.value;
+  restartTimer();
+});
+
+load(0);
+</script>
+</body>
+</html>
