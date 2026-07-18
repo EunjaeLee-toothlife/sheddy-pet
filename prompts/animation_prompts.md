@@ -154,20 +154,31 @@ a cute chibi girl (2.5-head proportion), long blonde hair, big yellow-gold eyes,
 
 ## 4-d) 특수: 파라파라 댄스 (parapara) — 1종
 
-### parapara1 (파라파라)
+### parapara1 (파라파라) — v2
 '거제 야호' 밈에서 미나미가 춘 그 춤. **하체는 거의 고정**(어깨너비로 발을
-심고 무릎 바운스 + 힐 리프트만), **모든 동작은 팔** — 손가락을 가지런히 편
-납작한 손으로 큰 호를 그린다. 부드러운 움직임을 위해 **24프레임 @12FPS**
-(사이클 2초) seamless 루프.
-- 궤적: 가슴 중앙 → 화면왼쪽 어깨높이 → 왼쪽 위 대각 → 머리 위 스윕 →
-  오른쪽 위 대각 → 오른쪽 어깨높이 → 가슴 앞 스윕 → 손목 X자 크로스 →
-  양팔 활짝 → 뺨 옆 손목 플릭 2회 → 가슴 중앙 복귀.
+심고 무릎 바운스 + 힐 리프트만), 파라파라의 시그니처인 **곧게 뻗은 팔의
+교차 대각 찌르기**가 핵심. 부드러운 움직임을 위해 **24프레임 @12FPS**
+(사이클 2초, 3프레임 × 8비트) seamless 루프.
+- 비트맵: 화면왼쪽 팔 좌상단 45° 찌르기(반대 손은 가슴에) → 스왑, 오른팔
+  우상단 찌르기 → 왼팔 반복 → 오른팔 반복 → 양팔 T자 → 가슴 앞 손목
+  X크로스 → 양팔 하이 V → 내리며 가슴 복귀.
 - 정의: `anims/parapara1_loop.json` (frames 24개)
 - WebM(12FPS): `ffmpeg -y -framerate 12 -i sprites/parapara1_loop/parapara1_loop_%02d.png -c:v libvpx-vp9 -pix_fmt yuva420p -b:v 0 -crf 24 -an sprites/anim_parapara1_loop.webm`
 - 위젯 등록: `minCycles: 2, maxCycles: 4` (rate 1.0)
-- 프롬프트 팁: 매 프레임에 "open flat hands, fingers together and
-  extended elegantly (never fists)" + "feet planted shoulder-width, no
-  jump, no squat"를 반복해야 팔 동작이 주먹춤/점프로 새지 않는다.
+- **프롬프트 팁 (v1 실패에서 배운 것)**:
+  - "양손으로 큰 호를 그린다" 같은 **연속 궤적 서술은 실패한다** — 프레임마다
+    팔꿈치 각도·팔 위치가 제각각으로 나와 팔이 널뛴다. 킹게이너 댄스처럼
+    **매 프레임 양팔의 기하학(각도·높이·곧음)을 전부 명시**할 것:
+    "FULLY extended, PERFECTLY STRAIGHT with no elbow bend, toward the
+    upper-LEFT corner at about 45 degrees" + 활성 팔은 이중 라벨
+    ("HER RIGHT arm (the arm on the LEFT side of the image)").
+  - 쉬는 손 위치도 고정: "the other hand pulled in, lying flat against
+    her upper chest, elbow tucked down".
+  - "her arms NEVER cross in front of her face"를 매 프레임 반복 — 머리
+    위에서 팔이 꼬이는 프레임 방지. X크로스는 "at CHEST height, well
+    below her face"로 높이를 못박는다.
+  - 매 프레임에 "open flat hands, fingers together and extended (never
+    fists)" + "feet planted shoulder-width, no jump, no squat" 반복.
 
 ## 5) 우울 상태 (sad) — 2종
 
