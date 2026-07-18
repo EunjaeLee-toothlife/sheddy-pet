@@ -13,8 +13,8 @@
   }
   #stage video.visible { opacity: 1; }
 
-  /* 마우스 오버 시 나타나는 설정 버튼 */
-  #gearBtn {
+  /* 마우스 오버 시 나타나는 버튼들 (⚙️ 설정 / 🎭 모션 선택) */
+  #gearBtn, #motionBtn {
     position: fixed; top: 10px; left: 10px; z-index: 11;
     width: 36px; height: 36px; border-radius: 50%;
     background: rgba(30, 30, 34, .75); color: #fff;
@@ -22,7 +22,8 @@
     display: flex; align-items: center; justify-content: center;
     opacity: 0; pointer-events: none; transition: opacity .25s;
   }
-  #gearBtn.show { opacity: 1; pointer-events: auto; }
+  #gearBtn.show, #motionBtn.show { opacity: 1; pointer-events: auto; }
+  #motionBtn { top: auto; bottom: 10px; }
 
   /* F2 또는 설정 버튼으로 여닫는 마이크 설정창 */
   #settings {
@@ -53,6 +54,26 @@
   #levelBar { height: 100%; width: 0%; background: #4caf50; transition: width .05s linear; }
   #levelThresh { position: absolute; top: 0; bottom: 0; width: 2px; background: #ff5252; }
   #micStatus { font-size: 12px; color: #aaa; }
+
+  /* F3 또는 🎭 버튼으로 여닫는 모션 선택창 (좌측 하단) */
+  #motionPanel {
+    position: fixed; bottom: 12px; left: 12px; z-index: 10;
+    background: rgba(30, 30, 34, .92); color: #eee;
+    font-family: "Segoe UI", sans-serif; font-size: 13px;
+    border-radius: 10px; padding: 14px 16px; width: 230px;
+    display: none; flex-direction: column; gap: 10px;
+    box-shadow: 0 4px 16px rgba(0,0,0,.4);
+  }
+  #motionPanel.open { display: flex; }
+  #motionPanel h3 { margin: 0; font-size: 14px; }
+  #motionPanel label {
+    display: flex; align-items: center; gap: 6px; font-size: 12px; cursor: pointer;
+  }
+  #motionList {
+    display: flex; flex-direction: column; gap: 2px;
+    max-height: 240px; overflow-y: auto;
+    background: rgba(0,0,0,.25); border-radius: 6px; padding: 4px;
+  }
 </style>
 </head>
 <body>
@@ -79,6 +100,15 @@
   <div id="micStatus">마이크 꺼짐</div>
 </div>
 
+<!-- 좌측 하단: 모션 선택 버튼 + 패널 (OBS: 소스 우클릭 → 상호작용) -->
+<button id="motionBtn" type="button" title="모션 선택">🎭</button>
+
+<div id="motionPanel">
+  <h3>🎭 모션 선택 <span style="font-weight:400;color:#888">(🎭/F3로 닫기)</span></h3>
+  <label><input type="checkbox" id="motionHold"> 선택한 모션 계속 유지 (주사위 정지)</label>
+  <div id="motionList"></div>
+</div>
+
 <script>
 "use strict";
 
@@ -87,6 +117,12 @@
 // 파일이 준비되면 여기에 추가. BASE는 서버 배포 시 CDN 경로로 교체.
 const BASE = "sprites/";
 // weight: 주사위 가중치 (등록된 애니메이션끼리의 상대 비율)
+// minCycles: 이 상태에 진입하면 최소 이만큼 loop를 완주해야 전환 허용
+//            (생략 시 MIN_EMOTION_CYCLES. loop 길이가 짧으면 크게 잡을 것)
+// maxCycles: 이만큼 완주하면 주사위와 무관하게 idle로 강제 복귀 (생략 시 무제한.
+//            ?dice=0이거나 외부 명령으로 pin된 동안에는 적용되지 않음)
+// rate:      재생 배속 (기본 1.0). start/loop/end 클립 모두에 적용됨.
+//            예) 0.8 = 20% 느리게, 1.5 = 50% 빠르게
 const ANIMS = {
   idle1:    { loop: "anim_idle1_loop.webm", weight: 50 },
   basic1:   { loop: "anim_basic1_loop.webm", weight: 8 },
@@ -94,7 +130,11 @@ const ANIMS = {
   basic3:   { loop: "anim_basic3_loop.webm", weight: 8 },
   happy1:   { start: "anim_happy1_start.webm", loop: "anim_happy1_loop.webm", end: "anim_happy1_end.webm", weight: 7 },
   happy2:   { loop: "anim_happy2_loop.webm", weight: 7 },
+  // 공주님 턴 + 커트시 — 한 사이클이 완결된 동작(회전+인사)이라 1~2회만 재생
+  happy3:   { loop: "anim_happy3_loop.webm", weight: 5, minCycles: 1, maxCycles: 2, rate: 0.8 },
   excited1: { loop: "anim_excited1_loop.webm", weight: 4 },
+  // 킹게이너 댄스 (팔 흔들기) — 0.5배속이라 사이클당 2초, 2~4사이클 = 4~8초
+  dance1:   { loop: "anim_dance1_loop.webm", weight: 3, minCycles: 2, maxCycles: 4, rate: 0.5 },
   sad1:     { loop: "anim_sad1_loop.webm", weight: 4 },
   sad2:     { loop: "anim_sad2_loop.webm", weight: 4 },
   talk:     { loop: "anim_talk_loop.webm", weight: 0 }, // 주사위 제외, 마이크 전용
@@ -136,12 +176,15 @@ function swap() {
 }
 
 // 뒤 버퍼에 클립을 로드하고, 재생 가능해지면 스왑해서 재생 시작
-function playClip(file, { loop = false, onEnded = null } = {}) {
+function playClip(file, { loop = false, onEnded = null, rate = 1 } = {}) {
   const v = backVid();
   v.loop = loop;
   v.onended = null;
   v.src = BASE + file;
   v.load();
+  // load()가 playbackRate를 초기화하므로 로드 후에 지정
+  v.defaultPlaybackRate = rate;
+  v.playbackRate = rate;
   return new Promise(resolve => {
     v.oncanplaythrough = () => {
       v.oncanplaythrough = null;
@@ -165,8 +208,9 @@ let idleStreak = 0;      // 마지막 감정 이후 완주한 idle 사이클 수
 let emotionCycles = 0;   // 현재 감정 상태에서 완주한 사이클 수
 
 function rollDice() {
-  // 감정은 최소 유지 사이클을 채우기 전엔 끝나지 않음
-  if (current !== DEFAULT_STATE && emotionCycles < MIN_EMOTION_CYCLES) {
+  // 감정은 최소 유지 사이클(애니메이션별 minCycles 우선)을 채우기 전엔 끝나지 않음
+  const minCycles = ANIMS[current].minCycles ?? MIN_EMOTION_CYCLES;
+  if (current !== DEFAULT_STATE && emotionCycles < minCycles) {
     return current;
   }
   if (Math.random() >= REROLL_CHANCE) return current; // 유지
@@ -199,7 +243,15 @@ function onCycleEnd() {
   if (current === "talk") { setState(DEFAULT_STATE, { pin: false }); return; }
   if (current === DEFAULT_STATE) idleStreak++; // idle 사이클 1회 완주
   else emotionCycles++;                        // 감정 사이클 1회 완주
-  const next = (DICE_ON && Date.now() >= pinnedUntil) ? rollDice() : current;
+  const diceActive = DICE_ON && Date.now() >= pinnedUntil;
+  // maxCycles 도달 시 강제 idle 복귀 (외부 제어 모드/pin 중에는 손대지 않음)
+  const maxCycles = ANIMS[current].maxCycles;
+  if (diceActive && current !== DEFAULT_STATE && maxCycles &&
+      emotionCycles >= maxCycles) {
+    setState(DEFAULT_STATE, { pin: false });
+    return;
+  }
+  const next = diceActive ? rollDice() : current;
   if (next === current) {
     // 같은 상태 유지: 같은 버퍼를 처음부터 다시 재생 (재로드 없음)
     const v = vids[front];
@@ -224,16 +276,18 @@ async function setState(name, { pin = true } = {}) {
   // 1) 현재 상태의 end 클립 (있으면) 재생하고 끝날 때까지 대기
   const cur = current && ANIMS[current];
   if (cur && cur.end) {
-    await new Promise(res => playClip(cur.end, { onEnded: res }));
+    await new Promise(res => playClip(cur.end, { onEnded: res, rate: cur.rate ?? 1 }));
   }
 
   // 2) 다음 상태의 start (있으면) → loop (사이클 끝마다 주사위)
   const next = ANIMS[name];
+  const rate = next.rate ?? 1;
   if (next.start) {
-    await new Promise(res => playClip(next.start, { onEnded: res }));
+    await new Promise(res => playClip(next.start, { onEnded: res, rate }));
   }
   current = name; // onCycleEnd가 참조하므로 loop 시작 전에 갱신
-  await playClip(next.loop, { onEnded: onCycleEnd });
+  renderMotionHighlight(); // 모션 선택창의 현재 상태 표시 동기화
+  await playClip(next.loop, { onEnded: onCycleEnd, rate });
 
   transitioning = false;
   if (queued) { const q = queued; queued = null; setState(q); }
@@ -413,15 +467,77 @@ window.addEventListener("keydown", e => {
   toggleSettings();
 });
 
-// 마우스가 움직이면 설정 버튼을 잠깐 보여줌 (2.5초 무동작 시 숨김)
+// 마우스가 움직이면 버튼들을 잠깐 보여줌 (2.5초 무동작 시 숨김)
 const gearBtn = document.getElementById("gearBtn");
 let gearTimer = null;
 window.addEventListener("mousemove", () => {
   gearBtn.classList.add("show");
+  motionBtn.classList.add("show");
   clearTimeout(gearTimer);
-  gearTimer = setTimeout(() => gearBtn.classList.remove("show"), 2500);
+  gearTimer = setTimeout(() => {
+    gearBtn.classList.remove("show");
+    motionBtn.classList.remove("show");
+  }, 2500);
 });
 gearBtn.addEventListener("click", toggleSettings);
+
+// ── 모션 선택기 (좌측 하단, 🎭/F3) ────────────────────────────
+// 등록된 모든 애니메이션을 나열하고, 클릭하면 해당 모션을 강제 실행한다.
+// 기본은 HOLD_SEC 동안만 주사위로부터 보호. "계속 유지"를 켜면 다시 풀 때까지
+// 주사위를 완전히 정지하고 그 모션만 반복한다. (maxCycles도 pin 중에는 무시됨)
+const motionBtn = document.getElementById("motionBtn");
+const motionPanel = document.getElementById("motionPanel");
+const motionList = document.getElementById("motionList");
+const motionHold = document.getElementById("motionHold");
+
+function renderMotionHighlight() {
+  [...motionList.children].forEach(row =>
+    row.classList.toggle("selected", row.dataset.name === current));
+}
+
+function pickMotion(name) {
+  setState(name); // pin: HOLD_SEC 동안 보호 (setState 기본값)
+  if (motionHold.checked) pinnedUntil = Infinity; // 유지 모드: 주사위 완전 정지
+  renderMotionHighlight();
+}
+
+function renderMotionList() {
+  motionList.innerHTML = "";
+  // 자동 복귀: pin을 해제해서 다음 사이클부터 주사위에 맡김
+  const auto = document.createElement("div");
+  auto.className = "mic-item";
+  auto.textContent = "🎲 자동 (주사위에 맡기기)";
+  auto.addEventListener("click", () => {
+    motionHold.checked = false;
+    pinnedUntil = 0;
+    renderMotionHighlight();
+  });
+  motionList.appendChild(auto);
+  for (const [name, a] of Object.entries(ANIMS)) {
+    const row = document.createElement("div");
+    row.className = "mic-item";
+    row.dataset.name = name;
+    row.textContent = name + ((a.weight ?? 1) > 0 ? "" : " (주사위 제외)");
+    row.addEventListener("click", () => pickMotion(name));
+    motionList.appendChild(row);
+  }
+  renderMotionHighlight();
+}
+renderMotionList();
+
+// "계속 유지" 토글을 나중에 바꿔도 현재 상태에 즉시 반영
+motionHold.addEventListener("change", () => {
+  if (motionHold.checked) pinnedUntil = Infinity;
+  else if (pinnedUntil === Infinity) pinnedUntil = Date.now() + HOLD_SEC * 1000;
+});
+
+function toggleMotionPanel() { motionPanel.classList.toggle("open"); }
+motionBtn.addEventListener("click", toggleMotionPanel);
+window.addEventListener("keydown", e => {
+  if (e.code !== "F3") return;
+  e.preventDefault();
+  toggleMotionPanel();
+});
 
 // 장치 연결/해제 시 목록 갱신
 navigator.mediaDevices.addEventListener?.("devicechange", () => {

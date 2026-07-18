@@ -80,12 +80,60 @@ a cute chibi girl (2.5-head proportion), long blonde hair, big yellow-gold eyes,
 - **loop (9)**: `9 animation frames of cheerful waving: hand waving side to side overhead, other hand at chest, bouncing lightly on toes, beaming smile. Seamless loop.`
 - **end (3)**: `3 animation frames lowering the waving hand and settling into neutral standing pose.`
 
+### happy3 (공주님 턴 + 커트시)
+샤랄라 우아하게 한 바퀴 돌고(온팁토, 발레리나처럼 양팔 벌림, 스커트/코트/머리카락 플레어)
+공주님 인사(커트시: 양손으로 치맛단 잡고 한 발 뒤로 빼며 깊이 숙임)로 마무리하는
+완결형 시퀀스. `gen_frames.py` 방식 20프레임 루프 (스핀 0-10, 커트시 11-19).
+- 회전은 8방향 뷰 서술로 표현: front → 3/4 left → LEFT PROFILE → 3/4 back →
+  FULL BACK(얼굴 없음, 뒷머리+등) → 3/4 back right → RIGHT PROFILE → 3/4 right → front.
+  "몇 도 회전" 같은 수치는 모델이 못 알아듣고, "FULL BACK view, her face NOT visible"처럼
+  **뷰 자체를 명시**해야 안정적으로 나온다.
+- 정의: `anims/happy3_loop.json` (frames 20개)
+- WebM(10FPS, 20프레임=2초): `ffmpeg -y -framerate 10 -i sprites/happy3_loop/happy3_loop_%02d.png -c:v libvpx-vp9 -pix_fmt yuva420p -b:v 0 -crf 24 -an sprites/anim_happy3_loop.webm`
+- 위젯에서 `rate: 0.8` + `minCycles 1 / maxCycles 2`로 등록 (완결형 동작이라 1~2회만)
+- **의상/소품 일관성 팁**:
+  - "skirt flared wide like a spinning bell" 같은 표현은 치마를 드레스처럼 길게
+    늘린다. 매 프레임에 "SHORT pleated mini skirt, hem well above her knees,
+    white crew socks clearly visible"을 명시할 것.
+  - 연속 프레임에서 손 그립(치맛단 잡기 등)이 흔들리면 **체인 모드** 사용:
+    `python tools/gen_frames.py <cfg> --chain --only N` (또는 config에 `"chain": true`).
+    직전 프레임을 IMAGE 2로 함께 첨부해 "change ONLY the specific pose difference"로
+    지시한다 — 그립·의상 디테일이 프레임 간 고정됨. (happy3 커트시 12-17이 이 방식)
+  - 회전 각도는 수치("30도")가 아니라 뷰 명칭(3/4 view, FULL BACK view 등)으로 지시.
+
 ## 4) 신남 상태 (excited) — 1종
 
 ### excited1 (점프 환호)
 - **start (3)**: `3 animation frames of anticipation crouch: knees bending, fists clenched at sides, sparkling excited eyes, big grin.`
 - **loop (9)**: `9 animation frames of an excited jump cycle: leaping into the air with both arms thrown up, hair and lab coat flying, star-sparkle effects, landing softly and bouncing again. Seamless loop.`
 - **end (3)**: `3 animation frames landing and catching breath, settling back to neutral standing pose with a leftover grin.`
+
+## 4-b) 특수: 댄스 (dance) — 1종
+
+### dance1 (오버맨 킹 게이너 춤 — 팔 흔들기)
+작품 「OVERMAN 킹 게이너」 OP의 상징적인 춤. 반쯤 앉은 자세로 무릎 바운스하며,
+**팔꿈치를 항상 90도로 굽힌 채** 두 주먹을 몸 앞에서 위아래 **반대 위상**으로 펌핑
+(한쪽이 뺨 높이일 때 반대쪽은 허리 높이 — 마라카스 흔들듯). 주먹은 절대 머리 위로
+올라가지 않고 팔도 절대 쭉 펴지 않는다. 발은 모든 프레임에서 엉덩이 바로 아래에
+모음(벌리면 기마자세가 됨). `gen_frames.py` 방식 16프레임 seamless 루프
+(짝수 = 키 포즈, 홀수 = 중간 프레임).
+- 프레임 구조: `0 최저점(양주먹 가슴) → 1-4 화면왼쪽 주먹이 가슴→어깨→뺨으로 상승,
+  반대 주먹은 허리→엉덩이로 하강 (몸은 바운스 업) → 5-7 주먹 교차하며 하강 →
+  8 최저점 → 9-12 화면오른쪽 주먹 상승 (미러) → 13-15 교차·하강 → 루프`
+- 정의: `anims/dance1_loop.json` (frames 16개)
+- 생성: `python tools/gen_frames.py anims/dance1_loop.json --outdir sprites/raw`
+- 후처리: `python tools/slice_and_key.py --frames "sprites/raw/dance1_loop_*.jpg" --outdir sprites/dance1_loop --prefix dance1_loop`
+- WebM(16FPS, 16프레임=1초): `ffmpeg -y -framerate 16 -i sprites/dance1_loop/dance1_loop_%02d.png -c:v libvpx-vp9 -pix_fmt yuva420p -b:v 0 -crf 24 -an sprites/anim_dance1_loop.webm`
+- **프롬프트 팁 (검증됨)**:
+  - "monkey dance" 같은 별칭 단어를 쓰면 만세/점프 동작으로 새어나간다.
+    별칭 대신 **동작의 기하학을 직접 서술**할 것 (팔꿈치 각도, 주먹 높이 한계, 반대 위상).
+  - 좌우 팔 교대: 모델이 한쪽 팔(주로 화면 왼쪽)만 계속 올리는 경향이 있다.
+    거울 프레임은 **캐릭터 기준 + 화면 기준 이중 표기**("HER LEFT fist (the fist near
+    the RIGHT edge of the image) is pumping UP")로 지시해야 확실히 반대 팔이 올라간다.
+    (`--only N`으로 해당 프레임만 재생성)
+  - 한 주먹 위 + 한 주먹 아래 비대칭이 자꾸 양주먹 동시 올림으로 나오면:
+    "IMPORTANT: the two fists are FAR APART vertically / NOT together, NOT at the
+    same height"를 명시하고, **내려간 팔을 문장 맨 앞에** 먼저 서술할 것.
 
 ## 5) 우울 상태 (sad) — 2종
 
