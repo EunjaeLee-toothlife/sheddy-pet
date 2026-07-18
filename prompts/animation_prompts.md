@@ -146,7 +146,7 @@ a cute chibi girl (2.5-head proportion), long blonde hair, big yellow-gold eyes,
 유지(미세 바운스) → 12-13 복귀).
 - 정의: `anims/yaho1_loop.json` (frames 14개)
 - WebM(10FPS, 14프레임=1.4초): `ffmpeg -y -framerate 10 -i sprites/yaho1_loop/yaho1_loop_%02d.png -c:v libvpx-vp9 -pix_fmt yuva420p -b:v 0 -crf 24 -an sprites/anim_yaho1_loop.webm`
-- 위젯 등록: `rate: 0.8, minCycles: 1, maxCycles: 2` (완결형 동작)
+- 위젯 등록: `rate: 0.53, minCycles: 1, maxCycles: 2` (완결형 동작. 0.8도 빨라서 그 2/3로 조정, 사이클 약 2.6초)
 - 포즈 팁: "V sign"만 쓰면 평범한 브이가 나온다. **"UPSIDE-DOWN V peace
   sign, fingers pointing DOWN, back of her hand toward the viewer, held
   next to her cheekbone under the winking eye"처럼 손 방향을 기하학적으로
