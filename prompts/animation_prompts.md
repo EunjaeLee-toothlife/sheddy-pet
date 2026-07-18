@@ -135,6 +135,51 @@ a cute chibi girl (2.5-head proportion), long blonde hair, big yellow-gold eyes,
     "IMPORTANT: the two fists are FAR APART vertically / NOT together, NOT at the
     same height"를 명시하고, **내려간 팔을 문장 맨 앞에** 먼저 서술할 것.
 
+## 4-c) 특수: 거제 야호 (yaho) — 1종
+
+### yaho1 (리센느 '거제 야호' 밈 포즈)
+걸그룹 리센느 미나미의 '거제 야호' 밈 재현. 양손을 입가에 메가폰처럼 모아
+"야호~!" 하고 외친 뒤, 갸루 시그니처 포즈로 마무리: **한쪽 눈 윙크 +
+거꾸로 브이(검지·중지를 아래로 향하게, 손등이 화면 쪽) 를 뺨 옆에** 대고
+반대 손은 허리에, 골반은 반대쪽으로 쭉. `gen_frames.py` 방식 14프레임
+완결형 시퀀스 (0-2 숨 들이쉬기 → 3-5 외침 → 6-8 포즈 전환 → 9-11 포즈
+유지(미세 바운스) → 12-13 복귀).
+- 정의: `anims/yaho1_loop.json` (frames 14개)
+- WebM(10FPS, 14프레임=1.4초): `ffmpeg -y -framerate 10 -i sprites/yaho1_loop/yaho1_loop_%02d.png -c:v libvpx-vp9 -pix_fmt yuva420p -b:v 0 -crf 24 -an sprites/anim_yaho1_loop.webm`
+- 위젯 등록: `rate: 0.8, minCycles: 1, maxCycles: 2` (완결형 동작)
+- 포즈 팁: "V sign"만 쓰면 평범한 브이가 나온다. **"UPSIDE-DOWN V peace
+  sign, fingers pointing DOWN, back of her hand toward the viewer, held
+  next to her cheekbone under the winking eye"처럼 손 방향을 기하학적으로
+  명시**해야 갸루 피스가 나온다.
+
+## 4-d) 특수: 파라파라 댄스 (parapara) — 1종
+
+### parapara1 (파라파라) — v2
+'거제 야호' 밈에서 미나미가 춘 그 춤. **하체는 거의 고정**(어깨너비로 발을
+심고 무릎 바운스 + 힐 리프트만), 파라파라의 시그니처인 **곧게 뻗은 팔의
+교차 대각 찌르기**가 핵심. 부드러운 움직임을 위해 **24프레임 @12FPS**
+(사이클 2초, 3프레임 × 8비트) seamless 루프.
+- 비트맵: 화면왼쪽 팔 좌상단 45° 찌르기(반대 손은 가슴에) → 스왑, 오른팔
+  우상단 찌르기 → 왼팔 반복 → 오른팔 반복 → 양팔 T자 → 가슴 앞 손목
+  X크로스 → 양팔 하이 V → 내리며 가슴 복귀.
+- 정의: `anims/parapara1_loop.json` (frames 24개)
+- WebM(12FPS): `ffmpeg -y -framerate 12 -i sprites/parapara1_loop/parapara1_loop_%02d.png -c:v libvpx-vp9 -pix_fmt yuva420p -b:v 0 -crf 24 -an sprites/anim_parapara1_loop.webm`
+- 위젯 등록: `rate: 0.6, minCycles: 2, maxCycles: 3` (원속 2초/사이클은 너무 빨라 0.6배속 ≈ 3.3초/사이클)
+- **프롬프트 팁 (v1 실패에서 배운 것)**:
+  - "양손으로 큰 호를 그린다" 같은 **연속 궤적 서술은 실패한다** — 프레임마다
+    팔꿈치 각도·팔 위치가 제각각으로 나와 팔이 널뛴다. 킹게이너 댄스처럼
+    **매 프레임 양팔의 기하학(각도·높이·곧음)을 전부 명시**할 것:
+    "FULLY extended, PERFECTLY STRAIGHT with no elbow bend, toward the
+    upper-LEFT corner at about 45 degrees" + 활성 팔은 이중 라벨
+    ("HER RIGHT arm (the arm on the LEFT side of the image)").
+  - 쉬는 손 위치도 고정: "the other hand pulled in, lying flat against
+    her upper chest, elbow tucked down".
+  - "her arms NEVER cross in front of her face"를 매 프레임 반복 — 머리
+    위에서 팔이 꼬이는 프레임 방지. X크로스는 "at CHEST height, well
+    below her face"로 높이를 못박는다.
+  - 매 프레임에 "open flat hands, fingers together and extended (never
+    fists)" + "feet planted shoulder-width, no jump, no squat" 반복.
+
 ## 5) 우울 상태 (sad) — 2종
 
 ### sad1 (풀 죽음)

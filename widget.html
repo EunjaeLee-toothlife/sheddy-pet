@@ -33,6 +33,8 @@
     border-radius: 10px; padding: 14px 16px; width: 300px;
     display: none; flex-direction: column; gap: 10px;
     box-shadow: 0 4px 16px rgba(0,0,0,.4);
+    /* 작은 OBS 소스에서도 패널이 화면 밖으로 넘치지 않게 */
+    box-sizing: border-box; max-height: calc(100vh - 24px);
   }
   #settings.open { display: flex; }
   #settings h3 { margin: 0; font-size: 14px; }
@@ -43,6 +45,17 @@
     display: flex; flex-direction: column; gap: 2px;
     max-height: 150px; overflow-y: auto;
     background: rgba(0,0,0,.25); border-radius: 6px; padding: 4px;
+    /* 패널이 뷰포트에 눌리면 목록이 줄어들며 스크롤됨 */
+    flex: 0 1 auto; min-height: 40px;
+  }
+  .mic-item, .motion-cat { flex-shrink: 0; } /* 스크롤 시 행 높이 유지 */
+  /* OBS(CEF)에서도 보이는 스크롤바 */
+  #micList::-webkit-scrollbar, #motionList::-webkit-scrollbar { width: 8px; }
+  #micList::-webkit-scrollbar-thumb, #motionList::-webkit-scrollbar-thumb {
+    background: rgba(255,255,255,.28); border-radius: 4px;
+  }
+  #micList::-webkit-scrollbar-track, #motionList::-webkit-scrollbar-track {
+    background: rgba(255,255,255,.06); border-radius: 4px;
   }
   .mic-item {
     padding: 6px 8px; border-radius: 5px; cursor: pointer;
@@ -63,6 +76,8 @@
     border-radius: 10px; padding: 14px 16px; width: 230px;
     display: none; flex-direction: column; gap: 10px;
     box-shadow: 0 4px 16px rgba(0,0,0,.4);
+    /* 작은 OBS 소스에서도 패널이 화면 밖으로 넘치지 않게 */
+    box-sizing: border-box; max-height: calc(100vh - 24px);
   }
   #motionPanel.open { display: flex; }
   #motionPanel h3 { margin: 0; font-size: 14px; }
@@ -73,6 +88,12 @@
     display: flex; flex-direction: column; gap: 2px;
     max-height: 240px; overflow-y: auto;
     background: rgba(0,0,0,.25); border-radius: 6px; padding: 4px;
+    /* 패널이 뷰포트에 눌리면 목록이 줄어들며 스크롤됨 */
+    flex: 0 1 auto; min-height: 40px;
+  }
+  .motion-cat {
+    margin-top: 4px; padding: 2px 4px;
+    font-size: 11px; color: #999; text-transform: uppercase;
   }
 </style>
 </head>
@@ -116,7 +137,19 @@
 // start/end가 없는 애니메이션은 loop만 등록하면 됨.
 // 파일이 준비되면 여기에 추가. BASE는 서버 배포 시 CDN 경로로 교체.
 const BASE = "sprites/";
-// weight: 주사위 가중치 (등록된 애니메이션끼리의 상대 비율)
+// ── 2중 가중치 주사위 ──
+// 1차: category 가중치로 "분류"를 뽑고 (CATEGORY_WEIGHTS)
+// 2차: 그 분류 안에서 weight 가중치로 "행동"을 뽑는다.
+// 새 분류를 만들면 CATEGORY_WEIGHTS에도 추가할 것 (없으면 주사위에서 제외됨).
+const CATEGORY_WEIGHTS = {
+  idle: 50,     // 대기
+  basic: 20,    // 소소한 몸짓 (두리번/기지개/흔들)
+  happy: 14,    // 행복
+  excited: 4,   // 신남
+  special: 8,   // 특수 퍼포먼스 (댄스/밈)
+  sad: 6,       // 우울
+};
+// category: 위 분류 키. weight: 같은 분류 안에서의 상대 비율
 // minCycles: 이 상태에 진입하면 최소 이만큼 loop를 완주해야 전환 허용
 //            (생략 시 MIN_EMOTION_CYCLES. loop 길이가 짧으면 크게 잡을 것)
 // maxCycles: 이만큼 완주하면 주사위와 무관하게 idle로 강제 복귀 (생략 시 무제한.
@@ -124,20 +157,24 @@ const BASE = "sprites/";
 // rate:      재생 배속 (기본 1.0). start/loop/end 클립 모두에 적용됨.
 //            예) 0.8 = 20% 느리게, 1.5 = 50% 빠르게
 const ANIMS = {
-  idle1:    { loop: "anim_idle1_loop.webm", weight: 50 },
-  basic1:   { loop: "anim_basic1_loop.webm", weight: 8 },
-  basic2:   { loop: "anim_basic2_loop.webm", weight: 8 },
-  basic3:   { loop: "anim_basic3_loop.webm", weight: 8 },
-  happy1:   { start: "anim_happy1_start.webm", loop: "anim_happy1_loop.webm", end: "anim_happy1_end.webm", weight: 7 },
-  happy2:   { loop: "anim_happy2_loop.webm", weight: 7 },
+  idle1:    { loop: "anim_idle1_loop.webm", category: "idle", weight: 1 },
+  basic1:   { loop: "anim_basic1_loop.webm", category: "basic", weight: 1 },
+  basic2:   { loop: "anim_basic2_loop.webm", category: "basic", weight: 1 },
+  basic3:   { loop: "anim_basic3_loop.webm", category: "basic", weight: 1 },
+  happy1:   { start: "anim_happy1_start.webm", loop: "anim_happy1_loop.webm", end: "anim_happy1_end.webm", category: "happy", weight: 3 },
+  happy2:   { loop: "anim_happy2_loop.webm", category: "happy", weight: 3 },
   // 공주님 턴 + 커트시 — 한 사이클이 완결된 동작(회전+인사)이라 1~2회만 재생
-  happy3:   { loop: "anim_happy3_loop.webm", weight: 5, minCycles: 1, maxCycles: 2, rate: 0.8 },
-  excited1: { loop: "anim_excited1_loop.webm", weight: 4 },
+  happy3:   { loop: "anim_happy3_loop.webm", category: "happy", weight: 2, minCycles: 1, maxCycles: 2, rate: 0.8 },
+  excited1: { loop: "anim_excited1_loop.webm", category: "excited", weight: 1 },
   // 킹게이너 댄스 (팔 흔들기) — 0.5배속이라 사이클당 2초, 2~4사이클 = 4~8초
-  dance1:   { loop: "anim_dance1_loop.webm", weight: 3, minCycles: 2, maxCycles: 4, rate: 0.5 },
-  sad1:     { loop: "anim_sad1_loop.webm", weight: 4 },
-  sad2:     { loop: "anim_sad2_loop.webm", weight: 4 },
-  talk:     { loop: "anim_talk_loop.webm", weight: 0 }, // 주사위 제외, 마이크 전용
+  dance1:   { loop: "anim_dance1_loop.webm", category: "special", weight: 1, minCycles: 2, maxCycles: 4, rate: 0.5 },
+  // 거제 야호 (갸루 윙크 + 거꾸로 브이) — 완결형 시퀀스라 1~2회만 재생
+  yaho1:    { loop: "anim_yaho1_loop.webm", category: "special", weight: 2, minCycles: 1, maxCycles: 2, rate: 0.8 },
+  // 파라파라 댄스 — 24프레임 @12FPS, 0.6배속이라 사이클당 약 3.3초, 2~3사이클 = 6.6~10초
+  parapara1:{ loop: "anim_parapara1_loop.webm", category: "special", weight: 1, minCycles: 2, maxCycles: 3, rate: 0.6 },
+  sad1:     { loop: "anim_sad1_loop.webm", category: "sad", weight: 1 },
+  sad2:     { loop: "anim_sad2_loop.webm", category: "sad", weight: 1 },
+  talk:     { loop: "anim_talk_loop.webm", category: "talk", weight: 0 }, // 주사위 제외, 마이크 전용
 };
 const DEFAULT_STATE = "idle1";
 // loop 한 사이클이 끝날 때마다 이 확률로 주사위를 굴려 상태를 다시 뽑음
@@ -207,6 +244,16 @@ let talkActive = false;  // 마이크 게이트 열림 여부
 let idleStreak = 0;      // 마지막 감정 이후 완주한 idle 사이클 수
 let emotionCycles = 0;   // 현재 감정 상태에서 완주한 사이클 수
 
+function pickWeighted(items, weightOf) {
+  const total = items.reduce((s, it) => s + weightOf(it), 0);
+  let r = Math.random() * total;
+  for (const it of items) {
+    r -= weightOf(it);
+    if (r <= 0) return it;
+  }
+  return items[items.length - 1];
+}
+
 function rollDice() {
   // 감정은 최소 유지 사이클(애니메이션별 minCycles 우선)을 채우기 전엔 끝나지 않음
   const minCycles = ANIMS[current].minCycles ?? MIN_EMOTION_CYCLES;
@@ -218,15 +265,17 @@ function rollDice() {
   if (current !== DEFAULT_STATE) return DEFAULT_STATE;
   // 감정 직후에는 idle을 MIN_IDLE_CYCLES 이상 완주해야 다음 감정 허용
   if (idleStreak < MIN_IDLE_CYCLES) return current;
-  const entries = Object.entries(ANIMS)
-    .filter(([, a]) => (a.weight ?? 1) > 0); // weight 0 = 주사위 제외
-  const total = entries.reduce((s, [, a]) => s + (a.weight ?? 1), 0);
-  let r = Math.random() * total;
-  for (const [name, a] of entries) {
-    r -= (a.weight ?? 1);
-    if (r <= 0) return name;
-  }
-  return current;
+  // weight 0 이거나 분류 가중치가 없는/0인 애니메이션은 주사위 제외
+  const pool = Object.entries(ANIMS).filter(([, a]) =>
+    (a.weight ?? 1) > 0 && (CATEGORY_WEIGHTS[a.category] ?? 0) > 0);
+  if (!pool.length) return current;
+  // 1차 주사위: 분류 선택 (등록된 애니메이션이 있는 분류만 후보)
+  const cats = [...new Set(pool.map(([, a]) => a.category))];
+  const cat = pickWeighted(cats, c => CATEGORY_WEIGHTS[c]);
+  // 2차 주사위: 그 분류 안에서 행동 선택
+  const [name] = pickWeighted(
+    pool.filter(([, a]) => a.category === cat), ([, a]) => a.weight ?? 1);
+  return name;
 }
 
 // loop 한 사이클이 끝났을 때
@@ -513,13 +562,24 @@ function renderMotionList() {
     renderMotionHighlight();
   });
   motionList.appendChild(auto);
-  for (const [name, a] of Object.entries(ANIMS)) {
-    const row = document.createElement("div");
-    row.className = "mic-item";
-    row.dataset.name = name;
-    row.textContent = name + ((a.weight ?? 1) > 0 ? "" : " (주사위 제외)");
-    row.addEventListener("click", () => pickMotion(name));
-    motionList.appendChild(row);
+  // 분류(category)별로 묶어서 표시 — 2중 주사위 구조를 그대로 보여줌
+  const entries = Object.entries(ANIMS);
+  const cats = [...new Set(entries.map(([, a]) => a.category))];
+  for (const cat of cats) {
+    const head = document.createElement("div");
+    head.className = "motion-cat";
+    const cw = CATEGORY_WEIGHTS[cat] ?? 0;
+    head.textContent = cat + (cw > 0 ? "" : " (주사위 제외)");
+    motionList.appendChild(head);
+    for (const [name, a] of entries.filter(([, x]) => x.category === cat)) {
+      const row = document.createElement("div");
+      row.className = "mic-item";
+      row.dataset.name = name;
+      const inDice = (a.weight ?? 1) > 0 && cw > 0;
+      row.textContent = name + (inDice ? "" : " (주사위 제외)");
+      row.addEventListener("click", () => pickMotion(name));
+      motionList.appendChild(row);
+    }
   }
   renderMotionHighlight();
 }
