@@ -164,7 +164,7 @@ a cute chibi girl (2.5-head proportion), long blonde hair, big yellow-gold eyes,
   X크로스 → 양팔 하이 V → 내리며 가슴 복귀.
 - 정의: `anims/parapara1_loop.json` (frames 24개)
 - WebM(12FPS): `ffmpeg -y -framerate 12 -i sprites/parapara1_loop/parapara1_loop_%02d.png -c:v libvpx-vp9 -pix_fmt yuva420p -b:v 0 -crf 24 -an sprites/anim_parapara1_loop.webm`
-- 위젯 등록: `minCycles: 2, maxCycles: 4` (rate 1.0)
+- 위젯 등록: `rate: 0.6, minCycles: 2, maxCycles: 3` (원속 2초/사이클은 너무 빨라 0.6배속 ≈ 3.3초/사이클)
 - **프롬프트 팁 (v1 실패에서 배운 것)**:
   - "양손으로 큰 호를 그린다" 같은 **연속 궤적 서술은 실패한다** — 프레임마다
     팔꿈치 각도·팔 위치가 제각각으로 나와 팔이 널뛴다. 킹게이너 댄스처럼
