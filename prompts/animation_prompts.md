@@ -180,6 +180,47 @@ a cute chibi girl (2.5-head proportion), long blonde hair, big yellow-gold eyes,
   - 매 프레임에 "open flat hands, fingers together and extended (never
     fists)" + "feet planted shoulder-width, no jump, no squat" 반복.
 
+## 4-e) 특수: 화학 실험 (chem) — 1종, 멀티 엔딩 ⭐신규 구조
+
+### chem1 (플라스크 실험 — start + loop + 랜덤 end 3종)
+등 뒤에서 삼각 플라스크(마젠타-핑크 액체)와 비커(시안-블루 액체)를 꺼내
+'짜잔!' → 비커를 플라스크에 붓고 얼굴 앞에서 흔들어 섞기(loop) →
+loop 2~5회 뒤 **3가지 엔딩 중 하나가 랜덤 재생**되는 첫 멀티 엔딩 모션.
+- **클립 구성 (모두 @10FPS, `gen_frames.py` + chain 모드)**:
+  프레임 수를 동작 대비 1.25배로 잡아 실시간 재생이 체감 0.8배속이 되게 함
+  (프레임 밀도로 느리게 해 부드러움 확보. 0.95(정확히 0.8배속)도 체감상 빨라서
+  위젯 `rate: 0.7`로 최종 조정 — loop 사이클 약 2.7초, 원안 대비 약 0.6배속)
+  - `chem1_start` 12프레임 (1.2초): 등 뒤에서 꺼내 짜잔 → 믹싱 준비 자세
+  - `chem1_loop` 20프레임 (2.0초): 붓기 → 플라스크 얼굴 앞으로 → 흔들어 섞기 → 복귀 (seamless)
+  - `chem1_end1` 20프레임 (2.0초): 실패 — 검은 연기 펑! → 그을음 벙찐 콩알눈 → 켈록 기침
+    → 도구 숨기고 노란 프릴 손수건으로 얼굴 닦기 (마지막 프레임은 그을음 완전 제거)
+  - `chem1_end2` 12프레임 (1.2초): 애매 — 살짝 빛나다 사그라듦 → 머리 위 '?' → 도구 숨김
+  - `chem1_end3` 18프레임 (1.8초): 성공 — 화려한 빛 + 내용물 무지개색 변화 → 과장된
+    반짝이 눈 → 짜잔! 플라스크 치켜들기 → 도구 숨김
+- 정의: `anims/chem1_start.json`, `chem1_loop.json`, `chem1_end1.json`, `chem1_end2.json`, `chem1_end3.json`
+- 생성/후처리 (클립별 반복):
+  ```bash
+  python tools/gen_frames.py anims/chem1_loop.json --outdir sprites/raw
+  python tools/slice_and_key.py --frames "sprites/raw/chem1_loop_*.jpg" --outdir sprites/chem1_loop --prefix chem1_loop
+  ffmpeg -y -framerate 10 -i sprites/chem1_loop/chem1_loop_%02d.png -c:v libvpx-vp9 -pix_fmt yuva420p -b:v 0 -crf 24 -an sprites/anim_chem1_loop.webm
+  ```
+- 위젯 등록: `end`를 **배열**로 주면 상태 전환 시 랜덤으로 하나 재생.
+  `minCycles: 2, maxCycles: 5` → 최소 2사이클 보장, 이후 매 사이클 35% 확률로 종료,
+  5사이클 도달 시 강제 종료.
+- **연속성 규칙 (프레임 정의에 반영됨)**:
+  - start 마지막 프레임 = loop 프레임 0 = end 3종의 프레임 0 (플라스크 가슴 높이
+    화면왼쪽 손, 비커 어깨 높이 화면오른쪽 손)
+  - end 3종의 마지막 프레임 = 빈손 기본 idle 자세 (도구는 등 뒤로 숨김)
+- **소품 프롬프트 팁**:
+  - 손 배정 고정: 플라스크는 항상 화면 **왼쪽** 손, 비커는 항상 화면 **오른쪽** 손.
+    chain 모드 필수 — 소품 디테일(액체 색·유리 형태)이 텍스트만으로는 프레임 간 고정 안 됨.
+  - **액체 양은 모든 프레임에서 동일** ("liquid levels never change, cartoon logic").
+    붓는 동작이 loop라서 양이 변하면 seamless가 깨짐.
+  - 유리는 **불투명 페일 틴트로 지시** ("opaque pale blue-white glass tint, NEVER
+    transparent") — 투명 유리로 나오면 그린 배경이 비쳐 크로마키 때 유리에 구멍이 뚫림.
+  - end1의 그을음은 마지막 3프레임에 걸쳐 단계적으로 지우고, 최종 프레임에
+    "face COMPLETELY CLEAN"을 명시해야 idle 복귀가 자연스러움.
+
 ## 5) 우울 상태 (sad) — 2종
 
 ### sad1 (풀 죽음)

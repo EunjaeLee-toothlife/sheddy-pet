@@ -156,6 +156,8 @@ const CATEGORY_WEIGHTS = {
 //            ?dice=0이거나 외부 명령으로 pin된 동안에는 적용되지 않음)
 // rate:      재생 배속 (기본 1.0). start/loop/end 클립 모두에 적용됨.
 //            예) 0.8 = 20% 느리게, 1.5 = 50% 빠르게
+// end:       단일 파일 또는 파일 배열. 배열이면 상태를 빠져나갈 때
+//            그중 하나를 랜덤으로 재생 (멀티 엔딩)
 const ANIMS = {
   idle1:    { loop: "anim_idle1_loop.webm", category: "idle", weight: 1 },
   basic1:   { loop: "anim_basic1_loop.webm", category: "basic", weight: 1 },
@@ -172,6 +174,11 @@ const ANIMS = {
   yaho1:    { loop: "anim_yaho1_loop.webm", category: "special", weight: 2, minCycles: 1, maxCycles: 2, rate: 0.53 },
   // 파라파라 댄스 — 24프레임 @12FPS, 0.6배속이라 사이클당 약 3.3초, 2~3사이클 = 6.6~10초
   parapara1:{ loop: "anim_parapara1_loop.webm", category: "special", weight: 1, minCycles: 2, maxCycles: 3, rate: 0.6 },
+  // 화학 실험 (플라스크에 비커 붓고 섞기) — loop 2~5회 뒤 3종 엔딩 중 하나 랜덤 재생
+  // 프레임 1.25배 패딩 + rate 0.7 (0.95도 빨라서 하향) — loop 사이클 약 2.7초
+  chem1:    { start: "anim_chem1_start.webm", loop: "anim_chem1_loop.webm",
+              end: ["anim_chem1_end1.webm", "anim_chem1_end2.webm", "anim_chem1_end3.webm"],
+              category: "special", weight: 2, minCycles: 2, maxCycles: 5, rate: 0.7 },
   sad1:     { loop: "anim_sad1_loop.webm", category: "sad", weight: 1 },
   sad2:     { loop: "anim_sad2_loop.webm", category: "sad", weight: 1 },
   talk:     { loop: "anim_talk_loop.webm", category: "talk", weight: 0 }, // 주사위 제외, 마이크 전용
@@ -323,9 +330,12 @@ async function setState(name, { pin = true } = {}) {
   if (name !== DEFAULT_STATE) { idleStreak = 0; emotionCycles = 0; } // 감정 진입
 
   // 1) 현재 상태의 end 클립 (있으면) 재생하고 끝날 때까지 대기
+  //    end가 배열이면 그중 하나를 랜덤으로 재생 (멀티 엔딩)
   const cur = current && ANIMS[current];
   if (cur && cur.end) {
-    await new Promise(res => playClip(cur.end, { onEnded: res, rate: cur.rate ?? 1 }));
+    const ends = Array.isArray(cur.end) ? cur.end : [cur.end];
+    const endFile = ends[Math.floor(Math.random() * ends.length)];
+    await new Promise(res => playClip(endFile, { onEnded: res, rate: cur.rate ?? 1 }));
   }
 
   // 2) 다음 상태의 start (있으면) → loop (사이클 끝마다 주사위)
