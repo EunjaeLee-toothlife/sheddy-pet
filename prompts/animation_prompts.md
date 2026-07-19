@@ -180,24 +180,25 @@ a cute chibi girl (2.5-head proportion), long blonde hair, big yellow-gold eyes,
   - 매 프레임에 "open flat hands, fingers together and extended (never
     fists)" + "feet planted shoulder-width, no jump, no squat" 반복.
 
-## 4-e) 특수: 포케댄스 (pokedance) — 1종
+## 4-e) 특수: 앞발 부기 댄스 (dance2) — 1종
 
-### pokedance1 (포케댄스 '부기부기 뱀뱀') — Lite 모델 검증용
+### dance2 (앞발 부기 댄스, 포케댄스 '부기부기 뱀뱀' 모티브) — Lite 모델 1호
 포켓몬 데이 2024 바이럴 댄스(POKÉDANCE)의 시그니처 동작. 양손을 **강아지 앞발
 모양 주먹**(손목 툭 떨군 느슨한 주먹, 손등이 화면 쪽)으로 어깨 앞에 들고,
 상체+양 앞발이 한쪽으로 스웨이할 때 **힙은 반대쪽으로** 빠지는 바나나 커브
 (부기부기), 마지막에 정면 보며 **양 앞발을 화면 쪽으로 두 번 내밀기**(뱀뱀).
 16프레임 seamless 루프 @12FPS (0-5 왼쪽 스웨이 2바운스 → 6-11 오른쪽 미러 →
 12-15 앞발 푸시 x2).
-- **모델: `gemini-3.1-flash-lite-image`** — config에 `"model"` 키로 지정
-  (`gen_frames.py`가 `--model`/config `"model"` 오버라이드 지원). Lite 모델도
+- **모델: `gemini-3.1-flash-lite-image`** — 이 모션의 검증 결과가 좋아
+  `gen_frames.py`의 기본 모델을 lite로 교체함 (`--model`/config `"model"`로
+  다른 모델 오버라이드 가능). Lite 모델도
   베이스 ref 1장 기준 캐릭터/의상/화풍 일관성 양호. 단 **몸통 기울기 지시가
   잘 안 먹는 편** — "clearly LEANING like a banana curve", "NOT standing
   straight"처럼 과장해서 써야 하고, 팔이 가슴을 가로지르는 오생성이 나오면
   "her arms NEVER cross in front of her chest / BOTH paws SIDE BY SIDE as a
   pair on the RIGHT side"로 재생성(`--only N`).
-- 정의: `anims/pokedance1_loop.json` (frames 16개, model 키 포함)
-- WebM(12FPS, 16프레임=1.33초): `ffmpeg -y -framerate 12 -i sprites/pokedance1_loop/pokedance1_loop_%02d.png -c:v libvpx-vp9 -pix_fmt yuva420p -b:v 0 -crf 24 -an sprites/anim_pokedance1_loop.webm`
+- 정의: `anims/dance2_loop.json` (frames 16개)
+- WebM(12FPS, 16프레임=1.33초): `ffmpeg -y -framerate 12 -i sprites/dance2_loop/dance2_loop_%02d.png -c:v libvpx-vp9 -pix_fmt yuva420p -b:v 0 -crf 24 -an sprites/anim_dance2_loop.webm`
 - 위젯 등록: `rate: 0.7, minCycles: 2, maxCycles: 4` (사이클 약 1.9초)
 
 ## 5) 우울 상태 (sad) — 2종

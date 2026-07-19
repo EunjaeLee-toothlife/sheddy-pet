@@ -29,7 +29,7 @@ from io import BytesIO
 
 GEN = os.path.expanduser(
     "~/.claude/skills/lite-image/scripts/generate_image_v2.py")
-MODEL = "gemini-3.1-flash-image"
+MODEL = "gemini-3.1-flash-lite-image"
 
 PREAMBLE = (
     "Single frame of a sprite animation. One cute chibi character, full body "
