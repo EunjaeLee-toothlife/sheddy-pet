@@ -29,7 +29,7 @@ from io import BytesIO
 
 GEN = os.path.expanduser(
     "~/.claude/skills/lite-image/scripts/generate_image_v2.py")
-MODEL = "gemini-3.1-flash-image"
+MODEL = "gemini-3.1-flash-lite-image"
 
 PREAMBLE = (
     "Single frame of a sprite animation. One cute chibi character, full body "
@@ -113,7 +113,7 @@ def _ref_part(path, ref_max=512):
                            "data": base64.b64encode(buf.getvalue()).decode()}}
 
 
-def gen_multi_ref(prompt, refs, output):
+def gen_multi_ref(prompt, refs, output, model=MODEL):
     """레퍼런스 여러 장을 첨부하는 generateContent 호출 (chain 모드용)."""
     key = os.environ.get("GEMINI_API_KEY") or os.environ.get("GOOGLE_API_KEY")
     if not key:
@@ -127,7 +127,7 @@ def gen_multi_ref(prompt, refs, output):
         },
     }
     url = (f"https://generativelanguage.googleapis.com/v1beta/models/"
-           f"{MODEL}:generateContent")
+           f"{model}:generateContent")
     req = urllib.request.Request(
         url, data=json.dumps(payload).encode(),
         headers={"Content-Type": "application/json", "x-goog-api-key": key},
@@ -164,12 +164,16 @@ def main():
     p.add_argument("--chain", action="store_true",
                    help="attach the previous frame as a 2nd reference "
                         "(config \"chain\": true does the same)")
+    p.add_argument("--model", default=None,
+                   help="override model (config \"model\" does the same); "
+                        f"default {MODEL}")
     a = p.parse_args()
 
     with open(a.config, encoding="utf-8") as f:
         cfg = json.load(f)
     name = cfg["name"]
     chain = a.chain or cfg.get("chain", False)
+    model = a.model or cfg.get("model", MODEL)
     os.makedirs(a.outdir, exist_ok=True)
 
     env = dict(os.environ, PYTHONIOENCODING="utf-8")
@@ -184,7 +188,7 @@ def main():
         if prev:
             prompt = f"{PREAMBLE} {CHAIN_NOTE} {pose} {CHARACTER} {STYLE}"
             try:
-                gen_multi_ref(prompt, [cfg["ref"], prev], out)
+                gen_multi_ref(prompt, [cfg["ref"], prev], out, model)
             except Exception as e:
                 print(f"  chain gen failed: {e}")
                 failed.append(i)
@@ -192,7 +196,8 @@ def main():
             prompt = f"{PREAMBLE} {pose} {CHARACTER} {STYLE}"
             r = subprocess.run(
                 [sys.executable, GEN, "--prompt", prompt, "--ref", cfg["ref"],
-                 "--output", out, "--aspect", "1:1", "--size", "1K"],
+                 "--output", out, "--aspect", "1:1", "--size", "1K",
+                 "--model", model],
                 env=env, capture_output=True, text=True,
                 encoding="utf-8", errors="replace")
             if r.returncode != 0:
