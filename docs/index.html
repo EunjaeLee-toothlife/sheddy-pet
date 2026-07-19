@@ -160,7 +160,7 @@ const CATEGORY_WEIGHTS = {
 //            그중 하나를 랜덤으로 재생 (멀티 엔딩)
 const ANIMS = {
   idle1:    { loop: "anim_idle1_loop.webm", category: "idle", weight: 1 },
-  basic1:   { loop: "anim_basic1_loop.webm", category: "basic", weight: 1 },
+  basic1:   { loop: "anim_basic1_loop.webm", category: "basic", weight: 1, rate: 1.1 },
   basic2:   { loop: "anim_basic2_loop.webm", category: "basic", weight: 1 },
   basic3:   { loop: "anim_basic3_loop.webm", category: "basic", weight: 1 },
   happy1:   { start: "anim_happy1_start.webm", loop: "anim_happy1_loop.webm", end: "anim_happy1_end.webm", category: "happy", weight: 3 },
@@ -182,7 +182,7 @@ const ANIMS = {
   // 프레임 1.25배 패딩 + rate 0.7 (0.95도 빨라서 하향) — loop 사이클 약 2.7초
   chem1:    { start: "anim_chem1_start.webm", loop: "anim_chem1_loop.webm",
               end: ["anim_chem1_end1.webm", "anim_chem1_end2.webm", "anim_chem1_end3.webm"],
-              category: "special", weight: 2, minCycles: 2, maxCycles: 5, rate: 0.7 },
+              category: "special", weight: 2, minCycles: 2, maxCycles: 3, rate: 0.7 },
   sad1:     { loop: "anim_sad1_loop.webm", category: "sad", weight: 1 },
   sad2:     { loop: "anim_sad2_loop.webm", category: "sad", weight: 1 },
   talk:     { loop: "anim_talk_loop.webm", category: "talk", weight: 0 }, // 주사위 제외, 마이크 전용
