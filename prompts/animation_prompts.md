@@ -242,6 +242,21 @@ loop 2~5회 뒤 **3가지 엔딩 중 하나가 랜덤 재생**되는 첫 멀티 
 - WebM(12FPS, 16프레임=1.33초): `ffmpeg -y -framerate 12 -i sprites/dance2_loop/dance2_loop_%02d.png -c:v libvpx-vp9 -pix_fmt yuva420p -b:v 0 -crf 24 -an sprites/anim_dance2_loop.webm`
 - 위젯 등록: `rate: 0.7, minCycles: 2, maxCycles: 4` (사이클 약 1.9초)
 
+### dance3 (검지 포인팅 부기, 'Hey! Boogie woogie bang bang' 모티브)
+포켓몬 데이 팬 애니메이션 GIF(63프레임 @70ms)를 프레임 해체해 인간 여성
+캐릭터의 안무를 추출한 모션. 양손을 항상 **검지 포인팅**(핑거건) 모양으로
+유지하고, 어깨보다 **넓은 스탠스**로 발 고정. 상체가 한쪽으로 기울며 양손
+검지가 같은 쪽(가까운 팔은 어깨 높이로 뻗고, 반대 손은 가슴 앞)을 가리키고
+힙은 반대쪽 — 좌우 2바운스씩. 마지막에 정면에서 **양손 검지를 귀 높이로 들어
+위-바깥을 두 번 포인트**(hey! hey!). 16프레임 seamless 루프 @12FPS
+(0 센터 딥 → 1-4 왼쪽 스웨이 2바운스 → 5-6 센터 → 7-10 오른쪽 미러 →
+11 센터 → 12-15 업 포인트 x2).
+- 모델: `gemini-3.1-flash-lite-image` (기본). 16프레임 중 2프레임만 재생성
+  (`--only 1`: 스윕 방향 반대로 나옴, `--only 14`: 회색 헤일로) — lite 검증 2호.
+- 정의: `anims/dance3_loop.json` (frames 16개)
+- WebM(12FPS, 16프레임=1.33초): `ffmpeg -y -framerate 12 -i sprites/dance3_loop/dance3_loop_%02d.png -c:v libvpx-vp9 -pix_fmt yuva420p -b:v 0 -crf 24 -an sprites/anim_dance3_loop.webm`
+- 위젯 등록: `rate: 0.5, minCycles: 2, maxCycles: 4` (사이클 약 2.7초)
+
 ## 5) 우울 상태 (sad) — 2종
 
 ### sad1 (풀 죽음)
