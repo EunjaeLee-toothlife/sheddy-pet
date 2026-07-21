@@ -18,6 +18,9 @@ jobs:
       version: ${{ steps.package.outputs.version }}
     steps:
       - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
       - id: package
         name: Verify package version matches tag
         shell: bash
@@ -28,6 +31,7 @@ jobs:
             exit 1
           fi
           echo "version=${version}" >> "${GITHUB_OUTPUT}"
+      - run: npm run dialogues:check
 
   build:
     needs: verify
