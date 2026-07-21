@@ -43,8 +43,11 @@ jobs:
             artifact: macos
             build_args: --mac --arm64
           - os: windows-latest
-            artifact: windows
-            build_args: --win --x64 --arm64
+            artifact: windows-x64
+            build_args: --win --x64
+          - os: windows-latest
+            artifact: windows-arm64
+            build_args: --win --arm64
           - os: ubuntu-latest
             artifact: linux
             build_args: --linux --x64
