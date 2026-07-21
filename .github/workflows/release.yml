@@ -53,7 +53,7 @@ jobs:
           node-version: 22
           cache: npm
       - run: npm ci
-      - run: npm run dist -- ${{ matrix.build_args }}
+      - run: npm run dist -- ${{ matrix.build_args }} --publish never
       - uses: actions/upload-artifact@v4
         with:
           name: desk-toy-${{ needs.verify.outputs.version }}-${{ matrix.artifact }}
