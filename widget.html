@@ -6,12 +6,40 @@
 <style>
   /* OBS 브라우저 소스용: 배경 완전 투명 */
   html, body { margin: 0; padding: 0; background: transparent; overflow: hidden; }
-  #stage { position: relative; width: 100vw; height: 100vh; }
+  #stage { position: relative; width: 100vw; height: 100vh; -webkit-app-region: drag; }
   #stage video {
     position: absolute; inset: 0; width: 100%; height: 100%;
-    object-fit: contain; opacity: 0;
+    object-fit: contain; opacity: 0; pointer-events: none;
   }
   #stage video.visible { opacity: 1; }
+
+  /* 데스크톱 펫의 독립 대사 말풍선 */
+  #speechBubble {
+    position: fixed; left: 50%; bottom: 12px; z-index: 20;
+    min-width: 160px; max-width: 224px; padding: 11px 16px; border-radius: 18px;
+    box-sizing: border-box;
+    background: rgba(255,253,245,.97); color: #3d3425;
+    border: 1px solid rgba(245,197,24,.32);
+    filter: drop-shadow(0 5px 10px rgba(42,32,16,.22));
+    font: 600 14px/1.4 "Segoe UI", sans-serif; text-align: center;
+    overflow-wrap: anywhere;
+    opacity: 0; transform: translate(-50%, 6px) scale(.97); transition: .2s ease;
+    pointer-events: none;
+  }
+  #speechBubble::after {
+    content: ""; position: absolute; left: 50%; bottom: -8px;
+    width: 16px; height: 16px; background: inherit;
+    border-right: 1px solid rgba(245,197,24,.32);
+    border-bottom: 1px solid rgba(245,197,24,.32);
+    transform: translateX(-50%) rotate(45deg); z-index: -1;
+  }
+  #speechBubble.show { opacity: 1; transform: translate(-50%, 0) scale(1); }
+  /* Desk Toy는 말풍선 영역을 캐릭터 위에 별도로 확보한다. */
+  body.desktop #stage {
+    position: fixed; inset: auto 0 0; height: 416px; margin: 0;
+  }
+  /* 꼬리를 머리 위에 고정하고, 내용이 늘면 말풍선이 위쪽으로 자란다. */
+  body.desktop #speechBubble { top: auto; bottom: 402px; }
 
   /* 마우스 오버 시 나타나는 버튼들 (⚙️ 설정 / 🎭 모션 선택) */
   #gearBtn, #motionBtn {
@@ -21,6 +49,7 @@
     border: none; cursor: pointer; font-size: 18px;
     display: flex; align-items: center; justify-content: center;
     opacity: 0; pointer-events: none; transition: opacity .25s;
+    -webkit-app-region: no-drag;
   }
   #gearBtn.show, #motionBtn.show { opacity: 1; pointer-events: auto; }
   #motionBtn { top: auto; bottom: 10px; }
@@ -37,6 +66,7 @@
     box-sizing: border-box; max-height: calc(100vh - 24px);
   }
   #settings.open { display: flex; }
+  #settings, #motionPanel { -webkit-app-region: no-drag; }
   #settings h3 { margin: 0; font-size: 14px; }
   #settings label { display: flex; flex-direction: column; gap: 4px; }
   #settings input[type=range] { width: 100%; }
@@ -160,7 +190,7 @@ const CATEGORY_WEIGHTS = {
 //            그중 하나를 랜덤으로 재생 (멀티 엔딩)
 const ANIMS = {
   idle1:    { loop: "anim_idle1_loop.webm", category: "idle", weight: 1 },
-  basic1:   { loop: "anim_basic1_loop.webm", category: "basic", weight: 1 },
+  basic1:   { loop: "anim_basic1_loop.webm", category: "basic", weight: 1, rate: 1.1 },
   basic2:   { loop: "anim_basic2_loop.webm", category: "basic", weight: 1 },
   basic3:   { loop: "anim_basic3_loop.webm", category: "basic", weight: 1 },
   happy1:   { start: "anim_happy1_start.webm", loop: "anim_happy1_loop.webm", end: "anim_happy1_end.webm", category: "happy", weight: 3 },
@@ -182,7 +212,7 @@ const ANIMS = {
   // 프레임 1.25배 패딩 + rate 0.7 (0.95도 빨라서 하향) — loop 사이클 약 2.7초
   chem1:    { start: "anim_chem1_start.webm", loop: "anim_chem1_loop.webm",
               end: ["anim_chem1_end1.webm", "anim_chem1_end2.webm", "anim_chem1_end3.webm"],
-              category: "special", weight: 2, minCycles: 2, maxCycles: 5, rate: 0.7 },
+              category: "special", weight: 2, minCycles: 2, maxCycles: 3, rate: 0.7 },
   sad1:     { loop: "anim_sad1_loop.webm", category: "sad", weight: 1 },
   sad2:     { loop: "anim_sad2_loop.webm", category: "sad", weight: 1 },
   talk:     { loop: "anim_talk_loop.webm", category: "talk", weight: 0 }, // 주사위 제외, 마이크 전용
@@ -202,6 +232,8 @@ const MIN_EMOTION_CYCLES = 3;
 // ?dice=0           주사위 굴리기 끄기 (외부 제어 전용 모드)
 // ?flip=1           좌우 반전
 const params = new URLSearchParams(location.search);
+const IS_DESKTOP = params.get("desktop") === "1" || Boolean(window.deskPet);
+if (IS_DESKTOP) document.body.classList.add("desktop");
 const HOLD_SEC = Number(params.get("hold") || 8);
 const DICE_ON = params.get("dice") !== "0";
 if (params.get("flip") === "1") {
@@ -252,6 +284,7 @@ let transitioning = false;
 let queued = null;       // 전환 중 들어온 다음 요청
 let pinnedUntil = 0;     // 외부 명령으로 고정된 시각(ms) — 그때까지 주사위 정지
 let talkActive = false;  // 마이크 게이트 열림 여부
+let isDragging = false;  // 데스크톱 창을 옮기는 동안 basic1 고정
 let idleStreak = 0;      // 마지막 감정 이후 완주한 idle 사이클 수
 let emotionCycles = 0;   // 현재 감정 상태에서 완주한 사이클 수
 
@@ -292,6 +325,13 @@ function rollDice() {
 // loop 한 사이클이 끝났을 때
 function onCycleEnd() {
   if (transitioning) return;
+  if (isDragging) {
+    if (current !== "basic1") { setState("basic1", { pin: false }); return; }
+    const v = vids[front];
+    v.currentTime = 0;
+    v.play().catch(() => {});
+    return;
+  }
   // 마이크에 신호가 들어오는 동안은 talk 상태를 계속 유지
   if (talkActive) {
     if (current !== "talk") { setState("talk", { pin: false }); return; }
@@ -372,6 +412,86 @@ window.addEventListener("message", e => {
 try {
   new BroadcastChannel("sheddy-pet").onmessage = e => setState(e.data);
 } catch (_) { /* 미지원 브라우저 */ }
+
+// ── 데스크톱 펫: 드래그 및 독립 말풍선 ────────────────────────
+const stage = document.getElementById("stage");
+const speechBubble = document.createElement("div");
+speechBubble.id = "speechBubble";
+speechBubble.setAttribute("role", "status");
+speechBubble.setAttribute("aria-live", "polite");
+document.body.appendChild(speechBubble);
+
+const SPEECH_LINES = [
+  "잠깐 스트레칭할래?",
+  "집중하고 있네. 물도 한 모금 마셔.",
+  "오늘 할 일 하나만 더 끝내보자.",
+  "눈이 피곤하면 먼 곳을 봐줘.",
+  "나는 여기서 응원 중이야.",
+  "너무 오래 앉아 있으면 안 돼.",
+];
+let speechTimer = null;
+let speechHideTimer = null;
+let speechMode = localStorage.getItem("petSpeechMode") || "normal";
+
+function showSpeech(line) {
+  clearTimeout(speechHideTimer);
+  speechBubble.textContent = line || SPEECH_LINES[Math.floor(Math.random() * SPEECH_LINES.length)];
+  speechBubble.classList.add("show");
+  requestAnimationFrame(() => window.deskPet?.setBubbleHeight?.(speechBubble.offsetHeight));
+  speechHideTimer = setTimeout(() => {
+    speechBubble.classList.remove("show");
+    setTimeout(() => window.deskPet?.setBubbleHeight?.(0), 200);
+  }, 7000);
+}
+
+function speechDelay() {
+  if (speechMode === "rare") return (15 + Math.random() * 15) * 60_000;
+  return (5 + Math.random() * 10) * 60_000;
+}
+
+function scheduleSpeech() {
+  clearTimeout(speechTimer);
+  if (speechMode === "off") return;
+  speechTimer = setTimeout(() => {
+    showSpeech();
+    scheduleSpeech();
+  }, speechDelay());
+}
+
+function setSpeechMode(mode) {
+  speechMode = ["normal", "rare", "off"].includes(mode) ? mode : "normal";
+  localStorage.setItem("petSpeechMode", speechMode);
+  scheduleSpeech();
+}
+
+function beginDrag() {
+  isDragging = true;
+  pinnedUntil = Infinity;
+  setState("basic1", { pin: false });
+}
+
+function startDrag(event) {
+  if (event.button !== 0) return;
+  beginDrag();
+}
+
+function endDrag() {
+  if (!isDragging) return;
+  isDragging = false;
+  pinnedUntil = 0;
+  if (current === "basic1") setState(DEFAULT_STATE, { pin: false });
+}
+
+if (IS_DESKTOP) {
+  stage.addEventListener("mousedown", startDrag);
+  window.addEventListener("mouseup", endDrag);
+  window.addEventListener("blur", endDrag);
+  window.deskPet?.onSpeak?.(showSpeech);
+  window.deskPet?.onSpeechMode?.(setSpeechMode);
+  window.deskPet?.onDragStart?.(beginDrag);
+  window.deskPet?.onDragEnd?.(endDrag);
+  scheduleSpeech();
+}
 
 // ── 마이크 → 말하기(talk) 게이트 ─────────────────────────────
 // F2: 설정창 토글. 장치를 선택하면 마이크를 열고 RMS 레벨을 감시.

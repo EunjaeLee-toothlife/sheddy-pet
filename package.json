@@ -1,0 +1,30 @@
+{
+  "name": "desk-toy",
+  "version": "0.1.3",
+  "description": "A desktop pet built from the Sheddy widget.",
+  "author": "EunjaeLee-toothlife",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder"
+  },
+  "build": {
+    "appId": "io.github.eunjaelee-toothlife.desk-toy",
+    "productName": "Desk Toy",
+    "artifactName": "${productName}-${version}-${os}-${arch}.${ext}",
+    "files": [
+      "main.js",
+      "preload.js",
+      "widget.html",
+      "sprites/**/*",
+      "assets/icons/tray-icon.png"
+    ],
+    "mac": { "target": ["dmg"], "icon": "assets/icons/app-icon.png" },
+    "win": { "target": ["portable"], "icon": "assets/icons/app-icon.ico" },
+    "linux": { "target": ["AppImage"], "icon": "assets/icons/app-icon.png" }
+  },
+  "devDependencies": {
+    "electron": "^37.2.1",
+    "electron-builder": "^26.0.12"
+  }
+}
