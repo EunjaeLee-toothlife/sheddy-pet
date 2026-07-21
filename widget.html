@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <title>Sheddy Pet Widget</title>
 <style>
+  :root { --pet-scale: 1; }
   /* OBS 브라우저 소스용: 배경 완전 투명 */
   html, body { margin: 0; padding: 0; background: transparent; overflow: hidden; }
   #stage { position: relative; width: 100vw; height: 100vh; -webkit-app-region: drag; }
@@ -36,10 +37,23 @@
   #speechBubble.show { opacity: 1; transform: translate(-50%, 0) scale(1); }
   /* Desk Toy는 말풍선 영역을 캐릭터 위에 별도로 확보한다. */
   body.desktop #stage {
-    position: fixed; inset: auto 0 0; height: 416px; margin: 0;
+    position: fixed; inset: auto 0 0;
+    height: calc(416px * var(--pet-scale)); margin: 0;
   }
   /* 꼬리를 머리 위에 고정하고, 내용이 늘면 말풍선이 위쪽으로 자란다. */
-  body.desktop #speechBubble { top: auto; bottom: 402px; }
+  body.desktop #speechBubble {
+    top: auto; bottom: calc(402px * var(--pet-scale));
+    min-width: calc(160px * var(--pet-scale));
+    max-width: calc(224px * var(--pet-scale));
+    padding: calc(11px * var(--pet-scale)) calc(16px * var(--pet-scale));
+    border-radius: calc(18px * var(--pet-scale));
+    font-size: calc(14px * var(--pet-scale));
+  }
+  body.desktop #speechBubble::after {
+    bottom: calc(-8px * var(--pet-scale));
+    width: calc(16px * var(--pet-scale));
+    height: calc(16px * var(--pet-scale));
+  }
 
   /* 마우스 오버 시 나타나는 버튼들 (⚙️ 설정 / 🎭 모션 선택) */
   #gearBtn, #motionBtn {
@@ -53,6 +67,17 @@
   }
   #gearBtn.show, #motionBtn.show { opacity: 1; pointer-events: auto; }
   #motionBtn { top: auto; bottom: 10px; }
+  body.desktop #gearBtn, body.desktop #motionBtn {
+    top: auto;
+    left: calc(10px * var(--pet-scale));
+    width: calc(36px * var(--pet-scale));
+    height: calc(36px * var(--pet-scale));
+    font-size: calc(18px * var(--pet-scale));
+  }
+  body.desktop #gearBtn { bottom: calc(434px * var(--pet-scale)); }
+  body.desktop #motionBtn {
+    top: auto; bottom: calc(10px * var(--pet-scale));
+  }
 
   /* F2 또는 설정 버튼으로 여닫는 마이크 설정창 */
   #settings {
@@ -63,7 +88,7 @@
     display: none; flex-direction: column; gap: 10px;
     box-shadow: 0 4px 16px rgba(0,0,0,.4);
     /* 작은 OBS 소스에서도 패널이 화면 밖으로 넘치지 않게 */
-    box-sizing: border-box; max-height: calc(100vh - 24px);
+    box-sizing: border-box; max-width: calc(100vw - 24px); max-height: calc(100vh - 24px);
   }
   #settings.open { display: flex; }
   #settings, #motionPanel { -webkit-app-region: no-drag; }
@@ -107,7 +132,7 @@
     display: none; flex-direction: column; gap: 10px;
     box-shadow: 0 4px 16px rgba(0,0,0,.4);
     /* 작은 OBS 소스에서도 패널이 화면 밖으로 넘치지 않게 */
-    box-sizing: border-box; max-height: calc(100vh - 24px);
+    box-sizing: border-box; max-width: calc(100vw - 24px); max-height: calc(100vh - 24px);
   }
   #motionPanel.open { display: flex; }
   #motionPanel h3 { margin: 0; font-size: 14px; }
@@ -464,6 +489,18 @@ function setSpeechMode(mode) {
   scheduleSpeech();
 }
 
+function applyPetScale(scale) {
+  const value = Number(scale);
+  if (![0.75, 1, 1.25, 1.5].includes(value)) return;
+  localStorage.setItem("petScale", String(value));
+  document.documentElement.style.setProperty("--pet-scale", String(value));
+  requestAnimationFrame(() => {
+    if (speechBubble.classList.contains("show")) {
+      window.deskPet?.setBubbleHeight?.(speechBubble.offsetHeight);
+    }
+  });
+}
+
 function beginDrag() {
   isDragging = true;
   pinnedUntil = Infinity;
@@ -490,6 +527,10 @@ if (IS_DESKTOP) {
   window.deskPet?.onSpeechMode?.(setSpeechMode);
   window.deskPet?.onDragStart?.(beginDrag);
   window.deskPet?.onDragEnd?.(endDrag);
+  window.deskPet?.onScale?.(applyPetScale);
+  const savedScale = Number(localStorage.getItem("petScale") || 1);
+  applyPetScale(savedScale);
+  window.deskPet?.setScale?.(savedScale);
   scheduleSpeech();
 }
 

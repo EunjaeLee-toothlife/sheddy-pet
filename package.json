@@ -1,12 +1,14 @@
 {
   "name": "desk-toy",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "A desktop pet built from the Sheddy widget.",
   "author": "EunjaeLee-toothlife",
   "main": "main.js",
   "scripts": {
     "start": "electron .",
-    "dist": "electron-builder"
+    "dist": "electron-builder",
+    "dialogues:sync": "node tools/dialogue_hashes.js sync",
+    "dialogues:check": "node tools/dialogue_hashes.js check"
   },
   "build": {
     "appId": "io.github.eunjaelee-toothlife.desk-toy",
