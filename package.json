@@ -1,6 +1,6 @@
 {
   "name": "desk-toy",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "A desktop pet built from the Sheddy widget.",
   "author": "EunjaeLee-toothlife",
   "main": "main.js",
@@ -18,7 +18,7 @@
       "main.js",
       "preload.js",
       "widget.html",
-      "sprites/**/*",
+      "sprites/anim_*.webm",
       "assets/icons/tray-icon.png"
     ],
     "mac": { "target": ["dmg"], "icon": "assets/icons/app-icon.png" },
