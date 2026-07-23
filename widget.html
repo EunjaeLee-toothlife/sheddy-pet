@@ -8,11 +8,17 @@
   /* OBS 브라우저 소스용: 배경 완전 투명 */
   html, body { margin: 0; padding: 0; background: transparent; overflow: hidden; }
   #stage { position: relative; width: 100vw; height: 100vh; -webkit-app-region: drag; }
+  /* 소스 비디오: 화면에 직접 합성하지 않고 프레임 소스로만 쓴다 (opacity 토글 제거) */
   #stage video {
     position: absolute; inset: 0; width: 100%; height: 100%;
-    object-fit: contain; opacity: 0; pointer-events: none;
+    opacity: 0; pointer-events: none;
   }
-  #stage video.visible { opacity: 1; }
+  /* 실제 표시 레이어는 '항상 단 하나'의 캔버스.
+     레이어 교체·opacity 토글이 없으므로 전환 시 합성 플래시(깜박임)가 원천 제거된다. */
+  #screen {
+    position: absolute; inset: 0; width: 100%; height: 100%;
+    pointer-events: none;
+  }
 
   /* 데스크톱 펫의 독립 대사 말풍선 */
   #speechBubble {
@@ -157,6 +163,8 @@
   <!-- 더블 버퍼: 하나가 재생되는 동안 다른 쪽에 다음 클립을 미리 로드 -->
   <video id="vidA" muted playsinline preload="auto"></video>
   <video id="vidB" muted playsinline preload="auto"></video>
+  <!-- 유일한 표시 레이어: 활성 비디오 프레임을 여기에 그린다 -->
+  <canvas id="screen"></canvas>
 </div>
 
 <!-- 마우스를 움직이면 나타나는 설정 버튼 (OBS: 소스 우클릭 → 상호작용) -->
@@ -267,20 +275,69 @@ if (params.get("flip") === "1") {
 
 // ── 더블 버퍼 비디오 플레이어 ─────────────────────────────────
 const vids = [document.getElementById("vidA"), document.getElementById("vidB")];
-let front = 0; // 현재 화면에 보이는 쪽
+let front = 0; // 현재 캔버스에 그리는 소스 비디오
 
 function backVid() { return vids[1 - front]; }
 
-function swap() {
-  vids[1 - front].classList.add("visible");
-  const old = vids[front];
-  old.classList.remove("visible");
-  old.onended = null; // 숨겨진 쪽이 사이클 콜백을 중복 발화하지 않도록
-  old.pause();
-  front = 1 - front;
+// ── 단일 캔버스 합성 ─────────────────────────────────────────
+// 두 비디오를 화면에 직접 올리지 않고, rAF 루프가 '활성 비디오(front)'를
+// 하나뿐인 캔버스에 그린다. 전환은 front 포인터만 바꾸는 것이라
+// opacity 토글/레이어 교체가 없어 합성 플래시(깜박임)가 발생하지 않는다.
+const screen = document.getElementById("screen");
+const sctx = screen.getContext("2d");
+
+function fitCanvas() {
+  const r = screen.parentElement.getBoundingClientRect();
+  const dpr = window.devicePixelRatio || 1;
+  const w = Math.max(1, Math.round(r.width * dpr));
+  const h = Math.max(1, Math.round(r.height * dpr));
+  if (screen.width !== w) screen.width = w;
+  if (screen.height !== h) screen.height = h;
 }
 
-// 뒤 버퍼에 클립을 로드하고, 재생 가능해지면 스왑해서 재생 시작
+let fade = null;      // 진행 중인 크로스 디졸브 { from, to, start, dur }
+const FADE_MS = 70;   // 전환 디졸브 길이(ms) — 짧을수록 잔상↓, 길수록 부드러움↑
+
+// 비디오 한 장을 object-fit:contain 규칙으로 캔버스 중앙에 그린다
+function drawVid(v, alpha) {
+  if (!v || !v.videoWidth) return;
+  const cw = screen.width, ch = screen.height;
+  const s = Math.min(cw / v.videoWidth, ch / v.videoHeight);
+  const w = v.videoWidth * s, h = v.videoHeight * s;
+  sctx.globalAlpha = alpha;
+  try { sctx.drawImage(v, (cw - w) / 2, (ch - h) / 2, w, h); } catch (_) {}
+  sctx.globalAlpha = 1;
+}
+
+function renderLoop() {
+  sctx.clearRect(0, 0, screen.width, screen.height);
+  if (fade) {
+    const t = (performance.now() - fade.start) / fade.dur;
+    if (t >= 1) {
+      if (fade.from !== vids[front]) fade.from.pause();
+      fade = null;
+      drawVid(vids[front], 1);
+    } else {
+      // 이전 프레임을 바탕에 꽉 채운 채, 새 프레임을 위에 서서히 덮는다.
+      // 바탕 알파가 항상 가득 차 있어 전환 중 투명도가 꺼지는 깜박임이 없다.
+      drawVid(fade.from, 1);
+      drawVid(fade.to, t);
+    }
+  } else {
+    drawVid(vids[front], 1);
+  }
+  requestAnimationFrame(renderLoop);
+}
+
+function swap() {
+  const old = vids[front];
+  old.onended = null; // 이전 소스가 사이클 콜백을 중복 발화하지 않도록
+  // 하드컷 대신 짧은 크로스 디졸브로 전환 (old.pause는 페이드 종료 시 처리)
+  fade = { from: old, to: vids[1 - front], start: performance.now(), dur: FADE_MS };
+  front = 1 - front;  // 캔버스가 그릴 소스를 새 클립으로 전환
+}
+
+// 뒤 버퍼에 클립을 로드하고, 첫 프레임이 실제로 나온 순간 front를 전환
 function playClip(file, { loop = false, onEnded = null, rate = 1 } = {}) {
   const v = backVid();
   v.loop = loop;
@@ -291,14 +348,28 @@ function playClip(file, { loop = false, onEnded = null, rate = 1 } = {}) {
   v.defaultPlaybackRate = rate;
   v.playbackRate = rate;
   return new Promise(resolve => {
+    const reveal = () => { swap(); resolve(); };
     v.oncanplaythrough = () => {
       v.oncanplaythrough = null;
       if (onEnded) v.onended = onEnded;
-      v.play().then(() => { swap(); resolve(); }).catch(resolve);
+      // 재생이 실제로 첫 프레임을 '표시'한 순간에 전환 → 프레임 0부터 이어져
+      // 앞부분이 잘려 튀는 현상까지 줄인다. (rVFC는 play 전에 등록)
+      if (typeof v.requestVideoFrameCallback === "function") {
+        v.requestVideoFrameCallback(reveal);
+        v.play().catch(resolve);
+      } else {
+        v.play().then(() => requestAnimationFrame(reveal)).catch(resolve);
+      }
     };
     v.onerror = () => { console.warn("clip load failed:", file); resolve(); };
   });
 }
+
+// 캔버스 크기를 무대에 맞추고 렌더 루프 시작
+// (--pet-scale/desktop 높이 변경도 ResizeObserver로 자동 반영)
+fitCanvas();
+new ResizeObserver(fitCanvas).observe(screen.parentElement);
+requestAnimationFrame(renderLoop);
 
 // ── 상태 머신 + 주사위 ─────────────────────────────────────
 // 전환 규칙: 현재 상태의 end 재생 → 다음 상태의 start 재생 → loop
