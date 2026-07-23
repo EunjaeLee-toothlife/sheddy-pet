@@ -8,17 +8,16 @@
   /* OBS 브라우저 소스용: 배경 완전 투명 */
   html, body { margin: 0; padding: 0; background: transparent; overflow: hidden; }
   #stage { position: relative; width: 100vw; height: 100vh; -webkit-app-region: drag; }
-  /* 소스 비디오: 화면에 직접 합성하지 않고 프레임 소스로만 쓴다 (opacity 토글 제거) */
+  /* 두 비디오가 표시 레이어. 하드컷(opacity 즉시 토글) 대신 짧은 opacity
+     트랜지션으로 크로스 디졸브해 전환 깜박임을 없앤다. transition-duration은
+     JS(FADE_MS)에서 지정. Electron 투명창에서도 비디오 합성이 정상 동작한다. */
   #stage video {
     position: absolute; inset: 0; width: 100%; height: 100%;
-    opacity: 0; pointer-events: none;
+    object-fit: contain; opacity: 0; pointer-events: none;
+    transition-property: opacity; transition-timing-function: linear;
+    will-change: opacity;
   }
-  /* 실제 표시 레이어는 '항상 단 하나'의 캔버스.
-     레이어 교체·opacity 토글이 없으므로 전환 시 합성 플래시(깜박임)가 원천 제거된다. */
-  #screen {
-    position: absolute; inset: 0; width: 100%; height: 100%;
-    pointer-events: none;
-  }
+  #stage video.visible { opacity: 1; }
 
   /* 데스크톱 펫의 독립 대사 말풍선 */
   #speechBubble {
@@ -163,8 +162,6 @@
   <!-- 더블 버퍼: 하나가 재생되는 동안 다른 쪽에 다음 클립을 미리 로드 -->
   <video id="vidA" muted playsinline preload="auto"></video>
   <video id="vidB" muted playsinline preload="auto"></video>
-  <!-- 유일한 표시 레이어: 활성 비디오 프레임을 여기에 그린다 -->
-  <canvas id="screen"></canvas>
 </div>
 
 <!-- 마우스를 움직이면 나타나는 설정 버튼 (OBS: 소스 우클릭 → 상호작용) -->
@@ -275,66 +272,33 @@ if (params.get("flip") === "1") {
 
 // ── 더블 버퍼 비디오 플레이어 ─────────────────────────────────
 const vids = [document.getElementById("vidA"), document.getElementById("vidB")];
-let front = 0; // 현재 캔버스에 그리는 소스 비디오
+let front = 0; // 현재 화면 위에 보이는(활성) 비디오
 
 function backVid() { return vids[1 - front]; }
 
-// ── 단일 캔버스 합성 ─────────────────────────────────────────
-// 두 비디오를 화면에 직접 올리지 않고, rAF 루프가 '활성 비디오(front)'를
-// 하나뿐인 캔버스에 그린다. 전환은 front 포인터만 바꾸는 것이라
-// opacity 토글/레이어 교체가 없어 합성 플래시(깜박임)가 발생하지 않는다.
-const screen = document.getElementById("screen");
-const sctx = screen.getContext("2d");
-
-function fitCanvas() {
-  const r = screen.parentElement.getBoundingClientRect();
-  const dpr = window.devicePixelRatio || 1;
-  const w = Math.max(1, Math.round(r.width * dpr));
-  const h = Math.max(1, Math.round(r.height * dpr));
-  if (screen.width !== w) screen.width = w;
-  if (screen.height !== h) screen.height = h;
-}
-
-let fade = null;      // 진행 중인 크로스 디졸브 { from, to, start, dur }
-const FADE_MS = 70;   // 전환 디졸브 길이(ms) — 짧을수록 잔상↓, 길수록 부드러움↑
-
-// 비디오 한 장을 object-fit:contain 규칙으로 캔버스 중앙에 그린다
-function drawVid(v, alpha) {
-  if (!v || !v.videoWidth) return;
-  const cw = screen.width, ch = screen.height;
-  const s = Math.min(cw / v.videoWidth, ch / v.videoHeight);
-  const w = v.videoWidth * s, h = v.videoHeight * s;
-  sctx.globalAlpha = alpha;
-  try { sctx.drawImage(v, (cw - w) / 2, (ch - h) / 2, w, h); } catch (_) {}
-  sctx.globalAlpha = 1;
-}
-
-function renderLoop() {
-  sctx.clearRect(0, 0, screen.width, screen.height);
-  if (fade) {
-    const t = (performance.now() - fade.start) / fade.dur;
-    if (t >= 1) {
-      if (fade.from !== vids[front]) fade.from.pause();
-      fade = null;
-      drawVid(vids[front], 1);
-    } else {
-      // 이전 프레임을 바탕에 꽉 채운 채, 새 프레임을 위에 서서히 덮는다.
-      // 바탕 알파가 항상 가득 차 있어 전환 중 투명도가 꺼지는 깜박임이 없다.
-      drawVid(fade.from, 1);
-      drawVid(fade.to, t);
-    }
-  } else {
-    drawVid(vids[front], 1);
-  }
-  requestAnimationFrame(renderLoop);
-}
+// ── 크로스 디졸브 전환 ───────────────────────────────────────
+// 두 <video>를 그대로 표시 레이어로 쓴다(= Electron 투명창에서도 GPU 비디오
+// 합성이 정상 동작). 하드컷(opacity 즉시 토글)은 합성 레이어 재승격으로
+// 한 프레임 깜박임을 유발하므로, 짧은 opacity 트랜지션으로 크로스 디졸브한다.
+// 이전 클립을 바탕에 full로 깔고 새 클립만 위에서 페이드인 → 전환 중
+// 투명도가 꺼지는 깜박임 없이, 잔상은 FADE_MS 동안만 겹친다.
+const FADE_MS = 70;  // 전환 디졸브 길이(ms) — 짧을수록 잔상↓, 길수록 부드러움↑
+vids.forEach(v => { v.style.transitionDuration = FADE_MS + "ms"; });
 
 function swap() {
-  const old = vids[front];
-  old.onended = null; // 이전 소스가 사이클 콜백을 중복 발화하지 않도록
-  // 하드컷 대신 짧은 크로스 디졸브로 전환 (old.pause는 페이드 종료 시 처리)
-  fade = { from: old, to: vids[1 - front], start: performance.now(), dur: FADE_MS };
-  front = 1 - front;  // 캔버스가 그릴 소스를 새 클립으로 전환
+  const newV = vids[1 - front];
+  const oldV = vids[front];
+  oldV.onended = null;      // 바탕이 될 이전 소스가 사이클 콜백을 중복 발화하지 않도록
+  newV.style.zIndex = "2";  // 새 클립을 위에
+  oldV.style.zIndex = "1";  // 이전 클립은 바탕(full 유지)
+  newV.classList.add("visible"); // opacity 0 → 1 (트랜지션으로 페이드인)
+  front = 1 - front;
+  // 페이드가 끝나면 바탕을 숨기고 정지 (그 전까지 아래에 깔려 투명도 유지)
+  clearTimeout(oldV._fadeTimer);
+  oldV._fadeTimer = setTimeout(() => {
+    oldV.classList.remove("visible");
+    oldV.pause();
+  }, FADE_MS);
 }
 
 // 뒤 버퍼에 클립을 로드하고, 첫 프레임이 실제로 나온 순간 front를 전환
@@ -364,12 +328,6 @@ function playClip(file, { loop = false, onEnded = null, rate = 1 } = {}) {
     v.onerror = () => { console.warn("clip load failed:", file); resolve(); };
   });
 }
-
-// 캔버스 크기를 무대에 맞추고 렌더 루프 시작
-// (--pet-scale/desktop 높이 변경도 ResizeObserver로 자동 반영)
-fitCanvas();
-new ResizeObserver(fitCanvas).observe(screen.parentElement);
-requestAnimationFrame(renderLoop);
 
 // ── 상태 머신 + 주사위 ─────────────────────────────────────
 // 전환 규칙: 현재 상태의 end 재생 → 다음 상태의 start 재생 → loop
@@ -430,7 +388,7 @@ function onCycleEnd() {
   }
   // 마이크에 신호가 들어오는 동안은 talk 상태를 계속 유지
   if (talkActive) {
-    if (current !== "talk") { setState("talk", { pin: false }); return; }
+    if (current !== "talk") { setState("talk", { pin: false, interrupt: true }); return; }
     const v = vids[front];
     v.currentTime = 0;
     v.play().catch(() => {});
@@ -458,9 +416,12 @@ function onCycleEnd() {
   }
 }
 
-async function setState(name, { pin = true } = {}) {
+// interrupt: true → 현재 상태의 end 클립을 건너뛰고 즉시 전환.
+//   마이크(talk)처럼 반응 지연이 곧 "씹힘"으로 느껴지는 전환에 사용.
+async function setState(name, opts = {}) {
+  const { pin = true, interrupt = false } = opts;
   if (!ANIMS[name]) { console.warn("unknown state:", name); return; }
-  if (transitioning) { queued = name; return; }
+  if (transitioning) { queued = { name, opts }; return; } // 옵션(interrupt 등) 보존
   if (name === current) {
     if (pin) pinnedUntil = Date.now() + HOLD_SEC * 1000;
     return;
@@ -471,8 +432,9 @@ async function setState(name, { pin = true } = {}) {
 
   // 1) 현재 상태의 end 클립 (있으면) 재생하고 끝날 때까지 대기
   //    end가 배열이면 그중 하나를 랜덤으로 재생 (멀티 엔딩)
+  //    단, interrupt면 end를 건너뛰고 바로 전환한다 (마이크 반응성 우선)
   const cur = current && ANIMS[current];
-  if (cur && cur.end) {
+  if (cur && cur.end && !interrupt) {
     const ends = Array.isArray(cur.end) ? cur.end : [cur.end];
     const endFile = ends[Math.floor(Math.random() * ends.length)];
     await new Promise(res => playClip(endFile, { onEnded: res, rate: cur.rate ?? 1 }));
@@ -489,7 +451,7 @@ async function setState(name, { pin = true } = {}) {
   await playClip(next.loop, { onEnded: onCycleEnd, rate });
 
   transitioning = false;
-  if (queued) { const q = queued; queued = null; setState(q); }
+  if (queued) { const q = queued; queued = null; setState(q.name, q.opts); }
 }
 
 // ── 외부 제어 인터페이스 ──────────────────────────────────────
@@ -716,7 +678,7 @@ async function startMic(deviceId) {
         if (!talkActive) {
           talkActive = true;
           micStatus.textContent = "🗣 말하는 중";
-          if (current !== "talk") setState("talk", { pin: false });
+          if (current !== "talk") setState("talk", { pin: false, interrupt: true });
         }
       } else if (talkActive && now - lastLoudAt > RELEASE_MS) {
         talkActive = false;
