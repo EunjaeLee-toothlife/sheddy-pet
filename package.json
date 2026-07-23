@@ -1,6 +1,6 @@
 {
   "name": "desk-toy",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "A desktop pet built from the Sheddy widget.",
   "author": "EunjaeLee-toothlife",
   "main": "main.js",
