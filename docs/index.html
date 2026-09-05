@@ -4,14 +4,62 @@
 <meta charset="UTF-8">
 <title>Sheddy Pet Widget</title>
 <style>
+  :root { --pet-scale: 1; }
   /* OBS 브라우저 소스용: 배경 완전 투명 */
   html, body { margin: 0; padding: 0; background: transparent; overflow: hidden; }
-  #stage { position: relative; width: 100vw; height: 100vh; }
+  #stage { position: relative; width: 100vw; height: 100vh; -webkit-app-region: drag; }
+  /* 소스 비디오: 화면에 직접 합성하지 않고 프레임 소스로만 쓴다 (opacity 토글 제거) */
   #stage video {
     position: absolute; inset: 0; width: 100%; height: 100%;
-    object-fit: contain; opacity: 0;
+    opacity: 0; pointer-events: none;
   }
-  #stage video.visible { opacity: 1; }
+  /* 실제 표시 레이어는 '항상 단 하나'의 캔버스.
+     레이어 교체·opacity 토글이 없으므로 전환 시 합성 플래시(깜박임)가 원천 제거된다. */
+  #screen {
+    position: absolute; inset: 0; width: 100%; height: 100%;
+    pointer-events: none;
+  }
+
+  /* 데스크톱 펫의 독립 대사 말풍선 */
+  #speechBubble {
+    position: fixed; left: 50%; bottom: 12px; z-index: 20;
+    min-width: 160px; max-width: 224px; padding: 11px 16px; border-radius: 18px;
+    box-sizing: border-box;
+    background: rgba(255,253,245,.97); color: #3d3425;
+    border: 1px solid rgba(245,197,24,.32);
+    filter: drop-shadow(0 5px 10px rgba(42,32,16,.22));
+    font: 600 14px/1.4 "Segoe UI", sans-serif; text-align: center;
+    overflow-wrap: anywhere;
+    opacity: 0; transform: translate(-50%, 6px) scale(.97); transition: .2s ease;
+    pointer-events: none;
+  }
+  #speechBubble::after {
+    content: ""; position: absolute; left: 50%; bottom: -8px;
+    width: 16px; height: 16px; background: inherit;
+    border-right: 1px solid rgba(245,197,24,.32);
+    border-bottom: 1px solid rgba(245,197,24,.32);
+    transform: translateX(-50%) rotate(45deg); z-index: -1;
+  }
+  #speechBubble.show { opacity: 1; transform: translate(-50%, 0) scale(1); }
+  /* Desk Toy는 말풍선 영역을 캐릭터 위에 별도로 확보한다. */
+  body.desktop #stage {
+    position: fixed; inset: auto 0 0;
+    height: calc(416px * var(--pet-scale)); margin: 0;
+  }
+  /* 꼬리를 머리 위에 고정하고, 내용이 늘면 말풍선이 위쪽으로 자란다. */
+  body.desktop #speechBubble {
+    top: auto; bottom: calc(402px * var(--pet-scale));
+    min-width: calc(160px * var(--pet-scale));
+    max-width: calc(224px * var(--pet-scale));
+    padding: calc(11px * var(--pet-scale)) calc(16px * var(--pet-scale));
+    border-radius: calc(18px * var(--pet-scale));
+    font-size: calc(14px * var(--pet-scale));
+  }
+  body.desktop #speechBubble::after {
+    bottom: calc(-8px * var(--pet-scale));
+    width: calc(16px * var(--pet-scale));
+    height: calc(16px * var(--pet-scale));
+  }
 
   /* 마우스 오버 시 나타나는 버튼들 (⚙️ 설정 / 🎭 모션 선택) */
   #gearBtn, #motionBtn {
@@ -21,9 +69,21 @@
     border: none; cursor: pointer; font-size: 18px;
     display: flex; align-items: center; justify-content: center;
     opacity: 0; pointer-events: none; transition: opacity .25s;
+    -webkit-app-region: no-drag;
   }
   #gearBtn.show, #motionBtn.show { opacity: 1; pointer-events: auto; }
   #motionBtn { top: auto; bottom: 10px; }
+  body.desktop #gearBtn, body.desktop #motionBtn {
+    top: auto;
+    left: calc(10px * var(--pet-scale));
+    width: calc(36px * var(--pet-scale));
+    height: calc(36px * var(--pet-scale));
+    font-size: calc(18px * var(--pet-scale));
+  }
+  body.desktop #gearBtn { bottom: calc(434px * var(--pet-scale)); }
+  body.desktop #motionBtn {
+    top: auto; bottom: calc(10px * var(--pet-scale));
+  }
 
   /* F2 또는 설정 버튼으로 여닫는 마이크 설정창 */
   #settings {
@@ -34,9 +94,10 @@
     display: none; flex-direction: column; gap: 10px;
     box-shadow: 0 4px 16px rgba(0,0,0,.4);
     /* 작은 OBS 소스에서도 패널이 화면 밖으로 넘치지 않게 */
-    box-sizing: border-box; max-height: calc(100vh - 24px);
+    box-sizing: border-box; max-width: calc(100vw - 24px); max-height: calc(100vh - 24px);
   }
   #settings.open { display: flex; }
+  #settings, #motionPanel { -webkit-app-region: no-drag; }
   #settings h3 { margin: 0; font-size: 14px; }
   #settings label { display: flex; flex-direction: column; gap: 4px; }
   #settings input[type=range] { width: 100%; }
@@ -77,7 +138,7 @@
     display: none; flex-direction: column; gap: 10px;
     box-shadow: 0 4px 16px rgba(0,0,0,.4);
     /* 작은 OBS 소스에서도 패널이 화면 밖으로 넘치지 않게 */
-    box-sizing: border-box; max-height: calc(100vh - 24px);
+    box-sizing: border-box; max-width: calc(100vw - 24px); max-height: calc(100vh - 24px);
   }
   #motionPanel.open { display: flex; }
   #motionPanel h3 { margin: 0; font-size: 14px; }
@@ -102,6 +163,8 @@
   <!-- 더블 버퍼: 하나가 재생되는 동안 다른 쪽에 다음 클립을 미리 로드 -->
   <video id="vidA" muted playsinline preload="auto"></video>
   <video id="vidB" muted playsinline preload="auto"></video>
+  <!-- 유일한 표시 레이어: 활성 비디오 프레임을 여기에 그린다 -->
+  <canvas id="screen"></canvas>
 </div>
 
 <!-- 마우스를 움직이면 나타나는 설정 버튼 (OBS: 소스 우클릭 → 상호작용) -->
@@ -163,7 +226,7 @@ const CATEGORY_WEIGHTS = {
 //            모든 end의 마지막 프레임 = outro 첫 프레임이어야 함.
 const ANIMS = {
   idle1:    { loop: "anim_idle1_loop.webm", category: "idle", weight: 1 },
-  basic1:   { loop: "anim_basic1_loop.webm", category: "basic", weight: 1 },
+  basic1:   { loop: "anim_basic1_loop.webm", category: "basic", weight: 1, rate: 1.1 },
   basic2:   { loop: "anim_basic2_loop.webm", category: "basic", weight: 1 },
   basic3:   { loop: "anim_basic3_loop.webm", category: "basic", weight: 1 },
   happy1:   { start: "anim_happy1_start.webm", loop: "anim_happy1_loop.webm", end: "anim_happy1_end.webm", category: "happy", weight: 3 },
@@ -185,10 +248,11 @@ const ANIMS = {
   // 프레임 1.25배 패딩 + rate 0.7 (0.95도 빨라서 하향) — loop 사이클 약 2.7초
   chem1:    { start: "anim_chem1_start.webm", loop: "anim_chem1_loop.webm",
               end: ["anim_chem1_end1.webm", "anim_chem1_end2.webm", "anim_chem1_end3.webm"],
-              category: "special", weight: 2, minCycles: 2, maxCycles: 5, rate: 0.7 },
+              category: "special", weight: 2, minCycles: 2, maxCycles: 3, rate: 0.7 },
   // 파티시엘 변신 (회전 변신 → 셰프복 → 휘핑볼 반죽) — loop 2~4회 뒤 10종 엔딩 중 하나
   // (케이크/타르트/마카롱/컵케이크/도넛/푸딩/크루아상/아이스크림/탄 덩어리/통레몬) →
-  // 공용 outro(역변신 → idle 복귀). 14/14/12/10프레임 @10FPS, rate 0.7 — loop 사이클 약 2초
+  // 공용 outro(역변신 → idle 복귀). 14/14/12(홀드 인코딩 23틱)/10프레임 @10FPS, rate 0.7
+  // — loop 사이클 약 2초, 엔딩 약 3.3초, 전체 약 10~14초
   pastry1:  { start: "anim_pastry1_start.webm", loop: "anim_pastry1_loop.webm",
               end: Array.from({ length: 10 }, (_, i) => `anim_pastry1_end${i + 1}.webm`),
               outro: "anim_pastry1_outro.webm",
@@ -212,6 +276,8 @@ const MIN_EMOTION_CYCLES = 3;
 // ?dice=0           주사위 굴리기 끄기 (외부 제어 전용 모드)
 // ?flip=1           좌우 반전
 const params = new URLSearchParams(location.search);
+const IS_DESKTOP = params.get("desktop") === "1" || Boolean(window.deskPet);
+if (IS_DESKTOP) document.body.classList.add("desktop");
 const HOLD_SEC = Number(params.get("hold") || 8);
 const DICE_ON = params.get("dice") !== "0";
 if (params.get("flip") === "1") {
@@ -220,20 +286,69 @@ if (params.get("flip") === "1") {
 
 // ── 더블 버퍼 비디오 플레이어 ─────────────────────────────────
 const vids = [document.getElementById("vidA"), document.getElementById("vidB")];
-let front = 0; // 현재 화면에 보이는 쪽
+let front = 0; // 현재 캔버스에 그리는 소스 비디오
 
 function backVid() { return vids[1 - front]; }
 
-function swap() {
-  vids[1 - front].classList.add("visible");
-  const old = vids[front];
-  old.classList.remove("visible");
-  old.onended = null; // 숨겨진 쪽이 사이클 콜백을 중복 발화하지 않도록
-  old.pause();
-  front = 1 - front;
+// ── 단일 캔버스 합성 ─────────────────────────────────────────
+// 두 비디오를 화면에 직접 올리지 않고, rAF 루프가 '활성 비디오(front)'를
+// 하나뿐인 캔버스에 그린다. 전환은 front 포인터만 바꾸는 것이라
+// opacity 토글/레이어 교체가 없어 합성 플래시(깜박임)가 발생하지 않는다.
+const screen = document.getElementById("screen");
+const sctx = screen.getContext("2d");
+
+function fitCanvas() {
+  const r = screen.parentElement.getBoundingClientRect();
+  const dpr = window.devicePixelRatio || 1;
+  const w = Math.max(1, Math.round(r.width * dpr));
+  const h = Math.max(1, Math.round(r.height * dpr));
+  if (screen.width !== w) screen.width = w;
+  if (screen.height !== h) screen.height = h;
 }
 
-// 뒤 버퍼에 클립을 로드하고, 재생 가능해지면 스왑해서 재생 시작
+let fade = null;      // 진행 중인 크로스 디졸브 { from, to, start, dur }
+const FADE_MS = 70;   // 전환 디졸브 길이(ms) — 짧을수록 잔상↓, 길수록 부드러움↑
+
+// 비디오 한 장을 object-fit:contain 규칙으로 캔버스 중앙에 그린다
+function drawVid(v, alpha) {
+  if (!v || !v.videoWidth) return;
+  const cw = screen.width, ch = screen.height;
+  const s = Math.min(cw / v.videoWidth, ch / v.videoHeight);
+  const w = v.videoWidth * s, h = v.videoHeight * s;
+  sctx.globalAlpha = alpha;
+  try { sctx.drawImage(v, (cw - w) / 2, (ch - h) / 2, w, h); } catch (_) {}
+  sctx.globalAlpha = 1;
+}
+
+function renderLoop() {
+  sctx.clearRect(0, 0, screen.width, screen.height);
+  if (fade) {
+    const t = (performance.now() - fade.start) / fade.dur;
+    if (t >= 1) {
+      if (fade.from !== vids[front]) fade.from.pause();
+      fade = null;
+      drawVid(vids[front], 1);
+    } else {
+      // 이전 프레임을 바탕에 꽉 채운 채, 새 프레임을 위에 서서히 덮는다.
+      // 바탕 알파가 항상 가득 차 있어 전환 중 투명도가 꺼지는 깜박임이 없다.
+      drawVid(fade.from, 1);
+      drawVid(fade.to, t);
+    }
+  } else {
+    drawVid(vids[front], 1);
+  }
+  requestAnimationFrame(renderLoop);
+}
+
+function swap() {
+  const old = vids[front];
+  old.onended = null; // 이전 소스가 사이클 콜백을 중복 발화하지 않도록
+  // 하드컷 대신 짧은 크로스 디졸브로 전환 (old.pause는 페이드 종료 시 처리)
+  fade = { from: old, to: vids[1 - front], start: performance.now(), dur: FADE_MS };
+  front = 1 - front;  // 캔버스가 그릴 소스를 새 클립으로 전환
+}
+
+// 뒤 버퍼에 클립을 로드하고, 첫 프레임이 실제로 나온 순간 front를 전환
 function playClip(file, { loop = false, onEnded = null, rate = 1 } = {}) {
   const v = backVid();
   v.loop = loop;
@@ -244,14 +359,28 @@ function playClip(file, { loop = false, onEnded = null, rate = 1 } = {}) {
   v.defaultPlaybackRate = rate;
   v.playbackRate = rate;
   return new Promise(resolve => {
+    const reveal = () => { swap(); resolve(); };
     v.oncanplaythrough = () => {
       v.oncanplaythrough = null;
       if (onEnded) v.onended = onEnded;
-      v.play().then(() => { swap(); resolve(); }).catch(resolve);
+      // 재생이 실제로 첫 프레임을 '표시'한 순간에 전환 → 프레임 0부터 이어져
+      // 앞부분이 잘려 튀는 현상까지 줄인다. (rVFC는 play 전에 등록)
+      if (typeof v.requestVideoFrameCallback === "function") {
+        v.requestVideoFrameCallback(reveal);
+        v.play().catch(resolve);
+      } else {
+        v.play().then(() => requestAnimationFrame(reveal)).catch(resolve);
+      }
     };
     v.onerror = () => { console.warn("clip load failed:", file); resolve(); };
   });
 }
+
+// 캔버스 크기를 무대에 맞추고 렌더 루프 시작
+// (--pet-scale/desktop 높이 변경도 ResizeObserver로 자동 반영)
+fitCanvas();
+new ResizeObserver(fitCanvas).observe(screen.parentElement);
+requestAnimationFrame(renderLoop);
 
 // ── 상태 머신 + 주사위 ─────────────────────────────────────
 // 전환 규칙: 현재 상태의 end 재생 → 다음 상태의 start 재생 → loop
@@ -262,6 +391,7 @@ let transitioning = false;
 let queued = null;       // 전환 중 들어온 다음 요청
 let pinnedUntil = 0;     // 외부 명령으로 고정된 시각(ms) — 그때까지 주사위 정지
 let talkActive = false;  // 마이크 게이트 열림 여부
+let isDragging = false;  // 데스크톱 창을 옮기는 동안 basic1 고정
 let idleStreak = 0;      // 마지막 감정 이후 완주한 idle 사이클 수
 let emotionCycles = 0;   // 현재 감정 상태에서 완주한 사이클 수
 
@@ -302,6 +432,13 @@ function rollDice() {
 // loop 한 사이클이 끝났을 때
 function onCycleEnd() {
   if (transitioning) return;
+  if (isDragging) {
+    if (current !== "basic1") { setState("basic1", { pin: false }); return; }
+    const v = vids[front];
+    v.currentTime = 0;
+    v.play().catch(() => {});
+    return;
+  }
   // 마이크에 신호가 들어오는 동안은 talk 상태를 계속 유지
   if (talkActive) {
     if (current !== "talk") { setState("talk", { pin: false }); return; }
@@ -386,6 +523,102 @@ window.addEventListener("message", e => {
 try {
   new BroadcastChannel("sheddy-pet").onmessage = e => setState(e.data);
 } catch (_) { /* 미지원 브라우저 */ }
+
+// ── 데스크톱 펫: 드래그 및 독립 말풍선 ────────────────────────
+const stage = document.getElementById("stage");
+const speechBubble = document.createElement("div");
+speechBubble.id = "speechBubble";
+speechBubble.setAttribute("role", "status");
+speechBubble.setAttribute("aria-live", "polite");
+document.body.appendChild(speechBubble);
+
+const SPEECH_LINES = [
+  "잠깐 스트레칭할래?",
+  "집중하고 있네. 물도 한 모금 마셔.",
+  "오늘 할 일 하나만 더 끝내보자.",
+  "눈이 피곤하면 먼 곳을 봐줘.",
+  "나는 여기서 응원 중이야.",
+  "너무 오래 앉아 있으면 안 돼.",
+];
+let speechTimer = null;
+let speechHideTimer = null;
+let speechMode = localStorage.getItem("petSpeechMode") || "normal";
+
+function showSpeech(line) {
+  clearTimeout(speechHideTimer);
+  speechBubble.textContent = line || SPEECH_LINES[Math.floor(Math.random() * SPEECH_LINES.length)];
+  speechBubble.classList.add("show");
+  requestAnimationFrame(() => window.deskPet?.setBubbleHeight?.(speechBubble.offsetHeight));
+  speechHideTimer = setTimeout(() => {
+    speechBubble.classList.remove("show");
+    setTimeout(() => window.deskPet?.setBubbleHeight?.(0), 200);
+  }, 7000);
+}
+
+function speechDelay() {
+  if (speechMode === "rare") return (15 + Math.random() * 15) * 60_000;
+  return (5 + Math.random() * 10) * 60_000;
+}
+
+function scheduleSpeech() {
+  clearTimeout(speechTimer);
+  if (speechMode === "off") return;
+  speechTimer = setTimeout(() => {
+    showSpeech();
+    scheduleSpeech();
+  }, speechDelay());
+}
+
+function setSpeechMode(mode) {
+  speechMode = ["normal", "rare", "off"].includes(mode) ? mode : "normal";
+  localStorage.setItem("petSpeechMode", speechMode);
+  scheduleSpeech();
+}
+
+function applyPetScale(scale) {
+  const value = Number(scale);
+  if (![0.75, 1, 1.25, 1.5].includes(value)) return;
+  localStorage.setItem("petScale", String(value));
+  document.documentElement.style.setProperty("--pet-scale", String(value));
+  requestAnimationFrame(() => {
+    if (speechBubble.classList.contains("show")) {
+      window.deskPet?.setBubbleHeight?.(speechBubble.offsetHeight);
+    }
+  });
+}
+
+function beginDrag() {
+  isDragging = true;
+  pinnedUntil = Infinity;
+  setState("basic1", { pin: false });
+}
+
+function startDrag(event) {
+  if (event.button !== 0) return;
+  beginDrag();
+}
+
+function endDrag() {
+  if (!isDragging) return;
+  isDragging = false;
+  pinnedUntil = 0;
+  if (current === "basic1") setState(DEFAULT_STATE, { pin: false });
+}
+
+if (IS_DESKTOP) {
+  stage.addEventListener("mousedown", startDrag);
+  window.addEventListener("mouseup", endDrag);
+  window.addEventListener("blur", endDrag);
+  window.deskPet?.onSpeak?.(showSpeech);
+  window.deskPet?.onSpeechMode?.(setSpeechMode);
+  window.deskPet?.onDragStart?.(beginDrag);
+  window.deskPet?.onDragEnd?.(endDrag);
+  window.deskPet?.onScale?.(applyPetScale);
+  const savedScale = Number(localStorage.getItem("petScale") || 1);
+  applyPetScale(savedScale);
+  window.deskPet?.setScale?.(savedScale);
+  scheduleSpeech();
+}
 
 // ── 마이크 → 말하기(talk) 게이트 ─────────────────────────────
 // F2: 설정창 토글. 장치를 선택하면 마이크를 열고 RMS 레벨을 감시.
