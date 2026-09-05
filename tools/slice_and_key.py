@@ -114,6 +114,29 @@ def flood(mask: np.ndarray, seeds: np.ndarray) -> np.ndarray:
         reach = grown
 
 
+def largest_component(mask: np.ndarray) -> np.ndarray:
+    """Boolean mask of the largest 4-connected component of `mask`."""
+    try:
+        from scipy import ndimage
+        labels, n = ndimage.label(mask)
+        if n == 0:
+            return mask
+        sizes = np.bincount(labels.ravel())
+        sizes[0] = 0
+        return labels == int(np.argmax(sizes))
+    except ImportError:
+        # fallback: flood from the alpha centroid (inside the body in practice)
+        ys, xs = np.nonzero(mask)
+        cy, cx = int(ys.mean()), int(xs.mean())
+        if not mask[cy, cx]:
+            d = (ys - cy) ** 2 + (xs - cx) ** 2
+            k = int(np.argmin(d))
+            cy, cx = int(ys[k]), int(xs[k])
+        seeds = np.zeros_like(mask)
+        seeds[cy, cx] = True
+        return flood(mask, seeds)
+
+
 def cleanup_matte(alpha: np.ndarray, rel_green: np.ndarray) -> np.ndarray:
     """Post-key matte cleanup:
     1. kill leftover green streaks/haze connected to the border
@@ -127,14 +150,13 @@ def cleanup_matte(alpha: np.ndarray, rel_green: np.ndarray) -> np.ndarray:
     border[0, :] = border[-1, :] = border[:, 0] = border[:, -1] = True
     bg = flood(passable, border)
     alpha = np.where(bg, 0.0, alpha)
-    # 2) keep only the component connected to the character (seed = the
-    #    largest-alpha pixel, always on the body)
+    # 2) keep only the character body = the LARGEST connected component.
+    #    (Seeding from argmax(alpha) picked the top-most opaque pixel, so a
+    #    floating sparkle / light bulb / '?' above the head became the seed
+    #    and the whole body was erased.)
     body_mask = alpha > 0.05
     if body_mask.any():
-        sy, sx = np.unravel_index(np.argmax(alpha), alpha.shape)
-        seeds = np.zeros_like(body_mask)
-        seeds[sy, sx] = True
-        body = flood(body_mask, seeds)
+        body = largest_component(body_mask)
         alpha = np.where(body_mask & ~body, 0.0, alpha)
     # 3) hard cutout: binarize the matte so soft bloom/glow halos are cut off
     #    at the contour, then re-antialias with a 1px feather

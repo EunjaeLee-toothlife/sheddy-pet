@@ -257,6 +257,79 @@ loop 2~5회 뒤 **3가지 엔딩 중 하나가 랜덤 재생**되는 첫 멀티 
 - WebM(12FPS, 16프레임=1.33초): `ffmpeg -y -framerate 12 -i sprites/dance3_loop/dance3_loop_%02d.png -c:v libvpx-vp9 -pix_fmt yuva420p -b:v 0 -crf 24 -an sprites/anim_dance3_loop.webm`
 - 위젯 등록: `rate: 0.5, minCycles: 2, maxCycles: 4` (사이클 약 2.7초)
 
+## 4-g) 특수: 파티시엘 변신 (pastry) — 1종, 10종 멀티 엔딩 + 공용 outro ⭐신규 구조
+
+### pastry1 (회전 변신 → 셰프복 → 휘핑볼 반죽 → 반짝! 10가지 결과)
+꿈빛 파티시엘의 딸기처럼 **휘리릭 돌아 셰프복(흰 더블 재킷 + 핑크 프릴 앞치마 +
+낮은 토크 모자)으로 변신**, 등 뒤에서 노란 믹싱볼과 휘핑기를 꺼내 휘적휘적 반죽(loop)
+→ loop 2~4회 뒤 볼이 반짝! 하며 **10가지 결과 중 하나가 랜덤 재생** → 공용 outro에서
+역변신하여 idle 복귀. 가장 긴 모션 (총 약 9~13초).
+- **클립 구성 (모두 @10FPS, chain 모드, 위젯 `rate: 0.7`)**:
+  - `pastry1_start` 14프레임: idle(가운) → 아이디어! → 회전 + 스파클 리본 → 플래시 →
+    셰프복으로 등장 → 짜잔 → 등 뒤에서 볼·휘핑기 꺼내기 → 믹싱 자세
+  - `pastry1_loop` 14프레임 (seamless): 느린 한 바퀴 → 빠른 한 바퀴 → 격렬 휘핑 →
+    휘핑기 들어 반죽 확인 → 끄덕 → 복귀
+  - `pastry1_end1~10` 각 12프레임(홀드 인코딩으로 23틱): 볼 발광 → 플래시(볼·휘핑기 소멸) →
+    접시 위 결과 등장 → 반응 → 마무리 (마지막 프레임 = 양손 등 뒤, 셰프복, 만족 미소)
+    1 딸기 쇼트케이크 · 2 레몬 타르트 · 3 마카롱 타워 · 4 컵케이크 · 5 도넛 · 6 푸딩 ·
+    7 크루아상 · 8 소프트아이스크림 (1~8: 별눈 → 짜잔 → 통째로 냠 → 다람쥐 볼 → 행복)
+    · 9 실패: 새까맣게 탄 덩어리 (찔러보기 → 용기내 한 입 → 블렉 → 숨기기)
+    · 10 뜬금: 얼굴 그려진 통레몬 (멍 → ? → 눈싸움 → 어깨 으쓱 → 안고 웃음 → 숨기기)
+  - `pastry1_outro` 10프레임 (공용): 등 뒤 손 → 바운스 → 회전 + 플래시 → 가운으로 역변신
+    → idle 자세
+- 정의: `anims/pastry1_start.json`, `pastry1_loop.json`, `pastry1_end1.json`~`end10.json`,
+  `pastry1_outro.json`
+- **위젯 신규 필드 `outro`**: `end`(랜덤 1개) 뒤에 항상 이어 재생되는 공용 마무리 클립.
+  엔딩이 10개라 "정리 → 역변신 → idle 복귀" 구간을 매 엔딩마다 그리지 않고 한 클립으로 공유.
+  등록: `end: [...10개], outro: "anim_pastry1_outro.webm", minCycles: 2, maxCycles: 4, rate: 0.7`
+- **`gen_frames.py` 신규 옵션 (JSON 키)**:
+  - `"chain_from": "<이미지 경로>"` — 프레임 0도 chain 모드로 생성하되 IMAGE 2로 이 이미지를
+    사용. 텍스트로만 정의된 디테일(셰프복, 볼 색·형태)이 클립마다 다르게 재해석되는 것을
+    막기 위해 **loop는 start_13, end 10종은 loop_00, outro는 end1_11**에 체인시킴.
+    → 생성 순서 의존성: start → loop → (end1~10 병렬) → outro
+  - `"character": "..."` — 기본 CHARACTER 블록(가운 복장 서술)을 클립별로 교체.
+    셰프 클립은 셰프복 서술로, 복장이 바뀌는 start/outro는 "outfit as described in the
+    pose text"로 두고 프레임마다 복장을 명시.
+  - 429/5xx 응답 시 8·16·24초 백오프 재시도 추가 (엔딩 병렬 생성용).
+- **변신 연출 팁**: 회전의 뒷모습/측면 프레임은 모델이 약하므로 실제 회전은 1프레임(쿼터 턴 +
+  모션 라인)만 두고, 그 다음 2프레임은 "스파클 리본에 감싸인 실루엣 → 풀 플래시"로 복장을
+  완전히 가린 뒤 다음 프레임에서 새 복장으로 등장시킴. 복장 교체 프레임은 텍스트로만 정의됨.
+- **엔딩 타이밍 — 홀드 인코딩 (`tools/encode_holds.py`)**: 12프레임 엔딩을 그대로 재생하면
+  (rate 0.7 기준 1.7초) 결과가 너무 빨리 지나감. 프레임을 새로 생성하거나 rate를 더 낮추는 대신
+  JSON의 `"holds": {"3": 3, "4": 3, ...}`로 **핵심 비트 프레임을 2~3틱 홀드**해 인코딩한다
+  (발광·플래시는 1틱으로 빠르게, 결과 등장·별눈·짜잔·냠·블렉은 2~3틱). 12프레임 → 23틱
+  (2.3초, 위젯 rate 0.7로 약 3.3초). rate를 낮추면 loop 휘핑과 플래시까지 늘어지므로 홀드 방식이 적합.
+  ```bash
+  python tools/encode_holds.py anims/pastry1_end1.json   # sprites/pastry1_end1/*.png → anim_pastry1_end1.webm
+  ```
+- **클립 간 스케일 보정**: `slice_and_key.py`는 클립 내부 중앙값으로만 정규화하므로 클립 간 크기는
+  맞춰주지 않음. end10만 bbox 높이 461(loop 475)로 3% 작게 나와, 프레임을 1.03배 확대하고
+  발끝 y=502·중심 x=254(loop 기준)에 맞춰 재배치함. 새 클립은 `_00` 프레임의 bbox 높이/발끝을
+  loop와 비교해 볼 것.
+- **후처리 주의**: 모자가 생기는 start와 사라지는 outro는 프레임 간 bbox 높이가 달라지므로
+  `slice_and_key.py --no-scale-norm`으로 처리 (정규화하면 모자 프레임의 몸이 작아짐).
+  loop/end는 전 프레임 모자 착용이라 기본 정규화 그대로.
+- **생성 결과 (lite 모델, 총 158프레임 중 재생성 12프레임)**:
+  - 변신 연출(회전 → 리본 → 플래시 → 새 복장)은 1발에 성공. 셰프복도 chain_from 덕에
+    12개 클립 전체에서 동일하게 유지됨.
+  - **가장 흔한 오생성 = 모자 누락**: 클립 후반 "하품/등 뒤 손/만족 미소"류 정적 프레임에서
+    토크 모자가 사라지는 경우가 8회 (loop 13, end3 8, end5 9, end6 10, end7 9, end8 11 등).
+    `--only N` 재생성 1회로 대부분 해결. 새 복장에 모자·장식이 있으면 후반 프레임 검수 필수.
+  - 그 외: 흰 스티커 테두리(loop 2), 앞치마 누락(loop 2 재생성분) — 각 1회 재생성.
+- **레이트 리밋**: 엔딩 10종을 9개 프로세스로 병렬 생성하자 Gemini 유료 티어의
+  분당 입력 토큰 쿼터(`generate_content_paid_tier_input_token_count`)에 걸려 4프레임 실패
+  (백오프 3회로도 부족). **동시 5개 이하** 권장. 실패 프레임은 `--only`로 순차 재시도.
+- **`slice_and_key.py` 버그 수정**: 매트 정리에서 "본체" 시드를 `argmax(alpha)`로 잡던 것을
+  **가장 큰 연결 성분**으로 변경. argmax는 행 우선이라 가장 위쪽의 불투명 픽셀 = 머리 위
+  전구·스파클·'?'·하트가 시드가 되어 **본체가 통째로 지워지는** 문제가 있었음
+  (start 1·4번 프레임이 빈 이미지로 나와 발견). 머리 위 이펙트가 있는 모든 모션에 해당.
+- 생성/후처리:
+  ```bash
+  PYTHONIOENCODING=utf-8 python tools/gen_frames.py anims/pastry1_start.json --outdir sprites/raw
+  python tools/slice_and_key.py --frames "sprites/raw/pastry1_start_*.png" --outdir sprites/pastry1_start --prefix pastry1_start --no-scale-norm
+  ffmpeg -y -framerate 10 -i sprites/pastry1_start/pastry1_start_%02d.png -c:v libvpx-vp9 -pix_fmt yuva420p -b:v 0 -crf 24 -an sprites/anim_pastry1_start.webm
+  ```
+
 ## 5) 우울 상태 (sad) — 2종
 
 ### sad1 (풀 죽음)

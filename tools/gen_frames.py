@@ -8,8 +8,19 @@ Config format (anims/<name>.json):
   "name": "idle1_loop",
   "ref": "refs/chibi_base.png",
   "chain": true,           # optional: attach the PREVIOUS frame as a 2nd ref
+  "chain_from": "sprites/raw/other_clip_13.png",  # optional: 2nd ref for frame 0
+  "character": "...",      # optional: replace the built-in CHARACTER block
   "frames": ["pose description for frame 0", "..."]
 }
+
+chain_from: normally frame 0 is generated from the base ref only and the
+chain starts from it. When a clip must continue another clip (loop after
+start, end clips after loop frame 0, ...) pass that anchor image here so
+frame 0 is chained too — details introduced by text (a costume, props) then
+stay identical across clips instead of being re-imagined per clip.
+
+character: the built-in CHARACTER block describes the default lab-coat
+outfit. A clip in a different costume overrides it here.
 
 Chain mode: each frame i>0 is generated with TWO reference images —
 the base character ref (style anchor) and the previously generated frame
@@ -132,8 +143,19 @@ def gen_multi_ref(prompt, refs, output, model=MODEL):
         url, data=json.dumps(payload).encode(),
         headers={"Content-Type": "application/json", "x-goog-api-key": key},
         method="POST")
-    with urllib.request.urlopen(req, timeout=180) as resp:
-        d = json.loads(resp.read().decode())
+    d = None
+    for attempt in range(4):
+        try:
+            with urllib.request.urlopen(req, timeout=180) as resp:
+                d = json.loads(resp.read().decode())
+            break
+        except urllib.error.HTTPError as e:
+            # 429/5xx: 잠시 대기 후 재시도 (병렬 생성 시 레이트리밋 완화)
+            if e.code in (429, 500, 502, 503, 504) and attempt < 3:
+                import time
+                time.sleep(8 * (attempt + 1))
+                continue
+            raise
     b64 = _find_image_b64(d)
     if not b64:
         raise RuntimeError("no image in response")
@@ -174,6 +196,8 @@ def main():
     name = cfg["name"]
     chain = a.chain or cfg.get("chain", False)
     model = a.model or cfg.get("model", MODEL)
+    character = cfg.get("character", CHARACTER)
+    chain_from = cfg.get("chain_from")
     os.makedirs(a.outdir, exist_ok=True)
 
     env = dict(os.environ, PYTHONIOENCODING="utf-8")
@@ -182,18 +206,26 @@ def main():
         if a.only is not None and i != a.only:
             continue
         out = os.path.join(a.outdir, f"{name}_{i:02d}.png")
-        prev = prev_frame_path(a.outdir, name, i) if (chain and i > 0) else None
+        prev = None
+        if chain and i > 0:
+            prev = prev_frame_path(a.outdir, name, i)
+        elif chain and i == 0 and chain_from:
+            # 확장자는 생성 결과(jpg/png)에 따라 달라지므로 stem 기준으로 찾는다
+            hits = sorted(glob.glob(os.path.splitext(chain_from)[0] + ".*"))
+            if not hits:
+                raise SystemExit(f"chain_from not found: {chain_from}")
+            prev = hits[0]
         print(f"[{i + 1}/{len(cfg['frames'])}] {name}_{i:02d}"
               + (" (chained)" if prev else ""), flush=True)
         if prev:
-            prompt = f"{PREAMBLE} {CHAIN_NOTE} {pose} {CHARACTER} {STYLE}"
+            prompt = f"{PREAMBLE} {CHAIN_NOTE} {pose} {character} {STYLE}"
             try:
                 gen_multi_ref(prompt, [cfg["ref"], prev], out, model)
             except Exception as e:
                 print(f"  chain gen failed: {e}")
                 failed.append(i)
         else:
-            prompt = f"{PREAMBLE} {pose} {CHARACTER} {STYLE}"
+            prompt = f"{PREAMBLE} {pose} {character} {STYLE}"
             r = subprocess.run(
                 [sys.executable, GEN, "--prompt", prompt, "--ref", cfg["ref"],
                  "--output", out, "--aspect", "1:1", "--size", "1K",
