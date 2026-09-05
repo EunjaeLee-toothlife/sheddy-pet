@@ -98,7 +98,14 @@ function createWindow() {
     resizable: false,
     alwaysOnTop: true,
     hasShadow: false,
-    webPreferences: { contextIsolation: true, nodeIntegration: false, preload: path.join(__dirname, "preload.js") },
+    webPreferences: {
+      contextIsolation: true,
+      nodeIntegration: false,
+      preload: path.join(__dirname, "preload.js"),
+      // 창이 다른 창에 가려지거나 백그라운드로 가도 rAF/rVFC/타이머를 죽이지 않는다.
+      // 켜져 있으면(기본값) 가려진 동안 클립 전환 콜백이 멈춰 위젯이 정지된 듯 보인다.
+      backgroundThrottling: false,
+    },
   });
   petWindow.setAlwaysOnTop(true, "floating");
   petWindow.setVisibleOnAllWorkspaces(true, { visibleOnFullScreen: true });
