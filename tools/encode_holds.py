@@ -7,6 +7,11 @@ repeating each PNG `ticks` times and encoded at --fps, so a reaction beat
 can be held longer without generating new frames (cheaper than regenerating
 and keeps the flash/impact frames snappy while the reveal lingers).
 
+Optional "repeats" plays a frame RANGE several times in a row (rapid-fire
+punches, a shake, a double-take) — again without generating new frames:
+    "repeats": [{"frames": [2, 3], "times": 4}]   # 2,3,2,3,2,3,2,3
+Ranges are inclusive; holds apply inside each repetition.
+
 usage: python tools/encode_holds.py anims/pastry1_end1.json [--fps 10]
 """
 import argparse
@@ -32,6 +37,8 @@ def main():
         cfg = json.load(f)
     name = cfg["name"]
     holds = {int(k): int(v) for k, v in cfg.get("holds", {}).items()}
+    repeats = {r["frames"][0]: (r["frames"][1], int(r["times"]))
+               for r in cfg.get("repeats", [])}
     src_dir = a.frames_dir or os.path.join("sprites", name)
     out = a.out or os.path.join("sprites", f"anim_{name}.webm")
 
@@ -41,10 +48,21 @@ def main():
 
     tmp = tempfile.mkdtemp(prefix=f"{name}_holds_")
     try:
+        # expand frame order: repeated ranges first, then per-frame holds
+        order = []
+        i = 0
+        while i < len(frames):
+            if i in repeats:
+                end, times = repeats[i]
+                order += list(range(i, end + 1)) * max(1, times)
+                i = end + 1
+            else:
+                order.append(i)
+                i += 1
         n = 0
-        for i, f in enumerate(frames):
+        for i in order:
             for _ in range(max(1, holds.get(i, 1))):
-                shutil.copy(f, os.path.join(tmp, f"f_{n:03d}.png"))
+                shutil.copy(frames[i], os.path.join(tmp, f"f_{n:03d}.png"))
                 n += 1
         subprocess.run(
             ["ffmpeg", "-y", "-loglevel", "error", "-framerate", str(a.fps),

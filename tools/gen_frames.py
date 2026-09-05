@@ -186,6 +186,10 @@ def main():
     p.add_argument("--chain", action="store_true",
                    help="attach the previous frame as a 2nd reference "
                         "(config \"chain\": true does the same)")
+    p.add_argument("--prev", default=None,
+                   help="with --only: use this image as the chain anchor (IMAGE 2) "
+                        "instead of the previous frame — e.g. anchor a 'return to "
+                        "front view' frame on frame 0 rather than on a turned frame")
     p.add_argument("--model", default=None,
                    help="override model (config \"model\" does the same); "
                         f"default {MODEL}")
@@ -207,7 +211,11 @@ def main():
             continue
         out = os.path.join(a.outdir, f"{name}_{i:02d}.png")
         prev = None
-        if chain and i > 0:
+        if a.prev and a.only is not None:
+            if not os.path.exists(a.prev):
+                raise SystemExit(f"--prev not found: {a.prev}")
+            prev = a.prev
+        elif chain and i > 0:
             prev = prev_frame_path(a.outdir, name, i)
         elif chain and i == 0 and chain_from:
             # 확장자는 생성 결과(jpg/png)에 따라 달라지므로 stem 기준으로 찾는다

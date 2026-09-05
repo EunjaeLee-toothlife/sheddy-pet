@@ -51,7 +51,7 @@ a cute chibi girl (2.5-head proportion), long blonde hair, big yellow-gold eyes,
 - **loop (9 frames)**: `9 animation frames of a gentle idle breathing cycle: standing relaxed, subtle up-down body bob, hair swaying slightly, slow blink on middle frames, soft neutral smile. First and last frames match for seamless looping.`
 - start/end 생략 가능 (기본 자세 자체가 idle이므로 loop만으로 충분)
 
-## 2) 기본 상태 (basic) — 3종
+## 2) 기본 상태 (basic) — 4종
 
 ### basic1 (두리번거리기)
 - **start (3)**: `3 animation frames easing from neutral standing pose into a curious look-around: head begins turning to the left.`
@@ -67,6 +67,19 @@ a cute chibi girl (2.5-head proportion), long blonde hair, big yellow-gold eyes,
 - **start (3)**: `3 animation frames easing from neutral pose into a gentle side-to-side sway, hands clasped behind back.`
 - **loop (9)**: `9 animation frames of relaxed side-to-side swaying, weight shifting foot to foot, skirt and lab coat swinging softly, content expression. Seamless loop.`
 - **end (3)**: `3 animation frames settling from the sway back to neutral standing pose.`
+
+### basic4 / doze1 (꾸벅꾸벅 졸기)
+제자리에 서서 눈이 감기며 고개가 점점 떨어지다 앞으로 넘어질 듯 → 놀라서 고개 번쩍 →
+눈 비비고 작게 하품 → 다시 눈이 감기기 시작. 14프레임 seamless 루프 @10FPS, 위젯 `rate 0.7`
+(사이클 약 2초), `minCycles 2 / maxCycles 3`. 몸 위치 고정, 머리·눈·한 팔만 움직임.
+- 정의: `anims/doze1_loop.json`
+- **머리 위 'Zzz'·'!' 같은 떠 있는 기호는 넣지 않음** — 매트 정리에서 본체와 분리된 조각은
+  지워지므로 표정과 고개 움직임만으로 표현.
+- 생성 메모: chain 모드의 "motion must be small and smooth" 지시가 고개 떨어지는 폭을 눌러
+  1차 결과가 너무 미묘했음. 3~5번 프레임에 "clearly visible pose difference, exaggerated
+  nodding motion / chin pressed on her chest so the viewer mostly sees the top of her head"를
+  추가해 재생성(`--only 3 4 5` 순차)하자 확실한 꾸벅 동작이 나옴.
+- WebM: `ffmpeg -y -framerate 10 -i sprites/doze1_loop/doze1_loop_%02d.png -c:v libvpx-vp9 -pix_fmt yuva420p -b:v 0 -crf 24 -an sprites/anim_doze1_loop.webm`
 
 ## 3) 행복 상태 (happy) — 2종
 
@@ -101,12 +114,39 @@ a cute chibi girl (2.5-head proportion), long blonde hair, big yellow-gold eyes,
     지시한다 — 그립·의상 디테일이 프레임 간 고정됨. (happy3 커트시 12-17이 이 방식)
   - 회전 각도는 수치("30도")가 아니라 뷰 명칭(3/4 view, FULL BACK view 등)으로 지시.
 
-## 4) 신남 상태 (excited) — 1종
+## 4) 신남 상태 (excited) — 2종
 
 ### excited1 (점프 환호)
 - **start (3)**: `3 animation frames of anticipation crouch: knees bending, fists clenched at sides, sparkling excited eyes, big grin.`
 - **loop (9)**: `9 animation frames of an excited jump cycle: leaping into the air with both arms thrown up, hair and lab coat flying, star-sparkle effects, landing softly and bouncing again. Seamless loop.`
 - **end (3)**: `3 animation frames landing and catching breath, settling back to neutral standing pose with a leftover grin.`
+
+### excited2 / boxing1 (뚜쉬뚜쉬 쉐도우 복싱) — v2 몸 돌리기
+어깨너비 스탠스(발 고정, 발끝으로만 피벗), 양 주먹 턱 앞 가드, 볼 빵빵 + 입 오므려
+"뚜쉬뚜쉬" 숨 내뱉는 표정. **왼쪽 3/4 뷰로 몸을 틀어** 잽 → 가드 → **오른쪽 3/4 뷰로 틀어**
+크로스 → 가드 → 정면으로 돌아와 낮게 덕킹 좌·우 → 일어나 바운스.
+12프레임 seamless 루프 @10FPS, 위젯 `rate 0.8`, `minCycles 2 / maxCycles 4`.
+- 정의: `anims/boxing1_loop.json`
+- 몸 회전은 happy3처럼 각도가 아니라 **뷰 이름**으로 지시: "3/4 VIEW FACING THE LEFT SIDE OF
+  THE IMAGE (one shoulder closer to the viewer, NOT a full profile)". lite 모델에서도 1발에
+  좌·우 3/4 뷰가 안정적으로 나옴 (v1은 정면 고정 + 대각선 펀치였음, 스크래치 백업만 유지).
+- **되돌리는 회전은 chain이 거부함**: 3/4 뷰 → 정면 복귀 프레임(7~10)이 1차에서 전부 3/4 뷰에
+  머물렀음. "her body has ROTATED BACK to a FRONT VIEW, square to the viewer: both shoulders
+  equally visible, chest facing the camera (NOT a 3/4 view anymore)"처럼 **결과 상태를 묘사 +
+  이전 상태를 부정형으로 명시**해야 돌아옴. 덕킹→기립(v1)도 같은 패턴("NOT crouching").
+  루프 클로저(11)는 chain 결과 대신 **0번 프레임을 그대로 복사**해 완전 seamless로 처리.
+- 펀치는 몸을 튼 방향으로 **화면 좌/우를 향해 직선**으로 (정면 펀치는 단축 원근이 깨짐).
+  dance2에서 검증된 "arms never cross in front of her chest" 문구 포함.
+- **구간 반복 인코딩 (`encode_holds.py` `repeats`)**: 잽(2-3)과 크로스(5-6)를 각 4회 반복해
+  뚜쉬뚜쉬 연타로 만듦 — 12프레임 → 24틱(2.4초, rate 0.8로 약 3초). 프레임 생성 없이 JSON에
+  `"repeats": [{"frames": [2, 3], "times": 4}, {"frames": [5, 6], "times": 4}]`만 추가.
+  ```bash
+  python tools/encode_holds.py anims/boxing1_loop.json
+  ```
+- 정면 복귀(7)는 chain 앵커를 직전 프레임(6, 3/4 뷰)이 아니라 **0번 정면 프레임**으로 바꿔
+  생성: `gen_frames.py ... --only 7 --prev sprites/raw/boxing1_loop_00.jpg` (`--prev` 신규 옵션).
+  텍스트로 "ROTATED BACK to FRONT VIEW"를 강조해도 3/4 뷰 앵커에서는 두 번 연속 실패했음.
+- WebM: `ffmpeg -y -framerate 10 -i sprites/boxing1_loop/boxing1_loop_%02d.png -c:v libvpx-vp9 -pix_fmt yuva420p -b:v 0 -crf 24 -an sprites/anim_boxing1_loop.webm`
 
 ## 4-b) 특수: 댄스 (dance) — 1종
 
@@ -302,6 +342,8 @@ loop 2~5회 뒤 **3가지 엔딩 중 하나가 랜덤 재생**되는 첫 멀티 
   ```bash
   python tools/encode_holds.py anims/pastry1_end1.json   # sprites/pastry1_end1/*.png → anim_pastry1_end1.webm
   ```
+  같은 도구의 `"repeats": [{"frames": [a, b], "times": n}]`는 프레임 구간 a~b를 n회 연속 재생
+  (연타·떨림·더블테이크용, boxing1 참고). holds는 반복된 각 프레임에도 적용됨.
 - **클립 간 스케일 보정**: `slice_and_key.py`는 클립 내부 중앙값으로만 정규화하므로 클립 간 크기는
   맞춰주지 않음. end10만 bbox 높이 461(loop 475)로 3% 작게 나와, 프레임을 1.03배 확대하고
   발끝 y=502·중심 x=254(loop 기준)에 맞춰 재배치함. 새 클립은 `_00` 프레임의 bbox 높이/발끝을
@@ -329,6 +371,17 @@ loop 2~5회 뒤 **3가지 엔딩 중 하나가 랜덤 재생**되는 첫 멀티 
   python tools/slice_and_key.py --frames "sprites/raw/pastry1_start_*.png" --outdir sprites/pastry1_start --prefix pastry1_start --no-scale-norm
   ffmpeg -y -framerate 10 -i sprites/pastry1_start/pastry1_start_%02d.png -c:v libvpx-vp9 -pix_fmt yuva420p -b:v 0 -crf 24 -an sprites/anim_pastry1_start.webm
   ```
+
+## 4-h) 특수: 레몬 한 입 (lemon) — 1종
+
+### lemon1 (레몬 한 입 — 시큼!)
+idle → 등 뒤에서 통레몬 꺼내 자랑 → 크게 베어물기 → 얼굴 쪼그라드는 시큼 표정 + 부르르 →
+고개 흔들어 털어내고 큰 한숨 → 엄지척 만족 → 레몬 등 뒤로 숨기고 idle 복귀.
+완결형 16프레임 @10FPS, 위젯 `rate 0.7`, `minCycles 1 / maxCycles 1` (1회만 재생).
+- 정의: `anims/lemon1_loop.json`
+- 레몬은 항상 화면 **오른쪽** 손, 불투명 노란색(크로마키 안전). 베어문 뒤엔 매 프레임
+  "big bite taken out of it"으로 상태를 고정.
+- WebM: `ffmpeg -y -framerate 10 -i sprites/lemon1_loop/lemon1_loop_%02d.png -c:v libvpx-vp9 -pix_fmt yuva420p -b:v 0 -crf 24 -an sprites/anim_lemon1_loop.webm`
 
 ## 5) 우울 상태 (sad) — 2종
 

@@ -229,11 +229,16 @@ const ANIMS = {
   basic1:   { loop: "anim_basic1_loop.webm", category: "basic", weight: 1, rate: 1.1 },
   basic2:   { loop: "anim_basic2_loop.webm", category: "basic", weight: 1 },
   basic3:   { loop: "anim_basic3_loop.webm", category: "basic", weight: 1 },
+  // 꾸벅꾸벅 졸기 — 14프레임 @10FPS, rate 0.7 (사이클 약 2초), 2~3사이클
+  doze1:    { loop: "anim_doze1_loop.webm", category: "basic", weight: 1, minCycles: 2, maxCycles: 3, rate: 0.7 },
   happy1:   { start: "anim_happy1_start.webm", loop: "anim_happy1_loop.webm", end: "anim_happy1_end.webm", category: "happy", weight: 3 },
   happy2:   { loop: "anim_happy2_loop.webm", category: "happy", weight: 3 },
   // 공주님 턴 + 커트시 — 한 사이클이 완결된 동작(회전+인사)이라 1~2회만 재생
   happy3:   { loop: "anim_happy3_loop.webm", category: "happy", weight: 2, minCycles: 1, maxCycles: 2, rate: 0.8 },
-  excited1: { loop: "anim_excited1_loop.webm", category: "excited", weight: 1 },
+  excited1: { loop: "anim_excited1_loop.webm", category: "excited", weight: 2 },
+  // 뚜쉬뚜쉬 쉐도우 복싱 — 12프레임 @10FPS, 잽(2-3)·크로스(5-6) 구간 4회 반복 인코딩 = 24틱,
+  // rate 0.8 (사이클 약 3초), 1~3사이클
+  boxing1:  { loop: "anim_boxing1_loop.webm", category: "excited", weight: 1, minCycles: 1, maxCycles: 3, rate: 0.8 },
   // 킹게이너 댄스 (팔 흔들기) — 0.5배속이라 사이클당 2초, 2~4사이클 = 4~8초
   dance1:   { loop: "anim_dance1_loop.webm", category: "special", weight: 1, minCycles: 2, maxCycles: 4, rate: 0.5 },
   // 거제 야호 (갸루 윙크 + 거꾸로 브이) — 완결형 시퀀스라 1~2회만 재생
@@ -257,6 +262,8 @@ const ANIMS = {
               end: Array.from({ length: 10 }, (_, i) => `anim_pastry1_end${i + 1}.webm`),
               outro: "anim_pastry1_outro.webm",
               category: "special", weight: 2, minCycles: 2, maxCycles: 4, rate: 0.7 },
+  // 레몬 한 입 (꺼내기 → 베어물기 → 시큼 → 엄지척 → 숨기기) — 완결형 16프레임 @10FPS, rate 0.7, 1회만
+  lemon1:   { loop: "anim_lemon1_loop.webm", category: "special", weight: 2, minCycles: 1, maxCycles: 1, rate: 0.7 },
   sad1:     { loop: "anim_sad1_loop.webm", category: "sad", weight: 1 },
   sad2:     { loop: "anim_sad2_loop.webm", category: "sad", weight: 1 },
   talk:     { loop: "anim_talk_loop.webm", category: "talk", weight: 0 }, // 주사위 제외, 마이크 전용
