@@ -2,7 +2,7 @@
   "name": "note1_loop",
   "ref": "refs/chibi_base.png",
   "chain": true,
-  "note": "Research note memo, 19-frame completed sequence, pose-to-pose with holds (74 ticks @10FPS = 7.4s, widget rate 1.0, play 1 cycle). From idle she pulls a clipboard from behind her back, takes out a pencil, scribbles a note (5-6 x3), pauses, taps the pencil on her chin thinking (8-9 x2), gets an idea, scribbles fast (11-12 x4), proudly shows the viewer the lemon doodle she drew (13-14 x2), puts the clipboard away behind her back and returns to idle. PROP RULES: the clipboard (small, brown, ONE silver clip on top, one white sheet) is ALWAYS held by the hand on the RIGHT side of the image; the yellow pencil with a pink eraser is ALWAYS in the hand on the LEFT side of the image. The 'idea' beat is carried by her face and the raised pencil only — no floating symbols (they are removed by the matte cleanup). GENERATOR: flux2-klein-4b on the LAN imagegen server, not gen_frames.py — see the 'klein' key and prompts/animation_prompts.md for the per-frame recipe. The frame texts are kept in gen_frames.py format so the clip can also be regenerated with Gemini. Frame 18 is a file copy of frame 0. Keyed with: slice_and_key.py --no-align --no-scale-norm --match sprites/idle1_loop/idle1_loop_00.png",
+  "note": "Research note memo, 19-frame completed sequence, pose-to-pose with holds (74 ticks @10FPS = 7.4s, widget rate 1.0, play 1 cycle). From idle she pulls a clipboard from behind her back, takes out a pencil, scribbles a note (5-6 x3), pauses, taps the pencil on her chin thinking (8-9 x2), gets an idea, scribbles fast (11-12 x4), proudly shows the viewer the lemon doodle she drew (13-14 x2), puts the clipboard away behind her back and returns to idle. PROP RULES: the clipboard (small, brown, ONE silver clip on top, one white sheet) is ALWAYS held by the hand on the RIGHT side of the image; the yellow pencil with a pink eraser is ALWAYS in the hand on the LEFT side of the image. The 'idea' beat is carried by her face and the raised pencil only — no floating symbols (they are removed by the matte cleanup). GENERATOR: flux2-klein-4b on the LAN imagegen server, not gen_frames.py — see the 'klein' key and prompts/animation_prompts.md for the per-frame recipe. The frame texts are kept in gen_frames.py format so the clip can also be regenerated with Gemini. Frame 18 is a file copy of frame 0. The pencil is described as 'small short thin' in every frame where it is held away from the clipboard (3, 8, 9, 10); without it klein draws it up to 1.5x longer or much thicker than in the writing frames. Keyed with: slice_and_key.py --no-align --no-scale-norm --match sprites/idle1_loop/idle1_loop_00.png",
   "holds": {
     "0": 2,
     "1": 2,
@@ -60,39 +60,114 @@
       "face": "references = [design ref, frame N], same seed as frame N. Wrapper says 'keep the body EXACTLY the same, what CHANGES is her FACE / the page'. The body is copied pixel-stable; only the face, the page content and small marks change."
     },
     "frames": [
-      {"mode": "base", "seed": 1001},
-      {"mode": "chain", "from": 0, "seed": 1001},
-      {"mode": "chain", "from": 1, "seed": 1002},
-      {"mode": "pose", "from": 2, "seed": 1001},
-      {"mode": "chain", "from": 2, "seed": 1001},
-      {"mode": "pose", "from": 2, "seed": 1001},
-      {"mode": "pose", "from": 2, "seed": 1001},
-      {"mode": "face", "from": 5, "seed": 1001},
-      {"mode": "pose", "from": 2, "seed": 1001},
-      {"mode": "pose", "from": 2, "seed": 1001},
-      {"mode": "pose", "from": 2, "seed": 1001},
-      {"mode": "face", "from": 5, "seed": 1001},
-      {"mode": "face", "from": 6, "seed": 1001},
-      {"mode": "pose", "from": 2, "seed": 1001},
-      {"mode": "face", "from": 13, "seed": 1001},
-      {"mode": "face", "from": 2, "seed": 1002},
-      {"mode": "face", "from": 1, "seed": 1001},
-      {"mode": "face", "from": 0, "seed": 1001},
-      {"mode": "copy", "from": 0}
-    ]
+      {
+        "mode": "base",
+        "seed": 1001
+      },
+      {
+        "mode": "chain",
+        "from": 0,
+        "seed": 1001
+      },
+      {
+        "mode": "chain",
+        "from": 1,
+        "seed": 1002
+      },
+      {
+        "mode": "pose",
+        "from": 2,
+        "seed": 1001
+      },
+      {
+        "mode": "face",
+        "from": 5,
+        "seed": 1001
+      },
+      {
+        "mode": "pose",
+        "from": 2,
+        "seed": 1001
+      },
+      {
+        "mode": "pose",
+        "from": 2,
+        "seed": 1001
+      },
+      {
+        "mode": "face",
+        "from": 5,
+        "seed": 1001
+      },
+      {
+        "mode": "pose",
+        "from": 2,
+        "seed": 1001
+      },
+      {
+        "mode": "pose",
+        "from": 2,
+        "seed": 1001
+      },
+      {
+        "mode": "pose",
+        "from": 2,
+        "seed": 1001
+      },
+      {
+        "mode": "face",
+        "from": 5,
+        "seed": 1001
+      },
+      {
+        "mode": "face",
+        "from": 6,
+        "seed": 1001
+      },
+      {
+        "mode": "pose",
+        "from": 2,
+        "seed": 1001
+      },
+      {
+        "mode": "face",
+        "from": 13,
+        "seed": 1001
+      },
+      {
+        "mode": "face",
+        "from": 2,
+        "seed": 1002
+      },
+      {
+        "mode": "face",
+        "from": 1,
+        "seed": 1001
+      },
+      {
+        "mode": "face",
+        "from": 0,
+        "seed": 1001
+      },
+      {
+        "mode": "copy",
+        "from": 0
+      }
+    ],
+    "retouch": "Frames 13-14: a tiny stray loop on the hair outline (left of her head) was removed by copying the box x326-372, y300-350 of the 1024px raw from frame 5, whose outline there is identical within 1px (same reference frame and seed)."
   },
   "frames": [
     "Pose: BASE: standing upright and relaxed, feet close together under her hips, both arms resting naturally at her sides with open hands, calm small smile, head level. No props visible. The small lemon-slice hair clip stays on the same side of her bangs as in the reference image, do not mirror the character.",
     "Pose: feet close together, both arms swinging back behind her body with hands hidden behind her back, curious look with her eyes glancing up to one side as if she just noticed something worth writing down, small closed-mouth smile. No props visible yet. The small lemon-slice hair clip stays on the same side of her bangs as in the reference image, do not mirror the character.",
     "Pose: the reveal: ONLY ONE arm has moved. The hand on the RIGHT side of the image has swung forward from behind her back and now holds a small brown clipboard with a silver clip on top and one blank white sheet of paper, held out to her side at shoulder height. Her OTHER arm has NOT moved: it is still tucked behind her back, that hand completely hidden. She holds nothing else: no pencil, no pen. Bright interested eyes, small open-mouth smile. Feet close together. The small lemon-slice hair clip stays on the same side of her bangs as in the reference image, do not mirror the character.",
-    "Pose: the pencil comes out: the hand on the RIGHT side of the image still holds the small brown clipboard with a silver clip on top and one blank white sheet of paper out to her side at shoulder height. Her other hand, on the LEFT side of the image, has come forward from behind her back and is raised beside her chest gripping a yellow pencil with a pink eraser, the pencil slanted with the pink eraser end pointing up and outward. Eyes open looking at the viewer, small closed-mouth smile. Feet close together. The small lemon-slice hair clip stays on the same side of her bangs as in the reference image, do not mirror the character.",
-    "Pose: she has brought the same small brown clipboard with a silver clip on top and one white sheet of paper in front of her chest, held from below by the hand on the RIGHT side of the image, the paper side tilted up toward her face so the viewer still sees the white paper. The hand on the LEFT side of the image holds a yellow pencil with a pink eraser upright beside the clipboard, ready to write. Small closed-mouth smile. Feet close together. The small lemon-slice hair clip stays on the same side of her bangs as in the reference image, do not mirror the character.",
+    "Pose: the pencil comes out: the hand on the RIGHT side of the image still holds the small brown clipboard with a silver clip on top and one blank white sheet of paper out to her side at shoulder height. Her other hand, on the LEFT side of the image, has come forward from behind her back and is raised beside her chest gripping a small short thin yellow pencil with a pink eraser, held upright with the pink eraser end pointing up. The pencil is small, no longer than her forearm sleeve cuff is wide. Eyes open looking at the viewer, small closed-mouth smile. Feet close together. The small lemon-slice hair clip stays on the same side of her bangs as in the reference image, do not mirror the character.",
+    "Pose: READY TO WRITE: body, clipboard and pencil exactly as in WRITING key frame A (the next frame) — clipboard held at her chest by the hand on the RIGHT side of the image, the hand on the LEFT side of the image has just placed the tip of the yellow pencil with a pink eraser on the page — but the white sheet of paper is still completely BLANK with no handwriting, and her face is calm: eyes lowered toward the blank paper, mouth closed in a small focused smile (no tongue sticking out). Feet close together. The small lemon-slice hair clip stays on the same side of her bangs as in the reference image, do not mirror the character.",
     "Pose: WRITING key frame A: she cradles the clipboard on her forearm on the RIGHT side of the image, held at chest height and tilted so the white sheet of paper faces up toward her and is clearly visible to the viewer. Her other hand, on the LEFT side of the image, rests ON TOP OF THE WHITE PAPER in the middle of her chest, gripping a yellow pencil with a pink eraser the way a person writes: the pencil slanted, its sharpened tip pressed DOWN onto the RIGHT part of the paper, far across the sheet, the pink eraser end sticking straight up toward her chin. Several lines of scribbled pencil handwriting fill the LEFT part of the paper behind the pencil. Her head is bowed DOWN toward the clipboard, eyes looking DOWN at the paper with lowered eyelids, the tip of her tongue poking out of the corner of her mouth in concentration. Feet close together. The small lemon-slice hair clip stays on the same side of her bangs as in the reference image, do not mirror the character.",
     "Pose: WRITING key frame B: exactly like the previous frame, but the pencil has moved: its sharpened tip is now pressed DOWN onto the LOWER part of the paper, near the bottom of the sheet, and the pink eraser end sticks out sideways toward the LEFT edge of the image. Several lines of scribbled pencil handwriting fill the paper. Her head is bowed DOWN toward the clipboard, eyes looking DOWN at the paper with lowered eyelids, the tip of her tongue poking out of the corner of her mouth in concentration. Feet close together. The small lemon-slice hair clip stays on the same side of her bangs as in the reference image, do not mirror the character.",
     "Pose: pausing: body, clipboard and pencil exactly as in WRITING key frame A, but she has stopped writing: her head is lifted, her big yellow-gold eyes are wide OPEN and looking at the viewer, mouth in a small round 'o' as if a thought just crossed her mind. Feet close together. The small lemon-slice hair clip stays on the same side of her bangs as in the reference image, do not mirror the character.",
-    "Pose: THINKING key frame A: she cradles the clipboard on her forearm on the RIGHT side of the image, hugged against her chest at chest height, the white sheet of paper covered with several lines of scribbled pencil handwriting and clearly visible to the viewer. Her other hand, on the LEFT side of the image, is raised up to her face holding a yellow pencil with a pink eraser: her index finger touches her chin, the pencil pointing diagonally up and outward toward the LEFT side of the image. Her big yellow-gold eyes are wide OPEN, eyebrows slightly furrowed, mouth in a small 'hmm' pout. Feet close together. The small lemon-slice hair clip stays on the same side of her bangs as in the reference image, do not mirror the character.",
+    "Pose: THINKING key frame A: she cradles the clipboard on her forearm on the RIGHT side of the image, hugged against her chest at chest height, the white sheet of paper covered with several lines of scribbled pencil handwriting and clearly visible to the viewer. Her other hand, on the LEFT side of the image, is raised up to her face holding a small thin yellow pencil with a pink eraser: her index finger touches her chin, the pencil pointing diagonally up and outward toward the LEFT side of the image. Her big yellow-gold eyes are wide OPEN, eyebrows slightly furrowed, mouth in a small 'hmm' pout. Feet close together. The small lemon-slice hair clip stays on the same side of her bangs as in the reference image, do not mirror the character.",
     "Pose: THINKING key frame B: exactly like the previous frame, but her head is tilted to one side, her eyes are squeezed shut in deep thought with curved closed eyelids, eyebrows furrowed, mouth pressed into a wavy 'hmmm' line. Feet close together. The small lemon-slice hair clip stays on the same side of her bangs as in the reference image, do not mirror the character.",
-    "Pose: IDEA key frame: she cradles the clipboard on her forearm on the RIGHT side of the image, hugged against her chest at chest height, the handwritten white page clearly visible. Her other hand, on the LEFT side of the image, is raised up high beside her head holding a yellow pencil with a pink eraser pointing STRAIGHT UP like an exclamation, pink eraser end at the top. Her head is upright, her big yellow-gold eyes are wide OPEN and sparkling, eyebrows raised high, mouth wide open in a delighted 'ah!' smile, pink cheeks. No floating symbols, no light bulb, no exclamation mark. Feet close together. The small lemon-slice hair clip stays on the same side of her bangs as in the reference image, do not mirror the character.",
+    "Pose: IDEA key frame: she cradles the clipboard on her forearm on the RIGHT side of the image, hugged against her chest at chest height, the handwritten white page clearly visible. Her other hand, on the LEFT side of the image, is raised up high beside her head holding a small thin yellow pencil with a pink eraser pointing STRAIGHT UP like an exclamation, pink eraser end at the top. Her head is upright, her big yellow-gold eyes are wide OPEN and sparkling, eyebrows raised high, mouth wide open in a delighted 'ah!' smile, pink cheeks. No floating symbols, no light bulb, no exclamation mark. Feet close together. The small lemon-slice hair clip stays on the same side of her bangs as in the reference image, do not mirror the character.",
     "Pose: FAST WRITING key frame A: body, clipboard and pencil exactly as in WRITING key frame A, but her face is excited: eyes half open looking DOWN at the paper, eyebrows raised, mouth wide open in a big excited happy grin (no tongue sticking out). Feet close together. The small lemon-slice hair clip stays on the same side of her bangs as in the reference image, do not mirror the character.",
     "Pose: FAST WRITING key frame B: body, clipboard and pencil exactly as in WRITING key frame B, but her face is excited: eyes happily closed, mouth wide open in a big excited happy grin (no tongue sticking out). Feet close together. The small lemon-slice hair clip stays on the same side of her bangs as in the reference image, do not mirror the character.",
     "Pose: PRESENTING key frame A: she holds the clipboard up in front of her chest with the front of the clipboard facing the VIEWER, upright in portrait orientation, the hand on the RIGHT side of the image gripping its side. The white sheet of paper shows one big simple cute pencil doodle of a LEMON with a smiley face, drawn with dark pencil lines and filled with light yellow, and nothing else on the page. The hand on the LEFT side of the image holds a yellow pencil with a pink eraser up beside the clipboard, pencil pointing up. Her head is upright, eyes open, proud cheerful open-mouth smile, pink cheeks. Feet close together. The small lemon-slice hair clip stays on the same side of her bangs as in the reference image, do not mirror the character.",
