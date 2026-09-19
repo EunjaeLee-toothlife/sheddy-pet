@@ -1,6 +1,6 @@
 """Build the GitHub Pages payload into docs/.
 
-Pages는 Settings > Pages > "Deploy from a branch" > main / docs 로 설정.
+Pages는 Settings > Pages > "Deploy from a branch" > master / docs 로 설정.
 docs/에는 위젯 구동에 필요한 최소 파일만 복사한다:
   - index.html      (widget.html 그대로)
   - sprites/*.webm  (애니메이션 클립)
