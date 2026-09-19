@@ -356,7 +356,8 @@ function swap() {
 }
 
 // 뒤 버퍼에 클립을 로드하고, 첫 프레임이 실제로 나온 순간 front를 전환
-// 반환 Promise는 전환(reveal) 시점에 resolve. 클립이 끝나면 onEnded 호출.
+// 반환 Promise는 전환(reveal) 시점에 resolve. 클립이 끝날 때마다 onEnded 호출 —
+// loop 클립은 같은 버퍼를 되감아 다시 재생하므로(onCycleEnd) 사이클마다 불린다.
 //
 // 견고성 규칙 — 어떤 경로로도 상태 머신이 영구 대기에 빠지지 않게 한다:
 //  * requestVideoFrameCallback은 창이 가려지거나 탭이 숨겨지면 발화하지 않는다.
@@ -366,10 +367,21 @@ function swap() {
 //    setState의 await가 풀리게 한다 (이전에는 여기서 transitioning이 영원히 true였다).
 //  * 네트워크가 느려 canplaythrough가 LOAD_TIMEOUT_MS 안에 안 오면 그 클립은 건너뛴다
 //    (직전 프레임에 멈춘 채 무한 대기하지 않도록).
+//  * 같은 버퍼에 더 새로운 playClip이 걸리면(워치독 리셋 등) 이전 호출의 콜백·타이머는
+//    전부 무효다. 버려진 호출이 뒤늦게 swap하거나 새 호출의 핸들러를 지우지 못하게 한다.
 const REVEAL_FALLBACK_MS = 300;
 const LOAD_TIMEOUT_MS = 15_000;
+let clipSeq = 0;
+const clipOwner = new WeakMap(); // 비디오 버퍼 → 그 버퍼에 마지막으로 걸린 playClip 호출 번호
 function playClip(file, { loop = false, onEnded = null, rate = 1 } = {}) {
   const v = backVid();
+  const id = ++clipSeq;
+  clipOwner.set(v, id);
+  const live = () => clipOwner.get(v) === id;
+  // 이 버퍼가 아직 크로스 디졸브의 바탕(이전 프레임)으로 쓰이는 중이면 디졸브를 즉시 끝낸다
+  // (전환 직후 큐에 있던 요청이 곧바로 이어질 때). 그대로 두면 바탕이 비어 알파가 꺼지고,
+  // 디졸브 종료 시의 pause()가 방금 로드한 새 클립을 멈춰 버린다.
+  if (fade && fade.from === v) fade = null;
   v.loop = loop;
   v.onended = null;
   v.onerror = null;
@@ -379,29 +391,37 @@ function playClip(file, { loop = false, onEnded = null, rate = 1 } = {}) {
   v.defaultPlaybackRate = rate;
   v.playbackRate = rate;
   return new Promise(resolve => {
-    let revealed = false, finished = false;
+    let revealed = false, loaded = false, failed = false;
     const reveal = () => {
-      if (revealed) return;
+      if (revealed || !live()) return;
       revealed = true;
       if (v === backVid()) swap(); // 아직 전환 전이면 지금 전환
       resolve();
     };
-    const finish = () => {
-      if (finished) return;
-      finished = true;
+    // 재생이 끝날 때마다 호출된다. 일회성으로 만들면 loop의 두 번째 사이클부터
+    // ended가 무시되어 1초 주기 워치독이 사이클을 대신 굴리게 된다 (매 사이클 끝에서 멈칫).
+    const ended = () => {
+      if (!live()) return;
       reveal();
       if (onEnded) onEnded();
     };
+    // 실패 경로(로드 오류·play 거부·로드 타임아웃)는 한 번만 '끝난 것'으로 처리
+    const fail = (why, err) => {
+      if (failed || !live()) return;
+      failed = true;
+      console.warn(`clip ${why}:`, file, ...(err ? [err] : []));
+      ended();
+    };
     const loadTimer = setTimeout(() => {
-      if (!v.oncanplaythrough) return; // 이미 로드됨
-      console.warn("clip load timeout, skipping:", file);
+      if (loaded || !live()) return;
       v.oncanplaythrough = null;
-      finish();
+      fail("load timeout, skipping");
     }, LOAD_TIMEOUT_MS);
     v.oncanplaythrough = () => {
+      loaded = true;
       clearTimeout(loadTimer);
       v.oncanplaythrough = null;
-      v.onended = finish;
+      v.onended = ended;
       // 재생이 실제로 첫 프레임을 '표시'한 순간에 전환 → 프레임 0부터 이어져
       // 앞부분이 잘려 튀는 현상까지 줄인다. (rVFC는 play 전에 등록)
       if (typeof v.requestVideoFrameCallback === "function") {
@@ -409,9 +429,9 @@ function playClip(file, { loop = false, onEnded = null, rate = 1 } = {}) {
       }
       v.play()
         .then(() => setTimeout(reveal, REVEAL_FALLBACK_MS))
-        .catch(err => { console.warn("clip play failed:", file, err); finish(); });
+        .catch(err => fail("play failed", err));
     };
-    v.onerror = () => { clearTimeout(loadTimer); console.warn("clip load failed:", file); finish(); };
+    v.onerror = () => { clearTimeout(loadTimer); fail("load failed"); };
   });
 }
 
@@ -458,7 +478,8 @@ requestAnimationFrame(renderLoop);
 let current = null;      // 현재 상태 이름
 let transitioning = false;
 let transitionSince = 0; // transitioning이 true가 된 시각(ms) — 워치독용
-let queued = null;       // 전환 중 들어온 다음 요청
+let chainGen = 0;        // 전환 체인 세대 — 새 전환/워치독 리셋마다 올라가 이전 체인을 무효화
+let queued = null;       // 전환 중 들어온 다음 요청 { name, pin }
 let pinnedUntil = 0;     // 외부 명령으로 고정된 시각(ms) — 그때까지 주사위 정지
 let talkActive = false;  // 마이크 게이트 열림 여부
 let isDragging = false;  // 데스크톱 창을 옮기는 동안 basic1 고정
@@ -539,17 +560,32 @@ function onCycleEnd() {
   }
 }
 
+// 외부 명령 보호 시간을 연장한다. '계속 유지'로 걸린 무기한 pin(Infinity)은 줄이지 않는다.
+function pinNow() {
+  pinnedUntil = Math.max(pinnedUntil, Date.now() + HOLD_SEC * 1000);
+}
+
 async function setState(name, { pin = true } = {}) {
   if (!ANIMS[name]) { console.warn("unknown state:", name); return; }
-  if (transitioning) { queued = name; return; }
+  // pin 여부도 함께 보관 — 이름만 넣으면 마이크(talk)처럼 pin 없이 온 요청이
+  // 큐를 거치며 pin된 요청으로 바뀌어 주사위가 HOLD_SEC 동안 멈춘다
+  if (transitioning) { queued = { name, pin }; return; }
   if (name === current) {
-    if (pin) pinnedUntil = Date.now() + HOLD_SEC * 1000;
+    if (pin) pinNow();
     return;
   }
   transitioning = true;
   transitionSince = Date.now();
-  if (pin) pinnedUntil = Date.now() + HOLD_SEC * 1000;
+  const gen = ++chainGen;
+  if (pin) pinNow();
   if (name !== DEFAULT_STATE) { idleStreak = 0; emotionCycles = 0; } // 감정 진입
+
+  // 클립 하나를 끝까지 재생한다. 그 사이 워치독이 이 체인을 버렸으면 false —
+  // 버려진 체인이 뒤늦게 풀려 새 체인과 같은 버퍼·상태를 두고 다투지 않도록 그대로 빠져나간다
+  const playThrough = async (file, rate) => {
+    await new Promise(res => playClip(file, { onEnded: res, rate }));
+    return gen === chainGen;
+  };
 
   // 1) 현재 상태의 end 클립 (있으면) 재생하고 끝날 때까지 대기
   //    end가 배열이면 그중 하나를 랜덤으로 재생 (멀티 엔딩)
@@ -557,25 +593,22 @@ async function setState(name, { pin = true } = {}) {
   if (cur && cur.end) {
     const ends = Array.isArray(cur.end) ? cur.end : [cur.end];
     const endFile = ends[Math.floor(Math.random() * ends.length)];
-    await new Promise(res => playClip(endFile, { onEnded: res, rate: cur.rate ?? 1 }));
+    if (!await playThrough(endFile, cur.rate ?? 1)) return;
     // 1-b) 공용 outro가 있으면 end 뒤에 이어서 재생
-    if (cur.outro) {
-      await new Promise(res => playClip(cur.outro, { onEnded: res, rate: cur.rate ?? 1 }));
-    }
+    if (cur.outro && !await playThrough(cur.outro, cur.rate ?? 1)) return;
   }
 
   // 2) 다음 상태의 start (있으면) → loop (사이클 끝마다 주사위)
   const next = ANIMS[name];
   const rate = next.rate ?? 1;
-  if (next.start) {
-    await new Promise(res => playClip(next.start, { onEnded: res, rate }));
-  }
+  if (next.start && !await playThrough(next.start, rate)) return;
   current = name; // onCycleEnd가 참조하므로 loop 시작 전에 갱신
   renderMotionHighlight(); // 모션 선택창의 현재 상태 표시 동기화
   await playClip(next.loop, { onEnded: onCycleEnd, rate });
+  if (gen !== chainGen) return;
 
   transitioning = false;
-  if (queued) { const q = queued; queued = null; setState(q); }
+  if (queued) { const q = queued; queued = null; setState(q.name, { pin: q.pin }); }
 }
 
 // ── 워치독 ───────────────────────────────────────────────────
@@ -588,6 +621,7 @@ setInterval(() => {
   if (transitioning) {
     if (Date.now() - transitionSince > WATCHDOG_MS) {
       console.warn("watchdog: transition stuck for", Date.now() - transitionSince, "ms — resetting to idle");
+      chainGen++; // 멈춘 체인 무효화 — 뒤늦게 풀려도 더 진행하지 못한다
       transitioning = false;
       queued = null;
       current = null; // end/outro 재생 없이 곧바로 idle로
