@@ -264,6 +264,9 @@ const ANIMS = {
               category: "special", weight: 2, minCycles: 2, maxCycles: 4, rate: 0.7 },
   // 레몬 한 입 (꺼내기 → 베어물기 → 시큼 → 엄지척 → 숨기기) — 완결형 16프레임 @10FPS, rate 0.7, 1회만
   lemon1:   { loop: "anim_lemon1_loop.webm", category: "special", weight: 2, minCycles: 1, maxCycles: 1, rate: 0.7 },
+  // 연구 노트 메모 (클립보드 꺼내기 → 끄적 → 고민 → 아이디어! → 빠르게 끄적 → 레몬 낙서 자랑 → 숨기기)
+  // — 완결형 19프레임, 포즈 단위 홀드 인코딩 74틱 @10FPS (약 7.4초), 1회만. flux2-klein-4b로 생성
+  note1:    { loop: "anim_note1_loop.webm", category: "special", weight: 2, minCycles: 1, maxCycles: 1 },
   sad1:     { loop: "anim_sad1_loop.webm", category: "sad", weight: 1 },
   sad2:     { loop: "anim_sad2_loop.webm", category: "sad", weight: 1 },
   talk:     { loop: "anim_talk_loop.webm", category: "talk", weight: 0 }, // 주사위 제외, 마이크 전용
