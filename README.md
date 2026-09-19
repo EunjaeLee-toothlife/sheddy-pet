@@ -99,6 +99,9 @@ python tools/deploy_pages.py
    python tools/slice_and_key.py --frames "sprites/raw/<name>_*.png" --outdir sprites/<name> --prefix <name>
    ```
 
+   생성기가 달라 캐릭터 크기가 기존 클립과 조금 다르게 나왔다면 `--match sprites/idle1_loop/idle1_loop_00.png`를 붙여
+   클립 전체를 idle 첫 프레임의 키·발 위치에 맞춘다(전환할 때 크기가 튀지 않게).
+
 4. **인코딩**
 
    ```bash

@@ -82,6 +82,32 @@ def align_frames(frames):
     return out
 
 
+def body_box(img: Image.Image):
+    """(top, bottom, foot_cx): 알파 bbox의 위·아래와 발(아래 40px 띠)의 좌우 중심.
+    좌우 기준을 발로 잡는 것은 한쪽으로 든 소품·팔에 끌려가지 않게 하기 위함."""
+    a = np.asarray(img)[..., 3]
+    ys = np.nonzero(a > 128)[0]
+    top, bottom = int(ys.min()), int(ys.max())
+    fx = np.nonzero(a[max(top, bottom - 40):bottom + 1] > 128)[1]
+    return top, bottom, float(fx.mean())
+
+
+def match_to(frames, ref_path):
+    """첫 프레임의 키·발 위치가 ref(다른 클립의 키잉된 프레임)와 같아지도록
+    모든 프레임에 '같은' 배율·이동을 적용한다. 프레임 간 상대 위치는 그대로 두고
+    클립 전체의 프레이밍만 옮기므로, 생성기가 달라 캐릭터 크기가 조금 다른 클립을
+    기존 클립(idle 등)과 전환할 때 크기가 튀지 않게 맞추는 용도."""
+    rt, rb, rcx = body_box(Image.open(ref_path).convert("RGBA"))
+    t, b, cx = body_box(frames[0])
+    s = (rb - rt) / (b - t)
+    tx, ty = rcx - s * cx, rb - s * b
+    # PIL의 AFFINE 계수는 출력 → 입력 좌표 변환이다
+    coef = (1 / s, 0, -tx / s, 0, 1 / s, -ty / s)
+    print(f"match {ref_path}: scale {s:.4f}, shift ({tx:+.1f}, {ty:+.1f})")
+    return [f.transform(f.size, Image.AFFINE, coef, resample=Image.BICUBIC)
+            for f in frames]
+
+
 def estimate_bg(arr: np.ndarray) -> np.ndarray:
     """Median color of border pixels (assumed chroma background)."""
     border = np.concatenate([
@@ -230,6 +256,10 @@ def main():
                    help="skip bbox-height scale normalization across frames")
     p.add_argument("--erode", type=int, default=0,
                    help="pull matte edge N px inward (may eat thin outlines)")
+    p.add_argument("--match", default=None,
+                   help="keyed frame of another clip (e.g. sprites/idle1_loop/"
+                        "idle1_loop_00.png): scale/shift the WHOLE clip so its "
+                        "first frame has the same height and foot position")
     a = p.parse_args()
 
     import glob
@@ -261,6 +291,8 @@ def main():
         frames = normalize_scale(frames)
     if not a.no_align:
         frames = align_frames(frames)
+    if a.match:
+        frames = match_to(frames, a.match)
     for n, f in enumerate(frames):
         f.save(os.path.join(a.outdir, f"{a.prefix}_{n:02d}.png"))
     print(f"saved {len(frames)} tiles -> {a.outdir}"

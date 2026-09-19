@@ -52,5 +52,8 @@ Sheddy Pet — 레몬 치비 캐릭터 위젯. 사용법·구조·모션 추가 
 - 기본 복장(가운)이 아닌 모션은 클립 후반의 정적인 프레임에서 모자·장식이 빠지기 쉽다. 생성 후 프레임을 나열해 확인한다.
 - 머리 위 `Zzz`, `!`처럼 본체와 떨어진 기호는 매트 정리(`slice_and_key.py`의 최대 연결 성분 유지)에서 지워진다.
   표정과 동작으로 표현한다.
+- LAN의 imagegen MCP(`flux2-klein-4b`)로도 프레임을 만들 수 있다(note1이 첫 사례). 다만 **직전 프레임을 레퍼런스로 주면
+  몸을 그대로 복사하고 표정·종이 내용만 바꾼다** — Gemini식 chain으로는 중간 프레임이 안 나온다. 팔 배치가 다른 기준 프레임 +
+  같은 seed로 포즈 문장만 바꿔 변주를 만든다. 요령은 `prompts/animation_prompts.md`의 note1 항목.
 - `gen_frames.py`의 비-chain 경로는 로컬 lite-image 스킬 스크립트(`~/.claude/skills/lite-image/scripts/generate_image_v2.py`)를
   호출한다. chain 경로는 Gemini API를 직접 호출한다.
