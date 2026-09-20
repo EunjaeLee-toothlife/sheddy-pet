@@ -1,0 +1,77 @@
+{
+  "name": "lecture1_talk",
+  "ref": "refs/chibi_base.png",
+  "note": "Lecture mode TALK loop, 4 frames @10FPS (5 ticks = 0.5s per cycle). Played instead of lecture1_loop while the mic gate is open (widget.html: ANIMS.lecture1.talkState). She turns to the viewer and her mouth flaps closed -> half -> wide -> half while the pointer stays FROZEN in the tap-down position. Every frame is a face-mode edit of lecture1_loop frame 0 with the same seed, so the body and the pointer are pixel-identical to the loop and switching mid-cycle is seamless. Frame 3 is a file copy of frame 1. GENERATOR: flux2-klein-4b on the LAN imagegen server (not gen_frames.py) - see the 'klein' key and prompts/animation_prompts.md for the per-frame recipe. PROP: the blackboard is NOT generated per frame. It is one sprite (sprites/props/blackboard.png) composited behind the character by tools/compose_prop.py using the 'compose' key, because a detached prop is erased by the matte cleanup in slice_and_key.py and would wobble if it were regenerated every frame. The character's move to the right is done there too (compose.frames[].shift), so every generated frame is drawn centred as usual. Keyed with: slice_and_key.py --no-align --no-scale-norm --match sprites/idle1_loop/idle1_loop_00.png into sprites/<name>_char/, then compose_prop.py writes sprites/<name>/.",
+  "holds": {
+    "0": 2
+  },
+  "klein": {
+    "pipeline": "flux2-klein-4b",
+    "modes": {
+      "pose": "references = [design ref, anchor frame with a DIFFERENT arm layout]. 'reuse its character, outfit and prop design, but her arms are in a completely NEW position'. The same anchor and seed keep the body, so changing a few words of the pose text gives a controlled variation.",
+      "face": "references = [design ref, frame N], same seed as N. 'keep the body EXACTLY the same, what CHANGES is her FACE'. The body is copied pixel-stable; only the face changes.",
+      "copy": "다른 프레임 파일을 그대로 복사 (생성하지 않음)."
+    },
+    "frames": [
+      {
+        "mode": "face",
+        "from": "lecture1_loop_00",
+        "seed": 4002
+      },
+      {
+        "mode": "face",
+        "from": "lecture1_loop_00",
+        "seed": 4002
+      },
+      {
+        "mode": "face",
+        "from": "lecture1_loop_00",
+        "seed": 4002
+      },
+      {
+        "mode": "copy",
+        "from": 1
+      }
+    ]
+  },
+  "compose": {
+    "prop": "sprites/props/blackboard.png",
+    "floor": 501,
+    "frames": [
+      {
+        "shift": 85,
+        "prop": {
+          "h": 420,
+          "right": 228
+        }
+      },
+      {
+        "shift": 85,
+        "prop": {
+          "h": 420,
+          "right": 228
+        }
+      },
+      {
+        "shift": 85,
+        "prop": {
+          "h": 420,
+          "right": 228
+        }
+      },
+      {
+        "shift": 85,
+        "prop": {
+          "h": 420,
+          "right": 228
+        }
+      }
+    ]
+  },
+  "frames": [
+    "Pose: body, arms and pointer exactly as in lecture1_loop frame 0 (tap-down), but her FACE has turned to the viewer: both big yellow-gold eyes look STRAIGHT AT THE VIEWER, warm confident expression, mouth CLOSED in a gentle smile. The small lemon-slice hair clip stays on the same side of her bangs as in the reference image, do not mirror the character.",
+    "Pose: body, arms and pointer exactly as in lecture1_loop frame 0, eyes STRAIGHT AT THE VIEWER, mouth OPEN ABOUT HALFWAY in a small soft oval, caught mid-syllable while explaining. The small lemon-slice hair clip stays on the same side of her bangs as in the reference image, do not mirror the character.",
+    "Pose: body, arms and pointer exactly as in lecture1_loop frame 0, eyes STRAIGHT AT THE VIEWER, mouth WIDE OPEN in a big round happy shape, caught mid-sentence while cheerfully explaining out loud. The small lemon-slice hair clip stays on the same side of her bangs as in the reference image, do not mirror the character.",
+    "Pose: same as frame 1 (mouth half open) - file copy, closes the mouth-flap cycle. The small lemon-slice hair clip stays on the same side of her bangs as in the reference image, do not mirror the character."
+  ]
+}

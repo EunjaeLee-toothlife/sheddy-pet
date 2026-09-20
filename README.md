@@ -49,6 +49,9 @@ new BroadcastChannel("sheddy-pet").postMessage("happy1");            // 같은 �
 | `category`, `weight` | 주사위 분류와 분류 내 비율 (`weight: 0`이면 주사위 제외) |
 | `minCycles` / `maxCycles` | 최소 유지 사이클 / 이만큼 돌면 idle로 강제 복귀 |
 | `rate` | 재생 배속 (start·loop·end 공통) |
+| `mode` | 같은 `mode` 끼리 오갈 때는 `end`/`start`를 건너뛴다 (모드 안의 전환) |
+| `talkState` / `talkReturn` | 마이크가 열렸을 때 갈 모드 전용 말하기 상태 / 닫혔을 때 돌아갈 상태 |
+| `hidden` | 🎭 모션 목록에서 숨김 (모드 전용 말하기처럼 직접 고를 일이 없는 상태) |
 
 ## 개발
 
@@ -110,6 +113,19 @@ python tools/deploy_pages.py
 
    `holds` / `repeats`를 썼다면 대신 `python tools/encode_holds.py anims/<name>.json --fps 10`.
 
+   **칠판처럼 캐릭터와 떨어진 큰 소품**은 프레임마다 생성하지 않는다. 한 번만 만들어 `sprites/props/`에 두고,
+   키잉한 뒤 `compose_prop.py`로 뒤에 깔아 준다. 캐릭터의 좌우 이동도 여기서 처리한다.
+   (떨어진 조각은 `slice_and_key.py`의 매트 정리에서 지워지고, 매번 생성하면 소품 모양이 흔들린다.)
+
+   ```bash
+   python tools/slice_and_key.py --frames "sprites/raw/<name>_*.jpg" --outdir sprites/<name>_char --prefix <name> \
+     --no-align --no-scale-norm --match sprites/idle1_loop/idle1_loop_00.png
+   python tools/compose_prop.py anims/<name>.json   # sprites/<name>_char → sprites/<name>
+   ```
+
+   프레임별 소품 위치·크기·투명도와 캐릭터 이동량은 `anims/<name>.json`의 `compose` 키에 적는다.
+   `sprites/*_char/`는 raw에서 다시 만들 수 있는 중간 산출물이라 git에 올리지 않는다.
+
 5. **등록** — `widget.html`의 `ANIMS`에 추가(새 분류면 `CATEGORY_WEIGHTS`에도), `preview.html`의 `ANIMATIONS`에 한 줄 추가.
 6. **배포본 갱신** — `python tools/deploy_pages.py`
 
@@ -125,6 +141,7 @@ python tools/deploy_pages.py
 | `sprites/raw/`, `sprites/<name>/` | 생성 원본과 키잉된 PNG 시퀀스 (재인코딩용으로 함께 보관) |
 | `anims/` | 프레임 정의(JSON) |
 | `refs/` | 캐릭터 레퍼런스 이미지 |
+| `sprites/props/` | 한 번만 만들어 재사용하는 소품 스프라이트 (칠판 등) |
 | `tools/` | 생성 · 키잉 · 인코딩 · 배포 · 검사 스크립트 |
 | `docs/` | GitHub Pages 배포본 (`deploy_pages.py`가 생성) |
 

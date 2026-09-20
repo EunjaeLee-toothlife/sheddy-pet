@@ -18,3 +18,6 @@ Desktop.ini
 node_modules/
 dist/
 PLAN_LOG.md
+
+# 프롭 합성 전의 캐릭터-only 키잉 결과 (raw에서 재생성 가능)
+sprites/*_char/

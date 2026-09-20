@@ -269,6 +269,17 @@ const ANIMS = {
   note1:    { loop: "anim_note1_loop.webm", category: "special", weight: 2, minCycles: 1, maxCycles: 1 },
   sad1:     { loop: "anim_sad1_loop.webm", category: "sad", weight: 1 },
   sad2:     { loop: "anim_sad2_loop.webm", category: "sad", weight: 1 },
+  // 강의 모드 — 주사위에서 제외, 🎭 목록이나 window.setPetState("lecture1")로 진입한다.
+  // 진입하면 뒤에서 칠판이 펑 하고 나오고(start), 나갈 때 인사하며 칠판이 사라진다(end).
+  // mode가 같은 상태끼리 오갈 때는 start/end를 건너뛴다 — 말할 때마다 칠판이 다시 튀어나오지 않게.
+  lecture1: { start: "anim_lecture1_start.webm", loop: "anim_lecture1_loop.webm",
+              end: "anim_lecture1_end.webm", category: "lecture", weight: 0,
+              mode: "lecture", talkState: "lecture1Talk", minCycles: 2 },
+  // 강의 모드에서 마이크가 열렸을 때만 재생되는 말하기 루프 (목록에는 숨김).
+  // talkReturn: 마이크가 닫히면 돌아갈 상태.
+  lecture1Talk: { loop: "anim_lecture1_talk.webm", end: "anim_lecture1_end.webm",
+                  category: "lecture", weight: 0, mode: "lecture",
+                  talkReturn: "lecture1", hidden: true },
   talk:     { loop: "anim_talk_loop.webm", category: "talk", weight: 0 }, // 주사위 제외, 마이크 전용
 };
 const DEFAULT_STATE = "idle1";
@@ -485,6 +496,18 @@ let chainGen = 0;        // 전환 체인 세대 — 새 전환/워치독 리셋
 let queued = null;       // 전환 중 들어온 다음 요청 { name, pin }
 let pinnedUntil = 0;     // 외부 명령으로 고정된 시각(ms) — 그때까지 주사위 정지
 let talkActive = false;  // 마이크 게이트 열림 여부
+
+// ── 말하기(talk) 상태 결정 ────────────────────────────────────
+// 기본은 공용 talk 상태지만, 강의 모드처럼 talkState를 가진 상태에서는
+// 그 모드 전용 말하기 클립으로 간다. talkReturn이 있는 상태가 "말하는 중"이다.
+function talkStateOf(name) {
+  const a = ANIMS[name];
+  if (!a) return "talk";
+  if (a.talkReturn) return name;      // 이미 말하기 상태 — 그대로 유지
+  return a.talkState ?? "talk";
+}
+function isTalkState(name) { return name === "talk" || !!ANIMS[name]?.talkReturn; }
+function talkReturnOf(name) { return ANIMS[name]?.talkReturn ?? DEFAULT_STATE; }
 let isDragging = false;  // 데스크톱 창을 옮기는 동안 basic1 고정
 let idleStreak = 0;      // 마지막 감정 이후 완주한 idle 사이클 수
 let emotionCycles = 0;   // 현재 감정 상태에서 완주한 사이클 수
@@ -533,15 +556,17 @@ function onCycleEnd() {
     v.play().catch(() => {});
     return;
   }
-  // 마이크에 신호가 들어오는 동안은 talk 상태를 계속 유지
+  // 마이크에 신호가 들어오는 동안은 말하기 상태를 계속 유지
   if (talkActive) {
-    if (current !== "talk") { setState("talk", { pin: false }); return; }
+    const t = talkStateOf(current);
+    if (current !== t) { setState(t, { pin: false }); return; }
     const v = vids[front];
     v.currentTime = 0;
     v.play().catch(() => {});
     return;
   }
-  if (current === "talk") { setState(DEFAULT_STATE, { pin: false }); return; }
+  // 말하기가 끝나면 원래 자리로 — 공용 talk는 idle, 모드 전용은 그 모드의 loop
+  if (isTalkState(current)) { setState(talkReturnOf(current), { pin: false }); return; }
   if (current === DEFAULT_STATE) idleStreak++; // idle 사이클 1회 완주
   else emotionCycles++;                        // 감정 사이클 1회 완주
   const diceActive = DICE_ON && Date.now() >= pinnedUntil;
@@ -593,7 +618,10 @@ async function setState(name, { pin = true } = {}) {
   // 1) 현재 상태의 end 클립 (있으면) 재생하고 끝날 때까지 대기
   //    end가 배열이면 그중 하나를 랜덤으로 재생 (멀티 엔딩)
   const cur = current && ANIMS[current];
-  if (cur && cur.end) {
+  // 같은 모드 안에서의 전환(강의 ↔ 강의 말하기)은 진입/퇴장 연출을 건너뛴다
+  const nextAnim = ANIMS[name];
+  const sameMode = !!(cur && cur.mode && cur.mode === nextAnim.mode);
+  if (cur && cur.end && !sameMode) {
     const ends = Array.isArray(cur.end) ? cur.end : [cur.end];
     const endFile = ends[Math.floor(Math.random() * ends.length)];
     if (!await playThrough(endFile, cur.rate ?? 1)) return;
@@ -602,9 +630,9 @@ async function setState(name, { pin = true } = {}) {
   }
 
   // 2) 다음 상태의 start (있으면) → loop (사이클 끝마다 주사위)
-  const next = ANIMS[name];
+  const next = nextAnim;
   const rate = next.rate ?? 1;
-  if (next.start && !await playThrough(next.start, rate)) return;
+  if (next.start && !sameMode && !await playThrough(next.start, rate)) return;
   current = name; // onCycleEnd가 참조하므로 loop 시작 전에 갱신
   renderMotionHighlight(); // 모션 선택창의 현재 상태 표시 동기화
   await playClip(next.loop, { onEnded: onCycleEnd, rate });
@@ -836,7 +864,10 @@ function stopMic() {
   analyser = null;
   levelBar.style.width = "0%";
   micStatus.textContent = "마이크 꺼짐";
-  if (talkActive) { talkActive = false; setState(DEFAULT_STATE, { pin: false }); }
+  if (talkActive) {
+    talkActive = false;
+    if (isTalkState(current)) setState(talkReturnOf(current), { pin: false });
+  }
 }
 
 async function startMic(deviceId) {
@@ -878,7 +909,8 @@ async function startMic(deviceId) {
         if (!talkActive) {
           talkActive = true;
           micStatus.textContent = "🗣 말하는 중";
-          if (current !== "talk") setState("talk", { pin: false });
+          const t = talkStateOf(current);
+          if (current !== t) setState(t, { pin: false });
         }
       } else if (talkActive && now - lastLoudAt > RELEASE_MS) {
         talkActive = false;
@@ -979,7 +1011,7 @@ function renderMotionList() {
     const cw = CATEGORY_WEIGHTS[cat] ?? 0;
     head.textContent = cat + (cw > 0 ? "" : " (주사위 제외)");
     motionList.appendChild(head);
-    for (const [name, a] of entries.filter(([, x]) => x.category === cat)) {
+    for (const [name, a] of entries.filter(([, x]) => x.category === cat && !x.hidden)) {
       const row = document.createElement("div");
       row.className = "mic-item";
       row.dataset.name = name;

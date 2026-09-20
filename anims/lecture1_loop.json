@@ -1,0 +1,63 @@
+{
+  "name": "lecture1_loop",
+  "ref": "refs/chibi_base.png",
+  "note": "Lecture mode LOOP, 2 frames @10FPS; holds and repeats give 12 ticks = 1.2s per cycle (4 taps). She looks at the blackboard and taps it with her pointer. ONLY the pointer arm moves between the two frames - the head and body are identical (same anchor and seed), so the alternation reads as a tap instead of a wobble. The board is nudged down 2px on the contact frame so the tap lands. GENERATOR: flux2-klein-4b on the LAN imagegen server (not gen_frames.py) - see the 'klein' key and prompts/animation_prompts.md for the per-frame recipe. PROP: the blackboard is NOT generated per frame. It is one sprite (sprites/props/blackboard.png) composited behind the character by tools/compose_prop.py using the 'compose' key, because a detached prop is erased by the matte cleanup in slice_and_key.py and would wobble if it were regenerated every frame. The character's move to the right is done there too (compose.frames[].shift), so every generated frame is drawn centred as usual. Keyed with: slice_and_key.py --no-align --no-scale-norm --match sprites/idle1_loop/idle1_loop_00.png into sprites/<name>_char/, then compose_prop.py writes sprites/<name>/.",
+  "holds": {
+    "0": 2
+  },
+  "repeats": [
+    {
+      "frames": [
+        0,
+        1
+      ],
+      "times": 4
+    }
+  ],
+  "klein": {
+    "pipeline": "flux2-klein-4b",
+    "modes": {
+      "pose": "references = [design ref, anchor frame with a DIFFERENT arm layout]. 'reuse its character, outfit and prop design, but her arms are in a completely NEW position'. The same anchor and seed keep the body, so changing a few words of the pose text gives a controlled variation.",
+      "face": "references = [design ref, frame N], same seed as N. 'keep the body EXACTLY the same, what CHANGES is her FACE'. The body is copied pixel-stable; only the face changes.",
+      "copy": "다른 프레임 파일을 그대로 복사 (생성하지 않음)."
+    },
+    "frames": [
+      {
+        "mode": "face",
+        "from": "teach-base (base mode, seed 4002)",
+        "seed": 4002,
+        "note": "base 모드로 지시봉 자세를 만든 뒤 face 모드로 시선만 왼쪽으로 옮겼다"
+      },
+      {
+        "mode": "pose",
+        "anchor": 0,
+        "seed": 4002
+      }
+    ]
+  },
+  "compose": {
+    "prop": "sprites/props/blackboard.png",
+    "floor": 501,
+    "frames": [
+      {
+        "shift": 85,
+        "prop": {
+          "h": 420,
+          "right": 228,
+          "dy": 2
+        }
+      },
+      {
+        "shift": 85,
+        "prop": {
+          "h": 420,
+          "right": 228
+        }
+      }
+    ]
+  },
+  "frames": [
+    "Pose: TAP-DOWN key frame: standing upright, feet close together, eyes looking to the LEFT side of the image at the blackboard, bright confident closed-mouth smile. The hand on the LEFT side of the image holds a thin straight light-brown wooden pointer stick with a small dark rounded tip, as thin as a chopstick, perfectly straight, no decoration almost horizontally, tilted only slightly upward toward the LEFT, its dark tip resting ON the blackboard at shoulder height. Her other arm hangs relaxed straight down at her side. The small lemon-slice hair clip stays on the same side of her bangs as in the reference image, do not mirror the character.",
+    "Pose: TAP-UP key frame: exactly the same body, head, gaze and expression as the previous frame - ONLY the pointer arm has moved. The hand on the LEFT side of the image has swung a thin straight light-brown wooden pointer stick with a small dark rounded tip, as thin as a chopstick, perfectly straight, no decoration UP so it now aims toward the UPPER LEFT corner at about 45 degrees above horizontal, elbow raised, as if she has just lifted the pointer off the board to tap it again. The tip stays below the top of her head. The small lemon-slice hair clip stays on the same side of her bangs as in the reference image, do not mirror the character."
+  ]
+}
