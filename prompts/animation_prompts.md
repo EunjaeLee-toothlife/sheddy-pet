@@ -440,6 +440,53 @@ idle → 등 뒤에서 클립보드 꺼내기 → 연필 꺼내기 → 끄적끄
   큰 포즈(복싱 등)는 lite 쪽이 낫다.
 - 머리 주변에 떠 있는 효과선은 lite와 마찬가지로 매트 정리에서 지워지니 신경 쓰지 않아도 된다.
 
+## 4-j) 특수: 강의 모드 (lecture) — 1종, start + loop + 모드 전용 talk + end ⭐신규 구조
+
+### lecture1 (칠판 강의 — 진입/진행/발언/종료)
+뒤에서 칠판이 **펑!** 하고 튀어나오고 캐릭터가 깜짝 놀라며 오른쪽으로 비켜선다(start) →
+칠판을 보며 지시봉으로 **탁탁** 친다(loop) → 마이크가 열리면 정면을 보고 입을 뻥긋거리고
+지시봉은 멈춘다(talk) → 지시봉을 집어넣고 허리 숙여 인사하면 칠판이 **샤랄라** 사라진다(end).
+- 정의: `anims/lecture1_start.json` / `_loop.json` / `_talk.json` / `_end.json`
+- 등록: `widget.html`의 `ANIMS.lecture1`(+ 숨김 상태 `lecture1Talk`). 분류 `lecture`는 `CATEGORY_WEIGHTS`에
+  없어서 **주사위에서 제외**된다.
+- **토글이다.** 전용 버튼 **🎓 (F4)** 를 누르면 켜지고(버튼이 노랗게 바뀐다) 다시 누르면 꺼진다.
+  🎭 목록의 `lecture1` 행을 눌러도 같다("— 켜짐 (누르면 끄기)"로 바뀐다). 다시 누르면
+  인사를 거쳐 꺼진다. `window.togglePetMode("lecture1")`, `postMessage({type:"pet-mode",state:"lecture1"})`,
+  BroadcastChannel `"toggle:lecture1"`도 같다. 켜 둔 동안 주사위는 멈춘다(무기한 pin).
+- **발언은 마이크 감지 이벤트가 그대로 끈다.** 강의 모드가 켜져 있으면 마이크가 열렸을 때 공용 `talk`가
+  아니라 `lecture1Talk`이 재생되고(칠판·지시봉은 그대로), 마이크가 닫히면 다시 `lecture1` 루프로 돌아온다.
+- 타이밍: start 13틱(1.3초) / loop 12틱(1.2초, 4번 탁탁) / talk 5틱(0.5초) / end 20틱(2.0초), 모두 10FPS.
+
+**칠판은 생성하지 않고 합성한다 (이 클립의 핵심).**
+- `sprites/props/blackboard.png` 한 장을 만들어 재사용한다. 이유 두 가지:
+  (1) 캐릭터와 떨어진 조각은 `slice_and_key.py`의 매트 정리(최대 연결 성분 유지)에서 **지워진다**.
+  (2) 프레임마다 생성하면 칠판의 크기·글씨·이젤 다리가 매 프레임 흔들린다.
+- 그래서 캐릭터만 평소대로(중앙 기준) 생성 → 키잉 → `tools/compose_prop.py`가 칠판을 **뒤에** 깔고
+  캐릭터를 오른쪽으로 옮긴다. 프레임별 값은 `anims/*.json`의 `compose` 키.
+  펑(오버슈트 스쿼시)·샤랄라(축소+상승+페이드+반짝임)도 전부 여기서 만든다 — 생성 프레임은 그대로 둔다.
+- **칠판은 절대 녹색이면 안 된다.** 흔한 녹색 칠판은 크로마키에서 통째로 지워진다(어두운 녹색은
+  `greenness/brightness` 판정에 걸려 알파 0이 된다). 어두운 차콜/검정 판 + 따뜻한 나무 프레임으로 만든다.
+- 레이아웃(512 기준): 바닥 y=501, 칠판 높이 420·오른쪽 끝 x=228, 캐릭터 오른쪽 이동 +85.
+  지시봉 끝이 칠판 위에 얹히도록 잡은 값이다. 캐릭터를 먼저 뽑고 **지시봉 끝 위치에 맞춰 칠판을 배치**했다.
+
+**klein 사용 메모** (일반 요령은 4-i 참고)
+- **지시봉**: `a thin straight light-brown wooden pointer stick with a small dark rounded tip, as thin as a
+  chopstick, perfectly straight, no decoration, not a wand, not a sword` — "wand/sword" 배제를 빼면 장식이 붙는다.
+  각도는 `almost horizontal, tilted only slightly upward, about 20 degrees above horizontal`처럼 각도로 지시한다.
+  처음엔 45도로 나와 지시봉 끝이 머리 위로 올라갔다.
+- **고개 돌리기는 여전히 안 된다.** "head clearly TURNED to the LEFT in a three-quarter view"를 여러 번 써도
+  정면 얼굴이 유지됐다. 대신 face 모드로 **시선(눈동자)만** 왼쪽으로 옮겨 "칠판을 본다"를 표현했다.
+  얼굴이 계속 보이는 편이 마스코트로는 오히려 낫고, 발언 프레임(정면)과의 차이도 자연스럽다.
+- **탁탁(작은 반복 동작)은 pose 모드 2장으로 만든다.** 같은 앵커 + 같은 seed로 "팔만 다른 위치"를 요청하면
+  머리·몸통이 186px 차이(= 사실상 동일)로 유지되고 지시봉 각도만 바뀐다. 이걸 `repeats`로 4번 반복한다.
+  (프레임을 조금만 바꾸라고 하면 klein이 그냥 복사해 버리므로, 각도 차이는 크게 벌려야 한다.)
+- **발언 프레임은 face 모드가 정답.** loop 0번을 기준으로 같은 seed에서 입만 닫힘/반쯤/크게로 3장 뽑으면
+  몸과 지시봉이 픽셀 단위로 같아서, 말하는 도중 전환해도 지시봉이 튀지 않는다.
+- **인사(허리 숙이기)는 잘 된다.** 상체를 접는 큰 변화라 pose 모드로 한 번에 나왔다. 하체가 안 움직이는
+  klein의 약점과 무관한 동작이다.
+- 재사용: idle 프레임과 "손 뒤로" 프레임은 note1의 raw를 그대로 복사해 썼다(`klein.frames`의 `copy` 모드).
+  같은 생성기·같은 스케일이라 그대로 이어진다.
+
 ## 5) 우울 상태 (sad) — 2종
 
 ### sad1 (풀 죽음)

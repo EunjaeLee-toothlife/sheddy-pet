@@ -9,9 +9,14 @@ OBS 브라우저 소스나 웹페이지에 그대로 올려 쓴다.
 ## OBS에서 쓰기
 
 1. 소스 추가 → **브라우저** → URL에 위 주소 입력. 크기는 정사각형 권장(예: 512×512). 배경은 투명.
-2. 설정을 바꾸려면 소스 우클릭 → **상호작용**. 마우스를 움직이면 버튼 두 개가 나타난다.
+2. 설정을 바꾸려면 소스 우클릭 → **상호작용**. 마우스를 움직이면 버튼 세 개가 나타난다.
    - ⚙️ (F2) 마이크 설정 — 입력 장치와 감도 임계값. 임계값을 넘는 동안 `talk` 모션이 재생된다.
    - 🎭 (F3) 모션 선택 — 원하는 모션을 바로 재생. "계속 유지"를 켜면 주사위를 멈추고 그 모션만 반복.
+     강의 모드처럼 `mode`가 붙은 항목은 **토글**이다. 한 번 누르면 끌 때까지 유지되고, 다시 누르면
+     마무리 동작(강의 모드는 인사)을 거쳐 꺼진다. "계속 유지"와는 무관하게 동작한다.
+   - 🎓 (F4) **강의 모드** — 누를 때마다 켜짐/꺼짐. 켜져 있는 동안 버튼이 노랗게 바뀐다.
+     켜면 뒤에서 칠판이 나오고, 끄면 인사하며 칠판을 정리한다. 켜 둔 동안 마이크가 열리면
+     공용 `talk` 대신 칠판 앞에서 입만 움직이는 클립이 나온다.
 
 ### URL 옵션
 
@@ -30,11 +35,22 @@ window.postMessage({ type: "pet-state", state: "happy1" }, "*");     // iframe �
 new BroadcastChannel("sheddy-pet").postMessage("happy1");            // 같은 출처의 컨트롤 페이지
 ```
 
+모드(강의 모드 등)는 켜고 끄는 토글이라 명령이 따로 있다. OBS 핫키에 걸어 두고 쓰기 좋다.
+
+```js
+window.togglePetMode("lecture1");                                    // 켜져 있으면 끄고, 아니면 켠다
+window.postMessage({ type: "pet-mode", state: "lecture1" }, "*");
+new BroadcastChannel("sheddy-pet").postMessage("toggle:lecture1");
+```
+
 ## 동작 방식
 
 - **상태 머신 + 2중 가중치 주사위.** loop 한 사이클이 끝날 때마다 주사위를 굴린다. 먼저 분류(`CATEGORY_WEIGHTS`:
   idle / basic / happy / excited / special / sad)를 뽑고, 그 안에서 `weight`로 모션을 뽑는다. 감정 → 감정 직행은 없고
   항상 idle을 거친다.
+- **모드.** `mode`가 붙은 상태(강의 모드)는 **토글**이다. 켜면 주사위를 멈추고 끌 때까지 유지되며,
+  같은 모드 안에서의 전환에는 `end`/`start`를 건너뛴다. 마이크가 열리면 공용 `talk` 대신 그 모드의
+  `talkState` 클립이 재생된다 — 강의 모드에서는 칠판을 그대로 둔 채 입만 움직인다.
 - **전환 순서.** 현재 상태의 `end`(→ `outro`) → 다음 상태의 `start` → `loop`. `end`가 배열이면 그중 하나를 랜덤 재생(멀티 엔딩).
 - **렌더링.** `<video>` 두 개를 더블 버퍼로 쓰고, 화면에는 캔버스 하나만 보인다. 전환은 70ms 크로스 디졸브라 깜박임이 없다.
 - **견고성.** 시작 직후 전 클립(약 6MB)을 받아 blob URL로 보관하고, 로드 실패·타임아웃은 건너뛰며, 1초 주기 워치독이
@@ -49,6 +65,9 @@ new BroadcastChannel("sheddy-pet").postMessage("happy1");            // 같은 �
 | `category`, `weight` | 주사위 분류와 분류 내 비율 (`weight: 0`이면 주사위 제외) |
 | `minCycles` / `maxCycles` | 최소 유지 사이클 / 이만큼 돌면 idle로 강제 복귀 |
 | `rate` | 재생 배속 (start·loop·end 공통) |
+| `mode` | 같은 `mode` 끼리 오갈 때는 `end`/`start`를 건너뛴다 (모드 안의 전환) |
+| `talkState` / `talkReturn` | 마이크가 열렸을 때 갈 모드 전용 말하기 상태 / 닫혔을 때 돌아갈 상태 |
+| `hidden` | 🎭 모션 목록에서 숨김 (모드 전용 말하기처럼 직접 고를 일이 없는 상태) |
 
 ## 개발
 
@@ -110,6 +129,19 @@ python tools/deploy_pages.py
 
    `holds` / `repeats`를 썼다면 대신 `python tools/encode_holds.py anims/<name>.json --fps 10`.
 
+   **칠판처럼 캐릭터와 떨어진 큰 소품**은 프레임마다 생성하지 않는다. 한 번만 만들어 `sprites/props/`에 두고,
+   키잉한 뒤 `compose_prop.py`로 뒤에 깔아 준다. 캐릭터의 좌우 이동도 여기서 처리한다.
+   (떨어진 조각은 `slice_and_key.py`의 매트 정리에서 지워지고, 매번 생성하면 소품 모양이 흔들린다.)
+
+   ```bash
+   python tools/slice_and_key.py --frames "sprites/raw/<name>_*.jpg" --outdir sprites/<name>_char --prefix <name> \
+     --no-align --no-scale-norm --match sprites/idle1_loop/idle1_loop_00.png
+   python tools/compose_prop.py anims/<name>.json   # sprites/<name>_char → sprites/<name>
+   ```
+
+   프레임별 소품 위치·크기·투명도와 캐릭터 이동량은 `anims/<name>.json`의 `compose` 키에 적는다.
+   `sprites/*_char/`는 raw에서 다시 만들 수 있는 중간 산출물이라 git에 올리지 않는다.
+
 5. **등록** — `widget.html`의 `ANIMS`에 추가(새 분류면 `CATEGORY_WEIGHTS`에도), `preview.html`의 `ANIMATIONS`에 한 줄 추가.
 6. **배포본 갱신** — `python tools/deploy_pages.py`
 
@@ -125,6 +157,7 @@ python tools/deploy_pages.py
 | `sprites/raw/`, `sprites/<name>/` | 생성 원본과 키잉된 PNG 시퀀스 (재인코딩용으로 함께 보관) |
 | `anims/` | 프레임 정의(JSON) |
 | `refs/` | 캐릭터 레퍼런스 이미지 |
+| `sprites/props/` | 한 번만 만들어 재사용하는 소품 스프라이트 (칠판 등) |
 | `tools/` | 생성 · 키잉 · 인코딩 · 배포 · 검사 스크립트 |
 | `docs/` | GitHub Pages 배포본 (`deploy_pages.py`가 생성) |
 

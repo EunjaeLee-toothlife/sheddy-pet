@@ -1,0 +1,134 @@
+{
+  "name": "lecture1_start",
+  "ref": "refs/chibi_base.png",
+  "note": "Lecture mode ENTRY, 6 frames @10FPS with holds (13 ticks = 1.3s). The blackboard bangs into view from behind her, she flinches, notices it, pulls out her pointer and settles into the teaching pose. Frame 5 must equal lecture1_loop frame 0. Frame 0 is a file copy of note1_loop_00 (the shared klein idle base) so the crossfade from idle is seamless. GENERATOR: flux2-klein-4b on the LAN imagegen server (not gen_frames.py) - see the 'klein' key and prompts/animation_prompts.md for the per-frame recipe. PROP: the blackboard is NOT generated per frame. It is one sprite (sprites/props/blackboard.png) composited behind the character by tools/compose_prop.py using the 'compose' key, because a detached prop is erased by the matte cleanup in slice_and_key.py and would wobble if it were regenerated every frame. The character's move to the right is done there too (compose.frames[].shift), so every generated frame is drawn centred as usual. Keyed with: slice_and_key.py --no-align --no-scale-norm --match sprites/idle1_loop/idle1_loop_00.png into sprites/<name>_char/, then compose_prop.py writes sprites/<name>/.",
+  "holds": {
+    "0": 2,
+    "2": 3,
+    "3": 3,
+    "4": 2,
+    "5": 2
+  },
+  "klein": {
+    "pipeline": "flux2-klein-4b",
+    "modes": {
+      "pose": "references = [design ref, anchor frame with a DIFFERENT arm layout]. 'reuse its character, outfit and prop design, but her arms are in a completely NEW position'. The same anchor and seed keep the body, so changing a few words of the pose text gives a controlled variation.",
+      "face": "references = [design ref, frame N], same seed as N. 'keep the body EXACTLY the same, what CHANGES is her FACE'. The body is copied pixel-stable; only the face changes.",
+      "copy": "다른 프레임 파일을 그대로 복사 (생성하지 않음)."
+    },
+    "frames": [
+      {
+        "mode": "copy",
+        "from": "note1_loop_00"
+      },
+      {
+        "mode": "pose",
+        "anchor": "note1_loop_00",
+        "seed": 4002
+      },
+      {
+        "mode": "pose",
+        "anchor": "note1_loop_00",
+        "seed": 4002
+      },
+      {
+        "mode": "face",
+        "from": 1,
+        "seed": 4002
+      },
+      {
+        "mode": "pose",
+        "anchor": "note1_loop_00",
+        "seed": 4002
+      },
+      {
+        "mode": "copy",
+        "from": "lecture1_loop_00"
+      }
+    ]
+  },
+  "compose": {
+    "prop": "sprites/props/blackboard.png",
+    "floor": 501,
+    "frames": [
+      {
+        "shift": 0
+      },
+      {
+        "shift": 0,
+        "prop": {
+          "h": 90,
+          "right": 300,
+          "sx": 0.8
+        }
+      },
+      {
+        "shift": 25,
+        "prop": {
+          "h": 470,
+          "right": 236,
+          "sx": 1.12
+        },
+        "sparkle": {
+          "n": 6,
+          "seed": 1,
+          "box": [
+            20,
+            60,
+            300,
+            420
+          ],
+          "size": [
+            8,
+            18
+          ]
+        }
+      },
+      {
+        "shift": 55,
+        "prop": {
+          "h": 400,
+          "right": 226,
+          "sx": 0.97
+        },
+        "sparkle": {
+          "n": 4,
+          "seed": 2,
+          "box": [
+            20,
+            80,
+            300,
+            430
+          ],
+          "size": [
+            6,
+            12
+          ],
+          "alpha": 0.7
+        }
+      },
+      {
+        "shift": 75,
+        "prop": {
+          "h": 424,
+          "right": 229
+        }
+      },
+      {
+        "shift": 85,
+        "prop": {
+          "h": 420,
+          "right": 228
+        }
+      }
+    ]
+  },
+  "frames": [
+    "Pose: BASE: standing upright and relaxed, feet close together under her hips, both arms resting naturally at her sides with open hands, calm small smile, head level. No props visible. The small lemon-slice hair clip stays on the same side of her bangs as in the reference image, do not mirror the character.",
+    "Pose: STARTLED key frame A: she has just been startled by a loud bang behind her. Her shoulders are hunched UP high toward her ears, her head is pulled back a little, and BOTH arms are bent and lifted in front of her chest with open startled hands, fingers spread wide. Her big yellow-gold eyes are WIDE OPEN and round with surprise, eyebrows raised high, mouth open in a small round shape. Feet stay close together. No props visible. The small lemon-slice hair clip stays on the same side of her bangs as in the reference image, do not mirror the character.",
+    "Pose: STARTLED key frame B, the peak: BOTH arms are thrown UP and OUT away from her body, elbows bent, hands wide open with fingers spread beside her head. Her eyes are as WIDE and round as possible, mouth wide open in a big round shocked gasp, her long blonde hair flying up and outward, upper body leaning back and slightly toward the RIGHT side of the image. Feet stay close together. No props visible. The small lemon-slice hair clip stays on the same side of her bangs as in the reference image, do not mirror the character.",
+    "Pose: NOTICING key frame: exactly the same body as the previous frame - still standing with both hands lifted in front of her chest, fingers spread - but the shock has turned into curiosity: both eyes now look to the LEFT side of the image at the blackboard beside her, eyebrows raised with interest. The small lemon-slice hair clip stays on the same side of her bangs as in the reference image, do not mirror the character.",
+    "Pose: PULLING OUT THE POINTER: both arms have come back down. The hand on the LEFT side of the image has just pulled a thin straight light-brown wooden pointer stick with a small dark rounded tip, as thin as a chopstick, perfectly straight, no decoration out from behind her back and holds it angled DOWN toward the lower LEFT corner of the image. Her other arm hangs relaxed at her side. Both eyes look to the LEFT at the blackboard, an excited confident open-mouth smile. Feet close together. The small lemon-slice hair clip stays on the same side of her bangs as in the reference image, do not mirror the character.",
+    "Pose: TEACHING key frame (must match lecture1_loop frame 0 exactly): standing upright, feet close together, eyes looking to the LEFT side of the image at the blackboard, bright confident closed-mouth smile. The hand on the LEFT side of the image holds a thin straight light-brown wooden pointer stick with a small dark rounded tip, as thin as a chopstick, perfectly straight, no decoration almost horizontally, tilted slightly upward toward the LEFT, its tip resting on the blackboard. Her other arm hangs relaxed at her side. The small lemon-slice hair clip stays on the same side of her bangs as in the reference image, do not mirror the character."
+  ]
+}

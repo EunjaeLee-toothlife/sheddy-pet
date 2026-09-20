@@ -62,7 +62,7 @@
   }
 
   /* 마우스 오버 시 나타나는 버튼들 (⚙️ 설정 / 🎭 모션 선택) */
-  #gearBtn, #motionBtn {
+  #gearBtn, #motionBtn, #lectureBtn {
     position: fixed; top: 10px; left: 10px; z-index: 11;
     width: 36px; height: 36px; border-radius: 50%;
     background: rgba(30, 30, 34, .75); color: #fff;
@@ -71,9 +71,12 @@
     opacity: 0; pointer-events: none; transition: opacity .25s;
     -webkit-app-region: no-drag;
   }
-  #gearBtn.show, #motionBtn.show { opacity: 1; pointer-events: auto; }
+  #gearBtn.show, #motionBtn.show, #lectureBtn.show { opacity: 1; pointer-events: auto; }
   #motionBtn { top: auto; bottom: 10px; }
-  body.desktop #gearBtn, body.desktop #motionBtn {
+  /* 🎓 강의 모드 토글 — 🎭 옆. 켜져 있으면 노랗게 눌린 상태로 보인다 */
+  #lectureBtn { top: auto; bottom: 10px; left: 56px; }
+  #lectureBtn.on { background: #f5c518; color: #222; }
+  body.desktop #gearBtn, body.desktop #motionBtn, body.desktop #lectureBtn {
     top: auto;
     left: calc(10px * var(--pet-scale));
     width: calc(36px * var(--pet-scale));
@@ -83,6 +86,10 @@
   body.desktop #gearBtn { bottom: calc(434px * var(--pet-scale)); }
   body.desktop #motionBtn {
     top: auto; bottom: calc(10px * var(--pet-scale));
+  }
+  body.desktop #lectureBtn {
+    top: auto; bottom: calc(10px * var(--pet-scale));
+    left: calc(56px * var(--pet-scale));
   }
 
   /* F2 또는 설정 버튼으로 여닫는 마이크 설정창 */
@@ -186,6 +193,8 @@
 
 <!-- 좌측 하단: 모션 선택 버튼 + 패널 (OBS: 소스 우클릭 → 상호작용) -->
 <button id="motionBtn" type="button" title="모션 선택">🎭</button>
+<!-- 강의 모드 토글: 누를 때마다 켜짐/꺼짐 (F4) -->
+<button id="lectureBtn" type="button" title="강의 모드 켜기 (F4)">🎓</button>
 
 <div id="motionPanel">
   <h3>🎭 모션 선택 <span style="font-weight:400;color:#888">(🎭/F3로 닫기)</span></h3>
@@ -269,6 +278,17 @@ const ANIMS = {
   note1:    { loop: "anim_note1_loop.webm", category: "special", weight: 2, minCycles: 1, maxCycles: 1 },
   sad1:     { loop: "anim_sad1_loop.webm", category: "sad", weight: 1 },
   sad2:     { loop: "anim_sad2_loop.webm", category: "sad", weight: 1 },
+  // 강의 모드 — 주사위에서 제외, 🎭 목록이나 window.setPetState("lecture1")로 진입한다.
+  // 진입하면 뒤에서 칠판이 펑 하고 나오고(start), 나갈 때 인사하며 칠판이 사라진다(end).
+  // mode가 같은 상태끼리 오갈 때는 start/end를 건너뛴다 — 말할 때마다 칠판이 다시 튀어나오지 않게.
+  lecture1: { start: "anim_lecture1_start.webm", loop: "anim_lecture1_loop.webm",
+              end: "anim_lecture1_end.webm", category: "lecture", weight: 0,
+              mode: "lecture", talkState: "lecture1Talk", minCycles: 2 },
+  // 강의 모드에서 마이크가 열렸을 때만 재생되는 말하기 루프 (목록에는 숨김).
+  // talkReturn: 마이크가 닫히면 돌아갈 상태.
+  lecture1Talk: { loop: "anim_lecture1_talk.webm", end: "anim_lecture1_end.webm",
+                  category: "lecture", weight: 0, mode: "lecture",
+                  talkReturn: "lecture1", hidden: true },
   talk:     { loop: "anim_talk_loop.webm", category: "talk", weight: 0 }, // 주사위 제외, 마이크 전용
 };
 const DEFAULT_STATE = "idle1";
@@ -485,6 +505,29 @@ let chainGen = 0;        // 전환 체인 세대 — 새 전환/워치독 리셋
 let queued = null;       // 전환 중 들어온 다음 요청 { name, pin }
 let pinnedUntil = 0;     // 외부 명령으로 고정된 시각(ms) — 그때까지 주사위 정지
 let talkActive = false;  // 마이크 게이트 열림 여부
+
+// ── 말하기(talk) 상태 결정 ────────────────────────────────────
+// 기본은 공용 talk 상태지만, 강의 모드처럼 talkState를 가진 상태에서는
+// 그 모드 전용 말하기 클립으로 간다. talkReturn이 있는 상태가 "말하는 중"이다.
+function talkStateOf(name) {
+  const a = ANIMS[name];
+  if (!a) return "talk";
+  if (a.talkReturn) return name;      // 이미 말하기 상태 — 그대로 유지
+  return a.talkState ?? "talk";
+}
+function isTalkState(name) { return name === "talk" || !!ANIMS[name]?.talkReturn; }
+function talkReturnOf(name) { return ANIMS[name]?.talkReturn ?? DEFAULT_STATE; }
+
+// ── 모드 토글 ────────────────────────────────────────────────
+// mode를 가진 상태(강의 모드 등)는 한 번 켜면 끌 때까지 유지된다.
+// 그래서 진입할 때 HOLD_SEC이 아니라 무기한 pin을 걸고, 끌 때 직접 푼다.
+function modeOf(name) { return ANIMS[name]?.mode; }
+function modeIsOn(name) { return !!modeOf(name) && modeOf(current) === modeOf(name); }
+// 모드를 끈다 — 현재 상태의 end(강의라면 인사 + 칠판 정리)를 거쳐 idle로 돌아간다
+function exitMode() {
+  pinnedUntil = 0;
+  setState(DEFAULT_STATE, { pin: false });
+}
 let isDragging = false;  // 데스크톱 창을 옮기는 동안 basic1 고정
 let idleStreak = 0;      // 마지막 감정 이후 완주한 idle 사이클 수
 let emotionCycles = 0;   // 현재 감정 상태에서 완주한 사이클 수
@@ -533,15 +576,17 @@ function onCycleEnd() {
     v.play().catch(() => {});
     return;
   }
-  // 마이크에 신호가 들어오는 동안은 talk 상태를 계속 유지
+  // 마이크에 신호가 들어오는 동안은 말하기 상태를 계속 유지
   if (talkActive) {
-    if (current !== "talk") { setState("talk", { pin: false }); return; }
+    const t = talkStateOf(current);
+    if (current !== t) { setState(t, { pin: false }); return; }
     const v = vids[front];
     v.currentTime = 0;
     v.play().catch(() => {});
     return;
   }
-  if (current === "talk") { setState(DEFAULT_STATE, { pin: false }); return; }
+  // 말하기가 끝나면 원래 자리로 — 공용 talk는 idle, 모드 전용은 그 모드의 loop
+  if (isTalkState(current)) { setState(talkReturnOf(current), { pin: false }); return; }
   if (current === DEFAULT_STATE) idleStreak++; // idle 사이클 1회 완주
   else emotionCycles++;                        // 감정 사이클 1회 완주
   const diceActive = DICE_ON && Date.now() >= pinnedUntil;
@@ -580,7 +625,8 @@ async function setState(name, { pin = true } = {}) {
   transitioning = true;
   transitionSince = Date.now();
   const gen = ++chainGen;
-  if (pin) pinNow();
+  // 모드는 토글이라 끌 때까지 유지된다 — HOLD_SEC이 아니라 무기한 pin
+  if (pin) { if (modeOf(name)) pinnedUntil = Infinity; else pinNow(); }
   if (name !== DEFAULT_STATE) { idleStreak = 0; emotionCycles = 0; } // 감정 진입
 
   // 클립 하나를 끝까지 재생한다. 그 사이 워치독이 이 체인을 버렸으면 false —
@@ -593,7 +639,10 @@ async function setState(name, { pin = true } = {}) {
   // 1) 현재 상태의 end 클립 (있으면) 재생하고 끝날 때까지 대기
   //    end가 배열이면 그중 하나를 랜덤으로 재생 (멀티 엔딩)
   const cur = current && ANIMS[current];
-  if (cur && cur.end) {
+  // 같은 모드 안에서의 전환(강의 ↔ 강의 말하기)은 진입/퇴장 연출을 건너뛴다
+  const nextAnim = ANIMS[name];
+  const sameMode = !!(cur && cur.mode && cur.mode === nextAnim.mode);
+  if (cur && cur.end && !sameMode) {
     const ends = Array.isArray(cur.end) ? cur.end : [cur.end];
     const endFile = ends[Math.floor(Math.random() * ends.length)];
     if (!await playThrough(endFile, cur.rate ?? 1)) return;
@@ -602,9 +651,9 @@ async function setState(name, { pin = true } = {}) {
   }
 
   // 2) 다음 상태의 start (있으면) → loop (사이클 끝마다 주사위)
-  const next = ANIMS[name];
+  const next = nextAnim;
   const rate = next.rate ?? 1;
-  if (next.start && !await playThrough(next.start, rate)) return;
+  if (next.start && !sameMode && !await playThrough(next.start, rate)) return;
   current = name; // onCycleEnd가 참조하므로 loop 시작 전에 갱신
   renderMotionHighlight(); // 모션 선택창의 현재 상태 표시 동기화
   await playClip(next.loop, { onEnded: onCycleEnd, rate });
@@ -627,6 +676,7 @@ setInterval(() => {
       chainGen++; // 멈춘 체인 무효화 — 뒤늦게 풀려도 더 진행하지 못한다
       transitioning = false;
       queued = null;
+      if (modeOf(current)) pinnedUntil = 0; // 모드 토글 중이었다면 주사위를 다시 살린다
       current = null; // end/outro 재생 없이 곧바로 idle로
       setState(DEFAULT_STATE, { pin: false });
     }
@@ -659,16 +709,31 @@ setInterval(() => {
 // 1) 콘솔/OBS에서 직접: window.setPetState('happy1')
 window.setPetState = name => setState(name);
 
+// 1-b) 모드 토글: window.togglePetMode('lecture1') — 켜져 있으면 끄고, 아니면 켠다.
+//      OBS 핫키(커스텀 스크립트)에 걸어 두고 쓰기 좋다. 반환값은 바뀐 뒤의 on/off.
+window.togglePetMode = (name = "lecture1") => {
+  if (!modeOf(name)) { console.warn("mode 상태가 아님:", name); return false; }
+  const on = modeIsOn(name);
+  if (on) exitMode(); else setState(name);
+  renderMotionHighlight();
+  return !on;
+};
+
 // 2) postMessage: iframe이나 OBS custom code에서
 //    window.postMessage({ type: 'pet-state', state: 'happy1' }, '*')
 window.addEventListener("message", e => {
-  if (e.data && e.data.type === "pet-state") setState(e.data.state);
+  if (!e.data) return;
+  if (e.data.type === "pet-state") setState(e.data.state);
+  else if (e.data.type === "pet-mode") window.togglePetMode(e.data.state);
 });
 
 // 3) BroadcastChannel: 같은 서버의 컨트롤 페이지에서
 //    new BroadcastChannel('sheddy-pet').postMessage('happy1')
 try {
-  new BroadcastChannel("sheddy-pet").onmessage = e => setState(e.data);
+  new BroadcastChannel("sheddy-pet").onmessage = e =>
+    (typeof e.data === "string" && e.data.startsWith("toggle:"))
+      ? window.togglePetMode(e.data.slice(7))
+      : setState(e.data);
 } catch (_) { /* 미지원 브라우저 */ }
 
 // ── 데스크톱 펫: 드래그 및 독립 말풍선 ────────────────────────
@@ -836,7 +901,10 @@ function stopMic() {
   analyser = null;
   levelBar.style.width = "0%";
   micStatus.textContent = "마이크 꺼짐";
-  if (talkActive) { talkActive = false; setState(DEFAULT_STATE, { pin: false }); }
+  if (talkActive) {
+    talkActive = false;
+    if (isTalkState(current)) setState(talkReturnOf(current), { pin: false });
+  }
 }
 
 async function startMic(deviceId) {
@@ -878,7 +946,8 @@ async function startMic(deviceId) {
         if (!talkActive) {
           talkActive = true;
           micStatus.textContent = "🗣 말하는 중";
-          if (current !== "talk") setState("talk", { pin: false });
+          const t = talkStateOf(current);
+          if (current !== t) setState(t, { pin: false });
         }
       } else if (talkActive && now - lastLoudAt > RELEASE_MS) {
         talkActive = false;
@@ -930,10 +999,12 @@ let gearTimer = null;
 window.addEventListener("mousemove", () => {
   gearBtn.classList.add("show");
   motionBtn.classList.add("show");
+  lectureBtn.classList.add("show");
   clearTimeout(gearTimer);
   gearTimer = setTimeout(() => {
     gearBtn.classList.remove("show");
     motionBtn.classList.remove("show");
+    lectureBtn.classList.remove("show");
   }, 2500);
 });
 gearBtn.addEventListener("click", toggleSettings);
@@ -943,16 +1014,37 @@ gearBtn.addEventListener("click", toggleSettings);
 // 기본은 HOLD_SEC 동안만 주사위로부터 보호. "계속 유지"를 켜면 다시 풀 때까지
 // 주사위를 완전히 정지하고 그 모션만 반복한다. (maxCycles도 pin 중에는 무시됨)
 const motionBtn = document.getElementById("motionBtn");
+const lectureBtn = document.getElementById("lectureBtn");
 const motionPanel = document.getElementById("motionPanel");
 const motionList = document.getElementById("motionList");
 const motionHold = document.getElementById("motionHold");
 
+// 모션 목록의 선택 표시와 🎓 버튼의 켜짐 표시를 현재 상태에 맞춘다.
+// 상태가 바뀔 때마다(setState) 불리므로 목록·버튼·외부 명령이 항상 같은 값을 보여준다.
 function renderMotionHighlight() {
-  [...motionList.children].forEach(row =>
-    row.classList.toggle("selected", row.dataset.name === current));
+  const curMode = modeOf(current);
+  const lectureOn = modeIsOn("lecture1");
+  lectureBtn.classList.toggle("on", lectureOn);
+  lectureBtn.title = `강의 모드 ${lectureOn ? "끄기" : "켜기"} (F4)`;
+  [...motionList.children].forEach(row => {
+    const on = row.dataset.mode ? row.dataset.mode === curMode
+                                : row.dataset.name === current;
+    row.classList.toggle("selected", on);
+    // 모드 행은 토글 스위치처럼 켜짐/꺼짐을 글자로도 보여준다
+    if (row.dataset.mode) {
+      row.textContent = row.dataset.label + (on ? " — 켜짐 (누르면 끄기)" : " — 꺼짐 (누르면 켜기)");
+    }
+  });
 }
 
 function pickMotion(name) {
+  if (modeOf(name)) {            // 모드는 토글 — 같은 행을 다시 누르면 꺼진다
+    if (modeIsOn(name)) exitMode();
+    else setState(name);         // setState가 무기한 pin을 건다
+    renderMotionHighlight();
+    return;
+  }
+  if (modeOf(current)) pinnedUntil = 0; // 모드에서 빠져나가면 무기한 pin을 푼다
   setState(name); // pin: HOLD_SEC 동안 보호 (setState 기본값)
   if (motionHold.checked) pinnedUntil = Infinity; // 유지 모드: 주사위 완전 정지
   renderMotionHighlight();
@@ -979,12 +1071,14 @@ function renderMotionList() {
     const cw = CATEGORY_WEIGHTS[cat] ?? 0;
     head.textContent = cat + (cw > 0 ? "" : " (주사위 제외)");
     motionList.appendChild(head);
-    for (const [name, a] of entries.filter(([, x]) => x.category === cat)) {
+    for (const [name, a] of entries.filter(([, x]) => x.category === cat && !x.hidden)) {
       const row = document.createElement("div");
       row.className = "mic-item";
       row.dataset.name = name;
       const inDice = (a.weight ?? 1) > 0 && cw > 0;
-      row.textContent = name + (inDice ? "" : " (주사위 제외)");
+      if (a.mode) row.dataset.mode = a.mode; // 토글 행
+      row.dataset.label = name + (a.mode || inDice ? "" : " (주사위 제외)");
+      row.textContent = row.dataset.label;
       row.addEventListener("click", () => pickMotion(name));
       motionList.appendChild(row);
     }
@@ -995,12 +1089,21 @@ renderMotionList();
 
 // "계속 유지" 토글을 나중에 바꿔도 현재 상태에 즉시 반영
 motionHold.addEventListener("change", () => {
+  if (modeOf(current)) return; // 모드는 자체 토글로만 켜고 끈다
   if (motionHold.checked) pinnedUntil = Infinity;
   else if (pinnedUntil === Infinity) pinnedUntil = Date.now() + HOLD_SEC * 1000;
 });
 
 function toggleMotionPanel() { motionPanel.classList.toggle("open"); }
 motionBtn.addEventListener("click", toggleMotionPanel);
+
+// 🎓 / F4 — 강의 모드 토글. 켤 때 칠판이 나오고, 끌 때 인사하며 정리한다.
+lectureBtn.addEventListener("click", () => togglePetMode("lecture1"));
+window.addEventListener("keydown", e => {
+  if (e.code !== "F4") return;
+  e.preventDefault();
+  togglePetMode("lecture1");
+});
 window.addEventListener("keydown", e => {
   if (e.code !== "F3") return;
   e.preventDefault();

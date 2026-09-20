@@ -1,0 +1,180 @@
+{
+  "name": "lecture1_end",
+  "ref": "refs/chibi_base.png",
+  "note": "Lecture mode EXIT, 8 frames @10FPS with holds (20 ticks = 2.0s). She lowers the pointer, tucks it away behind her back, bows politely and straightens back up while the blackboard floats up, shrinks, fades and sparkles away. She slides back to the centre so the last frame matches idle. Frames 2 and 6 are file copies of note1_loop_16 (hands behind back), frame 5 is a copy of frame 3, frame 7 is a copy of note1_loop_00 (the idle base). GENERATOR: flux2-klein-4b on the LAN imagegen server (not gen_frames.py) - see the 'klein' key and prompts/animation_prompts.md for the per-frame recipe. PROP: the blackboard is NOT generated per frame. It is one sprite (sprites/props/blackboard.png) composited behind the character by tools/compose_prop.py using the 'compose' key, because a detached prop is erased by the matte cleanup in slice_and_key.py and would wobble if it were regenerated every frame. The character's move to the right is done there too (compose.frames[].shift), so every generated frame is drawn centred as usual. Keyed with: slice_and_key.py --no-align --no-scale-norm --match sprites/idle1_loop/idle1_loop_00.png into sprites/<name>_char/, then compose_prop.py writes sprites/<name>/.",
+  "holds": {
+    "0": 2,
+    "1": 3,
+    "2": 2,
+    "3": 2,
+    "4": 5,
+    "5": 2,
+    "6": 2,
+    "7": 2
+  },
+  "klein": {
+    "pipeline": "flux2-klein-4b",
+    "modes": {
+      "pose": "references = [design ref, anchor frame with a DIFFERENT arm layout]. 'reuse its character, outfit and prop design, but her arms are in a completely NEW position'. The same anchor and seed keep the body, so changing a few words of the pose text gives a controlled variation.",
+      "face": "references = [design ref, frame N], same seed as N. 'keep the body EXACTLY the same, what CHANGES is her FACE'. The body is copied pixel-stable; only the face changes.",
+      "copy": "다른 프레임 파일을 그대로 복사 (생성하지 않음)."
+    },
+    "frames": [
+      {
+        "mode": "copy",
+        "from": "lecture1_loop_00"
+      },
+      {
+        "mode": "pose",
+        "anchor": "lecture1_loop_00",
+        "seed": 4002
+      },
+      {
+        "mode": "copy",
+        "from": "note1_loop_16"
+      },
+      {
+        "mode": "pose",
+        "anchor": "note1_loop_00",
+        "seed": 4002
+      },
+      {
+        "mode": "pose",
+        "anchor": "note1_loop_00",
+        "seed": 4002
+      },
+      {
+        "mode": "copy",
+        "from": 3
+      },
+      {
+        "mode": "copy",
+        "from": "note1_loop_16"
+      },
+      {
+        "mode": "copy",
+        "from": "note1_loop_00"
+      }
+    ]
+  },
+  "compose": {
+    "prop": "sprites/props/blackboard.png",
+    "floor": 501,
+    "frames": [
+      {
+        "shift": 85,
+        "prop": {
+          "h": 420,
+          "right": 228
+        }
+      },
+      {
+        "shift": 80,
+        "prop": {
+          "h": 420,
+          "right": 228
+        }
+      },
+      {
+        "shift": 60,
+        "prop": {
+          "h": 420,
+          "right": 228
+        }
+      },
+      {
+        "shift": 35,
+        "prop": {
+          "h": 404,
+          "right": 226,
+          "alpha": 0.88,
+          "dy": -10
+        },
+        "sparkle": {
+          "n": 4,
+          "seed": 5,
+          "box": [
+            30,
+            90,
+            240,
+            460
+          ],
+          "alpha": 0.8
+        }
+      },
+      {
+        "shift": 15,
+        "prop": {
+          "h": 330,
+          "right": 214,
+          "alpha": 0.62,
+          "dy": -46
+        },
+        "sparkle": {
+          "n": 6,
+          "seed": 6,
+          "box": [
+            30,
+            90,
+            240,
+            440
+          ],
+          "alpha": 0.9
+        }
+      },
+      {
+        "shift": 8,
+        "prop": {
+          "h": 235,
+          "right": 202,
+          "alpha": 0.38,
+          "dy": -104
+        },
+        "sparkle": {
+          "n": 6,
+          "seed": 7,
+          "box": [
+            30,
+            100,
+            230,
+            400
+          ],
+          "alpha": 0.75
+        }
+      },
+      {
+        "shift": 0,
+        "prop": {
+          "h": 140,
+          "right": 192,
+          "alpha": 0.16,
+          "dy": -166
+        },
+        "sparkle": {
+          "n": 5,
+          "seed": 8,
+          "box": [
+            40,
+            120,
+            220,
+            360
+          ],
+          "alpha": 0.5
+        }
+      },
+      {
+        "shift": 0
+      }
+    ]
+  },
+  "frames": [
+    "Pose: TEACHING key frame, same as lecture1_loop frame 0: pointer tip on the blackboard, eyes to the LEFT. The small lemon-slice hair clip stays on the same side of her bangs as in the reference image, do not mirror the character.",
+    "Pose: PUTTING THE POINTER AWAY: she has brought the pointer DOWN and holds a thin straight light-brown wooden pointer stick with a small dark rounded tip, as thin as a chopstick, perfectly straight, no decoration HORIZONTALLY with BOTH hands in front of her waist, one hand near each end, like someone tidying up after a talk. Both eyes look STRAIGHT AT THE VIEWER with a warm satisfied closed-mouth smile. Feet close together. The small lemon-slice hair clip stays on the same side of her bangs as in the reference image, do not mirror the character.",
+    "Pose: both hands hidden behind her back, the pointer no longer visible, eyes happily CLOSED into upward-curved arcs, a content satisfied closed-mouth smile, rosy cheeks. Feet close together. The small lemon-slice hair clip stays on the same side of her bangs as in the reference image, do not mirror the character.",
+    "Pose: BOW key frame A, the start of a polite bow: her head is bowed so her chin comes close to her chest and her shoulders drop, both arms hanging straight down in front of her thighs with the hands lightly together. Her eyes are closed in gentle curved arcs, a soft polite smile. Legs straight, feet close together. No props visible. The small lemon-slice hair clip stays on the same side of her bangs as in the reference image, do not mirror the character.",
+    "Pose: BOW key frame B, a DEEP polite bow: her upper body is folded FORWARD and DOWN from the waist so the viewer mostly sees the TOP OF HER HEAD and her upper back, her long blonde hair hanging forward toward the floor, both hands together in front of her knees. Eyes closed in gentle arcs, soft polite smile. Legs straight, feet close together. No props visible. The small lemon-slice hair clip stays on the same side of her bangs as in the reference image, do not mirror the character.",
+    "Pose: straightening back up - same as BOW key frame A (file copy). The small lemon-slice hair clip stays on the same side of her bangs as in the reference image, do not mirror the character.",
+    "Pose: back upright with both hands behind her back - same as frame 2 (file copy). The small lemon-slice hair clip stays on the same side of her bangs as in the reference image, do not mirror the character.",
+    "Pose: SEAMLESS RETURN TO IDLE - must match the idle base exactly: standing upright and relaxed, feet close together, both arms resting naturally at her sides with open hands, calm small smile, head level. No props visible. The small lemon-slice hair clip stays on the same side of her bangs as in the reference image, do not mirror the character."
+  ]
+}
