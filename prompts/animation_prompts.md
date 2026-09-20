@@ -448,8 +448,12 @@ idle → 등 뒤에서 클립보드 꺼내기 → 연필 꺼내기 → 끄적끄
 지시봉은 멈춘다(talk) → 지시봉을 집어넣고 허리 숙여 인사하면 칠판이 **샤랄라** 사라진다(end).
 - 정의: `anims/lecture1_start.json` / `_loop.json` / `_talk.json` / `_end.json`
 - 등록: `widget.html`의 `ANIMS.lecture1`(+ 숨김 상태 `lecture1Talk`). 분류 `lecture`는 `CATEGORY_WEIGHTS`에
-  없어서 **주사위에서 제외**된다 — 🎭 목록에서 고르거나 `window.setPetState("lecture1")`로만 들어간다.
-  계속 켜 두려면 🎭의 "계속 유지"를 켠다.
+  없어서 **주사위에서 제외**된다.
+- **토글이다.** 🎭 목록의 `lecture1` 행을 누르면 켜지고("— 켜짐 (누르면 끄기)"로 바뀐다) 다시 누르면
+  인사를 거쳐 꺼진다. `window.togglePetMode("lecture1")`, `postMessage({type:"pet-mode",state:"lecture1"})`,
+  BroadcastChannel `"toggle:lecture1"`도 같다. 켜 둔 동안 주사위는 멈춘다(무기한 pin).
+- **발언은 마이크 감지 이벤트가 그대로 끈다.** 강의 모드가 켜져 있으면 마이크가 열렸을 때 공용 `talk`가
+  아니라 `lecture1Talk`이 재생되고(칠판·지시봉은 그대로), 마이크가 닫히면 다시 `lecture1` 루프로 돌아온다.
 - 타이밍: start 13틱(1.3초) / loop 12틱(1.2초, 4번 탁탁) / talk 5틱(0.5초) / end 20틱(2.0초), 모두 10FPS.
 
 **칠판은 생성하지 않고 합성한다 (이 클립의 핵심).**

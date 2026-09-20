@@ -508,6 +508,17 @@ function talkStateOf(name) {
 }
 function isTalkState(name) { return name === "talk" || !!ANIMS[name]?.talkReturn; }
 function talkReturnOf(name) { return ANIMS[name]?.talkReturn ?? DEFAULT_STATE; }
+
+// ── 모드 토글 ────────────────────────────────────────────────
+// mode를 가진 상태(강의 모드 등)는 한 번 켜면 끌 때까지 유지된다.
+// 그래서 진입할 때 HOLD_SEC이 아니라 무기한 pin을 걸고, 끌 때 직접 푼다.
+function modeOf(name) { return ANIMS[name]?.mode; }
+function modeIsOn(name) { return !!modeOf(name) && modeOf(current) === modeOf(name); }
+// 모드를 끈다 — 현재 상태의 end(강의라면 인사 + 칠판 정리)를 거쳐 idle로 돌아간다
+function exitMode() {
+  pinnedUntil = 0;
+  setState(DEFAULT_STATE, { pin: false });
+}
 let isDragging = false;  // 데스크톱 창을 옮기는 동안 basic1 고정
 let idleStreak = 0;      // 마지막 감정 이후 완주한 idle 사이클 수
 let emotionCycles = 0;   // 현재 감정 상태에서 완주한 사이클 수
@@ -605,7 +616,8 @@ async function setState(name, { pin = true } = {}) {
   transitioning = true;
   transitionSince = Date.now();
   const gen = ++chainGen;
-  if (pin) pinNow();
+  // 모드는 토글이라 끌 때까지 유지된다 — HOLD_SEC이 아니라 무기한 pin
+  if (pin) { if (modeOf(name)) pinnedUntil = Infinity; else pinNow(); }
   if (name !== DEFAULT_STATE) { idleStreak = 0; emotionCycles = 0; } // 감정 진입
 
   // 클립 하나를 끝까지 재생한다. 그 사이 워치독이 이 체인을 버렸으면 false —
@@ -655,6 +667,7 @@ setInterval(() => {
       chainGen++; // 멈춘 체인 무효화 — 뒤늦게 풀려도 더 진행하지 못한다
       transitioning = false;
       queued = null;
+      if (modeOf(current)) pinnedUntil = 0; // 모드 토글 중이었다면 주사위를 다시 살린다
       current = null; // end/outro 재생 없이 곧바로 idle로
       setState(DEFAULT_STATE, { pin: false });
     }
@@ -687,16 +700,31 @@ setInterval(() => {
 // 1) 콘솔/OBS에서 직접: window.setPetState('happy1')
 window.setPetState = name => setState(name);
 
+// 1-b) 모드 토글: window.togglePetMode('lecture1') — 켜져 있으면 끄고, 아니면 켠다.
+//      OBS 핫키(커스텀 스크립트)에 걸어 두고 쓰기 좋다. 반환값은 바뀐 뒤의 on/off.
+window.togglePetMode = (name = "lecture1") => {
+  if (!modeOf(name)) { console.warn("mode 상태가 아님:", name); return false; }
+  const on = modeIsOn(name);
+  if (on) exitMode(); else setState(name);
+  renderMotionHighlight();
+  return !on;
+};
+
 // 2) postMessage: iframe이나 OBS custom code에서
 //    window.postMessage({ type: 'pet-state', state: 'happy1' }, '*')
 window.addEventListener("message", e => {
-  if (e.data && e.data.type === "pet-state") setState(e.data.state);
+  if (!e.data) return;
+  if (e.data.type === "pet-state") setState(e.data.state);
+  else if (e.data.type === "pet-mode") window.togglePetMode(e.data.state);
 });
 
 // 3) BroadcastChannel: 같은 서버의 컨트롤 페이지에서
 //    new BroadcastChannel('sheddy-pet').postMessage('happy1')
 try {
-  new BroadcastChannel("sheddy-pet").onmessage = e => setState(e.data);
+  new BroadcastChannel("sheddy-pet").onmessage = e =>
+    (typeof e.data === "string" && e.data.startsWith("toggle:"))
+      ? window.togglePetMode(e.data.slice(7))
+      : setState(e.data);
 } catch (_) { /* 미지원 브라우저 */ }
 
 // ── 데스크톱 펫: 드래그 및 독립 말풍선 ────────────────────────
@@ -980,11 +1008,26 @@ const motionList = document.getElementById("motionList");
 const motionHold = document.getElementById("motionHold");
 
 function renderMotionHighlight() {
-  [...motionList.children].forEach(row =>
-    row.classList.toggle("selected", row.dataset.name === current));
+  const curMode = modeOf(current);
+  [...motionList.children].forEach(row => {
+    const on = row.dataset.mode ? row.dataset.mode === curMode
+                                : row.dataset.name === current;
+    row.classList.toggle("selected", on);
+    // 모드 행은 토글 스위치처럼 켜짐/꺼짐을 글자로도 보여준다
+    if (row.dataset.mode) {
+      row.textContent = row.dataset.label + (on ? " — 켜짐 (누르면 끄기)" : " — 꺼짐 (누르면 켜기)");
+    }
+  });
 }
 
 function pickMotion(name) {
+  if (modeOf(name)) {            // 모드는 토글 — 같은 행을 다시 누르면 꺼진다
+    if (modeIsOn(name)) exitMode();
+    else setState(name);         // setState가 무기한 pin을 건다
+    renderMotionHighlight();
+    return;
+  }
+  if (modeOf(current)) pinnedUntil = 0; // 모드에서 빠져나가면 무기한 pin을 푼다
   setState(name); // pin: HOLD_SEC 동안 보호 (setState 기본값)
   if (motionHold.checked) pinnedUntil = Infinity; // 유지 모드: 주사위 완전 정지
   renderMotionHighlight();
@@ -1016,7 +1059,9 @@ function renderMotionList() {
       row.className = "mic-item";
       row.dataset.name = name;
       const inDice = (a.weight ?? 1) > 0 && cw > 0;
-      row.textContent = name + (inDice ? "" : " (주사위 제외)");
+      if (a.mode) row.dataset.mode = a.mode; // 토글 행
+      row.dataset.label = name + (a.mode || inDice ? "" : " (주사위 제외)");
+      row.textContent = row.dataset.label;
       row.addEventListener("click", () => pickMotion(name));
       motionList.appendChild(row);
     }
@@ -1027,6 +1072,7 @@ renderMotionList();
 
 // "계속 유지" 토글을 나중에 바꿔도 현재 상태에 즉시 반영
 motionHold.addEventListener("change", () => {
+  if (modeOf(current)) return; // 모드는 자체 토글로만 켜고 끈다
   if (motionHold.checked) pinnedUntil = Infinity;
   else if (pinnedUntil === Infinity) pinnedUntil = Date.now() + HOLD_SEC * 1000;
 });

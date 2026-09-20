@@ -121,15 +121,18 @@ const IN_PAGE = async () => {
   });
 
   await check("lectureMode", async () => {
-    // 강의 모드: 진입에 start(칠판 펑), 말할 때 모드 전용 talk, 나갈 때 end(인사).
+    // 강의 모드는 토글이다: 한 번 켜면 끌 때까지 유지되고(무기한 pin), 마이크가 열리면
+    // 공용 talk가 아니라 모드 전용 말하기 클립이 나온다.
     // 모드 안에서의 전환(lecture1 ↔ lecture1Talk)에는 start/end가 끼어들면 안 된다 —
     // 끼어들면 말할 때마다 칠판이 다시 튀어나오고 인사를 반복한다.
     const seq = [];
     const onPlaying = e => { const n = nameOf(e.target.src); if (seq[seq.length - 1] !== n) seq.push(n); };
     for (const v of vids) v.addEventListener("playing", onPlaying);
+    let pinWhileOn = null;
     try {
-      setPetState("lecture1");
+      expect(togglePetMode("lecture1") === true, "토글이 켜지지 않음");
       await waitFor(() => current === "lecture1" && !transitioning, 30000, "lecture1 loop");
+      pinWhileOn = pinnedUntil;
       await sleep(1300);
       talkActive = true;                       // 마이크 게이트가 열린 상황
       await waitFor(() => current === "lecture1Talk", 30000, "lecture1Talk 진입");
@@ -137,17 +140,19 @@ const IN_PAGE = async () => {
       talkActive = false;
       await waitFor(() => current === "lecture1" && !transitioning, 30000, "lecture1 복귀");
       await sleep(300);
-      setPetState("idle1");
+      expect(togglePetMode("lecture1") === false, "토글이 꺼지지 않음");
       await waitFor(idle, 30000, "lecture1 → idle");
       await sleep(200);
     } finally {
       for (const v of vids) v.removeEventListener("playing", onPlaying);
       talkActive = false;
     }
+    expect(pinWhileOn === Infinity, `모드를 켰는데 무기한 pin이 아님: ${pinWhileOn}`);
+    expect(pinnedUntil !== Infinity, "모드를 껐는데 무기한 pin이 남아 있음");
     const got = seq.join(" → ");
     expect(/^lecture1_start → lecture1_loop → lecture1_talk → lecture1_loop → lecture1_end → idle1_loop$/.test(got),
            `강의 모드 순서 이상: ${got}`);
-    return got;
+    return `${got} · 토글 pin=∞`;
   });
 
   await check("queuedTalk", async () => {

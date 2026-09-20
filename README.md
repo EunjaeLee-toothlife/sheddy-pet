@@ -12,6 +12,8 @@ OBS 브라우저 소스나 웹페이지에 그대로 올려 쓴다.
 2. 설정을 바꾸려면 소스 우클릭 → **상호작용**. 마우스를 움직이면 버튼 두 개가 나타난다.
    - ⚙️ (F2) 마이크 설정 — 입력 장치와 감도 임계값. 임계값을 넘는 동안 `talk` 모션이 재생된다.
    - 🎭 (F3) 모션 선택 — 원하는 모션을 바로 재생. "계속 유지"를 켜면 주사위를 멈추고 그 모션만 반복.
+     강의 모드처럼 `mode`가 붙은 항목은 **토글**이다. 한 번 누르면 끌 때까지 유지되고, 다시 누르면
+     마무리 동작(강의 모드는 인사)을 거쳐 꺼진다. "계속 유지"와는 무관하게 동작한다.
 
 ### URL 옵션
 
@@ -30,11 +32,22 @@ window.postMessage({ type: "pet-state", state: "happy1" }, "*");     // iframe �
 new BroadcastChannel("sheddy-pet").postMessage("happy1");            // 같은 출처의 컨트롤 페이지
 ```
 
+모드(강의 모드 등)는 켜고 끄는 토글이라 명령이 따로 있다. OBS 핫키에 걸어 두고 쓰기 좋다.
+
+```js
+window.togglePetMode("lecture1");                                    // 켜져 있으면 끄고, 아니면 켠다
+window.postMessage({ type: "pet-mode", state: "lecture1" }, "*");
+new BroadcastChannel("sheddy-pet").postMessage("toggle:lecture1");
+```
+
 ## 동작 방식
 
 - **상태 머신 + 2중 가중치 주사위.** loop 한 사이클이 끝날 때마다 주사위를 굴린다. 먼저 분류(`CATEGORY_WEIGHTS`:
   idle / basic / happy / excited / special / sad)를 뽑고, 그 안에서 `weight`로 모션을 뽑는다. 감정 → 감정 직행은 없고
   항상 idle을 거친다.
+- **모드.** `mode`가 붙은 상태(강의 모드)는 **토글**이다. 켜면 주사위를 멈추고 끌 때까지 유지되며,
+  같은 모드 안에서의 전환에는 `end`/`start`를 건너뛴다. 마이크가 열리면 공용 `talk` 대신 그 모드의
+  `talkState` 클립이 재생된다 — 강의 모드에서는 칠판을 그대로 둔 채 입만 움직인다.
 - **전환 순서.** 현재 상태의 `end`(→ `outro`) → 다음 상태의 `start` → `loop`. `end`가 배열이면 그중 하나를 랜덤 재생(멀티 엔딩).
 - **렌더링.** `<video>` 두 개를 더블 버퍼로 쓰고, 화면에는 캔버스 하나만 보인다. 전환은 70ms 크로스 디졸브라 깜박임이 없다.
 - **견고성.** 시작 직후 전 클립(약 6MB)을 받아 blob URL로 보관하고, 로드 실패·타임아웃은 건너뛰며, 1초 주기 워치독이
