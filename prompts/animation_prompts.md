@@ -449,7 +449,8 @@ idle → 등 뒤에서 클립보드 꺼내기 → 연필 꺼내기 → 끄적끄
 - 정의: `anims/lecture1_start.json` / `_loop.json` / `_talk.json` / `_end.json`
 - 등록: `widget.html`의 `ANIMS.lecture1`(+ 숨김 상태 `lecture1Talk`). 분류 `lecture`는 `CATEGORY_WEIGHTS`에
   없어서 **주사위에서 제외**된다.
-- **토글이다.** 🎭 목록의 `lecture1` 행을 누르면 켜지고("— 켜짐 (누르면 끄기)"로 바뀐다) 다시 누르면
+- **토글이다.** 전용 버튼 **🎓 (F4)** 를 누르면 켜지고(버튼이 노랗게 바뀐다) 다시 누르면 꺼진다.
+  🎭 목록의 `lecture1` 행을 눌러도 같다("— 켜짐 (누르면 끄기)"로 바뀐다). 다시 누르면
   인사를 거쳐 꺼진다. `window.togglePetMode("lecture1")`, `postMessage({type:"pet-mode",state:"lecture1"})`,
   BroadcastChannel `"toggle:lecture1"`도 같다. 켜 둔 동안 주사위는 멈춘다(무기한 pin).
 - **발언은 마이크 감지 이벤트가 그대로 끈다.** 강의 모드가 켜져 있으면 마이크가 열렸을 때 공용 `talk`가

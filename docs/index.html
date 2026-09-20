@@ -62,7 +62,7 @@
   }
 
   /* 마우스 오버 시 나타나는 버튼들 (⚙️ 설정 / 🎭 모션 선택) */
-  #gearBtn, #motionBtn {
+  #gearBtn, #motionBtn, #lectureBtn {
     position: fixed; top: 10px; left: 10px; z-index: 11;
     width: 36px; height: 36px; border-radius: 50%;
     background: rgba(30, 30, 34, .75); color: #fff;
@@ -71,9 +71,12 @@
     opacity: 0; pointer-events: none; transition: opacity .25s;
     -webkit-app-region: no-drag;
   }
-  #gearBtn.show, #motionBtn.show { opacity: 1; pointer-events: auto; }
+  #gearBtn.show, #motionBtn.show, #lectureBtn.show { opacity: 1; pointer-events: auto; }
   #motionBtn { top: auto; bottom: 10px; }
-  body.desktop #gearBtn, body.desktop #motionBtn {
+  /* 🎓 강의 모드 토글 — 🎭 옆. 켜져 있으면 노랗게 눌린 상태로 보인다 */
+  #lectureBtn { top: auto; bottom: 10px; left: 56px; }
+  #lectureBtn.on { background: #f5c518; color: #222; }
+  body.desktop #gearBtn, body.desktop #motionBtn, body.desktop #lectureBtn {
     top: auto;
     left: calc(10px * var(--pet-scale));
     width: calc(36px * var(--pet-scale));
@@ -83,6 +86,10 @@
   body.desktop #gearBtn { bottom: calc(434px * var(--pet-scale)); }
   body.desktop #motionBtn {
     top: auto; bottom: calc(10px * var(--pet-scale));
+  }
+  body.desktop #lectureBtn {
+    top: auto; bottom: calc(10px * var(--pet-scale));
+    left: calc(56px * var(--pet-scale));
   }
 
   /* F2 또는 설정 버튼으로 여닫는 마이크 설정창 */
@@ -186,6 +193,8 @@
 
 <!-- 좌측 하단: 모션 선택 버튼 + 패널 (OBS: 소스 우클릭 → 상호작용) -->
 <button id="motionBtn" type="button" title="모션 선택">🎭</button>
+<!-- 강의 모드 토글: 누를 때마다 켜짐/꺼짐 (F4) -->
+<button id="lectureBtn" type="button" title="강의 모드 켜기 (F4)">🎓</button>
 
 <div id="motionPanel">
   <h3>🎭 모션 선택 <span style="font-weight:400;color:#888">(🎭/F3로 닫기)</span></h3>
@@ -990,10 +999,12 @@ let gearTimer = null;
 window.addEventListener("mousemove", () => {
   gearBtn.classList.add("show");
   motionBtn.classList.add("show");
+  lectureBtn.classList.add("show");
   clearTimeout(gearTimer);
   gearTimer = setTimeout(() => {
     gearBtn.classList.remove("show");
     motionBtn.classList.remove("show");
+    lectureBtn.classList.remove("show");
   }, 2500);
 });
 gearBtn.addEventListener("click", toggleSettings);
@@ -1003,12 +1014,18 @@ gearBtn.addEventListener("click", toggleSettings);
 // 기본은 HOLD_SEC 동안만 주사위로부터 보호. "계속 유지"를 켜면 다시 풀 때까지
 // 주사위를 완전히 정지하고 그 모션만 반복한다. (maxCycles도 pin 중에는 무시됨)
 const motionBtn = document.getElementById("motionBtn");
+const lectureBtn = document.getElementById("lectureBtn");
 const motionPanel = document.getElementById("motionPanel");
 const motionList = document.getElementById("motionList");
 const motionHold = document.getElementById("motionHold");
 
+// 모션 목록의 선택 표시와 🎓 버튼의 켜짐 표시를 현재 상태에 맞춘다.
+// 상태가 바뀔 때마다(setState) 불리므로 목록·버튼·외부 명령이 항상 같은 값을 보여준다.
 function renderMotionHighlight() {
   const curMode = modeOf(current);
+  const lectureOn = modeIsOn("lecture1");
+  lectureBtn.classList.toggle("on", lectureOn);
+  lectureBtn.title = `강의 모드 ${lectureOn ? "끄기" : "켜기"} (F4)`;
   [...motionList.children].forEach(row => {
     const on = row.dataset.mode ? row.dataset.mode === curMode
                                 : row.dataset.name === current;
@@ -1079,6 +1096,14 @@ motionHold.addEventListener("change", () => {
 
 function toggleMotionPanel() { motionPanel.classList.toggle("open"); }
 motionBtn.addEventListener("click", toggleMotionPanel);
+
+// 🎓 / F4 — 강의 모드 토글. 켤 때 칠판이 나오고, 끌 때 인사하며 정리한다.
+lectureBtn.addEventListener("click", () => togglePetMode("lecture1"));
+window.addEventListener("keydown", e => {
+  if (e.code !== "F4") return;
+  e.preventDefault();
+  togglePetMode("lecture1");
+});
 window.addEventListener("keydown", e => {
   if (e.code !== "F3") return;
   e.preventDefault();
