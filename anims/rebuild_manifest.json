@@ -14551,5 +14551,13 @@
       }
     }
   ],
-  "canonicalReference": "sprites/rebuilt/poses/idle_open_00.png"
+  "canonicalReference": "sprites/rebuilt/poses/idle_open_00.png",
+  "preservedOriginalClips": [
+    {
+      "file": "anim_note1_loop.webm",
+      "state": "note1",
+      "sha256": "4baad8d9c8e567f4a0cc364475e32119e86cf858c2f53482af67c8fc613749d4",
+      "reason": "Added upstream after the39-clip reconstruction; preserve original artwork and timing."
+    }
+  ]
 }

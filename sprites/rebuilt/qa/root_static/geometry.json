@@ -1,0 +1,2401 @@
+{
+  "idle1_loop": {
+    "count": 18,
+    "frames": [
+      {
+        "index": 0,
+        "bbox": [
+          134,
+          47,
+          374,
+          499
+        ],
+        "source": "sprites/idle1_loop/idle1_loop_00.png",
+        "candidate": "sprites/rebuilt/frames/idle1_loop/idle1_loop_00.png"
+      },
+      {
+        "index": 1,
+        "bbox": [
+          134,
+          46,
+          374,
+          499
+        ],
+        "source": "sprites/idle1_loop/idle1_loop_01.png",
+        "candidate": "sprites/rebuilt/frames/idle1_loop/idle1_loop_01.png"
+      },
+      {
+        "index": 2,
+        "bbox": [
+          134,
+          46,
+          374,
+          499
+        ],
+        "source": "sprites/idle1_loop/idle1_loop_02.png",
+        "candidate": "sprites/rebuilt/frames/idle1_loop/idle1_loop_02.png"
+      },
+      {
+        "index": 3,
+        "bbox": [
+          134,
+          45,
+          374,
+          498
+        ],
+        "source": "sprites/idle1_loop/idle1_loop_03.png",
+        "candidate": "sprites/rebuilt/frames/idle1_loop/idle1_loop_03.png"
+      },
+      {
+        "index": 4,
+        "bbox": [
+          134,
+          45,
+          374,
+          498
+        ],
+        "source": "sprites/idle1_loop/idle1_loop_04.png",
+        "candidate": "sprites/rebuilt/frames/idle1_loop/idle1_loop_04.png"
+      },
+      {
+        "index": 5,
+        "bbox": [
+          134,
+          45,
+          374,
+          498
+        ],
+        "source": "sprites/idle1_loop/idle1_loop_05.png",
+        "candidate": "sprites/rebuilt/frames/idle1_loop/idle1_loop_05.png"
+      },
+      {
+        "index": 6,
+        "bbox": [
+          134,
+          45,
+          374,
+          498
+        ],
+        "source": "sprites/idle1_loop/idle1_loop_06.png",
+        "candidate": "sprites/rebuilt/frames/idle1_loop/idle1_loop_06.png"
+      },
+      {
+        "index": 7,
+        "bbox": [
+          134,
+          45,
+          374,
+          498
+        ],
+        "source": "sprites/idle1_loop/idle1_loop_07.png",
+        "candidate": "sprites/rebuilt/frames/idle1_loop/idle1_loop_07.png"
+      },
+      {
+        "index": 8,
+        "bbox": [
+          134,
+          45,
+          374,
+          498
+        ],
+        "source": "sprites/idle1_loop/idle1_loop_08.png",
+        "candidate": "sprites/rebuilt/frames/idle1_loop/idle1_loop_08.png"
+      },
+      {
+        "index": 9,
+        "bbox": [
+          134,
+          45,
+          374,
+          498
+        ],
+        "source": "sprites/idle1_loop/idle1_loop_09.png",
+        "candidate": "sprites/rebuilt/frames/idle1_loop/idle1_loop_09.png"
+      },
+      {
+        "index": 10,
+        "bbox": [
+          134,
+          46,
+          374,
+          499
+        ],
+        "source": "sprites/idle1_loop/idle1_loop_10.png",
+        "candidate": "sprites/rebuilt/frames/idle1_loop/idle1_loop_10.png"
+      },
+      {
+        "index": 11,
+        "bbox": [
+          134,
+          46,
+          374,
+          499
+        ],
+        "source": "sprites/idle1_loop/idle1_loop_11.png",
+        "candidate": "sprites/rebuilt/frames/idle1_loop/idle1_loop_11.png"
+      },
+      {
+        "index": 12,
+        "bbox": [
+          134,
+          46,
+          374,
+          499
+        ],
+        "source": "sprites/idle1_loop/idle1_loop_12.png",
+        "candidate": "sprites/rebuilt/frames/idle1_loop/idle1_loop_12.png"
+      },
+      {
+        "index": 13,
+        "bbox": [
+          134,
+          47,
+          374,
+          499
+        ],
+        "source": "sprites/idle1_loop/idle1_loop_13.png",
+        "candidate": "sprites/rebuilt/frames/idle1_loop/idle1_loop_13.png"
+      },
+      {
+        "index": 14,
+        "bbox": [
+          134,
+          47,
+          374,
+          500
+        ],
+        "source": "sprites/idle1_loop/idle1_loop_14.png",
+        "candidate": "sprites/rebuilt/frames/idle1_loop/idle1_loop_14.png"
+      },
+      {
+        "index": 15,
+        "bbox": [
+          134,
+          47,
+          374,
+          500
+        ],
+        "source": "sprites/idle1_loop/idle1_loop_15.png",
+        "candidate": "sprites/rebuilt/frames/idle1_loop/idle1_loop_15.png"
+      },
+      {
+        "index": 16,
+        "bbox": [
+          134,
+          47,
+          374,
+          500
+        ],
+        "source": "sprites/idle1_loop/idle1_loop_16.png",
+        "candidate": "sprites/rebuilt/frames/idle1_loop/idle1_loop_16.png"
+      },
+      {
+        "index": 17,
+        "bbox": [
+          134,
+          47,
+          374,
+          500
+        ],
+        "source": "sprites/idle1_loop/idle1_loop_17.png",
+        "candidate": "sprites/rebuilt/frames/idle1_loop/idle1_loop_17.png"
+      }
+    ],
+    "holds": {},
+    "rate": 1,
+    "method": "ImageGen single high-resolution open/closed donors; original compose_idle breathing and blink plan",
+    "donors": {
+      "open": "sprites/rebuilt/poses/idle_open_00.png",
+      "closed": "sprites/rebuilt/poses/idle_closed_00.png"
+    }
+  },
+  "basic1_loop": {
+    "count": 18,
+    "frames": [
+      {
+        "index": 0,
+        "bbox": [
+          134,
+          47,
+          374,
+          499
+        ],
+        "source": "sprites/basic1/basic1_loop_00.png",
+        "candidate": "sprites/rebuilt/frames/basic1_loop/basic1_loop_00.png"
+      },
+      {
+        "index": 1,
+        "bbox": [
+          134,
+          47,
+          374,
+          499
+        ],
+        "source": "sprites/basic1/basic1_loop_01.png",
+        "candidate": "sprites/rebuilt/frames/basic1_loop/basic1_loop_01.png"
+      },
+      {
+        "index": 2,
+        "bbox": [
+          129,
+          45,
+          376,
+          500
+        ],
+        "source": "sprites/basic1/basic1_loop_02.png",
+        "candidate": "sprites/rebuilt/frames/basic1_loop/basic1_loop_02.png"
+      },
+      {
+        "index": 3,
+        "bbox": [
+          128,
+          45,
+          375,
+          500
+        ],
+        "source": "sprites/basic1/basic1_loop_03.png",
+        "candidate": "sprites/rebuilt/frames/basic1_loop/basic1_loop_03.png"
+      },
+      {
+        "index": 4,
+        "bbox": [
+          127,
+          44,
+          374,
+          500
+        ],
+        "source": "sprites/basic1/basic1_loop_04.png",
+        "candidate": "sprites/rebuilt/frames/basic1_loop/basic1_loop_04.png"
+      },
+      {
+        "index": 5,
+        "bbox": [
+          127,
+          44,
+          374,
+          500
+        ],
+        "source": "sprites/basic1/basic1_loop_05.png",
+        "candidate": "sprites/rebuilt/frames/basic1_loop/basic1_loop_05.png"
+      },
+      {
+        "index": 6,
+        "bbox": [
+          128,
+          45,
+          375,
+          500
+        ],
+        "source": "sprites/basic1/basic1_loop_06.png",
+        "candidate": "sprites/rebuilt/frames/basic1_loop/basic1_loop_06.png"
+      },
+      {
+        "index": 7,
+        "bbox": [
+          129,
+          45,
+          376,
+          500
+        ],
+        "source": "sprites/basic1/basic1_loop_07.png",
+        "candidate": "sprites/rebuilt/frames/basic1_loop/basic1_loop_07.png"
+      },
+      {
+        "index": 8,
+        "bbox": [
+          134,
+          47,
+          374,
+          499
+        ],
+        "source": "sprites/basic1/basic1_loop_08.png",
+        "candidate": "sprites/rebuilt/frames/basic1_loop/basic1_loop_08.png"
+      },
+      {
+        "index": 9,
+        "bbox": [
+          134,
+          47,
+          374,
+          499
+        ],
+        "source": "sprites/basic1/basic1_loop_09.png",
+        "candidate": "sprites/rebuilt/frames/basic1_loop/basic1_loop_09.png"
+      },
+      {
+        "index": 10,
+        "bbox": [
+          134,
+          46,
+          377,
+          500
+        ],
+        "source": "sprites/basic1/basic1_loop_10.png",
+        "candidate": "sprites/rebuilt/frames/basic1_loop/basic1_loop_10.png"
+      },
+      {
+        "index": 11,
+        "bbox": [
+          135,
+          45,
+          378,
+          500
+        ],
+        "source": "sprites/basic1/basic1_loop_11.png",
+        "candidate": "sprites/rebuilt/frames/basic1_loop/basic1_loop_11.png"
+      },
+      {
+        "index": 12,
+        "bbox": [
+          136,
+          45,
+          379,
+          500
+        ],
+        "source": "sprites/basic1/basic1_loop_12.png",
+        "candidate": "sprites/rebuilt/frames/basic1_loop/basic1_loop_12.png"
+      },
+      {
+        "index": 13,
+        "bbox": [
+          136,
+          45,
+          379,
+          500
+        ],
+        "source": "sprites/basic1/basic1_loop_13.png",
+        "candidate": "sprites/rebuilt/frames/basic1_loop/basic1_loop_13.png"
+      },
+      {
+        "index": 14,
+        "bbox": [
+          135,
+          45,
+          378,
+          500
+        ],
+        "source": "sprites/basic1/basic1_loop_14.png",
+        "candidate": "sprites/rebuilt/frames/basic1_loop/basic1_loop_14.png"
+      },
+      {
+        "index": 15,
+        "bbox": [
+          134,
+          46,
+          377,
+          500
+        ],
+        "source": "sprites/basic1/basic1_loop_15.png",
+        "candidate": "sprites/rebuilt/frames/basic1_loop/basic1_loop_15.png"
+      },
+      {
+        "index": 16,
+        "bbox": [
+          134,
+          47,
+          374,
+          499
+        ],
+        "source": "sprites/basic1/basic1_loop_16.png",
+        "candidate": "sprites/rebuilt/frames/basic1_loop/basic1_loop_16.png"
+      },
+      {
+        "index": 17,
+        "bbox": [
+          134,
+          47,
+          374,
+          499
+        ],
+        "source": "sprites/basic1/basic1_loop_17.png",
+        "candidate": "sprites/rebuilt/frames/basic1_loop/basic1_loop_17.png"
+      }
+    ],
+    "holds": {},
+    "rate": 1.1,
+    "method": "Original18-frame basic1 motion plan with sharp ImageGen neutral/left/right key-pose donors",
+    "donors": {
+      "base": "sprites/rebuilt/poses/idle_open_00.png",
+      "L": "sprites/rebuilt/poses/basic1_left_00.png",
+      "R": "sprites/rebuilt/poses/basic1_right_00.png"
+    }
+  },
+  "basic2_loop": {
+    "count": 18,
+    "frames": [
+      {
+        "index": 0,
+        "bbox": [
+          134,
+          47,
+          374,
+          499
+        ],
+        "source": "sprites/basic2/basic2_loop_00.png",
+        "candidate": "sprites/rebuilt/frames/basic2_loop/basic2_loop_00.png"
+      },
+      {
+        "index": 1,
+        "bbox": [
+          134,
+          47,
+          374,
+          499
+        ],
+        "source": "sprites/basic2/basic2_loop_01.png",
+        "candidate": "sprites/rebuilt/frames/basic2_loop/basic2_loop_01.png"
+      },
+      {
+        "index": 2,
+        "bbox": [
+          94,
+          44,
+          414,
+          501
+        ],
+        "source": "sprites/basic2/basic2_loop_02.png",
+        "candidate": "sprites/rebuilt/frames/basic2_loop/basic2_loop_02.png"
+      },
+      {
+        "index": 3,
+        "bbox": [
+          94,
+          44,
+          414,
+          501
+        ],
+        "source": "sprites/basic2/basic2_loop_03.png",
+        "candidate": "sprites/rebuilt/frames/basic2_loop/basic2_loop_03.png"
+      },
+      {
+        "index": 4,
+        "bbox": [
+          108,
+          45,
+          400,
+          501
+        ],
+        "source": "sprites/basic2/basic2_loop_04.png",
+        "candidate": "sprites/rebuilt/frames/basic2_loop/basic2_loop_04.png"
+      },
+      {
+        "index": 5,
+        "bbox": [
+          106,
+          43,
+          393,
+          499
+        ],
+        "source": "sprites/basic2/basic2_loop_05.png",
+        "candidate": "sprites/rebuilt/frames/basic2_loop/basic2_loop_05.png"
+      },
+      {
+        "index": 6,
+        "bbox": [
+          102,
+          43,
+          389,
+          499
+        ],
+        "source": "sprites/basic2/basic2_loop_06.png",
+        "candidate": "sprites/rebuilt/frames/basic2_loop/basic2_loop_06.png"
+      },
+      {
+        "index": 7,
+        "bbox": [
+          104,
+          42,
+          391,
+          498
+        ],
+        "source": "sprites/basic2/basic2_loop_07.png",
+        "candidate": "sprites/rebuilt/frames/basic2_loop/basic2_loop_07.png"
+      },
+      {
+        "index": 8,
+        "bbox": [
+          108,
+          42,
+          396,
+          498
+        ],
+        "source": "sprites/basic2/basic2_loop_08.png",
+        "candidate": "sprites/rebuilt/frames/basic2_loop/basic2_loop_08.png"
+      },
+      {
+        "index": 9,
+        "bbox": [
+          112,
+          42,
+          400,
+          498
+        ],
+        "source": "sprites/basic2/basic2_loop_09.png",
+        "candidate": "sprites/rebuilt/frames/basic2_loop/basic2_loop_09.png"
+      },
+      {
+        "index": 10,
+        "bbox": [
+          117,
+          42,
+          404,
+          498
+        ],
+        "source": "sprites/basic2/basic2_loop_10.png",
+        "candidate": "sprites/rebuilt/frames/basic2_loop/basic2_loop_10.png"
+      },
+      {
+        "index": 11,
+        "bbox": [
+          119,
+          43,
+          406,
+          498
+        ],
+        "source": "sprites/basic2/basic2_loop_11.png",
+        "candidate": "sprites/rebuilt/frames/basic2_loop/basic2_loop_11.png"
+      },
+      {
+        "index": 12,
+        "bbox": [
+          115,
+          43,
+          402,
+          499
+        ],
+        "source": "sprites/basic2/basic2_loop_12.png",
+        "candidate": "sprites/rebuilt/frames/basic2_loop/basic2_loop_12.png"
+      },
+      {
+        "index": 13,
+        "bbox": [
+          108,
+          45,
+          400,
+          500
+        ],
+        "source": "sprites/basic2/basic2_loop_13.png",
+        "candidate": "sprites/rebuilt/frames/basic2_loop/basic2_loop_13.png"
+      },
+      {
+        "index": 14,
+        "bbox": [
+          108,
+          45,
+          400,
+          501
+        ],
+        "source": "sprites/basic2/basic2_loop_14.png",
+        "candidate": "sprites/rebuilt/frames/basic2_loop/basic2_loop_14.png"
+      },
+      {
+        "index": 15,
+        "bbox": [
+          94,
+          44,
+          414,
+          501
+        ],
+        "source": "sprites/basic2/basic2_loop_15.png",
+        "candidate": "sprites/rebuilt/frames/basic2_loop/basic2_loop_15.png"
+      },
+      {
+        "index": 16,
+        "bbox": [
+          94,
+          44,
+          414,
+          501
+        ],
+        "source": "sprites/basic2/basic2_loop_16.png",
+        "candidate": "sprites/rebuilt/frames/basic2_loop/basic2_loop_16.png"
+      },
+      {
+        "index": 17,
+        "bbox": [
+          134,
+          47,
+          374,
+          499
+        ],
+        "source": "sprites/basic2/basic2_loop_17.png",
+        "candidate": "sprites/rebuilt/frames/basic2_loop/basic2_loop_17.png"
+      }
+    ],
+    "holds": {},
+    "rate": 1,
+    "method": "Original 18-frame stretch plan with sharp ImageGen neutral, mid and full donors; normalize generated pose height before original transforms.",
+    "donors": {
+      "base": "sprites/rebuilt/poses/idle_open_00.png",
+      "mid": "sprites/rebuilt/poses/basic2_mid_00.png",
+      "full": "sprites/rebuilt/poses/basic2_full_00.png"
+    }
+  },
+  "basic3_loop": {
+    "count": 18,
+    "frames": [
+      {
+        "index": 0,
+        "bbox": [
+          134,
+          47,
+          374,
+          499
+        ],
+        "source": "sprites/basic3/basic3_loop_00.png",
+        "candidate": "sprites/rebuilt/frames/basic3_loop/basic3_loop_00.png"
+      },
+      {
+        "index": 1,
+        "bbox": [
+          131,
+          45,
+          372,
+          500
+        ],
+        "source": "sprites/basic3/basic3_loop_01.png",
+        "candidate": "sprites/rebuilt/frames/basic3_loop/basic3_loop_01.png"
+      },
+      {
+        "index": 2,
+        "bbox": [
+          130,
+          45,
+          371,
+          500
+        ],
+        "source": "sprites/basic3/basic3_loop_02.png",
+        "candidate": "sprites/rebuilt/frames/basic3_loop/basic3_loop_02.png"
+      },
+      {
+        "index": 3,
+        "bbox": [
+          128,
+          45,
+          369,
+          501
+        ],
+        "source": "sprites/basic3/basic3_loop_03.png",
+        "candidate": "sprites/rebuilt/frames/basic3_loop/basic3_loop_03.png"
+      },
+      {
+        "index": 4,
+        "bbox": [
+          127,
+          45,
+          368,
+          501
+        ],
+        "source": "sprites/basic3/basic3_loop_04.png",
+        "candidate": "sprites/rebuilt/frames/basic3_loop/basic3_loop_04.png"
+      },
+      {
+        "index": 5,
+        "bbox": [
+          127,
+          45,
+          368,
+          501
+        ],
+        "source": "sprites/basic3/basic3_loop_05.png",
+        "candidate": "sprites/rebuilt/frames/basic3_loop/basic3_loop_05.png"
+      },
+      {
+        "index": 6,
+        "bbox": [
+          128,
+          45,
+          369,
+          501
+        ],
+        "source": "sprites/basic3/basic3_loop_06.png",
+        "candidate": "sprites/rebuilt/frames/basic3_loop/basic3_loop_06.png"
+      },
+      {
+        "index": 7,
+        "bbox": [
+          130,
+          45,
+          371,
+          500
+        ],
+        "source": "sprites/basic3/basic3_loop_07.png",
+        "candidate": "sprites/rebuilt/frames/basic3_loop/basic3_loop_07.png"
+      },
+      {
+        "index": 8,
+        "bbox": [
+          131,
+          45,
+          372,
+          500
+        ],
+        "source": "sprites/basic3/basic3_loop_08.png",
+        "candidate": "sprites/rebuilt/frames/basic3_loop/basic3_loop_08.png"
+      },
+      {
+        "index": 9,
+        "bbox": [
+          134,
+          47,
+          374,
+          499
+        ],
+        "source": "sprites/basic3/basic3_loop_09.png",
+        "candidate": "sprites/rebuilt/frames/basic3_loop/basic3_loop_09.png"
+      },
+      {
+        "index": 10,
+        "bbox": [
+          136,
+          45,
+          377,
+          500
+        ],
+        "source": "sprites/basic3/basic3_loop_10.png",
+        "candidate": "sprites/rebuilt/frames/basic3_loop/basic3_loop_10.png"
+      },
+      {
+        "index": 11,
+        "bbox": [
+          137,
+          45,
+          378,
+          500
+        ],
+        "source": "sprites/basic3/basic3_loop_11.png",
+        "candidate": "sprites/rebuilt/frames/basic3_loop/basic3_loop_11.png"
+      },
+      {
+        "index": 12,
+        "bbox": [
+          139,
+          45,
+          380,
+          501
+        ],
+        "source": "sprites/basic3/basic3_loop_12.png",
+        "candidate": "sprites/rebuilt/frames/basic3_loop/basic3_loop_12.png"
+      },
+      {
+        "index": 13,
+        "bbox": [
+          140,
+          45,
+          381,
+          501
+        ],
+        "source": "sprites/basic3/basic3_loop_13.png",
+        "candidate": "sprites/rebuilt/frames/basic3_loop/basic3_loop_13.png"
+      },
+      {
+        "index": 14,
+        "bbox": [
+          140,
+          45,
+          381,
+          501
+        ],
+        "source": "sprites/basic3/basic3_loop_14.png",
+        "candidate": "sprites/rebuilt/frames/basic3_loop/basic3_loop_14.png"
+      },
+      {
+        "index": 15,
+        "bbox": [
+          139,
+          45,
+          380,
+          501
+        ],
+        "source": "sprites/basic3/basic3_loop_15.png",
+        "candidate": "sprites/rebuilt/frames/basic3_loop/basic3_loop_15.png"
+      },
+      {
+        "index": 16,
+        "bbox": [
+          137,
+          45,
+          378,
+          500
+        ],
+        "source": "sprites/basic3/basic3_loop_16.png",
+        "candidate": "sprites/rebuilt/frames/basic3_loop/basic3_loop_16.png"
+      },
+      {
+        "index": 17,
+        "bbox": [
+          136,
+          45,
+          377,
+          500
+        ],
+        "source": "sprites/basic3/basic3_loop_17.png",
+        "candidate": "sprites/rebuilt/frames/basic3_loop/basic3_loop_17.png"
+      }
+    ],
+    "holds": {},
+    "rate": 1,
+    "method": "Original18-frame basic3 rotation/translation plan applied to the clean ImageGen canonical donor",
+    "donors": null
+  },
+  "happy1_start": {
+    "count": 6,
+    "frames": [
+      {
+        "index": 0,
+        "bbox": [
+          134,
+          47,
+          374,
+          499
+        ],
+        "source": "sprites/happy1/happy1_start_00.png",
+        "candidate": "sprites/rebuilt/frames/happy1_start/happy1_start_00.png"
+      },
+      {
+        "index": 1,
+        "bbox": [
+          134,
+          47,
+          374,
+          499
+        ],
+        "source": "sprites/happy1/happy1_start_01.png",
+        "candidate": "sprites/rebuilt/frames/happy1_start/happy1_start_01.png"
+      },
+      {
+        "index": 2,
+        "bbox": [
+          154,
+          47,
+          355,
+          499
+        ],
+        "source": "sprites/happy1/happy1_start_02.png",
+        "candidate": "sprites/rebuilt/frames/happy1_start/happy1_start_02.png"
+      },
+      {
+        "index": 3,
+        "bbox": [
+          154,
+          47,
+          355,
+          499
+        ],
+        "source": "sprites/happy1/happy1_start_03.png",
+        "candidate": "sprites/rebuilt/frames/happy1_start/happy1_start_03.png"
+      },
+      {
+        "index": 4,
+        "bbox": [
+          145,
+          47,
+          363,
+          499
+        ],
+        "source": "sprites/happy1/happy1_start_04.png",
+        "candidate": "sprites/rebuilt/frames/happy1_start/happy1_start_04.png"
+      },
+      {
+        "index": 5,
+        "bbox": [
+          145,
+          47,
+          363,
+          499
+        ],
+        "source": "sprites/happy1/happy1_start_05.png",
+        "candidate": "sprites/rebuilt/frames/happy1_start/happy1_start_05.png"
+      }
+    ],
+    "holds": {},
+    "rate": 1,
+    "method": "Original happy1 6/18/6-frame hands-rise/clasp/sway/return composition, sharp shared ImageGen donors and canonical neutral sprite. Preserve disconnected sparkles.",
+    "donors": {
+      "base": "sprites/rebuilt/poses/idle_open_00.png",
+      "mid": "sprites/rebuilt/poses/happy1_mid_00.png",
+      "full": "sprites/rebuilt/poses/happy1_full_00.png"
+    }
+  },
+  "happy1_loop": {
+    "count": 18,
+    "frames": [
+      {
+        "index": 0,
+        "bbox": [
+          145,
+          47,
+          363,
+          499
+        ],
+        "source": "sprites/happy1/happy1_loop_00.png",
+        "candidate": "sprites/rebuilt/frames/happy1_loop/happy1_loop_00.png"
+      },
+      {
+        "index": 1,
+        "bbox": [
+          140,
+          45,
+          359,
+          500
+        ],
+        "source": "sprites/happy1/happy1_loop_01.png",
+        "candidate": "sprites/rebuilt/frames/happy1_loop/happy1_loop_01.png"
+      },
+      {
+        "index": 2,
+        "bbox": [
+          135,
+          45,
+          354,
+          500
+        ],
+        "source": "sprites/happy1/happy1_loop_02.png",
+        "candidate": "sprites/rebuilt/frames/happy1_loop/happy1_loop_02.png"
+      },
+      {
+        "index": 3,
+        "bbox": [
+          132,
+          45,
+          351,
+          500
+        ],
+        "source": "sprites/happy1/happy1_loop_03.png",
+        "candidate": "sprites/rebuilt/frames/happy1_loop/happy1_loop_03.png"
+      },
+      {
+        "index": 4,
+        "bbox": [
+          130,
+          44,
+          350,
+          500
+        ],
+        "source": "sprites/happy1/happy1_loop_04.png",
+        "candidate": "sprites/rebuilt/frames/happy1_loop/happy1_loop_04.png"
+      },
+      {
+        "index": 5,
+        "bbox": [
+          130,
+          44,
+          350,
+          500
+        ],
+        "source": "sprites/happy1/happy1_loop_05.png",
+        "candidate": "sprites/rebuilt/frames/happy1_loop/happy1_loop_05.png"
+      },
+      {
+        "index": 6,
+        "bbox": [
+          132,
+          45,
+          351,
+          500
+        ],
+        "source": "sprites/happy1/happy1_loop_06.png",
+        "candidate": "sprites/rebuilt/frames/happy1_loop/happy1_loop_06.png"
+      },
+      {
+        "index": 7,
+        "bbox": [
+          135,
+          45,
+          354,
+          500
+        ],
+        "source": "sprites/happy1/happy1_loop_07.png",
+        "candidate": "sprites/rebuilt/frames/happy1_loop/happy1_loop_07.png"
+      },
+      {
+        "index": 8,
+        "bbox": [
+          140,
+          45,
+          359,
+          500
+        ],
+        "source": "sprites/happy1/happy1_loop_08.png",
+        "candidate": "sprites/rebuilt/frames/happy1_loop/happy1_loop_08.png"
+      },
+      {
+        "index": 9,
+        "bbox": [
+          145,
+          47,
+          363,
+          499
+        ],
+        "source": "sprites/happy1/happy1_loop_09.png",
+        "candidate": "sprites/rebuilt/frames/happy1_loop/happy1_loop_09.png"
+      },
+      {
+        "index": 10,
+        "bbox": [
+          150,
+          45,
+          368,
+          500
+        ],
+        "source": "sprites/happy1/happy1_loop_10.png",
+        "candidate": "sprites/rebuilt/frames/happy1_loop/happy1_loop_10.png"
+      },
+      {
+        "index": 11,
+        "bbox": [
+          154,
+          45,
+          372,
+          500
+        ],
+        "source": "sprites/happy1/happy1_loop_11.png",
+        "candidate": "sprites/rebuilt/frames/happy1_loop/happy1_loop_11.png"
+      },
+      {
+        "index": 12,
+        "bbox": [
+          157,
+          45,
+          376,
+          500
+        ],
+        "source": "sprites/happy1/happy1_loop_12.png",
+        "candidate": "sprites/rebuilt/frames/happy1_loop/happy1_loop_12.png"
+      },
+      {
+        "index": 13,
+        "bbox": [
+          159,
+          44,
+          377,
+          500
+        ],
+        "source": "sprites/happy1/happy1_loop_13.png",
+        "candidate": "sprites/rebuilt/frames/happy1_loop/happy1_loop_13.png"
+      },
+      {
+        "index": 14,
+        "bbox": [
+          159,
+          44,
+          377,
+          500
+        ],
+        "source": "sprites/happy1/happy1_loop_14.png",
+        "candidate": "sprites/rebuilt/frames/happy1_loop/happy1_loop_14.png"
+      },
+      {
+        "index": 15,
+        "bbox": [
+          157,
+          45,
+          376,
+          500
+        ],
+        "source": "sprites/happy1/happy1_loop_15.png",
+        "candidate": "sprites/rebuilt/frames/happy1_loop/happy1_loop_15.png"
+      },
+      {
+        "index": 16,
+        "bbox": [
+          154,
+          45,
+          372,
+          500
+        ],
+        "source": "sprites/happy1/happy1_loop_16.png",
+        "candidate": "sprites/rebuilt/frames/happy1_loop/happy1_loop_16.png"
+      },
+      {
+        "index": 17,
+        "bbox": [
+          150,
+          45,
+          368,
+          500
+        ],
+        "source": "sprites/happy1/happy1_loop_17.png",
+        "candidate": "sprites/rebuilt/frames/happy1_loop/happy1_loop_17.png"
+      }
+    ],
+    "holds": {},
+    "rate": 1,
+    "method": "Original happy1 6/18/6-frame hands-rise/clasp/sway/return composition, sharp shared ImageGen donors and canonical neutral sprite. Preserve disconnected sparkles.",
+    "donors": {
+      "base": "sprites/rebuilt/poses/idle_open_00.png",
+      "mid": "sprites/rebuilt/poses/happy1_mid_00.png",
+      "full": "sprites/rebuilt/poses/happy1_full_00.png"
+    }
+  },
+  "happy1_end": {
+    "count": 6,
+    "frames": [
+      {
+        "index": 0,
+        "bbox": [
+          145,
+          47,
+          363,
+          499
+        ],
+        "source": "sprites/happy1/happy1_end_00.png",
+        "candidate": "sprites/rebuilt/frames/happy1_end/happy1_end_00.png"
+      },
+      {
+        "index": 1,
+        "bbox": [
+          145,
+          47,
+          363,
+          499
+        ],
+        "source": "sprites/happy1/happy1_end_01.png",
+        "candidate": "sprites/rebuilt/frames/happy1_end/happy1_end_01.png"
+      },
+      {
+        "index": 2,
+        "bbox": [
+          154,
+          47,
+          355,
+          499
+        ],
+        "source": "sprites/happy1/happy1_end_02.png",
+        "candidate": "sprites/rebuilt/frames/happy1_end/happy1_end_02.png"
+      },
+      {
+        "index": 3,
+        "bbox": [
+          154,
+          47,
+          355,
+          499
+        ],
+        "source": "sprites/happy1/happy1_end_03.png",
+        "candidate": "sprites/rebuilt/frames/happy1_end/happy1_end_03.png"
+      },
+      {
+        "index": 4,
+        "bbox": [
+          134,
+          47,
+          374,
+          499
+        ],
+        "source": "sprites/happy1/happy1_end_04.png",
+        "candidate": "sprites/rebuilt/frames/happy1_end/happy1_end_04.png"
+      },
+      {
+        "index": 5,
+        "bbox": [
+          134,
+          47,
+          374,
+          499
+        ],
+        "source": "sprites/happy1/happy1_end_05.png",
+        "candidate": "sprites/rebuilt/frames/happy1_end/happy1_end_05.png"
+      }
+    ],
+    "holds": {},
+    "rate": 1,
+    "method": "Original happy1 6/18/6-frame hands-rise/clasp/sway/return composition, sharp shared ImageGen donors and canonical neutral sprite. Preserve disconnected sparkles.",
+    "donors": {
+      "base": "sprites/rebuilt/poses/idle_open_00.png",
+      "mid": "sprites/rebuilt/poses/happy1_mid_00.png",
+      "full": "sprites/rebuilt/poses/happy1_full_00.png"
+    }
+  },
+  "happy2_loop": {
+    "count": 18,
+    "frames": [
+      {
+        "index": 0,
+        "bbox": [
+          134,
+          47,
+          374,
+          499
+        ],
+        "source": "sprites/happy2/happy2_loop_00.png",
+        "candidate": "sprites/rebuilt/frames/happy2_loop/happy2_loop_00.png"
+      },
+      {
+        "index": 1,
+        "bbox": [
+          134,
+          47,
+          374,
+          499
+        ],
+        "source": "sprites/happy2/happy2_loop_01.png",
+        "candidate": "sprites/rebuilt/frames/happy2_loop/happy2_loop_01.png"
+      },
+      {
+        "index": 2,
+        "bbox": [
+          126,
+          47,
+          383,
+          499
+        ],
+        "source": "sprites/happy2/happy2_loop_02.png",
+        "candidate": "sprites/rebuilt/frames/happy2_loop/happy2_loop_02.png"
+      },
+      {
+        "index": 3,
+        "bbox": [
+          115,
+          45,
+          379,
+          500
+        ],
+        "source": "sprites/happy2/happy2_loop_03.png",
+        "candidate": "sprites/rebuilt/frames/happy2_loop/happy2_loop_03.png"
+      },
+      {
+        "index": 4,
+        "bbox": [
+          107,
+          45,
+          376,
+          500
+        ],
+        "source": "sprites/happy2/happy2_loop_04.png",
+        "candidate": "sprites/rebuilt/frames/happy2_loop/happy2_loop_04.png"
+      },
+      {
+        "index": 5,
+        "bbox": [
+          104,
+          44,
+          375,
+          500
+        ],
+        "source": "sprites/happy2/happy2_loop_05.png",
+        "candidate": "sprites/rebuilt/frames/happy2_loop/happy2_loop_05.png"
+      },
+      {
+        "index": 6,
+        "bbox": [
+          110,
+          45,
+          377,
+          501
+        ],
+        "source": "sprites/happy2/happy2_loop_06.png",
+        "candidate": "sprites/rebuilt/frames/happy2_loop/happy2_loop_06.png"
+      },
+      {
+        "index": 7,
+        "bbox": [
+          118,
+          45,
+          380,
+          500
+        ],
+        "source": "sprites/happy2/happy2_loop_07.png",
+        "candidate": "sprites/rebuilt/frames/happy2_loop/happy2_loop_07.png"
+      },
+      {
+        "index": 8,
+        "bbox": [
+          126,
+          47,
+          383,
+          499
+        ],
+        "source": "sprites/happy2/happy2_loop_08.png",
+        "candidate": "sprites/rebuilt/frames/happy2_loop/happy2_loop_08.png"
+      },
+      {
+        "index": 9,
+        "bbox": [
+          133,
+          45,
+          387,
+          500
+        ],
+        "source": "sprites/happy2/happy2_loop_09.png",
+        "candidate": "sprites/rebuilt/frames/happy2_loop/happy2_loop_09.png"
+      },
+      {
+        "index": 10,
+        "bbox": [
+          139,
+          45,
+          389,
+          501
+        ],
+        "source": "sprites/happy2/happy2_loop_10.png",
+        "candidate": "sprites/rebuilt/frames/happy2_loop/happy2_loop_10.png"
+      },
+      {
+        "index": 11,
+        "bbox": [
+          141,
+          45,
+          390,
+          500
+        ],
+        "source": "sprites/happy2/happy2_loop_11.png",
+        "candidate": "sprites/rebuilt/frames/happy2_loop/happy2_loop_11.png"
+      },
+      {
+        "index": 12,
+        "bbox": [
+          139,
+          45,
+          389,
+          501
+        ],
+        "source": "sprites/happy2/happy2_loop_12.png",
+        "candidate": "sprites/rebuilt/frames/happy2_loop/happy2_loop_12.png"
+      },
+      {
+        "index": 13,
+        "bbox": [
+          133,
+          45,
+          387,
+          500
+        ],
+        "source": "sprites/happy2/happy2_loop_13.png",
+        "candidate": "sprites/rebuilt/frames/happy2_loop/happy2_loop_13.png"
+      },
+      {
+        "index": 14,
+        "bbox": [
+          126,
+          47,
+          383,
+          499
+        ],
+        "source": "sprites/happy2/happy2_loop_14.png",
+        "candidate": "sprites/rebuilt/frames/happy2_loop/happy2_loop_14.png"
+      },
+      {
+        "index": 15,
+        "bbox": [
+          126,
+          47,
+          383,
+          499
+        ],
+        "source": "sprites/happy2/happy2_loop_15.png",
+        "candidate": "sprites/rebuilt/frames/happy2_loop/happy2_loop_15.png"
+      },
+      {
+        "index": 16,
+        "bbox": [
+          134,
+          47,
+          374,
+          499
+        ],
+        "source": "sprites/happy2/happy2_loop_16.png",
+        "candidate": "sprites/rebuilt/frames/happy2_loop/happy2_loop_16.png"
+      },
+      {
+        "index": 17,
+        "bbox": [
+          134,
+          47,
+          374,
+          499
+        ],
+        "source": "sprites/happy2/happy2_loop_17.png",
+        "candidate": "sprites/rebuilt/frames/happy2_loop/happy2_loop_17.png"
+      }
+    ],
+    "holds": {},
+    "rate": 1,
+    "method": "Original 18-frame happy wave plan, canonical neutral sprite and sharp ImageGen wave donor; generated character scale normalized before original transforms.",
+    "donors": {
+      "base": "sprites/rebuilt/poses/idle_open_00.png",
+      "wave": "sprites/rebuilt/poses/happy2_wave_00.png"
+    }
+  },
+  "excited1_loop": {
+    "count": 18,
+    "frames": [
+      {
+        "index": 0,
+        "bbox": [
+          134,
+          47,
+          374,
+          499
+        ],
+        "source": "sprites/excited1/excited1_loop_00.png",
+        "candidate": "sprites/rebuilt/frames/excited1_loop/excited1_loop_00.png"
+      },
+      {
+        "index": 1,
+        "bbox": [
+          134,
+          47,
+          374,
+          499
+        ],
+        "source": "sprites/excited1/excited1_loop_01.png",
+        "candidate": "sprites/rebuilt/frames/excited1_loop/excited1_loop_01.png"
+      },
+      {
+        "index": 2,
+        "bbox": [
+          152,
+          60,
+          357,
+          499
+        ],
+        "source": "sprites/excited1/excited1_loop_02.png",
+        "candidate": "sprites/rebuilt/frames/excited1_loop/excited1_loop_02.png"
+      },
+      {
+        "index": 3,
+        "bbox": [
+          152,
+          60,
+          357,
+          499
+        ],
+        "source": "sprites/excited1/excited1_loop_03.png",
+        "candidate": "sprites/rebuilt/frames/excited1_loop/excited1_loop_03.png"
+      },
+      {
+        "index": 4,
+        "bbox": [
+          152,
+          61,
+          357,
+          501
+        ],
+        "source": "sprites/excited1/excited1_loop_04.png",
+        "candidate": "sprites/rebuilt/frames/excited1_loop/excited1_loop_04.png"
+      },
+      {
+        "index": 5,
+        "bbox": [
+          152,
+          62,
+          357,
+          501
+        ],
+        "source": "sprites/excited1/excited1_loop_05.png",
+        "candidate": "sprites/rebuilt/frames/excited1_loop/excited1_loop_05.png"
+      },
+      {
+        "index": 6,
+        "bbox": [
+          66,
+          50,
+          442,
+          483
+        ],
+        "source": "sprites/excited1/excited1_loop_06.png",
+        "candidate": "sprites/rebuilt/frames/excited1_loop/excited1_loop_06.png"
+      },
+      {
+        "index": 7,
+        "bbox": [
+          66,
+          32,
+          442,
+          465
+        ],
+        "source": "sprites/excited1/excited1_loop_07.png",
+        "candidate": "sprites/rebuilt/frames/excited1_loop/excited1_loop_07.png"
+      },
+      {
+        "index": 8,
+        "bbox": [
+          66,
+          20,
+          442,
+          453
+        ],
+        "source": "sprites/excited1/excited1_loop_08.png",
+        "candidate": "sprites/rebuilt/frames/excited1_loop/excited1_loop_08.png"
+      },
+      {
+        "index": 9,
+        "bbox": [
+          66,
+          20,
+          442,
+          453
+        ],
+        "source": "sprites/excited1/excited1_loop_09.png",
+        "candidate": "sprites/rebuilt/frames/excited1_loop/excited1_loop_09.png"
+      },
+      {
+        "index": 10,
+        "bbox": [
+          66,
+          32,
+          442,
+          465
+        ],
+        "source": "sprites/excited1/excited1_loop_10.png",
+        "candidate": "sprites/rebuilt/frames/excited1_loop/excited1_loop_10.png"
+      },
+      {
+        "index": 11,
+        "bbox": [
+          66,
+          50,
+          442,
+          483
+        ],
+        "source": "sprites/excited1/excited1_loop_11.png",
+        "candidate": "sprites/rebuilt/frames/excited1_loop/excited1_loop_11.png"
+      },
+      {
+        "index": 12,
+        "bbox": [
+          152,
+          60,
+          357,
+          499
+        ],
+        "source": "sprites/excited1/excited1_loop_12.png",
+        "candidate": "sprites/rebuilt/frames/excited1_loop/excited1_loop_12.png"
+      },
+      {
+        "index": 13,
+        "bbox": [
+          152,
+          60,
+          357,
+          499
+        ],
+        "source": "sprites/excited1/excited1_loop_13.png",
+        "candidate": "sprites/rebuilt/frames/excited1_loop/excited1_loop_13.png"
+      },
+      {
+        "index": 14,
+        "bbox": [
+          134,
+          45,
+          374,
+          498
+        ],
+        "source": "sprites/excited1/excited1_loop_14.png",
+        "candidate": "sprites/rebuilt/frames/excited1_loop/excited1_loop_14.png"
+      },
+      {
+        "index": 15,
+        "bbox": [
+          134,
+          46,
+          374,
+          499
+        ],
+        "source": "sprites/excited1/excited1_loop_15.png",
+        "candidate": "sprites/rebuilt/frames/excited1_loop/excited1_loop_15.png"
+      },
+      {
+        "index": 16,
+        "bbox": [
+          134,
+          47,
+          374,
+          499
+        ],
+        "source": "sprites/excited1/excited1_loop_16.png",
+        "candidate": "sprites/rebuilt/frames/excited1_loop/excited1_loop_16.png"
+      },
+      {
+        "index": 17,
+        "bbox": [
+          134,
+          47,
+          374,
+          499
+        ],
+        "source": "sprites/excited1/excited1_loop_17.png",
+        "candidate": "sprites/rebuilt/frames/excited1_loop/excited1_loop_17.png"
+      }
+    ],
+    "holds": {},
+    "rate": 1,
+    "method": "Original 18-frame anticipation/jump/landing plan with sharp ImageGen crouch and airborne donors, canonical neutral entry and exit.",
+    "donors": {
+      "base": "sprites/rebuilt/poses/idle_open_00.png",
+      "crouch": "sprites/rebuilt/poses/excited1_crouch_00.png",
+      "air": "sprites/rebuilt/poses/excited1_air_00.png"
+    }
+  },
+  "boxing1_loop": {
+    "count": 12,
+    "frames": [
+      {
+        "index": 0,
+        "bbox": [
+          147,
+          44,
+          363,
+          501
+        ],
+        "source": "sprites/boxing1_loop/boxing1_loop_00.png",
+        "candidate": "sprites/rebuilt/frames/boxing1_loop/boxing1_loop_00.png"
+      },
+      {
+        "index": 1,
+        "bbox": [
+          149,
+          44,
+          364,
+          501
+        ],
+        "source": "sprites/boxing1_loop/boxing1_loop_01.png",
+        "candidate": "sprites/rebuilt/frames/boxing1_loop/boxing1_loop_01.png"
+      },
+      {
+        "index": 2,
+        "bbox": [
+          59,
+          44,
+          371,
+          501
+        ],
+        "source": "sprites/boxing1_loop/boxing1_loop_02.png",
+        "candidate": "sprites/rebuilt/frames/boxing1_loop/boxing1_loop_02.png"
+      },
+      {
+        "index": 3,
+        "bbox": [
+          145,
+          44,
+          367,
+          501
+        ],
+        "source": "sprites/boxing1_loop/boxing1_loop_03.png",
+        "candidate": "sprites/rebuilt/frames/boxing1_loop/boxing1_loop_03.png"
+      },
+      {
+        "index": 4,
+        "bbox": [
+          133,
+          44,
+          368,
+          500
+        ],
+        "source": "sprites/boxing1_loop/boxing1_loop_04.png",
+        "candidate": "sprites/rebuilt/frames/boxing1_loop/boxing1_loop_04.png"
+      },
+      {
+        "index": 5,
+        "bbox": [
+          132,
+          44,
+          485,
+          501
+        ],
+        "source": "sprites/boxing1_loop/boxing1_loop_05.png",
+        "candidate": "sprites/rebuilt/frames/boxing1_loop/boxing1_loop_05.png"
+      },
+      {
+        "index": 6,
+        "bbox": [
+          134,
+          44,
+          375,
+          501
+        ],
+        "source": "sprites/boxing1_loop/boxing1_loop_06.png",
+        "candidate": "sprites/rebuilt/frames/boxing1_loop/boxing1_loop_06.png"
+      },
+      {
+        "index": 7,
+        "bbox": [
+          147,
+          43,
+          363,
+          500
+        ],
+        "source": "sprites/boxing1_loop/boxing1_loop_07.png",
+        "candidate": "sprites/rebuilt/frames/boxing1_loop/boxing1_loop_07.png"
+      },
+      {
+        "index": 8,
+        "bbox": [
+          147,
+          44,
+          363,
+          501
+        ],
+        "source": "sprites/boxing1_loop/boxing1_loop_08.png",
+        "candidate": "sprites/rebuilt/frames/boxing1_loop/boxing1_loop_08.png"
+      },
+      {
+        "index": 9,
+        "bbox": [
+          147,
+          44,
+          363,
+          501
+        ],
+        "source": "sprites/boxing1_loop/boxing1_loop_09.png",
+        "candidate": "sprites/rebuilt/frames/boxing1_loop/boxing1_loop_09.png"
+      },
+      {
+        "index": 10,
+        "bbox": [
+          147,
+          43,
+          363,
+          500
+        ],
+        "source": "sprites/boxing1_loop/boxing1_loop_10.png",
+        "candidate": "sprites/rebuilt/frames/boxing1_loop/boxing1_loop_10.png"
+      },
+      {
+        "index": 11,
+        "bbox": [
+          147,
+          44,
+          363,
+          501
+        ],
+        "source": "sprites/boxing1_loop/boxing1_loop_11.png",
+        "candidate": "sprites/rebuilt/frames/boxing1_loop/boxing1_loop_11.png"
+      }
+    ],
+    "holds": {},
+    "rate": 0.8,
+    "method": "Sharp 2x2 ImageGen pose batches, foot-anchored normalization, shared upright front guard for breathing/recovery/bounce/exact loop closure.",
+    "donors": null
+  },
+  "sad1_loop": {
+    "count": 18,
+    "frames": [
+      {
+        "index": 0,
+        "bbox": [
+          155,
+          47,
+          354,
+          499
+        ],
+        "source": "sprites/sad1/sad1_loop_00.png",
+        "candidate": "sprites/rebuilt/frames/sad1_loop/sad1_loop_00.png"
+      },
+      {
+        "index": 1,
+        "bbox": [
+          155,
+          47,
+          354,
+          500
+        ],
+        "source": "sprites/sad1/sad1_loop_01.png",
+        "candidate": "sprites/rebuilt/frames/sad1_loop/sad1_loop_01.png"
+      },
+      {
+        "index": 2,
+        "bbox": [
+          155,
+          47,
+          354,
+          500
+        ],
+        "source": "sprites/sad1/sad1_loop_02.png",
+        "candidate": "sprites/rebuilt/frames/sad1_loop/sad1_loop_02.png"
+      },
+      {
+        "index": 3,
+        "bbox": [
+          155,
+          47,
+          354,
+          500
+        ],
+        "source": "sprites/sad1/sad1_loop_03.png",
+        "candidate": "sprites/rebuilt/frames/sad1_loop/sad1_loop_03.png"
+      },
+      {
+        "index": 4,
+        "bbox": [
+          155,
+          48,
+          354,
+          501
+        ],
+        "source": "sprites/sad1/sad1_loop_04.png",
+        "candidate": "sprites/rebuilt/frames/sad1_loop/sad1_loop_04.png"
+      },
+      {
+        "index": 5,
+        "bbox": [
+          155,
+          48,
+          354,
+          501
+        ],
+        "source": "sprites/sad1/sad1_loop_05.png",
+        "candidate": "sprites/rebuilt/frames/sad1_loop/sad1_loop_05.png"
+      },
+      {
+        "index": 6,
+        "bbox": [
+          155,
+          48,
+          354,
+          501
+        ],
+        "source": "sprites/sad1/sad1_loop_06.png",
+        "candidate": "sprites/rebuilt/frames/sad1_loop/sad1_loop_06.png"
+      },
+      {
+        "index": 7,
+        "bbox": [
+          155,
+          48,
+          354,
+          501
+        ],
+        "source": "sprites/sad1/sad1_loop_07.png",
+        "candidate": "sprites/rebuilt/frames/sad1_loop/sad1_loop_07.png"
+      },
+      {
+        "index": 8,
+        "bbox": [
+          155,
+          48,
+          354,
+          501
+        ],
+        "source": "sprites/sad1/sad1_loop_08.png",
+        "candidate": "sprites/rebuilt/frames/sad1_loop/sad1_loop_08.png"
+      },
+      {
+        "index": 9,
+        "bbox": [
+          155,
+          48,
+          354,
+          501
+        ],
+        "source": "sprites/sad1/sad1_loop_09.png",
+        "candidate": "sprites/rebuilt/frames/sad1_loop/sad1_loop_09.png"
+      },
+      {
+        "index": 10,
+        "bbox": [
+          155,
+          47,
+          354,
+          500
+        ],
+        "source": "sprites/sad1/sad1_loop_10.png",
+        "candidate": "sprites/rebuilt/frames/sad1_loop/sad1_loop_10.png"
+      },
+      {
+        "index": 11,
+        "bbox": [
+          155,
+          47,
+          354,
+          500
+        ],
+        "source": "sprites/sad1/sad1_loop_11.png",
+        "candidate": "sprites/rebuilt/frames/sad1_loop/sad1_loop_11.png"
+      },
+      {
+        "index": 12,
+        "bbox": [
+          155,
+          47,
+          354,
+          500
+        ],
+        "source": "sprites/sad1/sad1_loop_12.png",
+        "candidate": "sprites/rebuilt/frames/sad1_loop/sad1_loop_12.png"
+      },
+      {
+        "index": 13,
+        "bbox": [
+          155,
+          47,
+          354,
+          499
+        ],
+        "source": "sprites/sad1/sad1_loop_13.png",
+        "candidate": "sprites/rebuilt/frames/sad1_loop/sad1_loop_13.png"
+      },
+      {
+        "index": 14,
+        "bbox": [
+          155,
+          47,
+          354,
+          500
+        ],
+        "source": "sprites/sad1/sad1_loop_14.png",
+        "candidate": "sprites/rebuilt/frames/sad1_loop/sad1_loop_14.png"
+      },
+      {
+        "index": 15,
+        "bbox": [
+          155,
+          47,
+          354,
+          500
+        ],
+        "source": "sprites/sad1/sad1_loop_15.png",
+        "candidate": "sprites/rebuilt/frames/sad1_loop/sad1_loop_15.png"
+      },
+      {
+        "index": 16,
+        "bbox": [
+          155,
+          47,
+          354,
+          500
+        ],
+        "source": "sprites/sad1/sad1_loop_16.png",
+        "candidate": "sprites/rebuilt/frames/sad1_loop/sad1_loop_16.png"
+      },
+      {
+        "index": 17,
+        "bbox": [
+          155,
+          47,
+          354,
+          499
+        ],
+        "source": "sprites/sad1/sad1_loop_17.png",
+        "candidate": "sprites/rebuilt/frames/sad1_loop/sad1_loop_17.png"
+      }
+    ],
+    "holds": {},
+    "rate": 1,
+    "method": "Original 18-frame sadness plan with sharp ImageGen donor and stable repeated pose pixels.",
+    "donors": {
+      "slump": "sprites/rebuilt/poses/sad1_slump_00.png"
+    }
+  },
+  "sad2_loop": {
+    "count": 18,
+    "frames": [
+      {
+        "index": 0,
+        "bbox": [
+          141,
+          180,
+          367,
+          500
+        ],
+        "source": "sprites/sad2/sad2_loop_00.png",
+        "candidate": "sprites/rebuilt/frames/sad2_loop/sad2_loop_00.png"
+      },
+      {
+        "index": 1,
+        "bbox": [
+          141,
+          181,
+          367,
+          500
+        ],
+        "source": "sprites/sad2/sad2_loop_01.png",
+        "candidate": "sprites/rebuilt/frames/sad2_loop/sad2_loop_01.png"
+      },
+      {
+        "index": 2,
+        "bbox": [
+          141,
+          181,
+          367,
+          500
+        ],
+        "source": "sprites/sad2/sad2_loop_02.png",
+        "candidate": "sprites/rebuilt/frames/sad2_loop/sad2_loop_02.png"
+      },
+      {
+        "index": 3,
+        "bbox": [
+          142,
+          182,
+          367,
+          500
+        ],
+        "source": "sprites/sad2/sad2_loop_03.png",
+        "candidate": "sprites/rebuilt/frames/sad2_loop/sad2_loop_03.png"
+      },
+      {
+        "index": 4,
+        "bbox": [
+          140,
+          181,
+          367,
+          500
+        ],
+        "source": "sprites/sad2/sad2_loop_04.png",
+        "candidate": "sprites/rebuilt/frames/sad2_loop/sad2_loop_04.png"
+      },
+      {
+        "index": 5,
+        "bbox": [
+          141,
+          182,
+          367,
+          500
+        ],
+        "source": "sprites/sad2/sad2_loop_05.png",
+        "candidate": "sprites/rebuilt/frames/sad2_loop/sad2_loop_05.png"
+      },
+      {
+        "index": 6,
+        "bbox": [
+          141,
+          181,
+          367,
+          500
+        ],
+        "source": "sprites/sad2/sad2_loop_06.png",
+        "candidate": "sprites/rebuilt/frames/sad2_loop/sad2_loop_06.png"
+      },
+      {
+        "index": 7,
+        "bbox": [
+          141,
+          181,
+          367,
+          500
+        ],
+        "source": "sprites/sad2/sad2_loop_07.png",
+        "candidate": "sprites/rebuilt/frames/sad2_loop/sad2_loop_07.png"
+      },
+      {
+        "index": 8,
+        "bbox": [
+          141,
+          180,
+          367,
+          500
+        ],
+        "source": "sprites/sad2/sad2_loop_08.png",
+        "candidate": "sprites/rebuilt/frames/sad2_loop/sad2_loop_08.png"
+      },
+      {
+        "index": 9,
+        "bbox": [
+          142,
+          181,
+          367,
+          500
+        ],
+        "source": "sprites/sad2/sad2_loop_09.png",
+        "candidate": "sprites/rebuilt/frames/sad2_loop/sad2_loop_09.png"
+      },
+      {
+        "index": 10,
+        "bbox": [
+          143,
+          181,
+          366,
+          501
+        ],
+        "source": "sprites/sad2/sad2_loop_10.png",
+        "candidate": "sprites/rebuilt/frames/sad2_loop/sad2_loop_10.png"
+      },
+      {
+        "index": 11,
+        "bbox": [
+          143,
+          182,
+          366,
+          501
+        ],
+        "source": "sprites/sad2/sad2_loop_11.png",
+        "candidate": "sprites/rebuilt/frames/sad2_loop/sad2_loop_11.png"
+      },
+      {
+        "index": 12,
+        "bbox": [
+          142,
+          181,
+          367,
+          501
+        ],
+        "source": "sprites/sad2/sad2_loop_12.png",
+        "candidate": "sprites/rebuilt/frames/sad2_loop/sad2_loop_12.png"
+      },
+      {
+        "index": 13,
+        "bbox": [
+          141,
+          182,
+          367,
+          500
+        ],
+        "source": "sprites/sad2/sad2_loop_13.png",
+        "candidate": "sprites/rebuilt/frames/sad2_loop/sad2_loop_13.png"
+      },
+      {
+        "index": 14,
+        "bbox": [
+          141,
+          181,
+          367,
+          500
+        ],
+        "source": "sprites/sad2/sad2_loop_14.png",
+        "candidate": "sprites/rebuilt/frames/sad2_loop/sad2_loop_14.png"
+      },
+      {
+        "index": 15,
+        "bbox": [
+          141,
+          181,
+          367,
+          500
+        ],
+        "source": "sprites/sad2/sad2_loop_15.png",
+        "candidate": "sprites/rebuilt/frames/sad2_loop/sad2_loop_15.png"
+      },
+      {
+        "index": 16,
+        "bbox": [
+          141,
+          180,
+          367,
+          500
+        ],
+        "source": "sprites/sad2/sad2_loop_16.png",
+        "candidate": "sprites/rebuilt/frames/sad2_loop/sad2_loop_16.png"
+      },
+      {
+        "index": 17,
+        "bbox": [
+          141,
+          180,
+          367,
+          500
+        ],
+        "source": "sprites/sad2/sad2_loop_17.png",
+        "candidate": "sprites/rebuilt/frames/sad2_loop/sad2_loop_17.png"
+      }
+    ],
+    "holds": {},
+    "rate": 1,
+    "method": "Original 18-frame sadness plan with sharp ImageGen donor and stable repeated pose pixels.",
+    "donors": {
+      "crouch": "sprites/rebuilt/poses/sad2_crouch_00.png"
+    }
+  },
+  "talk_loop": {
+    "count": 18,
+    "frames": [
+      {
+        "index": 0,
+        "bbox": [
+          134,
+          47,
+          374,
+          499
+        ],
+        "source": "sprites/talk/talk_loop_00.png",
+        "candidate": "sprites/rebuilt/frames/talk_loop/talk_loop_00.png"
+      },
+      {
+        "index": 1,
+        "bbox": [
+          134,
+          47,
+          374,
+          499
+        ],
+        "source": "sprites/talk/talk_loop_01.png",
+        "candidate": "sprites/rebuilt/frames/talk_loop/talk_loop_01.png"
+      },
+      {
+        "index": 2,
+        "bbox": [
+          134,
+          47,
+          374,
+          499
+        ],
+        "source": "sprites/talk/talk_loop_02.png",
+        "candidate": "sprites/rebuilt/frames/talk_loop/talk_loop_02.png"
+      },
+      {
+        "index": 3,
+        "bbox": [
+          134,
+          47,
+          374,
+          499
+        ],
+        "source": "sprites/talk/talk_loop_03.png",
+        "candidate": "sprites/rebuilt/frames/talk_loop/talk_loop_03.png"
+      },
+      {
+        "index": 4,
+        "bbox": [
+          134,
+          47,
+          374,
+          499
+        ],
+        "source": "sprites/talk/talk_loop_04.png",
+        "candidate": "sprites/rebuilt/frames/talk_loop/talk_loop_04.png"
+      },
+      {
+        "index": 5,
+        "bbox": [
+          134,
+          47,
+          374,
+          499
+        ],
+        "source": "sprites/talk/talk_loop_05.png",
+        "candidate": "sprites/rebuilt/frames/talk_loop/talk_loop_05.png"
+      },
+      {
+        "index": 6,
+        "bbox": [
+          134,
+          47,
+          374,
+          499
+        ],
+        "source": "sprites/talk/talk_loop_06.png",
+        "candidate": "sprites/rebuilt/frames/talk_loop/talk_loop_06.png"
+      },
+      {
+        "index": 7,
+        "bbox": [
+          134,
+          47,
+          374,
+          499
+        ],
+        "source": "sprites/talk/talk_loop_07.png",
+        "candidate": "sprites/rebuilt/frames/talk_loop/talk_loop_07.png"
+      },
+      {
+        "index": 8,
+        "bbox": [
+          134,
+          47,
+          374,
+          499
+        ],
+        "source": "sprites/talk/talk_loop_08.png",
+        "candidate": "sprites/rebuilt/frames/talk_loop/talk_loop_08.png"
+      },
+      {
+        "index": 9,
+        "bbox": [
+          134,
+          47,
+          374,
+          499
+        ],
+        "source": "sprites/talk/talk_loop_09.png",
+        "candidate": "sprites/rebuilt/frames/talk_loop/talk_loop_09.png"
+      },
+      {
+        "index": 10,
+        "bbox": [
+          134,
+          47,
+          374,
+          499
+        ],
+        "source": "sprites/talk/talk_loop_10.png",
+        "candidate": "sprites/rebuilt/frames/talk_loop/talk_loop_10.png"
+      },
+      {
+        "index": 11,
+        "bbox": [
+          134,
+          47,
+          374,
+          499
+        ],
+        "source": "sprites/talk/talk_loop_11.png",
+        "candidate": "sprites/rebuilt/frames/talk_loop/talk_loop_11.png"
+      },
+      {
+        "index": 12,
+        "bbox": [
+          134,
+          47,
+          374,
+          499
+        ],
+        "source": "sprites/talk/talk_loop_12.png",
+        "candidate": "sprites/rebuilt/frames/talk_loop/talk_loop_12.png"
+      },
+      {
+        "index": 13,
+        "bbox": [
+          134,
+          47,
+          374,
+          499
+        ],
+        "source": "sprites/talk/talk_loop_13.png",
+        "candidate": "sprites/rebuilt/frames/talk_loop/talk_loop_13.png"
+      },
+      {
+        "index": 14,
+        "bbox": [
+          134,
+          47,
+          374,
+          499
+        ],
+        "source": "sprites/talk/talk_loop_14.png",
+        "candidate": "sprites/rebuilt/frames/talk_loop/talk_loop_14.png"
+      },
+      {
+        "index": 15,
+        "bbox": [
+          134,
+          47,
+          374,
+          499
+        ],
+        "source": "sprites/talk/talk_loop_15.png",
+        "candidate": "sprites/rebuilt/frames/talk_loop/talk_loop_15.png"
+      },
+      {
+        "index": 16,
+        "bbox": [
+          134,
+          47,
+          374,
+          499
+        ],
+        "source": "sprites/talk/talk_loop_16.png",
+        "candidate": "sprites/rebuilt/frames/talk_loop/talk_loop_16.png"
+      },
+      {
+        "index": 17,
+        "bbox": [
+          134,
+          47,
+          374,
+          499
+        ],
+        "source": "sprites/talk/talk_loop_17.png",
+        "candidate": "sprites/rebuilt/frames/talk_loop/talk_loop_17.png"
+      }
+    ],
+    "holds": {},
+    "rate": 1,
+    "method": "Original 18-frame mouth-flap plan, canonical base and two sharp ImageGen mouth donors. Only mouth rectangle changes.",
+    "donors": {
+      "base": "sprites/rebuilt/poses/idle_open_00.png",
+      "half": "sprites/rebuilt/poses/talk_half_00.png",
+      "open": "sprites/rebuilt/poses/talk_open_00.png"
+    }
+  }
+}

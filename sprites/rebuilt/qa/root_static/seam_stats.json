@@ -1,0 +1,372 @@
+{
+  "idle1_loop": {
+    "seam": {
+      "pixels": 43357,
+      "bbox": [
+        134,
+        47,
+        374,
+        500
+      ]
+    },
+    "idleEntry": {
+      "pixels": 0,
+      "bbox": null
+    },
+    "idleExit": {
+      "pixels": 43357,
+      "bbox": [
+        134,
+        47,
+        374,
+        500
+      ]
+    },
+    "sourceDuration": 1.8,
+    "fps": 10,
+    "rate": 1,
+    "holds": {},
+    "repeats": [],
+    "originalHashesMatch": true
+  },
+  "basic1_loop": {
+    "seam": {
+      "pixels": 0,
+      "bbox": null
+    },
+    "idleEntry": {
+      "pixels": 0,
+      "bbox": null
+    },
+    "idleExit": {
+      "pixels": 0,
+      "bbox": null
+    },
+    "sourceDuration": 3.6,
+    "fps": 5,
+    "rate": 1.1,
+    "holds": {},
+    "repeats": [],
+    "originalHashesMatch": true
+  },
+  "basic2_loop": {
+    "seam": {
+      "pixels": 0,
+      "bbox": null
+    },
+    "idleEntry": {
+      "pixels": 0,
+      "bbox": null
+    },
+    "idleExit": {
+      "pixels": 0,
+      "bbox": null
+    },
+    "sourceDuration": 1.8,
+    "fps": 10,
+    "rate": 1,
+    "holds": {},
+    "repeats": [],
+    "originalHashesMatch": true
+  },
+  "basic3_loop": {
+    "seam": {
+      "pixels": 66845,
+      "bbox": [
+        134,
+        45,
+        377,
+        500
+      ]
+    },
+    "idleEntry": {
+      "pixels": 0,
+      "bbox": null
+    },
+    "idleExit": {
+      "pixels": 66845,
+      "bbox": [
+        134,
+        45,
+        377,
+        500
+      ]
+    },
+    "sourceDuration": 1.8,
+    "fps": 10,
+    "rate": 1,
+    "holds": {},
+    "repeats": [],
+    "originalHashesMatch": true
+  },
+  "happy1_start": {
+    "seam": {
+      "pixels": 64132,
+      "bbox": [
+        134,
+        47,
+        374,
+        499
+      ]
+    },
+    "idleEntry": {
+      "pixels": 0,
+      "bbox": null
+    },
+    "idleExit": {
+      "pixels": 64132,
+      "bbox": [
+        134,
+        47,
+        374,
+        499
+      ]
+    },
+    "sourceDuration": 0.6,
+    "fps": 10,
+    "rate": 1,
+    "holds": {},
+    "repeats": [],
+    "originalHashesMatch": true
+  },
+  "happy1_loop": {
+    "seam": {
+      "pixels": 63759,
+      "bbox": [
+        145,
+        45,
+        368,
+        500
+      ]
+    },
+    "idleEntry": {
+      "pixels": 64132,
+      "bbox": [
+        134,
+        47,
+        374,
+        499
+      ]
+    },
+    "idleExit": {
+      "pixels": 68055,
+      "bbox": [
+        134,
+        45,
+        374,
+        500
+      ]
+    },
+    "sourceDuration": 1.8,
+    "fps": 10,
+    "rate": 1,
+    "holds": {},
+    "repeats": [],
+    "originalHashesMatch": true
+  },
+  "happy1_end": {
+    "seam": {
+      "pixels": 64132,
+      "bbox": [
+        134,
+        47,
+        374,
+        499
+      ]
+    },
+    "idleEntry": {
+      "pixels": 64132,
+      "bbox": [
+        134,
+        47,
+        374,
+        499
+      ]
+    },
+    "idleExit": {
+      "pixels": 0,
+      "bbox": null
+    },
+    "sourceDuration": 0.6,
+    "fps": 10,
+    "rate": 1,
+    "holds": {},
+    "repeats": [],
+    "originalHashesMatch": true
+  },
+  "happy2_loop": {
+    "seam": {
+      "pixels": 0,
+      "bbox": null
+    },
+    "idleEntry": {
+      "pixels": 0,
+      "bbox": null
+    },
+    "idleExit": {
+      "pixels": 0,
+      "bbox": null
+    },
+    "sourceDuration": 1.8,
+    "fps": 10,
+    "rate": 1,
+    "holds": {},
+    "repeats": [],
+    "originalHashesMatch": true
+  },
+  "excited1_loop": {
+    "seam": {
+      "pixels": 0,
+      "bbox": null
+    },
+    "idleEntry": {
+      "pixels": 0,
+      "bbox": null
+    },
+    "idleExit": {
+      "pixels": 0,
+      "bbox": null
+    },
+    "sourceDuration": 1.8,
+    "fps": 10,
+    "rate": 1,
+    "holds": {},
+    "repeats": [],
+    "originalHashesMatch": true
+  },
+  "boxing1_loop": {
+    "seam": {
+      "pixels": 0,
+      "bbox": null
+    },
+    "idleEntry": {
+      "pixels": 76604,
+      "bbox": [
+        134,
+        44,
+        374,
+        501
+      ]
+    },
+    "idleExit": {
+      "pixels": 76604,
+      "bbox": [
+        134,
+        44,
+        374,
+        501
+      ]
+    },
+    "sourceDuration": 2.4,
+    "fps": 10,
+    "rate": 0.8,
+    "holds": {},
+    "repeats": [
+      {
+        "frames": [
+          2,
+          3
+        ],
+        "times": 4
+      },
+      {
+        "frames": [
+          5,
+          6
+        ],
+        "times": 4
+      }
+    ],
+    "originalHashesMatch": true
+  },
+  "sad1_loop": {
+    "seam": {
+      "pixels": 0,
+      "bbox": null
+    },
+    "idleEntry": {
+      "pixels": 64064,
+      "bbox": [
+        134,
+        47,
+        374,
+        499
+      ]
+    },
+    "idleExit": {
+      "pixels": 64064,
+      "bbox": [
+        134,
+        47,
+        374,
+        499
+      ]
+    },
+    "sourceDuration": 1.8,
+    "fps": 10,
+    "rate": 1,
+    "holds": {},
+    "repeats": [],
+    "originalHashesMatch": true
+  },
+  "sad2_loop": {
+    "seam": {
+      "pixels": 0,
+      "bbox": null
+    },
+    "idleEntry": {
+      "pixels": 79630,
+      "bbox": [
+        134,
+        47,
+        374,
+        500
+      ]
+    },
+    "idleExit": {
+      "pixels": 79630,
+      "bbox": [
+        134,
+        47,
+        374,
+        500
+      ]
+    },
+    "sourceDuration": 1.8,
+    "fps": 10,
+    "rate": 1,
+    "holds": {},
+    "repeats": [],
+    "originalHashesMatch": true
+  },
+  "talk_loop": {
+    "seam": {
+      "pixels": 1140,
+      "bbox": [
+        234,
+        162,
+        276,
+        194
+      ]
+    },
+    "idleEntry": {
+      "pixels": 0,
+      "bbox": null
+    },
+    "idleExit": {
+      "pixels": 1140,
+      "bbox": [
+        234,
+        162,
+        276,
+        194
+      ]
+    },
+    "sourceDuration": 1.8,
+    "fps": 10,
+    "rate": 1,
+    "holds": {},
+    "repeats": [],
+    "originalHashesMatch": true
+  }
+}

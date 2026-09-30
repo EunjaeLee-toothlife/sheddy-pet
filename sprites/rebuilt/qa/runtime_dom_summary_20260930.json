@@ -1,0 +1,22 @@
+{
+  "kind": "Transcription of the actual browser DOM summary; full event export unavailable",
+  "page": "http://127.0.0.1:8475/animation-runtime-qa.html",
+  "finishedAt": "2026-09-29T22:35:32.327Z",
+  "widgetSha256": "474f4fc38c8fb668e86a88092b1fbd569d372994e5b5c2fdbfc2f45543184029",
+  "harnessSha256": "bb2268175e3789e2c5b5c455482865f5d26ac12f0f5e96593f6ca5f30ecfa058",
+  "manifestSha256": "b8670afa336073875babfa20faafd4ac483c22b54ea1f710befd9ab4ad350d23",
+  "passed": 32,
+  "failed": 0,
+  "planned": 32,
+  "stopped": false,
+  "completedClipCount": 39,
+  "missingClips": [],
+  "observedCoverage": "All 39 table rows showed at least one completed playing/ended pair and zero media errors. Pastry start/loop/outro each completed 10 times, chem start/loop each completed 3 times. Talk returned to idle automatically.",
+  "regression": "Retiring the previous dissolve before reusing its video buffer fixed start clips being paused during rapid state entry.",
+  "chem1_end3VideoSha256": "a599ac4c2da7c7e9ce3f2c8872ab4e1ce316135c08b20c5c7c5532cf22d47b5e",
+  "limitations": [
+    "This proves observed playback and idle return, not visual anatomy, gesture fidelity or natural seams.",
+    "chem1_end3 art remains under repair. Its replacement requires another playback check.",
+    "The full download event export timed out; only the DOM summary and coverage table were directly read."
+  ]
+}

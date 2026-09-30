@@ -1,0 +1,177 @@
+{
+  "kind": "Transcription of actual browser DOM status and coverage, not full event export",
+  "page": "http://127.0.0.1:8475/animation-runtime-qa.html?scope=pastry1",
+  "finishedAt": "2026-09-30T11:28:09.721Z",
+  "scope": "pastry1",
+  "passed": 11,
+  "failed": 0,
+  "planned": 11,
+  "stopped": false,
+  "registeredClipCount": 39,
+  "completedClipCount": 14,
+  "missingClips": [],
+  "coverage": [
+    {
+      "clip": "idle1_loop",
+      "playing": 22,
+      "ended": 1,
+      "errors": 0,
+      "completed": 1,
+      "videoSha256": "4ed60b4cf677a445e1c0bea006ce9896c9050318e25f59108df922bf3021d730"
+    },
+    {
+      "clip": "pastry1_start",
+      "playing": 10,
+      "ended": 10,
+      "errors": 0,
+      "completed": 10,
+      "videoSha256": "e8638b300417433fba8db026a5d536db2bfc6fec169377e03319c5c922a99c5b"
+    },
+    {
+      "clip": "pastry1_loop",
+      "playing": 20,
+      "ended": 10,
+      "errors": 0,
+      "completed": 10,
+      "videoSha256": "9a5070d2e81c17f77b17795cbe25c558fd61c077ed43df4462584224738cc10a"
+    },
+    {
+      "clip": "pastry1_end1",
+      "playing": 1,
+      "ended": 1,
+      "errors": 0,
+      "completed": 1,
+      "videoSha256": "ee81c19c50f7f926c1c94be62c67a36bba273baafd78e4f3788a568cd7da18ec"
+    },
+    {
+      "clip": "pastry1_end2",
+      "playing": 1,
+      "ended": 1,
+      "errors": 0,
+      "completed": 1,
+      "videoSha256": "86af10f4e23e023741a171bdaacce117f994553cbb548aba3f495c2e271940a6"
+    },
+    {
+      "clip": "pastry1_end3",
+      "playing": 1,
+      "ended": 1,
+      "errors": 0,
+      "completed": 1,
+      "videoSha256": "9ca585e7dfb2b34bfaea70ea4619f18b334e55a45f3f3729adcf57ab92488a7c"
+    },
+    {
+      "clip": "pastry1_end4",
+      "playing": 1,
+      "ended": 1,
+      "errors": 0,
+      "completed": 1,
+      "videoSha256": "e23e92f1468449689f92ac2048f27f389d79aa98cb8a31d69cc85dc93b489bb2"
+    },
+    {
+      "clip": "pastry1_end5",
+      "playing": 1,
+      "ended": 1,
+      "errors": 0,
+      "completed": 1,
+      "videoSha256": "74f4dbaf2ee4a5b6d4b7d00f70d553f0362904c5a3ad280beaccb79917006069"
+    },
+    {
+      "clip": "pastry1_end6",
+      "playing": 1,
+      "ended": 1,
+      "errors": 0,
+      "completed": 1,
+      "videoSha256": "3eae14c3dde2c57b467fd0fae94429a437a0164213e9c3af99849380c7e16c84"
+    },
+    {
+      "clip": "pastry1_end7",
+      "playing": 1,
+      "ended": 1,
+      "errors": 0,
+      "completed": 1,
+      "videoSha256": "bfe5e5ca65b748b7dd4149d35e24739d9d5c375cf988989fd910ef070c410af3"
+    },
+    {
+      "clip": "pastry1_end8",
+      "playing": 1,
+      "ended": 1,
+      "errors": 0,
+      "completed": 1,
+      "videoSha256": "720b289614514237be0addeb3e5682eba1a7a6ed08eed0c26bde0c7e53ef7efb"
+    },
+    {
+      "clip": "pastry1_end9",
+      "playing": 1,
+      "ended": 1,
+      "errors": 0,
+      "completed": 1,
+      "videoSha256": "26566598a45a0c4dab4d207ade0f0d977582e5d5227a9019654935c09b470f7d"
+    },
+    {
+      "clip": "pastry1_end10",
+      "playing": 1,
+      "ended": 1,
+      "errors": 0,
+      "completed": 1,
+      "videoSha256": "2992843b8440053470cf78bc71424e0fd098aba7dfe415b71d2d8fe54ea3f981"
+    },
+    {
+      "clip": "pastry1_outro",
+      "playing": 10,
+      "ended": 10,
+      "errors": 0,
+      "completed": 10,
+      "videoSha256": "9f1124c467600cd1c9b5619bf772b8728f1fb331f2f254c7b29fa8a6d0675ae6"
+    }
+  ],
+  "widgetSha256": "00e625fa0d9d60c08c60eb691156218ce7619e088522f6a724b9d4643b7018b1",
+  "harnessSha256": "6c14cde4b967886d6642d59a0a5c165130fd4836396ac3b9e35ca1009a9525b1",
+  "manifestDuringRun": "13 pastry generated with motion/seams pending; 26 reviewed; candidate hashes above bind actual run",
+  "unchanged26PriorCoverage": "sprites/rebuilt/qa/runtime_dom_summary_latest_20260930.json",
+  "unchanged26HashVerified": [
+    "idle1_loop",
+    "basic1_loop",
+    "basic2_loop",
+    "basic3_loop",
+    "doze1_loop",
+    "happy1_start",
+    "happy1_loop",
+    "happy1_end",
+    "happy2_loop",
+    "happy3_loop",
+    "excited1_loop",
+    "boxing1_loop",
+    "dance1_loop",
+    "yaho1_loop",
+    "parapara1_loop",
+    "dance2_loop",
+    "dance3_loop",
+    "lemon1_loop",
+    "sad1_loop",
+    "sad2_loop",
+    "talk_loop",
+    "chem1_start",
+    "chem1_loop",
+    "chem1_end1",
+    "chem1_end2",
+    "chem1_end3"
+  ],
+  "limitations": "New scoped run covers all changed pastry clips plus idle. Previous full 32-case run is retained only for unchanged 26 current videos; this is not a fresh full 32-case run.",
+  "finalApprovedManifestSha256": "42fc84764b842706b7f3341c7b4f72be283df45096d646661a0c44d70f1b83af",
+  "localDocs": {
+    "copiedVideos": 39,
+    "allCandidateHashesMatch": true,
+    "widgetMatchesDocs": true,
+    "totalVideoKB": 8307,
+    "remotePublished": false
+  },
+  "comparisonScreenshot": "sprites/rebuilt/qa/pastry_scale_browser_comparison.png",
+  "finalChecks": [
+    "Original39 frame/video hashes preserved",
+    "158 pastry PNG hashes bound to approval",
+    "13 current pastry videos plus idle actual runtime11cases pass",
+    "26 unchanged candidate videos match prior full runtime evidence",
+    "Runtime harness JavaScript syntax pass",
+    "git diff --check pass"
+  ]
+}

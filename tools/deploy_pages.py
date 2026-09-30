@@ -26,10 +26,17 @@ def plan(assets, require_reviewed=False):
             names.update(value if isinstance(value, list) else [value])
     ledger = json.loads((ROOT / 'anims/rebuild_manifest.json').read_text(encoding='utf-8'))
     clips = {Path(c['webm']).name: c for c in ledger['clips']}
-    if names != set(clips):
-        raise ValueError(f'Runtime/ledger mismatch: {sorted(names ^ set(clips))}')
+    preserved = {c['file']: c for c in ledger.get('preservedOriginalClips', [])}
+    if names != set(clips) | set(preserved):
+        raise ValueError(f'Runtime/ledger mismatch: {sorted(names ^ (set(clips) | set(preserved)))}')
     files = []
     for name in sorted(names):
+        if name in preserved:
+            path = ROOT / 'sprites' / name
+            if not path.is_file() or hashlib.sha256(path.read_bytes()).hexdigest() != preserved[name]['sha256']:
+                raise ValueError(f'Missing or changed preserved original asset: {path}')
+            files.append(path)
+            continue
         clip = clips[name]
         if assets == 'rebuilt':
             if clip['status'] not in ('generated', 'reviewed') or not clip.get('candidate'):
@@ -54,7 +61,7 @@ def plan(assets, require_reviewed=False):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--assets', choices=('original', 'rebuilt'), default='original')
+    parser.add_argument('--assets', choices=('original', 'rebuilt'), default='rebuilt')
     parser.add_argument('--require-reviewed', action='store_true')
     parser.add_argument('--dry-run', action='store_true')
     args = parser.parse_args()
@@ -69,7 +76,10 @@ def main():
     if not args.dry_run:
         target.mkdir(parents=True, exist_ok=True)
         for source in files:
-            shutil.copyfile(source, target / source.name)
+            # 재구성 범위 밖의 최신 원본 모션은 원래 sprites 경로에 배치한다.
+            destination = target if source.parent == ROOT / relative else docs / 'sprites'
+            destination.mkdir(parents=True, exist_ok=True)
+            shutil.copyfile(source, destination / source.name)
         (docs / 'index.html').write_text(widget, encoding='utf-8')
         (docs / '.nojekyll').write_text('', encoding='utf-8')
     total = sum(p.stat().st_size for p in files)

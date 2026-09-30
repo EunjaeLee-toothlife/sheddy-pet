@@ -1,0 +1,51 @@
+{
+  "date": "2026-09-30",
+  "method": "Actual browser DOM/video inspection and screenshots, with no assets query override. Asset copies independently checked.",
+  "widgetSHA256": "00e625fa0d9d60c08c60eb691156218ce7619e088522f6a724b9d4643b7018b1",
+  "docsIndexSHA256": "00e625fa0d9d60c08c60eb691156218ce7619e088522f6a724b9d4643b7018b1",
+  "manifestSHA256": "d9a5f12d1d2a998011c6d1abaa7baec59a74c8d9111786e4863390cde000c7b8",
+  "runtimeCases": [
+    {
+      "page": "http://127.0.0.1:8475/widget.html?dice=0&desktop=1&state=chem1",
+      "observedSources": [
+        "http://127.0.0.1:8475/sprites/rebuilt/videos/anim_chem1_start.webm",
+        "http://127.0.0.1:8475/sprites/rebuilt/videos/anim_chem1_loop.webm"
+      ],
+      "rate": 0.7,
+      "activeVideoReadyState": 4,
+      "activeVideoPaused": false,
+      "videoError": null,
+      "renderedCanvasInspected": true
+    },
+    {
+      "page": "http://127.0.0.1:8475/docs/index.html?dice=0&desktop=1&state=boxing1",
+      "observedSource": "http://127.0.0.1:8475/docs/sprites/rebuilt/videos/anim_boxing1_loop.webm",
+      "rate": 0.8,
+      "activeVideoTime": 1.028503,
+      "activeVideoReadyState": 4,
+      "activeVideoPaused": false,
+      "videoError": null,
+      "consoleErrors": [],
+      "renderedCanvasInspected": true
+    }
+  ],
+  "payload": {
+    "reviewedClips": 39,
+    "frames": 579,
+    "all39CopiedVideoSHA256Match": true,
+    "widgetAndDocsHTMLByteIdentical": true,
+    "defaultAssetSet": "rebuilt"
+  },
+  "checks": [
+    "rebuild_animations.py audit: all39 source hashes, PNGs, duration, expanded timing and actual decoded alpha passed after integration",
+    "deploy_pages.py --assets rebuilt --require-reviewed --dry-run passed",
+    "deploy_pages.py --assets rebuilt --require-reviewed built39 videos",
+    "Inline JavaScript syntax passed for widget/docs/runtimeQA/visualQA/comparison",
+    "git diff --check passed"
+  ],
+  "limits": [
+    "Pages payload was generated locally; no remote publication performed.",
+    "Electron binary packaging was not requested or run; package asset glob includes all39 rebuilt videos.",
+    "Background browser throttling triggered existing watchdog recovery warnings during a hidden smoke tab; visible actual-canvas scenarios completed. No media/console error was observed."
+  ]
+}

@@ -1,0 +1,260 @@
+{
+  "kind": "Transcription of actual browser DOM status and coverage; not full event export",
+  "page": "http://127.0.0.1:8475/animation-runtime-qa.html",
+  "finishedAt": "2026-09-29T22:54:05.892Z",
+  "passed": 32,
+  "failed": 0,
+  "planned": 32,
+  "stopped": false,
+  "completedClipCount": 39,
+  "missingClips": [],
+  "widgetSha256": "474f4fc38c8fb668e86a88092b1fbd569d372994e5b5c2fdbfc2f45543184029",
+  "harnessSha256": "002300ae2b20db250519782d8dd04969fac0f523390dd4d7eb04d93ade85fddd",
+  "manifestSha256": "ce7a461127d4386bbb1590e85fa9a667434f755a53a3380be8d1c4054e1a6b6b",
+  "coverage": [
+    {
+      "clip": "idle1_loop",
+      "videoSha256": "4ed60b4cf677a445e1c0bea006ce9896c9050318e25f59108df922bf3021d730",
+      "observedCompleted": true,
+      "observedErrors": 0
+    },
+    {
+      "clip": "basic1_loop",
+      "videoSha256": "bbdf29e3dafa0969cc90565a9ab90973e9918845668aaf1678e5caad060945cd",
+      "observedCompleted": true,
+      "observedErrors": 0
+    },
+    {
+      "clip": "basic2_loop",
+      "videoSha256": "22e899eaea309fe947d1624645948c0483f0e766013c75e688da112c4dfc6be3",
+      "observedCompleted": true,
+      "observedErrors": 0
+    },
+    {
+      "clip": "basic3_loop",
+      "videoSha256": "4d0709b409af67194f2ffb1a872385370bfddffb860b812efd50123c143c88f6",
+      "observedCompleted": true,
+      "observedErrors": 0
+    },
+    {
+      "clip": "doze1_loop",
+      "videoSha256": "15739953100d64bc23f75c54a609b2ecd181c66ad891d7dfeb8cd50fa21fdef1",
+      "observedCompleted": true,
+      "observedErrors": 0
+    },
+    {
+      "clip": "happy1_start",
+      "videoSha256": "419a94b80cf60371d968579606a1319c677b2efe84a64cbeaeffd29fbac6ade2",
+      "observedCompleted": true,
+      "observedErrors": 0
+    },
+    {
+      "clip": "happy1_loop",
+      "videoSha256": "49497f01657eb17ff0076ca0e308b75ddfd3aecc4aafa34790315949e829539d",
+      "observedCompleted": true,
+      "observedErrors": 0
+    },
+    {
+      "clip": "happy1_end",
+      "videoSha256": "5c0040ff0dc3658d26e6ea0bf94c91437add412ba76956b14a67e713b1dcc8b0",
+      "observedCompleted": true,
+      "observedErrors": 0
+    },
+    {
+      "clip": "happy2_loop",
+      "videoSha256": "5057e93f09cefe447d30b50b332fe5aba137a93bfeb0f075f8fbf3d02ab51a48",
+      "observedCompleted": true,
+      "observedErrors": 0
+    },
+    {
+      "clip": "happy3_loop",
+      "videoSha256": "9bdac9ebc7f69d9f49e99cb661ef3119477639fee1084d0422b07ad305a2cd3e",
+      "observedCompleted": true,
+      "observedErrors": 0
+    },
+    {
+      "clip": "excited1_loop",
+      "videoSha256": "e905b9af699e9f8de053fd86613ad57c04a2f76be8e0d576f34a21b37d115671",
+      "observedCompleted": true,
+      "observedErrors": 0
+    },
+    {
+      "clip": "boxing1_loop",
+      "videoSha256": "42c8beedfbab3df00d244c674ec0a5a849a76ecd7c0a50e600ba1632cb86c05b",
+      "observedCompleted": true,
+      "observedErrors": 0
+    },
+    {
+      "clip": "dance1_loop",
+      "videoSha256": "451a50e84ea9676070c2b207383834ee5d01c23ad11b23afb1c46d1b4d6b7e81",
+      "observedCompleted": true,
+      "observedErrors": 0
+    },
+    {
+      "clip": "yaho1_loop",
+      "videoSha256": "855e6c981e807f4b4b4bdbf7afe3ad1dcca2ab1a940a26ef43a3a9c34a4b262c",
+      "observedCompleted": true,
+      "observedErrors": 0
+    },
+    {
+      "clip": "parapara1_loop",
+      "videoSha256": "115fca931907a59cf701975df430b781cf9bb7503ae55fc12e619dc24c893462",
+      "observedCompleted": true,
+      "observedErrors": 0
+    },
+    {
+      "clip": "dance2_loop",
+      "videoSha256": "46f300f1ce01446d74b150c0535337b4a28a2fd4790ed9883cb76951b9feda2f",
+      "observedCompleted": true,
+      "observedErrors": 0
+    },
+    {
+      "clip": "dance3_loop",
+      "videoSha256": "015b861874c19df9021dbdfcc6598724e45e31b8044ab2ed75f4ba76a50cb6e9",
+      "observedCompleted": true,
+      "observedErrors": 0
+    },
+    {
+      "clip": "pastry1_start",
+      "videoSha256": "1d6e4158b03d10d06f8f01d208b56b12e71fa348fc6102773d118459a5a6d51a",
+      "observedCompleted": true,
+      "observedErrors": 0
+    },
+    {
+      "clip": "pastry1_loop",
+      "videoSha256": "06971a59f56a587e4f8566462630250c1af99a152e0f0904374f4c4a9e937654",
+      "observedCompleted": true,
+      "observedErrors": 0
+    },
+    {
+      "clip": "pastry1_end1",
+      "videoSha256": "a30aba20fcfaa0ba988c3b04369d46699b72ef89cc43f8a5fb6bcb515c7d469e",
+      "observedCompleted": true,
+      "observedErrors": 0
+    },
+    {
+      "clip": "pastry1_end2",
+      "videoSha256": "6663bffc8eab9568945360c39d87a430e9bd2524e2b69e8154ba41065e3cafe3",
+      "observedCompleted": true,
+      "observedErrors": 0
+    },
+    {
+      "clip": "pastry1_end3",
+      "videoSha256": "73f670c468680b198145525f32e8cb38793a0c45d2a4fce9413bbd85d9491e2e",
+      "observedCompleted": true,
+      "observedErrors": 0
+    },
+    {
+      "clip": "pastry1_end4",
+      "videoSha256": "6b25152f06653ab89f51cfa759f2fa57b347b5caaa7ffcf3c92aced4022c8a00",
+      "observedCompleted": true,
+      "observedErrors": 0
+    },
+    {
+      "clip": "pastry1_end5",
+      "videoSha256": "282725c7cc85ec636cc5f7251aabc517963635d0600b290f894ded7966b52111",
+      "observedCompleted": true,
+      "observedErrors": 0
+    },
+    {
+      "clip": "pastry1_end6",
+      "videoSha256": "cbf261822dd4d21503ebaf746099f7edd428ae1af9e54acc8273fcccfc007e64",
+      "observedCompleted": true,
+      "observedErrors": 0
+    },
+    {
+      "clip": "pastry1_end7",
+      "videoSha256": "80c9aa272ed270a1efac8a6cf9eb7477e2c7f6c2713f72e9fe145e8f1def9518",
+      "observedCompleted": true,
+      "observedErrors": 0
+    },
+    {
+      "clip": "pastry1_end8",
+      "videoSha256": "4232018352d3b81d9896f481ca86c6c4cc4f353c4a3a807e1762cb88ea7f84a5",
+      "observedCompleted": true,
+      "observedErrors": 0
+    },
+    {
+      "clip": "pastry1_end9",
+      "videoSha256": "04f9f13d84d262e2953d39a054032a426e37d2bc88c974666abb8a156b1ea804",
+      "observedCompleted": true,
+      "observedErrors": 0
+    },
+    {
+      "clip": "pastry1_end10",
+      "videoSha256": "acd9e38534593e4a49d34409119641bc4096199612b4f09a4ea042bf77e55e54",
+      "observedCompleted": true,
+      "observedErrors": 0
+    },
+    {
+      "clip": "pastry1_outro",
+      "videoSha256": "1f4efd9045e53ff94f3da441e2f8bad1dbf2973810c5e5744563c02eb8a18ab2",
+      "observedCompleted": true,
+      "observedErrors": 0
+    },
+    {
+      "clip": "lemon1_loop",
+      "videoSha256": "f1e0d718a16acd7e3a24769f6a7abdd2ff0bbc602abbe67b8dd48477c8b3e23b",
+      "observedCompleted": true,
+      "observedErrors": 0
+    },
+    {
+      "clip": "sad1_loop",
+      "videoSha256": "7b3a5c266573b85c984ef55b6df8e0048fe8d75827bcd1f5f64a95eb4d7b55ad",
+      "observedCompleted": true,
+      "observedErrors": 0
+    },
+    {
+      "clip": "sad2_loop",
+      "videoSha256": "43d9475bb48f54733f1a4986f5c66d8f5e4319286d81362f450c566d85ee8829",
+      "observedCompleted": true,
+      "observedErrors": 0
+    },
+    {
+      "clip": "talk_loop",
+      "videoSha256": "ba962f044db729c7360c762b0bbf234674d33c6e07a38c8985f6c854b2617a76",
+      "observedCompleted": true,
+      "observedErrors": 0
+    },
+    {
+      "clip": "chem1_start",
+      "videoSha256": "35e9a0ebbf6083bbd3f519c7e9786d19e274b0daae2bdcce3fd78a0df2b485e6",
+      "observedCompleted": true,
+      "observedErrors": 0
+    },
+    {
+      "clip": "chem1_loop",
+      "videoSha256": "a6fc82ef819e239102126bd0aa165ef1d28b19d9977136944d97a5e68b71b49b",
+      "observedCompleted": true,
+      "observedErrors": 0
+    },
+    {
+      "clip": "chem1_end1",
+      "videoSha256": "8f0ab4f9e95bd6c4c468ca85ba94814571700d960dc992e9dd7d3bba42594c88",
+      "observedCompleted": true,
+      "observedErrors": 0
+    },
+    {
+      "clip": "chem1_end2",
+      "videoSha256": "9ee4bcbc66f460d451ab4ced2a224ee92c934ee72858da4de4af7c946d9b2e07",
+      "observedCompleted": true,
+      "observedErrors": 0
+    },
+    {
+      "clip": "chem1_end3",
+      "videoSha256": "f1838cef4957c94ba835d774d1db85508e5c5dfd5a52e8405b19c0f66adccf0f",
+      "observedCompleted": true,
+      "observedErrors": 0
+    }
+  ],
+  "latestRepairsIncluded": {
+    "pastry1_end3": "73f670c468680b198145525f32e8cb38793a0c45d2a4fce9413bbd85d9491e2e",
+    "chem1_end2": "9ee4bcbc66f460d451ab4ced2a224ee92c934ee72858da4de4af7c946d9b2e07",
+    "chem1_end3": "f1838cef4957c94ba835d774d1db85508e5c5dfd5a52e8405b19c0f66adccf0f"
+  },
+  "limitations": [
+    "DOM status/results and all39 coverage rows directly read through browser UI; full event export is not attached.",
+    "Successful playing/ended coverage proves playback, timing and return checks; it does not alone approve anatomy or visual state dissolves."
+  ],
+  "regression": "Actual fast idle-playing to state entry without artificial delay passed after retiring outstanding fade before buffer reuse."
+}

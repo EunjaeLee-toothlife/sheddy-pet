@@ -1,0 +1,19 @@
+{
+  "happy1_start_05 -> happy1_loop_00": {
+    "pixels": 0,
+    "bbox": null
+  },
+  "happy1_loop_00 -> happy1_end_00": {
+    "pixels": 0,
+    "bbox": null
+  },
+  "happy1_loop_17 -> happy1_end_00": {
+    "pixels": 63759,
+    "bbox": [
+      145,
+      45,
+      368,
+      500
+    ]
+  }
+}

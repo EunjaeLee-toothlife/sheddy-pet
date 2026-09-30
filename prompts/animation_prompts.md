@@ -383,6 +383,63 @@ idle → 등 뒤에서 통레몬 꺼내 자랑 → 크게 베어물기 → 얼�
   "big bite taken out of it"으로 상태를 고정.
 - WebM: `ffmpeg -y -framerate 10 -i sprites/lemon1_loop/lemon1_loop_%02d.png -c:v libvpx-vp9 -pix_fmt yuva420p -b:v 0 -crf 24 -an sprites/anim_lemon1_loop.webm`
 
+## 4-i) 특수: 연구 노트 메모 (note) — 1종, flux2-klein-4b 1호 ⭐신규 생성기
+
+### note1 (클립보드에 끄적끄적 → 레몬 낙서 자랑)
+idle → 등 뒤에서 클립보드 꺼내기 → 연필 꺼내기 → 끄적끄적(5-6 ×3) → 멈칫 → 연필로 턱 짚고 고민(8-9 ×2) →
+아이디어! → 신나서 빠르게 끄적(11-12 ×4) → 레몬 낙서를 시청자에게 자랑(13-14 ×2) → 등 뒤로 숨기고 idle 복귀.
+완결형 19프레임, 포즈 단위 홀드 인코딩 74틱 @10FPS(7.4초), 위젯 `rate` 기본값, `minCycles 1 / maxCycles 1`.
+- 정의: `anims/note1_loop.json` (`klein` 키에 프레임별 모드·기준 프레임·seed 기록)
+- 클립보드는 항상 화면 **오른쪽** 손, 연필은 항상 화면 **왼쪽** 손. '아이디어'는 표정과 치켜든 연필로만 표현
+  (머리 위 전구·느낌표는 매트 정리에서 지워진다).
+- 생성: `gen_frames.py`가 아니라 LAN의 imagegen MCP 서버(`flux2-klein-4b`, FLUX.2 klein 4B distilled)로 한 장씩.
+  로컬 GPU라 비용 0, 프레임당 10~15초(4스텝, 레퍼런스 1장당 +3초). 자연어 프롬프트라 PREAMBLE / CHARACTER를 그대로 쓴다.
+  `create_upload_url` → `curl --data-binary @refs/chibi_base.png` → `upload_id`. 생성 결과는 `job_id`로 다시 레퍼런스에 넣는다.
+- 후처리: `python tools/slice_and_key.py --frames "sprites/raw/note1_loop_*.jpg" --outdir sprites/note1_loop --prefix note1_loop --no-align --no-scale-norm --match sprites/idle1_loop/idle1_loop_00.png`
+  → `python tools/encode_holds.py anims/note1_loop.json --fps 10`
+  - klein은 같은 seed로 뽑으면 몸이 프레임 간 1px 안쪽으로 고정돼서(발 중심 표준편차 0.17px) 정합·크기 정규화가 필요 없다.
+    한쪽으로 든 소품이 있으면 위상 상관 정합이 오히려 끌려간다.
+  - 대신 캐릭터가 lite 클립보다 1.3% 크게(키 458px vs 451px) 나오므로 `--match`로 idle1 첫 프레임에 클립 전체를 맞춘다.
+
+**klein 전용 STYLE** — 기본 STYLE("bold thick dark-brown outline")을 그대로 주면 프레임에 따라 굵은 갈색 외곽선과
+흰 스티커 테두리가 갈린다. 레퍼런스의 실제 모습대로 적어 주면 흰 테두리로 고정된다:
+`[STYLE] high-quality anime, clean vector linework with dark-brown lines, consistent line weight, a clean white sticker border of even thickness around the entire silhouette of the character and anything she holds, crisp hard edges against the background, no glow, no drop shadow, perfectly flat uniform green background. soft pastel lemon palette, cozy desktop-pet mascot design.`
+프롬프트 맨 앞에는 서버 권장 서두를 붙인다: `The same chibi character from the reference images, with the same face, hair, lemon-slice hair clip and outfit, same art style and rendering as the references.`
+
+**klein의 chain은 Gemini와 다르게 동작한다 (핵심):**
+- 직전 프레임을 레퍼런스로 주고 "포즈를 조금만 바꿔라"고 하면 **직전 프레임을 그대로 복사한다.** 얼굴(눈·입), 종이 위의 글씨,
+  작은 효과선 같은 '질감 수준' 변화는 반영되지만 **팔·손·소품 위치는 움직이지 않는다.** seed를 바꿔도, "ARMS ARE IN A NEW
+  POSITION"이라고 써도 마찬가지. 중간 프레임(in-between)을 chain으로 만들 수 없다.
+- 반대로 레퍼런스 프레임의 팔 배치가 목표 포즈와 **멀면** 큰 포즈 변화는 잘 따른다(손 뒤로 → 한 팔로 클립보드 꺼내기).
+- 그래서 세 가지 모드를 섞어 쓴다 (`anims/note1_loop.json`의 `klein.modes`):
+  - **pose** — 레퍼런스 = [기준 디자인, 팔 배치가 *다른* 앞 프레임]. 지시문: `IMAGE 2 is an earlier frame of this animation:
+    reuse its character, outfit and the exact design of its clipboard (…), but her arms are in a completely NEW position in
+    this frame.` 같은 기준 프레임 + **같은 seed**로 뽑은 프레임끼리는 몸·소품 배치가 같게 나오므로, 포즈 문장의 몇 단어만
+    바꾸면 통제된 변주가 된다 — note1의 끄적 A/B, 고민 A/B, 아이디어, 자랑 프레임이 전부 "기준 2번 프레임 + seed 1001"이다.
+    in-between은 이렇게 만든다.
+  - **face** — 레퍼런스 = [기준 디자인, 복사할 프레임], 그 프레임과 같은 seed. 지시문: `Keep the body, both arms, the hands,
+    the clipboard, the pencil … EXACTLY the same as IMAGE 2. What CHANGES in this frame is her FACE: …` 몸은 픽셀 단위로
+    유지되고 표정·종이 내용만 바뀐다. 빠르게 끄적(신난 표정), 자랑 B(눈웃음), 마무리 프레임들이 이 방식.
+  - **chain** — gen_frames.py의 CHAIN_NOTE 그대로. 목표 포즈가 기준 프레임과 멀 때만 쓴다.
+- 기준 프레임과 **같은 seed**를 pose 모드에 쓰면 기준 프레임의 배치를 그대로 재현해 버린다(2번 프레임이 seed 1002라
+  pose 프레임들은 1001). 반대로 face 모드는 같은 seed라야 복사가 정확하다.
+- 소품 사양은 매 프롬프트에 다시 적는다: `There is exactly ONE clipboard in the image and the white paper is clipped ON that
+  brown clipboard.` 이게 없으면 레퍼런스 없는 생성에서 판과 종이가 따로 그려진다. 클립이 위아래 두 개 붙는 경우도 있어
+  문구를 조금 바꿔 다시 뽑았다.
+- **소품 크기는 포즈마다 달라진다.** 연필을 클립보드에서 떼어 든 프레임(꺼내기·고민·아이디어)에서는 같은 "yellow pencil"이
+  끄적 프레임보다 1.5배 길거나 훨씬 굵게 나왔다. `a small short thin yellow pencil … The pencil is small, no longer than her
+  forearm sleeve cuff is wide.`(세워 든 아이디어 프레임은 `small thin slender … not thick, not chunky`)를 넣어 다시 뽑으니
+  배치는 그대로이고 연필만 맞춰졌다 — 같은 기준 프레임·같은 seed라면 단어 몇 개를 바꿔도 배치가 유지된다는 점을 다시 확인.
+- **두 포즈 사이를 잇는 프레임은 face 모드로 만든다.** 처음엔 '가슴 앞에 클립보드를 든 준비 자세'를 따로 뽑았더니 클립보드
+  크기·위치가 끄적 프레임과 달라 넘어갈 때 튀었다. 끄적 A를 기준으로 face 모드("종이는 아직 비어 있다 + 차분한 표정")로
+  뽑으니 몸은 끄적 A와 픽셀 단위로 같고 종이·표정만 달라서 매끄럽게 이어진다.
+- **작은 잡티는 같은 그룹 프레임에서 덮어쓴다.** 자랑 A/B의 머리 왼쪽 윤곽에 작은 고리가 붙어 나왔는데(본체와 이어져 있어
+  매트 정리에서도 안 지워진다), 같은 기준·같은 seed로 뽑은 끄적 A는 그 자리의 윤곽이 1px 이내로 같아서 1024px 원본의
+  46×50px 상자를 그대로 복사해 이음매 없이 지웠다. 위치는 `anims/note1_loop.json`의 `klein.retouch`.
+- 하체는 거의 항상 레퍼런스 그대로다(무릎 굽히기·발 벌리기 지시가 잘 안 먹는다). 상체 위주 모션에 쓰고, 발을 벌리는
+  큰 포즈(복싱 등)는 lite 쪽이 낫다.
+- 머리 주변에 떠 있는 효과선은 lite와 마찬가지로 매트 정리에서 지워지니 신경 쓰지 않아도 된다.
+
 ## 5) 우울 상태 (sad) — 2종
 
 ### sad1 (풀 죽음)

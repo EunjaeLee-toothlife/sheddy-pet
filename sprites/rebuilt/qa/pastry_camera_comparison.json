@@ -1,0 +1,20 @@
+{
+  "readOnlyAnalysis": true,
+  "method": "Representative frame00 measurements. Opaque alpha>100 bounds; pale-skin threshold within visually verified face ROI, largest connected component. Face widths have about 2-4px uncertainty from blush/antialias/expression. Alpha height includes hat/props, so chin-to-shoe distance is also reported.",
+  "measurements": [
+    {"clip":"idle1_loop","frame":0,"faceSkinWidthPx":95,"chinY":192,"shoeBottomY":497,"chinToShoePx":305,"alphaTopY":48,"alphaHeightPx":450},
+    {"clip":"dance1_loop","frame":0,"faceSkinWidthPx":94,"chinY":198,"shoeBottomY":496,"chinToShoePx":298,"alphaTopY":57,"alphaHeightPx":440},
+    {"clip":"dance2_loop","frame":0,"faceSkinWidthPx":91,"chinY":197,"shoeBottomY":496,"chinToShoePx":299,"alphaTopY":57,"alphaHeightPx":440},
+    {"clip":"dance3_loop","frame":0,"faceSkinWidthPx":89,"chinY":197,"shoeBottomY":496,"chinToShoePx":299,"alphaTopY":57,"alphaHeightPx":440},
+    {"clip":"parapara1_loop","frame":0,"faceSkinWidthPx":86,"chinY":191,"shoeBottomY":496,"chinToShoePx":305,"alphaTopY":57,"alphaHeightPx":440},
+    {"clip":"chem1_loop","frame":0,"faceSkinWidthPx":94,"chinY":186,"shoeBottomY":495,"chinToShoePx":309,"alphaTopY":46,"alphaHeightPx":450},
+    {"clip":"pastry1_loop","frame":0,"faceSkinWidthPx":80,"chinY":259,"shoeBottomY":496,"chinToShoePx":237,"alphaTopY":113,"alphaHeightPx":384}
+  ],
+  "relativeToIdle": {"chefFace":0.8421,"chefChinToShoe":0.7770,"chefAlphaHeight":0.8533},
+  "normalChefUnscaledInference": {"faceWidthPx":102.56,"chinToShoePx":303.85,"note":"The raw donor has about 8% larger face/body ratio than canonical idle; removing .78 camera entirely does not match both face and body simultaneously."},
+  "options": [
+    {"strategy":"Keep deliberate zoom during magic flash","assetChanges":0,"runtimeChanges":0,"note":"Smallest intervention; precise endpoints already match idle/loop/outro. Size change remains visible across the transformed costume, but occurs inside the original flash."},
+    {"strategy":"Runtime pastry-family scale about1.22 around foot anchor, with larger logical stage","assetChanges":0,"runtimeChanges":"phase-aware scale for mixed start/outro; extend top headroom","normalChefFacePx":97.6,"normalChefChinToShoePx":289.14,"requiredOverheadContentHeightPx":571,"recommendedLogicalStageHeightPx":600,"note":"Best non-destructive compromise if equal apparent size is required. Current html/body overflow:hidden and512 logical viewport would clip overhead if only CSS scale is added. Preserve current pixel scale and expand available stage, rather than shrinking all states to fit."},
+    {"strategy":"Rebuild only chef family with body geometry matching canonical and taller source canvas","assetChanges":"chef family only","note":"Highest visual consistency and largest cost. Keep full gestures and regenerate consistent head/body ratio, then register onto a larger shared virtual stage. No squash, crop, or gesture deletion."}
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "scenario": "pastry1 ending3",
+  "page": "http://127.0.0.1:8475/animation-visual-qa.html",
+  "completed": true,
+  "realCanvasSnapshots": 146,
+  "boundaries": 8,
+  "durationMs": 9300,
+  "observedVideos": [
+    "idle1_loop",
+    "pastry1_start",
+    "pastry1_loop",
+    "pastry1_end3",
+    "pastry1_outro"
+  ],
+  "reviewed": [
+    "Normal chef/body scale and clean face/jacket",
+    "Normal to lowered presentation to overhead to lowered presentation back to normal, time0.361 through1.600",
+    "Whole hands, plate and food visible in overhead pose; readable staged camera adjustment",
+    "End/outro boundary time0.097 through0.189 and automatic idle return"
+  ],
+  "screenshot": "sprites/rebuilt/qa/pastry_scale_actual_overhead.png",
+  "videoHashes": {
+    "idle1_loop": "4ed60b4cf677a445e1c0bea006ce9896c9050318e25f59108df922bf3021d730",
+    "pastry1_start": "e8638b300417433fba8db026a5d536db2bfc6fec169377e03319c5c922a99c5b",
+    "pastry1_loop": "9a5070d2e81c17f77b17795cbe25c558fd61c077ed43df4462584224738cc10a",
+    "pastry1_end3": "9ca585e7dfb2b34bfaea70ea4619f18b334e55a45f3f3729adcf57ab92488a7c",
+    "pastry1_outro": "9f1124c467600cd1c9b5619bf772b8728f1fb331f2f254c7b29fa8a6d0675ae6"
+  },
+  "limits": "All13 static review and all10 endings runtime complement selected actual-canvas end3 inspection. Camera scale change remains intentionally visible around overhead poses; frame-level transforms do not interpolate between source poses."
+}
