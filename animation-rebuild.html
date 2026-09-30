@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="ko">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sheddy 전체 애니메이션 재구성</title>
+<style>
+  body { margin: 0; padding: 28px; background: #faf7ef; color: #443a30; font: 16px/1.6 system-ui, sans-serif; }
+  main { max-width: 1060px; margin: auto; }
+  h1 { font-size: 26px; margin: 0 0 8px; }
+  .controls { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; margin: 20px 0; }
+  select, button { padding: 10px; border: 1px solid #d6c99f; border-radius: 10px; background: white; font: inherit; }
+  button { background: #ffedb4; cursor: pointer; }
+  .pair { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+  article { padding: 16px; background: white; border-radius: 18px; }
+  h2 { font-size: 18px; margin: 0 0 10px; }
+  .stage { aspect-ratio: 1; background: repeating-conic-gradient(#ede9e0 0% 25%, #faf8f2 0% 50%) 0 0 / 24px 24px; border-radius: 12px; display: grid; place-items: center; }
+  video, .stage img { width: 100%; height: 100%; object-fit: contain; }
+  .stage p { padding: 20px; text-align: center; }
+  .note { font-size: 14px; color: #746859; }
+  input { width: 100%; }
+  [hidden] { display: none !important; }
+  @media (max-width: 480px) { body { padding: 14px; } .pair { grid-template-columns: 1fr; } }
+</style>
+<main>
+  <h1>전체 애니메이션 재구성</h1>
+  <p id="progress">목록을 불러오는 중…</p>
+  <div class="controls"><label>동작 <select id="clip"></select></label><button id="replay">처음부터 비교</button><button id="pause">일시정지</button></div>
+  <p id="details" class="note"></p>
+  <div class="pair">
+    <article><h2>기존</h2><div class="stage"><video id="oldVideo" autoplay muted loop playsinline></video><img id="oldFrame" alt="기존 프레임" hidden></div></article>
+    <article><h2>재구성</h2><div class="stage"><video id="newVideo" autoplay muted loop playsinline hidden></video><img id="newFrame" alt="재구성 프레임" hidden><p id="pending">재구성 중입니다.</p></div></article>
+  </div>
+  <h2 style="margin-top:24px">프레임 비교 <span id="frameLabel"></span></h2>
+  <input id="scrub" type="range" min="0" max="0" value="0" aria-label="비교할 프레임">
+  <p class="note">같은 순서의 원본 포즈와 재구성 포즈를 비교합니다. 프레임 슬라이더를 움직이면 영상을 멈추고 해당 PNG를 표시합니다.</p>
+  <p class="note" id="quality"></p>
+</main>
+<script>
+  const $ = id => document.getElementById(id);
+  const videos = [$('oldVideo'), $('newVideo')];
+  let clips = [], current, stamp = '';
+  function frameView(index) {
+    videos.forEach(v => { v.pause(); v.hidden = true; });
+    $('oldFrame').src = current.frames[index] + stamp;
+    $('oldFrame').hidden = false;
+    $('newFrame').hidden = !current.candidate;
+    if (current.candidate) $('newFrame').src = `sprites/rebuilt/frames/${current.clip}/${current.clip}_${String(index).padStart(2,'0')}.png${stamp}`;
+    $('frameLabel').textContent = `${index + 1} / ${current.count}`;
+    $('pause').textContent = '재생';
+  }
+  async function replay() {
+    $('oldFrame').hidden = $('newFrame').hidden = true;
+    videos[0].hidden = false;
+    videos[1].hidden = !current.candidate;
+    const active = current.candidate ? videos : [videos[0]];
+    active.forEach(v => { v.currentTime = 0; });
+    await Promise.all(active.map(v => v.play().catch(() => {})));
+    $('pause').textContent = '일시정지';
+    $('frameLabel').textContent = '';
+  }
+  function load(index) {
+    current = clips[index];
+    videos.forEach(v => v.pause());
+    videos[0].src = current.webm + stamp;
+    if (current.candidate) videos[1].src = current.candidate + stamp;
+    else videos[1].removeAttribute('src');
+    videos.forEach(v => { v.defaultPlaybackRate = v.playbackRate = current.rate; });
+    $('pending').hidden = Boolean(current.candidate);
+    $('details').textContent = `${current.count}프레임 · ${current.sourceDuration.toFixed(2)}초 · 실제 위젯 ${current.rate}배속`;
+    $('quality').textContent = !current.candidate ? '재구성 중이며 아직 전체 영상 후보가 없습니다.' : current.status === 'reviewed' ? '동작과 그림체 비교를 검수한 후보입니다.' : '생성 완료 · 동작과 그림체 검수 중입니다.';
+    $('scrub').max = current.count - 1;
+    $('scrub').value = 0;
+    replay();
+  }
+  $('clip').onchange = event => load(Number(event.target.value));
+  $('scrub').oninput = event => frameView(Number(event.target.value));
+  $('replay').onclick = replay;
+  $('pause').onclick = () => {
+    if (videos[0].paused) replay();
+    else { videos.forEach(v => v.pause()); $('pause').textContent = '재생'; }
+  };
+  fetch('anims/rebuild_manifest.json', {cache:'no-store'}).then(r => { if (!r.ok) throw new Error(r.status); return r.json(); }).then(data => {
+    clips = data.clips;
+    stamp = `?v=${Date.now()}`;
+    const generated = clips.filter(c => c.candidate).length;
+    const reviewed = clips.filter(c => c.status === 'reviewed').length;
+    $('progress').textContent = `전체 ${clips.length}개 영상 · ${clips.reduce((s,c)=>s+c.count,0)}프레임 / 생성 ${generated}개 · 검수 ${reviewed}개`;
+    clips.forEach((c,i) => { const o=document.createElement('option'); o.value=i; o.textContent=`${c.candidate?'●':'○'} ${c.name}`; $('clip').append(o); });
+    const first = Math.max(0, clips.findIndex(c => c.candidate));
+    $('clip').value = first;
+    load(first);
+  }).catch(error => { $('progress').textContent = `목록을 불러오지 못했습니다: ${error.message}`; });
+</script>
+</html>

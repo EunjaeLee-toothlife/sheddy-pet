@@ -1,0 +1,66 @@
+[
+  {
+    "frame": "pastry1_end9_03.png",
+    "offset": [
+      -22,
+      -2
+    ],
+    "method": "planted loafer center/baseline; no scaling or pose replacement"
+  },
+  {
+    "frame": "pastry1_end9_04.png",
+    "offset": [
+      22,
+      -2
+    ],
+    "method": "planted loafer center/baseline; no scaling or pose replacement"
+  },
+  {
+    "frame": "pastry1_end9_05.png",
+    "offset": [
+      -22,
+      5
+    ],
+    "method": "planted loafer center/baseline; no scaling or pose replacement"
+  },
+  {
+    "frame": "pastry1_end9_06.png",
+    "offset": [
+      22,
+      5
+    ],
+    "method": "planted loafer center/baseline; no scaling or pose replacement"
+  },
+  {
+    "frame": "pastry1_end9_07.png",
+    "offset": [
+      -32,
+      -3
+    ],
+    "method": "planted loafer center/baseline; no scaling or pose replacement"
+  },
+  {
+    "frame": "pastry1_end9_08.png",
+    "offset": [
+      20,
+      -3
+    ],
+    "method": "planted loafer center/baseline; no scaling or pose replacement"
+  },
+  {
+    "frame": "pastry1_end9_09.png",
+    "offset": [
+      -34,
+      2
+    ],
+    "method": "planted loafer center/baseline; no scaling or pose replacement"
+  },
+  {
+    "frame": "pastry1_end9_10.png",
+    "offset": [
+      17,
+      3
+    ],
+    "method": "planted loafer center/baseline; no scaling or pose replacement"
+  }
+]

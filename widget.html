@@ -199,7 +199,10 @@
 // ── 애니메이션 레지스트리 ─────────────────────────────────────
 // start/end가 없는 애니메이션은 loop만 등록하면 됨.
 // 파일이 준비되면 여기에 추가. BASE는 서버 배포 시 CDN 경로로 교체.
-const BASE = "sprites/";
+const params = new URLSearchParams(location.search);
+const DEFAULT_ASSET_SET = "rebuilt";
+// Rebuilt candidates can be checked in the actual player before release.
+const BASE = (params.get("assets") || DEFAULT_ASSET_SET) === "rebuilt" ? "sprites/rebuilt/videos/" : "sprites/";
 // ── 2중 가중치 주사위 ──
 // 1차: category 가중치로 "분류"를 뽑고 (CATEGORY_WEIGHTS)
 // 2차: 그 분류 안에서 weight 가중치로 "행동"을 뽑는다.
@@ -285,7 +288,8 @@ const MIN_EMOTION_CYCLES = 3;
 // ?hold=8           외부 명령(setPetState 등)으로 바뀐 상태를 주사위로부터 보호할 초
 // ?dice=0           주사위 굴리기 끄기 (외부 제어 전용 모드)
 // ?flip=1           좌우 반전
-const params = new URLSearchParams(location.search);
+// ?assets=rebuilt   재구성 후보 영상으로 런타임 검수 (완성된 상태만 선택)
+// ?ending=1        재구성 후보 검수에서 다중 엔딩 번호 지정 (1부터)
 const IS_DESKTOP = params.get("desktop") === "1" || Boolean(window.deskPet);
 if (IS_DESKTOP) document.body.classList.add("desktop");
 const HOLD_SEC = Number(params.get("hold") || 8);
@@ -377,6 +381,13 @@ const LOAD_TIMEOUT_MS = 15_000;
 let clipSeq = 0;
 const clipOwner = new WeakMap(); // 비디오 버퍼 → 그 버퍼에 마지막으로 걸린 playClip 호출 번호
 function playClip(file, { loop = false, onEnded = null, rate = 1 } = {}) {
+  // Retire the previous dissolve before reusing its old video buffer.
+  // Otherwise a quick state change can load the next clip into fade.from,
+  // and the old dissolve's cleanup will pause that newly started clip.
+  if (fade) {
+    if (fade.from !== vids[front]) fade.from.pause();
+    fade = null;
+  }
   const v = backVid();
   const id = ++clipSeq;
   clipOwner.set(v, id);
@@ -444,7 +455,9 @@ function playClip(file, { loop = false, onEnded = null, rate = 1 } = {}) {
 // 시작 직후 모든 클립을 받아 blob URL로 보관해 이후 전환을 즉시·무네트워크로 만든다.
 // (전체 약 6MB. 데스크톱 앱은 로컬 파일이라 생략.) 받는 동안에는 원래 경로를 쓴다.
 const CLIP_URL = new Map();
-function clipSrc(file) { return CLIP_URL.get(file) || BASE + file; }
+// 새로 합쳐진 note1은 재구성 범위 밖이므로 원본 영상 경로를 유지한다.
+function assetSrc(file) { return (file === 'anim_note1_loop.webm' ? 'sprites/' : BASE) + file; }
+function clipSrc(file) { return CLIP_URL.get(file) || assetSrc(file); }
 async function preloadClips() {
   const files = [...new Set(Object.values(ANIMS).flatMap(a =>
     [a.start, a.loop, a.outro, ...(Array.isArray(a.end) ? a.end : [a.end])].filter(Boolean)))];
@@ -455,7 +468,7 @@ async function preloadClips() {
     while (i < files.length) {
       const f = files[i++];
       try {
-        const r = await fetch(BASE + f);
+        const r = await fetch(assetSrc(f));
         if (!r.ok) throw new Error(`HTTP ${r.status}`);
         CLIP_URL.set(f, URL.createObjectURL(await r.blob()));
       } catch (e) {
@@ -595,7 +608,10 @@ async function setState(name, { pin = true } = {}) {
   const cur = current && ANIMS[current];
   if (cur && cur.end) {
     const ends = Array.isArray(cur.end) ? cur.end : [cur.end];
-    const endFile = ends[Math.floor(Math.random() * ends.length)];
+    const requestedEnding = Number(params.get('ending'));
+    const fixedEnding = (params.get('assets') === 'rebuilt') &&
+      Number.isInteger(requestedEnding) && requestedEnding >= 1 && requestedEnding <= ends.length;
+    const endFile = ends[fixedEnding ? requestedEnding - 1 : Math.floor(Math.random() * ends.length)];
     if (!await playThrough(endFile, cur.rate ?? 1)) return;
     // 1-b) 공용 outro가 있으면 end 뒤에 이어서 재생
     if (cur.outro && !await playThrough(cur.outro, cur.rate ?? 1)) return;

@@ -1,0 +1,161 @@
+{
+  "method": "canonical standing body height from hair crown, foot center and baseline; neutral entry and loop closer use canonical pixels",
+  "frames": [
+    {
+      "frame": 0,
+      "sourceCell": 0,
+      "scale": 0.9741379310344828,
+      "dx": -17,
+      "dy": 10,
+      "bbox": [
+        134,
+        47,
+        374,
+        499
+      ]
+    },
+    {
+      "frame": 1,
+      "sourceCell": 1,
+      "scale": 0.9720430107526882,
+      "dx": 14,
+      "dy": 11,
+      "bbox": [
+        131,
+        41,
+        354,
+        499
+      ]
+    },
+    {
+      "frame": 2,
+      "sourceCell": 2,
+      "scale": 0.9720430107526882,
+      "dx": -4,
+      "dy": 30,
+      "bbox": [
+        144,
+        41,
+        375,
+        499
+      ]
+    },
+    {
+      "frame": 3,
+      "sourceCell": 3,
+      "scale": 0.9741379310344828,
+      "dx": 16,
+      "dy": 29,
+      "bbox": [
+        103,
+        41,
+        399,
+        499
+      ]
+    },
+    {
+      "frame": 4,
+      "sourceCell": 4,
+      "scale": 0.9658119658119658,
+      "dx": 1,
+      "dy": 23,
+      "bbox": [
+        69,
+        43,
+        428,
+        499
+      ]
+    },
+    {
+      "frame": 5,
+      "sourceCell": 5,
+      "scale": 0.9617021276595744,
+      "dx": 14,
+      "dy": 25,
+      "bbox": [
+        78,
+        42,
+        436,
+        499
+      ]
+    },
+    {
+      "frame": 6,
+      "sourceCell": 6,
+      "scale": 0.9658119658119658,
+      "dx": 0,
+      "dy": 34,
+      "bbox": [
+        67,
+        44,
+        427,
+        499
+      ]
+    },
+    {
+      "frame": 7,
+      "sourceCell": 7,
+      "scale": 0.9658119658119658,
+      "dx": 16,
+      "dy": 34,
+      "bbox": [
+        102,
+        44,
+        399,
+        499
+      ]
+    },
+    {
+      "frame": 8,
+      "sourceCell": 8,
+      "scale": 0.9637526652452025,
+      "dx": 0,
+      "dy": 19,
+      "bbox": [
+        134,
+        44,
+        383,
+        499
+      ]
+    },
+    {
+      "frame": 9,
+      "sourceCell": 9,
+      "scale": 0.9637526652452025,
+      "dx": 15,
+      "dy": 19,
+      "bbox": [
+        135,
+        44,
+        382,
+        499
+      ]
+    },
+    {
+      "frame": 10,
+      "sourceCell": 10,
+      "scale": 0.9617021276595744,
+      "dx": 1,
+      "dy": 34,
+      "bbox": [
+        135,
+        41,
+        380,
+        499
+      ]
+    },
+    {
+      "frame": 11,
+      "sourceCell": 11,
+      "scale": 0.9617021276595744,
+      "dx": 16,
+      "dy": 34,
+      "bbox": [
+        153,
+        43,
+        405,
+        499
+      ]
+    }
+  ]
+}

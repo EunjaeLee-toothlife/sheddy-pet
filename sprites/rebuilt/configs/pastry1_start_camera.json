@@ -1,0 +1,170 @@
+[
+  {
+    "frame": "pastry1_start_06.png",
+    "source": "sprites/rebuilt/poses/pastry_camera_source/pastry1_start/pastry1_start_06.png",
+    "uniformScale": 0.96,
+    "cameraIntent": "original-size ordinary chef pose",
+    "bbox": [
+      87,
+      33,
+      430,
+      499
+    ],
+    "sourceShoeCenter": 256.0,
+    "sourceShoeBottom": 497,
+    "placement": [
+      87,
+      33
+    ],
+    "targetShoeCenter": 256,
+    "targetShoeBaseline": 497,
+    "intentionalAirborneLift": 0
+  },
+  {
+    "frame": "pastry1_start_07.png",
+    "source": "sprites/rebuilt/poses/pastry_camera_source/pastry1_start/pastry1_start_07.png",
+    "uniformScale": 0.96,
+    "cameraIntent": "original-size ordinary chef pose",
+    "bbox": [
+      77,
+      22,
+      447,
+      493
+    ],
+    "sourceShoeCenter": 256.5,
+    "sourceShoeBottom": 497,
+    "placement": [
+      77,
+      22
+    ],
+    "targetShoeCenter": 256,
+    "targetShoeBaseline": 491,
+    "intentionalAirborneLift": 6
+  },
+  {
+    "frame": "pastry1_start_08.png",
+    "source": "sprites/rebuilt/poses/pastry_camera_source/pastry1_start/pastry1_start_08.png",
+    "uniformScale": 0.96,
+    "cameraIntent": "original-size ordinary chef pose",
+    "bbox": [
+      140,
+      24,
+      369,
+      499
+    ],
+    "sourceShoeCenter": 258.0,
+    "sourceShoeBottom": 497,
+    "placement": [
+      140,
+      24
+    ],
+    "targetShoeCenter": 256,
+    "targetShoeBaseline": 497,
+    "intentionalAirborneLift": 0
+  },
+  {
+    "frame": "pastry1_start_09.png",
+    "source": "sprites/rebuilt/poses/pastry_camera_source/pastry1_start/pastry1_start_09.png",
+    "uniformScale": 0.96,
+    "cameraIntent": "original-size ordinary chef pose",
+    "bbox": [
+      126,
+      40,
+      416,
+      499
+    ],
+    "sourceShoeCenter": 255.5,
+    "sourceShoeBottom": 497,
+    "placement": [
+      126,
+      40
+    ],
+    "targetShoeCenter": 256,
+    "targetShoeBaseline": 497,
+    "intentionalAirborneLift": 0
+  },
+  {
+    "frame": "pastry1_start_10.png",
+    "source": "sprites/rebuilt/poses/pastry_camera_source/pastry1_start/pastry1_start_10.png",
+    "uniformScale": 0.96,
+    "cameraIntent": "original-size ordinary chef pose",
+    "bbox": [
+      125,
+      39,
+      450,
+      499
+    ],
+    "sourceShoeCenter": 256.0,
+    "sourceShoeBottom": 497,
+    "placement": [
+      125,
+      39
+    ],
+    "targetShoeCenter": 256,
+    "targetShoeBaseline": 497,
+    "intentionalAirborneLift": 0
+  },
+  {
+    "frame": "pastry1_start_11.png",
+    "source": "sprites/rebuilt/poses/pastry_camera_source/pastry1_start/pastry1_start_11.png",
+    "uniformScale": 0.96,
+    "cameraIntent": "original-size ordinary chef pose",
+    "bbox": [
+      139,
+      37,
+      381,
+      499
+    ],
+    "sourceShoeCenter": 256.5,
+    "sourceShoeBottom": 497,
+    "placement": [
+      139,
+      37
+    ],
+    "targetShoeCenter": 256,
+    "targetShoeBaseline": 497,
+    "intentionalAirborneLift": 0
+  },
+  {
+    "frame": "pastry1_start_12.png",
+    "source": "sprites/rebuilt/poses/pastry_camera_source/pastry1_start/pastry1_start_12.png",
+    "uniformScale": 0.96,
+    "cameraIntent": "original-size ordinary chef pose",
+    "bbox": [
+      143,
+      23,
+      372,
+      499
+    ],
+    "sourceShoeCenter": 256.0,
+    "sourceShoeBottom": 497,
+    "placement": [
+      143,
+      23
+    ],
+    "targetShoeCenter": 256,
+    "targetShoeBaseline": 497,
+    "intentionalAirborneLift": 0
+  },
+  {
+    "frame": "pastry1_start_13.png",
+    "source": "sprites/rebuilt/poses/pastry_camera_source/pastry1_start/pastry1_start_13.png",
+    "uniformScale": 0.96,
+    "cameraIntent": "original-size ordinary chef pose",
+    "bbox": [
+      141,
+      24,
+      369,
+      499
+    ],
+    "sourceShoeCenter": 255.5,
+    "sourceShoeBottom": 497,
+    "placement": [
+      141,
+      24
+    ],
+    "targetShoeCenter": 256,
+    "targetShoeBaseline": 497,
+    "intentionalAirborneLift": 0
+  }
+]

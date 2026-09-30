@@ -1,0 +1,8 @@
+Use reference1 as EXACT anatomy/body/head model. Create a square crisp 2x2 sheet, four full-body poses of this SAME girl. Preserve EXACT canonical head-to-body ratio, torso length, thigh/shin length; neither chibi-short nor lanky-tall. The supplied girl is about3.2 heads tall, not4.5heads. Each quadrant girl at SAME scale, normal upright silhouette about430px tall and head about135px tall. Her head/face/hairstyle/labcoat/skirt/socks/shoes match reference exactly.
+Pure#00FF00 background. Leave 35px empty GREEN on all sides of EACH quadrant. No art crossing horizontal/vertical midpoint. All bottom-row pixels must sit BELOW the horizontal midpoint +35px. Full raisedflask/sparkles contained. If needed zoom whole group out uniformly, NEVER shrink only a head/body/pose. Keep all limb proportions.
+All poses hold a rainbow-striped Erlenmeyer flask in viewerLEFT hand and cyan beaker viewerRIGHT.
+TopLeft: deep actual knee-bending crouch, star-shaped eyes, toothy grin, both vessels at chest. Same limb lengths folded into squat.
+TopRight: spring upward with knees extending, LEFTflaskarm raised diagonally above shoulder, RIGHTbeakerhip, eyesopen joyfulmouth.
+BottomLeft: straight standing on tiptoe, natural canonical leg length, LEFTarm fully extended vertically overhead holdingflask, RIGHTbeakerhip, closed happyeyes/openjoyfulmouth; sparse tinygoldstars aroundflask entirelyinsidecell.
+BottomRight: exactcopy bottomLeft BODY/PROPS/POSE, only eyesOPENgolden.
+No new costume or head growth. This is a pose edit of canonical, not a new character. Square2x2 grid with invisible green cell boundaries.

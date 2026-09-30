@@ -1,0 +1,3 @@
+Edit image 1 into happy hands-CLASPED pose of image 2. Preserve image 1 exactly: crisp clean chibi style, closed upward-arc eyes, small closed pleased smile and blush, hair/clip identity, body size, character position, floor line, white coat, shirt, lemon skirt, legs and shoes. Bring both hands together centered in front of upper chest, gently clasped/interlaced fingers with elbows relaxed downward, matching gesture image 2. Add only a few tiny clean pale-gold four-point joy sparkles beside head on both sides, below crown height, no lettering or symbols. White coat and face uniform without blotches/noise/glow. Pure solid green background, one square complete full-body pose.
+
+References: sprites/rebuilt/raw_poses/happy1_mid.png; sprites/happy1_poses/happy1_pose_01.png

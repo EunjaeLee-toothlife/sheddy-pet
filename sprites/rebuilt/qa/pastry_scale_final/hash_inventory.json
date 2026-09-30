@@ -1,0 +1,447 @@
+{
+  "scope": {
+    "clips": 13,
+    "frames": 158
+  },
+  "clips": {
+    "pastry1_start": {
+      "frameFiles": [
+        "sprites/rebuilt/frames/pastry1_start/pastry1_start_00.png",
+        "sprites/rebuilt/frames/pastry1_start/pastry1_start_01.png",
+        "sprites/rebuilt/frames/pastry1_start/pastry1_start_02.png",
+        "sprites/rebuilt/frames/pastry1_start/pastry1_start_03.png",
+        "sprites/rebuilt/frames/pastry1_start/pastry1_start_04.png",
+        "sprites/rebuilt/frames/pastry1_start/pastry1_start_05.png",
+        "sprites/rebuilt/frames/pastry1_start/pastry1_start_06.png",
+        "sprites/rebuilt/frames/pastry1_start/pastry1_start_07.png",
+        "sprites/rebuilt/frames/pastry1_start/pastry1_start_08.png",
+        "sprites/rebuilt/frames/pastry1_start/pastry1_start_09.png",
+        "sprites/rebuilt/frames/pastry1_start/pastry1_start_10.png",
+        "sprites/rebuilt/frames/pastry1_start/pastry1_start_11.png",
+        "sprites/rebuilt/frames/pastry1_start/pastry1_start_12.png",
+        "sprites/rebuilt/frames/pastry1_start/pastry1_start_13.png"
+      ],
+      "frameSHA256": [
+        "bb8fd83bfa72fe4b7607873af7aa7140fe08b57cd037a2696f7e24ecdfa3bdaa",
+        "f9c495994910632511a02ead4daa5bb51b691d9b9f42f7e5754bedb96b6a82bf",
+        "5ff8c2b82bec45e2fd1c2de0c3d61576ef2a54b9b3db5b00a8f2264f6be8b0bd",
+        "899542d7bd5b91c6743e4f91fdb3b9f0b559f4f7c0f1e72045a1eb31a72de9a9",
+        "7295659c39e353a98047b542acea0cfdc1be96fb7aa813d20e7c1855463abc3a",
+        "dae0351be81a1c290f043e837f41a84af5b25a51d06b123b65fed401d6da1efa",
+        "b051973dd742cb1bd5d0080e56c9339af8f43720f473622cb32db6cdbf45b051",
+        "46b324e62a2eb7ae135d74602f492cf09004d7b54e93a90cb99e55dd650214e9",
+        "831e98750fdbd44aa548852b41499e62caaa964b692b01b64192f8b01a226456",
+        "bfcab2010e2c9bb373e705e047c2412d0876004b749a37a6be8b3317e2b7e4c4",
+        "02ca1b226054be6feff45816d5e6a4cfdc02c25356c3a05d5411680606490581",
+        "f6d7d7a05c5b0f36cfdd27a9e451fd792d748acf140ef62a3c7f75211bfa9f64",
+        "2930fcf06c59de3b960d9a28a52dda9e431af83d2dbdda6383f38ba589bb4c93",
+        "f3503e34fe9f23552422437b833205b300c93ae1884bf2de9f43f242ad749ff9"
+      ],
+      "candidate": "sprites/rebuilt/videos/anim_pastry1_start.webm",
+      "videoSHA256": "e8638b300417433fba8db026a5d536db2bfc6fec169377e03319c5c922a99c5b"
+    },
+    "pastry1_loop": {
+      "frameFiles": [
+        "sprites/rebuilt/frames/pastry1_loop/pastry1_loop_00.png",
+        "sprites/rebuilt/frames/pastry1_loop/pastry1_loop_01.png",
+        "sprites/rebuilt/frames/pastry1_loop/pastry1_loop_02.png",
+        "sprites/rebuilt/frames/pastry1_loop/pastry1_loop_03.png",
+        "sprites/rebuilt/frames/pastry1_loop/pastry1_loop_04.png",
+        "sprites/rebuilt/frames/pastry1_loop/pastry1_loop_05.png",
+        "sprites/rebuilt/frames/pastry1_loop/pastry1_loop_06.png",
+        "sprites/rebuilt/frames/pastry1_loop/pastry1_loop_07.png",
+        "sprites/rebuilt/frames/pastry1_loop/pastry1_loop_08.png",
+        "sprites/rebuilt/frames/pastry1_loop/pastry1_loop_09.png",
+        "sprites/rebuilt/frames/pastry1_loop/pastry1_loop_10.png",
+        "sprites/rebuilt/frames/pastry1_loop/pastry1_loop_11.png",
+        "sprites/rebuilt/frames/pastry1_loop/pastry1_loop_12.png",
+        "sprites/rebuilt/frames/pastry1_loop/pastry1_loop_13.png"
+      ],
+      "frameSHA256": [
+        "f3503e34fe9f23552422437b833205b300c93ae1884bf2de9f43f242ad749ff9",
+        "b7b71663c86822ada89672ec839eec7414fb18a6f4ca92d313b943f22674bee1",
+        "7af88e8764cc8e476f669fd32fe0471a79ff27d618e5a6712418f010a0766fa4",
+        "d8cb8b1617030c28cb2ec5cb02b0ba2258c6b965a383ef1c1897a5473a7b9188",
+        "d227f935efad9073f59ed70b61782fba66604f68b14feb117a615b9ed766ef5a",
+        "63c16d39d7de7591a243b7e727acdf1f4b1634608807b29bc921cb9f43b3c0f8",
+        "1a8fad9abc05a4873eb5c625ee07c334fa586da4fefa799378c82c318c653d78",
+        "64b409fa633784f4ff07eb4a3f30ec24c18f57e29119d777e6b30c20d73013a8",
+        "08d9f37170dc56b65e7adbe12ec35d91455662db1d2b08eff4ffe9ba678dcefe",
+        "d63777e716b2cf6e847f518fb657c6976b711602fe82acc302b6df2694494a48",
+        "5f9c01c4e8aaa238308f43f1f16fda5fd8044517dcb6c05ee28f82837cbb89af",
+        "8ff883976b0cda888ac179392b896caa0bda2bed672edd104ac0238652c1cdc5",
+        "2930fcf06c59de3b960d9a28a52dda9e431af83d2dbdda6383f38ba589bb4c93",
+        "f3503e34fe9f23552422437b833205b300c93ae1884bf2de9f43f242ad749ff9"
+      ],
+      "candidate": "sprites/rebuilt/videos/anim_pastry1_loop.webm",
+      "videoSHA256": "9a5070d2e81c17f77b17795cbe25c558fd61c077ed43df4462584224738cc10a"
+    },
+    "pastry1_outro": {
+      "frameFiles": [
+        "sprites/rebuilt/frames/pastry1_outro/pastry1_outro_00.png",
+        "sprites/rebuilt/frames/pastry1_outro/pastry1_outro_01.png",
+        "sprites/rebuilt/frames/pastry1_outro/pastry1_outro_02.png",
+        "sprites/rebuilt/frames/pastry1_outro/pastry1_outro_03.png",
+        "sprites/rebuilt/frames/pastry1_outro/pastry1_outro_04.png",
+        "sprites/rebuilt/frames/pastry1_outro/pastry1_outro_05.png",
+        "sprites/rebuilt/frames/pastry1_outro/pastry1_outro_06.png",
+        "sprites/rebuilt/frames/pastry1_outro/pastry1_outro_07.png",
+        "sprites/rebuilt/frames/pastry1_outro/pastry1_outro_08.png",
+        "sprites/rebuilt/frames/pastry1_outro/pastry1_outro_09.png"
+      ],
+      "frameSHA256": [
+        "831e98750fdbd44aa548852b41499e62caaa964b692b01b64192f8b01a226456",
+        "10d142019cc6d71d30c7b42c5d6a30a414f1f895636ba0c6e85593aa92ee3509",
+        "bb8e38fefb31c56835be3b3e9ff66aa203244de886884a93692069e9b484f741",
+        "40fe6155823b02328d3c7b6bdef1c6de96f9f709b9ff0dc98b2da52d954a4e29",
+        "a1cbab0202b18c59816c7499c3a5691a8e6ca7b9cf7a47e6f7d9d2b3d99e7231",
+        "541cba4fd908173d77a7605d852c6a267a4e304856e92c0848222f7c4d4997bb",
+        "f7fcf25355743db764a10bc9c8a78e9f1c56837ea8b382280c7420aa922a467a",
+        "9be1a4cdef958030068d37f499a24bf7d97dce735e70ead8311042b4ee92000b",
+        "bb8fd83bfa72fe4b7607873af7aa7140fe08b57cd037a2696f7e24ecdfa3bdaa",
+        "bb8fd83bfa72fe4b7607873af7aa7140fe08b57cd037a2696f7e24ecdfa3bdaa"
+      ],
+      "candidate": "sprites/rebuilt/videos/anim_pastry1_outro.webm",
+      "videoSHA256": "9f1124c467600cd1c9b5619bf772b8728f1fb331f2f254c7b29fa8a6d0675ae6"
+    },
+    "pastry1_end1": {
+      "frameFiles": [
+        "sprites/rebuilt/frames/pastry1_end1/pastry1_end1_00.png",
+        "sprites/rebuilt/frames/pastry1_end1/pastry1_end1_01.png",
+        "sprites/rebuilt/frames/pastry1_end1/pastry1_end1_02.png",
+        "sprites/rebuilt/frames/pastry1_end1/pastry1_end1_03.png",
+        "sprites/rebuilt/frames/pastry1_end1/pastry1_end1_04.png",
+        "sprites/rebuilt/frames/pastry1_end1/pastry1_end1_05.png",
+        "sprites/rebuilt/frames/pastry1_end1/pastry1_end1_06.png",
+        "sprites/rebuilt/frames/pastry1_end1/pastry1_end1_07.png",
+        "sprites/rebuilt/frames/pastry1_end1/pastry1_end1_08.png",
+        "sprites/rebuilt/frames/pastry1_end1/pastry1_end1_09.png",
+        "sprites/rebuilt/frames/pastry1_end1/pastry1_end1_10.png",
+        "sprites/rebuilt/frames/pastry1_end1/pastry1_end1_11.png"
+      ],
+      "frameSHA256": [
+        "f3503e34fe9f23552422437b833205b300c93ae1884bf2de9f43f242ad749ff9",
+        "ffcccd3d9f02e0e709d22bdaf0d8342e39a35706097c19b600ea6948baf74782",
+        "22eb50e9f512e11302c93c5f58d140c14725d63b981f27b660cd02515b7a0b94",
+        "5fb0c56ec614713f23feec3399f84ec05f138de6396609f10cb94bd7966e2c57",
+        "a2c7a01234e0bf7b299537eeff74db3f0351cccec07060aa2f59d2353103aa9d",
+        "0c4e596a8f6021fa3e91222e76d8c07babf3a1d776addec7531fdec01f27b2b0",
+        "96471c1021a554a510ef7e0c0461df56025a2a20375406d75fe3e34c5a4e0eb7",
+        "055cf1bba8b5bbac632c053011817a05693114784a61f30f453ea7ac0d37cc73",
+        "b4bcd440a093bdfc8e98c612be01c6ec5ea31b72ce183ca144d447bf70f28e7a",
+        "eb1ad81f98eedef55bda6550afe875706392c3e6be8073f47924d5052eef5eb8",
+        "faa391e44d3b630f473e1f9886ef57804526456f189c8594d770eec63f2e916e",
+        "831e98750fdbd44aa548852b41499e62caaa964b692b01b64192f8b01a226456"
+      ],
+      "candidate": "sprites/rebuilt/videos/anim_pastry1_end1.webm",
+      "videoSHA256": "ee81c19c50f7f926c1c94be62c67a36bba273baafd78e4f3788a568cd7da18ec"
+    },
+    "pastry1_end2": {
+      "frameFiles": [
+        "sprites/rebuilt/frames/pastry1_end2/pastry1_end2_00.png",
+        "sprites/rebuilt/frames/pastry1_end2/pastry1_end2_01.png",
+        "sprites/rebuilt/frames/pastry1_end2/pastry1_end2_02.png",
+        "sprites/rebuilt/frames/pastry1_end2/pastry1_end2_03.png",
+        "sprites/rebuilt/frames/pastry1_end2/pastry1_end2_04.png",
+        "sprites/rebuilt/frames/pastry1_end2/pastry1_end2_05.png",
+        "sprites/rebuilt/frames/pastry1_end2/pastry1_end2_06.png",
+        "sprites/rebuilt/frames/pastry1_end2/pastry1_end2_07.png",
+        "sprites/rebuilt/frames/pastry1_end2/pastry1_end2_08.png",
+        "sprites/rebuilt/frames/pastry1_end2/pastry1_end2_09.png",
+        "sprites/rebuilt/frames/pastry1_end2/pastry1_end2_10.png",
+        "sprites/rebuilt/frames/pastry1_end2/pastry1_end2_11.png"
+      ],
+      "frameSHA256": [
+        "f3503e34fe9f23552422437b833205b300c93ae1884bf2de9f43f242ad749ff9",
+        "ffcccd3d9f02e0e709d22bdaf0d8342e39a35706097c19b600ea6948baf74782",
+        "22eb50e9f512e11302c93c5f58d140c14725d63b981f27b660cd02515b7a0b94",
+        "6c65ccee9608dc4c07d081498ac2396d2744cbe03f7329f659ccaf048b15b980",
+        "53c2f147ad0564003d6932cfc7c19a1e18a968af729ad22c5b663f290c6179cf",
+        "b28c314f72522e7f9589a967c92d3c53c274570884b330a69f153fa577cec17b",
+        "0b3be05abd7d548afd5426e5b2014d2e5d08c21812a6c87e88b356323287e9fa",
+        "bc6238e65f7e7e22ce132100ae9bfec2bad24d57e95f61959b08d31e459f4cc6",
+        "b4bcd440a093bdfc8e98c612be01c6ec5ea31b72ce183ca144d447bf70f28e7a",
+        "eb1ad81f98eedef55bda6550afe875706392c3e6be8073f47924d5052eef5eb8",
+        "faa391e44d3b630f473e1f9886ef57804526456f189c8594d770eec63f2e916e",
+        "831e98750fdbd44aa548852b41499e62caaa964b692b01b64192f8b01a226456"
+      ],
+      "candidate": "sprites/rebuilt/videos/anim_pastry1_end2.webm",
+      "videoSHA256": "86af10f4e23e023741a171bdaacce117f994553cbb548aba3f495c2e271940a6"
+    },
+    "pastry1_end3": {
+      "frameFiles": [
+        "sprites/rebuilt/frames/pastry1_end3/pastry1_end3_00.png",
+        "sprites/rebuilt/frames/pastry1_end3/pastry1_end3_01.png",
+        "sprites/rebuilt/frames/pastry1_end3/pastry1_end3_02.png",
+        "sprites/rebuilt/frames/pastry1_end3/pastry1_end3_03.png",
+        "sprites/rebuilt/frames/pastry1_end3/pastry1_end3_04.png",
+        "sprites/rebuilt/frames/pastry1_end3/pastry1_end3_05.png",
+        "sprites/rebuilt/frames/pastry1_end3/pastry1_end3_06.png",
+        "sprites/rebuilt/frames/pastry1_end3/pastry1_end3_07.png",
+        "sprites/rebuilt/frames/pastry1_end3/pastry1_end3_08.png",
+        "sprites/rebuilt/frames/pastry1_end3/pastry1_end3_09.png",
+        "sprites/rebuilt/frames/pastry1_end3/pastry1_end3_10.png",
+        "sprites/rebuilt/frames/pastry1_end3/pastry1_end3_11.png"
+      ],
+      "frameSHA256": [
+        "f3503e34fe9f23552422437b833205b300c93ae1884bf2de9f43f242ad749ff9",
+        "ffcccd3d9f02e0e709d22bdaf0d8342e39a35706097c19b600ea6948baf74782",
+        "22eb50e9f512e11302c93c5f58d140c14725d63b981f27b660cd02515b7a0b94",
+        "91addd334d54cdcfe1a9a62264d322344781de6ec69c12d5b93e3f67ffd19f7e",
+        "88969011427b10abf255b546d2deb4e1798639c3cb7fdd2fa1d6bd3f0a662651",
+        "29dec715937cef6836779b4bbec52b40826a84eec4ce40129685bfd9160db6a5",
+        "0915c0fdc2165a8d5c89333375bbeef2d509105416ff35ea5675583351723aa5",
+        "3b3365f61333c9608f002ceb5ce6a10cbef6c4e5ea9719afbb861ffcb46e61c4",
+        "b4bcd440a093bdfc8e98c612be01c6ec5ea31b72ce183ca144d447bf70f28e7a",
+        "eb1ad81f98eedef55bda6550afe875706392c3e6be8073f47924d5052eef5eb8",
+        "faa391e44d3b630f473e1f9886ef57804526456f189c8594d770eec63f2e916e",
+        "831e98750fdbd44aa548852b41499e62caaa964b692b01b64192f8b01a226456"
+      ],
+      "candidate": "sprites/rebuilt/videos/anim_pastry1_end3.webm",
+      "videoSHA256": "9ca585e7dfb2b34bfaea70ea4619f18b334e55a45f3f3729adcf57ab92488a7c"
+    },
+    "pastry1_end4": {
+      "frameFiles": [
+        "sprites/rebuilt/frames/pastry1_end4/pastry1_end4_00.png",
+        "sprites/rebuilt/frames/pastry1_end4/pastry1_end4_01.png",
+        "sprites/rebuilt/frames/pastry1_end4/pastry1_end4_02.png",
+        "sprites/rebuilt/frames/pastry1_end4/pastry1_end4_03.png",
+        "sprites/rebuilt/frames/pastry1_end4/pastry1_end4_04.png",
+        "sprites/rebuilt/frames/pastry1_end4/pastry1_end4_05.png",
+        "sprites/rebuilt/frames/pastry1_end4/pastry1_end4_06.png",
+        "sprites/rebuilt/frames/pastry1_end4/pastry1_end4_07.png",
+        "sprites/rebuilt/frames/pastry1_end4/pastry1_end4_08.png",
+        "sprites/rebuilt/frames/pastry1_end4/pastry1_end4_09.png",
+        "sprites/rebuilt/frames/pastry1_end4/pastry1_end4_10.png",
+        "sprites/rebuilt/frames/pastry1_end4/pastry1_end4_11.png"
+      ],
+      "frameSHA256": [
+        "f3503e34fe9f23552422437b833205b300c93ae1884bf2de9f43f242ad749ff9",
+        "ffcccd3d9f02e0e709d22bdaf0d8342e39a35706097c19b600ea6948baf74782",
+        "22eb50e9f512e11302c93c5f58d140c14725d63b981f27b660cd02515b7a0b94",
+        "ba47c196cf09753241762902330e3c950df6b90feb8e1dda70ca7cc8f8e065a5",
+        "ebd5e73b4e1ad5eb952f5bc079696d8e1e2a2bc478a06d9e20f78a0d5575e3fb",
+        "00392cb7436eb7e047af211e4d793325e5befab8056343a2f5b6da199e52f69b",
+        "6d27fc1e4f6be56f26042a7e6171358262aa6744aacb6cf5f7e5b4a95a4599da",
+        "08234cbd0c12037698b64a33ed587bd1e2948df4af8375a7dd48a4e9ec5a9f00",
+        "b4bcd440a093bdfc8e98c612be01c6ec5ea31b72ce183ca144d447bf70f28e7a",
+        "eb1ad81f98eedef55bda6550afe875706392c3e6be8073f47924d5052eef5eb8",
+        "faa391e44d3b630f473e1f9886ef57804526456f189c8594d770eec63f2e916e",
+        "831e98750fdbd44aa548852b41499e62caaa964b692b01b64192f8b01a226456"
+      ],
+      "candidate": "sprites/rebuilt/videos/anim_pastry1_end4.webm",
+      "videoSHA256": "e23e92f1468449689f92ac2048f27f389d79aa98cb8a31d69cc85dc93b489bb2"
+    },
+    "pastry1_end5": {
+      "frameFiles": [
+        "sprites/rebuilt/frames/pastry1_end5/pastry1_end5_00.png",
+        "sprites/rebuilt/frames/pastry1_end5/pastry1_end5_01.png",
+        "sprites/rebuilt/frames/pastry1_end5/pastry1_end5_02.png",
+        "sprites/rebuilt/frames/pastry1_end5/pastry1_end5_03.png",
+        "sprites/rebuilt/frames/pastry1_end5/pastry1_end5_04.png",
+        "sprites/rebuilt/frames/pastry1_end5/pastry1_end5_05.png",
+        "sprites/rebuilt/frames/pastry1_end5/pastry1_end5_06.png",
+        "sprites/rebuilt/frames/pastry1_end5/pastry1_end5_07.png",
+        "sprites/rebuilt/frames/pastry1_end5/pastry1_end5_08.png",
+        "sprites/rebuilt/frames/pastry1_end5/pastry1_end5_09.png",
+        "sprites/rebuilt/frames/pastry1_end5/pastry1_end5_10.png",
+        "sprites/rebuilt/frames/pastry1_end5/pastry1_end5_11.png"
+      ],
+      "frameSHA256": [
+        "f3503e34fe9f23552422437b833205b300c93ae1884bf2de9f43f242ad749ff9",
+        "ffcccd3d9f02e0e709d22bdaf0d8342e39a35706097c19b600ea6948baf74782",
+        "22eb50e9f512e11302c93c5f58d140c14725d63b981f27b660cd02515b7a0b94",
+        "2570f2d22545294d741d553ef2125b1954d1efa4a49afd96b316c6e877dfbe9d",
+        "e72139e6ad05b09ad4b616e1bd5bc3a7e0103d3c5ceec8536a1158befd05ccb4",
+        "80ce098d265fbc5cab798883dc092b8c1b00391381982f4b746fa083d6d559bc",
+        "4860968d68e5e180d0825b7f5031e2a0fc3050c09789bf718c87e2e081881a1a",
+        "7530e0c67556ae3c0adab79b53da19b58233dc8710bdd347d42497d7c73f99ae",
+        "b4bcd440a093bdfc8e98c612be01c6ec5ea31b72ce183ca144d447bf70f28e7a",
+        "eb1ad81f98eedef55bda6550afe875706392c3e6be8073f47924d5052eef5eb8",
+        "faa391e44d3b630f473e1f9886ef57804526456f189c8594d770eec63f2e916e",
+        "831e98750fdbd44aa548852b41499e62caaa964b692b01b64192f8b01a226456"
+      ],
+      "candidate": "sprites/rebuilt/videos/anim_pastry1_end5.webm",
+      "videoSHA256": "74f4dbaf2ee4a5b6d4b7d00f70d553f0362904c5a3ad280beaccb79917006069"
+    },
+    "pastry1_end6": {
+      "frameFiles": [
+        "sprites/rebuilt/frames/pastry1_end6/pastry1_end6_00.png",
+        "sprites/rebuilt/frames/pastry1_end6/pastry1_end6_01.png",
+        "sprites/rebuilt/frames/pastry1_end6/pastry1_end6_02.png",
+        "sprites/rebuilt/frames/pastry1_end6/pastry1_end6_03.png",
+        "sprites/rebuilt/frames/pastry1_end6/pastry1_end6_04.png",
+        "sprites/rebuilt/frames/pastry1_end6/pastry1_end6_05.png",
+        "sprites/rebuilt/frames/pastry1_end6/pastry1_end6_06.png",
+        "sprites/rebuilt/frames/pastry1_end6/pastry1_end6_07.png",
+        "sprites/rebuilt/frames/pastry1_end6/pastry1_end6_08.png",
+        "sprites/rebuilt/frames/pastry1_end6/pastry1_end6_09.png",
+        "sprites/rebuilt/frames/pastry1_end6/pastry1_end6_10.png",
+        "sprites/rebuilt/frames/pastry1_end6/pastry1_end6_11.png"
+      ],
+      "frameSHA256": [
+        "f3503e34fe9f23552422437b833205b300c93ae1884bf2de9f43f242ad749ff9",
+        "ffcccd3d9f02e0e709d22bdaf0d8342e39a35706097c19b600ea6948baf74782",
+        "22eb50e9f512e11302c93c5f58d140c14725d63b981f27b660cd02515b7a0b94",
+        "e6bc2c7ebd746e60232cdb3470e38d6dabe4646da511b42a37284343e373248e",
+        "b94a4606ddd93cf4c1319e17cf47554edda7c1d6874760dd24e16458aa670a29",
+        "e8720c87a1d3096e41e8ca7adafd45bc1f33932f614fe6fa9b4b8a91188026cc",
+        "dc216ddd936b062687becd6f94aa9811294df34e794ce93b6d57d0f89dfc34e5",
+        "12ba43018c3ffcb94f242476ac7fbc8f6a82480637fdb17e6afdbda78fd41887",
+        "b4bcd440a093bdfc8e98c612be01c6ec5ea31b72ce183ca144d447bf70f28e7a",
+        "eb1ad81f98eedef55bda6550afe875706392c3e6be8073f47924d5052eef5eb8",
+        "faa391e44d3b630f473e1f9886ef57804526456f189c8594d770eec63f2e916e",
+        "831e98750fdbd44aa548852b41499e62caaa964b692b01b64192f8b01a226456"
+      ],
+      "candidate": "sprites/rebuilt/videos/anim_pastry1_end6.webm",
+      "videoSHA256": "3eae14c3dde2c57b467fd0fae94429a437a0164213e9c3af99849380c7e16c84"
+    },
+    "pastry1_end7": {
+      "frameFiles": [
+        "sprites/rebuilt/frames/pastry1_end7/pastry1_end7_00.png",
+        "sprites/rebuilt/frames/pastry1_end7/pastry1_end7_01.png",
+        "sprites/rebuilt/frames/pastry1_end7/pastry1_end7_02.png",
+        "sprites/rebuilt/frames/pastry1_end7/pastry1_end7_03.png",
+        "sprites/rebuilt/frames/pastry1_end7/pastry1_end7_04.png",
+        "sprites/rebuilt/frames/pastry1_end7/pastry1_end7_05.png",
+        "sprites/rebuilt/frames/pastry1_end7/pastry1_end7_06.png",
+        "sprites/rebuilt/frames/pastry1_end7/pastry1_end7_07.png",
+        "sprites/rebuilt/frames/pastry1_end7/pastry1_end7_08.png",
+        "sprites/rebuilt/frames/pastry1_end7/pastry1_end7_09.png",
+        "sprites/rebuilt/frames/pastry1_end7/pastry1_end7_10.png",
+        "sprites/rebuilt/frames/pastry1_end7/pastry1_end7_11.png"
+      ],
+      "frameSHA256": [
+        "f3503e34fe9f23552422437b833205b300c93ae1884bf2de9f43f242ad749ff9",
+        "ffcccd3d9f02e0e709d22bdaf0d8342e39a35706097c19b600ea6948baf74782",
+        "22eb50e9f512e11302c93c5f58d140c14725d63b981f27b660cd02515b7a0b94",
+        "b188165fb8ed2af31603dfd0d7bfa76223bec283120dba231952b0df99fa8f94",
+        "e3c30df6084689e499c9c79a90811a3e5013530020ddbd0571fcf6c93fe38e00",
+        "beb69fb563980babb99cfc6ead88f1b9ecdba8efa5a2f18bb246c794206aaefb",
+        "03ab4e5639357e81e2f2581ade6608edce17acd5e8f69259155d83d9396b3431",
+        "245b3d74c32e15901d254868fd2a7f16e048b41e7e41c39fa4bffb8fc129ca8d",
+        "b4bcd440a093bdfc8e98c612be01c6ec5ea31b72ce183ca144d447bf70f28e7a",
+        "eb1ad81f98eedef55bda6550afe875706392c3e6be8073f47924d5052eef5eb8",
+        "faa391e44d3b630f473e1f9886ef57804526456f189c8594d770eec63f2e916e",
+        "831e98750fdbd44aa548852b41499e62caaa964b692b01b64192f8b01a226456"
+      ],
+      "candidate": "sprites/rebuilt/videos/anim_pastry1_end7.webm",
+      "videoSHA256": "bfe5e5ca65b748b7dd4149d35e24739d9d5c375cf988989fd910ef070c410af3"
+    },
+    "pastry1_end8": {
+      "frameFiles": [
+        "sprites/rebuilt/frames/pastry1_end8/pastry1_end8_00.png",
+        "sprites/rebuilt/frames/pastry1_end8/pastry1_end8_01.png",
+        "sprites/rebuilt/frames/pastry1_end8/pastry1_end8_02.png",
+        "sprites/rebuilt/frames/pastry1_end8/pastry1_end8_03.png",
+        "sprites/rebuilt/frames/pastry1_end8/pastry1_end8_04.png",
+        "sprites/rebuilt/frames/pastry1_end8/pastry1_end8_05.png",
+        "sprites/rebuilt/frames/pastry1_end8/pastry1_end8_06.png",
+        "sprites/rebuilt/frames/pastry1_end8/pastry1_end8_07.png",
+        "sprites/rebuilt/frames/pastry1_end8/pastry1_end8_08.png",
+        "sprites/rebuilt/frames/pastry1_end8/pastry1_end8_09.png",
+        "sprites/rebuilt/frames/pastry1_end8/pastry1_end8_10.png",
+        "sprites/rebuilt/frames/pastry1_end8/pastry1_end8_11.png"
+      ],
+      "frameSHA256": [
+        "f3503e34fe9f23552422437b833205b300c93ae1884bf2de9f43f242ad749ff9",
+        "ffcccd3d9f02e0e709d22bdaf0d8342e39a35706097c19b600ea6948baf74782",
+        "22eb50e9f512e11302c93c5f58d140c14725d63b981f27b660cd02515b7a0b94",
+        "18882458f2a728880d0b4fb47ae5d1e8f2a1b1d9dc01a961ebb81d0013ec8907",
+        "ed678d7554636f212dfa8d6cc37c535febe6c595e853aefb1474da3d1efd1530",
+        "b6541a44c4b230a3737dab54dc495a1c56d66f54fc84c2402265fe7f07c4db17",
+        "ec2c4c276a6a6d2615574a510b0e9266d87fe0fb642799917696ebda9704e7e7",
+        "1de1c9f422c9a1dd5e8faff9ad257bcc8c7521108741144fbd1906854922b6f9",
+        "b4bcd440a093bdfc8e98c612be01c6ec5ea31b72ce183ca144d447bf70f28e7a",
+        "eb1ad81f98eedef55bda6550afe875706392c3e6be8073f47924d5052eef5eb8",
+        "faa391e44d3b630f473e1f9886ef57804526456f189c8594d770eec63f2e916e",
+        "831e98750fdbd44aa548852b41499e62caaa964b692b01b64192f8b01a226456"
+      ],
+      "candidate": "sprites/rebuilt/videos/anim_pastry1_end8.webm",
+      "videoSHA256": "720b289614514237be0addeb3e5682eba1a7a6ed08eed0c26bde0c7e53ef7efb"
+    },
+    "pastry1_end9": {
+      "frameFiles": [
+        "sprites/rebuilt/frames/pastry1_end9/pastry1_end9_00.png",
+        "sprites/rebuilt/frames/pastry1_end9/pastry1_end9_01.png",
+        "sprites/rebuilt/frames/pastry1_end9/pastry1_end9_02.png",
+        "sprites/rebuilt/frames/pastry1_end9/pastry1_end9_03.png",
+        "sprites/rebuilt/frames/pastry1_end9/pastry1_end9_04.png",
+        "sprites/rebuilt/frames/pastry1_end9/pastry1_end9_05.png",
+        "sprites/rebuilt/frames/pastry1_end9/pastry1_end9_06.png",
+        "sprites/rebuilt/frames/pastry1_end9/pastry1_end9_07.png",
+        "sprites/rebuilt/frames/pastry1_end9/pastry1_end9_08.png",
+        "sprites/rebuilt/frames/pastry1_end9/pastry1_end9_09.png",
+        "sprites/rebuilt/frames/pastry1_end9/pastry1_end9_10.png",
+        "sprites/rebuilt/frames/pastry1_end9/pastry1_end9_11.png"
+      ],
+      "frameSHA256": [
+        "f3503e34fe9f23552422437b833205b300c93ae1884bf2de9f43f242ad749ff9",
+        "ffcccd3d9f02e0e709d22bdaf0d8342e39a35706097c19b600ea6948baf74782",
+        "22eb50e9f512e11302c93c5f58d140c14725d63b981f27b660cd02515b7a0b94",
+        "5ff67da48bd9a1d826af14f2c35017b63809ee06acdff440ba2c5d4cd9957eb6",
+        "37e2ef3d4498deaecd741a761305e91241b23c57ec46eae2133828274e4bd958",
+        "b8f854c3b7a0776227f166b524029388da479c1ff87f93e411a472ae6556e47d",
+        "24341b865b9ccc1531819f00589e430a87b5f8307167d4bcfc4fdac6bd34f9ad",
+        "2e23e5617e5e40a2d4c5815378a73f60f2b712cf34ec2871fa5c8dcced729654",
+        "48dcc4062d6b0216825623492a01ede11eda826d2eba70d0b2842676f643d1c6",
+        "a55b0a35ce105aec569f95f8367a21bdb345b1181917b5e0c784f46e03312994",
+        "beecb8acaaf95c15a35c6877291436d0bce3655d43237d21d1d94d0db1db4ced",
+        "831e98750fdbd44aa548852b41499e62caaa964b692b01b64192f8b01a226456"
+      ],
+      "candidate": "sprites/rebuilt/videos/anim_pastry1_end9.webm",
+      "videoSHA256": "26566598a45a0c4dab4d207ade0f0d977582e5d5227a9019654935c09b470f7d"
+    },
+    "pastry1_end10": {
+      "frameFiles": [
+        "sprites/rebuilt/frames/pastry1_end10/pastry1_end10_00.png",
+        "sprites/rebuilt/frames/pastry1_end10/pastry1_end10_01.png",
+        "sprites/rebuilt/frames/pastry1_end10/pastry1_end10_02.png",
+        "sprites/rebuilt/frames/pastry1_end10/pastry1_end10_03.png",
+        "sprites/rebuilt/frames/pastry1_end10/pastry1_end10_04.png",
+        "sprites/rebuilt/frames/pastry1_end10/pastry1_end10_05.png",
+        "sprites/rebuilt/frames/pastry1_end10/pastry1_end10_06.png",
+        "sprites/rebuilt/frames/pastry1_end10/pastry1_end10_07.png",
+        "sprites/rebuilt/frames/pastry1_end10/pastry1_end10_08.png",
+        "sprites/rebuilt/frames/pastry1_end10/pastry1_end10_09.png",
+        "sprites/rebuilt/frames/pastry1_end10/pastry1_end10_10.png",
+        "sprites/rebuilt/frames/pastry1_end10/pastry1_end10_11.png"
+      ],
+      "frameSHA256": [
+        "f3503e34fe9f23552422437b833205b300c93ae1884bf2de9f43f242ad749ff9",
+        "ffcccd3d9f02e0e709d22bdaf0d8342e39a35706097c19b600ea6948baf74782",
+        "22eb50e9f512e11302c93c5f58d140c14725d63b981f27b660cd02515b7a0b94",
+        "84d0c6af5a8cfec3df6027ae92f863e6867549ba9c88705a0c648645045fc1b7",
+        "0da9553ef61a7240d16725251192b348cd2e9032af819dd0795f3e9e3f98bcd5",
+        "327a1a8bdba6df2ed0489bd3ec942da347960c6847986d7e0f0e217a7146520e",
+        "3d22bf824f3e686a99211b7c501dd88436662d54a699ac0e5136eb47f03bb53a",
+        "fca9f87fe2ff3cdef62c0ea882865598c05f13be0360a50ee4df32d82ec76f2c",
+        "30e750d8b8c9ffc25553e6070faa7bb82d5bf300ee57427a6d25d6782d643d4c",
+        "cca35fb5ad524ae3a0862e4643947e9b118a139d1b0651ae4143e55a65f3a88b",
+        "ebb2992b60423a4a7716cbc7a937feffaa01d1d31f4f1c7e20ae14a2d05f7261",
+        "831e98750fdbd44aa548852b41499e62caaa964b692b01b64192f8b01a226456"
+      ],
+      "candidate": "sprites/rebuilt/videos/anim_pastry1_end10.webm",
+      "videoSHA256": "2992843b8440053470cf78bc71424e0fd098aba7dfe415b71d2d8fe54ea3f981"
+    }
+  },
+  "postRepairVerification": {
+    "changedAssets": [
+      {
+        "clip": "pastry1_end8",
+        "frame": 4,
+        "before": "447287f1e16a9d030117764fb878f449d41a2326675d65602cd4ebc3f53f8391",
+        "after": "ed678d7554636f212dfa8d6cc37c535febe6c595e853aefb1474da3d1efd1530"
+      },
+      {
+        "clip": "pastry1_end8",
+        "videoChanged": true,
+        "before": "c8626910cd035fe529a82c074e03368db24d8cee766cd61f1d344379d6c23b05",
+        "after": "720b289614514237be0addeb3e5682eba1a7a6ed08eed0c26bde0c7e53ef7efb"
+      }
+    ],
+    "all158BottomFragmentScanPassed": true,
+    "method": "largest alpha>100 component bottom vs all alpha>100 pixels, delta>3 threshold; native04 inspected separately",
+    "all158RGBA512AndZeroEdgeAlpha": true
+  }
+}

@@ -1,0 +1,95 @@
+{
+  "name": "sad2",
+  "base": "sprites/rebuilt/poses/idle_open_00.png",
+  "poses": {
+    "crouch": "sprites/rebuilt/poses/sad2_crouch_00.png"
+  },
+  "match_to_base": true,
+  "no_scale_poses": [
+    "crouch"
+  ],
+  "parts": {
+    "loop": [
+      {
+        "img": "crouch"
+      },
+      {
+        "img": "crouch",
+        "dy": 0.25
+      },
+      {
+        "img": "crouch",
+        "dy": 0.5,
+        "deg": 0.25
+      },
+      {
+        "img": "crouch",
+        "dy": 0.75,
+        "deg": 0.5
+      },
+      {
+        "img": "crouch",
+        "dy": 1.0,
+        "deg": 0.5
+      },
+      {
+        "img": "crouch",
+        "dy": 0.75,
+        "deg": 0.25
+      },
+      {
+        "img": "crouch",
+        "dy": 0.5
+      },
+      {
+        "img": "crouch",
+        "dy": 0.25
+      },
+      {
+        "img": "crouch"
+      },
+      {
+        "img": "crouch",
+        "dy": 0.25,
+        "deg": -0.25
+      },
+      {
+        "img": "crouch",
+        "dy": 0.5,
+        "deg": -0.5
+      },
+      {
+        "img": "crouch",
+        "dy": 0.75,
+        "deg": -0.5
+      },
+      {
+        "img": "crouch",
+        "dy": 1.0,
+        "deg": -0.25
+      },
+      {
+        "img": "crouch",
+        "dy": 0.75
+      },
+      {
+        "img": "crouch",
+        "dy": 0.5
+      },
+      {
+        "img": "crouch",
+        "dy": 0.25
+      },
+      {
+        "img": "crouch"
+      },
+      {
+        "img": "crouch"
+      }
+    ]
+  },
+  "pose_scales": {
+    "crouch": 0.83
+  },
+  "normalization_note": "Generated crouched head is about 1.2x standing head width; scale 0.83 and foot-align to keep character size consistent instead of stretching crouch to standing silhouette height."
+}

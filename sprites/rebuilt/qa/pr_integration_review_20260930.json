@@ -1,0 +1,39 @@
+{
+  "scope": "Post-merge integration with origin/master ee941c6",
+  "runtimeStates": 22,
+  "runtimeVideos": 40,
+  "reconstructedVideos": 39,
+  "reconstructedFrames": 579,
+  "preservedUpstreamVideos": [
+    "anim_note1_loop.webm"
+  ],
+  "widgetCheck": {
+    "command": "node tools/widget_check.js",
+    "passed": 5,
+    "failed": 0,
+    "cycles": "Restart delays [3,3,3,3]ms",
+    "transitions": "pastry1_start -> pastry1_loop -> pastry1_end6 -> pastry1_outro -> idle1_loop; happy1_start -> happy1_loop -> happy1_end -> idle1_loop",
+    "queuedTalk": "Minimum alpha255; start delays [11,11,22,21]ms",
+    "holdQueue": "pinnedUntil Infinity retained",
+    "staleChain": "current remains idle1 after watchdog reset"
+  },
+  "note1BrowserSmoke": {
+    "page": "http://127.0.0.1:8475/widget.html?state=note1&dice=0&desktop=1",
+    "source": "http://127.0.0.1:8475/sprites/anim_note1_loop.webm",
+    "duration": 7.4,
+    "playbackRate": 1,
+    "readyState": 4,
+    "paused": false,
+    "mediaError": null,
+    "visual": "Original clipboard character visible on actual widget canvas"
+  },
+  "localDocs": {
+    "videos": 40,
+    "videoKB": 8627,
+    "remotePublished": false
+  },
+  "limits": "Earlier32-case39-video and scoped pastry11-case14-video observations belong to the pre-merge widget snapshots. Asset hashes remain unchanged. Post-merge widget regression5checks and note1 actual browser smoke complement those earlier visual/asset reviews; this does not claim a fresh full33-case runtime run. Electron binary packaging was not executed.",
+  "currentWidgetSha256": "cc2b943a616f1577b31e0a73b7d1bccc7f68cb586dfb28a7bba93b06fe4fe560",
+  "currentManifestSha256": "b22533d2425d93bc50cacd3f0e32b3ba0d3fa24f03cdba17cc98717627f7a1dd",
+  "all40DocsVideosMatch": true
+}

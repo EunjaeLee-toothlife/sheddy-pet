@@ -1,0 +1,130 @@
+[
+  {
+    "frame": 3,
+    "before": [
+      180,
+      17,
+      407,
+      497
+    ],
+    "after": [
+      139,
+      3,
+      373,
+      498
+    ],
+    "method": "Uniform standing pose scale to chef height, planted foot center/baseline; no cropping or squashing"
+  },
+  {
+    "frame": 4,
+    "before": [
+      106,
+      18,
+      353,
+      497
+    ],
+    "after": [
+      137,
+      3,
+      392,
+      498
+    ],
+    "method": "Uniform standing pose scale to chef height, planted foot center/baseline; no cropping or squashing"
+  },
+  {
+    "frame": 5,
+    "before": [
+      178,
+      6,
+      437,
+      489
+    ],
+    "after": [
+      134,
+      3,
+      400,
+      498
+    ],
+    "method": "Uniform standing pose scale to chef height, planted foot center/baseline; no cropping or squashing"
+  },
+  {
+    "frame": 6,
+    "before": [
+      73,
+      11,
+      354,
+      488
+    ],
+    "after": [
+      92,
+      3,
+      384,
+      498
+    ],
+    "method": "Uniform standing pose scale to chef height, planted foot center/baseline; no cropping or squashing"
+  },
+  {
+    "frame": 7,
+    "before": [
+      164,
+      38,
+      439,
+      490
+    ],
+    "after": [
+      115,
+      3,
+      417,
+      498
+    ],
+    "method": "Uniform standing pose scale to chef height, planted foot center/baseline; no cropping or squashing"
+  },
+  {
+    "frame": 8,
+    "before": [
+      79,
+      38,
+      360,
+      490
+    ],
+    "after": [
+      91,
+      3,
+      398,
+      498
+    ],
+    "method": "Uniform standing pose scale to chef height, planted foot center/baseline; no cropping or squashing"
+  },
+  {
+    "frame": 9,
+    "before": [
+      143,
+      13,
+      419,
+      468
+    ],
+    "after": [
+      95,
+      3,
+      395,
+      498
+    ],
+    "method": "Uniform standing pose scale to chef height, planted foot center/baseline; no cropping or squashing"
+  },
+  {
+    "frame": 10,
+    "before": [
+      99,
+      13,
+      356,
+      469
+    ],
+    "after": [
+      115,
+      3,
+      394,
+      498
+    ],
+    "method": "Uniform standing pose scale to chef height, planted foot center/baseline; no cropping or squashing"
+  }
+]

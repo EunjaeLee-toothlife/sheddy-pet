@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="ko">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sheddy 졸기 · ImageGen 비교</title>
+<style>
+  body { margin: 0; padding: 32px; background: #faf7ef; color: #443a30; font: 16px/1.6 system-ui, sans-serif; }
+  main { max-width: 920px; margin: auto; }
+  h1 { font-size: 25px; margin-bottom: 8px; }
+  .pair { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+  article { padding: 20px; background: white; border-radius: 20px; }
+  h2 { font-size: 18px; margin: 0 0 12px; }
+  .stage { aspect-ratio: 1; background: repeating-conic-gradient(#ede9e0 0% 25%, #faf8f2 0% 50%) 0 0 / 24px 24px; border-radius: 12px; }
+  video { width: 100%; height: 100%; object-fit: contain; }
+  button { padding: 10px 18px; border-radius: 10px; border: 1px solid #dacd9e; background: #ffedb4; cursor: pointer; font: inherit; margin: 16px 8px 16px 0; }
+  .frames { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; }
+  .frames img { width: 100%; background: #eeeae2; border-radius: 8px; }
+  .note { color: #6f6456; font-size: 14px; }
+  @media (max-width: 640px) { body { padding: 16px; } article { padding: 12px; } }
+  @media (max-width: 480px) { .pair { grid-template-columns: 1fr; } }
+</style>
+<main>
+  <h1>꾸벅꾸벅 졸기 · 기존 / ImageGen</h1>
+  <p>천천히 꾸벅 → 잠깐 멈춤 → 깜짝 깨어남 → 다시 졸림. 두 영상 모두 실제 위젯과 같은 0.7배속입니다.</p>
+  <button id="toggle">일시정지</button><button id="restart">처음부터 비교</button>
+  <div class="pair">
+    <article><h2>기존 · 14프레임</h2><div class="stage"><video src="sprites/anim_doze1_loop.webm" autoplay muted loop playsinline></video></div><p class="note">눈 비비기와 하품을 포함한 기존 동작</p></article>
+    <article><h2>ImageGen 시험 · 8프레임</h2><div class="stage"><video src="sprites/anim_doze1_imagegen_loop.webm?v=58d2342be2c8" autoplay muted loop playsinline></video></div><p class="note">가운·얼굴의 불규칙한 색 패치를 보정한 버전. 투명 배경, 졸기와 회복에 집중한 동작. 고개 숙임은 아직 약합니다.</p></article>
+  </div>
+  <h2 style="margin-top:24px">생성 프레임</h2><div class="frames" id="frames"></div>
+  <p class="note">기존 기본 동작은 유지하며 이 페이지에서 시험 버전을 비교합니다.</p>
+</main>
+<script>
+  const videos = [...document.querySelectorAll('video')];
+  videos.forEach(v => { v.defaultPlaybackRate = v.playbackRate = 0.7; });
+  document.getElementById('toggle').onclick = async event => {
+    const resume = videos[0].paused;
+    if (resume) await Promise.all(videos.map(v => v.play())); else videos.forEach(v => v.pause());
+    event.target.textContent = resume ? '일시정지' : '재생';
+  };
+  document.getElementById('restart').onclick = async () => {
+    videos.forEach(v => { v.currentTime = 0; });
+    await Promise.all(videos.map(v => v.play()));
+    document.getElementById('toggle').textContent = '일시정지';
+  };
+  for (let i = 0; i < 8; i++) {
+    const img = document.createElement('img');
+    img.src = `sprites/doze1_imagegen_loop/doze1_imagegen_loop_${String(i).padStart(2, '0')}.png?v=58d2342be2c8`;
+    img.alt = `ImageGen 졸기 프레임 ${i + 1}`;
+    document.getElementById('frames').append(img);
+  }
+</script>
+</html>

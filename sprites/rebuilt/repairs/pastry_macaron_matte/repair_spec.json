@@ -1,0 +1,156 @@
+{
+  "method": "Bounded raw pastel green protection before unchanged camera replay; saturation/background exclusion r>60,b>60,g-r>10,g-b>10. No generated art, source geometry, common donors, final files or ledgers changed.",
+  "records": [
+    {
+      "index": 3,
+      "rawSheet": "pastry1_end3_00-01-02-03.png",
+      "rawTileProtectedROI": [
+        226,
+        255,
+        277,
+        279
+      ],
+      "restoredSourcePixels": 403,
+      "finalChangedPixels": 789,
+      "finalChangedBBox": [
+        229,
+        266,
+        273,
+        288
+      ],
+      "outsideFinalChangedBBoxIdentical": true,
+      "cameraUnchanged": true
+    },
+    {
+      "index": 4,
+      "rawSheet": "pastry1_end3_04-05-06-07.png",
+      "rawTileProtectedROI": [
+        232,
+        232,
+        279,
+        259
+      ],
+      "restoredSourcePixels": 455,
+      "finalChangedPixels": 554,
+      "finalChangedBBox": [
+        239,
+        270,
+        274,
+        289
+      ],
+      "outsideFinalChangedBBoxIdentical": true,
+      "cameraUnchanged": true
+    },
+    {
+      "index": 5,
+      "rawSheet": "pastry1_end3_04-05-06-07.png",
+      "rawTileProtectedROI": [
+        227,
+        43,
+        280,
+        67
+      ],
+      "restoredSourcePixels": 636,
+      "finalChangedPixels": 861,
+      "finalChangedBBox": [
+        231,
+        62,
+        275,
+        85
+      ],
+      "outsideFinalChangedBBoxIdentical": true,
+      "cameraUnchanged": true
+    },
+    {
+      "index": 6,
+      "rawSheet": "pastry1_end3_04-05-06-07.png",
+      "rawTileProtectedROI": [
+        227,
+        43,
+        279,
+        67
+      ],
+      "restoredSourcePixels": 640,
+      "finalChangedPixels": 862,
+      "finalChangedBBox": [
+        231,
+        62,
+        276,
+        85
+      ],
+      "outsideFinalChangedBBoxIdentical": true,
+      "cameraUnchanged": true
+    },
+    {
+      "index": 7,
+      "rawSheet": "pastry1_end3_04-05-06-07.png",
+      "rawTileProtectedROI": [
+        235,
+        223,
+        280,
+        249
+      ],
+      "restoredSourcePixels": 428,
+      "finalChangedPixels": 519,
+      "finalChangedBBox": [
+        240,
+        262,
+        275,
+        281
+      ],
+      "outsideFinalChangedBBoxIdentical": true,
+      "cameraUnchanged": true
+    }
+  ],
+  "defectProbeRGBA06": [
+    {
+      "xy": [
+        250,
+        70
+      ],
+      "rgba": [
+        206,
+        251,
+        193,
+        255
+      ]
+    },
+    {
+      "xy": [
+        254,
+        70
+      ],
+      "rgba": [
+        207,
+        252,
+        194,
+        255
+      ]
+    },
+    {
+      "xy": [
+        260,
+        70
+      ],
+      "rgba": [
+        192,
+        249,
+        175,
+        255
+      ]
+    },
+    {
+      "xy": [
+        255,
+        67
+      ],
+      "rgba": [
+        207,
+        255,
+        194,
+        255
+      ]
+    }
+  ],
+  "reproductionBaseline": "*_source_before.png preferred; production final may equal original or repaired camera output"
+}
