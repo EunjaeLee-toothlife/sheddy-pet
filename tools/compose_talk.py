@@ -1,6 +1,8 @@
 """Compose the talking (mouth-flap) loop: transplant ONLY the mouth region
 from the talk poses onto the frozen base sprite, like the idle blink."""
 import sys
+import argparse
+from pathlib import Path
 import numpy as np
 from PIL import Image
 
@@ -42,19 +44,26 @@ def rect_mask(size, rect, feather):
 
 
 def main():
-    import os
-    os.makedirs("sprites/talk", exist_ok=True)
-    base_img = Image.open(BASE).convert("RGBA")
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--base", default=BASE)
+    parser.add_argument("--open", default=OPEN)
+    parser.add_argument("--half", default=HALF)
+    parser.add_argument("--outdir", type=Path, default=Path("sprites/talk"))
+    parser.add_argument("--prefix", default="talk_loop")
+    parser.add_argument("--mouth-rect", type=int, nargs=4, default=MOUTH_RECT)
+    args = parser.parse_args()
+    args.outdir.mkdir(parents=True, exist_ok=True)
+    base_img = Image.open(args.base).convert("RGBA")
     base = np.asarray(base_img).astype(np.float64)
-    mask = rect_mask(base.shape[:2], MOUTH_RECT, FEATHER)
+    mask = rect_mask(base.shape[:2], args.mouth_rect, FEATHER)
     variants = {"base": base_img}
-    for key, path in [("open", OPEN), ("half", HALF)]:
+    for key, path in [("open", args.open), ("half", args.half)]:
         donor = np.asarray(register(Image.open(path).convert("RGBA"),
                                     base_img)).astype(np.float64)
         merged = base * (1 - mask) + donor * mask
         variants[key] = Image.fromarray(merged.clip(0, 255).astype(np.uint8))
     for i, key in enumerate(PLAN):
-        variants[key].save(OUT.format(i))
+        variants[key].save(args.outdir / f"{args.prefix}_{i:02d}.png")
     print(f"composed {len(PLAN)} talk frames")
 
 

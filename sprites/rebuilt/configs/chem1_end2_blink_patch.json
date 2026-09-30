@@ -1,0 +1,14 @@
+{
+  "frame": 4,
+  "base": "sprites/rebuilt/poses/chem1_end2_04_blink_base.png",
+  "donor": "sprites/rebuilt/poses/chem1_end2_04_blink_special_native.png",
+  "rect": [
+    210,
+    128,
+    302,
+    162
+  ],
+  "feather": 3,
+  "alphaUnchanged": true,
+  "outsideEyePixelsExact": true
+}

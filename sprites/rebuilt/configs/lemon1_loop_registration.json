@@ -1,0 +1,213 @@
+{
+  "method": "canonical standing body height from hair crown, foot center and baseline; neutral entry and loop closer use canonical pixels",
+  "frames": [
+    {
+      "frame": 0,
+      "sourceCell": 0,
+      "scale": 0.9804772234273319,
+      "dx": -6,
+      "dy": 9,
+      "bbox": [
+        134,
+        47,
+        374,
+        499
+      ]
+    },
+    {
+      "frame": 1,
+      "sourceCell": 1,
+      "scale": 0.9804772234273319,
+      "dx": 15,
+      "dy": 9,
+      "bbox": [
+        147,
+        40,
+        362,
+        499
+      ]
+    },
+    {
+      "frame": 2,
+      "sourceCell": 2,
+      "scale": 0.9783549783549783,
+      "dx": -5,
+      "dy": 21,
+      "bbox": [
+        110,
+        41,
+        361,
+        499
+      ]
+    },
+    {
+      "frame": 3,
+      "sourceCell": 3,
+      "scale": 0.9783549783549783,
+      "dx": 15,
+      "dy": 21,
+      "bbox": [
+        112,
+        41,
+        364,
+        499
+      ]
+    },
+    {
+      "frame": 4,
+      "sourceCell": 4,
+      "scale": 0.9720430107526882,
+      "dx": -18,
+      "dy": 17,
+      "bbox": [
+        147,
+        41,
+        369,
+        499
+      ]
+    },
+    {
+      "frame": 5,
+      "sourceCell": 5,
+      "scale": 0.9720430107526882,
+      "dx": 33,
+      "dy": 17,
+      "bbox": [
+        147,
+        41,
+        370,
+        499
+      ]
+    },
+    {
+      "frame": 6,
+      "sourceCell": 6,
+      "scale": 0.9596602972399151,
+      "dx": -17,
+      "dy": 33,
+      "bbox": [
+        147,
+        44,
+        366,
+        499
+      ]
+    },
+    {
+      "frame": 7,
+      "sourceCell": 7,
+      "scale": 0.9596602972399151,
+      "dx": 36,
+      "dy": 33,
+      "bbox": [
+        84,
+        44,
+        368,
+        499
+      ]
+    },
+    {
+      "frame": 8,
+      "sourceCell": 8,
+      "scale": 0.9658119658119658,
+      "dx": -21,
+      "dy": 20,
+      "bbox": [
+        108,
+        42,
+        368,
+        499
+      ]
+    },
+    {
+      "frame": 9,
+      "sourceCell": 9,
+      "scale": 0.9637526652452025,
+      "dx": 36,
+      "dy": 21,
+      "bbox": [
+        142,
+        42,
+        391,
+        499
+      ]
+    },
+    {
+      "frame": 10,
+      "sourceCell": 10,
+      "scale": 0.9515789473684211,
+      "dx": -15,
+      "dy": 34,
+      "bbox": [
+        142,
+        41,
+        372,
+        499
+      ]
+    },
+    {
+      "frame": 11,
+      "sourceCell": 11,
+      "scale": 0.9515789473684211,
+      "dx": 38,
+      "dy": 34,
+      "bbox": [
+        141,
+        41,
+        375,
+        499
+      ]
+    },
+    {
+      "frame": 12,
+      "sourceCell": 12,
+      "scale": 0.9637526652452025,
+      "dx": -17,
+      "dy": 20,
+      "bbox": [
+        143,
+        42,
+        367,
+        499
+      ]
+    },
+    {
+      "frame": 13,
+      "sourceCell": 13,
+      "scale": 0.9637526652452025,
+      "dx": 37,
+      "dy": 20,
+      "bbox": [
+        145,
+        42,
+        367,
+        499
+      ]
+    },
+    {
+      "frame": 14,
+      "sourceCell": 14,
+      "scale": 0.9576271186440678,
+      "dx": -15,
+      "dy": 34,
+      "bbox": [
+        132,
+        41,
+        376,
+        499
+      ]
+    },
+    {
+      "frame": 15,
+      "sourceCell": 15,
+      "scale": 0.9576271186440678,
+      "dx": 39,
+      "dy": 34,
+      "bbox": [
+        134,
+        47,
+        374,
+        499
+      ]
+    }
+  ]
+}

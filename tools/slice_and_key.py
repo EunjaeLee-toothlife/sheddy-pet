@@ -1,5 +1,5 @@
-"""Slice a grid sprite sheet into 512px tiles, chroma-key green to alpha,
-and optionally align frames by alpha centroid to remove positional jitter."""
+"""Slice a grid sprite sheet into 512px tiles, chroma-key green to alpha
+or preserve existing transparency, and optionally align frames."""
 import argparse
 import numpy as np
 from PIL import Image
@@ -137,7 +137,7 @@ def largest_component(mask: np.ndarray) -> np.ndarray:
         return flood(mask, seeds)
 
 
-def cleanup_matte(alpha: np.ndarray, rel_green: np.ndarray) -> np.ndarray:
+def cleanup_matte(alpha: np.ndarray, rel_green: np.ndarray, keep_components=False) -> np.ndarray:
     """Post-key matte cleanup:
     1. kill leftover green streaks/haze connected to the border
     2. remove floating debris not connected to the character body
@@ -155,7 +155,7 @@ def cleanup_matte(alpha: np.ndarray, rel_green: np.ndarray) -> np.ndarray:
     #    floating sparkle / light bulb / '?' above the head became the seed
     #    and the whole body was erased.)
     body_mask = alpha > 0.05
-    if body_mask.any():
+    if body_mask.any() and not keep_components:
         body = largest_component(body_mask)
         alpha = np.where(body_mask & ~body, 0.0, alpha)
     # 3) hard cutout: binarize the matte so soft bloom/glow halos are cut off
@@ -167,7 +167,7 @@ def cleanup_matte(alpha: np.ndarray, rel_green: np.ndarray) -> np.ndarray:
     return alpha
 
 
-def chroma_key(img: Image.Image, erode_px: int = 0) -> Image.Image:
+def chroma_key(img: Image.Image, erode_px: int = 0, keep_components=False, green_region=None) -> Image.Image:
     arr = np.asarray(img.convert("RGB")).astype(np.float32)
     r, g, b = arr[..., 0], arr[..., 1], arr[..., 2]
     bg = estimate_bg(arr)
@@ -183,7 +183,21 @@ def chroma_key(img: Image.Image, erode_px: int = 0) -> Image.Image:
     k_rel = np.clip((rel - 0.08) / (0.22 - 0.08), 0.0, 1.0)
     k_rel = np.where(brightness < 130, k_rel, 0.0)
     alpha = 1.0 - np.maximum(k_abs, k_rel)
-    alpha = cleanup_matte(alpha, rel)
+    alpha = cleanup_matte(alpha, rel, keep_components=keep_components)
+    # A bounded intentional green object (e.g. the rainbow liquid) must not
+    # become a transparent hole. Keep only enclosed greens in the reviewed
+    # object rectangle; background-connected greens stay transparent.
+    protected = np.zeros(alpha.shape, dtype=bool)
+    if green_region is not None:
+        x0, y0, x1, y1 = green_region
+        if not (0 <= x0 < x1 <= img.width and 0 <= y0 < y1 <= img.height):
+            raise ValueError('green region must lie inside the keyed tile')
+        passable = (greenness > 10) | (alpha < 0.05)
+        seeds = np.zeros_like(passable)
+        seeds[0, :] = seeds[-1, :] = seeds[:, 0] = seeds[:, -1] = True
+        enclosed = (greenness > 10) & ~flood(passable, seeds)
+        protected[y0:y1, x0:x1] = enclosed[y0:y1, x0:x1]
+        alpha = np.where(protected, 1.0, alpha)
     # optional: pull the matte edge inward (eats thin outlines — off by default)
     if erode_px > 0:
         alpha = erode_alpha(alpha, px=erode_px)
@@ -202,7 +216,7 @@ def chroma_key(img: Image.Image, erode_px: int = 0) -> Image.Image:
     edge_band = erode_alpha(alpha, px=3) < 1.0
     fr, fgc, fb = fg[..., 0], fg[..., 1], fg[..., 2]
     limit = np.maximum(fr, fb)
-    spill = (fgc > limit) & ((alpha < 1.0) | edge_band)
+    spill = (fgc > limit) & ((alpha < 1.0) | edge_band) & ~protected
     fg[..., 1] = np.where(spill, limit, fgc)
     # green spill also depresses B, leaving a khaki tint after the G clamp —
     # partially restore B toward min(R, G) on the same pixels
@@ -230,6 +244,12 @@ def main():
                    help="skip bbox-height scale normalization across frames")
     p.add_argument("--erode", type=int, default=0,
                    help="pull matte edge N px inward (may eat thin outlines)")
+    p.add_argument("--preserve-alpha", action="store_true",
+                   help="use existing RGBA transparency instead of chroma-keying")
+    p.add_argument("--keep-components", action="store_true",
+                   help="keep disconnected foreground effects such as sparkles")
+    p.add_argument("--green-region", nargs=4, type=int, metavar=('X0', 'Y0', 'X1', 'Y1'),
+                   help="preserve enclosed intentional green in this tile rectangle")
     a = p.parse_args()
 
     import glob
@@ -241,14 +261,14 @@ def main():
         if not paths:
             raise SystemExit(f"no files match {a.frames}")
         for path in paths:
-            im = Image.open(path).convert("RGB")
+            im = Image.open(path).convert("RGBA" if a.preserve_alpha else "RGB")
             if im.size != (a.tile, a.tile):
                 im = im.resize((a.tile, a.tile), Image.LANCZOS)
-            frames.append(chroma_key(im, erode_px=a.erode))
+            frames.append(im if a.preserve_alpha else chroma_key(im, erode_px=a.erode, keep_components=a.keep_components, green_region=a.green_region))
     else:
         if not a.cols or not a.rows:
             raise SystemExit("--sheet requires --cols and --rows")
-        sheet = Image.open(a.sheet).convert("RGB")
+        sheet = Image.open(a.sheet).convert("RGBA" if a.preserve_alpha else "RGB")
         target = (a.cols * a.tile, a.rows * a.tile)
         if sheet.size != target:
             sheet = sheet.resize(target, Image.LANCZOS)
@@ -256,7 +276,7 @@ def main():
             for col in range(a.cols):
                 tile = sheet.crop((col * a.tile, row * a.tile,
                                    (col + 1) * a.tile, (row + 1) * a.tile))
-                frames.append(chroma_key(tile, erode_px=a.erode))
+                frames.append(tile if a.preserve_alpha else chroma_key(tile, erode_px=a.erode, keep_components=a.keep_components, green_region=a.green_region))
     if not a.no_scale_norm:
         frames = normalize_scale(frames)
     if not a.no_align:

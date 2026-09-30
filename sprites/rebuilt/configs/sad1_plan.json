@@ -1,0 +1,81 @@
+{
+  "name": "sad1",
+  "base": "sprites/rebuilt/poses/idle_open_00.png",
+  "poses": {
+    "slump": "sprites/rebuilt/poses/sad1_slump_00.png"
+  },
+  "match_to_base": true,
+  "parts": {
+    "loop": [
+      {
+        "img": "slump"
+      },
+      {
+        "img": "slump",
+        "dy": 0.3
+      },
+      {
+        "img": "slump",
+        "dy": 0.6
+      },
+      {
+        "img": "slump",
+        "dy": 0.9
+      },
+      {
+        "img": "slump",
+        "dy": 1.2
+      },
+      {
+        "img": "slump",
+        "dy": 1.5
+      },
+      {
+        "img": "slump",
+        "dy": 1.8
+      },
+      {
+        "img": "slump",
+        "dy": 1.8
+      },
+      {
+        "img": "slump",
+        "dy": 1.5
+      },
+      {
+        "img": "slump",
+        "dy": 1.2
+      },
+      {
+        "img": "slump",
+        "dy": 0.9
+      },
+      {
+        "img": "slump",
+        "dy": 0.6
+      },
+      {
+        "img": "slump",
+        "dy": 0.3
+      },
+      {
+        "img": "slump"
+      },
+      {
+        "img": "slump",
+        "dy": 0.15
+      },
+      {
+        "img": "slump",
+        "dy": 0.3
+      },
+      {
+        "img": "slump",
+        "dy": 0.15
+      },
+      {
+        "img": "slump"
+      }
+    ]
+  }
+}

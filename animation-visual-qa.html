@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="ko"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>실제 위젯 애니메이션 시각 검수</title>
+<style>
+*{box-sizing:border-box}body{margin:20px;background:#202126;color:#eee;font:14px system-ui}h1{font-size:22px}button,select{font:inherit;padding:8px;margin-right:8px}#status{white-space:pre-wrap;margin:12px 0;padding:12px;background:#303239}#live{position:sticky;top:8px;float:right;width:320px;background:repeating-conic-gradient(#303238 0% 25%,#43464c 0% 50%) 0/24px 24px;border:1px solid #777}iframe{width:318px;height:430px;border:0}.contact-grid{display:grid;grid-template-columns:repeat(4,192px);gap:10px;max-width:798px}figure{margin:0;background:#35373e;border:1px solid #555}figure.boundary{border:2px solid #e3b55c}figure canvas{width:188px;height:188px;background:repeating-conic-gradient(#303238 0% 25%,#43464c 0% 50%) 0/20px 20px}figcaption{font:11px ui-monospace,monospace;padding:5px;overflow-wrap:anywhere;min-height:60px}.hint{max-width:800px;color:#bcc4d2}#events{max-width:798px;max-height:180px;overflow:auto;white-space:pre-wrap;font:12px monospace;background:#303239;padding:8px}@media(max-width:1150px){#live{float:none;position:static;margin-bottom:12px}}@media(max-width:820px){.contact-grid{grid-template-columns:repeat(2,192px)}}
+</style>
+<h1>실제 위젯 캔버스 기록</h1>
+<p class="hint">실제 widget.html을 새 iframe에서 실행합니다. 초기 idle 재생 직후 상태를 요청하고, 해당 loop의 실제 ended 이벤트에서 idle을 요청합니다. 교체 주변 0/16/32/48/64/96/128ms 목표 샘플은 다음 실제 rAF 캔버스를 기록하며 실제 시각도 표시합니다. 내부 동작은 100ms 간격입니다.</p>
+<label>시나리오 <select id="scenario"><option value="boxing1">boxing</option><option value="happy1">happy1</option><option value="sad2">sad2</option><option value="pastry1">pastry1 · ending 3</option><option value="chem1">chem1 · ending 3</option></select></label>
+<button id="run">실행</button><span id="count">0 snapshots</span>
+<div id="status">준비됨 · 실행 버튼을 누르면 최대 20초 기록합니다.</div>
+<div id="live"></div><pre id="events"></pre>
+<h2>전환 경계 · 실제 캔버스</h2><div id="contacts" class="contact-grid"></div>
+<h2>내부 동작 · 100ms 간격</h2><div id="motion" class="contact-grid"></div>
+<script>
+(() => {
+  'use strict';
+  const $ = id => document.getElementById(id);
+  const denseOffsets = [0,16,32,48,64,96,128];
+  let generation = 0;
+  $('run').addEventListener('click', run);
+  function run() {
+    const token = ++generation, state = $('scenario').value;
+    $('run').disabled = true; $('contacts').replaceChildren(); $('motion').replaceChildren(); $('events').textContent = ''; $('count').textContent = '0 snapshots';
+    $('status').textContent = `기록 준비 · ${state} · completed: false`;
+    const iframe = document.createElement('iframe'); iframe.title = '실제 rebuilt widget';
+    const params = new URLSearchParams({assets:'rebuilt',dice:'0',desktop:'1',state:'idle1',ending:'3',qaRun:String(token)});
+    iframe.src = `widget.html?${params}`; $('live').replaceChildren(iframe);
+    let w, doc, canvas, videos, start = 0, started = false, returning = false, finishing = false, done = false;
+    let count = 0, raf = 0, lastInternal = -100, lastSignature = '', pending = [], changes = 0;
+    const observed = new Set(), expected = state === 'pastry1' ? ['anim_pastry1_end3.webm','anim_pastry1_outro.webm'] : state === 'chem1' ? ['anim_chem1_end3.webm'] : state === 'happy1' ? ['anim_happy1_end.webm'] : [];
+    let timeout = setTimeout(() => finish(false,'20초 제한: boot/재생/전환 완료 여부를 확인하세요.'),20000);
+    const elapsed = () => start ? performance.now()-start : 0;
+    function log(message) { $('events').textContent += `${elapsed().toFixed(1)}ms ${message}\n`; $('events').scrollTop = $('events').scrollHeight; }
+    function read() {
+      // Same-origin read-only inspection of actual widget state; no state-machine replacement.
+      const meta = w.eval('({current,front,transitioning,fadeActive:!!fade})');
+      const v = videos[meta.front];
+      return {...meta,v,src:v.currentSrc || v.src,file:(v.currentSrc || v.src).split('/').pop(),time:v.currentTime,paused:v.paused};
+    }
+    function boundary(reason) {
+      const at = performance.now(); changes++;
+      for (const offset of denseOffsets) pending.push({at:at+offset,base:at,offset,reason});
+      log(`boundary ${reason}`);
+    }
+    function snapshot(reason, sample) {
+      if (!canvas || !canvas.width || !canvas.height) return;
+      const meta = read(), tile = document.createElement('figure'), image = document.createElement('canvas');
+      image.width = image.height = 192;
+      const ctx = image.getContext('2d'), scale = Math.min(192/canvas.width,192/canvas.height);
+      // Observe the actual rendered canvas, including the real widget dissolve. No video mixing here.
+      ctx.drawImage(canvas,(192-canvas.width*scale)/2,(192-canvas.height*scale)/2,canvas.width*scale,canvas.height*scale);
+      tile.className = sample ? 'boundary' : '';
+      const caption = document.createElement('figcaption');
+      caption.textContent = `${elapsed().toFixed(1)}ms · ${reason}${sample ? ` +${sample.offset}ms → actual +${(performance.now()-sample.base).toFixed(1)}ms` : ''}\n${meta.file}\ntime=${meta.time.toFixed(3)} state=${meta.current} fade=${meta.fadeActive} paused=${meta.paused}`;
+      tile.append(image,caption); $(sample ? 'contacts' : 'motion').append(tile); $('count').textContent = `${++count} snapshots · ${changes} boundaries`;
+    }
+    function begin(reason) {
+      if (started || done || token !== generation) return;
+      const meta = read(); if (meta.file !== 'anim_idle1_loop.webm' || meta.paused || meta.v.readyState < 2) return;
+      started = true; start = performance.now();
+      log(`boot idle playing (${reason}); immediate API entry regression`);
+      boundary('boot idle → API state');
+      Promise.resolve(w.setPetState(state)).catch(err => finish(false,String(err)));
+    }
+    function onEnded(event) {
+      if (!started || done || returning) return;
+      const v = event.currentTarget, file = (v.currentSrc || v.src).split('/').pop();
+      log(`ended ${file}`);
+      if (file !== `anim_${state}_loop.webm`) return;
+      returning = true; boundary('loop ended → idle API');
+      // Capture-phase listener runs before widget's loop completion callback.
+      // API marks transition synchronously; the widget remains responsible for ending/outro.
+      Promise.resolve(w.setPetState('idle1')).catch(err => finish(false,String(err)));
+    }
+    function tick() {
+      if (done || token !== generation) return;
+      try {
+        if (!started) begin('rAF readiness');
+        if (started) {
+          const meta = read(), signature = `${meta.front}|${meta.src}`;
+          if (signature !== lastSignature) {
+            lastSignature = signature; observed.add(meta.file); boundary(`visible source ${meta.file}`);
+          }
+          const now = performance.now(), ready = pending.filter(item => now >= item.at);
+          pending = pending.filter(item => now < item.at);
+          for (const item of ready) snapshot(item.reason,item);
+          if (elapsed()-lastInternal >= 100) { snapshot('internal'); lastInternal = elapsed(); }
+          $('status').textContent = `기록 중 · ${state} → ${returning ? 'ending/outro → idle' : 'loop 1회'}\n${elapsed().toFixed(0)}ms · ${meta.file} · state=${meta.current} · completed: false`;
+          if (returning && meta.current === 'idle1' && meta.file === 'anim_idle1_loop.webm' && !meta.paused && !meta.transitioning && !finishing) {
+            finishing = true;
+            setTimeout(() => {
+              if (token !== generation || done) return;
+              const missing = expected.filter(file => !observed.has(file));
+              finish(!missing.length, missing.length ? `필수 ending/outro 관측 누락: ${missing.join(', ')}` : '실제 loop ended → ending/outro → idle playing 완료');
+            },400);
+          }
+        }
+      } catch (err) { finish(false,`캔버스/상태 읽기 실패: ${err.message}`); return; }
+      raf = requestAnimationFrame(tick);
+    }
+    function finish(success,reason) {
+      if (done || token !== generation) return; done = true;
+      clearTimeout(timeout); cancelAnimationFrame(raf); $('run').disabled = false;
+      log(reason); $('status').textContent = `${success ? '기록 완료' : '미완료'} · ${state} · completed: ${success}\n${reason}\n${count} real-canvas snapshots · ${elapsed().toFixed(0)}ms · observed: ${[...observed].join(', ')}`;
+    }
+    iframe.addEventListener('load', () => {
+      if (token !== generation) return;
+      try {
+        w = iframe.contentWindow; doc = w.document; canvas = doc.getElementById('screen'); videos = ['vidA','vidB'].map(id => doc.getElementById(id));
+        if (!canvas || videos.some(v => !v) || typeof w.setPetState !== 'function') throw new Error('widget canvas/video/API 없음');
+        for (const v of videos) {
+          v.addEventListener('playing', () => { log(`playing ${(v.currentSrc||v.src).split('/').pop()}`); begin('playing event'); });
+          v.addEventListener('ended', onEnded, {capture:true});
+          v.addEventListener('error', () => finish(false,`video error ${v.currentSrc||v.src}`));
+        }
+        raf = requestAnimationFrame(tick);
+      } catch (err) { finish(false,err.message); }
+    });
+  }
+})();
+</script></html>

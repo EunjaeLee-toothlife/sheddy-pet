@@ -1,0 +1,11 @@
+# doze1_loop full motion reconstruction
+
+Provider: Codex built-in ImageGen. Opaque green backdrop, existing chroma-key post-processing.
+
+Use case: style-transfer and animation consistency repair.
+Edit image 1, the ORIGINAL doze animation contact sheet, preserving every source pose and its cell position. Image 2 is the approved clean color/style reference, not a pose replacement.
+Output EXACTLY five columns by three rows of equal square cells, with 14 animation frames followed by one empty green cell. Preserve reading order. Desired canvas 2560x1536. No labels, borders or text.
+Reconstruct all fourteen frames as the SAME Sheddy character using image 2's clean ivory coat, pale blonde hair, golden eyes, restrained skin coloring, uniform warm-brown outlines. No pink stains in coat, no mottled white highlights in hair/face, no red fringe or white sticker border.
+CRITICAL MOTION FIDELITY: keep the source full action: frames 1-3 sleepy eyelids closing, frames 4-6 progressively deep forward nod, frame 7 startled eyes and hair recoil, frames 8-9 RIGHT-on-screen hand rubbing her eye and yawning, frame 10 hand lowers to chest, frames 11-14 arms return to sides and sleepy recovery. Do not simplify away eye rubbing, yawning, hand movement, deep nod or startled expression. Maintain original pose coordinates, leaning and hair movement. Smooth inconsistent body size, face proportions, skirt length, hairclip and outfit details without erasing intentional head/body motion. Feet occupy consistent source positions unless source action requires movement.
+First and last frame must share the same neutral sleepy pose and silhouette for loop continuity, matching source frame1. White lab coat, white shirt, pastel yellow lemon skirt, white socks and brown loafers stay identical through all cells; lemon hairclip stays on viewer RIGHT unless hidden by a turn.
+Fill ALL empty pixels, including between legs and unused last cell, with uniform opaque #00FF00 green. No shading, textures or shadows on backdrop. Preserve character flat clean cel shading. Exactly 14 full-body characters, one per occupied cell, no cropped feet or overlapping cells. This is a production animation reconstruction, not a new storyboard.

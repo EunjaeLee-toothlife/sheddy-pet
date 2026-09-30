@@ -1,0 +1,88 @@
+{
+  "name": "basic2",
+  "base": "sprites/rebuilt/poses/idle_open_00.png",
+  "poses": {
+    "mid": "sprites/rebuilt/poses/basic2_mid_00.png",
+    "full": "sprites/rebuilt/poses/basic2_full_00.png"
+  },
+  "match_to_base": true,
+  "no_scale_poses": [],
+  "parts": {
+    "loop": [
+      {
+        "img": "base"
+      },
+      {
+        "img": "base"
+      },
+      {
+        "img": "mid"
+      },
+      {
+        "img": "mid"
+      },
+      {
+        "img": "full",
+        "dy": -0.5
+      },
+      {
+        "img": "full",
+        "deg": 0.6,
+        "dy": -1.2
+      },
+      {
+        "img": "full",
+        "deg": 1.2,
+        "dy": -1.8
+      },
+      {
+        "img": "full",
+        "deg": 0.9,
+        "dy": -2.2
+      },
+      {
+        "img": "full",
+        "deg": 0.3,
+        "dy": -2.5
+      },
+      {
+        "img": "full",
+        "deg": -0.3,
+        "dy": -2.5
+      },
+      {
+        "img": "full",
+        "deg": -0.9,
+        "dy": -2.2
+      },
+      {
+        "img": "full",
+        "deg": -1.2,
+        "dy": -1.8
+      },
+      {
+        "img": "full",
+        "deg": -0.6,
+        "dy": -1.2
+      },
+      {
+        "img": "full",
+        "dy": -0.8
+      },
+      {
+        "img": "full",
+        "dy": -0.4
+      },
+      {
+        "img": "mid"
+      },
+      {
+        "img": "mid"
+      },
+      {
+        "img": "base"
+      }
+    ]
+  },
+  "normalization_note": "Both generated V-stretch donors have their head as the topmost point (hands remain below crown). Match head-to-foot bbox height to canonical to remove generation scale drift without erasing raised-arm motion."
+}

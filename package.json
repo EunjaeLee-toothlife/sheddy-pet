@@ -19,6 +19,7 @@
       "preload.js",
       "widget.html",
       "sprites/anim_*.webm",
+      "sprites/rebuilt/videos/anim_*.webm",
       "assets/icons/tray-icon.png"
     ],
     "mac": { "target": ["dmg"], "icon": "assets/icons/app-icon.png" },

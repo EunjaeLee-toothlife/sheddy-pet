@@ -1,0 +1,247 @@
+{
+  "method": "Register the rainbow ending with one camera scale per generated pose group.\n\nStanding hair-to-sole measurements normalize generation layout, while crouches\nand bent knees use the adjacent standing pose's scale rather than their height.\nThe flare masks a small camera pullback for the overhead flask; the proud exit\neases back toward the exact neutral pose. Original motion/timing stays intact.\n",
+  "camera": 0.85,
+  "frames": [
+    {
+      "frame": 0,
+      "donor": "sprites/rebuilt/poses/batches/chem1_end3_00-01-02-03/cell_00.png",
+      "scale": 0.9736842105263158,
+      "dx": -5,
+      "dy": 6,
+      "jumpLift": 0,
+      "measuredGeometry": {
+        "center": 266.0,
+        "bottom": 504,
+        "crown": 48,
+        "bodyHeight": 456
+      }
+    },
+    {
+      "frame": 1,
+      "donor": "sprites/rebuilt/poses/batches/chem1_end3_00-01-02-03/cell_01.png",
+      "scale": 0.9736842105263158,
+      "dx": 15,
+      "dy": 6,
+      "jumpLift": 0,
+      "measuredGeometry": {
+        "center": 245.5,
+        "bottom": 504,
+        "crown": 47,
+        "bodyHeight": 457
+      }
+    },
+    {
+      "frame": 2,
+      "donor": "sprites/rebuilt/poses/batches/chem1_end3_00-01-02-03/cell_02.png",
+      "scale": 0.8276315789473684,
+      "dx": 34,
+      "dy": 102,
+      "jumpLift": 0,
+      "measuredGeometry": {
+        "center": 266.0,
+        "bottom": 477,
+        "crown": 21,
+        "bodyHeight": 456
+      }
+    },
+    {
+      "frame": 3,
+      "donor": "sprites/rebuilt/poses/batches/chem1_end3_00-01-02-03/cell_03.png",
+      "scale": 0.833112582781457,
+      "dx": 51,
+      "dy": 100,
+      "jumpLift": 0,
+      "measuredGeometry": {
+        "center": 243.5,
+        "bottom": 477,
+        "crown": 24,
+        "bodyHeight": 453
+      }
+    },
+    {
+      "frame": 4,
+      "donor": "sprites/rebuilt/poses/batches/chem1_end3_04-05-06-07/cell_00.png",
+      "scale": 0.8186550976138828,
+      "dx": 26,
+      "dy": 96,
+      "jumpLift": 0,
+      "measuredGeometry": {
+        "center": 278.0,
+        "bottom": 490,
+        "crown": 29,
+        "bodyHeight": 461
+      }
+    },
+    {
+      "frame": 5,
+      "donor": "sprites/rebuilt/poses/batches/chem1_end3_04-05-06-07/cell_01.png",
+      "scale": 0.8186550976138828,
+      "dx": 67,
+      "dy": 96,
+      "jumpLift": 0,
+      "measuredGeometry": {
+        "center": 228.0,
+        "bottom": 490,
+        "crown": 29,
+        "bodyHeight": 461
+      }
+    },
+    {
+      "frame": 6,
+      "donor": "sprites/rebuilt/poses/batches/chem1_end3_04-05-06-07/cell_02.png",
+      "scale": 0.8276315789473684,
+      "dx": 24,
+      "dy": 100,
+      "jumpLift": 0,
+      "measuredGeometry": {
+        "center": 277.5,
+        "bottom": 480,
+        "crown": 24,
+        "bodyHeight": 456
+      }
+    },
+    {
+      "frame": 7,
+      "donor": "sprites/rebuilt/poses/batches/chem1_end3_04-05-06-07/cell_03.png",
+      "scale": 0.8216472580583779,
+      "dx": 65,
+      "dy": 102,
+      "jumpLift": 0,
+      "measuredGeometry": {
+        "center": 229.5,
+        "bottom": 481,
+        "crown": 24,
+        "bodyHeight": 457
+      }
+    },
+    {
+      "frame": 8,
+      "donor": "sprites/rebuilt/poses/batches/chem1_end3_08-09-10-11/cell_00.png",
+      "scale": 1.010441767068273,
+      "dx": -16,
+      "dy": 51,
+      "jumpLift": 0,
+      "measuredGeometry": {
+        "center": 267.5,
+        "bottom": 441,
+        "crown": 128,
+        "bodyHeight": 313
+      }
+    },
+    {
+      "frame": 9,
+      "donor": "sprites/rebuilt/poses/batches/chem1_end3_08-09-10-11/cell_01.png",
+      "scale": 1.010441767068273,
+      "dx": 14,
+      "dy": 21,
+      "jumpLift": 7,
+      "measuredGeometry": {
+        "center": 237.5,
+        "bottom": 464,
+        "crown": 93,
+        "bodyHeight": 371
+      }
+    },
+    {
+      "frame": 10,
+      "donor": "sprites/rebuilt/poses/batches/chem1_end3_08-09-10-11/cell_02.png",
+      "scale": 1.010441767068273,
+      "dx": -14,
+      "dy": 8,
+      "jumpLift": 5,
+      "measuredGeometry": {
+        "center": 265.0,
+        "bottom": 479,
+        "crown": 105,
+        "bodyHeight": 374
+      }
+    },
+    {
+      "frame": 11,
+      "donor": "sprites/rebuilt/poses/batches/chem1_end3_08-09-10-11/cell_03.png",
+      "scale": 1.010441767068273,
+      "dx": 4,
+      "dy": 8,
+      "jumpLift": 5,
+      "measuredGeometry": {
+        "center": 247.0,
+        "bottom": 479,
+        "crown": 106,
+        "bodyHeight": 373
+      }
+    },
+    {
+      "frame": 12,
+      "donor": "sprites/rebuilt/poses/batches/chem1_end3_12-13-14-15/cell_00.png",
+      "scale": 0.9182481751824817,
+      "dx": -5,
+      "dy": 64,
+      "jumpLift": 2,
+      "measuredGeometry": {
+        "center": 282.5,
+        "bottom": 469,
+        "crown": 82,
+        "bodyHeight": 387
+      }
+    },
+    {
+      "frame": 13,
+      "donor": "sprites/rebuilt/poses/batches/chem1_end3_12-13-14-15/cell_01.png",
+      "scale": 0.9182481751824817,
+      "dx": 29,
+      "dy": 65,
+      "jumpLift": 0,
+      "measuredGeometry": {
+        "center": 244.5,
+        "bottom": 471,
+        "crown": 83,
+        "bodyHeight": 388
+      }
+    },
+    {
+      "frame": 14,
+      "donor": "sprites/rebuilt/poses/batches/chem1_end3_12-13-14-15/cell_02.png",
+      "scale": 0.9182481751824817,
+      "dx": -1,
+      "dy": 86,
+      "jumpLift": 0,
+      "measuredGeometry": {
+        "center": 277.5,
+        "bottom": 448,
+        "crown": 37,
+        "bodyHeight": 411
+      }
+    },
+    {
+      "frame": 15,
+      "donor": "sprites/rebuilt/poses/batches/chem1_end3_12-13-14-15/cell_03.png",
+      "scale": 0.9182481751824817,
+      "dx": 32,
+      "dy": 86,
+      "jumpLift": 0,
+      "measuredGeometry": {
+        "center": 242.0,
+        "bottom": 448,
+        "crown": 37,
+        "bodyHeight": 411
+      }
+    },
+    {
+      "frame": 16,
+      "donor": "sprites/rebuilt/poses/chem1_end3_proud_00.png",
+      "scale": 0.9135398230088496,
+      "dx": 20,
+      "dy": 46,
+      "jumpLift": 0,
+      "measuredGeometry": {
+        "center": 256.0,
+        "bottom": 494,
+        "crown": 42,
+        "bodyHeight": 452
+      }
+    }
+  ],
+  "despillAfterResize": true,
+  "exactEntry": "sprites/rebuilt/frames/chem1_loop/chem1_loop_00.png",
+  "exactExit": "sprites/rebuilt/poses/idle_open_00.png"
+}

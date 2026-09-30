@@ -1,0 +1,3 @@
+Edit image 1 ONLY inside the mouth. Enlarge its small open speaking mouth to a wider fully open round oval speaking mouth matching mouth gesture image 2 (approximately twice the current width and height). Rounded dark rose mouth interior with light pink tongue at bottom, no teeth. Preserve exactly eyes open, eyebrows, nose, chin, head, hair, body, white lab coat, skirt, shoes, framing, crisp clean flat colors and pure green background from image 1. No blotches, no extra shading or speckles. Single sharp full-body square pose, no text.
+
+References: sprites/rebuilt/raw_poses/talk_half.png; sprites/talk_poses/talk_pose_00.png

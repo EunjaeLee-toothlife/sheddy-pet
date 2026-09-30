@@ -1,0 +1,3 @@
+Edit image 1 with a tiny local mouth-only change. Preserve the entire sharp clean chibi character, exact silhouette, scale, pose, framing, eyes, eyebrows, nose, hair, white lab coat, skirt and pure green background. Replace her closed smiling mouth with a SMALL HALF-OPEN round speaking mouth matching only the mouth gesture of image 2. Small pink dark interior and subtle lower lip, no teeth, no yawn. Do not import blurry style or speckles from image 2. All other regions unchanged, especially uniform clean pale face and white coat without irregular patches. Output same full-body square single pose, crisp lines.
+
+References: sprites/rebuilt/raw_poses/idle_open.png; sprites/talk_poses/talk_pose_01.png

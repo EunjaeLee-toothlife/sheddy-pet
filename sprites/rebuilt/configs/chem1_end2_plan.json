@@ -1,0 +1,75 @@
+{
+  "name": "chem1_end2",
+  "base": "sprites/rebuilt/frames/chem1_loop/chem1_loop_00.png",
+  "poses": {
+    "p0": "sprites/rebuilt/poses/batches/chem1_end2_00-01-02-03/cell_00.png",
+    "p1": "sprites/rebuilt/poses/batches/chem1_end2_00-01-02-03/cell_01.png",
+    "p2": "sprites/rebuilt/poses/batches/chem1_end2_00-01-02-03/cell_02.png",
+    "p3": "sprites/rebuilt/poses/batches/chem1_end2_00-01-02-03/cell_03.png",
+    "p4": "sprites/rebuilt/poses/batches/chem1_end2_04-05-06-07/cell_00.png",
+    "p5": "sprites/rebuilt/poses/batches/chem1_end2_04-05-06-07/cell_01.png",
+    "p6": "sprites/rebuilt/poses/batches/chem1_end2_04-05-06-07/cell_02.png",
+    "p7": "sprites/rebuilt/poses/batches/chem1_end2_04-05-06-07/cell_03.png",
+    "p8": "sprites/rebuilt/poses/batches/chem1_end2_08-09-10-11/cell_00.png",
+    "p9": "sprites/rebuilt/poses/batches/chem1_end2_08-09-10-11/cell_01.png",
+    "p10": "sprites/rebuilt/poses/batches/chem1_end2_08-09-10-11/cell_02.png",
+    "p11": "sprites/rebuilt/poses/batches/chem1_end2_08-09-10-11/cell_03.png"
+  },
+  "pose_scales": {
+    "p0": 1.0022172949002217,
+    "p1": 1.0022172949002217,
+    "p2": 1.0066815144766148,
+    "p3": 1.0066815144766148,
+    "p4": 1.0157303370786517,
+    "p5": 1.018018018018018,
+    "p6": 1.018018018018018,
+    "p7": 1.0226244343891402,
+    "p8": 0.9741379310344828,
+    "p9": 0.9741379310344828,
+    "p10": 0.9762419006479481,
+    "p11": 0.9741379310344828
+  },
+  "horizontal_anchor": "feet",
+  "match_to_base": true,
+  "parts": {
+    "end2": [
+      {
+        "img": "p0"
+      },
+      {
+        "img": "p1"
+      },
+      {
+        "img": "p2"
+      },
+      {
+        "img": "p3"
+      },
+      {
+        "img": "p4"
+      },
+      {
+        "img": "p5"
+      },
+      {
+        "img": "p6"
+      },
+      {
+        "img": "p7"
+      },
+      {
+        "img": "p8"
+      },
+      {
+        "img": "p9"
+      },
+      {
+        "img": "p10"
+      },
+      {
+        "img": "p11"
+      }
+    ]
+  },
+  "note": "Standing body height from golden hair crown excludes questionmarks; planted shoe center and baseline."
+}

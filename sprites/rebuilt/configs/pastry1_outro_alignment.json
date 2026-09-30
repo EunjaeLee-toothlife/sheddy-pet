@@ -1,0 +1,82 @@
+[
+  {
+    "frame": "pastry1_outro_00.png",
+    "offset": [
+      -31,
+      5
+    ],
+    "method": "planted loafer center/baseline; no scaling or pose replacement"
+  },
+  {
+    "frame": "pastry1_outro_01.png",
+    "offset": [
+      25,
+      3
+    ],
+    "method": "planted loafer center/baseline; no scaling or pose replacement"
+  },
+  {
+    "frame": "pastry1_outro_02.png",
+    "offset": [
+      12,
+      4
+    ],
+    "method": "planted loafer center/baseline; no scaling or pose replacement"
+  },
+  {
+    "frame": "pastry1_outro_03.png",
+    "offset": [
+      22,
+      4
+    ],
+    "method": "planted loafer center/baseline; no scaling or pose replacement"
+  },
+  {
+    "frame": "pastry1_outro_04.png",
+    "offset": [
+      2,
+      -1
+    ],
+    "method": "planted loafer center/baseline; no scaling or pose replacement"
+  },
+  {
+    "frame": "pastry1_outro_05.png",
+    "offset": [
+      2,
+      1
+    ],
+    "method": "planted loafer center/baseline; no scaling or pose replacement"
+  },
+  {
+    "frame": "pastry1_outro_06.png",
+    "offset": [
+      -8,
+      9
+    ],
+    "method": "planted loafer center/baseline; no scaling or pose replacement"
+  },
+  {
+    "frame": "pastry1_outro_07.png",
+    "offset": [
+      2,
+      9
+    ],
+    "method": "planted loafer center/baseline; no scaling or pose replacement"
+  },
+  {
+    "frame": "pastry1_outro_08.png",
+    "offset": [
+      2,
+      0
+    ],
+    "method": "planted loafer center/baseline; no scaling or pose replacement"
+  },
+  {
+    "frame": "pastry1_outro_09.png",
+    "offset": [
+      2,
+      0
+    ],
+    "method": "planted loafer center/baseline; no scaling or pose replacement"
+  }
+]

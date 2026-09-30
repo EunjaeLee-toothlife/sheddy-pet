@@ -1,0 +1,18 @@
+{
+  "name": "basic1_left_probe",
+  "base": "sprites/rebuilt/poses/idle_open_00.png",
+  "poses": {
+    "L": "sprites/rebuilt/poses/basic1_left_00.png"
+  },
+  "match_to_base": true,
+  "lock_body_poses": {
+    "L": 205
+  },
+  "parts": {
+    "loop": [
+      {
+        "img": "L"
+      }
+    ]
+  }
+}

@@ -1,0 +1,272 @@
+{
+  "method": "canonical standing body height from hair crown, foot center and baseline; explicit shared entry/exit donors",
+  "frames": [
+    {
+      "frame": 0,
+      "sourceCell": 0,
+      "donor": "sprites/rebuilt/poses/batches/chem1_loop_00-01-02-03/cell_00.png",
+      "scale": 1.0066815144766148,
+      "dx": -3,
+      "dy": 4,
+      "bbox": [
+        153,
+        43,
+        405,
+        499
+      ]
+    },
+    {
+      "frame": 1,
+      "sourceCell": 1,
+      "donor": "sprites/rebuilt/poses/batches/chem1_loop_00-01-02-03/cell_01.png",
+      "scale": 1.0066815144766148,
+      "dx": 7,
+      "dy": 4,
+      "bbox": [
+        150,
+        42,
+        362,
+        499
+      ]
+    },
+    {
+      "frame": 2,
+      "sourceCell": 2,
+      "donor": "sprites/rebuilt/poses/batches/chem1_loop_00-01-02-03/cell_02.png",
+      "scale": 1.0022172949002217,
+      "dx": -4,
+      "dy": 22,
+      "bbox": [
+        149,
+        42,
+        376,
+        499
+      ]
+    },
+    {
+      "frame": 3,
+      "sourceCell": 3,
+      "donor": "sprites/rebuilt/poses/batches/chem1_loop_00-01-02-03/cell_03.png",
+      "scale": 1.0022172949002217,
+      "dx": 4,
+      "dy": 22,
+      "bbox": [
+        148,
+        43,
+        370,
+        499
+      ]
+    },
+    {
+      "frame": 4,
+      "sourceCell": 4,
+      "donor": "sprites/rebuilt/poses/batches/chem1_loop_04-05-06-07/cell_00.png",
+      "scale": 1.0044444444444445,
+      "dx": -4,
+      "dy": 4,
+      "bbox": [
+        149,
+        42,
+        367,
+        499
+      ]
+    },
+    {
+      "frame": 5,
+      "sourceCell": 5,
+      "donor": "sprites/rebuilt/poses/batches/chem1_loop_04-05-06-07/cell_01.png",
+      "scale": 1.0044444444444445,
+      "dx": 8,
+      "dy": 4,
+      "bbox": [
+        151,
+        42,
+        360,
+        499
+      ]
+    },
+    {
+      "frame": 6,
+      "sourceCell": 6,
+      "donor": "sprites/rebuilt/poses/batches/chem1_loop_04-05-06-07/cell_02.png",
+      "scale": 1.0,
+      "dx": -2,
+      "dy": 24,
+      "bbox": [
+        146,
+        46,
+        366,
+        499
+      ]
+    },
+    {
+      "frame": 7,
+      "sourceCell": 7,
+      "donor": "sprites/rebuilt/poses/batches/chem1_loop_04-05-06-07/cell_03.png",
+      "scale": 0.9977924944812362,
+      "dx": 10,
+      "dy": 24,
+      "bbox": [
+        142,
+        44,
+        368,
+        499
+      ]
+    },
+    {
+      "frame": 8,
+      "sourceCell": 8,
+      "donor": "sprites/rebuilt/poses/batches/chem1_loop_08-09-10-11/cell_00.png",
+      "scale": 0.9890590809628009,
+      "dx": -17,
+      "dy": 9,
+      "bbox": [
+        139,
+        43,
+        372,
+        499
+      ]
+    },
+    {
+      "frame": 9,
+      "sourceCell": 9,
+      "donor": "sprites/rebuilt/poses/batches/chem1_loop_08-09-10-11/cell_01.png",
+      "scale": 0.9934065934065934,
+      "dx": 20,
+      "dy": 6,
+      "bbox": [
+        126,
+        42,
+        375,
+        499
+      ]
+    },
+    {
+      "frame": 10,
+      "sourceCell": 10,
+      "donor": "sprites/rebuilt/poses/chem1_opposite_00.png",
+      "scale": 0.9868995633187773,
+      "dx": -8,
+      "dy": 27,
+      "bbox": [
+        123,
+        41,
+        374,
+        499
+      ]
+    },
+    {
+      "frame": 11,
+      "sourceCell": 11,
+      "donor": "sprites/rebuilt/poses/batches/chem1_loop_08-09-10-11/cell_03.png",
+      "scale": 0.9868995633187773,
+      "dx": 23,
+      "dy": 27,
+      "bbox": [
+        128,
+        41,
+        375,
+        499
+      ]
+    },
+    {
+      "frame": 12,
+      "sourceCell": 12,
+      "donor": "sprites/rebuilt/poses/batches/chem1_loop_12-13-14-15/cell_00.png",
+      "scale": 0.9495798319327731,
+      "dx": -8,
+      "dy": 25,
+      "bbox": [
+        99,
+        44,
+        420,
+        499
+      ]
+    },
+    {
+      "frame": 13,
+      "sourceCell": 13,
+      "donor": "sprites/rebuilt/poses/chem1_swirl_opposite_00.png",
+      "scale": 0.9495798319327731,
+      "dx": 25,
+      "dy": 25,
+      "bbox": [
+        75,
+        44,
+        399,
+        499
+      ]
+    },
+    {
+      "frame": 14,
+      "sourceCell": 14,
+      "donor": "sprites/rebuilt/poses/batches/chem1_loop_12-13-14-15/cell_02.png",
+      "scale": 0.9436325678496869,
+      "dx": -5,
+      "dy": 37,
+      "bbox": [
+        120,
+        42,
+        377,
+        499
+      ]
+    },
+    {
+      "frame": 15,
+      "sourceCell": 15,
+      "donor": "sprites/rebuilt/poses/batches/chem1_loop_12-13-14-15/cell_03.png",
+      "scale": 0.9436325678496869,
+      "dx": 30,
+      "dy": 37,
+      "bbox": [
+        121,
+        42,
+        379,
+        499
+      ]
+    },
+    {
+      "frame": 16,
+      "sourceCell": 16,
+      "donor": "sprites/rebuilt/poses/batches/chem1_loop_16-17-18/cell_00.png",
+      "scale": 0.9617021276595744,
+      "dx": 0,
+      "dy": 20,
+      "bbox": [
+        131,
+        45,
+        374,
+        499
+      ]
+    },
+    {
+      "frame": 17,
+      "sourceCell": 17,
+      "donor": "sprites/rebuilt/poses/batches/chem1_loop_16-17-18/cell_01.png",
+      "scale": 0.9617021276595744,
+      "dx": 9,
+      "dy": 20,
+      "bbox": [
+        144,
+        45,
+        394,
+        499
+      ]
+    },
+    {
+      "frame": 18,
+      "sourceCell": 0,
+      "donor": "sprites/rebuilt/poses/batches/chem1_loop_16-17-18/cell_02.png",
+      "scale": 0.9596602972399151,
+      "dx": -4,
+      "dy": 27,
+      "bbox": [
+        153,
+        43,
+        405,
+        499
+      ],
+      "exactLoopCloser": true
+    }
+  ]
+}

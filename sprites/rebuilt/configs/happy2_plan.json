@@ -1,0 +1,88 @@
+{
+  "name": "happy2",
+  "base": "sprites/rebuilt/poses/idle_open_00.png",
+  "poses": {
+    "wave": "sprites/rebuilt/poses/happy2_wave_00.png"
+  },
+  "match_to_base": true,
+  "no_scale_poses": [],
+  "parts": {
+    "loop": [
+      {
+        "img": "base"
+      },
+      {
+        "img": "base"
+      },
+      {
+        "img": "wave"
+      },
+      {
+        "img": "wave",
+        "deg": 1.6,
+        "dy": -0.5
+      },
+      {
+        "img": "wave",
+        "deg": 2.8,
+        "dy": -1.0
+      },
+      {
+        "img": "wave",
+        "deg": 3.2,
+        "dy": -1.2
+      },
+      {
+        "img": "wave",
+        "deg": 2.4,
+        "dy": -0.8
+      },
+      {
+        "img": "wave",
+        "deg": 1.2,
+        "dy": -0.4
+      },
+      {
+        "img": "wave"
+      },
+      {
+        "img": "wave",
+        "deg": -1.2,
+        "dy": -0.4
+      },
+      {
+        "img": "wave",
+        "deg": -2.0,
+        "dy": -0.8
+      },
+      {
+        "img": "wave",
+        "deg": -2.4,
+        "dy": -1.0
+      },
+      {
+        "img": "wave",
+        "deg": -2.0,
+        "dy": -0.8
+      },
+      {
+        "img": "wave",
+        "deg": -1.2,
+        "dy": -0.4
+      },
+      {
+        "img": "wave"
+      },
+      {
+        "img": "wave"
+      },
+      {
+        "img": "base"
+      },
+      {
+        "img": "base"
+      }
+    ]
+  },
+  "normalization_note": "Raised hand remains below crown; matching silhouette height preserves original character scale."
+}

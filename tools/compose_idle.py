@@ -7,6 +7,8 @@ Breathing bob is a procedural sub-pixel vertical shift.
 """
 import numpy as np
 from PIL import Image
+import argparse
+from pathlib import Path
 
 BASE = "sprites/idle1_donor/donor_00.png"    # open eyes (keyed raw 00)
 CLOSED = "sprites/idle1_donor/donor_01.png"  # closed eyes (keyed raw 04)
@@ -56,8 +58,26 @@ def vshift(img: Image.Image, dy: float) -> Image.Image:
 
 
 def main():
-    base = np.asarray(Image.open(BASE).convert("RGBA")).astype(np.float64)
-    closed = np.asarray(Image.open(CLOSED).convert("RGBA")).astype(np.float64)
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--base", default=BASE)
+    parser.add_argument("--closed", default=CLOSED)
+    parser.add_argument("--outdir", default="sprites/idle1_loop")
+    parser.add_argument("--prefix", default="idle1_loop")
+    parser.add_argument("--register-closed", action="store_true",
+                        help="align the donor silhouette before transplanting its eyelids")
+    args = parser.parse_args()
+    Path(args.outdir).mkdir(parents=True, exist_ok=True)
+    base = np.asarray(Image.open(args.base).convert("RGBA")).astype(np.float64)
+    closed = np.asarray(Image.open(args.closed).convert("RGBA")).astype(np.float64)
+    if args.register_closed:
+        from slice_and_key import phase_offset
+        dx, dy = phase_offset(base[..., 3], closed[..., 3])
+        if abs(dx) > 12 or abs(dy) > 12:
+            raise ValueError(f"blink donor registration exceeds limit: {dx}, {dy}")
+        donor = Image.fromarray(closed.astype(np.uint8)).transform(
+            (base.shape[1], base.shape[0]), Image.AFFINE,
+            (1, 0, -dx, 0, 1, -dy), resample=Image.BILINEAR)
+        closed = np.asarray(donor).astype(np.float64)
     mask = rect_mask(base.shape[:2], EYE_RECTS, FEATHER)
     blink = base * (1 - mask) + closed * mask
     variants = {
@@ -66,7 +86,7 @@ def main():
     }
     for i, (eye, bob) in enumerate(PLAN):
         frame = vshift(variants[eye], bob) if bob else variants[eye]
-        frame.save(OUT.format(i))
+        frame.save(Path(args.outdir) / f"{args.prefix}_{i:02d}.png")
     print(f"composed {len(PLAN)} frames (tight eye-rect blink)")
 
 

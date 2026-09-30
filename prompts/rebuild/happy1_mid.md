@@ -1,0 +1,3 @@
+Edit image 1 to the happy hands-rising gesture of image 2. Preserve clean sharp character, head size and body proportions, exact full-body framing and floor line, blonde hair and lemon clip, white lab coat and shirt, lemon skirt, socks and shoes from image 1. Both elbows bend and both hands rise loosely near chest on either side, not clasped yet, as image 2. Eyes closed in happy upward arcs, small pleased closed smile, subtle pink blush. Keep body upright and feet unchanged; sparse consistent clothing folds, no speckles, irregular skin or coat patches, no glow. Single crisp square full-body pose against pure solid green.
+
+References: sprites/rebuilt/raw_poses/idle_open.png; sprites/happy1_poses/happy1_pose_00.png

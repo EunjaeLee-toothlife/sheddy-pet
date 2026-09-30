@@ -18,3 +18,7 @@ Desktop.ini
 node_modules/
 dist/
 PLAN_LOG.md
+
+# Reproducible contact sheets assembled from the original frames
+sprites/rebuilt/inputs/
+sprites/rebuilt/qa/

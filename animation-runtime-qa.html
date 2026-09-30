@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="ko"><meta charset="utf-8"><title>Animation runtime QA</title>
+<style>body{font:15px system-ui;margin:24px;background:#20252d;color:#edf1f7}button{padding:10px 18px;margin:4px;cursor:pointer}iframe{width:420px;height:510px;border:1px solid #687184;background:#343c49;float:right}pre{white-space:pre-wrap;overflow-wrap:anywhere}table{border-collapse:collapse;width:100%;font-size:13px}td,th{border:1px solid #586172;padding:6px;text-align:left}.bad{color:#ff9c97}.good{color:#9fe3b0}</style>
+<h1>실제 위젯 상태 전환 검수</h1>
+<p>원래 위젯의 속도와 동작으로 21개 상태 및 모든 화학·파티시엘 엔딩을 실행합니다. playing → ended를 직접 관측한 영상만 완주로 기록합니다. 숨겨진 탭에서는 재생이 지연될 수 있습니다.</p>
+<p>빠른 진입 회귀 검사: 부팅 idle의 실제 playing 관측 직후 상태 API를 호출합니다. 이전 페이드가 새 시작 영상을 pause하던 문제를 재현할 수 있도록 임의의 대기 시간을 추가하지 않습니다.</p>
+<button id="check">준비 상태 검사</button><button id="run" disabled>전체 실행</button><button id="stop" disabled>중지</button><button id="export">결과 JSON 저장</button>
+<iframe id="pet" title="실제 Sheddy 위젯" allow="autoplay"></iframe>
+<p id="status">준비 상태를 검사하세요.</p><pre id="plan"></pre><pre id="issues" class="bad"></pre>
+<h2>실행 결과</h2><pre id="results"></pre><h2>39개 영상 커버리지</h2><div id="coverage"></div>
+<details><summary>관측 이벤트</summary><pre id="events"></pre></details>
+<script>
+'use strict';
+const $=id=>document.getElementById(id), iframe=$('pet');
+const scope=new URLSearchParams(location.search).get('scope')||'all';
+let manifest, clips=[], expectedClips=[], cases=[], ready=false, running=false, stopped=false, observer=null;
+let report={schemaVersion:1,startedAt:null,preflight:null,cases:[],events:[],coverage:{},limitations:['정적 그림체·알파 품질·시각적 전환의 자연스러움은 이 재생 검사만으로 판정하지 않습니다.','초기 부팅 중 놓친 이벤트는 보충하여 완주로 간주하지 않습니다. 다음 실제 playing/ended 쌍을 기다립니다.']};
+const timeoutFor=c=>Math.max(20000,Math.ceil((Number(c.sourceDuration)/(Number(c.rate)||1)+15)*1000));
+function clipName(v){try{return new URL(v.currentSrc||v.src,location.href).pathname.split('/').pop().replace(/^anim_/,'').replace(/\.webm$/,'')}catch{return ''}}
+function render(){
+ $('results').textContent=report.cases.map(c=>`${c.status.toUpperCase()} ${c.state}${c.ending?' ending='+c.ending:''} ${c.stage||''} ${c.error||''}`).join('\n');
+ $('events').textContent=report.events.slice(-160).map(e=>JSON.stringify(e)).join('\n');
+ const table=document.createElement('table');table.innerHTML='<tr><th>Clip</th><th>playing / ended / errors</th><th>완주</th><th>generated video SHA256</th></tr>';
+ for(const c of clips){const x=report.coverage[c.clip]||{};const tr=document.createElement('tr');for(const value of [c.clip,`${x.playing||0} / ${x.ended||0} / ${x.errors||0}`,x.completed||0,c.evidence?.videoSha256||'미확인']){const td=document.createElement('td');td.textContent=value;tr.append(td)}table.append(tr)}$('coverage').replaceChildren(table);
+}
+async function preflight(){
+ ready=false;$('run').disabled=true;$('status').textContent='후보 manifest 및 영상 검사 중…';const issues=[];
+ try{
+  const r=await fetch('anims/rebuild_manifest.json',{cache:'no-store'});if(!r.ok)throw Error('manifest HTTP '+r.status);manifest=await r.json();clips=manifest.clips;
+  if(clips.length!==39)issues.push('등록 영상 수가 39개가 아닙니다: '+clips.length);
+  const states=[...new Set(clips.map(c=>c.state))];if(states.length!==21)issues.push('등록 상태 수가 21개가 아닙니다: '+states.length);
+  if(new Set(clips.map(c=>c.clip)).size!==clips.length)issues.push('중복 clip 등록이 있습니다.');
+  for(const state of states){const group=clips.filter(c=>c.state===state);if(group.filter(c=>c.part==='loop').length!==1)issues.push(state+': loop 등록은 정확히 하나여야 합니다.');if(group.some(c=>!['start','loop','end','outro'].includes(c.part)))issues.push(state+': 알 수 없는 part 값');for(const part of ['start','outro'])if(group.filter(c=>c.part===part).length>1)issues.push(state+': 중복 '+part);}
+  for(const [state,count] of [['pastry1',10],['chem1',3]]){const numbers=clips.filter(c=>c.state===state&&c.part==='end').map(c=>Number(c.clip.match(/end(\d+)$/)?.[1])).sort((a,b)=>a-b);if(JSON.stringify(numbers)!==JSON.stringify(Array.from({length:count},(_,i)=>i+1)))issues.push(state+': end1–end'+count+' 전체 등록이 필요합니다.');}
+  const widget=await (await fetch('widget.html',{cache:'no-store'})).text();if(!/params\.get\(["']ending["']\)/.test(widget))issues.push('위젯에 ending=n 선택 기능이 아직 없습니다. 모든 엔딩 검수는 실행할 수 없습니다.');
+  const checkClip=async c=>{
+   if(!['generated','reviewed'].includes(c.status)||!c.candidate||!c.evidence?.videoSha256||!c.evidence?.originalsUnchanged||!c.evidence?.timingPreserved){issues.push(c.clip+': 준비 상태/생성 해시/원본 보존/타이밍 증거 부족');return}
+   const expected='sprites/rebuilt/videos/anim_'+c.clip+'.webm';if(c.candidate!==expected){issues.push(c.clip+': 위젯 후보 경로와 불일치');return}
+   const head=await fetch(c.candidate,{method:'HEAD',cache:'no-store'});if(!head.ok){issues.push(c.clip+': HEAD HTTP '+head.status);return}
+   const response=await fetch(c.candidate,{cache:'no-store'});if(!response.ok){issues.push(c.clip+': GET HTTP '+response.status);return}
+   const hash=[...new Uint8Array(await crypto.subtle.digest('SHA-256',await response.arrayBuffer()))].map(x=>x.toString(16).padStart(2,'0')).join('');
+   if(hash!==c.evidence.videoSha256)issues.push(c.clip+': 실제 후보 SHA256 불일치');
+  };
+  // Match the widget's bounded preloader; avoid overflowing small local HTTP
+  // servers' accept queues with39 simultaneous HEAD/GET connection pairs.
+  const checks=[];
+  for(let i=0;i<clips.length;i+=3)checks.push(...await Promise.allSettled(clips.slice(i,i+3).map(checkClip)));
+  checks.forEach((r,i)=>{if(r.status==='rejected')issues.push(clips[i].clip+': '+String(r.reason))});
+  cases=states.flatMap(state=>Array.from({length:['pastry1','chem1'].includes(state)?clips.filter(c=>c.state===state&&c.part==='end').length:1},(_,i)=>({state,ending:['pastry1','chem1'].includes(state)?i+1:null})));
+  if(scope!=='all'&&!states.includes(scope))issues.push('알 수 없는 검사 범위: '+scope);
+  if(scope!=='all')cases=cases.filter(c=>c.state===scope);
+  // Scoped families still need one full idle cycle, since immediate boot/return
+  // playing proves readiness but does not by itself complete the idle video.
+  if(scope!=='all'&&scope!=='idle1')cases.unshift({state:'idle1',ending:null});
+  expectedClips=clips.filter(c=>scope==='all'||c.state===scope||c.state==='idle1');
+  $('run').textContent=scope==='all'?'전체 실행':`${scope} 실행`;
+  $('plan').textContent=`검사 범위: ${scope} / ${cases.length}개 실행 / 대상 ${expectedClips.length}개 영상 (부팅·복귀 idle 포함)\n전체 등록: ${states.length}개 상태 / ${clips.length}개 영상\n각 iframe 부팅 → idle playing → 상태 start(있으면) 완주 → loop playing/ended 1회 이상 → idle 요청 → 해당 ending/outro 완주 → idle playing 확인. talk는 idle 요청 없이 위젯 자체의 자동 복귀를 관측합니다. idle 자체는 반복 loop의 다음 playing을 확인합니다. 각 단계는 영상 길이/원래 rate + 15초 기준으로 timeout.\n`+cases.map(c=>c.state+(c.ending?' ending='+c.ending:'')).join(', ');
+ }catch(e){issues.push(String(e))}
+ report.preflight={at:new Date().toISOString(),issues,clipCount:clips.length};ready=issues.length===0;$('issues').textContent=issues.join('\n');$('status').textContent=ready?'준비 완료. 전체 실행을 누르세요.':'준비 미완료. 누락/불일치가 해결될 때까지 실행하지 않습니다.';$('run').disabled=!ready;render();
+}
+function attachObservation(result){
+ let attachedDocument=null,poll;const active=new WeakMap();let sequence=0;
+ const record=(event,synthetic=false)=>{
+  const v=event.target;if(iframe.contentDocument?.URL!==result.widgetUrl||!(v instanceof iframe.contentWindow.HTMLVideoElement))return;
+  const name=clipName(v),c=clips.find(c=>c.clip===name);if(!c)return;
+  const entry={seq:++sequence,at:performance.now(),case:result.state,ending:result.ending,type:event.type,clip:name,src:v.currentSrc||v.src,time:v.currentTime,duration:Number.isFinite(v.duration)?v.duration:null,rate:v.playbackRate,readyState:v.readyState,paused:v.paused,error:v.error?{code:v.error.code,message:v.error.message}:null,synthetic};
+  entry.generatedVideoSha256=c.evidence?.videoSha256;
+  if(['playing','ended'].includes(event.type)&&!synthetic){const actual=new URL(entry.src,location.href),expected=new URL(c.candidate,location.href);if(actual.origin!==expected.origin||actual.pathname!==expected.pathname)entry.runtimeViolation='재생 영상이 검증된 rebuilt 후보 경로와 다릅니다.';else if(Math.abs(v.playbackRate-(Number(c.rate)||1))>.001)entry.runtimeViolation='원래 playbackRate와 다릅니다.';else if(Number.isFinite(v.duration)&&Math.abs(v.duration-Number(c.sourceDuration))>.15)entry.runtimeViolation='원래 영상 duration과 다릅니다.';}
+  if(event.type==='playing'&&!synthetic){active.set(v,{clip:name,start:entry.seq,startTime:v.currentTime,rate:v.playbackRate});}
+  if(event.type==='ended'){
+   const a=active.get(v);entry.observedPlayingSeq=a?.clip===name?a.start:null;
+   entry.observedPlayingTime=a?.startTime??null;
+   entry.complete=Boolean(a?.clip===name&&a.startTime<=.25&&!v.error&&!entry.runtimeViolation&&Number.isFinite(v.duration)&&Math.abs(v.duration-Number(c.sourceDuration))<=.15&&v.currentTime>=v.duration-.15&&Math.abs(a.rate-(Number(c.rate)||1))<.001);
+   active.delete(v);
+  }
+  report.events.push(entry);result.events.push(entry);
+  const x=report.coverage[name]||(report.coverage[name]={playing:0,ended:0,errors:0,completed:0,generatedVideoSha256:c.evidence?.videoSha256});
+  if(event.type==='playing'&&!synthetic)x.playing++;if(event.type==='ended'){x.ended++;if(entry.complete)x.completed++}if(event.type==='error'||entry.runtimeViolation)x.errors++;
+  render();
+ };
+ const attach=()=>{try{const doc=iframe.contentDocument;if(!doc||doc.URL!==result.widgetUrl||doc===attachedDocument)return;attachedDocument=doc;for(const type of ['playing','pause','ended','error','loadedmetadata','durationchange','ratechange','stalled','waiting','abort'])doc.addEventListener(type,record,true);
+  // Snapshot is diagnostic only; it never seeds a playing/ended completion pair.
+  for(const v of doc.querySelectorAll('video'))if(v.currentSrc)record({target:v,type:'boot-snapshot'},true);
+ }catch(e){result.observerError=String(e)}};
+ iframe.addEventListener('load',attach);poll=setInterval(attach,5);attach();
+ return ()=>{clearInterval(poll);iframe.removeEventListener('load',attach);if(attachedDocument)for(const type of ['playing','ended','pause','error','loadedmetadata','durationchange','ratechange','stalled','waiting','abort'])attachedDocument.removeEventListener(type,record,true)};
+}
+function waitEvent(result,clip,type,after,timeout){return new Promise((resolve,reject)=>{
+ const start=performance.now();const timer=setInterval(()=>{
+  if(stopped){clearInterval(timer);reject(Error('사용자 중지'));return}
+  const events=result.events.filter(e=>e.seq>after);const err=events.find(e=>e.type==='error');if(err){clearInterval(timer);reject(Error(`${err.clip} media error ${JSON.stringify(err.error)}`));return}
+  const violation=events.find(e=>e.runtimeViolation);if(violation){clearInterval(timer);reject(Error(`${violation.clip}: ${violation.runtimeViolation}`));return}
+  const found=events.find(e=>e.clip===clip&&e.type===type&&!e.synthetic&&(type!=='ended'||e.complete));
+  if(found){clearInterval(timer);resolve(found)}else if(performance.now()-start>timeout){clearInterval(timer);reject(Error(`${clip} ${type} 관측 timeout (${timeout}ms)`))}
+ },25);
+})}
+async function runCase(plan){
+ const result={...plan,status:'running',stage:'boot',events:[],startedAt:new Date().toISOString()};report.cases.push(result);render();
+ const url=new URL('widget.html',location.href);Object.entries({assets:'rebuilt',dice:'0',desktop:'1',state:'idle1'}).forEach(([k,v])=>url.searchParams.set(k,v));if(plan.ending)url.searchParams.set('ending',plan.ending);url.searchParams.set('qaRun',Date.now());result.widgetUrl=url.href;
+ observer?.();observer=attachObservation(result);iframe.src=url.href;
+ try{
+  const boot=await waitEvent(result,'idle1_loop','playing',0,25000);
+  if(typeof iframe.contentWindow.setPetState!=='function')throw Error('window.setPetState API 없음');
+  let cursor=boot.seq;const stateClips=clips.filter(c=>c.state===plan.state);const start=stateClips.find(c=>c.part==='start'),loop=stateClips.find(c=>c.part==='loop');if(!loop)throw Error('loop 등록 없음');
+  result.stage='entry';if(plan.state!=='idle1'){result.entryCommandAt=performance.now();result.entryCommandDelayMs=result.entryCommandAt-boot.at;iframe.contentWindow.setPetState(plan.state);}
+  if(start){const played=await waitEvent(result,start.clip,'playing',cursor,timeoutFor(start));const ended=await waitEvent(result,start.clip,'ended',played.seq,timeoutFor(start));cursor=ended.seq}
+  result.stage='loop';const played=await waitEvent(result,loop.clip,'playing',plan.state==='idle1'?0:cursor,timeoutFor(loop));const ended=await waitEvent(result,loop.clip,'ended',played.seq,timeoutFor(loop));cursor=ended.seq;
+  result.stage=plan.state==='talk'?'talk-auto-idle':'exit';result.idleReturnMode=plan.state==='talk'?'widget-automatic':plan.state==='idle1'?'same-state-loop-repeat':'setPetState';
+  // Talk must demonstrate its own automatic idle return; an API command would mask a broken onCycleEnd.
+  if(plan.state!=='talk')iframe.contentWindow.setPetState('idle1');
+  const endings=stateClips.filter(c=>c.part==='end').sort((a,b)=>Number(a.clip.match(/end(\d+)$/)?.[1]||0)-Number(b.clip.match(/end(\d+)$/)?.[1]||0));const ending=endings[plan.ending?plan.ending-1:0];
+  for(const c of [ending,stateClips.find(c=>c.part==='outro')].filter(Boolean)){const p=await waitEvent(result,c.clip,'playing',cursor,timeoutFor(c));const e=await waitEvent(result,c.clip,'ended',p.seq,timeoutFor(c));cursor=e.seq}
+  result.stage='idle-return';await waitEvent(result,'idle1_loop','playing',cursor,25000);
+  result.status='passed';result.stage='complete';
+ }catch(e){result.status=stopped?'stopped':'failed';result.error=String(e)}finally{result.finishedAt=new Date().toISOString();observer?.();observer=null;render()}
+}
+$('check').onclick=preflight;
+$('run').onclick=async()=>{if(!ready||running)return;running=true;stopped=false;$('run').disabled=true;$('check').disabled=true;$('stop').disabled=false;report.startedAt=new Date().toISOString();report.cases=[];report.events=[];report.coverage={};
+ try{for(const c of cases){if(stopped)break;$('status').textContent=`실행 ${report.cases.length+1}/${cases.length}: ${c.state}${c.ending?' ending '+c.ending:''}`;await runCase(c)}const missing=expectedClips.filter(c=>!report.coverage[c.clip]?.completed).map(c=>c.clip);report.summary={finishedAt:new Date().toISOString(),scope,passed:report.cases.filter(c=>c.status==='passed').length,failed:report.cases.filter(c=>c.status==='failed').length,planned:cases.length,stopped,registeredClipCount:clips.length,completedClipCount:expectedClips.length-missing.length,missingClips:missing};$('status').textContent=JSON.stringify(report.summary,null,2)}finally{running=false;$('check').disabled=false;$('run').disabled=!ready;$('stop').disabled=true;render()}};
+$('stop').onclick=()=>{stopped=true};
+$('export').onclick=()=>{const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([JSON.stringify(report,null,2)],{type:'application/json'}));a.download='animation-runtime-qa-'+new Date().toISOString().replace(/[:.]/g,'-')+'.json';a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1000)};
+</script></html>

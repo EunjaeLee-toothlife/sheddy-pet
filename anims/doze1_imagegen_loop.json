@@ -1,0 +1,11 @@
+{
+  "name": "doze1_imagegen_loop",
+  "generator": "codex-built-in-imagegen",
+  "sheet": "sprites/raw/doze1_imagegen_sheet.png",
+  "ref": "sprites/doze1_loop/doze1_loop_00.png",
+  "cols": 4,
+  "rows": 2,
+  "fps": 10,
+  "note": "Experimental replacement candidate: sleepy, eyes closing, gentle nod, deepest nod, pause, startle, recovery, exact loop closer. Final source is green-screen ImageGen output; chroma-key using slice_and_key.py. Direct alpha attempts retained speckles. Frame 7 is copied from frame 0 after slicing to guarantee identical loop endpoints. Compare at widget playback rate 0.7 before adopting. The head nod remains subtle.",
+  "holds": { "0": 2, "2": 2, "3": 2, "4": 2, "5": 2, "6": 2 }
+}

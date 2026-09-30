@@ -1,0 +1,11 @@
+{
+  "reason": "Bottom-left cherry stem crossed the raw sheet quadrant into frame04; foreign pixels below the real shoes skewed foot registration.",
+  "frozenInput": "sprites/rebuilt/poses/pastry1_end8_04_before_cell_spill.png",
+  "output": "sprites/rebuilt/poses/pastry_camera_source/pastry1_end8/pastry1_end8_04.png",
+  "frozenSHA256": "5e5633d924a2d31b364c924b698b1d85e6cf39bccaf574aa08415d3c58f28c8c",
+  "outputSHA256": "4038f37f893e7f80bad93ae65ea690e5f32ecc5c3a6477471195bcc56c5a2c4a",
+  "mainBodyBottom": 497,
+  "removedSpillPixels": 25,
+  "removedOpaqueSpillPixels": 13,
+  "allNonSpillPixelsExact": true
+}
