@@ -14630,6 +14630,12 @@
       "state": "pout1",
       "sha256": "12342e6f8ff3c0d9228aedf59ba03807ef30db92fbab024bb31e3b8e9ef06813",
       "reason": "ImageGen 삐짐 신규 모션. 원본/재구성 모드에서 공통 사용."
+    },
+    {
+      "file": "anim_kiss1_loop.webm",
+      "state": "kiss1",
+      "sha256": "f02fa0b29f1e5f67c0ed804956e14105e3b09c95c1229a138ab430cc7510822f",
+      "reason": "ImageGen 손키스 신규 모션. 원본/재구성 모드에서 공통 사용."
     }
   ]
 }

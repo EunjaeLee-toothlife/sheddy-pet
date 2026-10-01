@@ -48,6 +48,7 @@ window.postMessage({ type: "pet-state", state: "heart1" }, "*");
 | `shush1` | 쉿 |
 | `cheer1` | 주먹 응원 |
 | `pout1` | 삐짐 |
+| `kiss1` | 손키스 |
 <!-- 추가 반응 모션 -->
 
 ### 외부에서 상태 바꾸기
