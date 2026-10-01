@@ -14588,6 +14588,12 @@
       "state": "salute1",
       "sha256": "d4874530766309887b4c04fd9d76514f32a2c75ab2784322c3d7629f3dd1c6f0",
       "reason": "ImageGen 경례 신규 모션. 원본/재구성 모드에서 공통 사용."
+    },
+    {
+      "file": "anim_shrug1_loop.webm",
+      "state": "shrug1",
+      "sha256": "230e5b58c4f7ed3892abef31cab5dc6c012c374874dd0ca1cd1fa6788420c755",
+      "reason": "ImageGen 어깨 으쓱 신규 모션. 원본/재구성 모드에서 공통 사용."
     }
   ]
 }

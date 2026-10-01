@@ -41,6 +41,7 @@ window.postMessage({ type: "pet-state", state: "heart1" }, "*");
 | --- | --- |
 | `thumbsup1` | 엄지척 |
 | `salute1` | 경례 |
+| `shrug1` | 어깨 으쓱 |
 <!-- 추가 반응 모션 -->
 
 ### 외부에서 상태 바꾸기
