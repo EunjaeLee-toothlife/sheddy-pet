@@ -67,6 +67,16 @@
 const seq = (dir, name, n = 18) => Array.from({ length: n }, (_, i) =>
   `sprites/${dir}/${name}_${String(i).padStart(2, "0")}.png`);
 const ANIMATIONS = [
+  { name: "kiss1 손키스 — loop", frames: seq("kiss1_loop", "kiss1_loop", 8), webm: "sprites/anim_kiss1_loop.webm" },
+  { name: "pout1 삐짐 — loop", frames: seq("pout1_loop", "pout1_loop", 8), webm: "sprites/anim_pout1_loop.webm" },
+  { name: "cheer1 주먹 응원 — loop", frames: seq("cheer1_loop", "cheer1_loop", 8), webm: "sprites/anim_cheer1_loop.webm" },
+  { name: "shush1 쉿 — loop", frames: seq("shush1_loop", "shush1_loop", 8), webm: "sprites/anim_shush1_loop.webm" },
+  { name: "facepalm1 이마 짚기 — loop", frames: seq("facepalm1_loop", "facepalm1_loop", 8), webm: "sprites/anim_facepalm1_loop.webm" },
+  { name: "listen1 귀 기울이기 — loop", frames: seq("listen1_loop", "listen1_loop", 8), webm: "sprites/anim_listen1_loop.webm" },
+  { name: "think1 고민 — loop", frames: seq("think1_loop", "think1_loop", 8), webm: "sprites/anim_think1_loop.webm" },
+  { name: "shrug1 어깨 으쓱 — loop", frames: seq("shrug1_loop", "shrug1_loop", 8), webm: "sprites/anim_shrug1_loop.webm" },
+  { name: "salute1 경례 — loop", frames: seq("salute1_loop", "salute1_loop", 8), webm: "sprites/anim_salute1_loop.webm" },
+  { name: "thumbsup1 엄지척 — loop", frames: seq("thumbsup1_loop", "thumbsup1_loop", 8), webm: "sprites/anim_thumbsup1_loop.webm" },
   { name: "clap1 박수 — loop", frames: seq("clap1_loop", "clap1_loop", 8), webm: "sprites/anim_clap1_loop.webm" },
   { name: "heart1 손하트 — loop", frames: seq("heart1_loop", "heart1_loop", 8), webm: "sprites/anim_heart1_loop.webm" },
   { name: "surprise1 깜짝 놀람 — loop", frames: seq("surprise1_loop", "surprise1_loop", 8), webm: "sprites/anim_surprise1_loop.webm" },

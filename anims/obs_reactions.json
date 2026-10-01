@@ -52,5 +52,155 @@
       "6": 2,
       "7": 2
     }
+  },
+  "thumbsup1": {
+    "sheet": "sprites/raw/thumbsup1_imagegen_sheet.png",
+    "sha256": "6009f64534ec14686444c2a03a6939222d2b4f1f87bc884cb4cd6d8fdeef0d32",
+    "name": "thumbsup1_loop",
+    "holds": {
+      "0": 2,
+      "1": 2,
+      "2": 2,
+      "3": 4,
+      "4": 6,
+      "5": 4,
+      "6": 2,
+      "7": 2
+    }
+  },
+  "salute1": {
+    "sheet": "sprites/raw/salute1_imagegen_sheet.png",
+    "sha256": "c3d599c5116981c5c682159725313d36db5727530bb55c78ed8bee183f0096e9",
+    "name": "salute1_loop",
+    "holds": {
+      "0": 2,
+      "1": 2,
+      "2": 2,
+      "3": 4,
+      "4": 6,
+      "5": 4,
+      "6": 2,
+      "7": 2
+    }
+  },
+  "shrug1": {
+    "sheet": "sprites/raw/shrug1_imagegen_sheet.png",
+    "sha256": "52235cd908882c0d9fe317ac4c242d4e80a962efb3713c9dd6eb2430cfb10776",
+    "name": "shrug1_loop",
+    "holds": {
+      "0": 2,
+      "1": 2,
+      "2": 2,
+      "3": 4,
+      "4": 6,
+      "5": 4,
+      "6": 2,
+      "7": 2
+    }
+  },
+  "think1": {
+    "sheet": "sprites/raw/think1_imagegen_sheet.png",
+    "sha256": "3d59459b823f8b798e3fd4df33abffca0debc16d6643fde482a9f6b0be8d4630",
+    "name": "think1_loop",
+    "holds": {
+      "0": 2,
+      "1": 2,
+      "2": 2,
+      "3": 4,
+      "4": 6,
+      "5": 4,
+      "6": 2,
+      "7": 2
+    }
+  },
+  "listen1": {
+    "sheet": "sprites/raw/listen1_imagegen_sheet.png",
+    "sha256": "7be936161e5a36141c663096689bd5c13ef0b24ffb7bffb880181d72e1830528",
+    "name": "listen1_loop",
+    "holds": {
+      "0": 2,
+      "1": 2,
+      "2": 2,
+      "3": 4,
+      "4": 6,
+      "5": 4,
+      "6": 2,
+      "7": 2
+    }
+  },
+  "facepalm1": {
+    "sheet": "sprites/raw/facepalm1_imagegen_sheet.png",
+    "sha256": "d175ecec69cc38f8d1a003ddd3b27f683b98052ecdfa0364662aff6ae9b4dd76",
+    "name": "facepalm1_loop",
+    "holds": {
+      "0": 2,
+      "1": 2,
+      "2": 2,
+      "3": 4,
+      "4": 6,
+      "5": 4,
+      "6": 2,
+      "7": 2
+    }
+  },
+  "shush1": {
+    "sheet": "sprites/raw/shush1_imagegen_sheet.png",
+    "sha256": "728f322603a0366b8a87594e915a9b8fc5b5ce2d142629e6ad9451ac255b1279",
+    "name": "shush1_loop",
+    "holds": {
+      "0": 2,
+      "1": 2,
+      "2": 2,
+      "3": 4,
+      "4": 6,
+      "5": 4,
+      "6": 2,
+      "7": 2
+    }
+  },
+  "cheer1": {
+    "sheet": "sprites/raw/cheer1_imagegen_sheet.png",
+    "sha256": "fbe1640df1eed8a06049fc4386239e1b3beb0aeb6730128401b4a7ecd97d88fb",
+    "name": "cheer1_loop",
+    "holds": {
+      "0": 2,
+      "1": 2,
+      "2": 2,
+      "3": 4,
+      "4": 6,
+      "5": 4,
+      "6": 2,
+      "7": 2
+    }
+  },
+  "pout1": {
+    "sheet": "sprites/raw/pout1_imagegen_sheet.png",
+    "sha256": "9fd379c940a26da7471487b47af8b24f4bfc17252a487688e9bb460cf35a2b49",
+    "name": "pout1_loop",
+    "holds": {
+      "0": 2,
+      "1": 2,
+      "2": 2,
+      "3": 4,
+      "4": 6,
+      "5": 4,
+      "6": 2,
+      "7": 2
+    }
+  },
+  "kiss1": {
+    "sheet": "sprites/raw/kiss1_imagegen_sheet.png",
+    "sha256": "9c3879d9a484fbef51967fd354a662ee3c70d6fadf8412d748f122045de5709d",
+    "name": "kiss1_loop",
+    "holds": {
+      "0": 2,
+      "1": 2,
+      "2": 2,
+      "3": 4,
+      "4": 6,
+      "5": 4,
+      "6": 2,
+      "7": 2
+    }
   }
 }

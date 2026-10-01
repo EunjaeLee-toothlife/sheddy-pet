@@ -1,0 +1,15 @@
+{
+  "sheet": "sprites/raw/shrug1_imagegen_sheet.png",
+  "sha256": "52235cd908882c0d9fe317ac4c242d4e80a962efb3713c9dd6eb2430cfb10776",
+  "name": "shrug1_loop",
+  "holds": {
+    "0": 2,
+    "1": 2,
+    "2": 2,
+    "3": 4,
+    "4": 6,
+    "5": 4,
+    "6": 2,
+    "7": 2
+  }
+}
