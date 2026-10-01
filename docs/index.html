@@ -280,6 +280,7 @@ const ANIMS = {
   salute1: { loop: "anim_salute1_loop.webm", label: "경례", category: "basic", weight: 1, once: true },
   shrug1: { loop: "anim_shrug1_loop.webm", label: "어깨 으쓱", category: "basic", weight: 1, once: true },
   think1: { loop: "anim_think1_loop.webm", label: "고민", category: "basic", weight: 1, once: true },
+  listen1: { loop: "anim_listen1_loop.webm", label: "귀 기울이기", category: "basic", weight: 1, once: true },
   talk:     { loop: "anim_talk_loop.webm", category: "talk", weight: 0 }, // 주사위 제외, 마이크 전용
 };
 const DEFAULT_STATE = "idle1";
@@ -516,7 +517,7 @@ const CLIP_URL = new Map();
 const clipBytes = new Map(), clipLoads = new Map(), loadQueue = [];
 const CACHE_LIMIT = 4 * 1024 * 1024;
 let cacheBytes = 0, activeLoads = 0;
-const ORIGINAL_CLIPS = new Set(["anim_think1_loop.webm", "anim_shrug1_loop.webm", "anim_salute1_loop.webm", "anim_thumbsup1_loop.webm", "anim_note1_loop.webm", "anim_clap1_loop.webm", "anim_heart1_loop.webm", "anim_surprise1_loop.webm"]);
+const ORIGINAL_CLIPS = new Set(["anim_listen1_loop.webm", "anim_think1_loop.webm", "anim_shrug1_loop.webm", "anim_salute1_loop.webm", "anim_thumbsup1_loop.webm", "anim_note1_loop.webm", "anim_clap1_loop.webm", "anim_heart1_loop.webm", "anim_surprise1_loop.webm"]);
 function assetSrc(file) { return (ORIGINAL_CLIPS.has(file) ? "sprites/" : BASE) + file; }
 function clipSrc(file) { return CLIP_URL.get(file) || assetSrc(file); }
 function makeCacheRoom(bytes) {

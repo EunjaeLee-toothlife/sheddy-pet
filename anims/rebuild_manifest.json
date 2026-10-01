@@ -14600,6 +14600,12 @@
       "state": "think1",
       "sha256": "c8179fa6c5355c1ae1672af6d97c8a4ee632f076572632e0a13bee687604a2b3",
       "reason": "ImageGen 고민 신규 모션. 원본/재구성 모드에서 공통 사용."
+    },
+    {
+      "file": "anim_listen1_loop.webm",
+      "state": "listen1",
+      "sha256": "3263087c5397bccf41148c7b7e8b6d11f182e53827c77a339423f531a33cf58b",
+      "reason": "ImageGen 귀 기울이기 신규 모션. 원본/재구성 모드에서 공통 사용."
     }
   ]
 }

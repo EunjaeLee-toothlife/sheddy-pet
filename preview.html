@@ -67,6 +67,7 @@
 const seq = (dir, name, n = 18) => Array.from({ length: n }, (_, i) =>
   `sprites/${dir}/${name}_${String(i).padStart(2, "0")}.png`);
 const ANIMATIONS = [
+  { name: "listen1 귀 기울이기 — loop", frames: seq("listen1_loop", "listen1_loop", 8), webm: "sprites/anim_listen1_loop.webm" },
   { name: "think1 고민 — loop", frames: seq("think1_loop", "think1_loop", 8), webm: "sprites/anim_think1_loop.webm" },
   { name: "shrug1 어깨 으쓱 — loop", frames: seq("shrug1_loop", "shrug1_loop", 8), webm: "sprites/anim_shrug1_loop.webm" },
   { name: "salute1 경례 — loop", frames: seq("salute1_loop", "salute1_loop", 8), webm: "sprites/anim_salute1_loop.webm" },

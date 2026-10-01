@@ -43,6 +43,7 @@ window.postMessage({ type: "pet-state", state: "heart1" }, "*");
 | `salute1` | 경례 |
 | `shrug1` | 어깨 으쓱 |
 | `think1` | 고민 |
+| `listen1` | 귀 기울이기 |
 <!-- 추가 반응 모션 -->
 
 ### 외부에서 상태 바꾸기

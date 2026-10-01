@@ -112,5 +112,20 @@
       "6": 2,
       "7": 2
     }
+  },
+  "listen1": {
+    "sheet": "sprites/raw/listen1_imagegen_sheet.png",
+    "sha256": "7be936161e5a36141c663096689bd5c13ef0b24ffb7bffb880181d72e1830528",
+    "name": "listen1_loop",
+    "holds": {
+      "0": 2,
+      "1": 2,
+      "2": 2,
+      "3": 4,
+      "4": 6,
+      "5": 4,
+      "6": 2,
+      "7": 2
+    }
   }
 }
