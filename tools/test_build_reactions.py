@@ -48,12 +48,12 @@ class ReactionFramesTest(unittest.TestCase):
             self.assertLess(bottom, 512)
 
     def test_existing_green_sheet_reproduces_committed_frames(self):
-        config = json.loads((ROOT / 'anims/obs_reactions.json').read_text())['thumbsup1']
+        config = json.loads((ROOT / 'anims/obs_reactions.json').read_text())['clap1']
         frames = prepare_frames(Image.open(ROOT / config['sheet']), config,
                                 ROOT / 'sprites/rebuilt/frames/idle1_loop/idle1_loop_00.png')
         self.assertEqual(len(frames), 8)
         for i, frame in enumerate(frames):
-            expected = Image.open(ROOT / f'sprites/thumbsup1_loop/thumbsup1_loop_{i:02d}.png')
+            expected = Image.open(ROOT / f'sprites/clap1_loop/clap1_loop_{i:02d}.png')
             self.assertEqual(frame.tobytes(), expected.tobytes())
 
 

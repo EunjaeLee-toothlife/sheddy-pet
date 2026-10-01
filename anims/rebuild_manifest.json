@@ -14636,6 +14636,12 @@
       "state": "kiss1",
       "sha256": "f02fa0b29f1e5f67c0ed804956e14105e3b09c95c1229a138ab430cc7510822f",
       "reason": "ImageGen 손키스 신규 모션. 원본/재구성 모드에서 공통 사용."
+    },
+    {
+      "file": "anim_bounce1_loop.webm",
+      "state": "bounce1",
+      "sha256": "e416e6af360d8298fe09ef2a758ad85388ae41d1a720cbb003a62e6cff4c6ceb",
+      "reason": "ImageGen 챌린지 바운스 전신 춤. 원본/재구성 모드 공통 사용."
     }
   ]
 }
