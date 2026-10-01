@@ -1,0 +1,88 @@
+{
+  "name": "basic2",
+  "base": "sprites/hd720/poses/root/idle_open_00.png",
+  "poses": {
+    "mid": "sprites/hd720/poses/root/basic2_mid_00.png",
+    "full": "sprites/hd720/poses/root/basic2_full_00.png"
+  },
+  "match_to_base": true,
+  "no_scale_poses": [],
+  "parts": {
+    "loop": [
+      {
+        "img": "base"
+      },
+      {
+        "img": "base"
+      },
+      {
+        "img": "mid"
+      },
+      {
+        "img": "mid"
+      },
+      {
+        "img": "full",
+        "dy": -0.703125
+      },
+      {
+        "img": "full",
+        "deg": 0.6,
+        "dy": -1.6875
+      },
+      {
+        "img": "full",
+        "deg": 1.2,
+        "dy": -2.53125
+      },
+      {
+        "img": "full",
+        "deg": 0.9,
+        "dy": -3.0937500000000004
+      },
+      {
+        "img": "full",
+        "deg": 0.3,
+        "dy": -3.515625
+      },
+      {
+        "img": "full",
+        "deg": -0.3,
+        "dy": -3.515625
+      },
+      {
+        "img": "full",
+        "deg": -0.9,
+        "dy": -3.0937500000000004
+      },
+      {
+        "img": "full",
+        "deg": -1.2,
+        "dy": -2.53125
+      },
+      {
+        "img": "full",
+        "deg": -0.6,
+        "dy": -1.6875
+      },
+      {
+        "img": "full",
+        "dy": -1.125
+      },
+      {
+        "img": "full",
+        "dy": -0.5625
+      },
+      {
+        "img": "mid"
+      },
+      {
+        "img": "mid"
+      },
+      {
+        "img": "base"
+      }
+    ]
+  },
+  "normalization_note": "Both generated V-stretch donors have their head as the topmost point (hands remain below crown). Match head-to-foot bbox height to canonical to remove generation scale drift without erasing raised-arm motion."
+}

@@ -17,6 +17,7 @@
      레이어 교체·opacity 토글이 없으므로 전환 시 합성 플래시(깜박임)가 원천 제거된다. */
   #screen {
     position: absolute; inset: 0; width: 100%; height: 100%;
+    object-fit: contain;
     pointer-events: none;
   }
 
@@ -200,9 +201,11 @@
 // start/end가 없는 애니메이션은 loop만 등록하면 됨.
 // 파일이 준비되면 여기에 추가. BASE는 서버 배포 시 CDN 경로로 교체.
 const params = new URLSearchParams(location.search);
-const DEFAULT_ASSET_SET = "rebuilt";
-// Rebuilt candidates can be checked in the actual player before release.
-const BASE = (params.get("assets") || DEFAULT_ASSET_SET) === "rebuilt" ? "sprites/rebuilt/videos/" : "sprites/";
+const DEFAULT_ASSET_SET = "hd720";
+// 기본 720 리소스와 이전 리소스를 같은 플레이어에서 비교할 수 있다.
+const ASSET_SET = params.get("assets") || DEFAULT_ASSET_SET;
+const BASE = ASSET_SET === "hd720" ? "sprites/hd720/videos/" :
+  ASSET_SET === "rebuilt" ? "sprites/rebuilt/videos/" : "sprites/";
 // ── 2중 가중치 주사위 ──
 // 1차: category 가중치로 "분류"를 뽑고 (CATEGORY_WEIGHTS)
 // 2차: 그 분류 안에서 weight 가중치로 "행동"을 뽑는다.
@@ -333,8 +336,8 @@ function backVid() { return vids[1 - front]; }
 // opacity 토글/레이어 교체가 없어 합성 플래시(깜박임)가 발생하지 않는다.
 const screen = document.getElementById("screen");
 const sctx = screen.getContext("2d");
-const resolutionValue = Number(params.get("resolution") || 512);
-const RESOLUTION = Number.isFinite(resolutionValue) ? Math.max(128, Math.min(2048, resolutionValue)) : 512;
+const resolutionValue = Number(params.get("resolution") || 720);
+const RESOLUTION = Number.isFinite(resolutionValue) ? Math.max(128, Math.min(2048, resolutionValue)) : 720;
 let renderId = 0, frameId = 0, frameVideo = null, fallbackTimer = 0;
 let obsVisible = true, suspended = false, suspendedAt = 0;
 const resumeVideos = new Set();
@@ -343,10 +346,11 @@ let drawCount = 0;
 function fitCanvas() {
   const r = screen.parentElement.getBoundingClientRect();
   const dpr = window.devicePixelRatio || 1;
-  // 원본 영상보다 큰 캔버스를 매 프레임 합성하지 않는다. CSS가 출력 크기를 맞춘다.
-  const scale = IS_DESKTOP ? 1 : Math.min(1, RESOLUTION / Math.max(1, r.width * dpr, r.height * dpr));
-  const w = Math.max(1, Math.round(r.width * dpr * scale));
-  const h = Math.max(1, Math.round(r.height * dpr * scale));
+  // 정사각형 영상은 정사각형 캔버스에 그린다. 가로 창의 긴 변 때문에
+  // 영상 자체가 먼저 축소되지 않도록 하고, 여백은 CSS contain에 맡긴다.
+  const side = Math.max(1, Math.round(Math.min(RESOLUTION, r.width * dpr, r.height * dpr)));
+  const w = IS_DESKTOP ? Math.max(1, Math.round(r.width * dpr)) : side;
+  const h = IS_DESKTOP ? Math.max(1, Math.round(r.height * dpr)) : side;
   if (screen.width !== w) screen.width = w;
   if (screen.height !== h) screen.height = h;
   requestDraw();
@@ -531,7 +535,7 @@ const clipBytes = new Map(), clipLoads = new Map(), loadQueue = [];
 const CACHE_LIMIT = 4 * 1024 * 1024;
 let cacheBytes = 0, activeLoads = 0;
 const ORIGINAL_CLIPS = new Set(["anim_alchemy1_start.webm", "anim_alchemy1_loop.webm", "anim_alchemy1_end1.webm", "anim_alchemy1_end2.webm", "anim_alchemy1_end3.webm", "anim_alchemy1_outro.webm", "anim_power1_loop.webm", "anim_shuffle1_loop.webm", "anim_bounce1_loop.webm", "anim_note1_loop.webm", "anim_clap1_loop.webm", "anim_heart1_loop.webm", "anim_surprise1_loop.webm", "anim_kiss1_loop.webm", "anim_pout1_loop.webm", "anim_cheer1_loop.webm", "anim_shush1_loop.webm", "anim_facepalm1_loop.webm", "anim_listen1_loop.webm", "anim_think1_loop.webm", "anim_shrug1_loop.webm", "anim_salute1_loop.webm", "anim_thumbsup1_loop.webm"]);
-function assetSrc(file) { return (ORIGINAL_CLIPS.has(file) ? "sprites/" : BASE) + file; }
+function assetSrc(file) { return (ASSET_SET !== "hd720" && ORIGINAL_CLIPS.has(file) ? "sprites/" : BASE) + file; }
 function clipSrc(file) { return CLIP_URL.get(file) || assetSrc(file); }
 function makeCacheRoom(bytes) {
   for (const [file, url] of CLIP_URL) {
@@ -757,7 +761,7 @@ async function setState(name, { pin = true } = {}) {
   if (cur && cur.end) {
     const ends = Array.isArray(cur.end) ? cur.end : [cur.end];
     const requestedEnding = Number(params.get('ending'));
-    const fixedEnding = (params.get('assets') === 'rebuilt') &&
+    const fixedEnding = (ASSET_SET === 'rebuilt' || ASSET_SET === 'hd720') &&
       Number.isInteger(requestedEnding) && requestedEnding >= 1 && requestedEnding <= ends.length;
     const endFile = ends[fixedEnding ? requestedEnding - 1 : Math.floor(Math.random() * ends.length)];
     if (!await playThrough(endFile, cur.rate ?? 1)) return;

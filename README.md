@@ -8,7 +8,7 @@ OBS 브라우저 소스나 웹페이지에 그대로 올려 쓴다.
 
 ## OBS에서 쓰기
 
-1. 소스 추가 → **브라우저** → URL에 위 주소 입력. 크기는 정사각형 권장(예: 512×512). 배경은 투명.
+1. 소스 추가 → **브라우저** → URL에 위 주소 입력. 크기는 정사각형 권장(예: 720×720). 배경은 투명.
 2. 설정을 바꾸려면 소스 우클릭 → **상호작용**. 마우스를 움직이면 버튼 두 개가 나타난다.
    - ⚙️ (F2) 마이크 설정 — 입력 장치와 감도 임계값. 임계값을 넘는 동안 `talk` 모션이 재생된다.
    - 🎭 (F3) 모션 선택 — 원하는 모션을 바로 재생. "계속 유지"를 켜면 주사위를 멈추고 그 모션만 반복.
@@ -21,7 +21,8 @@ OBS 브라우저 소스나 웹페이지에 그대로 올려 쓴다.
 | `?hold=8` | 외부 명령으로 바꾼 상태를 주사위로부터 보호할 시간(초) |
 | `?dice=0` | 주사위 끄기 (외부 제어 전용) |
 | `?flip=1` | 좌우 반전 |
-| `?resolution=512` | 합성 캔버스의 긴 변 상한(px). 기본 512, 범위 128~2048. 큰 소스에서 더 높은 해상도가 필요하면 1024 사용 |
+| `?resolution=720` | 정사각형 합성 캔버스의 한 변 상한(px). 기본 720, 범위 128~2048. 화면의 짧은 변×DPR보다 크게 만들지 않음 |
+| `?assets=rebuilt` | 이전 512 리소스로 비교. 기본은 `hd720`, 최초 리소스는 `original` |
 
 ### 마녀 연금술
 
@@ -95,7 +96,8 @@ new BroadcastChannel("sheddy-pet").postMessage("happy1");            // 같은 �
 - **전환 순서.** 현재 상태의 `end`(→ `outro`) → 다음 상태의 `start` → `loop`. `end`가 배열이면 그중 하나를 랜덤 재생(멀티 엔딩).
 - **렌더링.** `<video>` 두 개와 캔버스 하나를 사용한다. 실제 영상 프레임이 도착할 때만 합성하고,
   70ms 크로스 디졸브 중에만 화면 주사율로 그린다. 영상 프레임 콜백이 없는 구형 브라우저는 최대 30Hz로 동작한다.
-  OBS 합성 캔버스의 긴 변은 기본 512px이며 CSS가 출력 크기를 맞춘다.
+  합성 캔버스는 기본 최대 720×720이며 CSS `object-fit: contain`으로 중앙에 배치한다.
+  가로로 긴 창에서도 영상을 작은 직사각형 캔버스 안으로 먼저 축소하지 않는다.
 - **로딩.** 필요한 영상만 받아 최대 4MiB의 LRU blob 캐시에 보관한다. 중복 요청을 합치고 동시 fetch를 2개로 제한한다.
   다음 상태의 loop는 진입·이탈 영상 재생 중 미리 받는다. 캐시에서 빠진 클립은 다시 필요할 때 로드하므로
   모든 모션을 미리 받은 방식에 비해 첫 전환에서 네트워크 대기가 생길 수 있다.
@@ -172,6 +174,31 @@ python tools/deploy_pages.py
 
 ## 모션 추가하기
 
+현재 위젯의 기본 리소스는 전체 **62클립 / 846 PNG / 720×720 VP9 알파**다.
+기존 동작·FPS·holds·repeats·상태 재생 속도를 유지하며, 원시 이미지에서 직접 720으로 키잉·정합했다.
+영상 총용량은 기존 14.2MiB에서 21.7MiB로 약 53% 증가했다. 실제로 필요한 영상만 받는 4MiB 캐시는 유지한다.
+1254px 개별 원본과 1024px 필기 원본은 세부 선이 개선되지만, 627px/약314px 시트 셀은 원본 해상도 한계가 남는다.
+
+전체 재현·검증:
+
+720 재현 도구는 `numpy`, `Pillow`, `scipy`와 `ffmpeg`/`ffprobe`가 필요하다.
+
+```bash
+python tools/build_hd720_root.py
+python tools/build_hd720_dance.py
+python tools/build_hd720_special.py
+python tools/build_hd720_pastry.py
+python tools/audit_hd720.py
+node tools/widget_check.js
+node tools/widget_hd720_check.js
+node tools/widget_hd720_check.js --endings
+python tools/deploy_pages.py
+```
+
+`anims/hd720_manifest.json`이 62개 영상의 프레임·해시·원본·타이밍을 기록한다.
+재생성 후에는 720 PNG를 육안 검수하고 런타임 검사를 다시 진행한다.
+이전 512 PNG/WebM은 비교와 원본 보존을 위해 유지하며, 기존 생성 절차는 아래와 같다.
+
 필요한 것: Python 3(`numpy`, `Pillow`, 선택 `scipy`), `ffmpeg`(libvpx-vp9), 환경변수 `GEMINI_API_KEY`.
 
 1. **프레임 정의** — `anims/<name>.json`에 프레임별 포즈 설명을 적는다.
@@ -219,7 +246,9 @@ python tools/deploy_pages.py
 | --- | --- |
 | `widget.html` | 위젯 본체 |
 | `preview.html` | 프레임 검수 페이지 |
-| `sprites/anim_*.webm` | 위젯이 재생하는 클립 |
+| `sprites/hd720/videos/`, `sprites/hd720/frames/` | 기본 720 영상과 PNG 시퀀스 |
+| `anims/hd720_manifest.json` | 전체 720 리소스 검증 목록 |
+| `sprites/anim_*.webm`, `sprites/rebuilt/` | 최초·이전 512 클립과 원시 이미지 |
 | `sprites/raw/`, `sprites/<name>/` | 생성 원본과 키잉된 PNG 시퀀스 (재인코딩용으로 함께 보관) |
 | `anims/` | 프레임 정의(JSON) |
 | `refs/` | 캐릭터 레퍼런스 이미지 |

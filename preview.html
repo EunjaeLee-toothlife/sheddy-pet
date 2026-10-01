@@ -45,14 +45,14 @@
   <div class="controls">
     <select id="animSelect"></select>
     <button class="primary" id="playBtn">⏸ Pause</button>
-    <label>FPS <input type="range" id="fpsSlider" min="1" max="15" value="10">
+    <label>FPS <input type="range" id="fpsSlider" min="1" max="60" value="10">
       <span id="fpsLabel">10</span></label>
     <span class="meta" id="frameLabel">frame 0/0</span>
   </div>
 
   <div class="stage-row">
     <div class="stage">
-      <h2>PNG 시퀀스 (10FPS 프레임 재생)</h2>
+      <h2>PNG 개별 프레임 (홀드·반복 없이 검사)</h2>
       <div class="checker"><img id="frameImg" alt="frame"></div>
     </div>
     <div class="stage">
@@ -142,16 +142,40 @@ let playing = true;
 let timer = null;
 let preloaded = [];
 
-ANIMATIONS.forEach((a, i) => {
+async function initialize() {
+  // 실제 위젯과 같은 720 리소스 및 확정 프레임 수를 사용한다.
+  const response = await fetch("anims/hd720_manifest.json");
+  if (!response.ok) throw new Error("720 리소스 목록을 불러오지 못했습니다.");
+  const manifest = await response.json();
+  const clips = new Map(manifest.clips.map(c => [c.clip, c]));
+  const registered = new Set();
+  for (const animation of ANIMATIONS) {
+    const name = animation.webm.split("/").pop().replace(/^anim_|\.webm$/g, "");
+    const clip = clips.get(name);
+    if (clip) {
+      Object.assign(animation, { frames: clip.frames, webm: clip.candidate, fps: clip.fps });
+      registered.add(name);
+    }
+  }
+  // 목록에서 빠졌던 실험 모션을 포함해 런타임 전체 클립을 검수할 수 있다.
+  for (const clip of manifest.clips) {
+    if (!registered.has(clip.clip)) ANIMATIONS.push({ name: `${clip.state} — ${clip.clip}`,
+      frames: clip.frames, webm: clip.candidate, fps: clip.fps });
+  }
+  ANIMATIONS.forEach((a, i) => {
   const opt = document.createElement("option");
   opt.value = i;
   opt.textContent = a.name;
   sel.appendChild(opt);
-});
+  });
+  load(0);
+}
 
 function load(idx) {
   const bust = `?v=${Date.now()}`; // 파일 갱신 시 브라우저 캐시 무효화
   current = { ...ANIMATIONS[idx], frames: ANIMATIONS[idx].frames.map(f => f + bust) };
+  fpsSlider.value = current.fps || 10;
+  fpsLabel.textContent = fpsSlider.value;
   frameIdx = 0;
   preloaded = current.frames.map(src => { const im = new Image(); im.src = src; return im; });
   if (current.webm) {
@@ -193,7 +217,7 @@ fpsSlider.addEventListener("input", () => {
   restartTimer();
 });
 
-load(0);
+initialize().catch(error => { webmMeta.textContent = error.message; });
 </script>
 </body>
 </html>
