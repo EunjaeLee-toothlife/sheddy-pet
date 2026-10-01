@@ -46,6 +46,7 @@ window.postMessage({ type: "pet-state", state: "heart1" }, "*");
 | `listen1` | 귀 기울이기 |
 | `facepalm1` | 이마 짚기 |
 | `shush1` | 쉿 |
+| `cheer1` | 주먹 응원 |
 <!-- 추가 반응 모션 -->
 
 ### 외부에서 상태 바꾸기

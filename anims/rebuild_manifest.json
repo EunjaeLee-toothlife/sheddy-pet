@@ -14618,6 +14618,12 @@
       "state": "shush1",
       "sha256": "ba7a3a8202e3a6f964d27ac66410dcc9c44feb9c3f5f8c6949a4b0b9b4e48c6a",
       "reason": "ImageGen 쉿 신규 모션. 원본/재구성 모드에서 공통 사용."
+    },
+    {
+      "file": "anim_cheer1_loop.webm",
+      "state": "cheer1",
+      "sha256": "b45e62ab703cd7bbc05289e4b32df0319593d271e48a2628e245e01e7eaead9e",
+      "reason": "ImageGen 주먹 응원 신규 모션. 원본/재구성 모드에서 공통 사용."
     }
   ]
 }
