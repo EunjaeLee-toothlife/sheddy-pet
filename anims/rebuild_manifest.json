@@ -14642,6 +14642,18 @@
       "state": "bounce1",
       "sha256": "e416e6af360d8298fe09ef2a758ad85388ae41d1a720cbb003a62e6cff4c6ceb",
       "reason": "ImageGen 챌린지 바운스 전신 춤. 원본/재구성 모드 공통 사용."
+    },
+    {
+      "file": "anim_shuffle1_loop.webm",
+      "state": "shuffle1",
+      "sha256": "b9ec933d808139a6e8f68c092681c22516b90e92a4132b0dd4402bfb263b6556",
+      "reason": "ImageGen 셔플 스텝 전신 춤. 원본/재구성 모드 공통 사용."
+    },
+    {
+      "file": "anim_power1_loop.webm",
+      "state": "power1",
+      "sha256": "f26272c164af0cf51d82d29b9c5f27afb653c46184e8bd4ee2388f1947efc7a3",
+      "reason": "ImageGen 파워 챌린지 전신 춤. 원본/재구성 모드 공통 사용."
     }
   ]
 }

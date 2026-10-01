@@ -17,10 +17,11 @@ def prepare_frames(sheet, config, reference):
     transparent = sheet.mode == 'RGBA' and sheet.getchannel('A').getextrema()[0] < 255
     sheet = sheet.convert('RGBA' if transparent else 'RGB')
     frames = []
+    row_offset = config.get('row_offset', 0)
     for i in range(columns * rows):
         x, y = i % columns, i // columns
-        tile = sheet.crop((round(x * sheet.width / columns), round(y * sheet.height / rows),
-                           round((x + 1) * sheet.width / columns), round((y + 1) * sheet.height / rows)))
+        tile = sheet.crop((round(x * sheet.width / columns), round(y * sheet.height / rows) + row_offset,
+                           round((x + 1) * sheet.width / columns), round((y + 1) * sheet.height / rows) + row_offset))
         tile = ImageOps.contain(tile, (512, 512), Image.Resampling.LANCZOS)
         canvas = Image.new(sheet.mode, (512, 512), (0, 0, 0, 0) if transparent else (0, 255, 0))
         canvas.paste(tile, ((512 - tile.width) // 2, (512 - tile.height) // 2))

@@ -56,6 +56,18 @@ class ReactionFramesTest(unittest.TestCase):
             expected = Image.open(ROOT / f'sprites/clap1_loop/clap1_loop_{i:02d}.png')
             self.assertEqual(frame.tobytes(), expected.tobytes())
 
+    def test_row_offset_keeps_shoes_in_their_own_cell(self):
+        draw = ImageDraw.Draw(self.sheet)
+        draw.rectangle((200, 400, 300, 530), fill=(20, 220, 30, 255))
+        draw.rectangle((200, 514, 300, 530), fill=(0, 0, 255, 255))
+        frames = prepare_frames(self.sheet, {'grid': [4, 4], 'preserve_motion': True,
+                                             'row_offset': 32}, self.reference)
+        def blue_pixels(frame):
+            return sum(b > 200 and r < 20 and g < 20 and a > 200
+                       for r, g, b, a in frame.getdata())
+        self.assertGreater(blue_pixels(frames[0]), 0)
+        self.assertEqual(blue_pixels(frames[4]), 0)
+
 
 if __name__ == '__main__':
     unittest.main()

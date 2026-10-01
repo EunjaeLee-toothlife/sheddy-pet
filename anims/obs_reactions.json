@@ -240,5 +240,82 @@
         "times": 2
       }
     ]
+  },
+  "shuffle1": {
+    "sheet": "sprites/raw/shuffle1_imagegen_sheet.png",
+    "sha256": "df875e7fe526f4fb7b74d896774c1d4405cc81c40bcd166639b81a6d7a5a9f15",
+    "name": "shuffle1_loop",
+    "grid": [
+      4,
+      4
+    ],
+    "preserve_motion": true,
+    "fps": 15,
+    "holds": {
+      "0": 2,
+      "1": 2,
+      "2": 2,
+      "3": 2,
+      "4": 2,
+      "5": 2,
+      "6": 2,
+      "7": 2,
+      "8": 2,
+      "9": 2,
+      "10": 2,
+      "11": 2,
+      "12": 2,
+      "13": 2,
+      "14": 2,
+      "15": 2
+    },
+    "repeats": [
+      {
+        "frames": [
+          1,
+          14
+        ],
+        "times": 2
+      }
+    ]
+  },
+  "power1": {
+    "sheet": "sprites/raw/power1_imagegen_sheet_v2.png",
+    "sha256": "9576857da0dedff70424ee1ae00bbc01f1019c3034e4557cf67e54651ca7ef45",
+    "name": "power1_loop",
+    "grid": [
+      4,
+      4
+    ],
+    "preserve_motion": true,
+    "fps": 15,
+    "holds": {
+      "0": 2,
+      "1": 2,
+      "2": 2,
+      "3": 2,
+      "4": 2,
+      "5": 2,
+      "6": 2,
+      "7": 2,
+      "8": 2,
+      "9": 2,
+      "10": 2,
+      "11": 2,
+      "12": 2,
+      "13": 2,
+      "14": 2,
+      "15": 2
+    },
+    "repeats": [
+      {
+        "frames": [
+          1,
+          14
+        ],
+        "times": 2
+      }
+    ],
+    "row_offset": 16
   }
 }
