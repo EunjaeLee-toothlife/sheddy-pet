@@ -26,7 +26,7 @@ const PAGE = argv.includes("--page") ? argv[argv.indexOf("--page") + 1] : "widge
 const BENCHMARK = argv.includes("--benchmark");
 const BASELINE = argv.includes("--baseline");
 const FALLBACK = argv.includes("--fallback");
-const baselineHTML = BASELINE ? execFileSync("git", ["show", "HEAD:widget.html"], { cwd: ROOT }) : null;
+const baselineHTML = require.main === module && BASELINE ? execFileSync("git", ["show", "HEAD:widget.html"], { cwd: ROOT }) : null;
 const sleep = ms => new Promise(r => setTimeout(r, ms));
 
 function findChrome() {
@@ -45,13 +45,13 @@ function findChrome() {
 }
 
 // 저장소 루트를 서빙하는 최소 정적 서버 (webm 탐색 재생을 위해 Range 지원)
-function serve() {
+function serve(html = baselineHTML) {
   const TYPES = { ".html": "text/html; charset=utf-8", ".webm": "video/webm", ".png": "image/png", ".jpg": "image/jpeg", ".json": "application/json" };
   const server = http.createServer((req, res) => {
     const file = path.normalize(path.join(ROOT, decodeURIComponent(new URL(req.url, "http://x").pathname)));
-    if (baselineHTML && file === path.join(ROOT, "widget.html")) {
-      res.writeHead(200, { "Content-Type": "text/html; charset=utf-8", "Content-Length": baselineHTML.length });
-      res.end(baselineHTML); return;
+    if (html && file === path.join(ROOT, "widget.html")) {
+      res.writeHead(200, { "Content-Type": "text/html; charset=utf-8", "Content-Length": html.length });
+      res.end(html); return;
     }
     if (!file.startsWith(ROOT) || !fs.existsSync(file) || !fs.statSync(file).isFile()) { res.writeHead(404); res.end(); return; }
     const size = fs.statSync(file).size;
@@ -304,7 +304,7 @@ const IN_BENCHMARK = async () => {
   };
 };
 
-(async () => {
+async function main() {
   const chromePath = findChrome();
   if (!chromePath) throw new Error("Chrome/Edge를 찾지 못했습니다. CHROME_PATH를 지정하세요.");
   const server = await serve();
@@ -376,4 +376,7 @@ const IN_BENCHMARK = async () => {
     try { fs.rmSync(profile, { recursive: true, force: true }); } catch (_) {}
   }
   process.exit(failed ? 1 : 0);
-})().catch(e => { console.error("ERROR:", e.message); process.exit(2); });
+}
+
+module.exports = { findChrome, serve };
+if (require.main === module) main().catch(e => { console.error("ERROR:", e.message); process.exit(2); });

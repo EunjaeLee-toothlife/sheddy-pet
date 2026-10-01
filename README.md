@@ -88,7 +88,21 @@ node tools/widget_check.js --fallback       # 영상 프레임 콜백 없는 OBS
 node tools/widget_check.js --page docs/index.html
 ```
 
-성능 비교는 같은 기기에서 다음 명령을 순서대로 실행한다. `--baseline`은 Git HEAD의 위젯을 서빙한다.
+성능 지표와 반복 비교 보고서는 다음 명령으로 만든다. 기준 커밋을 명시하므로 커밋 이후에도 같은 버전과 비교할 수 있다.
+각 해상도에서 기준/현재를 3회씩, 총 12번 측정한다. 새 Chrome 프로필을 사용하고 실행 순서는 AB/BA로 교대한다.
+
+```bash
+node tools/widget_metrics.js --baseline d909552 --runs 3
+node --test tools/widget_metrics.test.js
+```
+
+원시 표본·브라우저 버전·파일 해시는 `reports/obs-performance.json`, 계산 결과는
+[`reports/obs-performance.md`](reports/obs-performance.md)에 저장한다. 첫 그림 지연, 초당 합성 횟수,
+그리기 픽셀량, 메인 스레드 점유율, 초기 전송량·Blob 보유량, 전환 지연 P95, 숨김 중 작업량을 측정한다.
+중앙값·최소/최대·감소율을 계산하며, 실제 OBS 전체 CPU/GPU 사용률은 포함하지 않는다.
+`--output <경로.json>`으로 별도 결과를 남길 수 있다. 중단된 JSON에는 완료된 표본만 있으며 `summary`가 없으면 미완료다.
+
+간단한 미커밋 변경 비교는 다음 명령을 순서대로 실행한다. 이때 `--baseline`은 Git HEAD의 위젯을 서빙한다.
 대기 상태(`dice=0`), 5초간 그리기 횟수, 캐시 수, 초기 영상 전송량을 출력한다.
 512px/DPR 1과 1024px/DPR 2를 각각 측정한다. `TaskDuration`은 렌더러 메인 스레드 작업 시간이며 OBS 전체 CPU/GPU 사용률이 아니다.
 
