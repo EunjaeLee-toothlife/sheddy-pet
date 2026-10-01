@@ -104,7 +104,8 @@ const IN_PAGE = async () => {
   });
 
   await check("newReactions", async () => {
-    for (const name of ["clap1", "heart1", "surprise1"]) {
+    const reactions = Object.keys(ANIMS).filter(name => ANIMS[name].once);
+    for (const name of reactions) {
       setPetState(name);
       await waitFor(() => current === name && !transitioning, 10000, name);
       await sleep(750);
@@ -121,8 +122,14 @@ const IN_PAGE = async () => {
       await sleep(4000);
       expect(current === "clap1" && pinnedUntil === Infinity, "반응 모션 유지 실패");
     } finally { motionHold.checked = false; pinnedUntil = 0; }
-    return "3개 모션 단발 복귀 + 박수 계속 유지";
+    return `${reactions.length}개 모션 단발 복귀 + 박수 계속 유지`;
   });
+
+  if (window.__reactionsOnly) {
+    await toIdle();
+    console.warn = ow;
+    return results;
+  }
 
   await check("visibility", async w0 => {
     const visibility = visible => window.dispatchEvent(new CustomEvent("obsSourceVisibleChanged", { detail: { visible } }));
@@ -331,6 +338,7 @@ async function main() {
     const send = (method, params = {}) => new Promise(res => { const id = ++seq; pending.set(id, res); ws.send(JSON.stringify({ id, method, params })); });
 
     await send("Page.enable");
+    if (argv.includes("--reactions-only")) await send("Page.addScriptToEvaluateOnNewDocument", { source: "window.__reactionsOnly=true;" });
     if (argv.includes("--capture")) await send("Page.addScriptToEvaluateOnNewDocument", { source: "window.__captureReactions=[];" });
     if (FALLBACK) await send("Page.addScriptToEvaluateOnNewDocument", { source: "delete HTMLVideoElement.prototype.requestVideoFrameCallback; delete HTMLVideoElement.prototype.cancelVideoFrameCallback;" });
     if (BENCHMARK) {

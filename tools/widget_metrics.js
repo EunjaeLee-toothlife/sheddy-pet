@@ -286,7 +286,8 @@ async function main() {
   const chromePath = findChrome();
   if (!chromePath) throw new Error("Chrome/Edge가 필요하다. CHROME_PATH를 지정한다.");
   const assetFiles = fs.readdirSync(path.join(ROOT, "sprites/rebuilt/videos")).filter(f => f.endsWith(".webm")).map(f => "sprites/rebuilt/videos/" + f);
-  assetFiles.push(...["note1", "clap1", "heart1", "surprise1"].map(n => `sprites/anim_${n}_loop.webm`));
+  const reactionStates = Object.keys(JSON.parse(fs.readFileSync(path.join(ROOT, "anims/obs_reactions.json"), "utf8")));
+  assetFiles.push(...["note1", ...reactionStates].map(n => `sprites/anim_${n}_loop.webm`));
   const report = {
     schemaVersion: 1, createdAt: new Date().toISOString(), runs,
     baseline: { commit: baselineCommit, htmlSha256: hash(baseline) },

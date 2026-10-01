@@ -1,5 +1,6 @@
 """ImageGen 반응 시트를 비율 유지 PNG와 투명 VP9 영상으로 조립한다."""
 import hashlib
+import argparse
 import json
 from pathlib import Path
 import subprocess
@@ -13,7 +14,14 @@ ROOT = Path(__file__).resolve().parent.parent
 
 def main():
     configs = json.loads((ROOT / 'anims/obs_reactions.json').read_text())
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('states', nargs='*', help='지정한 모션만 재생성')
+    args = parser.parse_args()
+    if any(state not in configs for state in args.states):
+        parser.error('등록되지 않은 모션: ' + ' ,'.join(s for s in args.states if s not in configs))
     for state, config in configs.items():
+        if args.states and state not in args.states:
+            continue
         source = ROOT / config['sheet']
         if hashlib.sha256(source.read_bytes()).hexdigest() != config['sha256']:
             raise ValueError(f'원본 시트 해시 불일치: {source}')
