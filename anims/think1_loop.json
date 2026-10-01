@@ -1,0 +1,15 @@
+{
+  "sheet": "sprites/raw/think1_imagegen_sheet.png",
+  "sha256": "3d59459b823f8b798e3fd4df33abffca0debc16d6643fde482a9f6b0be8d4630",
+  "name": "think1_loop",
+  "holds": {
+    "0": 2,
+    "1": 2,
+    "2": 2,
+    "3": 4,
+    "4": 6,
+    "5": 4,
+    "6": 2,
+    "7": 2
+  }
+}

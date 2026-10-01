@@ -14594,6 +14594,12 @@
       "state": "shrug1",
       "sha256": "230e5b58c4f7ed3892abef31cab5dc6c012c374874dd0ca1cd1fa6788420c755",
       "reason": "ImageGen 어깨 으쓱 신규 모션. 원본/재구성 모드에서 공통 사용."
+    },
+    {
+      "file": "anim_think1_loop.webm",
+      "state": "think1",
+      "sha256": "c8179fa6c5355c1ae1672af6d97c8a4ee632f076572632e0a13bee687604a2b3",
+      "reason": "ImageGen 고민 신규 모션. 원본/재구성 모드에서 공통 사용."
     }
   ]
 }
