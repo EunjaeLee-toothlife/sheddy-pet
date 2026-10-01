@@ -23,6 +23,22 @@ OBS 브라우저 소스나 웹페이지에 그대로 올려 쓴다.
 | `?flip=1` | 좌우 반전 |
 | `?resolution=512` | 합성 캔버스의 긴 변 상한(px). 기본 512, 범위 128~2048. 큰 소스에서 더 높은 해상도가 필요하면 1024 사용 |
 
+### 마녀 연금술
+
+F3에서 **마녀 연금술(`alchemy1`)**을 선택하면 가운에서 클래식 마녀 복장으로 변신하고 솥을 젓는다.
+주사위 자동 재생에서는 2~3사이클 뒤 **황금 레몬 · 실험 실패 · 레몬 슬라임** 중 하나를 보여 주고,
+솥을 정리한 뒤 가운으로 돌아온다. “계속 유지”를 켜면 솥 젓기를 반복하며, 다른 모션을 선택하면 결과와 원복을 거쳐 전환한다.
+`?dice=0`에서는 자동 전환이 꺼지므로 다른 모션을 선택해야 결과를 볼 수 있다.
+
+원본은 내장 ImageGen으로 제작했다. 프롬프트는 `prompts/alchemy1_imagegen.json`, 검수한 셀 경계와 타이밍은
+`anims/alchemy1_*.json`에 보관한다. Pillow와 libvpx-vp9를 지원하는 ffmpeg 환경에서 재현한다.
+
+```bash
+python tools/build_alchemy.py
+python tools/verify_alchemy.py
+python tools/deploy_pages.py
+```
+
 ### 방송 반응 모션
 
 F3 모션 선택기에서 **박수(`clap1`) · 손하트(`heart1`) · 깜짝 놀람(`surprise1`)**을 고를 수 있다.
