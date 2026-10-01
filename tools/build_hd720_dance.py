@@ -68,6 +68,43 @@ def shoe_place(im, height):
     return affine720(tight, scale, 360-center*scale, 498*RATIO-height)
 
 
+def clean_green_edge(im, name, index, native_transparent=False):
+    """배경과 연결된 반투명 녹색 테두리만 정리하고 내부 초록 잎은 보존한다."""
+    before=np.array(im)
+    rgb=before[:,:,:3].astype(int)
+    alpha=before[:,:,3]
+    candidates=(ndimage.minimum_filter(alpha,size=9)<250)&(alpha>20)&(alpha<250)&(rgb[:,:,1]-np.maximum(rgb[:,:,0],rgb[:,:,2])>20)
+    seeds=np.zeros(alpha.shape,dtype=bool)
+    seeds[0,:]=seeds[-1,:]=seeds[:,0]=seeds[:,-1]=True
+    background=ndimage.binary_propagation(seeds,mask=alpha<250)
+    # 원래 투명한 시트에는 크로마 배경이 없으므로 이 보정을 적용하지 않는다.
+    mask=candidates&background if not native_transparent else np.zeros_like(candidates)
+    after=before.copy()
+    after[:,:,1]=np.where(mask,np.maximum(rgb[:,:,0],rgb[:,:,2]),rgb[:,:,1]).astype(np.uint8)
+    assert np.array_equal(after[:,:,3],before[:,:,3])
+    assert np.array_equal(after[:,:,[0,2]],before[:,:,[0,2]])
+    assert np.array_equal(after[~mask],before[~mask])
+    assert np.array_equal(after[alpha>=250],before[alpha>=250])
+    result=Image.fromarray(after,'RGBA')
+    assert result.getbbox()==im.getbbox()
+    folder=OUT/'qa/dance/green_repair';folder.mkdir(parents=True,exist_ok=True)
+    baseline=folder/f'{name}_{index:02d}_before.png'
+    im.save(baseline)
+    maskpath=folder/f'{name}_{index:02d}_mask.png'
+    Image.fromarray(mask.astype(np.uint8)*255).save(maskpath)
+    protectedpath=folder/f'{name}_{index:02d}_protected_enclosed.png'
+    protected=candidates&~background
+    Image.fromarray(protected.astype(np.uint8)*255).save(protectedpath)
+    yy,xx=np.where(mask)
+    samples=[{'xy':[int(x),int(y)],'beforeRGBA':before[y,x].tolist(),'afterRGBA':after[y,x].tolist()} for y,x in list(zip(yy,xx))[::max(1,len(xx)//8)][:8]]
+    return result,{'index':index,'changedPixels':int(mask.sum()),'enclosedIntentionalGreenCandidatesPreserved':int((candidates&~background).sum()),
+                   'nativeTransparencyExcluded':native_transparent,
+                   'before':baseline.relative_to(ROOT).as_posix(),'beforeSHA256':sha(baseline),
+                   'mask':maskpath.relative_to(ROOT).as_posix(),'maskSHA256':sha(maskpath),
+                   'protectedEnclosedMask':protectedpath.relative_to(ROOT).as_posix(),'protectedEnclosedMaskSHA256':sha(protectedpath),'rawColorSamples':samples,
+                   'alphaExact':True,'redBlueExact':True,'outsideMaskExact':True,'bboxExact':True,'opaquePixelsExact':True}
+
+
 def dance_frames(clip, reference):
     donors, evidence = {}, []
     for batch in clip['frameBatches']:
@@ -217,13 +254,19 @@ def main():
         preserved={p.relative_to(ROOT).as_posix():sha(p) for p in sorted(old.glob('*.png'))}
         if is_dance:
             frames,evidence=dance_frames(cfg,reference);fps=cfg['fps'];rate=cfg['rate'];timing=ROOT/'sprites/rebuilt/configs'/f'{name}.json'
+            native_transparent=False
         else:
             frames,evidence=reaction_frames(cfg,reference);fps=cfg.get('fps',10);rate=1;timing=ROOT/'anims'/f'{name}.json'
+            source_image=Image.open(ROOT/cfg['sheet'])
+            native_transparent=source_image.mode=='RGBA' and source_image.getchannel('A').getextrema()[0]<255
         settings=json.loads(timing.read_text(encoding='utf-8'))
         order=expand(len(frames),settings)
         dest=OUT/'frames'/name;dest.mkdir(parents=True,exist_ok=True)
-        framehash=[];boxes=[]
+        framehash=[];boxes=[];matte_repair=[]
         for i,im in enumerate(frames):
+            im,repair=clean_green_edge(im,name,i,native_transparent)
+            frames[i]=im
+            matte_repair.append(repair)
             assert im.mode=='RGBA' and im.size==(720,720)
             a=np.asarray(im)[:,:,3];assert not np.any(np.concatenate([a[0],a[-1],a[:,0],a[:,-1]])), f'Canvas clipping {name} {i}'
             p=dest/f'{name}_{i:02d}.png';im.save(p);framehash.append(sha(p));boxes.append(im.getbbox())
@@ -240,6 +283,8 @@ def main():
                'expandedTicks':len(order),'sourceLimited':True,'limitation':'Native 314/627px cells constrain real detail; 720px registration is not new ImageGen detail.',
                'method':'Native cell crop/key then one uniform affine registration into720; no final512 frame upscaling; existing gesture/closure/effect/timing plan retained',
                'sourceCells':evidence,'original512FrameHashes':preserved,'generatedFrameSHA256':framehash,'bboxes':boxes,
+               'matteRepair':{'condition':'minimum_filter(alpha,size=9)<250 & G-max(R,B)>20 & 20<alpha<250 & background-connected through alpha<250; enclosed greens preserved',
+                              'frames':matte_repair,'changedPixels':sum(x['changedPixels'] for x in matte_repair)},
                'originalVideo':{'path':original_video.relative_to(ROOT).as_posix(),'sha256':sha(original_video),'duration':original_duration,'unchangedTimingVerified':True},
                'contact':contact(name,frames),'audit':audit,'review':{'staticVisual':False,'alphaTechnical':True,'runtimeSeams':False}}
         ledger['clips']=[x for x in ledger['clips'] if x['clip']!=name]+[entry]

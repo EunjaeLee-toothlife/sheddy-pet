@@ -8,6 +8,7 @@ from pathlib import Path
 
 import numpy as np
 from PIL import Image, ImageDraw
+from scipy.ndimage import minimum_filter
 from slice_and_key import chroma_key, body_box
 from compose_anim import bbox, foot_center
 from compose_talk import rect_mask
@@ -26,6 +27,15 @@ OVERRIDES = {
     'chem1_crosswipe_00.png': 'chem1_end1_crosswipe_fixed.png',
     'chem1_finalhide_00.png': 'chem1_end1_hide_cloth_final.png',
     'chem1_end3_proud_00.png': 'chem1_end3_proud.png',
+}
+MATTE_QA = BASE / 'qa/special_green_repair'
+LEMON_ROIS = {
+    2: (145, 360, 250, 460), 3: (205, 220, 320, 355),
+    4: (260, 220, 355, 335), 5: (260, 220, 355, 335),
+    6: (260, 260, 355, 380), 7: (105, 270, 235, 400),
+    8: (110, 270, 245, 410), 9: (235, 260, 350, 405),
+    10: (200, 310, 325, 440), 11: (205, 285, 335, 430),
+    12: (195, 460, 295, 595),
 }
 
 
@@ -255,6 +265,80 @@ def expanded(cfg,count):
     return sum(max(1,int(cfg.get('holds',{}).get(str(i),1))) for i in order)
 
 
+def protected_rois(clip, index, proof):
+    """의도된 녹색 소품과 무지개 액체의 검수된 범위를 보호한다."""
+    anchor = proof.get('exactAnchors', {}).get(str(index), proof.get('exactAnchors', {}).get(index))
+    if anchor:
+        source_clip, source_index = anchor.split(':')
+        if source_clip != clip:
+            clip, index = source_clip, int(source_index)
+    regions = []
+    if clip == 'lemon1_loop' and index in LEMON_ROIS:
+        regions.append(LEMON_ROIS[index])
+    if clip == 'note1_loop' and index in (13, 14):
+        regions.append((285, 295, 475, 480))
+    if clip == 'chem1_end3':
+        record = next((r for r in proof['frames'] if r['frame'] == index), None)
+        if record and record.get('nativeGreenRegion'):
+            x0, y0, x1, y1 = record['nativeGreenRegion']
+            factor = record['scale512'] * SIZE / record['nativeSize'][0]
+            dx, dy = round(record['dx512'] * RATIO), round(record['dy512'] * RATIO)
+            regions.append((int(np.floor(x0*factor+dx))-3, int(np.floor(y0*factor+dy))-3,
+                            int(np.ceil(x1*factor+dx))+3, int(np.ceil(y1*factor+dy))+3))
+    return regions
+
+
+def matte_mask(before, regions):
+    """반투명 외곽의 녹색 초과분만 선택하며 보호 영역은 제외한다."""
+    alpha = before[..., 3]
+    limit = np.maximum(before[..., 0], before[..., 2])
+    excess = before[..., 1].astype(int) - limit.astype(int)
+    mask = (minimum_filter(alpha, size=9) < 250) & (excess > 20) & (alpha > 20) & (alpha < 250)
+    for x0, y0, x1, y1 in regions:
+        mask[max(0,y0):min(SIZE,y1),max(0,x0):min(SIZE,x1)] = False
+    return mask
+
+
+def repair_matte(clip, proof):
+    """확실한 키 배경 외곽 프린지만 고치고 알파·빨강·파랑·불투명 내부를 보존한다."""
+    if clip in ALCHEMY:
+        # 투명 원시 시트의 초록 마법빛·김·슬라임·반사광은 의도된 효과다.
+        proof['matteRepair'] = {'skipped': True, 'reason': 'Native transparent RGBA magic, steam and slime are intentional; all pixels preserved.'}
+        return
+    MATTE_QA.mkdir(parents=True, exist_ok=True)
+    records = []
+    for path in sorted((BASE/'frames'/clip).glob('*.png')):
+        index = int(path.stem.rsplit('_',1)[1])
+        current = np.array(Image.open(path).convert('RGBA'))
+        baseline = MATTE_QA / (path.stem + '_before.png')
+        before = np.array(Image.open(baseline).convert('RGBA')) if baseline.exists() else current
+        rois = protected_rois(clip, index, proof)
+        mask = matte_mask(before, rois)
+        after = before.copy()
+        after[...,1] = np.where(mask, np.maximum(before[...,0],before[...,2]), before[...,1])
+        # 동일 원시 입력의 재구성 또는 이미 보정된 상태만 받아 반복 실행을 안정화한다.
+        assert np.array_equal(current,before) or np.array_equal(current,after), path
+        assert np.array_equal(after[...,3],before[...,3])
+        assert np.array_equal(after[...,[0,2]],before[...,[0,2]])
+        assert np.array_equal(after[~mask],before[~mask])
+        assert np.array_equal(after[before[...,3]>=250],before[before[...,3]>=250])
+        assert Image.fromarray(after).getbbox()==Image.fromarray(before).getbbox()
+        if mask.any():
+            if not baseline.exists():Image.fromarray(before).save(baseline)
+            Image.fromarray(after).save(path)
+            maskpath = MATTE_QA / (path.stem+'_mask.png')
+            Image.fromarray(mask.astype('uint8')*255).save(maskpath)
+        ys,xs=np.where(mask)
+        records.append({'frame':index,'changedPixels':int(mask.sum()),
+            'changedBBox':None if not len(xs) else [int(xs.min()),int(ys.min()),int(xs.max()+1),int(ys.max()+1)],
+            'beforeSHA256':hashlib.sha256((baseline if baseline.exists() else path).read_bytes()).hexdigest(),
+            'beforePixelsSHA256':hashlib.sha256(Image.fromarray(before).tobytes()).hexdigest(),
+            'afterSHA256':hashlib.sha256(path.read_bytes()).hexdigest(),
+            'protectedROIs720':rois,'alphaRBOutsideMaskOpaqueBBoxExact':True})
+    proof['matteRepair']={'condition':'minimum_filter(alpha,size=9)<250 & G-max(R,B)>20 & 20<alpha<250; protectedROIs excluded',
+        'operation':'G=max(R,B) only','frames':records,'changedPixels':sum(r['changedPixels'] for r in records)}
+
+
 def validate(clip,proof,encode=True):
     if clip in SPECIAL:
         cfg={k:proof[k] for k in ('fps','holds','repeats')}; cfg['name']=clip
@@ -309,10 +393,11 @@ def main():
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--frames-only',action='store_true')
     parser.add_argument('--verify-only',action='store_true')
+    parser.add_argument('--matte-repair-only',action='store_true')
     parser.add_argument('--clips',nargs='+')
     args=parser.parse_args()
     target=ROOT/'anims/hd720_special.json'
-    if args.verify_only:
+    if args.verify_only or args.matte_repair_only:
         previous=json.loads(target.read_text(encoding='utf-8'))
         proof=previous['clips']; SOURCES.update(previous['originalSources'])
     else:
@@ -326,6 +411,7 @@ def main():
         if not args.clips or 'note1_loop' in args.clips:proof.update(build_note())
     for clip,p in proof.items():
         if args.clips and clip not in args.clips:continue
+        if not args.verify_only:repair_matte(clip,p)
         validate(clip,p,not args.frames_only)
         target.write_text(json.dumps({'size':SIZE,'clips':proof,'originalSources':SOURCES},ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
     for path,sha in SOURCES.items():
