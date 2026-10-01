@@ -3,6 +3,12 @@
   "reference": "sprites/rebuilt/poses/idle_open_00.png",
   "purpose": "마녀 복장 선택용 컨셉 시안. 런타임에 등록하지 않음.",
   "transparent_background": false,
+  "selected": {
+    "file": "02-classic-alchemist.png",
+    "name": "클래식 연금술사",
+    "approvedBy": "user",
+    "designNotes": "검정 뾰족 모자와 버건디 띠, 황동 버클, 짧은 버건디 망토, 크림색 블라우스, 검정 원피스, 갈색 파우치와 노랑·보라 물약 두 병, 갈색 부츠를 유지한다. 기존 금발·호박색 눈·레몬 머리핀은 그대로 보존한다."
+  },
   "concepts": [
     {
       "file": "01-lemon-apprentice.png",
