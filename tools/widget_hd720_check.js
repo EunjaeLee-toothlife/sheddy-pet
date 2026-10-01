@@ -9,7 +9,10 @@ async function main() {
   const manifest = JSON.parse(fs.readFileSync(path.join(ROOT, "anims/hd720_manifest.json"), "utf8"));
   const prefixIndex = process.argv.indexOf("--prefix");
   const prefix = prefixIndex < 0 ? "" : process.argv[prefixIndex + 1];
-  const clips = manifest.clips.filter(clip => clip.clip.startsWith(prefix));
+  const endings = process.argv.includes("--endings");
+  const rootClips = process.argv.includes("--root") ? new Set(JSON.parse(
+    fs.readFileSync(path.join(ROOT, "anims/hd720_root.json"), "utf8")).clips.map(c => c.clip)) : null;
+  const clips = manifest.clips.filter(clip => clip.clip.startsWith(prefix) && (!rootClips || rootClips.has(clip.clip)));
   if (!clips.length) throw new Error("검사할 클립이 없습니다.");
   const server = await serve();
   const profile = fs.mkdtempSync(path.join(os.tmpdir(), "widget-hd720-"));
@@ -45,6 +48,62 @@ async function main() {
     }
     const filenames = await evaluate(`Object.values(ANIMS).flatMap(a=>['start','loop','end','outro'].flatMap(p=>a[p]||[])).sort()`);
     if (JSON.stringify(filenames) !== JSON.stringify(manifest.clips.map(c=>path.basename(c.candidate)).sort())) throw new Error("전체 등록 경로 불일치");
+    if (endings) {
+      // 실제 상태 전환은 그대로 실행하고 원래 playClip에 위임하는 관측기만 붙인다.
+      await evaluate(`window.__hdWarnings=[];window.__hdEndingCase=null;
+        const hdOriginalWarn=console.warn;
+        console.warn=(...args)=>{window.__hdWarnings.push(args.join(' '));hdOriginalWarn.apply(console,args);};
+        const hdOriginalPlayClip=playClip;
+        playClip=function(file,options={}){
+          const record=window.__hdEndingCase;
+          if(!record)return hdOriginalPlayClip(file,options);
+          record.calls.push(file);
+          const startDraws=drawCount;
+          return hdOriginalPlayClip(file,{...options,onEnded:function(){
+            const video=vids[front],pixels=sctx.getImageData(0,0,screen.width,screen.height).data;
+            let opaque=0;for(let i=3;i<pixels.length;i+=4)if(pixels[i]>240)opaque++;
+            const corners=[3,(screen.width-1)*4+3,(screen.height-1)*screen.width*4+3,pixels.length-1];
+            record.completed.push({file,ended:video.ended,width:video.videoWidth,height:video.videoHeight,
+              rate:video.playbackRate,duration:video.duration,time:video.currentTime,error:video.error?.code||null,
+              alphaOK:opaque>0&&corners.every(i=>pixels[i]===0),draws:drawCount-startDraws});
+            if(options.onEnded)return options.onEnded.apply(this,arguments);
+          }});
+        };`);
+      for (const [state, count] of [["chem1", 3], ["pastry1", 10]]) {
+        for (let ending = 1; ending <= count; ending++) {
+          const result = await evaluate(`(async()=>{
+            const waitFor=async(test,label,ms=20000)=>{const end=Date.now()+ms;
+              while(!test()){if(Date.now()>end)throw Error(label+' 시간 초과');await new Promise(r=>setTimeout(r,20));}};
+            await waitFor(()=>current==='idle1'&&!transitioning,'초기 idle');
+            const initial=vids[front];if(initial.videoWidth!==720||initial.error)throw Error('초기 idle 영상 오류');
+            params.set('ending',${ending});
+            const record={calls:[],completed:[],warningStart:window.__hdWarnings.length};
+            window.__hdEndingCase=record;
+            const animation=ANIMS[${JSON.stringify(state)}],rate=animation.rate??1;
+            await setState(${JSON.stringify(state)},{pin:false});
+            await waitFor(()=>current===${JSON.stringify(state)}&&!transitioning,'loop 진입');
+            await waitFor(()=>record.completed.some(e=>e.file===animation.loop),'loop 완주');
+            await setState('idle1',{pin:false});
+            await waitFor(()=>current==='idle1'&&!transitioning,'idle 복귀');
+            await waitFor(()=>record.completed.some(e=>e.file===ANIMS.idle1.loop),'복귀 idle 완주');
+            const expected=[animation.start,animation.loop,animation.end[${ending}-1],animation.outro,ANIMS.idle1.loop].filter(Boolean);
+            if(JSON.stringify(record.calls)!==JSON.stringify(expected))throw Error('클립 순서 오류 '+JSON.stringify(record.calls));
+            for(const file of expected){
+              const event=record.completed.find(e=>e.file===file);
+              const expectedRate=file===ANIMS.idle1.loop?(ANIMS.idle1.rate??1):rate;
+              if(!event||!event.ended||event.error||event.width!==720||event.height!==720||!event.alphaOK||event.draws<=0||
+                event.rate!==expectedRate||Math.abs(event.time-event.duration)>.05)throw Error('실제 완주/720/알파 오류 '+file+' '+JSON.stringify(event));
+            }
+            const warnings=window.__hdWarnings.slice(record.warningStart);if(warnings.length)throw Error(warnings.join('\\n'));
+            window.__hdEndingCase=null;
+            return {calls:record.calls,completed:record.completed.length,warnings:warnings.length};
+          })()`);
+          console.log(`PASS ending ${state}/${ending} ${result.calls.join(" -> ")} (${result.completed} ended, warnings ${result.warnings})`);
+        }
+      }
+      console.log("PASS all 13 actual state ending transitions / idle return");
+      return;
+    }
     await evaluate("chainGen++; transitioning=true; queued=null; pinnedUntil=Infinity; window.__hdWarnings=[]; console.warn=(...args)=>window.__hdWarnings.push(args.join(' '));");
     for (const clip of clips) {
       const file = path.basename(clip.candidate);

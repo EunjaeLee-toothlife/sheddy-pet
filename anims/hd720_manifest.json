@@ -91,7 +91,7 @@
         "dfc4efd22e8ff3135aadff2281cd922dab04086d2022fbc466e3aea71047ff96"
       ],
       "candidate": "sprites/hd720/videos/anim_idle1_loop.webm",
-      "videoSha256": "525bfea86d9096501351c526a25e330a0dfd69fd6943e8b62ac06163d0bbfa05",
+      "videoSha256": "6d3b349f3ad3a02038efa9a340e45829108980363732c93b725ba535311c38e0",
       "frameCount": 18,
       "duration": 1.8,
       "decodedTicks": 18,
@@ -104,7 +104,8 @@
         "dimensions": true,
         "alpha": true,
         "duration": true,
-        "frameOrder": true
+        "pngFrameOrder": true,
+        "decodedTickCount": true
       },
       "status": "reviewed",
       "review": {
@@ -183,25 +184,25 @@
       "frameHashes": [
         "9ec4a182aef2d98aa0a2e28c7ac01036ea56a3d76af144c9dc6ad2c16571f645",
         "9ec4a182aef2d98aa0a2e28c7ac01036ea56a3d76af144c9dc6ad2c16571f645",
-        "caf2b4306581f5c0ccf679854ec9c7fc0e660015ad5754b4c7fe621d88b05f73",
-        "433d29c0d648101e40d42d9c88088a4d9cb3446ea2e2440b7c84347c5ae5ced1",
-        "e1e264fdb2f1390a874d4b9062b669c4593ffd63b7d9e429fd501f34c40e0244",
-        "e1e264fdb2f1390a874d4b9062b669c4593ffd63b7d9e429fd501f34c40e0244",
-        "433d29c0d648101e40d42d9c88088a4d9cb3446ea2e2440b7c84347c5ae5ced1",
-        "caf2b4306581f5c0ccf679854ec9c7fc0e660015ad5754b4c7fe621d88b05f73",
+        "539145736648c9160f9fa5616d972a9651f3501ab037e491ca6e6c4819e39244",
+        "88d07dcbac091f210424f0ecd7613d2ea44d846c57c8401cd61ef935a83ca43c",
+        "f9539b98ca13f5f10f4dc94656742cb0875c3aea803ffb712171eaed5f591aab",
+        "f9539b98ca13f5f10f4dc94656742cb0875c3aea803ffb712171eaed5f591aab",
+        "88d07dcbac091f210424f0ecd7613d2ea44d846c57c8401cd61ef935a83ca43c",
+        "539145736648c9160f9fa5616d972a9651f3501ab037e491ca6e6c4819e39244",
         "9ec4a182aef2d98aa0a2e28c7ac01036ea56a3d76af144c9dc6ad2c16571f645",
         "9ec4a182aef2d98aa0a2e28c7ac01036ea56a3d76af144c9dc6ad2c16571f645",
-        "4417aaddab90995227b9b0dcc8e6e10e307817ce727e5ec4f39974c1baae2b50",
-        "6246ecc66c9607f47430c47b9b0bb28b88dfd078cfbdb925103e510b53522673",
-        "2652e0eeac2ff094098091f065fd67c0f8f62c8f4f70e35559846641a3ceb621",
-        "2652e0eeac2ff094098091f065fd67c0f8f62c8f4f70e35559846641a3ceb621",
-        "6246ecc66c9607f47430c47b9b0bb28b88dfd078cfbdb925103e510b53522673",
-        "4417aaddab90995227b9b0dcc8e6e10e307817ce727e5ec4f39974c1baae2b50",
+        "989d817bb0522ac40638d317ece3ff0322ea50a68ff27442feac9c4452ac1205",
+        "4848f5cbebafabaada7850de089f44074b0baf17ab4730a68a79f193f812b03c",
+        "3f9a78ad67abca49904c05831d5aad4019aa1c02f6c97d40903ad79c87db7fa8",
+        "3f9a78ad67abca49904c05831d5aad4019aa1c02f6c97d40903ad79c87db7fa8",
+        "4848f5cbebafabaada7850de089f44074b0baf17ab4730a68a79f193f812b03c",
+        "989d817bb0522ac40638d317ece3ff0322ea50a68ff27442feac9c4452ac1205",
         "9ec4a182aef2d98aa0a2e28c7ac01036ea56a3d76af144c9dc6ad2c16571f645",
         "9ec4a182aef2d98aa0a2e28c7ac01036ea56a3d76af144c9dc6ad2c16571f645"
       ],
       "candidate": "sprites/hd720/videos/anim_basic1_loop.webm",
-      "videoSha256": "71878d62c1680ded910f1a1d6ae73578f156bbe5c0003a28e781aacf41bc7a5a",
+      "videoSha256": "0ed5e4258dd46305eb5d112bbdbb240686e2ab5d2a86822e3796a0035dec9705",
       "frameCount": 18,
       "duration": 3.6,
       "decodedTicks": 18,
@@ -209,12 +210,13 @@
       "holds": {},
       "repeats": [],
       "sourceBytes": 117774,
-      "candidateBytes": 172820,
+      "candidateBytes": 172548,
       "technicalReview": {
         "dimensions": true,
         "alpha": true,
         "duration": true,
-        "frameOrder": true
+        "pngFrameOrder": true,
+        "decodedTickCount": true
       },
       "status": "reviewed",
       "review": {
@@ -293,25 +295,25 @@
       "frameHashes": [
         "9ec4a182aef2d98aa0a2e28c7ac01036ea56a3d76af144c9dc6ad2c16571f645",
         "9ec4a182aef2d98aa0a2e28c7ac01036ea56a3d76af144c9dc6ad2c16571f645",
-        "baab3c79a634ddca29f35471930e40800fad65cdb2b380686744f6a62033c095",
-        "baab3c79a634ddca29f35471930e40800fad65cdb2b380686744f6a62033c095",
-        "8a7dec131315a0a3509ce9ec36679b9f32205458c3ed08b717787cc646c3b7a8",
-        "89858b19a6cd0c52853053213ad7368cf17faa4753eaf0ee4e905ab84db6f0fe",
-        "fd9c819f6113b7533b9cb7d54ce8df976af82195c82559c1fe54359745dbd1e4",
-        "cc71be24ff5bb513dc787eea0e729ef48c09a0e575940e13f84d9b9c882d6175",
-        "68a5c688279140afad52bef2b19a2a8dd277ea8ae96782cb336b96d2f9748dbd",
-        "c09bc14a8d1f2fab9fd218d535a4717cdf4993eab250e3ae8e4223019ca99132",
-        "28bcb25a238c593694de61b96ff9e62e6546795adda080f7ee575b04bc439936",
-        "5f762b39dae129d8bd6197b44f25e1cf530dbe75fc611a5f4e8a1a0cb2534931",
-        "efc2e09639cfef09b5a0876f02dbb57954a185c0a791375b6dcfc1a0c3e2256b",
-        "e645acde4a81f3b7d7e749eb24a52b18f8c89a11fbc6a75d4ce3140de0d81b87",
-        "d40050659847e54d6bdf07380f4efd6cef1896faa63b7a0f076d29db3773dfd3",
-        "baab3c79a634ddca29f35471930e40800fad65cdb2b380686744f6a62033c095",
-        "baab3c79a634ddca29f35471930e40800fad65cdb2b380686744f6a62033c095",
+        "0e9c55a22cbf3c01be29ca71b2b78d4c704cb1b1d9ec1627c3cfe70b8738cfe0",
+        "0e9c55a22cbf3c01be29ca71b2b78d4c704cb1b1d9ec1627c3cfe70b8738cfe0",
+        "212418bca38c16747d8c4c2c5b6f4bc271671f55ef47bae811d87f468035acdf",
+        "a449e499b12d1db4e97545b01258e3c57418c88aeb93dd882a08fe2c07393d8e",
+        "57fe593aad29a6c023b8517c872b31c661cfeaabc4cdc69ca7076202dc14c336",
+        "1c17c7dc167a6363072e315232ef5aee012006e1f08284136f3b855f43174f94",
+        "66240a7152654e7177572084876de588ae8bf46181d389610c3367697b7e11dc",
+        "102037fd841ab3277c8051eaf466d63f946a178c51a6af4599cb6232cf61ca91",
+        "7124669cffbe8c441f32601c690995025e16ee49a10a172f78decf3398788569",
+        "009184befe3e7c290a3a4e42647961d9dd44c57e534a4517bce26309e569a72e",
+        "9596c5e3aa4ac7e60fe5e2a5364af7831c568d7bf875bd8170edb6bcc18efc2c",
+        "346a4033970743a3a6a7d9d8c12c3a0eb73203dbd076a13f1c63f96fb172c937",
+        "b7166410431174cb710954dc64ea75fa2c4ea2c591f00c19883286133cb8c3cf",
+        "0e9c55a22cbf3c01be29ca71b2b78d4c704cb1b1d9ec1627c3cfe70b8738cfe0",
+        "0e9c55a22cbf3c01be29ca71b2b78d4c704cb1b1d9ec1627c3cfe70b8738cfe0",
         "9ec4a182aef2d98aa0a2e28c7ac01036ea56a3d76af144c9dc6ad2c16571f645"
       ],
       "candidate": "sprites/hd720/videos/anim_basic2_loop.webm",
-      "videoSha256": "5c86d7572cf5b403559c4845e9446b0688262b1342b8368953ffebbf5553f517",
+      "videoSha256": "a64d61907f4d1877bc734de98ff8c4d471242d85cb94f73636c3c37701920752",
       "frameCount": 18,
       "duration": 1.8,
       "decodedTicks": 18,
@@ -319,12 +321,13 @@
       "holds": {},
       "repeats": [],
       "sourceBytes": 154322,
-      "candidateBytes": 235252,
+      "candidateBytes": 236008,
       "technicalReview": {
         "dimensions": true,
         "alpha": true,
         "duration": true,
-        "frameOrder": true
+        "pngFrameOrder": true,
+        "decodedTickCount": true
       },
       "status": "reviewed",
       "review": {
@@ -402,26 +405,26 @@
       ],
       "frameHashes": [
         "9ec4a182aef2d98aa0a2e28c7ac01036ea56a3d76af144c9dc6ad2c16571f645",
-        "38db86abd56cf6cb7f5adbd6482a24037e96b163478d88198f355aa8b4a7a377",
-        "d212a5c5898125f891326f62a12d2dc28d250c16b1927b2088242842b0c51060",
-        "e4647ea52242ff16c11c0374cb478dfd0eaaa7ae90c98025e8a00c0e4714f64b",
-        "d78ac97df5ee3baaaa5ccb11c124332f5b757a006736e379b10081e29e13c217",
-        "d78ac97df5ee3baaaa5ccb11c124332f5b757a006736e379b10081e29e13c217",
-        "e4647ea52242ff16c11c0374cb478dfd0eaaa7ae90c98025e8a00c0e4714f64b",
-        "d212a5c5898125f891326f62a12d2dc28d250c16b1927b2088242842b0c51060",
-        "38db86abd56cf6cb7f5adbd6482a24037e96b163478d88198f355aa8b4a7a377",
+        "ac1a8450820fe6cb2838ec92e137a08d79b5e50544628f97459cc039dad0e917",
+        "7683497c93a8e3b4ae3985e16c08d132126239fccafb5c0c7bf8c9f4b0291b2f",
+        "f310c84f94b2f175c9f3d62921e813c1a32fc7a01687c4531674c7d877dbcf21",
+        "4e9c78a9f18d59e5fbb2910af2198ebbe659a57f8c229a1fcc80496c459bf517",
+        "4e9c78a9f18d59e5fbb2910af2198ebbe659a57f8c229a1fcc80496c459bf517",
+        "f310c84f94b2f175c9f3d62921e813c1a32fc7a01687c4531674c7d877dbcf21",
+        "7683497c93a8e3b4ae3985e16c08d132126239fccafb5c0c7bf8c9f4b0291b2f",
+        "ac1a8450820fe6cb2838ec92e137a08d79b5e50544628f97459cc039dad0e917",
         "9ec4a182aef2d98aa0a2e28c7ac01036ea56a3d76af144c9dc6ad2c16571f645",
-        "643c9fdedd4b64a5428b667f3b238aed7a090efd61404eb5b2fffe8ff1401fb5",
-        "9403469c68fa6f15df6961a033ea4565fbd2ce8965be5628270bfd50fc83c7fb",
-        "83b0baf0c70d69a208340913ae9f2ee52bbeb4fcaec98998e5f6d16732b29f45",
-        "81387e1df3b8216f19cbb30b0f594236da1682a0484c831cd4a85e4341634072",
-        "81387e1df3b8216f19cbb30b0f594236da1682a0484c831cd4a85e4341634072",
-        "83b0baf0c70d69a208340913ae9f2ee52bbeb4fcaec98998e5f6d16732b29f45",
-        "9403469c68fa6f15df6961a033ea4565fbd2ce8965be5628270bfd50fc83c7fb",
-        "643c9fdedd4b64a5428b667f3b238aed7a090efd61404eb5b2fffe8ff1401fb5"
+        "31dddadbff6870e8854bace1353182254ba3f39189512c36e63545e767fe3d52",
+        "5b3de2c900d397a296bd8758b4a7d19af80f545b8c89b8efceaaeead643969bd",
+        "9f02d2123b8fe5e462b150b02975a44dc3906cd50f2089bc0703611ca9def46e",
+        "2320d0778a0a47aca33404553dd8c291d3c700ee6a7fad3ffa45bbc755ee3ba1",
+        "2320d0778a0a47aca33404553dd8c291d3c700ee6a7fad3ffa45bbc755ee3ba1",
+        "9f02d2123b8fe5e462b150b02975a44dc3906cd50f2089bc0703611ca9def46e",
+        "5b3de2c900d397a296bd8758b4a7d19af80f545b8c89b8efceaaeead643969bd",
+        "31dddadbff6870e8854bace1353182254ba3f39189512c36e63545e767fe3d52"
       ],
       "candidate": "sprites/hd720/videos/anim_basic3_loop.webm",
-      "videoSha256": "0c6cbe66d8df321ae899c875a1df587bf570fbae80d1f3cc0fd3d9b581142893",
+      "videoSha256": "4998f87d6a250463cc1f26d1d31475a449523e62a7804043c82247b9e5431037",
       "frameCount": 18,
       "duration": 1.8,
       "decodedTicks": 18,
@@ -429,12 +432,13 @@
       "holds": {},
       "repeats": [],
       "sourceBytes": 127694,
-      "candidateBytes": 195672,
+      "candidateBytes": 194911,
       "technicalReview": {
         "dimensions": true,
         "alpha": true,
         "duration": true,
-        "frameOrder": true
+        "pngFrameOrder": true,
+        "decodedTickCount": true
       },
       "status": "reviewed",
       "review": {
@@ -528,7 +532,8 @@
         "dimensions": true,
         "alpha": true,
         "duration": true,
-        "frameOrder": true
+        "pngFrameOrder": true,
+        "decodedTickCount": true
       },
       "status": "reviewed",
       "review": {
@@ -571,13 +576,13 @@
       "frameHashes": [
         "9ec4a182aef2d98aa0a2e28c7ac01036ea56a3d76af144c9dc6ad2c16571f645",
         "9ec4a182aef2d98aa0a2e28c7ac01036ea56a3d76af144c9dc6ad2c16571f645",
-        "f02d413fb1b7111334ee416172a89136f96d5366f33db619b809779f0f887f33",
-        "f02d413fb1b7111334ee416172a89136f96d5366f33db619b809779f0f887f33",
-        "5ca967d6afaf51fb92f85dbc0adadf0fb027e06eac2bc7a07894f76c0efcba9e",
-        "5ca967d6afaf51fb92f85dbc0adadf0fb027e06eac2bc7a07894f76c0efcba9e"
+        "005e4ef0f36059111091997efb750c258baa943ae33f533f5532291a72537847",
+        "005e4ef0f36059111091997efb750c258baa943ae33f533f5532291a72537847",
+        "27aba2e7b51a32ead005267407ca0cadb14291f66f419b45198d457f2799b6ac",
+        "27aba2e7b51a32ead005267407ca0cadb14291f66f419b45198d457f2799b6ac"
       ],
       "candidate": "sprites/hd720/videos/anim_happy1_start.webm",
-      "videoSha256": "eb3121665b55ecb454ea02210bc4a762196020313daa3448a876a36f6f352f88",
+      "videoSha256": "2067de68a413b2dbd5e08468531625f6885251d5fcd72f6282aee67a4f9f3d00",
       "frameCount": 6,
       "duration": 0.6,
       "decodedTicks": 6,
@@ -585,12 +590,13 @@
       "holds": {},
       "repeats": [],
       "sourceBytes": 56364,
-      "candidateBytes": 93718,
+      "candidateBytes": 93699,
       "technicalReview": {
         "dimensions": true,
         "alpha": true,
         "duration": true,
-        "frameOrder": true
+        "pngFrameOrder": true,
+        "decodedTickCount": true
       },
       "status": "reviewed",
       "review": {
@@ -667,27 +673,27 @@
         "sprites/hd720/frames/happy1_loop/happy1_loop_17.png"
       ],
       "frameHashes": [
-        "5ca967d6afaf51fb92f85dbc0adadf0fb027e06eac2bc7a07894f76c0efcba9e",
-        "4ab759f3fb083e1239b55ab0d27b6d513652d975725c029266a75e203317df0c",
-        "d6ca0f07b0fd3ce77717412194425636c0ff08e0f52f54df8437a57deef5dddd",
-        "e869477ff183a73a95c63bc43b082cb5c040c3a96f108068a68d2daf1378442b",
-        "079a0c249cee4e94b0537c5820088ab9636bee8cfe3dbc9ead61f1f1ab9abe88",
-        "079a0c249cee4e94b0537c5820088ab9636bee8cfe3dbc9ead61f1f1ab9abe88",
-        "e869477ff183a73a95c63bc43b082cb5c040c3a96f108068a68d2daf1378442b",
-        "d6ca0f07b0fd3ce77717412194425636c0ff08e0f52f54df8437a57deef5dddd",
-        "4ab759f3fb083e1239b55ab0d27b6d513652d975725c029266a75e203317df0c",
-        "10567d1414512bb092e3dc76e2a2aa37cad59dfc7504fa1ccae6f9d911026ed3",
-        "5e9593657a042f400f56b23ba70b743116713aa43a57bcdd8b4176915c4364ed",
-        "16a43633cd0f3e86a872ce2ede93b00a813c17ac0382b6425bdbfa15f176a62c",
-        "9f0d2f8e3d8d0da95ce62831136738385cb235c5f2724a009d49a16502d9ecb7",
-        "e084977057e7f78e714785aa02e95af00548141cf7c808a3ddf299f84b2cbca9",
-        "e084977057e7f78e714785aa02e95af00548141cf7c808a3ddf299f84b2cbca9",
-        "9f0d2f8e3d8d0da95ce62831136738385cb235c5f2724a009d49a16502d9ecb7",
-        "16a43633cd0f3e86a872ce2ede93b00a813c17ac0382b6425bdbfa15f176a62c",
-        "5e9593657a042f400f56b23ba70b743116713aa43a57bcdd8b4176915c4364ed"
+        "27aba2e7b51a32ead005267407ca0cadb14291f66f419b45198d457f2799b6ac",
+        "1d13bed4b2d65bf953f546025f5d783d308a7696cc245785cd5686331b817f87",
+        "4fd1689f88dc527f6af4528209a9f034c67a941bc2049cfe314f6820ca7d45e5",
+        "36eae6ba01b7bcf2a3a52002bcb011d105c647785fc14dd8c84ba02ffcdb91e9",
+        "77b803302807931ec4046145c69413ed9e5a138cb4729c4cc48f2f148822783d",
+        "77b803302807931ec4046145c69413ed9e5a138cb4729c4cc48f2f148822783d",
+        "36eae6ba01b7bcf2a3a52002bcb011d105c647785fc14dd8c84ba02ffcdb91e9",
+        "4fd1689f88dc527f6af4528209a9f034c67a941bc2049cfe314f6820ca7d45e5",
+        "1d13bed4b2d65bf953f546025f5d783d308a7696cc245785cd5686331b817f87",
+        "772caf7aa0058ab4268d25b765bfaf042f7faf01c5d7a984c2655321111a21e0",
+        "f7a2756b311816509f2651723be171d4f3b0b2588c77f068dba0076bae27ca90",
+        "6d5de071ee1fd494590b70aa94e3a9752c636fc829814eea60690e11d002bd71",
+        "3b077dc38746bc3d3afae9b1c984a5424f3e13b1ac37c2d6af6e9164b876e969",
+        "b104833032f49dde9971e41fd33e7bbd1fe2ee92f78a0ad0511bbb7ae032df49",
+        "b104833032f49dde9971e41fd33e7bbd1fe2ee92f78a0ad0511bbb7ae032df49",
+        "3b077dc38746bc3d3afae9b1c984a5424f3e13b1ac37c2d6af6e9164b876e969",
+        "6d5de071ee1fd494590b70aa94e3a9752c636fc829814eea60690e11d002bd71",
+        "f7a2756b311816509f2651723be171d4f3b0b2588c77f068dba0076bae27ca90"
       ],
       "candidate": "sprites/hd720/videos/anim_happy1_loop.webm",
-      "videoSha256": "ccbf5cac960c812a01ce99d82d172f9ecac13d29d108eaf1e42717482b5ff239",
+      "videoSha256": "779388f0246ac096cc4a880f240955170f63aed924ed2609fbb26084abd113fd",
       "frameCount": 18,
       "duration": 1.8,
       "decodedTicks": 18,
@@ -695,12 +701,13 @@
       "holds": {},
       "repeats": [],
       "sourceBytes": 134958,
-      "candidateBytes": 197931,
+      "candidateBytes": 198187,
       "technicalReview": {
         "dimensions": true,
         "alpha": true,
         "duration": true,
-        "frameOrder": true
+        "pngFrameOrder": true,
+        "decodedTickCount": true
       },
       "status": "reviewed",
       "review": {
@@ -741,15 +748,15 @@
         "sprites/hd720/frames/happy1_end/happy1_end_05.png"
       ],
       "frameHashes": [
-        "5ca967d6afaf51fb92f85dbc0adadf0fb027e06eac2bc7a07894f76c0efcba9e",
-        "5ca967d6afaf51fb92f85dbc0adadf0fb027e06eac2bc7a07894f76c0efcba9e",
-        "f02d413fb1b7111334ee416172a89136f96d5366f33db619b809779f0f887f33",
-        "f02d413fb1b7111334ee416172a89136f96d5366f33db619b809779f0f887f33",
+        "27aba2e7b51a32ead005267407ca0cadb14291f66f419b45198d457f2799b6ac",
+        "27aba2e7b51a32ead005267407ca0cadb14291f66f419b45198d457f2799b6ac",
+        "005e4ef0f36059111091997efb750c258baa943ae33f533f5532291a72537847",
+        "005e4ef0f36059111091997efb750c258baa943ae33f533f5532291a72537847",
         "9ec4a182aef2d98aa0a2e28c7ac01036ea56a3d76af144c9dc6ad2c16571f645",
         "9ec4a182aef2d98aa0a2e28c7ac01036ea56a3d76af144c9dc6ad2c16571f645"
       ],
       "candidate": "sprites/hd720/videos/anim_happy1_end.webm",
-      "videoSha256": "f9fc0f87dbb649aac20d522490ede13625d8b3914b217fa7e8c0975859713a26",
+      "videoSha256": "3d1d58bccafeb1c2349216fea6960e3c58bf1e1e854c7b897718b77325e85f70",
       "frameCount": 6,
       "duration": 0.6,
       "decodedTicks": 6,
@@ -757,12 +764,13 @@
       "holds": {},
       "repeats": [],
       "sourceBytes": 55008,
-      "candidateBytes": 93659,
+      "candidateBytes": 93684,
       "technicalReview": {
         "dimensions": true,
         "alpha": true,
         "duration": true,
-        "frameOrder": true
+        "pngFrameOrder": true,
+        "decodedTickCount": true
       },
       "status": "reviewed",
       "review": {
@@ -841,25 +849,25 @@
       "frameHashes": [
         "9ec4a182aef2d98aa0a2e28c7ac01036ea56a3d76af144c9dc6ad2c16571f645",
         "9ec4a182aef2d98aa0a2e28c7ac01036ea56a3d76af144c9dc6ad2c16571f645",
-        "d93a80c775f74b641eb4a20d38cc478367dde6d9dfa4aa3062339109ee5154b5",
-        "a64816cca1dbe3a9003cf4fb83b971132bc56758a65c672caed1d387de422f8d",
-        "7e5834c35c47a483775a30ddeb2df8cb9daa2ce378c553741f060f09632593f4",
-        "8cda82b8f48f799f7427e3b410323990ece90a8c48388fa48ac907756ecb28bc",
-        "6954f692fab8906ea72ac391edb39d3101d4da80f67c77e11d5d2e63142c422a",
-        "f7f21d6b8ba7adefe4906c50536dbb6b74df2708bd15dd3489fcdd90d49cb03c",
-        "d93a80c775f74b641eb4a20d38cc478367dde6d9dfa4aa3062339109ee5154b5",
-        "449200f3e836b222eaa8a3c0234dccf3416a12abe3e0fa6a2397eaf13a64479a",
-        "8d8ef4e15df16716f00f72b02fb88fbcef5b3753c8934e8e7e691e80b071313f",
-        "3f57fa4f3963a97f1bfdf8fe8320d6da4221769a34e741e47869ab96ef360b2c",
-        "8d8ef4e15df16716f00f72b02fb88fbcef5b3753c8934e8e7e691e80b071313f",
-        "449200f3e836b222eaa8a3c0234dccf3416a12abe3e0fa6a2397eaf13a64479a",
-        "d93a80c775f74b641eb4a20d38cc478367dde6d9dfa4aa3062339109ee5154b5",
-        "d93a80c775f74b641eb4a20d38cc478367dde6d9dfa4aa3062339109ee5154b5",
+        "4cbff666895d6d554359ac362897388f7af595e8c9c6c4caff3011f4a40896ce",
+        "6f42be508d5619851033695ff8a3eb93f18d4dead86b12f5d92a918c6a4dc330",
+        "2459e7680b6b85350eb0b824aa2309bc39c62e44c83fae8121462a1243833375",
+        "5e0fac6ef5b2b8e332fa5970cf0984cacf6843dcb2cb867d1dd3f38f3a8c71f7",
+        "cc69c58ffd8b9c3df9a617ebf804bcf941d7d7651941cd5301792e450cb56ffc",
+        "565bc877bd30356daa6a8bb842dfa5fcee863f772d879451cd784c29a73ef3c7",
+        "4cbff666895d6d554359ac362897388f7af595e8c9c6c4caff3011f4a40896ce",
+        "651e5feb3238b704282d5f62a41beaf13ccaa5012f1f6e855543f65f02904878",
+        "1cf0b95a4ba3b42fa0350f7ac05d42f12373816bc12f6b9edfee428f08d97b4b",
+        "9e5917a663bbef6ae05a62524aef32256d04978c54fafd49d0b97bffbebfcbd1",
+        "1cf0b95a4ba3b42fa0350f7ac05d42f12373816bc12f6b9edfee428f08d97b4b",
+        "651e5feb3238b704282d5f62a41beaf13ccaa5012f1f6e855543f65f02904878",
+        "4cbff666895d6d554359ac362897388f7af595e8c9c6c4caff3011f4a40896ce",
+        "4cbff666895d6d554359ac362897388f7af595e8c9c6c4caff3011f4a40896ce",
         "9ec4a182aef2d98aa0a2e28c7ac01036ea56a3d76af144c9dc6ad2c16571f645",
         "9ec4a182aef2d98aa0a2e28c7ac01036ea56a3d76af144c9dc6ad2c16571f645"
       ],
       "candidate": "sprites/hd720/videos/anim_happy2_loop.webm",
-      "videoSha256": "21d23fca48d80b04faa551782d9e71dd9c7c963e8943edf6340b37732f78e7b0",
+      "videoSha256": "7bf09c50a9ff2c4d386f77d9fd23d07517ad2215b159635b87b23a868d494791",
       "frameCount": 18,
       "duration": 1.8,
       "decodedTicks": 18,
@@ -867,12 +875,13 @@
       "holds": {},
       "repeats": [],
       "sourceBytes": 148495,
-      "candidateBytes": 224056,
+      "candidateBytes": 224341,
       "technicalReview": {
         "dimensions": true,
         "alpha": true,
         "duration": true,
-        "frameOrder": true
+        "pngFrameOrder": true,
+        "decodedTickCount": true
       },
       "status": "reviewed",
       "review": {
@@ -990,7 +999,8 @@
         "dimensions": true,
         "alpha": true,
         "duration": true,
-        "frameOrder": true
+        "pngFrameOrder": true,
+        "decodedTickCount": true
       },
       "status": "reviewed",
       "review": {
@@ -1087,7 +1097,7 @@
         "9ec4a182aef2d98aa0a2e28c7ac01036ea56a3d76af144c9dc6ad2c16571f645"
       ],
       "candidate": "sprites/hd720/videos/anim_excited1_loop.webm",
-      "videoSha256": "c3b21e0ce64dc21a4ace8ff0517e1c90badcd7f24f1894a6c9a4b6e9d1f5c6f7",
+      "videoSha256": "d742ca829269b5025606d493706e506da924a822437c4719b61fe59a875763ad",
       "frameCount": 18,
       "duration": 1.8,
       "decodedTicks": 18,
@@ -1100,7 +1110,8 @@
         "dimensions": true,
         "alpha": true,
         "duration": true,
-        "frameOrder": true
+        "pngFrameOrder": true,
+        "decodedTickCount": true
       },
       "status": "reviewed",
       "review": {
@@ -1159,21 +1170,21 @@
         "sprites/hd720/frames/boxing1_loop/boxing1_loop_11.png"
       ],
       "frameHashes": [
-        "370a9fedb9fb785bfe45795f041d91799dde32344275235a86656c3662df975d",
-        "311f96e00dfe4487ee2140f39202709a93a5df89febde1b5cdb7c2fe30a01340",
-        "358e414fe1ada28be6962e86a5cde4480f26d2de97a7482ed7eed8131fddd1b7",
-        "4134ca0e48f7ca02f99459ed8eefa0b9d4345ab19a83988ea6ff5ccdcf08f48f",
-        "12eac60ce7780c8dc9e31d5b514325a02538b6a9c1e45d2d965683319de9ce61",
-        "75c1211a74acf5ab13bace5e635fe3843e9413bda953bedecf5647b0afcf2dda",
-        "d79f17eb7177b91cac43ba9dd92b937b39109d2eb82fcfa71b59449899e963f9",
-        "377aeb2182960a386e1c08f37c78bb41d7e5a2253ce6552e2e47123ad2181973",
-        "370a9fedb9fb785bfe45795f041d91799dde32344275235a86656c3662df975d",
-        "370a9fedb9fb785bfe45795f041d91799dde32344275235a86656c3662df975d",
-        "a08deb5f4466c18185fda2f3df0caf23d7211c03b025a81113691e73235569cb",
-        "370a9fedb9fb785bfe45795f041d91799dde32344275235a86656c3662df975d"
+        "0fc98bf0e8b5fcd737dee8c9abe28b950ce24846d8800821a072a083723f6be7",
+        "cc3b7a84df4fd15372e05f648cead8a66669a435922db235596e3a46df2faa8d",
+        "79030759ae8b4334dde607af76d792b625d4bbc153b30918a59b6f783711437e",
+        "bba834204f1e62da057e2aaa4dace1797f615e0e4b6084a12b140048cab32122",
+        "be809f3b47ff2a995b0fed7831f7ddf1b5c5ef783c7eef093824fd9798f2fd5f",
+        "070d839d6cfb4456643271fcfd99960e772085be3be5719761fc76fb3d277d7b",
+        "0a8bf0c2b4df5aa48aa11be9cd1136014255e747249ad635c49b6dfe668b4f8d",
+        "226a0e990d65ab297658c160627cee6f411b24f2c4f6aba959b3f814ea5af63e",
+        "0fc98bf0e8b5fcd737dee8c9abe28b950ce24846d8800821a072a083723f6be7",
+        "0fc98bf0e8b5fcd737dee8c9abe28b950ce24846d8800821a072a083723f6be7",
+        "693c24b5574fd4dc2666cd8370707bd72eb35b0445f7c424e1df7f01d5305629",
+        "0fc98bf0e8b5fcd737dee8c9abe28b950ce24846d8800821a072a083723f6be7"
       ],
       "candidate": "sprites/hd720/videos/anim_boxing1_loop.webm",
-      "videoSha256": "ff08c8784913380a4cbaa04b0d6d2e6d7ed78c594f39754cdb4f69ff2be4b969",
+      "videoSha256": "2f2cf4af5b65f669fdd2099534b7828d6aec928c9b56acc35301c776ede05812",
       "frameCount": 12,
       "duration": 2.4,
       "decodedTicks": 24,
@@ -1196,12 +1207,13 @@
         }
       ],
       "sourceBytes": 279653,
-      "candidateBytes": 418434,
+      "candidateBytes": 417522,
       "technicalReview": {
         "dimensions": true,
         "alpha": true,
         "duration": true,
-        "frameOrder": true
+        "pngFrameOrder": true,
+        "decodedTickCount": true
       },
       "status": "reviewed",
       "review": {
@@ -1303,7 +1315,8 @@
         "dimensions": true,
         "alpha": true,
         "duration": true,
-        "frameOrder": true
+        "pngFrameOrder": true,
+        "decodedTickCount": true
       },
       "status": "reviewed",
       "review": {
@@ -1397,7 +1410,8 @@
         "dimensions": true,
         "alpha": true,
         "duration": true,
-        "frameOrder": true
+        "pngFrameOrder": true,
+        "decodedTickCount": true
       },
       "status": "reviewed",
       "review": {
@@ -1531,7 +1545,8 @@
         "dimensions": true,
         "alpha": true,
         "duration": true,
-        "frameOrder": true
+        "pngFrameOrder": true,
+        "decodedTickCount": true
       },
       "status": "reviewed",
       "review": {
@@ -1633,7 +1648,8 @@
         "dimensions": true,
         "alpha": true,
         "duration": true,
-        "frameOrder": true
+        "pngFrameOrder": true,
+        "decodedTickCount": true
       },
       "status": "reviewed",
       "review": {
@@ -1735,7 +1751,8 @@
         "dimensions": true,
         "alpha": true,
         "duration": true,
-        "frameOrder": true
+        "pngFrameOrder": true,
+        "decodedTickCount": true
       },
       "status": "reviewed",
       "review": {
@@ -1821,7 +1838,8 @@
         "dimensions": true,
         "alpha": true,
         "duration": true,
-        "frameOrder": true
+        "pngFrameOrder": true,
+        "decodedTickCount": true
       },
       "status": "reviewed",
       "review": {
@@ -1935,7 +1953,8 @@
         "dimensions": true,
         "alpha": true,
         "duration": true,
-        "frameOrder": true
+        "pngFrameOrder": true,
+        "decodedTickCount": true
       },
       "status": "reviewed",
       "review": {
@@ -2053,7 +2072,8 @@
         "dimensions": true,
         "alpha": true,
         "duration": true,
-        "frameOrder": true
+        "pngFrameOrder": true,
+        "decodedTickCount": true
       },
       "status": "reviewed",
       "review": {
@@ -2139,7 +2159,8 @@
         "dimensions": true,
         "alpha": true,
         "duration": true,
-        "frameOrder": true
+        "pngFrameOrder": true,
+        "decodedTickCount": true
       },
       "status": "reviewed",
       "review": {
@@ -2249,7 +2270,8 @@
         "dimensions": true,
         "alpha": true,
         "duration": true,
-        "frameOrder": true
+        "pngFrameOrder": true,
+        "decodedTickCount": true
       },
       "status": "reviewed",
       "review": {
@@ -2343,7 +2365,8 @@
         "dimensions": true,
         "alpha": true,
         "duration": true,
-        "frameOrder": true
+        "pngFrameOrder": true,
+        "decodedTickCount": true
       },
       "status": "reviewed",
       "review": {
@@ -2437,7 +2460,8 @@
         "dimensions": true,
         "alpha": true,
         "duration": true,
-        "frameOrder": true
+        "pngFrameOrder": true,
+        "decodedTickCount": true
       },
       "status": "reviewed",
       "review": {
@@ -2533,7 +2557,8 @@
         "dimensions": true,
         "alpha": true,
         "duration": true,
-        "frameOrder": true
+        "pngFrameOrder": true,
+        "decodedTickCount": true
       },
       "status": "reviewed",
       "review": {
@@ -2629,7 +2654,8 @@
         "dimensions": true,
         "alpha": true,
         "duration": true,
-        "frameOrder": true
+        "pngFrameOrder": true,
+        "decodedTickCount": true
       },
       "status": "reviewed",
       "review": {
@@ -2725,7 +2751,8 @@
         "dimensions": true,
         "alpha": true,
         "duration": true,
-        "frameOrder": true
+        "pngFrameOrder": true,
+        "decodedTickCount": true
       },
       "status": "reviewed",
       "review": {
@@ -2821,7 +2848,8 @@
         "dimensions": true,
         "alpha": true,
         "duration": true,
-        "frameOrder": true
+        "pngFrameOrder": true,
+        "decodedTickCount": true
       },
       "status": "reviewed",
       "review": {
@@ -2917,7 +2945,8 @@
         "dimensions": true,
         "alpha": true,
         "duration": true,
-        "frameOrder": true
+        "pngFrameOrder": true,
+        "decodedTickCount": true
       },
       "status": "reviewed",
       "review": {
@@ -3013,7 +3042,8 @@
         "dimensions": true,
         "alpha": true,
         "duration": true,
-        "frameOrder": true
+        "pngFrameOrder": true,
+        "decodedTickCount": true
       },
       "status": "reviewed",
       "review": {
@@ -3109,7 +3139,8 @@
         "dimensions": true,
         "alpha": true,
         "duration": true,
-        "frameOrder": true
+        "pngFrameOrder": true,
+        "decodedTickCount": true
       },
       "status": "reviewed",
       "review": {
@@ -3205,7 +3236,8 @@
         "dimensions": true,
         "alpha": true,
         "duration": true,
-        "frameOrder": true
+        "pngFrameOrder": true,
+        "decodedTickCount": true
       },
       "status": "reviewed",
       "review": {
@@ -3301,7 +3333,8 @@
         "dimensions": true,
         "alpha": true,
         "duration": true,
-        "frameOrder": true
+        "pngFrameOrder": true,
+        "decodedTickCount": true
       },
       "status": "reviewed",
       "review": {
@@ -3397,7 +3430,8 @@
         "dimensions": true,
         "alpha": true,
         "duration": true,
-        "frameOrder": true
+        "pngFrameOrder": true,
+        "decodedTickCount": true
       },
       "status": "reviewed",
       "review": {
@@ -3475,7 +3509,8 @@
         "dimensions": true,
         "alpha": true,
         "duration": true,
-        "frameOrder": true
+        "pngFrameOrder": true,
+        "decodedTickCount": true
       },
       "status": "reviewed",
       "review": {
@@ -3594,7 +3629,8 @@
         "dimensions": true,
         "alpha": true,
         "duration": true,
-        "frameOrder": true
+        "pngFrameOrder": true,
+        "decodedTickCount": true
       },
       "status": "reviewed",
       "review": {
@@ -3713,7 +3749,8 @@
         "dimensions": true,
         "alpha": true,
         "duration": true,
-        "frameOrder": true
+        "pngFrameOrder": true,
+        "decodedTickCount": true
       },
       "status": "reviewed",
       "review": {
@@ -3832,7 +3869,8 @@
         "dimensions": true,
         "alpha": true,
         "duration": true,
-        "frameOrder": true
+        "pngFrameOrder": true,
+        "decodedTickCount": true
       },
       "status": "reviewed",
       "review": {
@@ -3951,7 +3989,8 @@
         "dimensions": true,
         "alpha": true,
         "duration": true,
-        "frameOrder": true
+        "pngFrameOrder": true,
+        "decodedTickCount": true
       },
       "status": "reviewed",
       "review": {
@@ -4070,7 +4109,8 @@
         "dimensions": true,
         "alpha": true,
         "duration": true,
-        "frameOrder": true
+        "pngFrameOrder": true,
+        "decodedTickCount": true
       },
       "status": "reviewed",
       "review": {
@@ -4189,7 +4229,8 @@
         "dimensions": true,
         "alpha": true,
         "duration": true,
-        "frameOrder": true
+        "pngFrameOrder": true,
+        "decodedTickCount": true
       },
       "status": "reviewed",
       "review": {
@@ -4291,7 +4332,8 @@
         "dimensions": true,
         "alpha": true,
         "duration": true,
-        "frameOrder": true
+        "pngFrameOrder": true,
+        "decodedTickCount": true
       },
       "status": "reviewed",
       "review": {
@@ -4451,7 +4493,8 @@
         "dimensions": true,
         "alpha": true,
         "duration": true,
-        "frameOrder": true
+        "pngFrameOrder": true,
+        "decodedTickCount": true
       },
       "status": "reviewed",
       "review": {
@@ -4528,27 +4571,27 @@
         "sprites/hd720/frames/sad1_loop/sad1_loop_17.png"
       ],
       "frameHashes": [
-        "e0e20239b2d8284566ba6106d786d9521680062d463fd7334e1e924c9545e02c",
-        "da90134e9484cf70dd37e3d62ecc935726d72c4100e3f3ff61bef38951f1ca46",
-        "87c59c2f169666e752853d9e8498f28b78ffb02fbc630e4f999ca45cd3f94485",
-        "da4198fc6475c2299ab89968bf0139b93c2bcf6ad9d6741b24fbe81c3046e0ab",
-        "7e35002eed41cbea8e2b7f92312a1a9801deab735adfd7bd404927a4940e0eaa",
-        "7b92c4ccb33f12643adca0ab2568c38cad5426487fa95acbe7b70334681d5922",
-        "6ce1d604e6fd515309eb6fc709f88a3c13e68932c8dda1ed9dddf4e7cec9e09e",
-        "6ce1d604e6fd515309eb6fc709f88a3c13e68932c8dda1ed9dddf4e7cec9e09e",
-        "7b92c4ccb33f12643adca0ab2568c38cad5426487fa95acbe7b70334681d5922",
-        "7e35002eed41cbea8e2b7f92312a1a9801deab735adfd7bd404927a4940e0eaa",
-        "da4198fc6475c2299ab89968bf0139b93c2bcf6ad9d6741b24fbe81c3046e0ab",
-        "87c59c2f169666e752853d9e8498f28b78ffb02fbc630e4f999ca45cd3f94485",
-        "da90134e9484cf70dd37e3d62ecc935726d72c4100e3f3ff61bef38951f1ca46",
-        "e0e20239b2d8284566ba6106d786d9521680062d463fd7334e1e924c9545e02c",
-        "d94e649a07d9c90bdebd1c97410d75ee3fe1f1887e0326c14e98f4130047ac81",
-        "da90134e9484cf70dd37e3d62ecc935726d72c4100e3f3ff61bef38951f1ca46",
-        "d94e649a07d9c90bdebd1c97410d75ee3fe1f1887e0326c14e98f4130047ac81",
-        "e0e20239b2d8284566ba6106d786d9521680062d463fd7334e1e924c9545e02c"
+        "c9b93569f54a27a5316121b1bc65406a02e1bd237b2871485b22c6b3e94852be",
+        "7aa5138821487306e9599c18e90f83c7ea9879bf6c55363a17f3112964235994",
+        "9734d2049be5b3883e904714f044adcb4c0a6870bb6e27b354f26bc9ca53bf85",
+        "43c893740d573fafec4d4cfe1484bbd3df9e425ad2604c6d790d7b732a8f9ee8",
+        "f8b3e96c93adcb183a5efca229b2bfe9a082a925ee62d9e88c45ae35fe218b32",
+        "f21e18c95ca5b3ce9c477d08f969224e2f8d6a66ee056c0dc3a39077db6942fe",
+        "0c0901890dcd898b9dd9bc71cfbbe9ced57554fda750bbcf785f348828bd4128",
+        "0c0901890dcd898b9dd9bc71cfbbe9ced57554fda750bbcf785f348828bd4128",
+        "f21e18c95ca5b3ce9c477d08f969224e2f8d6a66ee056c0dc3a39077db6942fe",
+        "f8b3e96c93adcb183a5efca229b2bfe9a082a925ee62d9e88c45ae35fe218b32",
+        "43c893740d573fafec4d4cfe1484bbd3df9e425ad2604c6d790d7b732a8f9ee8",
+        "9734d2049be5b3883e904714f044adcb4c0a6870bb6e27b354f26bc9ca53bf85",
+        "7aa5138821487306e9599c18e90f83c7ea9879bf6c55363a17f3112964235994",
+        "c9b93569f54a27a5316121b1bc65406a02e1bd237b2871485b22c6b3e94852be",
+        "8c36504554cded579f2dc89cdcd2430de3fbe8ebcc5d15b97190b3abf1231adb",
+        "7aa5138821487306e9599c18e90f83c7ea9879bf6c55363a17f3112964235994",
+        "8c36504554cded579f2dc89cdcd2430de3fbe8ebcc5d15b97190b3abf1231adb",
+        "c9b93569f54a27a5316121b1bc65406a02e1bd237b2871485b22c6b3e94852be"
       ],
       "candidate": "sprites/hd720/videos/anim_sad1_loop.webm",
-      "videoSha256": "3c4bebe1177c128441257c5129d25b313909e037b8d31ffdfdb626583b823e64",
+      "videoSha256": "bf409f8b11754ac112099649e7a8d7d8647de4e541b3425913629740255127e3",
       "frameCount": 18,
       "duration": 1.8,
       "decodedTicks": 18,
@@ -4556,12 +4599,13 @@
       "holds": {},
       "repeats": [],
       "sourceBytes": 59853,
-      "candidateBytes": 81192,
+      "candidateBytes": 81925,
       "technicalReview": {
         "dimensions": true,
         "alpha": true,
         "duration": true,
-        "frameOrder": true
+        "pngFrameOrder": true,
+        "decodedTickCount": true
       },
       "status": "reviewed",
       "review": {
@@ -4638,27 +4682,27 @@
         "sprites/hd720/frames/sad2_loop/sad2_loop_17.png"
       ],
       "frameHashes": [
-        "ee1c9a60baae19de2ce0eb1d58efb0a2af4783539f37aed886f8610c8dbc6779",
-        "c4b474a833114e7abce8cf2d0472401004bd3c2291e2da664487b6f5f8a0a100",
-        "a7b696f4c79bc84afa2d773c209c88c7cd8d82caf1f243bf39307bde42f0a5ee",
-        "df9282a7f5a809d0bb1a42d00e001c9df5fa5db60f713d569baef20f81a90585",
-        "2eadbc4b082c14557b8cbfdd5677ed1ec144a5cdf7ab3b64d58c49d982646ecb",
-        "d2e87010b774979553b9d7b3de4bf009b264c419a6cfc0c75eafd33b1bf47825",
-        "37b061b5af8bb7841e843cb9ce9b3fdc0d12bca04b42309072fc79dfd40041f8",
-        "c4b474a833114e7abce8cf2d0472401004bd3c2291e2da664487b6f5f8a0a100",
-        "ee1c9a60baae19de2ce0eb1d58efb0a2af4783539f37aed886f8610c8dbc6779",
-        "59afe11782f4956c3f1fd56024b8510033b1d9863258ba17f9ffb33e31d4f5b4",
-        "ac5dfba43f7495562f5427912a9f0d1e400b9ce2c08855114fb9c5551f5c98a1",
-        "4c7446dc5bd2c2ae05285414696bbd7d132f911007e69b4a9ee2b404d3e91570",
-        "6593ae0bb65e741bf15ef80976d4547a7cfd7914331409c4a8ee6b0d308147a0",
-        "c68b76e052db4d253d5a07c1f4d253511dbc552bec5c0b574658c8646865e6a8",
-        "37b061b5af8bb7841e843cb9ce9b3fdc0d12bca04b42309072fc79dfd40041f8",
-        "c4b474a833114e7abce8cf2d0472401004bd3c2291e2da664487b6f5f8a0a100",
-        "ee1c9a60baae19de2ce0eb1d58efb0a2af4783539f37aed886f8610c8dbc6779",
-        "ee1c9a60baae19de2ce0eb1d58efb0a2af4783539f37aed886f8610c8dbc6779"
+        "40725b0d8c5ad14e3e8947ca45b26116565fa7af83b63391399cb6a77a384341",
+        "cf8705e13a30b5059e5dd7eed2d61ea882b03047fbef9f90c2dc8ea0dcda189d",
+        "5e5368923b79887ce723a7609e2e50b65f5f88e6def30327992b929069c301f8",
+        "e08ac3b50493a952d9fbfde463ff4cdd4a18695315825513c16594de717d43af",
+        "34aafcfcdbc2bc5861ef144ecf29ebd6281fe0ee5bbc2f2625ac10b72e51c9b8",
+        "82f78a52946c5cf909c20da15403cedf0494cd86f013e68f0bcd2ea6b9862cd1",
+        "34bae7ba6cbefcd9c45e835147768d794521d5646b52f2b4aadfebd8b3c957fa",
+        "cf8705e13a30b5059e5dd7eed2d61ea882b03047fbef9f90c2dc8ea0dcda189d",
+        "40725b0d8c5ad14e3e8947ca45b26116565fa7af83b63391399cb6a77a384341",
+        "eb1690b136ad581ecf5b6cc69a6c61dfd9fa4bf471601e167722c6cef4d72710",
+        "577e176689740b4d3b11bc9e786c617083dc8ad6e7f5e0a56991dccf966c9049",
+        "baf0e14fb6d1aa72027bc92ad2c36f3cb29a6b14c0d6386eeb98579209292c83",
+        "38b0cf5454993b9316860aaa351dc42f9cfea1895b4c26b13067e36bf62f4ec0",
+        "c791684502af9f7d8c570c16218b00a711970e7b178a4744f2fbb167c6087899",
+        "34bae7ba6cbefcd9c45e835147768d794521d5646b52f2b4aadfebd8b3c957fa",
+        "cf8705e13a30b5059e5dd7eed2d61ea882b03047fbef9f90c2dc8ea0dcda189d",
+        "40725b0d8c5ad14e3e8947ca45b26116565fa7af83b63391399cb6a77a384341",
+        "40725b0d8c5ad14e3e8947ca45b26116565fa7af83b63391399cb6a77a384341"
       ],
       "candidate": "sprites/hd720/videos/anim_sad2_loop.webm",
-      "videoSha256": "ec5fb19940dd7b25839a1dca77921c44403f3493f783ba72309fee2004e4efe4",
+      "videoSha256": "2994e573c7fc8bb626f8d64f2a1fcc0c4c0f9d773d974a357c987ac6cd5ce30e",
       "frameCount": 18,
       "duration": 1.8,
       "decodedTicks": 18,
@@ -4666,12 +4710,13 @@
       "holds": {},
       "repeats": [],
       "sourceBytes": 84333,
-      "candidateBytes": 118590,
+      "candidateBytes": 118881,
       "technicalReview": {
         "dimensions": true,
         "alpha": true,
         "duration": true,
-        "frameOrder": true
+        "pngFrameOrder": true,
+        "decodedTickCount": true
       },
       "status": "reviewed",
       "review": {
@@ -4758,7 +4803,8 @@
         "dimensions": true,
         "alpha": true,
         "duration": true,
-        "frameOrder": true
+        "pngFrameOrder": true,
+        "decodedTickCount": true
       },
       "status": "reviewed",
       "review": {
@@ -4837,7 +4883,8 @@
         "dimensions": true,
         "alpha": true,
         "duration": true,
-        "frameOrder": true
+        "pngFrameOrder": true,
+        "decodedTickCount": true
       },
       "status": "reviewed",
       "review": {
@@ -4916,7 +4963,8 @@
         "dimensions": true,
         "alpha": true,
         "duration": true,
-        "frameOrder": true
+        "pngFrameOrder": true,
+        "decodedTickCount": true
       },
       "status": "reviewed",
       "review": {
@@ -4995,7 +5043,8 @@
         "dimensions": true,
         "alpha": true,
         "duration": true,
-        "frameOrder": true
+        "pngFrameOrder": true,
+        "decodedTickCount": true
       },
       "status": "reviewed",
       "review": {
@@ -5074,7 +5123,8 @@
         "dimensions": true,
         "alpha": true,
         "duration": true,
-        "frameOrder": true
+        "pngFrameOrder": true,
+        "decodedTickCount": true
       },
       "status": "reviewed",
       "review": {
@@ -5153,7 +5203,8 @@
         "dimensions": true,
         "alpha": true,
         "duration": true,
-        "frameOrder": true
+        "pngFrameOrder": true,
+        "decodedTickCount": true
       },
       "status": "reviewed",
       "review": {
@@ -5232,7 +5283,8 @@
         "dimensions": true,
         "alpha": true,
         "duration": true,
-        "frameOrder": true
+        "pngFrameOrder": true,
+        "decodedTickCount": true
       },
       "status": "reviewed",
       "review": {
@@ -5311,7 +5363,8 @@
         "dimensions": true,
         "alpha": true,
         "duration": true,
-        "frameOrder": true
+        "pngFrameOrder": true,
+        "decodedTickCount": true
       },
       "status": "reviewed",
       "review": {
@@ -5390,7 +5443,8 @@
         "dimensions": true,
         "alpha": true,
         "duration": true,
-        "frameOrder": true
+        "pngFrameOrder": true,
+        "decodedTickCount": true
       },
       "status": "reviewed",
       "review": {
@@ -5469,7 +5523,8 @@
         "dimensions": true,
         "alpha": true,
         "duration": true,
-        "frameOrder": true
+        "pngFrameOrder": true,
+        "decodedTickCount": true
       },
       "status": "reviewed",
       "review": {
@@ -5548,7 +5603,8 @@
         "dimensions": true,
         "alpha": true,
         "duration": true,
-        "frameOrder": true
+        "pngFrameOrder": true,
+        "decodedTickCount": true
       },
       "status": "reviewed",
       "review": {
@@ -5627,7 +5683,8 @@
         "dimensions": true,
         "alpha": true,
         "duration": true,
-        "frameOrder": true
+        "pngFrameOrder": true,
+        "decodedTickCount": true
       },
       "status": "reviewed",
       "review": {
@@ -5706,7 +5763,8 @@
         "dimensions": true,
         "alpha": true,
         "duration": true,
-        "frameOrder": true
+        "pngFrameOrder": true,
+        "decodedTickCount": true
       },
       "status": "reviewed",
       "review": {
@@ -5833,7 +5891,8 @@
         "dimensions": true,
         "alpha": true,
         "duration": true,
-        "frameOrder": true
+        "pngFrameOrder": true,
+        "decodedTickCount": true
       },
       "status": "reviewed",
       "review": {
@@ -5960,7 +6019,8 @@
         "dimensions": true,
         "alpha": true,
         "duration": true,
-        "frameOrder": true
+        "pngFrameOrder": true,
+        "decodedTickCount": true
       },
       "status": "reviewed",
       "review": {
@@ -6087,7 +6147,8 @@
         "dimensions": true,
         "alpha": true,
         "duration": true,
-        "frameOrder": true
+        "pngFrameOrder": true,
+        "decodedTickCount": true
       },
       "status": "reviewed",
       "review": {
@@ -6184,7 +6245,7 @@
         "69695849b86cc1867530a4d84c91a2337dec4631543993a4a193d2e5aa1e4902"
       ],
       "candidate": "sprites/hd720/videos/anim_talk_loop.webm",
-      "videoSha256": "5c3ffff319b8ab8cca48e1abcabe9b9aaefbc834c405accf2883745738cdcfbb",
+      "videoSha256": "7850af516d6284aafc0946c537603d70acc232030c7ff29f905d89a597c9b509",
       "frameCount": 18,
       "duration": 1.8,
       "decodedTicks": 18,
@@ -6197,7 +6258,8 @@
         "dimensions": true,
         "alpha": true,
         "duration": true,
-        "frameOrder": true
+        "pngFrameOrder": true,
+        "decodedTickCount": true
       },
       "status": "reviewed",
       "review": {
@@ -6211,7 +6273,7 @@
   "clipCount": 62,
   "frameCount": 846,
   "sourceVideoBytes": 14921384,
-  "candidateVideoBytes": 22789299,
+  "candidateVideoBytes": 22789681,
   "workers": [
     "anims/hd720_dance.json",
     "anims/hd720_pastry.json",
@@ -6222,6 +6284,8 @@
     "date": "2026-10-02",
     "stateMachine": "node tools/widget_check.js: 13 checks PASS",
     "allClips": "node tools/widget_hd720_check.js: 62 clips PASS",
+    "allEndings": "node tools/widget_hd720_check.js --endings: 13 state chains/62 ended PASS",
+    "finalRootMatte": "node tools/widget_hd720_check.js --root: 13 clips PASS",
     "finalPastryRetouch": "node tools/widget_hd720_check.js --prefix pastry1_: 13 clips PASS",
     "viewportCases": [
       [

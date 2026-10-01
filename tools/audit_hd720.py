@@ -99,7 +99,8 @@ def main():
                     'frameCount': len(frames), 'duration': float(after['format']['duration']), 'decodedTicks': len(decoded),
                     'fps': timing.get('fps', 10), 'holds': timing.get('holds', {}), 'repeats': timing.get('repeats', []),
                     'sourceBytes': source.stat().st_size, 'candidateBytes': candidate.stat().st_size,
-                    'technicalReview': {'dimensions': True, 'alpha': True, 'duration': True, 'frameOrder': True},
+                    'technicalReview': {'dimensions': True, 'alpha': True, 'duration': True,
+                                        'pngFrameOrder': True, 'decodedTickCount': True},
                     'status': 'audited'}
                 report['clips'].append(record)
                 print('Audited', name, len(frames), 'slots /', len(decoded), 'ticks', flush=True)

@@ -181,6 +181,8 @@ python tools/deploy_pages.py
 
 전체 재현·검증:
 
+720 재현 도구는 `numpy`, `Pillow`, `scipy`와 `ffmpeg`/`ffprobe`가 필요하다.
+
 ```bash
 python tools/build_hd720_root.py
 python tools/build_hd720_dance.py
@@ -189,6 +191,7 @@ python tools/build_hd720_pastry.py
 python tools/audit_hd720.py
 node tools/widget_check.js
 node tools/widget_hd720_check.js
+node tools/widget_hd720_check.js --endings
 python tools/deploy_pages.py
 ```
 
