@@ -1,0 +1,141 @@
+{
+  "date": "2026-10-01",
+  "runtimeCommit": "83460f7",
+  "page": "docs/index.html",
+  "results": {
+    "normal": [
+      {
+        "name": "renderBudget",
+        "passed": true,
+        "detail": "3초 30회, 500×433"
+      },
+      {
+        "name": "newReactions",
+        "passed": true,
+        "detail": "16개 모션 단발 복귀 + 박수 계속 유지"
+      },
+      {
+        "name": "danceLoops",
+        "passed": true,
+        "detail": "3개 춤 각각 두 사이클, 무기한 유지, 워치독 개입 없음"
+      },
+      {
+        "name": "alchemyEndings",
+        "passed": true,
+        "detail": "alchemy1_start → alchemy1_loop → alchemy1_end1 → alchemy1_outro → idle1_loop | alchemy1_start → alchemy1_loop → alchemy1_end2 → alchemy1_outro → idle1_loop | alchemy1_start → alchemy1_loop → alchemy1_end3 → alchemy1_outro → idle1_loop"
+      },
+      {
+        "name": "alchemyHold",
+        "passed": true,
+        "detail": "두 사이클 무기한 유지, 숨김 중 draw/재생 0, 큐 실행과 원복 정상"
+      },
+      {
+        "name": "visibility",
+        "passed": true,
+        "detail": "숨김 중 draw/재생 0, 전환과 큐 복구"
+      },
+      {
+        "name": "cacheBudget",
+        "passed": true,
+        "detail": "23/62클립, 4150525바이트, 동시 요청 2"
+      },
+      {
+        "name": "pausePendingPlay",
+        "passed": true,
+        "detail": "play 완료 전 숨김/복귀 정상"
+      },
+      {
+        "name": "cycles",
+        "passed": true,
+        "detail": "재시작 지연 [6,8,6,7]ms"
+      },
+      {
+        "name": "transitions",
+        "passed": true,
+        "detail": "pastry1_start → pastry1_loop → pastry1_end7 → pastry1_outro → idle1_loop | happy1_start → happy1_loop → happy1_end → idle1_loop"
+      },
+      {
+        "name": "queuedTalk",
+        "passed": true,
+        "detail": "알파 최소 255, talk 시작 지연 [14,0,0,0]ms"
+      },
+      {
+        "name": "holdQueue",
+        "passed": true,
+        "detail": "pinnedUntil = Infinity 유지"
+      },
+      {
+        "name": "staleChain",
+        "passed": true,
+        "detail": "리셋 뒤에도 current = idle1 유지"
+      }
+    ],
+    "fallback": [
+      {
+        "name": "renderBudget",
+        "passed": true,
+        "detail": "3초 61회, 500×433"
+      },
+      {
+        "name": "newReactions",
+        "passed": true,
+        "detail": "16개 모션 단발 복귀 + 박수 계속 유지"
+      },
+      {
+        "name": "danceLoops",
+        "passed": true,
+        "detail": "3개 춤 각각 두 사이클, 무기한 유지, 워치독 개입 없음"
+      },
+      {
+        "name": "alchemyEndings",
+        "passed": true,
+        "detail": "alchemy1_start → alchemy1_loop → alchemy1_end1 → alchemy1_outro → idle1_loop | alchemy1_start → alchemy1_loop → alchemy1_end2 → alchemy1_outro → idle1_loop | alchemy1_start → alchemy1_loop → alchemy1_end3 → alchemy1_outro → idle1_loop"
+      },
+      {
+        "name": "alchemyHold",
+        "passed": true,
+        "detail": "두 사이클 무기한 유지, 숨김 중 draw/재생 0, 큐 실행과 원복 정상"
+      },
+      {
+        "name": "visibility",
+        "passed": true,
+        "detail": "숨김 중 draw/재생 0, 전환과 큐 복구"
+      },
+      {
+        "name": "cacheBudget",
+        "passed": true,
+        "detail": "23/62클립, 4150525바이트, 동시 요청 2"
+      },
+      {
+        "name": "pausePendingPlay",
+        "passed": true,
+        "detail": "play 완료 전 숨김/복귀 정상"
+      },
+      {
+        "name": "cycles",
+        "passed": true,
+        "detail": "재시작 지연 [9,10,6,6]ms"
+      },
+      {
+        "name": "transitions",
+        "passed": true,
+        "detail": "pastry1_start → pastry1_loop → pastry1_end5 → pastry1_outro → idle1_loop | happy1_start → happy1_loop → happy1_end → idle1_loop"
+      },
+      {
+        "name": "queuedTalk",
+        "passed": true,
+        "detail": "알파 최소 255, talk 시작 지연 [0,0,0,0]ms"
+      },
+      {
+        "name": "holdQueue",
+        "passed": true,
+        "detail": "pinnedUntil = Infinity 유지"
+      },
+      {
+        "name": "staleChain",
+        "passed": true,
+        "detail": "리셋 뒤에도 current = idle1 유지"
+      }
+    ]
+  }
+}

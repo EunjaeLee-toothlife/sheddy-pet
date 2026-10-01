@@ -1,0 +1,40 @@
+{
+  "date": "2026-10-01",
+  "runtimeCommit": "83460f7",
+  "command": "node tools/widget_check.js --benchmark --page docs/index.html",
+  "note": "단독 실행한 headless Chrome의 idle 표본. TaskDuration은 OBS 전체 CPU/GPU 사용률이 아니다.",
+  "samples": [
+    {
+      "viewport": 512,
+      "dpr": 1,
+      "canvas": [
+        512,
+        512
+      ],
+      "drawsIn5s": 50,
+      "videoTime": [
+        0.336729,
+        1.717554
+      ],
+      "cachedClips": 1,
+      "fetchedBytes": 67280,
+      "taskMsIn8s": 105
+    },
+    {
+      "viewport": 1024,
+      "dpr": 2,
+      "canvas": [
+        512,
+        512
+      ],
+      "drawsIn5s": 49,
+      "videoTime": [
+        1.105307,
+        0.68409
+      ],
+      "cachedClips": 1,
+      "fetchedBytes": 67280,
+      "taskMsIn8s": 99
+    }
+  ]
+}

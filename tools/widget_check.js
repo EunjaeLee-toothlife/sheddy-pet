@@ -153,6 +153,73 @@ const IN_PAGE = async () => {
     return results;
   }
 
+  await check("alchemyEndings", async w0 => {
+    const random = Math.random;
+    const seq = [], got = [];
+    const onPlaying = e => {
+      const n = nameOf(e.target.src);
+      if (seq[seq.length - 1] !== n) seq.push(n);
+    };
+    for (const v of vids) v.addEventListener("playing", onPlaying);
+    try {
+      for (let ending = 1; ending <= 3; ending++) {
+        seq.length = 0;
+        Math.random = () => (ending - 0.5) / 3;
+        setPetState("alchemy1");
+        await waitFor(() => current === "alchemy1" && !transitioning, 10000, "연금술 loop");
+        await sleep(300);
+        setPetState("idle1");
+        await waitFor(() => nameOf(vids[front].src) === `alchemy1_end${ending}`, 5000, "결과 시작");
+        await sleep(1500);
+        if (window.__captureReactions) window.__captureReactions.push({ name: `alchemy1_end${ending}`, png: screen.toDataURL() });
+        const corner = sctx.getImageData(0, 0, 1, 1).data[3];
+        expect(corner === 0, "연금술 배경이 불투명함");
+        await waitFor(idle, 15000, "연금술 원복");
+        await sleep(150);
+        const expected = `alchemy1_start → alchemy1_loop → alchemy1_end${ending} → alchemy1_outro → idle1_loop`;
+        expect(seq.join(" → ") === expected, "연금술 순서 이상: " + seq.join(" → "));
+        got.push(expected);
+      }
+      expect(!warns.slice(w0).some(w => w.includes("watchdog")), "연금술 전환 중 워치독 개입");
+    } finally {
+      Math.random = random;
+      for (const v of vids) v.removeEventListener("playing", onPlaying);
+    }
+    return got.join(" | ");
+  });
+
+  await check("alchemyHold", async w0 => {
+    const visibility = visible => window.dispatchEvent(new CustomEvent("obsSourceVisibleChanged", { detail: { visible } }));
+    motionHold.checked = true;
+    try {
+      pickMotion("alchemy1");
+      await waitFor(() => current === "alchemy1" && !transitioning, 10000, "연금술 유지");
+      let loops = 0, lastTime = vids[front].currentTime;
+      await waitFor(() => {
+        const time = vids[front].currentTime;
+        if (time < lastTime - 0.5) loops++;
+        lastTime = time;
+        return loops >= 2;
+      }, 10000, "연금술 두 사이클");
+      expect(pinnedUntil === Infinity, "연금술 무기한 유지 유실");
+      visibility(false);
+      const draws = drawCount, time = vids[front].currentTime;
+      setPetState("idle1");
+      await sleep(1200);
+      expect(suspended && vids.every(v => v.paused), "연금술 숨김 중 재생");
+      expect(drawCount === draws && Math.abs(vids[front].currentTime - time) < 0.05, "연금술 숨김 중 렌더/시간 진행");
+      expect(queued?.name === "idle1", "연금술 숨김 중 요청 유실");
+      visibility(true);
+      await waitFor(idle, 15000, "연금술 숨김 복귀 후 원복");
+      expect(!warns.slice(w0).some(w => w.includes("watchdog")), "연금술 유지 중 워치독 개입");
+    } finally {
+      motionHold.checked = false;
+      pinnedUntil = 0;
+      visibility(true);
+    }
+    return "두 사이클 무기한 유지, 숨김 중 draw/재생 0, 큐 실행과 원복 정상";
+  });
+
   await check("visibility", async w0 => {
     const visibility = visible => window.dispatchEvent(new CustomEvent("obsSourceVisibleChanged", { detail: { visible } }));
     setPetState("happy1");
