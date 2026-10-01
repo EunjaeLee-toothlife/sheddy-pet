@@ -14612,6 +14612,12 @@
       "state": "facepalm1",
       "sha256": "16426fe4a10eb31186ac2df7afca9919997baebdac56e40010c73b670ebfabce",
       "reason": "ImageGen 이마 짚기 신규 모션. 원본/재구성 모드에서 공통 사용."
+    },
+    {
+      "file": "anim_shush1_loop.webm",
+      "state": "shush1",
+      "sha256": "ba7a3a8202e3a6f964d27ac66410dcc9c44feb9c3f5f8c6949a4b0b9b4e48c6a",
+      "reason": "ImageGen 쉿 신규 모션. 원본/재구성 모드에서 공통 사용."
     }
   ]
 }

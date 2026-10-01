@@ -142,5 +142,20 @@
       "6": 2,
       "7": 2
     }
+  },
+  "shush1": {
+    "sheet": "sprites/raw/shush1_imagegen_sheet.png",
+    "sha256": "728f322603a0366b8a87594e915a9b8fc5b5ce2d142629e6ad9451ac255b1279",
+    "name": "shush1_loop",
+    "holds": {
+      "0": 2,
+      "1": 2,
+      "2": 2,
+      "3": 4,
+      "4": 6,
+      "5": 4,
+      "6": 2,
+      "7": 2
+    }
   }
 }
