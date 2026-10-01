@@ -1,0 +1,81 @@
+{
+  "name": "sad1",
+  "base": "sprites/hd720/poses/root/idle_open_00.png",
+  "poses": {
+    "slump": "sprites/hd720/poses/root/sad1_slump_00.png"
+  },
+  "match_to_base": true,
+  "parts": {
+    "loop": [
+      {
+        "img": "slump"
+      },
+      {
+        "img": "slump",
+        "dy": 0.421875
+      },
+      {
+        "img": "slump",
+        "dy": 0.84375
+      },
+      {
+        "img": "slump",
+        "dy": 1.265625
+      },
+      {
+        "img": "slump",
+        "dy": 1.6875
+      },
+      {
+        "img": "slump",
+        "dy": 2.109375
+      },
+      {
+        "img": "slump",
+        "dy": 2.53125
+      },
+      {
+        "img": "slump",
+        "dy": 2.53125
+      },
+      {
+        "img": "slump",
+        "dy": 2.109375
+      },
+      {
+        "img": "slump",
+        "dy": 1.6875
+      },
+      {
+        "img": "slump",
+        "dy": 1.265625
+      },
+      {
+        "img": "slump",
+        "dy": 0.84375
+      },
+      {
+        "img": "slump",
+        "dy": 0.421875
+      },
+      {
+        "img": "slump"
+      },
+      {
+        "img": "slump",
+        "dy": 0.2109375
+      },
+      {
+        "img": "slump",
+        "dy": 0.421875
+      },
+      {
+        "img": "slump",
+        "dy": 0.2109375
+      },
+      {
+        "img": "slump"
+      }
+    ]
+  }
+}

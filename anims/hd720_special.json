@@ -1,0 +1,7327 @@
+{
+  "size": 720,
+  "clips": {
+    "doze1_loop": {
+      "frames": [
+        {
+          "source": "sprites/rebuilt/sheets/doze1_loop_00-01-02-03.png",
+          "sourceCell": 0,
+          "nativeSize": [
+            627,
+            627
+          ],
+          "sourceLimited": true,
+          "fallback512": false,
+          "nativeGreenRegion": null,
+          "frame": 0,
+          "scale512": 0.9775280898876404,
+          "dx512": -2,
+          "dy512": 8
+        },
+        {
+          "source": "sprites/rebuilt/sheets/doze1_loop_00-01-02-03.png",
+          "sourceCell": 1,
+          "nativeSize": [
+            627,
+            627
+          ],
+          "sourceLimited": true,
+          "fallback512": false,
+          "nativeGreenRegion": null,
+          "frame": 1,
+          "scale512": 0.9775280898876404,
+          "dx512": 15,
+          "dy512": 8
+        },
+        {
+          "source": "sprites/rebuilt/sheets/doze1_loop_00-01-02-03.png",
+          "sourceCell": 2,
+          "nativeSize": [
+            627,
+            627
+          ],
+          "sourceLimited": true,
+          "fallback512": false,
+          "nativeGreenRegion": null,
+          "frame": 2,
+          "scale512": 0.9560439560439561,
+          "dx512": 4,
+          "dy512": 40
+        },
+        {
+          "source": "sprites/rebuilt/sheets/doze1_loop_00-01-02-03.png",
+          "sourceCell": 3,
+          "nativeSize": [
+            627,
+            627
+          ],
+          "sourceLimited": true,
+          "fallback512": false,
+          "nativeGreenRegion": null,
+          "frame": 3,
+          "scale512": 0.9775280898876404,
+          "dx512": 15,
+          "dy512": 30
+        },
+        {
+          "source": "sprites/rebuilt/sheets/doze1_loop_04-05-06-07.png",
+          "sourceCell": 0,
+          "nativeSize": [
+            627,
+            627
+          ],
+          "sourceLimited": true,
+          "fallback512": false,
+          "nativeGreenRegion": null,
+          "frame": 4,
+          "scale512": 0.9560439560439561,
+          "dx512": 1,
+          "dy512": 28
+        },
+        {
+          "source": "sprites/rebuilt/sheets/doze1_loop_04-05-06-07.png",
+          "sourceCell": 1,
+          "nativeSize": [
+            627,
+            627
+          ],
+          "sourceLimited": true,
+          "fallback512": false,
+          "nativeGreenRegion": null,
+          "frame": 5,
+          "scale512": 0.9666666666666667,
+          "dx512": 21,
+          "dy512": 22
+        },
+        {
+          "source": "sprites/rebuilt/sheets/doze1_loop_04-05-06-07.png",
+          "sourceCell": 2,
+          "nativeSize": [
+            627,
+            627
+          ],
+          "sourceLimited": true,
+          "fallback512": false,
+          "nativeGreenRegion": null,
+          "frame": 6,
+          "scale512": 0.9456521739130435,
+          "dx512": 5,
+          "dy512": 44
+        },
+        {
+          "source": "sprites/rebuilt/sheets/doze1_loop_04-05-06-07.png",
+          "sourceCell": 3,
+          "nativeSize": [
+            627,
+            627
+          ],
+          "sourceLimited": true,
+          "fallback512": false,
+          "nativeGreenRegion": null,
+          "frame": 7,
+          "scale512": 0.9354838709677419,
+          "dx512": 34,
+          "dy512": 50
+        },
+        {
+          "source": "sprites/rebuilt/sheets/doze1_loop_08-09-10-11.png",
+          "sourceCell": 0,
+          "nativeSize": [
+            627,
+            627
+          ],
+          "sourceLimited": true,
+          "fallback512": false,
+          "nativeGreenRegion": null,
+          "frame": 8,
+          "scale512": 0.9456521739130435,
+          "dx512": -18,
+          "dy512": 32
+        },
+        {
+          "source": "sprites/rebuilt/sheets/doze1_loop_08-09-10-11.png",
+          "sourceCell": 1,
+          "nativeSize": [
+            627,
+            627
+          ],
+          "sourceLimited": true,
+          "fallback512": false,
+          "nativeGreenRegion": null,
+          "frame": 9,
+          "scale512": 0.9456521739130435,
+          "dx512": 46,
+          "dy512": 32
+        },
+        {
+          "source": "sprites/rebuilt/sheets/doze1_loop_08-09-10-11.png",
+          "sourceCell": 2,
+          "nativeSize": [
+            627,
+            627
+          ],
+          "sourceLimited": true,
+          "fallback512": false,
+          "nativeGreenRegion": null,
+          "frame": 10,
+          "scale512": 0.9354838709677419,
+          "dx512": -14,
+          "dy512": 49
+        },
+        {
+          "source": "sprites/rebuilt/sheets/doze1_loop_08-09-10-11.png",
+          "sourceCell": 3,
+          "nativeSize": [
+            627,
+            627
+          ],
+          "sourceLimited": true,
+          "fallback512": false,
+          "nativeGreenRegion": null,
+          "frame": 11,
+          "scale512": 0.9354838709677419,
+          "dx512": 45,
+          "dy512": 49
+        },
+        {
+          "source": "sprites/rebuilt/sheets/doze1_loop_00-01-02-03.png",
+          "sourceCell": 0,
+          "nativeSize": [
+            627,
+            627
+          ],
+          "sourceLimited": true,
+          "fallback512": false,
+          "nativeGreenRegion": null,
+          "frame": 12,
+          "scale512": 0.9775280898876404,
+          "dx512": -2,
+          "dy512": 8
+        },
+        {
+          "source": "sprites/rebuilt/sheets/doze1_loop_00-01-02-03.png",
+          "sourceCell": 0,
+          "nativeSize": [
+            627,
+            627
+          ],
+          "sourceLimited": true,
+          "fallback512": false,
+          "nativeGreenRegion": null,
+          "frame": 13,
+          "scale512": 0.9775280898876404,
+          "dx512": -2,
+          "dy512": 8
+        }
+      ],
+      "exactAnchors": {},
+      "rate": 0.7,
+      "count": 14,
+      "fps": 10,
+      "holds": {},
+      "repeats": [],
+      "size": [
+        720,
+        720
+      ],
+      "framesTouchingCanvas": [],
+      "frameHashes": [
+        {
+          "frame": 0,
+          "sha256": "45fe0c661db4dc0cb4dcf440e11aff55945625ec56886d25d04d601024de5827",
+          "bbox": [
+            175,
+            57,
+            541,
+            701
+          ]
+        },
+        {
+          "frame": 1,
+          "sha256": "30a76e5310bfdf7e167c25737353a1aa5d5cd2cfb32316179dfeb5757efadb50",
+          "bbox": [
+            177,
+            58,
+            541,
+            701
+          ]
+        },
+        {
+          "frame": 2,
+          "sha256": "8997831b2bf1696112dae4eee4767a370fe01e017d70e4820aeea9b46a375067",
+          "bbox": [
+            179,
+            81,
+            536,
+            699
+          ]
+        },
+        {
+          "frame": 3,
+          "sha256": "309f7c94c166748106c80e514eece7a3ac0930cf486ebba64b3f1524c163a4c0",
+          "bbox": [
+            177,
+            75,
+            541,
+            700
+          ]
+        },
+        {
+          "frame": 4,
+          "sha256": "ce808bb2e757930643d69922d21634287be3b20f2edcdd29d6d14f368b993505",
+          "bbox": [
+            182,
+            84,
+            536,
+            701
+          ]
+        },
+        {
+          "frame": 5,
+          "sha256": "664422098b3d68d8fadab7a80df6983c525e68410fa15b374064ac3b19f512df",
+          "bbox": [
+            192,
+            72,
+            554,
+            701
+          ]
+        },
+        {
+          "frame": 6,
+          "sha256": "90b8aa9378a4b0e903af6594e56ab2418559cde3427bd5c96f06568bf1820549",
+          "bbox": [
+            159,
+            69,
+            566,
+            702
+          ]
+        },
+        {
+          "frame": 7,
+          "sha256": "4bc792d6d6c491ac9665e34fba1f961d6647c0b273d8f5ccd12c4dc2b4dd2661",
+          "bbox": [
+            177,
+            79,
+            547,
+            702
+          ]
+        },
+        {
+          "frame": 8,
+          "sha256": "265d398e84cd0478ced68297851fa30f791924515fa3c67af8ce7045c681f457",
+          "bbox": [
+            172,
+            74,
+            553,
+            702
+          ]
+        },
+        {
+          "frame": 9,
+          "sha256": "4f662a2a275ff31cfe66e88d69743a978aae32cf2681ed98deefdbde61f5ec98",
+          "bbox": [
+            205,
+            74,
+            542,
+            702
+          ]
+        },
+        {
+          "frame": 10,
+          "sha256": "fe0fcb0da3aa46f637eef936dfc64726d6a46eb88bdb62a767a6590bf8bf122d",
+          "bbox": [
+            174,
+            74,
+            543,
+            704
+          ]
+        },
+        {
+          "frame": 11,
+          "sha256": "5f812cb371bb3995b30c095fd698e6ff8740b4b4663329786f3b9900af67e38d",
+          "bbox": [
+            183,
+            74,
+            543,
+            704
+          ]
+        },
+        {
+          "frame": 12,
+          "sha256": "45fe0c661db4dc0cb4dcf440e11aff55945625ec56886d25d04d601024de5827",
+          "bbox": [
+            175,
+            57,
+            541,
+            701
+          ]
+        },
+        {
+          "frame": 13,
+          "sha256": "45fe0c661db4dc0cb4dcf440e11aff55945625ec56886d25d04d601024de5827",
+          "bbox": [
+            175,
+            57,
+            541,
+            701
+          ]
+        }
+      ],
+      "ticks": 14,
+      "expectedDuration": 1.4,
+      "review": {
+        "staticVisual": true,
+        "runtime": false,
+        "evidence": [
+          "sprites/hd720/qa/doze1_loop_contact.png",
+          "sprites/hd720/qa/special_quality_compare.png"
+        ]
+      },
+      "video": "sprites/hd720/videos/anim_doze1_loop.webm",
+      "videoSHA256": "892290b2f2aa4b5b70f41610375ecab647bce71942afc1b82165e3b0add23e0b",
+      "bytes": 277513,
+      "duration": 1.4,
+      "decodedAlpha": {
+        "decoder": "libvpx-vp9",
+        "frames": 14,
+        "allCornersTransparent": true,
+        "opaqueForegroundEveryFrame": true
+      },
+      "encoding": {
+        "crf": 24,
+        "pixFmt": "yuva420p"
+      },
+      "previous512Video": {
+        "path": "sprites/rebuilt/videos/anim_doze1_loop.webm",
+        "bytes": 186180,
+        "sha256": "15739953100d64bc23f75c54a609b2ecd181c66ad891d7dfeb8cd50fa21fdef1"
+      },
+      "exactAnchorChecks": []
+    },
+    "lemon1_loop": {
+      "frames": [
+        {
+          "source": "sprites/rebuilt/sheets/lemon1_loop_00-01-02-03.png",
+          "sourceCell": 0,
+          "nativeSize": [
+            627,
+            627
+          ],
+          "sourceLimited": true,
+          "fallback512": false,
+          "nativeGreenRegion": null,
+          "frame": 0,
+          "scale512": 0.9804772234273319,
+          "dx512": -6,
+          "dy512": 9
+        },
+        {
+          "source": "sprites/rebuilt/sheets/lemon1_loop_00-01-02-03.png",
+          "sourceCell": 1,
+          "nativeSize": [
+            627,
+            627
+          ],
+          "sourceLimited": true,
+          "fallback512": false,
+          "nativeGreenRegion": null,
+          "frame": 1,
+          "scale512": 0.9804772234273319,
+          "dx512": 15,
+          "dy512": 9
+        },
+        {
+          "source": "sprites/rebuilt/sheets/lemon1_loop_00-01-02-03.png",
+          "sourceCell": 2,
+          "nativeSize": [
+            627,
+            627
+          ],
+          "sourceLimited": true,
+          "fallback512": false,
+          "nativeGreenRegion": null,
+          "frame": 2,
+          "scale512": 0.9783549783549783,
+          "dx512": -5,
+          "dy512": 21
+        },
+        {
+          "source": "sprites/rebuilt/sheets/lemon1_loop_00-01-02-03.png",
+          "sourceCell": 3,
+          "nativeSize": [
+            627,
+            627
+          ],
+          "sourceLimited": true,
+          "fallback512": false,
+          "nativeGreenRegion": null,
+          "frame": 3,
+          "scale512": 0.9783549783549783,
+          "dx512": 15,
+          "dy512": 21
+        },
+        {
+          "source": "sprites/rebuilt/sheets/lemon1_loop_04-05-06-07.png",
+          "sourceCell": 0,
+          "nativeSize": [
+            627,
+            627
+          ],
+          "sourceLimited": true,
+          "fallback512": false,
+          "nativeGreenRegion": null,
+          "frame": 4,
+          "scale512": 0.9720430107526882,
+          "dx512": -18,
+          "dy512": 17
+        },
+        {
+          "source": "sprites/rebuilt/sheets/lemon1_loop_04-05-06-07.png",
+          "sourceCell": 1,
+          "nativeSize": [
+            627,
+            627
+          ],
+          "sourceLimited": true,
+          "fallback512": false,
+          "nativeGreenRegion": null,
+          "frame": 5,
+          "scale512": 0.9720430107526882,
+          "dx512": 33,
+          "dy512": 17
+        },
+        {
+          "source": "sprites/rebuilt/sheets/lemon1_loop_04-05-06-07.png",
+          "sourceCell": 2,
+          "nativeSize": [
+            627,
+            627
+          ],
+          "sourceLimited": true,
+          "fallback512": false,
+          "nativeGreenRegion": null,
+          "frame": 6,
+          "scale512": 0.9596602972399151,
+          "dx512": -17,
+          "dy512": 33
+        },
+        {
+          "source": "sprites/rebuilt/sheets/lemon1_loop_04-05-06-07.png",
+          "sourceCell": 3,
+          "nativeSize": [
+            627,
+            627
+          ],
+          "sourceLimited": true,
+          "fallback512": false,
+          "nativeGreenRegion": null,
+          "frame": 7,
+          "scale512": 0.9596602972399151,
+          "dx512": 36,
+          "dy512": 33
+        },
+        {
+          "source": "sprites/rebuilt/sheets/lemon1_loop_08-09-10-11.png",
+          "sourceCell": 0,
+          "nativeSize": [
+            627,
+            627
+          ],
+          "sourceLimited": true,
+          "fallback512": false,
+          "nativeGreenRegion": null,
+          "frame": 8,
+          "scale512": 0.9658119658119658,
+          "dx512": -21,
+          "dy512": 20
+        },
+        {
+          "source": "sprites/rebuilt/sheets/lemon1_loop_08-09-10-11.png",
+          "sourceCell": 1,
+          "nativeSize": [
+            627,
+            627
+          ],
+          "sourceLimited": true,
+          "fallback512": false,
+          "nativeGreenRegion": null,
+          "frame": 9,
+          "scale512": 0.9637526652452025,
+          "dx512": 36,
+          "dy512": 21
+        },
+        {
+          "source": "sprites/rebuilt/sheets/lemon1_loop_08-09-10-11.png",
+          "sourceCell": 2,
+          "nativeSize": [
+            627,
+            627
+          ],
+          "sourceLimited": true,
+          "fallback512": false,
+          "nativeGreenRegion": null,
+          "frame": 10,
+          "scale512": 0.9515789473684211,
+          "dx512": -15,
+          "dy512": 34
+        },
+        {
+          "source": "sprites/rebuilt/sheets/lemon1_loop_08-09-10-11.png",
+          "sourceCell": 3,
+          "nativeSize": [
+            627,
+            627
+          ],
+          "sourceLimited": true,
+          "fallback512": false,
+          "nativeGreenRegion": null,
+          "frame": 11,
+          "scale512": 0.9515789473684211,
+          "dx512": 38,
+          "dy512": 34
+        },
+        {
+          "source": "sprites/rebuilt/sheets/lemon1_loop_12-13-14-15.png",
+          "sourceCell": 0,
+          "nativeSize": [
+            627,
+            627
+          ],
+          "sourceLimited": true,
+          "fallback512": false,
+          "nativeGreenRegion": null,
+          "frame": 12,
+          "scale512": 0.9637526652452025,
+          "dx512": -17,
+          "dy512": 20
+        },
+        {
+          "source": "sprites/rebuilt/sheets/lemon1_loop_12-13-14-15.png",
+          "sourceCell": 1,
+          "nativeSize": [
+            627,
+            627
+          ],
+          "sourceLimited": true,
+          "fallback512": false,
+          "nativeGreenRegion": null,
+          "frame": 13,
+          "scale512": 0.9637526652452025,
+          "dx512": 37,
+          "dy512": 20
+        },
+        {
+          "source": "sprites/rebuilt/sheets/lemon1_loop_12-13-14-15.png",
+          "sourceCell": 2,
+          "nativeSize": [
+            627,
+            627
+          ],
+          "sourceLimited": true,
+          "fallback512": false,
+          "nativeGreenRegion": null,
+          "frame": 14,
+          "scale512": 0.9576271186440678,
+          "dx512": -15,
+          "dy512": 34
+        },
+        {
+          "source": "sprites/rebuilt/sheets/lemon1_loop_12-13-14-15.png",
+          "sourceCell": 3,
+          "nativeSize": [
+            627,
+            627
+          ],
+          "sourceLimited": true,
+          "fallback512": false,
+          "nativeGreenRegion": null,
+          "frame": 15,
+          "scale512": 0.9576271186440678,
+          "dx512": 39,
+          "dy512": 34
+        }
+      ],
+      "exactAnchors": {
+        "0": "idle1_loop:0",
+        "15": "idle1_loop:0"
+      },
+      "rate": 0.7,
+      "count": 16,
+      "fps": 10,
+      "holds": {},
+      "repeats": [],
+      "size": [
+        720,
+        720
+      ],
+      "framesTouchingCanvas": [],
+      "frameHashes": [
+        {
+          "frame": 0,
+          "sha256": "9ec4a182aef2d98aa0a2e28c7ac01036ea56a3d76af144c9dc6ad2c16571f645",
+          "bbox": [
+            189,
+            66,
+            526,
+            701
+          ]
+        },
+        {
+          "frame": 1,
+          "sha256": "8f900250beee7b54276778be14f347e93b98273cf188c5f3227895662548b1c4",
+          "bbox": [
+            209,
+            58,
+            510,
+            701
+          ]
+        },
+        {
+          "frame": 2,
+          "sha256": "cf6d15bba9e14f58bcb7cc2d56bfd0fbfc27e4c1b6b9e20049d4f0b94c1ce24b",
+          "bbox": [
+            155,
+            59,
+            510,
+            701
+          ]
+        },
+        {
+          "frame": 3,
+          "sha256": "e58d63f5ae12daf20721726a824b167a22414a59a83dec24e61f9eab56965800",
+          "bbox": [
+            158,
+            59,
+            510,
+            701
+          ]
+        },
+        {
+          "frame": 4,
+          "sha256": "4985281332d31603baf4cd7b1d353767ebc7e73446089f7e067dcf7f9ac81793",
+          "bbox": [
+            208,
+            59,
+            519,
+            700
+          ]
+        },
+        {
+          "frame": 5,
+          "sha256": "01bcb2247d687c56df88e21642c880af4b8e075c1b27b0ba9bb29b1a7b2bf93d",
+          "bbox": [
+            209,
+            59,
+            519,
+            700
+          ]
+        },
+        {
+          "frame": 6,
+          "sha256": "5d15968ad67746a232f05bf50b5ff8ced292b907cfabb2c942f8b957ed449a81",
+          "bbox": [
+            205,
+            62,
+            513,
+            703
+          ]
+        },
+        {
+          "frame": 7,
+          "sha256": "f81a3aaad9276a03b85935c069d0ffa69e2a0004bbf56a64f7e3096a135226c5",
+          "bbox": [
+            118,
+            62,
+            515,
+            702
+          ]
+        },
+        {
+          "frame": 8,
+          "sha256": "4caf0253731b8c5d5a03dc6f7cfcb26879252eafffe2a9aefc54a7275c84e866",
+          "bbox": [
+            151,
+            60,
+            517,
+            701
+          ]
+        },
+        {
+          "frame": 9,
+          "sha256": "3984fc35f10eb1549e6feefc7eef98fde53ff618f5b7944feac1022c5ead4d1c",
+          "bbox": [
+            199,
+            61,
+            548,
+            702
+          ]
+        },
+        {
+          "frame": 10,
+          "sha256": "27796c23a114c6562412d17b15a1b9cf03b2970bbe5e42f3d08744cf1b2ca028",
+          "bbox": [
+            199,
+            60,
+            524,
+            701
+          ]
+        },
+        {
+          "frame": 11,
+          "sha256": "a6bbf3b06cf23b579606d1b3415bd9a1fb02091d09e142679377fa88bc18fdce",
+          "bbox": [
+            199,
+            60,
+            525,
+            701
+          ]
+        },
+        {
+          "frame": 12,
+          "sha256": "2258c38f6696a806688a31f6a02e9a22f0e780a4a1bc042831063cb6e5151cbc",
+          "bbox": [
+            204,
+            59,
+            514,
+            701
+          ]
+        },
+        {
+          "frame": 13,
+          "sha256": "9670abd517d6dc0a1288a41636856694309166362f0d407549c236720321ecbe",
+          "bbox": [
+            208,
+            60,
+            515,
+            701
+          ]
+        },
+        {
+          "frame": 14,
+          "sha256": "a074d8a83f959462ade6d82b4039f112d9340893adb368593338c92aeab8fe36",
+          "bbox": [
+            187,
+            60,
+            529,
+            701
+          ]
+        },
+        {
+          "frame": 15,
+          "sha256": "9ec4a182aef2d98aa0a2e28c7ac01036ea56a3d76af144c9dc6ad2c16571f645",
+          "bbox": [
+            189,
+            66,
+            526,
+            701
+          ]
+        }
+      ],
+      "ticks": 16,
+      "expectedDuration": 1.6,
+      "review": {
+        "staticVisual": true,
+        "runtime": false,
+        "evidence": [
+          "sprites/hd720/qa/lemon1_loop_contact.png",
+          "sprites/hd720/qa/special_quality_compare.png"
+        ]
+      },
+      "video": "sprites/hd720/videos/anim_lemon1_loop.webm",
+      "videoSHA256": "dfce09a75b75d455fc6ecf0bee7055f7deb6df53e2e83178327fbfd8169935c6",
+      "bytes": 357996,
+      "duration": 1.6,
+      "decodedAlpha": {
+        "decoder": "libvpx-vp9",
+        "frames": 16,
+        "allCornersTransparent": true,
+        "opaqueForegroundEveryFrame": true
+      },
+      "encoding": {
+        "crf": 24,
+        "pixFmt": "yuva420p"
+      },
+      "previous512Video": {
+        "path": "sprites/rebuilt/videos/anim_lemon1_loop.webm",
+        "bytes": 232545,
+        "sha256": "f1e0d718a16acd7e3a24769f6a7abdd2ff0bbc602abbe67b8dd48477c8b3e23b"
+      },
+      "exactAnchorChecks": [
+        {
+          "frame": 0,
+          "reference": "idle1_loop:0",
+          "byteExact": true
+        },
+        {
+          "frame": 15,
+          "reference": "idle1_loop:0",
+          "byteExact": true
+        }
+      ]
+    },
+    "chem1_loop": {
+      "frames": [
+        {
+          "source": "sprites/rebuilt/sheets/chem1_loop_00-01-02-03.png",
+          "sourceCell": 0,
+          "nativeSize": [
+            627,
+            627
+          ],
+          "sourceLimited": true,
+          "fallback512": false,
+          "nativeGreenRegion": null,
+          "frame": 0,
+          "scale512": 1.0066815144766148,
+          "dx512": -3,
+          "dy512": 4
+        },
+        {
+          "source": "sprites/rebuilt/sheets/chem1_loop_00-01-02-03.png",
+          "sourceCell": 1,
+          "nativeSize": [
+            627,
+            627
+          ],
+          "sourceLimited": true,
+          "fallback512": false,
+          "nativeGreenRegion": null,
+          "frame": 1,
+          "scale512": 1.0066815144766148,
+          "dx512": 7,
+          "dy512": 4
+        },
+        {
+          "source": "sprites/rebuilt/sheets/chem1_loop_00-01-02-03.png",
+          "sourceCell": 2,
+          "nativeSize": [
+            627,
+            627
+          ],
+          "sourceLimited": true,
+          "fallback512": false,
+          "nativeGreenRegion": null,
+          "frame": 2,
+          "scale512": 1.0022172949002217,
+          "dx512": -4,
+          "dy512": 22
+        },
+        {
+          "source": "sprites/rebuilt/sheets/chem1_loop_00-01-02-03.png",
+          "sourceCell": 3,
+          "nativeSize": [
+            627,
+            627
+          ],
+          "sourceLimited": true,
+          "fallback512": false,
+          "nativeGreenRegion": null,
+          "frame": 3,
+          "scale512": 1.0022172949002217,
+          "dx512": 4,
+          "dy512": 22
+        },
+        {
+          "source": "sprites/rebuilt/sheets/chem1_loop_04-05-06-07.png",
+          "sourceCell": 0,
+          "nativeSize": [
+            627,
+            627
+          ],
+          "sourceLimited": true,
+          "fallback512": false,
+          "nativeGreenRegion": null,
+          "frame": 4,
+          "scale512": 1.0044444444444445,
+          "dx512": -4,
+          "dy512": 4
+        },
+        {
+          "source": "sprites/rebuilt/sheets/chem1_loop_04-05-06-07.png",
+          "sourceCell": 1,
+          "nativeSize": [
+            627,
+            627
+          ],
+          "sourceLimited": true,
+          "fallback512": false,
+          "nativeGreenRegion": null,
+          "frame": 5,
+          "scale512": 1.0044444444444445,
+          "dx512": 8,
+          "dy512": 4
+        },
+        {
+          "source": "sprites/rebuilt/sheets/chem1_loop_04-05-06-07.png",
+          "sourceCell": 2,
+          "nativeSize": [
+            627,
+            627
+          ],
+          "sourceLimited": true,
+          "fallback512": false,
+          "nativeGreenRegion": null,
+          "frame": 6,
+          "scale512": 1.0,
+          "dx512": -2,
+          "dy512": 24
+        },
+        {
+          "source": "sprites/rebuilt/sheets/chem1_loop_04-05-06-07.png",
+          "sourceCell": 3,
+          "nativeSize": [
+            627,
+            627
+          ],
+          "sourceLimited": true,
+          "fallback512": false,
+          "nativeGreenRegion": null,
+          "frame": 7,
+          "scale512": 0.9977924944812362,
+          "dx512": 10,
+          "dy512": 24
+        },
+        {
+          "source": "sprites/rebuilt/sheets/chem1_loop_08-09-10-11.png",
+          "sourceCell": 0,
+          "nativeSize": [
+            627,
+            627
+          ],
+          "sourceLimited": true,
+          "fallback512": false,
+          "nativeGreenRegion": null,
+          "frame": 8,
+          "scale512": 0.9890590809628009,
+          "dx512": -17,
+          "dy512": 9
+        },
+        {
+          "source": "sprites/rebuilt/sheets/chem1_loop_08-09-10-11.png",
+          "sourceCell": 1,
+          "nativeSize": [
+            627,
+            627
+          ],
+          "sourceLimited": true,
+          "fallback512": false,
+          "nativeGreenRegion": null,
+          "frame": 9,
+          "scale512": 0.9934065934065934,
+          "dx512": 20,
+          "dy512": 6
+        },
+        {
+          "source": "sprites/rebuilt/raw_poses/chem1_loop_opposite_fixed.png",
+          "nativeSize": [
+            1254,
+            1254
+          ],
+          "sourceLimited": false,
+          "fallback512": false,
+          "frame": 10,
+          "scale512": 0.9868995633187773,
+          "dx512": -8,
+          "dy512": 27
+        },
+        {
+          "source": "sprites/rebuilt/sheets/chem1_loop_08-09-10-11.png",
+          "sourceCell": 3,
+          "nativeSize": [
+            627,
+            627
+          ],
+          "sourceLimited": true,
+          "fallback512": false,
+          "nativeGreenRegion": null,
+          "frame": 11,
+          "scale512": 0.9868995633187773,
+          "dx512": 23,
+          "dy512": 27
+        },
+        {
+          "source": "sprites/rebuilt/sheets/chem1_loop_12-13-14-15.png",
+          "sourceCell": 0,
+          "nativeSize": [
+            627,
+            627
+          ],
+          "sourceLimited": true,
+          "fallback512": false,
+          "nativeGreenRegion": null,
+          "frame": 12,
+          "scale512": 0.9495798319327731,
+          "dx512": -8,
+          "dy512": 25
+        },
+        {
+          "source": "sprites/rebuilt/raw_poses/chem1_loop_swirl_opposite_fixed.png",
+          "nativeSize": [
+            1254,
+            1254
+          ],
+          "sourceLimited": false,
+          "fallback512": false,
+          "frame": 13,
+          "scale512": 0.9495798319327731,
+          "dx512": 25,
+          "dy512": 25
+        },
+        {
+          "source": "sprites/rebuilt/sheets/chem1_loop_12-13-14-15.png",
+          "sourceCell": 2,
+          "nativeSize": [
+            627,
+            627
+          ],
+          "sourceLimited": true,
+          "fallback512": false,
+          "nativeGreenRegion": null,
+          "frame": 14,
+          "scale512": 0.9436325678496869,
+          "dx512": -5,
+          "dy512": 37
+        },
+        {
+          "source": "sprites/rebuilt/sheets/chem1_loop_12-13-14-15.png",
+          "sourceCell": 3,
+          "nativeSize": [
+            627,
+            627
+          ],
+          "sourceLimited": true,
+          "fallback512": false,
+          "nativeGreenRegion": null,
+          "frame": 15,
+          "scale512": 0.9436325678496869,
+          "dx512": 30,
+          "dy512": 37
+        },
+        {
+          "source": "sprites/rebuilt/sheets/chem1_loop_16-17-18.png",
+          "sourceCell": 0,
+          "nativeSize": [
+            627,
+            627
+          ],
+          "sourceLimited": true,
+          "fallback512": false,
+          "nativeGreenRegion": null,
+          "frame": 16,
+          "scale512": 0.9617021276595744,
+          "dx512": 0,
+          "dy512": 20
+        },
+        {
+          "source": "sprites/rebuilt/sheets/chem1_loop_16-17-18.png",
+          "sourceCell": 1,
+          "nativeSize": [
+            627,
+            627
+          ],
+          "sourceLimited": true,
+          "fallback512": false,
+          "nativeGreenRegion": null,
+          "frame": 17,
+          "scale512": 0.9617021276595744,
+          "dx512": 9,
+          "dy512": 20
+        },
+        {
+          "source": "sprites/rebuilt/sheets/chem1_loop_00-01-02-03.png",
+          "sourceCell": 0,
+          "nativeSize": [
+            627,
+            627
+          ],
+          "sourceLimited": true,
+          "fallback512": false,
+          "nativeGreenRegion": null,
+          "frame": 18,
+          "scale512": 0.9596602972399151,
+          "dx512": -4,
+          "dy512": 27
+        }
+      ],
+      "exactAnchors": {
+        "18": "chem1_loop:0"
+      },
+      "rate": 0.7,
+      "count": 19,
+      "fps": 10,
+      "holds": {},
+      "repeats": [],
+      "size": [
+        720,
+        720
+      ],
+      "framesTouchingCanvas": [],
+      "frameHashes": [
+        {
+          "frame": 0,
+          "sha256": "91b9248f44b45f1ec36c2848a9b75a8f2884da43afc66962b0c476773cdf5d14",
+          "bbox": [
+            214,
+            61,
+            569,
+            701
+          ]
+        },
+        {
+          "frame": 1,
+          "sha256": "7b0bb204023437550844d2895d81f320ac014e745dad2fd86bdd9653fdf0b1a1",
+          "bbox": [
+            210,
+            61,
+            511,
+            701
+          ]
+        },
+        {
+          "frame": 2,
+          "sha256": "16909b274de17a6a7c0d95dcaf0b0bafdf95ef09a92089188435a67f7af6cd9e",
+          "bbox": [
+            211,
+            62,
+            526,
+            702
+          ]
+        },
+        {
+          "frame": 3,
+          "sha256": "e73f14827712e5e133e26db72e82b621c7b59d0c7d91fcd037c846c27109bf48",
+          "bbox": [
+            209,
+            62,
+            520,
+            702
+          ]
+        },
+        {
+          "frame": 4,
+          "sha256": "d24621d3f8b645842deabeb53dca2ec8aba9117f46c90eaa365096b102efeb07",
+          "bbox": [
+            210,
+            60,
+            513,
+            702
+          ]
+        },
+        {
+          "frame": 5,
+          "sha256": "6642d9c440d0715ca0ed852b17a26cefa8f7fcaee69da600135d4d025363a5df",
+          "bbox": [
+            212,
+            60,
+            505,
+            703
+          ]
+        },
+        {
+          "frame": 6,
+          "sha256": "1ecd185ee056883aa17d575d6fa4fa0707cf683ea36ff4194b8fa0e272898dfa",
+          "bbox": [
+            202,
+            62,
+            515,
+            704
+          ]
+        },
+        {
+          "frame": 7,
+          "sha256": "0a64dd9303da06a70173c2b360eb44001310f9ab6859aa384092edadff251b95",
+          "bbox": [
+            201,
+            61,
+            516,
+            702
+          ]
+        },
+        {
+          "frame": 8,
+          "sha256": "3c68adce990ecefdc86a06f1b11b60bc0efc76a833f988f4f2af2fede0ddfe19",
+          "bbox": [
+            196,
+            64,
+            520,
+            704
+          ]
+        },
+        {
+          "frame": 9,
+          "sha256": "6bcc5b5285f71be32570264ed62b1621467f8cb75149edf75b40f28459e89136",
+          "bbox": [
+            177,
+            60,
+            527,
+            702
+          ]
+        },
+        {
+          "frame": 10,
+          "sha256": "8b2569a826f6dd1edef89bdd006fcbd7f94e56f7986d9c6b9ad430d2e9c6f7da",
+          "bbox": [
+            175,
+            60,
+            525,
+            700
+          ]
+        },
+        {
+          "frame": 11,
+          "sha256": "8c3c9c49715578a8d72c6c844fc1e948892f4c493456951d4a120c9a4a92c2f9",
+          "bbox": [
+            181,
+            59,
+            528,
+            701
+          ]
+        },
+        {
+          "frame": 12,
+          "sha256": "f7e4607b1b7d28e98099638b140b2c601dcba3bf3285ec4e55d01b65fa2cb843",
+          "bbox": [
+            139,
+            60,
+            590,
+            701
+          ]
+        },
+        {
+          "frame": 13,
+          "sha256": "a501a617f7389271822503072fb7ab969888fc0a3a70a5b0a418ba06c97eee2e",
+          "bbox": [
+            107,
+            60,
+            564,
+            701
+          ]
+        },
+        {
+          "frame": 14,
+          "sha256": "a02451e7a7c5a77d7eb095e9dc120c22d68c3f3df1003588a2f0fdf68ed2854a",
+          "bbox": [
+            169,
+            60,
+            532,
+            700
+          ]
+        },
+        {
+          "frame": 15,
+          "sha256": "a81ee9a368162db2290ad64144083bfc81d91b468551f26857d4620ed3faba21",
+          "bbox": [
+            173,
+            59,
+            531,
+            700
+          ]
+        },
+        {
+          "frame": 16,
+          "sha256": "f9fa7f37ba82c6cff516a304866521a82fe6784fab87530eca25f0d117126322",
+          "bbox": [
+            186,
+            61,
+            525,
+            702
+          ]
+        },
+        {
+          "frame": 17,
+          "sha256": "662c2b2f131878c3f206c22ccd8fc10a810590b975d246448ab95fed4802b3eb",
+          "bbox": [
+            205,
+            61,
+            553,
+            702
+          ]
+        },
+        {
+          "frame": 18,
+          "sha256": "91b9248f44b45f1ec36c2848a9b75a8f2884da43afc66962b0c476773cdf5d14",
+          "bbox": [
+            214,
+            61,
+            569,
+            701
+          ]
+        }
+      ],
+      "ticks": 19,
+      "expectedDuration": 1.9,
+      "review": {
+        "staticVisual": true,
+        "runtime": false,
+        "evidence": [
+          "sprites/hd720/qa/chem1_loop_contact.png",
+          "sprites/hd720/qa/special_quality_compare.png"
+        ]
+      },
+      "video": "sprites/hd720/videos/anim_chem1_loop.webm",
+      "videoSHA256": "5d96b24e5f8c367f3425525f1a7df6c27d4f8e5dbb2cfe80906659b866c4700c",
+      "bytes": 469757,
+      "duration": 1.9,
+      "decodedAlpha": {
+        "decoder": "libvpx-vp9",
+        "frames": 19,
+        "allCornersTransparent": true,
+        "opaqueForegroundEveryFrame": true
+      },
+      "encoding": {
+        "crf": 24,
+        "pixFmt": "yuva420p"
+      },
+      "previous512Video": {
+        "path": "sprites/rebuilt/videos/anim_chem1_loop.webm",
+        "bytes": 295768,
+        "sha256": "a6fc82ef819e239102126bd0aa165ef1d28b19d9977136944d97a5e68b71b49b"
+      },
+      "exactAnchorChecks": [
+        {
+          "frame": 18,
+          "reference": "chem1_loop:0",
+          "byteExact": true
+        }
+      ]
+    },
+    "chem1_start": {
+      "frames": [
+        {
+          "source": "sprites/rebuilt/sheets/chem1_start_00-01-02-03.png",
+          "sourceCell": 0,
+          "nativeSize": [
+            627,
+            627
+          ],
+          "sourceLimited": true,
+          "fallback512": false,
+          "nativeGreenRegion": null,
+          "frame": 0,
+          "scale512": 0.9741379310344828,
+          "dx512": -17,
+          "dy512": 10
+        },
+        {
+          "source": "sprites/rebuilt/sheets/chem1_start_00-01-02-03.png",
+          "sourceCell": 1,
+          "nativeSize": [
+            627,
+            627
+          ],
+          "sourceLimited": true,
+          "fallback512": false,
+          "nativeGreenRegion": null,
+          "frame": 1,
+          "scale512": 0.9720430107526882,
+          "dx512": 14,
+          "dy512": 11
+        },
+        {
+          "source": "sprites/rebuilt/sheets/chem1_start_00-01-02-03.png",
+          "sourceCell": 2,
+          "nativeSize": [
+            627,
+            627
+          ],
+          "sourceLimited": true,
+          "fallback512": false,
+          "nativeGreenRegion": null,
+          "frame": 2,
+          "scale512": 0.9720430107526882,
+          "dx512": -4,
+          "dy512": 30
+        },
+        {
+          "source": "sprites/rebuilt/sheets/chem1_start_00-01-02-03.png",
+          "sourceCell": 3,
+          "nativeSize": [
+            627,
+            627
+          ],
+          "sourceLimited": true,
+          "fallback512": false,
+          "nativeGreenRegion": null,
+          "frame": 3,
+          "scale512": 0.9741379310344828,
+          "dx512": 16,
+          "dy512": 29
+        },
+        {
+          "source": "sprites/rebuilt/sheets/chem1_start_04-05-06-07.png",
+          "sourceCell": 0,
+          "nativeSize": [
+            627,
+            627
+          ],
+          "sourceLimited": true,
+          "fallback512": false,
+          "nativeGreenRegion": null,
+          "frame": 4,
+          "scale512": 0.9658119658119658,
+          "dx512": 1,
+          "dy512": 23
+        },
+        {
+          "source": "sprites/rebuilt/sheets/chem1_start_04-05-06-07.png",
+          "sourceCell": 1,
+          "nativeSize": [
+            627,
+            627
+          ],
+          "sourceLimited": true,
+          "fallback512": false,
+          "nativeGreenRegion": null,
+          "frame": 5,
+          "scale512": 0.9617021276595744,
+          "dx512": 14,
+          "dy512": 25
+        },
+        {
+          "source": "sprites/rebuilt/sheets/chem1_start_04-05-06-07.png",
+          "sourceCell": 2,
+          "nativeSize": [
+            627,
+            627
+          ],
+          "sourceLimited": true,
+          "fallback512": false,
+          "nativeGreenRegion": null,
+          "frame": 6,
+          "scale512": 0.9658119658119658,
+          "dx512": 0,
+          "dy512": 34
+        },
+        {
+          "source": "sprites/rebuilt/sheets/chem1_start_04-05-06-07.png",
+          "sourceCell": 3,
+          "nativeSize": [
+            627,
+            627
+          ],
+          "sourceLimited": true,
+          "fallback512": false,
+          "nativeGreenRegion": null,
+          "frame": 7,
+          "scale512": 0.9658119658119658,
+          "dx512": 16,
+          "dy512": 34
+        },
+        {
+          "source": "sprites/rebuilt/sheets/chem1_start_08-09-10-11.png",
+          "sourceCell": 0,
+          "nativeSize": [
+            627,
+            627
+          ],
+          "sourceLimited": true,
+          "fallback512": false,
+          "nativeGreenRegion": null,
+          "frame": 8,
+          "scale512": 0.9637526652452025,
+          "dx512": 0,
+          "dy512": 19
+        },
+        {
+          "source": "sprites/rebuilt/sheets/chem1_start_08-09-10-11.png",
+          "sourceCell": 1,
+          "nativeSize": [
+            627,
+            627
+          ],
+          "sourceLimited": true,
+          "fallback512": false,
+          "nativeGreenRegion": null,
+          "frame": 9,
+          "scale512": 0.9637526652452025,
+          "dx512": 15,
+          "dy512": 19
+        },
+        {
+          "source": "sprites/rebuilt/sheets/chem1_start_08-09-10-11.png",
+          "sourceCell": 2,
+          "nativeSize": [
+            627,
+            627
+          ],
+          "sourceLimited": true,
+          "fallback512": false,
+          "nativeGreenRegion": null,
+          "frame": 10,
+          "scale512": 0.9617021276595744,
+          "dx512": 1,
+          "dy512": 34
+        },
+        {
+          "source": "sprites/rebuilt/sheets/chem1_start_08-09-10-11.png",
+          "sourceCell": 3,
+          "nativeSize": [
+            627,
+            627
+          ],
+          "sourceLimited": true,
+          "fallback512": false,
+          "nativeGreenRegion": null,
+          "frame": 11,
+          "scale512": 0.9617021276595744,
+          "dx512": 16,
+          "dy512": 34
+        }
+      ],
+      "exactAnchors": {
+        "0": "idle1_loop:0",
+        "11": "chem1_loop:0"
+      },
+      "rate": 0.7,
+      "count": 12,
+      "fps": 10,
+      "holds": {},
+      "repeats": [],
+      "size": [
+        720,
+        720
+      ],
+      "framesTouchingCanvas": [],
+      "frameHashes": [
+        {
+          "frame": 0,
+          "sha256": "9ec4a182aef2d98aa0a2e28c7ac01036ea56a3d76af144c9dc6ad2c16571f645",
+          "bbox": [
+            189,
+            66,
+            526,
+            701
+          ]
+        },
+        {
+          "frame": 1,
+          "sha256": "82df4b0ccb01f07905dca0b8b0621d72724d0af8b63a785a45131ca4c38d0fb9",
+          "bbox": [
+            186,
+            57,
+            497,
+            700
+          ]
+        },
+        {
+          "frame": 2,
+          "sha256": "bb858f7ac49f8f9850225eb98403feab6ea113d0ed953209924f3fd30ae0ca60",
+          "bbox": [
+            201,
+            61,
+            526,
+            700
+          ]
+        },
+        {
+          "frame": 3,
+          "sha256": "93f036d0bd9245ddbfa9e11b3b3ef677ba4d63a20125ed0037da82182256ab35",
+          "bbox": [
+            146,
+            60,
+            562,
+            700
+          ]
+        },
+        {
+          "frame": 4,
+          "sha256": "59fd6b07217e96804e0db00eac79d44a0249d655bb7afaec418b9c3b9fbff8be",
+          "bbox": [
+            97,
+            62,
+            601,
+            701
+          ]
+        },
+        {
+          "frame": 5,
+          "sha256": "7939c8982098f6e39a573e08ddac20e92076b9ac2543cf54843e7e93f9e51a89",
+          "bbox": [
+            111,
+            60,
+            613,
+            701
+          ]
+        },
+        {
+          "frame": 6,
+          "sha256": "dfa286aba6987c321f71f4ed1d6ca890f84ff0244ff17f6c85fb6d42e2dce485",
+          "bbox": [
+            95,
+            63,
+            600,
+            702
+          ]
+        },
+        {
+          "frame": 7,
+          "sha256": "2d097c04a916e124935695f34ea01542d5e663bd98d7dc078d396ae90b1d8400",
+          "bbox": [
+            145,
+            63,
+            562,
+            702
+          ]
+        },
+        {
+          "frame": 8,
+          "sha256": "4a281175f63aeb3a567646a2e226400d1a49868db791c861b8c285409f132e58",
+          "bbox": [
+            190,
+            60,
+            538,
+            700
+          ]
+        },
+        {
+          "frame": 9,
+          "sha256": "5135121ad8c1e2478d364a21bc0566f9a37ce69606ed58591d1438ac439726d7",
+          "bbox": [
+            191,
+            60,
+            536,
+            700
+          ]
+        },
+        {
+          "frame": 10,
+          "sha256": "93ef094be38bc25496415a854869257c61e4ecffdb398aaf92416ea35c2e4c9a",
+          "bbox": [
+            193,
+            60,
+            533,
+            697
+          ]
+        },
+        {
+          "frame": 11,
+          "sha256": "91b9248f44b45f1ec36c2848a9b75a8f2884da43afc66962b0c476773cdf5d14",
+          "bbox": [
+            214,
+            61,
+            569,
+            701
+          ]
+        }
+      ],
+      "ticks": 12,
+      "expectedDuration": 1.2,
+      "review": {
+        "staticVisual": true,
+        "runtime": false,
+        "evidence": [
+          "sprites/hd720/qa/chem1_start_contact.png",
+          "sprites/hd720/qa/special_quality_compare.png"
+        ]
+      },
+      "video": "sprites/hd720/videos/anim_chem1_start.webm",
+      "videoSHA256": "03be875bf55e9348b3e9db2ebbe85969294090cc46921455cea2365d14d4c203",
+      "bytes": 343974,
+      "duration": 1.2,
+      "decodedAlpha": {
+        "decoder": "libvpx-vp9",
+        "frames": 12,
+        "allCornersTransparent": true,
+        "opaqueForegroundEveryFrame": true
+      },
+      "encoding": {
+        "crf": 24,
+        "pixFmt": "yuva420p"
+      },
+      "previous512Video": {
+        "path": "sprites/rebuilt/videos/anim_chem1_start.webm",
+        "bytes": 226088,
+        "sha256": "35e9a0ebbf6083bbd3f519c7e9786d19e274b0daae2bdcce3fd78a0df2b485e6"
+      },
+      "exactAnchorChecks": [
+        {
+          "frame": 0,
+          "reference": "idle1_loop:0",
+          "byteExact": true
+        },
+        {
+          "frame": 11,
+          "reference": "chem1_loop:0",
+          "byteExact": true
+        }
+      ]
+    },
+    "chem1_end1": {
+      "frames": [
+        {
+          "source": "sprites/rebuilt/sheets/chem1_end1_00-01-02-03.png",
+          "sourceCell": 0,
+          "nativeSize": [
+            627,
+            627
+          ],
+          "sourceLimited": true,
+          "fallback512": false,
+          "nativeGreenRegion": null,
+          "frame": 0,
+          "scale512": 0.9955947136563876,
+          "dx512": -2,
+          "dy512": 9
+        },
+        {
+          "source": "sprites/rebuilt/sheets/chem1_end1_00-01-02-03.png",
+          "sourceCell": 1,
+          "nativeSize": [
+            627,
+            627
+          ],
+          "sourceLimited": true,
+          "fallback512": false,
+          "nativeGreenRegion": null,
+          "frame": 1,
+          "scale512": 0.9955947136563876,
+          "dx512": 12,
+          "dy512": 9
+        },
+        {
+          "source": "sprites/rebuilt/sheets/chem1_end1_00-01-02-03.png",
+          "sourceCell": 2,
+          "nativeSize": [
+            627,
+            627
+          ],
+          "sourceLimited": true,
+          "fallback512": false,
+          "nativeGreenRegion": null,
+          "frame": 2,
+          "scale512": 1.0635294117647058,
+          "dx512": -32,
+          "dy512": -12
+        },
+        {
+          "source": "sprites/rebuilt/sheets/chem1_end1_00-01-02-03.png",
+          "sourceCell": 3,
+          "nativeSize": [
+            627,
+            627
+          ],
+          "sourceLimited": true,
+          "fallback512": false,
+          "nativeGreenRegion": null,
+          "frame": 3,
+          "scale512": 1.0635294117647058,
+          "dx512": -9,
+          "dy512": -12
+        },
+        {
+          "source": "sprites/rebuilt/sheets/chem1_end1_04-05-06-07.png",
+          "sourceCell": 0,
+          "nativeSize": [
+            627,
+            627
+          ],
+          "sourceLimited": true,
+          "fallback512": false,
+          "nativeGreenRegion": null,
+          "frame": 4,
+          "scale512": 1.036697247706422,
+          "dx512": -22,
+          "dy512": -18
+        },
+        {
+          "source": "sprites/rebuilt/sheets/chem1_end1_04-05-06-07.png",
+          "sourceCell": 1,
+          "nativeSize": [
+            627,
+            627
+          ],
+          "sourceLimited": true,
+          "fallback512": false,
+          "nativeGreenRegion": null,
+          "frame": 5,
+          "scale512": 1.0319634703196348,
+          "dx512": 4,
+          "dy512": -15
+        },
+        {
+          "source": "sprites/rebuilt/sheets/chem1_end1_04-05-06-07.png",
+          "sourceCell": 2,
+          "nativeSize": [
+            627,
+            627
+          ],
+          "sourceLimited": true,
+          "fallback512": false,
+          "nativeGreenRegion": null,
+          "frame": 6,
+          "scale512": 1.016842105263158,
+          "dx512": -16,
+          "dy512": 4
+        },
+        {
+          "source": "sprites/rebuilt/sheets/chem1_end1_04-05-06-07.png",
+          "sourceCell": 3,
+          "nativeSize": [
+            627,
+            627
+          ],
+          "sourceLimited": true,
+          "fallback512": false,
+          "nativeGreenRegion": null,
+          "frame": 7,
+          "scale512": 1.0390804597701149,
+          "dx512": 4,
+          "dy512": -6
+        },
+        {
+          "source": "sprites/rebuilt/sheets/chem1_end1_08-09-10-11.png",
+          "sourceCell": 0,
+          "nativeSize": [
+            627,
+            627
+          ],
+          "sourceLimited": true,
+          "fallback512": false,
+          "nativeGreenRegion": null,
+          "frame": 8,
+          "scale512": 1.0249433106575965,
+          "dx512": -28,
+          "dy512": 4
+        },
+        {
+          "source": "sprites/rebuilt/sheets/chem1_end1_08-09-10-11.png",
+          "sourceCell": 1,
+          "nativeSize": [
+            627,
+            627
+          ],
+          "sourceLimited": true,
+          "fallback512": false,
+          "nativeGreenRegion": null,
+          "frame": 9,
+          "scale512": 1.043879907621247,
+          "dx512": 34,
+          "dy512": -4
+        },
+        {
+          "source": "sprites/rebuilt/sheets/chem1_end1_08-09-10-11.png",
+          "sourceCell": 2,
+          "nativeSize": [
+            627,
+            627
+          ],
+          "sourceLimited": true,
+          "fallback512": false,
+          "nativeGreenRegion": null,
+          "frame": 10,
+          "scale512": 0.9955947136563876,
+          "dx512": -25,
+          "dy512": 29
+        },
+        {
+          "source": "sprites/rebuilt/sheets/chem1_end1_08-09-10-11.png",
+          "sourceCell": 3,
+          "nativeSize": [
+            627,
+            627
+          ],
+          "sourceLimited": true,
+          "fallback512": false,
+          "nativeGreenRegion": null,
+          "frame": 11,
+          "scale512": 0.9912280701754386,
+          "dx512": 24,
+          "dy512": 28
+        },
+        {
+          "source": "sprites/rebuilt/sheets/chem1_end1_12-13-14-15.png",
+          "sourceCell": 0,
+          "nativeSize": [
+            627,
+            627
+          ],
+          "sourceLimited": true,
+          "fallback512": false,
+          "nativeGreenRegion": null,
+          "frame": 12,
+          "scale512": 0.9762419006479481,
+          "dx512": -26,
+          "dy512": 13
+        },
+        {
+          "source": "sprites/rebuilt/sheets/chem1_end1_12-13-14-15.png",
+          "sourceCell": 1,
+          "nativeSize": [
+            627,
+            627
+          ],
+          "sourceLimited": true,
+          "fallback512": false,
+          "nativeGreenRegion": null,
+          "frame": 13,
+          "scale512": 0.9762419006479481,
+          "dx512": 37,
+          "dy512": 13
+        },
+        {
+          "source": "sprites/rebuilt/sheets/chem1_end1_12-13-14-15.png",
+          "sourceCell": 2,
+          "nativeSize": [
+            627,
+            627
+          ],
+          "sourceLimited": true,
+          "fallback512": false,
+          "nativeGreenRegion": null,
+          "frame": 14,
+          "scale512": 0.9762419006479481,
+          "dx512": -26,
+          "dy512": 35
+        },
+        {
+          "source": "sprites/rebuilt/raw_poses/chem1_end1_crosswipe_fixed.png",
+          "nativeSize": [
+            1254,
+            1254
+          ],
+          "sourceLimited": false,
+          "fallback512": false,
+          "frame": 15,
+          "scale512": 0.9762419006479481,
+          "dx512": 37,
+          "dy512": 35
+        },
+        {
+          "source": "sprites/rebuilt/sheets/chem1_end1_16-17-18-19.png",
+          "sourceCell": 0,
+          "nativeSize": [
+            627,
+            627
+          ],
+          "sourceLimited": true,
+          "fallback512": false,
+          "nativeGreenRegion": null,
+          "frame": 16,
+          "scale512": 0.9720430107526882,
+          "dx512": -24,
+          "dy512": 15
+        },
+        {
+          "source": "sprites/rebuilt/sheets/chem1_end1_16-17-18-19.png",
+          "sourceCell": 1,
+          "nativeSize": [
+            627,
+            627
+          ],
+          "sourceLimited": true,
+          "fallback512": false,
+          "nativeGreenRegion": null,
+          "frame": 17,
+          "scale512": 0.9720430107526882,
+          "dx512": 37,
+          "dy512": 15
+        },
+        {
+          "source": "sprites/rebuilt/raw_poses/chem1_end1_hide_cloth_final.png",
+          "nativeSize": [
+            627,
+            627
+          ],
+          "sourceLimited": true,
+          "fallback512": false,
+          "frame": 18,
+          "scale512": 0.9720430107526882,
+          "dx512": -24,
+          "dy512": 37
+        },
+        {
+          "source": "sprites/rebuilt/sheets/chem1_end1_16-17-18-19.png",
+          "sourceCell": 3,
+          "nativeSize": [
+            627,
+            627
+          ],
+          "sourceLimited": true,
+          "fallback512": false,
+          "nativeGreenRegion": null,
+          "frame": 19,
+          "scale512": 0.9699570815450643,
+          "dx512": 38,
+          "dy512": 37
+        }
+      ],
+      "exactAnchors": {
+        "0": "chem1_loop:0",
+        "19": "idle1_loop:0"
+      },
+      "rate": 0.7,
+      "count": 20,
+      "fps": 10,
+      "holds": {},
+      "repeats": [],
+      "size": [
+        720,
+        720
+      ],
+      "framesTouchingCanvas": [],
+      "frameHashes": [
+        {
+          "frame": 0,
+          "sha256": "91b9248f44b45f1ec36c2848a9b75a8f2884da43afc66962b0c476773cdf5d14",
+          "bbox": [
+            214,
+            61,
+            569,
+            701
+          ]
+        },
+        {
+          "frame": 1,
+          "sha256": "913890b921a5e1dcb0c8894a0d7c4368bee6095b29644a927aefe5fa4f17f039",
+          "bbox": [
+            193,
+            61,
+            566,
+            703
+          ]
+        },
+        {
+          "frame": 2,
+          "sha256": "2cb5b8dbc86bc0e5acf9d8725023a7988de6f7ffe6975ec9a7e136a0c8e22852",
+          "bbox": [
+            189,
+            33,
+            580,
+            702
+          ]
+        },
+        {
+          "frame": 3,
+          "sha256": "21cda212801a469c20c119722672f5d9ee7cc1e76e9f1bc35ce3c983a3b01bc2",
+          "bbox": [
+            88,
+            24,
+            621,
+            702
+          ]
+        },
+        {
+          "frame": 4,
+          "sha256": "8322f97db64fc83b8d0a84491d7e6845322e1030be5482b101ce5ba266aa30ea",
+          "bbox": [
+            159,
+            25,
+            564,
+            700
+          ]
+        },
+        {
+          "frame": 5,
+          "sha256": "c1e6afecf5382a4203e454fc09af8fc87f94db4482b45e566c4b6b989a43e21c",
+          "bbox": [
+            205,
+            60,
+            568,
+            701
+          ]
+        },
+        {
+          "frame": 6,
+          "sha256": "b2ebca9e00274026e23569d9125ae87ccd19d72642a6a8125d7be5e60cbf2f46",
+          "bbox": [
+            208,
+            16,
+            563,
+            700
+          ]
+        },
+        {
+          "frame": 7,
+          "sha256": "7087d2302cf7808ea85716020794c8a41e25e92cfc33ee8d735f98ef6379b3ec",
+          "bbox": [
+            204,
+            61,
+            571,
+            701
+          ]
+        },
+        {
+          "frame": 8,
+          "sha256": "4b2ca0aac8e93903ccf60c80706f55e8b6fea5e466c58aa825c185c353b7c3d6",
+          "bbox": [
+            195,
+            59,
+            575,
+            701
+          ]
+        },
+        {
+          "frame": 9,
+          "sha256": "b4d1e027f54c4571b6b2ae309044872071d156b23eba33d6954d4c6c1e40e733",
+          "bbox": [
+            199,
+            58,
+            553,
+            702
+          ]
+        },
+        {
+          "frame": 10,
+          "sha256": "aef9f12bf75a06fad3d61023742cde6c87269ed2a11dfaa48ce2912d767729d8",
+          "bbox": [
+            204,
+            60,
+            552,
+            702
+          ]
+        },
+        {
+          "frame": 11,
+          "sha256": "4f477bd6fc527725ffe18d017e87f9a11dcd5fde44d965c54979d6a0bc2bc660",
+          "bbox": [
+            210,
+            57,
+            507,
+            699
+          ]
+        },
+        {
+          "frame": 12,
+          "sha256": "0939026c349fedf37c8ff5f3696ee9a40ca14661b8b1b596938cbd6ea4b6d85c",
+          "bbox": [
+            204,
+            59,
+            512,
+            700
+          ]
+        },
+        {
+          "frame": 13,
+          "sha256": "88d94ee10e50de3a87019340058dc413340059a38de2a1a134284dd4e584173c",
+          "bbox": [
+            204,
+            59,
+            512,
+            700
+          ]
+        },
+        {
+          "frame": 14,
+          "sha256": "3d5c1d8fc54e57e89e951fba07cc7d857725dfeb5bf58670bdbafc2b427e05b8",
+          "bbox": [
+            204,
+            60,
+            512,
+            701
+          ]
+        },
+        {
+          "frame": 15,
+          "sha256": "c87949bcb6b7146b6d0baaea2c02315dd90c25f6b557aa57ffaef4880b5c1e96",
+          "bbox": [
+            204,
+            60,
+            512,
+            701
+          ]
+        },
+        {
+          "frame": 16,
+          "sha256": "aeeafe632aecd1fbbafa1f58922c374882776bc1c17ed56607b9ef16881ad92f",
+          "bbox": [
+            197,
+            60,
+            512,
+            700
+          ]
+        },
+        {
+          "frame": 17,
+          "sha256": "c55dd6c2e32823d726011fd8ccd288d00e8ea0f85d017c9c575245072d8aa45f",
+          "bbox": [
+            206,
+            60,
+            512,
+            700
+          ]
+        },
+        {
+          "frame": 18,
+          "sha256": "46aa0afdcda33ff55a63b16babc7c9bb615ea6e5bd8bd729b001bf551965526f",
+          "bbox": [
+            206,
+            62,
+            516,
+            702
+          ]
+        },
+        {
+          "frame": 19,
+          "sha256": "9ec4a182aef2d98aa0a2e28c7ac01036ea56a3d76af144c9dc6ad2c16571f645",
+          "bbox": [
+            189,
+            66,
+            526,
+            701
+          ]
+        }
+      ],
+      "ticks": 20,
+      "expectedDuration": 2.0,
+      "review": {
+        "staticVisual": true,
+        "runtime": false,
+        "evidence": [
+          "sprites/hd720/qa/chem1_end1_contact.png",
+          "sprites/hd720/qa/special_quality_compare.png"
+        ]
+      },
+      "video": "sprites/hd720/videos/anim_chem1_end1.webm",
+      "videoSHA256": "6bcdfd3b68be9adeb186c209f12900198baa9f20d535a7352930f2fa87a0eabe",
+      "bytes": 496048,
+      "duration": 2.0,
+      "decodedAlpha": {
+        "decoder": "libvpx-vp9",
+        "frames": 20,
+        "allCornersTransparent": true,
+        "opaqueForegroundEveryFrame": true
+      },
+      "encoding": {
+        "crf": 24,
+        "pixFmt": "yuva420p"
+      },
+      "previous512Video": {
+        "path": "sprites/rebuilt/videos/anim_chem1_end1.webm",
+        "bytes": 323911,
+        "sha256": "8f0ab4f9e95bd6c4c468ca85ba94814571700d960dc992e9dd7d3bba42594c88"
+      },
+      "exactAnchorChecks": [
+        {
+          "frame": 0,
+          "reference": "chem1_loop:0",
+          "byteExact": true
+        },
+        {
+          "frame": 19,
+          "reference": "idle1_loop:0",
+          "byteExact": true
+        }
+      ]
+    },
+    "chem1_end2": {
+      "frames": [
+        {
+          "source": "sprites/rebuilt/sheets/chem1_end2_00-01-02-03.png",
+          "sourceCell": 0,
+          "nativeSize": [
+            627,
+            627
+          ],
+          "sourceLimited": true,
+          "fallback512": false,
+          "nativeGreenRegion": null,
+          "frame": 0,
+          "scale512": 1.0022172949002217,
+          "dx512": 1,
+          "dy512": -4
+        },
+        {
+          "source": "sprites/rebuilt/sheets/chem1_end2_00-01-02-03.png",
+          "sourceCell": 1,
+          "nativeSize": [
+            627,
+            627
+          ],
+          "sourceLimited": true,
+          "fallback512": false,
+          "nativeGreenRegion": null,
+          "frame": 1,
+          "scale512": 1.0022172949002217,
+          "dx512": 2,
+          "dy512": -4
+        },
+        {
+          "source": "sprites/rebuilt/sheets/chem1_end2_00-01-02-03.png",
+          "sourceCell": 2,
+          "nativeSize": [
+            627,
+            627
+          ],
+          "sourceLimited": true,
+          "fallback512": false,
+          "nativeGreenRegion": null,
+          "frame": 2,
+          "scale512": 1.0066815144766148,
+          "dx512": 0,
+          "dy512": 10
+        },
+        {
+          "source": "sprites/rebuilt/sheets/chem1_end2_00-01-02-03.png",
+          "sourceCell": 3,
+          "nativeSize": [
+            627,
+            627
+          ],
+          "sourceLimited": true,
+          "fallback512": false,
+          "nativeGreenRegion": null,
+          "frame": 3,
+          "scale512": 1.0066815144766148,
+          "dx512": 1,
+          "dy512": 10
+        },
+        {
+          "source": "sprites/rebuilt/sheets/chem1_end2_04-05-06-07.png",
+          "sourceCell": 0,
+          "nativeSize": [
+            627,
+            627
+          ],
+          "sourceLimited": true,
+          "fallback512": false,
+          "nativeGreenRegion": null,
+          "blink": {
+            "source": "sprites/rebuilt/poses/chem1_end2_04_blink_special_native.png",
+            "rect720": [
+              295,
+              180,
+              425,
+              228
+            ],
+            "alphaUnchanged": true
+          },
+          "frame": 4,
+          "scale512": 1.0157303370786517,
+          "dx512": -24,
+          "dy512": -2
+        },
+        {
+          "source": "sprites/rebuilt/sheets/chem1_end2_04-05-06-07.png",
+          "sourceCell": 1,
+          "nativeSize": [
+            627,
+            627
+          ],
+          "sourceLimited": true,
+          "fallback512": false,
+          "nativeGreenRegion": null,
+          "frame": 5,
+          "scale512": 1.018018018018018,
+          "dx512": 18,
+          "dy512": -3
+        },
+        {
+          "source": "sprites/rebuilt/sheets/chem1_end2_04-05-06-07.png",
+          "sourceCell": 2,
+          "nativeSize": [
+            627,
+            627
+          ],
+          "sourceLimited": true,
+          "fallback512": false,
+          "nativeGreenRegion": null,
+          "frame": 6,
+          "scale512": 1.018018018018018,
+          "dx512": -38,
+          "dy512": 14
+        },
+        {
+          "source": "sprites/rebuilt/sheets/chem1_end2_04-05-06-07.png",
+          "sourceCell": 3,
+          "nativeSize": [
+            627,
+            627
+          ],
+          "sourceLimited": true,
+          "fallback512": false,
+          "nativeGreenRegion": null,
+          "frame": 7,
+          "scale512": 1.0226244343891402,
+          "dx512": 13,
+          "dy512": 12
+        },
+        {
+          "source": "sprites/rebuilt/sheets/chem1_end2_08-09-10-11.png",
+          "sourceCell": 0,
+          "nativeSize": [
+            627,
+            627
+          ],
+          "sourceLimited": true,
+          "fallback512": false,
+          "nativeGreenRegion": null,
+          "frame": 8,
+          "scale512": 0.9741379310344828,
+          "dx512": -12,
+          "dy512": 14
+        },
+        {
+          "source": "sprites/rebuilt/sheets/chem1_end2_08-09-10-11.png",
+          "sourceCell": 1,
+          "nativeSize": [
+            627,
+            627
+          ],
+          "sourceLimited": true,
+          "fallback512": false,
+          "nativeGreenRegion": null,
+          "frame": 9,
+          "scale512": 0.9741379310344828,
+          "dx512": 18,
+          "dy512": 13
+        },
+        {
+          "source": "sprites/rebuilt/sheets/chem1_end2_08-09-10-11.png",
+          "sourceCell": 2,
+          "nativeSize": [
+            627,
+            627
+          ],
+          "sourceLimited": true,
+          "fallback512": false,
+          "nativeGreenRegion": null,
+          "frame": 10,
+          "scale512": 0.9762419006479481,
+          "dx512": -12,
+          "dy512": 31
+        },
+        {
+          "source": "sprites/rebuilt/sheets/chem1_end2_08-09-10-11.png",
+          "sourceCell": 3,
+          "nativeSize": [
+            627,
+            627
+          ],
+          "sourceLimited": true,
+          "fallback512": false,
+          "nativeGreenRegion": null,
+          "frame": 11,
+          "scale512": 0.9741379310344828,
+          "dx512": 23,
+          "dy512": 31
+        }
+      ],
+      "exactAnchors": {
+        "0": "chem1_loop:0",
+        "11": "idle1_loop:0"
+      },
+      "rate": 0.7,
+      "count": 12,
+      "fps": 10,
+      "holds": {},
+      "repeats": [],
+      "size": [
+        720,
+        720
+      ],
+      "framesTouchingCanvas": [],
+      "frameHashes": [
+        {
+          "frame": 0,
+          "sha256": "91b9248f44b45f1ec36c2848a9b75a8f2884da43afc66962b0c476773cdf5d14",
+          "bbox": [
+            214,
+            61,
+            569,
+            701
+          ]
+        },
+        {
+          "frame": 1,
+          "sha256": "582a449e7aba082d84a44665cc8208e6f0e62911bfa70b8e1e44c394aca629e8",
+          "bbox": [
+            203,
+            59,
+            565,
+            701
+          ]
+        },
+        {
+          "frame": 2,
+          "sha256": "6dec796a275daf043ba7dba52e4138e8e41f7df4a8e1ed9d7e0e391759d8139e",
+          "bbox": [
+            204,
+            60,
+            567,
+            702
+          ]
+        },
+        {
+          "frame": 3,
+          "sha256": "07b581ef0f12cc6b481666d3c614339a7b3cea93835a91e7cb87512229035d97",
+          "bbox": [
+            204,
+            60,
+            567,
+            702
+          ]
+        },
+        {
+          "frame": 4,
+          "sha256": "f852963f2bddf3bf9cc7d7ebbcb3bfd7d33ee692fb3f6e15cda4c6574e3ee612",
+          "bbox": [
+            206,
+            58,
+            563,
+            700
+          ]
+        },
+        {
+          "frame": 5,
+          "sha256": "19725964280799e31d6d43530fced908100c68ff8b79bfebc5d06eccc6873af6",
+          "bbox": [
+            207,
+            59,
+            564,
+            701
+          ]
+        },
+        {
+          "frame": 6,
+          "sha256": "3b2a568b04484f42de3f5bebdecc2768cf46d9346f13880c20bb16ed42f01f1a",
+          "bbox": [
+            191,
+            34,
+            562,
+            701
+          ]
+        },
+        {
+          "frame": 7,
+          "sha256": "4ab2a20c0a1c97230cdeccab82e0467339f64b988af81899732abdab32df1f42",
+          "bbox": [
+            194,
+            27,
+            569,
+            702
+          ]
+        },
+        {
+          "frame": 8,
+          "sha256": "c6ece99e3739b67bd93e159b9da71c2d2aa0b77fae234181561b8464cba1daa3",
+          "bbox": [
+            167,
+            59,
+            569,
+            700
+          ]
+        },
+        {
+          "frame": 9,
+          "sha256": "1195d5c4a0318c32fd9709527322d8ad89214f909341c3122663c944f11149d1",
+          "bbox": [
+            208,
+            57,
+            506,
+            700
+          ]
+        },
+        {
+          "frame": 10,
+          "sha256": "4b16ae74c8919d0ed30e689da95deb4dd18a2b52b52687aad1c3c95609bbd274",
+          "bbox": [
+            210,
+            59,
+            498,
+            700
+          ]
+        },
+        {
+          "frame": 11,
+          "sha256": "9ec4a182aef2d98aa0a2e28c7ac01036ea56a3d76af144c9dc6ad2c16571f645",
+          "bbox": [
+            189,
+            66,
+            526,
+            701
+          ]
+        }
+      ],
+      "ticks": 12,
+      "expectedDuration": 1.2,
+      "review": {
+        "staticVisual": true,
+        "runtime": false,
+        "evidence": [
+          "sprites/hd720/qa/chem1_end2_contact.png",
+          "sprites/hd720/qa/special_quality_compare.png"
+        ]
+      },
+      "video": "sprites/hd720/videos/anim_chem1_end2.webm",
+      "videoSHA256": "d640c795023e595379538d1dd081ed99faef269982ce63f077f2b7e9822b5ecb",
+      "bytes": 302293,
+      "duration": 1.2,
+      "decodedAlpha": {
+        "decoder": "libvpx-vp9",
+        "frames": 12,
+        "allCornersTransparent": true,
+        "opaqueForegroundEveryFrame": true
+      },
+      "encoding": {
+        "crf": 24,
+        "pixFmt": "yuva420p"
+      },
+      "previous512Video": {
+        "path": "sprites/rebuilt/videos/anim_chem1_end2.webm",
+        "bytes": 194562,
+        "sha256": "9ee4bcbc66f460d451ab4ced2a224ee92c934ee72858da4de4af7c946d9b2e07"
+      },
+      "exactAnchorChecks": [
+        {
+          "frame": 0,
+          "reference": "chem1_loop:0",
+          "byteExact": true
+        },
+        {
+          "frame": 11,
+          "reference": "idle1_loop:0",
+          "byteExact": true
+        }
+      ]
+    },
+    "chem1_end3": {
+      "frames": [
+        {
+          "source": "sprites/rebuilt/sheets/chem1_end3_00-01-02-03.png",
+          "sourceCell": 0,
+          "nativeSize": [
+            627,
+            627
+          ],
+          "sourceLimited": true,
+          "fallback512": false,
+          "nativeGreenRegion": [
+            98,
+            220,
+            318,
+            429
+          ],
+          "frame": 0,
+          "scale512": 0.9736842105263158,
+          "dx512": -5,
+          "dy512": 6
+        },
+        {
+          "source": "sprites/rebuilt/sheets/chem1_end3_00-01-02-03.png",
+          "sourceCell": 1,
+          "nativeSize": [
+            627,
+            627
+          ],
+          "sourceLimited": true,
+          "fallback512": false,
+          "nativeGreenRegion": [
+            98,
+            220,
+            318,
+            429
+          ],
+          "frame": 1,
+          "scale512": 0.9736842105263158,
+          "dx512": 15,
+          "dy512": 6
+        },
+        {
+          "source": "sprites/rebuilt/sheets/chem1_end3_00-01-02-03.png",
+          "sourceCell": 2,
+          "nativeSize": [
+            627,
+            627
+          ],
+          "sourceLimited": true,
+          "fallback512": false,
+          "nativeGreenRegion": [
+            98,
+            220,
+            318,
+            429
+          ],
+          "frame": 2,
+          "scale512": 0.8276315789473684,
+          "dx512": 34,
+          "dy512": 102
+        },
+        {
+          "source": "sprites/rebuilt/sheets/chem1_end3_00-01-02-03.png",
+          "sourceCell": 3,
+          "nativeSize": [
+            627,
+            627
+          ],
+          "sourceLimited": true,
+          "fallback512": false,
+          "nativeGreenRegion": [
+            98,
+            220,
+            318,
+            429
+          ],
+          "frame": 3,
+          "scale512": 0.833112582781457,
+          "dx512": 51,
+          "dy512": 100
+        },
+        {
+          "source": "sprites/rebuilt/sheets/chem1_end3_04-05-06-07.png",
+          "sourceCell": 0,
+          "nativeSize": [
+            627,
+            627
+          ],
+          "sourceLimited": true,
+          "fallback512": false,
+          "nativeGreenRegion": [
+            178,
+            116,
+            306,
+            282
+          ],
+          "frame": 4,
+          "scale512": 0.8186550976138828,
+          "dx512": 26,
+          "dy512": 96
+        },
+        {
+          "source": "sprites/rebuilt/sheets/chem1_end3_04-05-06-07.png",
+          "sourceCell": 1,
+          "nativeSize": [
+            627,
+            627
+          ],
+          "sourceLimited": true,
+          "fallback512": false,
+          "nativeGreenRegion": [
+            178,
+            116,
+            306,
+            282
+          ],
+          "frame": 5,
+          "scale512": 0.8186550976138828,
+          "dx512": 67,
+          "dy512": 96
+        },
+        {
+          "source": "sprites/rebuilt/sheets/chem1_end3_04-05-06-07.png",
+          "sourceCell": 2,
+          "nativeSize": [
+            627,
+            627
+          ],
+          "sourceLimited": true,
+          "fallback512": false,
+          "nativeGreenRegion": [
+            178,
+            116,
+            306,
+            282
+          ],
+          "frame": 6,
+          "scale512": 0.8276315789473684,
+          "dx512": 24,
+          "dy512": 100
+        },
+        {
+          "source": "sprites/rebuilt/sheets/chem1_end3_04-05-06-07.png",
+          "sourceCell": 3,
+          "nativeSize": [
+            627,
+            627
+          ],
+          "sourceLimited": true,
+          "fallback512": false,
+          "nativeGreenRegion": [
+            178,
+            116,
+            306,
+            282
+          ],
+          "frame": 7,
+          "scale512": 0.8216472580583779,
+          "dx512": 65,
+          "dy512": 102
+        },
+        {
+          "source": "sprites/rebuilt/sheets/chem1_end3_08-09-10-11.png",
+          "sourceCell": 0,
+          "nativeSize": [
+            627,
+            627
+          ],
+          "sourceLimited": true,
+          "fallback512": false,
+          "nativeGreenRegion": [
+            159,
+            61,
+            331,
+            429
+          ],
+          "frame": 8,
+          "scale512": 1.010441767068273,
+          "dx512": -16,
+          "dy512": 51
+        },
+        {
+          "source": "sprites/rebuilt/sheets/chem1_end3_08-09-10-11.png",
+          "sourceCell": 1,
+          "nativeSize": [
+            627,
+            627
+          ],
+          "sourceLimited": true,
+          "fallback512": false,
+          "nativeGreenRegion": [
+            159,
+            61,
+            331,
+            429
+          ],
+          "frame": 9,
+          "scale512": 1.010441767068273,
+          "dx512": 14,
+          "dy512": 21
+        },
+        {
+          "source": "sprites/rebuilt/sheets/chem1_end3_08-09-10-11.png",
+          "sourceCell": 2,
+          "nativeSize": [
+            627,
+            627
+          ],
+          "sourceLimited": true,
+          "fallback512": false,
+          "nativeGreenRegion": [
+            159,
+            61,
+            331,
+            429
+          ],
+          "frame": 10,
+          "scale512": 1.010441767068273,
+          "dx512": -14,
+          "dy512": 8
+        },
+        {
+          "source": "sprites/rebuilt/sheets/chem1_end3_08-09-10-11.png",
+          "sourceCell": 3,
+          "nativeSize": [
+            627,
+            627
+          ],
+          "sourceLimited": true,
+          "fallback512": false,
+          "nativeGreenRegion": [
+            159,
+            61,
+            331,
+            429
+          ],
+          "frame": 11,
+          "scale512": 1.010441767068273,
+          "dx512": 4,
+          "dy512": 8
+        },
+        {
+          "source": "sprites/rebuilt/sheets/chem1_end3_12-13-14-15.png",
+          "sourceCell": 0,
+          "nativeSize": [
+            627,
+            627
+          ],
+          "sourceLimited": true,
+          "fallback512": false,
+          "nativeGreenRegion": [
+            210,
+            60,
+            290,
+            180
+          ],
+          "frame": 12,
+          "scale512": 0.9182481751824817,
+          "dx512": -5,
+          "dy512": 64
+        },
+        {
+          "source": "sprites/rebuilt/sheets/chem1_end3_12-13-14-15.png",
+          "sourceCell": 1,
+          "nativeSize": [
+            627,
+            627
+          ],
+          "sourceLimited": true,
+          "fallback512": false,
+          "nativeGreenRegion": [
+            171,
+            55,
+            300,
+            355
+          ],
+          "frame": 13,
+          "scale512": 0.9182481751824817,
+          "dx512": 29,
+          "dy512": 65
+        },
+        {
+          "source": "sprites/rebuilt/sheets/chem1_end3_12-13-14-15.png",
+          "sourceCell": 2,
+          "nativeSize": [
+            627,
+            627
+          ],
+          "sourceLimited": true,
+          "fallback512": false,
+          "nativeGreenRegion": [
+            171,
+            55,
+            300,
+            355
+          ],
+          "frame": 14,
+          "scale512": 0.9182481751824817,
+          "dx512": -1,
+          "dy512": 86
+        },
+        {
+          "source": "sprites/rebuilt/sheets/chem1_end3_12-13-14-15.png",
+          "sourceCell": 3,
+          "nativeSize": [
+            627,
+            627
+          ],
+          "sourceLimited": true,
+          "fallback512": false,
+          "nativeGreenRegion": [
+            171,
+            55,
+            300,
+            355
+          ],
+          "frame": 15,
+          "scale512": 0.9182481751824817,
+          "dx512": 32,
+          "dy512": 86
+        },
+        {
+          "source": "sprites/rebuilt/raw_poses/chem1_end3_proud.png",
+          "nativeSize": [
+            1254,
+            1254
+          ],
+          "sourceLimited": false,
+          "fallback512": false,
+          "frame": 16,
+          "scale512": 0.9135398230088496,
+          "dx512": 20,
+          "dy512": 46
+        }
+      ],
+      "exactAnchors": {
+        "0": "chem1_loop:0",
+        "17": "idle1_loop:0"
+      },
+      "rate": 0.7,
+      "count": 18,
+      "fps": 10,
+      "holds": {},
+      "repeats": [],
+      "size": [
+        720,
+        720
+      ],
+      "framesTouchingCanvas": [],
+      "frameHashes": [
+        {
+          "frame": 0,
+          "sha256": "91b9248f44b45f1ec36c2848a9b75a8f2884da43afc66962b0c476773cdf5d14",
+          "bbox": [
+            214,
+            61,
+            569,
+            701
+          ]
+        },
+        {
+          "frame": 1,
+          "sha256": "6f42ab4323862701bafbd37c02845d641656d9c8ac45abef122a73f94e596b42",
+          "bbox": [
+            108,
+            65,
+            570,
+            704
+          ]
+        },
+        {
+          "frame": 2,
+          "sha256": "29ec86146597bf29f7c99c92d6c3985c9d800f1eb9197b1125886b12584f02c9",
+          "bbox": [
+            170,
+            162,
+            546,
+            701
+          ]
+        },
+        {
+          "frame": 3,
+          "sha256": "2d2cc367bf1c355c6cabad9d349b6cb7d4f63322e8087623f10d48389c962ead",
+          "bbox": [
+            178,
+            159,
+            542,
+            704
+          ]
+        },
+        {
+          "frame": 4,
+          "sha256": "15fcbfccd74bba9d7f8f1898a45aa2d2e5c8d0de9653a42353b8a576d454c341",
+          "bbox": [
+            223,
+            158,
+            538,
+            703
+          ]
+        },
+        {
+          "frame": 5,
+          "sha256": "67cae917be05472e199ddd52d53869edb76acbe64d1621c38e603ada826146fa",
+          "bbox": [
+            194,
+            159,
+            542,
+            703
+          ]
+        },
+        {
+          "frame": 6,
+          "sha256": "d8bf5cfd90306260db5cd0e67e766fc51b77ea81dc600ecd6960f28ea5e7693f",
+          "bbox": [
+            192,
+            160,
+            541,
+            705
+          ]
+        },
+        {
+          "frame": 7,
+          "sha256": "338db616bcbd49a82fdaa3ed75589e1ab83278fa4d9b9f0ffb0735e43012fb13",
+          "bbox": [
+            187,
+            161,
+            541,
+            701
+          ]
+        },
+        {
+          "frame": 8,
+          "sha256": "850459236e3ca673cb19212b71ca38cf1daefe920c2a4d5c092256bd5216cb32",
+          "bbox": [
+            211,
+            241,
+            514,
+            704
+          ]
+        },
+        {
+          "frame": 9,
+          "sha256": "f702c568319f351718172a815ccd267b1c49a055e3899bfe3fa334891c79df49",
+          "bbox": [
+            201,
+            92,
+            524,
+            693
+          ]
+        },
+        {
+          "frame": 10,
+          "sha256": "0482ae4ffa0955abeaf97c0417e8756054e252f747b4a0c11f87fe4b09e1f8f2",
+          "bbox": [
+            168,
+            92,
+            511,
+            698
+          ]
+        },
+        {
+          "frame": 11,
+          "sha256": "a9b918f6619173a977ad8c34ce4bce9e4dd515129fa4c8f3dd323fbe5a14e993",
+          "bbox": [
+            162,
+            94,
+            508,
+            698
+          ]
+        },
+        {
+          "frame": 12,
+          "sha256": "d5c8db36f47d1f1428adcf6f8e54fe6edd5e2dd13a613e0bd40e89b9269cc392",
+          "bbox": [
+            194,
+            140,
+            509,
+            701
+          ]
+        },
+        {
+          "frame": 13,
+          "sha256": "b5071cb5e140fc669ad5ea27d0b5f01968f802a890a51b36a6ef1ef15b95eb70",
+          "bbox": [
+            197,
+            145,
+            504,
+            704
+          ]
+        },
+        {
+          "frame": 14,
+          "sha256": "397f98b460a23db7f223cbb8e403d2a6bab1b8e5b4c7ab9ad5039a2abf67e4bd",
+          "bbox": [
+            219,
+            159,
+            504,
+            704
+          ]
+        },
+        {
+          "frame": 15,
+          "sha256": "cf8b61ef30aa160ab0fd865e01a331a1e50ff06c3b50ff2e42ec20c30ccbc084",
+          "bbox": [
+            215,
+            159,
+            498,
+            704
+          ]
+        },
+        {
+          "frame": 16,
+          "sha256": "3cfe15c9a3ebeb46700765cebe5d5654db4176fab7a4678e8f762ec084bfecd4",
+          "bbox": [
+            217,
+            80,
+            496,
+            704
+          ]
+        },
+        {
+          "frame": 17,
+          "sha256": "9ec4a182aef2d98aa0a2e28c7ac01036ea56a3d76af144c9dc6ad2c16571f645",
+          "bbox": [
+            189,
+            66,
+            526,
+            701
+          ]
+        }
+      ],
+      "ticks": 18,
+      "expectedDuration": 1.8,
+      "review": {
+        "staticVisual": true,
+        "runtime": false,
+        "evidence": [
+          "sprites/hd720/qa/chem1_end3_contact.png",
+          "sprites/hd720/qa/special_quality_compare.png",
+          "sprites/hd720/qa/chem1_end3_12_green_fix_compare.png",
+          "sprites/hd720/qa/chem1_end3_12_green_fix.json"
+        ],
+        "approvedCorrection": "Frame12 narrow flask-only green region removes pre-existing background-green inside hair; rainbow/pose unchanged."
+      },
+      "video": "sprites/hd720/videos/anim_chem1_end3.webm",
+      "videoSHA256": "a1a310e44b6ac8fa3a39e28812b35bed31dd6269d48773ba986e48b55eeaca43",
+      "bytes": 467598,
+      "duration": 1.8,
+      "decodedAlpha": {
+        "decoder": "libvpx-vp9",
+        "frames": 18,
+        "allCornersTransparent": true,
+        "opaqueForegroundEveryFrame": true
+      },
+      "encoding": {
+        "crf": 24,
+        "pixFmt": "yuva420p"
+      },
+      "previous512Video": {
+        "path": "sprites/rebuilt/videos/anim_chem1_end3.webm",
+        "bytes": 300863,
+        "sha256": "f1838cef4957c94ba835d774d1db85508e5c5dfd5a52e8405b19c0f66adccf0f"
+      },
+      "exactAnchorChecks": [
+        {
+          "frame": 0,
+          "reference": "chem1_loop:0",
+          "byteExact": true
+        },
+        {
+          "frame": 17,
+          "reference": "idle1_loop:0",
+          "byteExact": true
+        }
+      ]
+    },
+    "alchemy1_start": {
+      "frames": [
+        {
+          "frame": 0,
+          "source": "sprites/raw/alchemy1_start_imagegen_sheet.png",
+          "cellBox": [
+            0,
+            0,
+            314,
+            314
+          ],
+          "nativeSize": [
+            314,
+            314
+          ],
+          "sourceLimited": true,
+          "fallback512": false,
+          "scaleNativeTo720": 2.102803738317757,
+          "placement720": [
+            30,
+            49
+          ]
+        },
+        {
+          "frame": 1,
+          "source": "sprites/raw/alchemy1_start_imagegen_sheet.png",
+          "cellBox": [
+            314,
+            0,
+            627,
+            314
+          ],
+          "nativeSize": [
+            313,
+            314
+          ],
+          "sourceLimited": true,
+          "fallback512": false,
+          "scaleNativeTo720": 2.102803738317757,
+          "placement720": [
+            31,
+            48
+          ]
+        },
+        {
+          "frame": 2,
+          "source": "sprites/raw/alchemy1_start_imagegen_sheet.png",
+          "cellBox": [
+            627,
+            0,
+            940,
+            314
+          ],
+          "nativeSize": [
+            313,
+            314
+          ],
+          "sourceLimited": true,
+          "fallback512": false,
+          "scaleNativeTo720": 2.102803738317757,
+          "placement720": [
+            31,
+            48
+          ]
+        },
+        {
+          "frame": 3,
+          "source": "sprites/raw/alchemy1_start_imagegen_sheet.png",
+          "cellBox": [
+            940,
+            0,
+            1254,
+            314
+          ],
+          "nativeSize": [
+            314,
+            314
+          ],
+          "sourceLimited": true,
+          "fallback512": false,
+          "scaleNativeTo720": 2.102803738317757,
+          "placement720": [
+            30,
+            52
+          ]
+        },
+        {
+          "frame": 4,
+          "source": "sprites/raw/alchemy1_start_imagegen_sheet.png",
+          "cellBox": [
+            0,
+            314,
+            314,
+            627
+          ],
+          "nativeSize": [
+            314,
+            313
+          ],
+          "sourceLimited": true,
+          "fallback512": false,
+          "scaleNativeTo720": 2.102803738317757,
+          "placement720": [
+            30,
+            41
+          ]
+        },
+        {
+          "frame": 5,
+          "source": "sprites/raw/alchemy1_start_imagegen_sheet.png",
+          "cellBox": [
+            314,
+            314,
+            627,
+            627
+          ],
+          "nativeSize": [
+            313,
+            313
+          ],
+          "sourceLimited": true,
+          "fallback512": false,
+          "scaleNativeTo720": 2.102803738317757,
+          "placement720": [
+            31,
+            41
+          ]
+        },
+        {
+          "frame": 6,
+          "source": "sprites/raw/alchemy1_start_imagegen_sheet.png",
+          "cellBox": [
+            627,
+            314,
+            940,
+            628
+          ],
+          "nativeSize": [
+            313,
+            314
+          ],
+          "sourceLimited": true,
+          "fallback512": false,
+          "scaleNativeTo720": 2.102803738317757,
+          "placement720": [
+            31,
+            41
+          ]
+        },
+        {
+          "frame": 7,
+          "source": "sprites/raw/alchemy1_start_imagegen_sheet.png",
+          "cellBox": [
+            940,
+            314,
+            1254,
+            627
+          ],
+          "nativeSize": [
+            314,
+            313
+          ],
+          "sourceLimited": true,
+          "fallback512": false,
+          "scaleNativeTo720": 2.102803738317757,
+          "placement720": [
+            30,
+            39
+          ]
+        },
+        {
+          "frame": 8,
+          "source": "sprites/raw/alchemy1_start_imagegen_sheet.png",
+          "cellBox": [
+            0,
+            627,
+            314,
+            940
+          ],
+          "nativeSize": [
+            314,
+            313
+          ],
+          "sourceLimited": true,
+          "fallback512": false,
+          "scaleNativeTo720": 2.102803738317757,
+          "placement720": [
+            30,
+            53
+          ]
+        },
+        {
+          "frame": 9,
+          "source": "sprites/raw/alchemy1_start_imagegen_sheet.png",
+          "cellBox": [
+            314,
+            627,
+            627,
+            940
+          ],
+          "nativeSize": [
+            313,
+            313
+          ],
+          "sourceLimited": true,
+          "fallback512": false,
+          "scaleNativeTo720": 2.102803738317757,
+          "placement720": [
+            31,
+            56
+          ]
+        },
+        {
+          "frame": 10,
+          "source": "sprites/raw/alchemy1_start_imagegen_sheet.png",
+          "cellBox": [
+            627,
+            628,
+            940,
+            940
+          ],
+          "nativeSize": [
+            313,
+            312
+          ],
+          "sourceLimited": true,
+          "fallback512": false,
+          "scaleNativeTo720": 2.102803738317757,
+          "placement720": [
+            31,
+            53
+          ]
+        },
+        {
+          "frame": 11,
+          "source": "sprites/raw/alchemy1_start_imagegen_sheet.png",
+          "cellBox": [
+            940,
+            627,
+            1254,
+            940
+          ],
+          "nativeSize": [
+            314,
+            313
+          ],
+          "sourceLimited": true,
+          "fallback512": false,
+          "scaleNativeTo720": 2.102803738317757,
+          "placement720": [
+            30,
+            52
+          ]
+        },
+        {
+          "frame": 12,
+          "source": "sprites/raw/alchemy1_start_imagegen_sheet.png",
+          "cellBox": [
+            0,
+            940,
+            314,
+            1254
+          ],
+          "nativeSize": [
+            314,
+            314
+          ],
+          "sourceLimited": true,
+          "fallback512": false,
+          "scaleNativeTo720": 2.102803738317757,
+          "placement720": [
+            30,
+            62
+          ]
+        },
+        {
+          "frame": 13,
+          "source": "sprites/raw/alchemy1_start_imagegen_sheet.png",
+          "cellBox": [
+            314,
+            940,
+            627,
+            1254
+          ],
+          "nativeSize": [
+            313,
+            314
+          ],
+          "sourceLimited": true,
+          "fallback512": false,
+          "scaleNativeTo720": 2.102803738317757,
+          "placement720": [
+            31,
+            62
+          ]
+        },
+        {
+          "frame": 14,
+          "source": "sprites/raw/alchemy1_start_imagegen_sheet.png",
+          "cellBox": [
+            627,
+            940,
+            940,
+            1254
+          ],
+          "nativeSize": [
+            313,
+            314
+          ],
+          "sourceLimited": true,
+          "fallback512": false,
+          "scaleNativeTo720": 2.102803738317757,
+          "placement720": [
+            31,
+            62
+          ]
+        },
+        {
+          "frame": 15,
+          "source": "sprites/raw/alchemy1_start_imagegen_sheet.png",
+          "cellBox": [
+            940,
+            940,
+            1254,
+            1254
+          ],
+          "nativeSize": [
+            314,
+            314
+          ],
+          "sourceLimited": true,
+          "fallback512": false,
+          "scaleNativeTo720": 2.102803738317757,
+          "placement720": [
+            30,
+            62
+          ]
+        }
+      ],
+      "uniformSourceScale512": 1.4953271028037383,
+      "count": 16,
+      "size": [
+        720,
+        720
+      ],
+      "framesTouchingCanvas": [],
+      "frameHashes": [
+        {
+          "frame": 0,
+          "sha256": "9ec4a182aef2d98aa0a2e28c7ac01036ea56a3d76af144c9dc6ad2c16571f645",
+          "bbox": [
+            189,
+            66,
+            526,
+            701
+          ]
+        },
+        {
+          "frame": 1,
+          "sha256": "dca959e44e488c718bb1f48b0cd7598610adad5ffa803237e791b17d62111e3a",
+          "bbox": [
+            146,
+            69,
+            603,
+            704
+          ]
+        },
+        {
+          "frame": 2,
+          "sha256": "70d656526b19a7db1f5c27c9939236c8a82dc6d8f866dc1f180fa5cf912e8268",
+          "bbox": [
+            155,
+            72,
+            593,
+            704
+          ]
+        },
+        {
+          "frame": 3,
+          "sha256": "ffcac0fa2bb46c1df89d96ad7e16e134f68efca26eb1d84495176b291abeea9b",
+          "bbox": [
+            103,
+            68,
+            598,
+            704
+          ]
+        },
+        {
+          "frame": 4,
+          "sha256": "425bf20cd72f8e3c6129fb55b686416c81a24dd67ee446e63751e9bd6f9e26f3",
+          "bbox": [
+            117,
+            41,
+            631,
+            699
+          ]
+        },
+        {
+          "frame": 5,
+          "sha256": "af64e50035a002579640da65059076f97ce38569a112510ac3cc3e9168a133e4",
+          "bbox": [
+            154,
+            55,
+            590,
+            699
+          ]
+        },
+        {
+          "frame": 6,
+          "sha256": "426e68af256ab47c2e1dd43156a21ee52ca52f98223f74ea1e42f6fe2a6ac03a",
+          "bbox": [
+            98,
+            41,
+            574,
+            701
+          ]
+        },
+        {
+          "frame": 7,
+          "sha256": "87c519e47e15835a14568f5791ac262ec4051c151e7bbe1af082f9be421c5d20",
+          "bbox": [
+            139,
+            40,
+            584,
+            697
+          ]
+        },
+        {
+          "frame": 8,
+          "sha256": "9efecf49463ad0afdc33b7b8069350bdfd4f9c52dfd78909375d0d8657f9cbe3",
+          "bbox": [
+            133,
+            59,
+            583,
+            703
+          ]
+        },
+        {
+          "frame": 9,
+          "sha256": "41f39f545bafea7128e6b0599e56408ed1dd6bbf113a43ec24b1d0e0a89b5b17",
+          "bbox": [
+            112,
+            62,
+            648,
+            706
+          ]
+        },
+        {
+          "frame": 10,
+          "sha256": "0641ad54037f97d3adbabac4703b385a8aedd873eefec7c9fcbf3dd560949d69",
+          "bbox": [
+            95,
+            57,
+            656,
+            705
+          ]
+        },
+        {
+          "frame": 11,
+          "sha256": "81e7ce07be00ba71a3a222a54da8afe3b2d547737a0784767e859aba004ecf2e",
+          "bbox": [
+            141,
+            52,
+            659,
+            706
+          ]
+        },
+        {
+          "frame": 12,
+          "sha256": "b147eac75b01c2bf99eb7767bdbad48cd62e24f7f1d5bd109363ed2776128c2d",
+          "bbox": [
+            145,
+            62,
+            657,
+            703
+          ]
+        },
+        {
+          "frame": 13,
+          "sha256": "a3454031d870f966a3c6d80864274b4ae37fd1d247f0ba2913456c62f456c9c3",
+          "bbox": [
+            163,
+            62,
+            660,
+            703
+          ]
+        },
+        {
+          "frame": 14,
+          "sha256": "e0608087ce116d160b2a9837f0f0d9ff897a12a92e669a4c7c293d0d72531835",
+          "bbox": [
+            142,
+            62,
+            660,
+            704
+          ]
+        },
+        {
+          "frame": 15,
+          "sha256": "da16ae31940d8621bb73b68f3d75d0e65bb25c3cc2926fd3bb1c31a27591bf36",
+          "bbox": [
+            153,
+            49,
+            644,
+            699
+          ]
+        }
+      ],
+      "fps": 10,
+      "ticks": 34,
+      "expectedDuration": 3.4,
+      "holds": {
+        "0": 2,
+        "1": 2,
+        "2": 2,
+        "3": 2,
+        "4": 2,
+        "5": 2,
+        "6": 2,
+        "7": 3,
+        "8": 2,
+        "9": 2,
+        "10": 2,
+        "11": 2,
+        "12": 2,
+        "13": 3,
+        "14": 2,
+        "15": 2
+      },
+      "repeats": [],
+      "review": {
+        "staticVisual": true,
+        "runtime": false,
+        "evidence": [
+          "sprites/hd720/qa/alchemy1_start_contact.png",
+          "sprites/hd720/qa/special_quality_compare.png"
+        ]
+      },
+      "video": "sprites/hd720/videos/anim_alchemy1_start.webm",
+      "videoSHA256": "d3530c8cfd0bfe3461e1e21804b84aaadf0dc13d69bda08aa9b0abd00bdea277",
+      "bytes": 683760,
+      "duration": 3.4,
+      "decodedAlpha": {
+        "decoder": "libvpx-vp9",
+        "frames": 34,
+        "allCornersTransparent": true,
+        "opaqueForegroundEveryFrame": true
+      },
+      "encoding": {
+        "crf": 24,
+        "pixFmt": "yuva420p"
+      },
+      "previous512Video": {
+        "path": "sprites/anim_alchemy1_start.webm",
+        "bytes": 462089,
+        "sha256": "06a7b2e2cb8bda578378531a6e4827338dd11c48f97c059a11a4795a430a6450"
+      },
+      "exactAnchors": {
+        "0": "idle1_loop:0",
+        "15": "alchemy1_loop:0"
+      },
+      "exactAnchorChecks": [
+        {
+          "frame": 0,
+          "reference": "idle1_loop:0",
+          "byteExact": true
+        },
+        {
+          "frame": 15,
+          "reference": "alchemy1_loop:0",
+          "byteExact": true
+        }
+      ]
+    },
+    "alchemy1_loop": {
+      "frames": [
+        {
+          "frame": 0,
+          "source": "sprites/raw/alchemy1_loop_imagegen_sheet.png",
+          "cellBox": [
+            0,
+            0,
+            314,
+            314
+          ],
+          "nativeSize": [
+            314,
+            314
+          ],
+          "sourceLimited": true,
+          "fallback512": false,
+          "scaleNativeTo720": 2.102803738317757,
+          "placement720": [
+            30,
+            39
+          ]
+        },
+        {
+          "frame": 1,
+          "source": "sprites/raw/alchemy1_loop_imagegen_sheet.png",
+          "cellBox": [
+            314,
+            0,
+            627,
+            316
+          ],
+          "nativeSize": [
+            313,
+            316
+          ],
+          "sourceLimited": true,
+          "fallback512": false,
+          "scaleNativeTo720": 2.102803738317757,
+          "placement720": [
+            31,
+            35
+          ]
+        },
+        {
+          "frame": 2,
+          "source": "sprites/raw/alchemy1_loop_imagegen_sheet.png",
+          "cellBox": [
+            627,
+            0,
+            940,
+            316
+          ],
+          "nativeSize": [
+            313,
+            316
+          ],
+          "sourceLimited": true,
+          "fallback512": false,
+          "scaleNativeTo720": 2.102803738317757,
+          "placement720": [
+            31,
+            37
+          ]
+        },
+        {
+          "frame": 3,
+          "source": "sprites/raw/alchemy1_loop_imagegen_sheet.png",
+          "cellBox": [
+            940,
+            0,
+            1254,
+            315
+          ],
+          "nativeSize": [
+            314,
+            315
+          ],
+          "sourceLimited": true,
+          "fallback512": false,
+          "scaleNativeTo720": 2.102803738317757,
+          "placement720": [
+            30,
+            37
+          ]
+        },
+        {
+          "frame": 4,
+          "source": "sprites/raw/alchemy1_loop_imagegen_sheet.png",
+          "cellBox": [
+            0,
+            314,
+            314,
+            627
+          ],
+          "nativeSize": [
+            314,
+            313
+          ],
+          "sourceLimited": true,
+          "fallback512": false,
+          "scaleNativeTo720": 2.102803738317757,
+          "placement720": [
+            30,
+            41
+          ]
+        },
+        {
+          "frame": 5,
+          "source": "sprites/raw/alchemy1_loop_imagegen_sheet.png",
+          "cellBox": [
+            314,
+            316,
+            627,
+            627
+          ],
+          "nativeSize": [
+            313,
+            311
+          ],
+          "sourceLimited": true,
+          "fallback512": false,
+          "scaleNativeTo720": 2.102803738317757,
+          "placement720": [
+            31,
+            45
+          ]
+        },
+        {
+          "frame": 6,
+          "source": "sprites/raw/alchemy1_loop_imagegen_sheet.png",
+          "cellBox": [
+            627,
+            316,
+            940,
+            627
+          ],
+          "nativeSize": [
+            313,
+            311
+          ],
+          "sourceLimited": true,
+          "fallback512": false,
+          "scaleNativeTo720": 2.102803738317757,
+          "placement720": [
+            31,
+            45
+          ]
+        },
+        {
+          "frame": 7,
+          "source": "sprites/raw/alchemy1_loop_imagegen_sheet.png",
+          "cellBox": [
+            940,
+            315,
+            1254,
+            627
+          ],
+          "nativeSize": [
+            314,
+            312
+          ],
+          "sourceLimited": true,
+          "fallback512": false,
+          "scaleNativeTo720": 2.102803738317757,
+          "placement720": [
+            30,
+            44
+          ]
+        },
+        {
+          "frame": 8,
+          "source": "sprites/raw/alchemy1_loop_imagegen_sheet.png",
+          "cellBox": [
+            0,
+            627,
+            314,
+            942
+          ],
+          "nativeSize": [
+            314,
+            315
+          ],
+          "sourceLimited": true,
+          "fallback512": false,
+          "scaleNativeTo720": 2.102803738317757,
+          "placement720": [
+            30,
+            37
+          ]
+        },
+        {
+          "frame": 9,
+          "source": "sprites/raw/alchemy1_loop_imagegen_sheet.png",
+          "cellBox": [
+            314,
+            627,
+            627,
+            941
+          ],
+          "nativeSize": [
+            313,
+            314
+          ],
+          "sourceLimited": true,
+          "fallback512": false,
+          "scaleNativeTo720": 2.102803738317757,
+          "placement720": [
+            31,
+            39
+          ]
+        },
+        {
+          "frame": 10,
+          "source": "sprites/raw/alchemy1_loop_imagegen_sheet.png",
+          "cellBox": [
+            627,
+            627,
+            940,
+            941
+          ],
+          "nativeSize": [
+            313,
+            314
+          ],
+          "sourceLimited": true,
+          "fallback512": false,
+          "scaleNativeTo720": 2.102803738317757,
+          "placement720": [
+            31,
+            39
+          ]
+        },
+        {
+          "frame": 11,
+          "source": "sprites/raw/alchemy1_loop_imagegen_sheet.png",
+          "cellBox": [
+            940,
+            627,
+            1254,
+            941
+          ],
+          "nativeSize": [
+            314,
+            314
+          ],
+          "sourceLimited": true,
+          "fallback512": false,
+          "scaleNativeTo720": 2.102803738317757,
+          "placement720": [
+            30,
+            39
+          ]
+        },
+        {
+          "frame": 12,
+          "source": "sprites/raw/alchemy1_loop_imagegen_sheet.png",
+          "cellBox": [
+            0,
+            942,
+            314,
+            1254
+          ],
+          "nativeSize": [
+            314,
+            312
+          ],
+          "sourceLimited": true,
+          "fallback512": false,
+          "scaleNativeTo720": 2.102803738317757,
+          "placement720": [
+            30,
+            45
+          ]
+        },
+        {
+          "frame": 13,
+          "source": "sprites/raw/alchemy1_loop_imagegen_sheet.png",
+          "cellBox": [
+            314,
+            941,
+            627,
+            1254
+          ],
+          "nativeSize": [
+            313,
+            313
+          ],
+          "sourceLimited": true,
+          "fallback512": false,
+          "scaleNativeTo720": 2.102803738317757,
+          "placement720": [
+            31,
+            44
+          ]
+        },
+        {
+          "frame": 14,
+          "source": "sprites/raw/alchemy1_loop_imagegen_sheet.png",
+          "cellBox": [
+            627,
+            941,
+            940,
+            1254
+          ],
+          "nativeSize": [
+            313,
+            313
+          ],
+          "sourceLimited": true,
+          "fallback512": false,
+          "scaleNativeTo720": 2.102803738317757,
+          "placement720": [
+            31,
+            44
+          ]
+        },
+        {
+          "frame": 15,
+          "source": "sprites/raw/alchemy1_loop_imagegen_sheet.png",
+          "cellBox": [
+            940,
+            941,
+            1254,
+            1254
+          ],
+          "nativeSize": [
+            314,
+            313
+          ],
+          "sourceLimited": true,
+          "fallback512": false,
+          "scaleNativeTo720": 2.102803738317757,
+          "placement720": [
+            30,
+            44
+          ]
+        }
+      ],
+      "uniformSourceScale512": 1.4953271028037383,
+      "count": 16,
+      "size": [
+        720,
+        720
+      ],
+      "framesTouchingCanvas": [],
+      "frameHashes": [
+        {
+          "frame": 0,
+          "sha256": "da16ae31940d8621bb73b68f3d75d0e65bb25c3cc2926fd3bb1c31a27591bf36",
+          "bbox": [
+            153,
+            49,
+            644,
+            699
+          ]
+        },
+        {
+          "frame": 1,
+          "sha256": "bc1e57dcf098262966ac4a211bd37f3f50fd1865aee4e933da6715687e315253",
+          "bbox": [
+            133,
+            45,
+            635,
+            699
+          ]
+        },
+        {
+          "frame": 2,
+          "sha256": "540cff54782daf6ba57414a02c22664d0c07047032d893f0bdbe499027316da2",
+          "bbox": [
+            112,
+            45,
+            635,
+            701
+          ]
+        },
+        {
+          "frame": 3,
+          "sha256": "41156c688e2c8794a61b0af1da9dd4122086cfdfcfbb36ce197c34b0bbaa5655",
+          "bbox": [
+            141,
+            49,
+            636,
+            699
+          ]
+        },
+        {
+          "frame": 4,
+          "sha256": "af04897935add3b2afb5b1904946f5aadd69f7f95f2d111d15bd28b265dd7a0b",
+          "bbox": [
+            151,
+            41,
+            644,
+            699
+          ]
+        },
+        {
+          "frame": 5,
+          "sha256": "0eadbdb9830f2a3603c103fb99015f5bd97d5751871f6a3389ba4941b512a269",
+          "bbox": [
+            127,
+            45,
+            637,
+            699
+          ]
+        },
+        {
+          "frame": 6,
+          "sha256": "3ec903c8a5620f745c0a54ccbb2b65d602e16479b14be32dcf1d86369b248bce",
+          "bbox": [
+            135,
+            45,
+            635,
+            699
+          ]
+        },
+        {
+          "frame": 7,
+          "sha256": "70a04d1ecb68b4f9b83a72cf6b949591c872b196e9ac8f966fc48ac147fe22f3",
+          "bbox": [
+            114,
+            44,
+            638,
+            700
+          ]
+        },
+        {
+          "frame": 8,
+          "sha256": "4ae5bb69724c18cf02d302349a51fce4dd7d1df9f655fdd726e000cb3d122222",
+          "bbox": [
+            132,
+            37,
+            644,
+            699
+          ]
+        },
+        {
+          "frame": 9,
+          "sha256": "1c5fe3dbe19eb00a1b71796e8ecf621dbd3d432d7e3608c04302bb1f78b1e382",
+          "bbox": [
+            134,
+            39,
+            639,
+            699
+          ]
+        },
+        {
+          "frame": 10,
+          "sha256": "5a0fe0b021b2ed8e9e01fa70c1d9b25a460b51b4ff88a18d7d47ced3b2901c5f",
+          "bbox": [
+            129,
+            39,
+            639,
+            699
+          ]
+        },
+        {
+          "frame": 11,
+          "sha256": "868f01773d35cc9ab566def9506d35db8c49862e9c11ff88b6a8c2a24677b7e6",
+          "bbox": [
+            141,
+            39,
+            640,
+            699
+          ]
+        },
+        {
+          "frame": 12,
+          "sha256": "c18ed1c24565c1156818deef170fe55d7b84bac25f7d618c170da9b759d2c3d8",
+          "bbox": [
+            140,
+            45,
+            640,
+            701
+          ]
+        },
+        {
+          "frame": 13,
+          "sha256": "9a926992d9ae65d28eae32d0b02b3895b521a51ff54b8778da2b1812d401db2c",
+          "bbox": [
+            138,
+            44,
+            639,
+            702
+          ]
+        },
+        {
+          "frame": 14,
+          "sha256": "7a7885c0c2bb0fe01418dd9cf466c01dfea7752756c4cb0b0e7baf2c2f99f4ca",
+          "bbox": [
+            131,
+            44,
+            637,
+            702
+          ]
+        },
+        {
+          "frame": 15,
+          "sha256": "da16ae31940d8621bb73b68f3d75d0e65bb25c3cc2926fd3bb1c31a27591bf36",
+          "bbox": [
+            153,
+            49,
+            644,
+            699
+          ]
+        }
+      ],
+      "fps": 12,
+      "ticks": 32,
+      "expectedDuration": 2.6666666666666665,
+      "holds": {
+        "0": 2,
+        "1": 2,
+        "2": 2,
+        "3": 2,
+        "4": 2,
+        "5": 2,
+        "6": 2,
+        "7": 2,
+        "8": 2,
+        "9": 2,
+        "10": 2,
+        "11": 2,
+        "12": 2,
+        "13": 2,
+        "14": 2,
+        "15": 2
+      },
+      "repeats": [],
+      "review": {
+        "staticVisual": true,
+        "runtime": false,
+        "evidence": [
+          "sprites/hd720/qa/alchemy1_loop_contact.png",
+          "sprites/hd720/qa/special_quality_compare.png"
+        ]
+      },
+      "video": "sprites/hd720/videos/anim_alchemy1_loop.webm",
+      "videoSHA256": "6cccbc4da1d7d24310c32ed594424b6b7a527c0e029bc9e1ef5b45fc880aa3a3",
+      "bytes": 552273,
+      "duration": 2.666,
+      "decodedAlpha": {
+        "decoder": "libvpx-vp9",
+        "frames": 32,
+        "allCornersTransparent": true,
+        "opaqueForegroundEveryFrame": true
+      },
+      "encoding": {
+        "crf": 24,
+        "pixFmt": "yuva420p"
+      },
+      "previous512Video": {
+        "path": "sprites/anim_alchemy1_loop.webm",
+        "bytes": 373298,
+        "sha256": "16b3d8a5d913d28d244c761d3926e581bd382dd87dff7b3e1d5123667f782800"
+      },
+      "exactAnchors": {
+        "15": "alchemy1_loop:0"
+      },
+      "exactAnchorChecks": [
+        {
+          "frame": 15,
+          "reference": "alchemy1_loop:0",
+          "byteExact": true
+        }
+      ]
+    },
+    "alchemy1_end1": {
+      "frames": [
+        {
+          "frame": 0,
+          "source": "sprites/raw/alchemy1_end1_imagegen_sheet_v2.png",
+          "cellBox": [
+            0,
+            0,
+            314,
+            315
+          ],
+          "nativeSize": [
+            314,
+            315
+          ],
+          "sourceLimited": true,
+          "fallback512": false,
+          "scaleNativeTo720": 2.102803738317757,
+          "placement720": [
+            30,
+            37
+          ]
+        },
+        {
+          "frame": 1,
+          "source": "sprites/raw/alchemy1_end1_imagegen_sheet_v2.png",
+          "cellBox": [
+            314,
+            0,
+            627,
+            315
+          ],
+          "nativeSize": [
+            313,
+            315
+          ],
+          "sourceLimited": true,
+          "fallback512": false,
+          "scaleNativeTo720": 2.102803738317757,
+          "placement720": [
+            31,
+            37
+          ]
+        },
+        {
+          "frame": 2,
+          "source": "sprites/raw/alchemy1_end1_imagegen_sheet_v2.png",
+          "cellBox": [
+            627,
+            0,
+            940,
+            315
+          ],
+          "nativeSize": [
+            313,
+            315
+          ],
+          "sourceLimited": true,
+          "fallback512": false,
+          "scaleNativeTo720": 2.102803738317757,
+          "placement720": [
+            31,
+            37
+          ]
+        },
+        {
+          "frame": 3,
+          "source": "sprites/raw/alchemy1_end1_imagegen_sheet_v2.png",
+          "cellBox": [
+            940,
+            0,
+            1254,
+            313
+          ],
+          "nativeSize": [
+            314,
+            313
+          ],
+          "sourceLimited": true,
+          "fallback512": false,
+          "scaleNativeTo720": 2.102803738317757,
+          "placement720": [
+            30,
+            39
+          ]
+        },
+        {
+          "frame": 4,
+          "source": "sprites/raw/alchemy1_end1_imagegen_sheet_v2.png",
+          "cellBox": [
+            0,
+            315,
+            314,
+            625
+          ],
+          "nativeSize": [
+            314,
+            310
+          ],
+          "sourceLimited": true,
+          "fallback512": false,
+          "scaleNativeTo720": 2.102803738317757,
+          "placement720": [
+            30,
+            45
+          ]
+        },
+        {
+          "frame": 5,
+          "source": "sprites/raw/alchemy1_end1_imagegen_sheet_v2.png",
+          "cellBox": [
+            314,
+            315,
+            627,
+            626
+          ],
+          "nativeSize": [
+            313,
+            311
+          ],
+          "sourceLimited": true,
+          "fallback512": false,
+          "scaleNativeTo720": 2.102803738317757,
+          "placement720": [
+            31,
+            48
+          ]
+        },
+        {
+          "frame": 6,
+          "source": "sprites/raw/alchemy1_end1_imagegen_sheet_v2.png",
+          "cellBox": [
+            627,
+            315,
+            940,
+            627
+          ],
+          "nativeSize": [
+            313,
+            312
+          ],
+          "sourceLimited": true,
+          "fallback512": false,
+          "scaleNativeTo720": 2.102803738317757,
+          "placement720": [
+            31,
+            44
+          ]
+        },
+        {
+          "frame": 7,
+          "source": "sprites/raw/alchemy1_end1_imagegen_sheet_v2.png",
+          "cellBox": [
+            940,
+            313,
+            1254,
+            627
+          ],
+          "nativeSize": [
+            314,
+            314
+          ],
+          "sourceLimited": true,
+          "fallback512": false,
+          "scaleNativeTo720": 2.102803738317757,
+          "placement720": [
+            30,
+            41
+          ]
+        },
+        {
+          "frame": 8,
+          "source": "sprites/raw/alchemy1_end1_imagegen_sheet_v2.png",
+          "cellBox": [
+            0,
+            625,
+            314,
+            939
+          ],
+          "nativeSize": [
+            314,
+            314
+          ],
+          "sourceLimited": true,
+          "fallback512": false,
+          "scaleNativeTo720": 2.102803738317757,
+          "placement720": [
+            30,
+            39
+          ]
+        },
+        {
+          "frame": 9,
+          "source": "sprites/raw/alchemy1_end1_imagegen_sheet_v2.png",
+          "cellBox": [
+            314,
+            626,
+            627,
+            940
+          ],
+          "nativeSize": [
+            313,
+            314
+          ],
+          "sourceLimited": true,
+          "fallback512": false,
+          "scaleNativeTo720": 2.102803738317757,
+          "placement720": [
+            31,
+            44
+          ]
+        },
+        {
+          "frame": 10,
+          "source": "sprites/raw/alchemy1_end1_imagegen_sheet_v2.png",
+          "cellBox": [
+            627,
+            627,
+            940,
+            940
+          ],
+          "nativeSize": [
+            313,
+            313
+          ],
+          "sourceLimited": true,
+          "fallback512": false,
+          "scaleNativeTo720": 2.102803738317757,
+          "placement720": [
+            31,
+            44
+          ]
+        },
+        {
+          "frame": 11,
+          "source": "sprites/raw/alchemy1_end1_imagegen_sheet_v2.png",
+          "cellBox": [
+            940,
+            627,
+            1254,
+            940
+          ],
+          "nativeSize": [
+            314,
+            313
+          ],
+          "sourceLimited": true,
+          "fallback512": false,
+          "scaleNativeTo720": 2.102803738317757,
+          "placement720": [
+            30,
+            44
+          ]
+        },
+        {
+          "frame": 12,
+          "source": "sprites/raw/alchemy1_end1_imagegen_sheet_v2.png",
+          "cellBox": [
+            0,
+            939,
+            314,
+            1254
+          ],
+          "nativeSize": [
+            314,
+            315
+          ],
+          "sourceLimited": true,
+          "fallback512": false,
+          "scaleNativeTo720": 2.102803738317757,
+          "placement720": [
+            30,
+            56
+          ]
+        },
+        {
+          "frame": 13,
+          "source": "sprites/raw/alchemy1_end1_imagegen_sheet_v2.png",
+          "cellBox": [
+            314,
+            940,
+            627,
+            1254
+          ],
+          "nativeSize": [
+            313,
+            314
+          ],
+          "sourceLimited": true,
+          "fallback512": false,
+          "scaleNativeTo720": 2.102803738317757,
+          "placement720": [
+            31,
+            60
+          ]
+        },
+        {
+          "frame": 14,
+          "source": "sprites/raw/alchemy1_end1_imagegen_sheet_v2.png",
+          "cellBox": [
+            627,
+            940,
+            940,
+            1254
+          ],
+          "nativeSize": [
+            313,
+            314
+          ],
+          "sourceLimited": true,
+          "fallback512": false,
+          "scaleNativeTo720": 2.102803738317757,
+          "placement720": [
+            31,
+            58
+          ]
+        },
+        {
+          "frame": 15,
+          "source": "sprites/raw/alchemy1_end1_imagegen_sheet_v2.png",
+          "cellBox": [
+            940,
+            940,
+            1254,
+            1254
+          ],
+          "nativeSize": [
+            314,
+            314
+          ],
+          "sourceLimited": true,
+          "fallback512": false,
+          "scaleNativeTo720": 2.102803738317757,
+          "placement720": [
+            30,
+            58
+          ]
+        }
+      ],
+      "uniformSourceScale512": 1.4953271028037383,
+      "count": 16,
+      "size": [
+        720,
+        720
+      ],
+      "framesTouchingCanvas": [],
+      "frameHashes": [
+        {
+          "frame": 0,
+          "sha256": "da16ae31940d8621bb73b68f3d75d0e65bb25c3cc2926fd3bb1c31a27591bf36",
+          "bbox": [
+            153,
+            49,
+            644,
+            699
+          ]
+        },
+        {
+          "frame": 1,
+          "sha256": "4fba635362ddc93b262f81f817952ccb76348dd7db082597cfd699e43bcf3b4d",
+          "bbox": [
+            129,
+            51,
+            650,
+            699
+          ]
+        },
+        {
+          "frame": 2,
+          "sha256": "8cef308d54e342bbfeeb12a4d8a4dbab493e53300d8ce5e10108db59600b9401",
+          "bbox": [
+            109,
+            51,
+            645,
+            699
+          ]
+        },
+        {
+          "frame": 3,
+          "sha256": "46070446da7a9ba344342739793e226d269838a6cf85aa37506af889a12b5bda",
+          "bbox": [
+            99,
+            45,
+            649,
+            697
+          ]
+        },
+        {
+          "frame": 4,
+          "sha256": "fbb5e418d8dd9b891d4e42f78a23ac8403772b7467df126283d004558221cfe1",
+          "bbox": [
+            88,
+            49,
+            644,
+            697
+          ]
+        },
+        {
+          "frame": 5,
+          "sha256": "8ff8b8d602b472ab1a6fb224f9c98bec30785b83736bcd25419986de3ecabeab",
+          "bbox": [
+            104,
+            48,
+            658,
+            702
+          ]
+        },
+        {
+          "frame": 6,
+          "sha256": "00614269d5506b96846bfb6cce82ec5e5d9a63d284d9b6be2f0ee995ad59a690",
+          "bbox": [
+            125,
+            44,
+            650,
+            700
+          ]
+        },
+        {
+          "frame": 7,
+          "sha256": "5a9f715566003786f67dadfd6f099dba878d08f1efeeab2efea653cdf14c8de7",
+          "bbox": [
+            90,
+            41,
+            649,
+            701
+          ]
+        },
+        {
+          "frame": 8,
+          "sha256": "6d07d05e8ed4dac11175fd6ca2585e5e118e7fc05bf6962e3123ba1fd885a79e",
+          "bbox": [
+            118,
+            39,
+            655,
+            699
+          ]
+        },
+        {
+          "frame": 9,
+          "sha256": "ed485f73515484017c7d7331d85499675181c9e4d94be43cf8a1d941a2ca37c9",
+          "bbox": [
+            119,
+            44,
+            666,
+            704
+          ]
+        },
+        {
+          "frame": 10,
+          "sha256": "9f6a14b8d57dedf37c9d926727cbf8bd304af3614a4c52cc64fe0f7e204684ef",
+          "bbox": [
+            104,
+            44,
+            646,
+            702
+          ]
+        },
+        {
+          "frame": 11,
+          "sha256": "49f8a973520982314ad051995c7eb13c13fbd4612a6b85332b8ba9fc8d9c63ad",
+          "bbox": [
+            93,
+            58,
+            649,
+            702
+          ]
+        },
+        {
+          "frame": 12,
+          "sha256": "ca0aac9f26c0e9c59f93c1a917266f31de560b90bc8e283a7330eb69a5cf083e",
+          "bbox": [
+            88,
+            56,
+            652,
+            704
+          ]
+        },
+        {
+          "frame": 13,
+          "sha256": "64f57cf03311b663ac3bacddeaa47e42c58b7df6b66d25211aa37383c672283d",
+          "bbox": [
+            106,
+            60,
+            656,
+            704
+          ]
+        },
+        {
+          "frame": 14,
+          "sha256": "35cbb03c03fe781065920014ce87adc002c9d78b3e9f0584ca4f3f82f095be8a",
+          "bbox": [
+            102,
+            58,
+            641,
+            704
+          ]
+        },
+        {
+          "frame": 15,
+          "sha256": "da16ae31940d8621bb73b68f3d75d0e65bb25c3cc2926fd3bb1c31a27591bf36",
+          "bbox": [
+            153,
+            49,
+            644,
+            699
+          ]
+        }
+      ],
+      "fps": 12,
+      "ticks": 40,
+      "expectedDuration": 3.3333333333333335,
+      "holds": {
+        "0": 2,
+        "1": 2,
+        "2": 2,
+        "3": 2,
+        "4": 2,
+        "5": 2,
+        "6": 2,
+        "7": 4,
+        "8": 5,
+        "9": 4,
+        "10": 3,
+        "11": 2,
+        "12": 2,
+        "13": 2,
+        "14": 2,
+        "15": 2
+      },
+      "repeats": [],
+      "review": {
+        "staticVisual": true,
+        "runtime": false,
+        "evidence": [
+          "sprites/hd720/qa/alchemy1_end1_contact.png",
+          "sprites/hd720/qa/special_quality_compare.png"
+        ]
+      },
+      "video": "sprites/hd720/videos/anim_alchemy1_end1.webm",
+      "videoSHA256": "2431c3646eab1a34ed47b0eea420d9483bc9465fbe1bf369e085df0838028e13",
+      "bytes": 650025,
+      "duration": 3.333,
+      "decodedAlpha": {
+        "decoder": "libvpx-vp9",
+        "frames": 40,
+        "allCornersTransparent": true,
+        "opaqueForegroundEveryFrame": true
+      },
+      "encoding": {
+        "crf": 24,
+        "pixFmt": "yuva420p"
+      },
+      "previous512Video": {
+        "path": "sprites/anim_alchemy1_end1.webm",
+        "bytes": 444157,
+        "sha256": "e5fe0c0e07aa0c0ef0d42ae802a8d9b13f7d2829d2a5789c9cf283785d7c9c8b"
+      },
+      "exactAnchors": {
+        "0": "alchemy1_loop:0",
+        "15": "alchemy1_loop:0"
+      },
+      "exactAnchorChecks": [
+        {
+          "frame": 0,
+          "reference": "alchemy1_loop:0",
+          "byteExact": true
+        },
+        {
+          "frame": 15,
+          "reference": "alchemy1_loop:0",
+          "byteExact": true
+        }
+      ]
+    },
+    "alchemy1_end2": {
+      "frames": [
+        {
+          "frame": 0,
+          "source": "sprites/raw/alchemy1_end2_imagegen_sheet.png",
+          "cellBox": [
+            0,
+            0,
+            314,
+            314
+          ],
+          "nativeSize": [
+            314,
+            314
+          ],
+          "sourceLimited": true,
+          "fallback512": false,
+          "scaleNativeTo720": 2.102803738317757,
+          "placement720": [
+            30,
+            45
+          ]
+        },
+        {
+          "frame": 1,
+          "source": "sprites/raw/alchemy1_end2_imagegen_sheet.png",
+          "cellBox": [
+            314,
+            0,
+            627,
+            313
+          ],
+          "nativeSize": [
+            313,
+            313
+          ],
+          "sourceLimited": true,
+          "fallback512": false,
+          "scaleNativeTo720": 2.102803738317757,
+          "placement720": [
+            31,
+            45
+          ]
+        },
+        {
+          "frame": 2,
+          "source": "sprites/raw/alchemy1_end2_imagegen_sheet.png",
+          "cellBox": [
+            627,
+            0,
+            940,
+            313
+          ],
+          "nativeSize": [
+            313,
+            313
+          ],
+          "sourceLimited": true,
+          "fallback512": false,
+          "scaleNativeTo720": 2.102803738317757,
+          "placement720": [
+            31,
+            45
+          ]
+        },
+        {
+          "frame": 3,
+          "source": "sprites/raw/alchemy1_end2_imagegen_sheet.png",
+          "cellBox": [
+            940,
+            0,
+            1254,
+            314
+          ],
+          "nativeSize": [
+            314,
+            314
+          ],
+          "sourceLimited": true,
+          "fallback512": false,
+          "scaleNativeTo720": 2.102803738317757,
+          "placement720": [
+            30,
+            45
+          ]
+        },
+        {
+          "frame": 4,
+          "source": "sprites/raw/alchemy1_end2_imagegen_sheet.png",
+          "cellBox": [
+            0,
+            314,
+            314,
+            625
+          ],
+          "nativeSize": [
+            314,
+            311
+          ],
+          "sourceLimited": true,
+          "fallback512": false,
+          "scaleNativeTo720": 2.102803738317757,
+          "placement720": [
+            30,
+            52
+          ]
+        },
+        {
+          "frame": 5,
+          "source": "sprites/raw/alchemy1_end2_imagegen_sheet.png",
+          "cellBox": [
+            314,
+            313,
+            627,
+            625
+          ],
+          "nativeSize": [
+            313,
+            312
+          ],
+          "sourceLimited": true,
+          "fallback512": false,
+          "scaleNativeTo720": 2.102803738317757,
+          "placement720": [
+            31,
+            49
+          ]
+        },
+        {
+          "frame": 6,
+          "source": "sprites/raw/alchemy1_end2_imagegen_sheet.png",
+          "cellBox": [
+            627,
+            313,
+            940,
+            625
+          ],
+          "nativeSize": [
+            313,
+            312
+          ],
+          "sourceLimited": true,
+          "fallback512": false,
+          "scaleNativeTo720": 2.102803738317757,
+          "placement720": [
+            31,
+            49
+          ]
+        },
+        {
+          "frame": 7,
+          "source": "sprites/raw/alchemy1_end2_imagegen_sheet.png",
+          "cellBox": [
+            940,
+            314,
+            1254,
+            626
+          ],
+          "nativeSize": [
+            314,
+            312
+          ],
+          "sourceLimited": true,
+          "fallback512": false,
+          "scaleNativeTo720": 2.102803738317757,
+          "placement720": [
+            30,
+            52
+          ]
+        },
+        {
+          "frame": 8,
+          "source": "sprites/raw/alchemy1_end2_imagegen_sheet.png",
+          "cellBox": [
+            0,
+            625,
+            314,
+            936
+          ],
+          "nativeSize": [
+            314,
+            311
+          ],
+          "sourceLimited": true,
+          "fallback512": false,
+          "scaleNativeTo720": 2.102803738317757,
+          "placement720": [
+            30,
+            48
+          ]
+        },
+        {
+          "frame": 9,
+          "source": "sprites/raw/alchemy1_end2_imagegen_sheet.png",
+          "cellBox": [
+            314,
+            625,
+            627,
+            937
+          ],
+          "nativeSize": [
+            313,
+            312
+          ],
+          "sourceLimited": true,
+          "fallback512": false,
+          "scaleNativeTo720": 2.102803738317757,
+          "placement720": [
+            31,
+            48
+          ]
+        },
+        {
+          "frame": 10,
+          "source": "sprites/raw/alchemy1_end2_imagegen_sheet.png",
+          "cellBox": [
+            627,
+            625,
+            940,
+            936
+          ],
+          "nativeSize": [
+            313,
+            311
+          ],
+          "sourceLimited": true,
+          "fallback512": false,
+          "scaleNativeTo720": 2.102803738317757,
+          "placement720": [
+            31,
+            48
+          ]
+        },
+        {
+          "frame": 11,
+          "source": "sprites/raw/alchemy1_end2_imagegen_sheet.png",
+          "cellBox": [
+            940,
+            626,
+            1254,
+            937
+          ],
+          "nativeSize": [
+            314,
+            311
+          ],
+          "sourceLimited": true,
+          "fallback512": false,
+          "scaleNativeTo720": 2.102803738317757,
+          "placement720": [
+            30,
+            49
+          ]
+        },
+        {
+          "frame": 12,
+          "source": "sprites/raw/alchemy1_end2_imagegen_sheet.png",
+          "cellBox": [
+            0,
+            936,
+            314,
+            1254
+          ],
+          "nativeSize": [
+            314,
+            318
+          ],
+          "sourceLimited": true,
+          "fallback512": false,
+          "scaleNativeTo720": 2.102803738317757,
+          "placement720": [
+            30,
+            44
+          ]
+        },
+        {
+          "frame": 13,
+          "source": "sprites/raw/alchemy1_end2_imagegen_sheet.png",
+          "cellBox": [
+            314,
+            937,
+            627,
+            1254
+          ],
+          "nativeSize": [
+            313,
+            317
+          ],
+          "sourceLimited": true,
+          "fallback512": false,
+          "scaleNativeTo720": 2.102803738317757,
+          "placement720": [
+            31,
+            45
+          ]
+        },
+        {
+          "frame": 14,
+          "source": "sprites/raw/alchemy1_end2_imagegen_sheet.png",
+          "cellBox": [
+            627,
+            936,
+            940,
+            1254
+          ],
+          "nativeSize": [
+            313,
+            318
+          ],
+          "sourceLimited": true,
+          "fallback512": false,
+          "scaleNativeTo720": 2.102803738317757,
+          "placement720": [
+            31,
+            41
+          ]
+        },
+        {
+          "frame": 15,
+          "source": "sprites/raw/alchemy1_end2_imagegen_sheet.png",
+          "cellBox": [
+            940,
+            937,
+            1254,
+            1254
+          ],
+          "nativeSize": [
+            314,
+            317
+          ],
+          "sourceLimited": true,
+          "fallback512": false,
+          "scaleNativeTo720": 2.102803738317757,
+          "placement720": [
+            30,
+            44
+          ]
+        }
+      ],
+      "uniformSourceScale512": 1.4953271028037383,
+      "count": 16,
+      "size": [
+        720,
+        720
+      ],
+      "framesTouchingCanvas": [],
+      "frameHashes": [
+        {
+          "frame": 0,
+          "sha256": "da16ae31940d8621bb73b68f3d75d0e65bb25c3cc2926fd3bb1c31a27591bf36",
+          "bbox": [
+            153,
+            49,
+            644,
+            699
+          ]
+        },
+        {
+          "frame": 1,
+          "sha256": "d52276f6081b13fc10d66e60b7215e2603d2f69b0469aa439bb48400de68e696",
+          "bbox": [
+            94,
+            45,
+            608,
+            703
+          ]
+        },
+        {
+          "frame": 2,
+          "sha256": "5151ac3a65dc1c4b647bb1e32ff3699df80d9c1267b5d3dfdbf4efb842006ac1",
+          "bbox": [
+            39,
+            45,
+            637,
+            703
+          ]
+        },
+        {
+          "frame": 3,
+          "sha256": "ad531df65b349bc7fa5767550999138e7b4e9123c543857e94fe5494134fc97c",
+          "bbox": [
+            40,
+            61,
+            650,
+            705
+          ]
+        },
+        {
+          "frame": 4,
+          "sha256": "12f2b31bf531afd3e4cb4c40b0c189849471954f45e3450fc6905468a42bce7c",
+          "bbox": [
+            46,
+            52,
+            680,
+            704
+          ]
+        },
+        {
+          "frame": 5,
+          "sha256": "83116edf2e3dec830cbfadc34cf6f6d3bdedd8b8582dd8afdd651b21df11093a",
+          "bbox": [
+            100,
+            49,
+            648,
+            703
+          ]
+        },
+        {
+          "frame": 6,
+          "sha256": "aa842ab8d8864cef53849c0d0edbf839e723a4bdac01e9d1cb6a9142ff642e13",
+          "bbox": [
+            62,
+            49,
+            637,
+            704
+          ]
+        },
+        {
+          "frame": 7,
+          "sha256": "3e3ae118fb2a19202e06fc834138019814618c43a500fe7fab62146e656f0fbf",
+          "bbox": [
+            86,
+            53,
+            647,
+            704
+          ]
+        },
+        {
+          "frame": 8,
+          "sha256": "fad87b4fc1a221d8054b42a68b7ba784e1d13aacbf159ca1b29d6abd32c416f7",
+          "bbox": [
+            73,
+            48,
+            647,
+            702
+          ]
+        },
+        {
+          "frame": 9,
+          "sha256": "5ce486aaf0cc769b96d718b933c19bb4b0e62bc5db3b19005d05e931f85034f1",
+          "bbox": [
+            87,
+            48,
+            631,
+            704
+          ]
+        },
+        {
+          "frame": 10,
+          "sha256": "472b9700d41b4d3d0464b9354f9d822f548d8d45e65cefc75a500b6c9a1cc80b",
+          "bbox": [
+            51,
+            48,
+            637,
+            702
+          ]
+        },
+        {
+          "frame": 11,
+          "sha256": "1069b97baed61d10cebc4c1ff7b65f27e4fc79c87d0ac1e16eafd7c5bbc8e6f9",
+          "bbox": [
+            53,
+            49,
+            628,
+            703
+          ]
+        },
+        {
+          "frame": 12,
+          "sha256": "49a2352c9265fd534dcbdc837f45bb2e13fa4decc979e45d8a6f9bf03b3f917e",
+          "bbox": [
+            80,
+            44,
+            629,
+            706
+          ]
+        },
+        {
+          "frame": 13,
+          "sha256": "6889b88eb68cbacc5034035fd0681ddc8cdb0a0bb43b6576eb9fd2ade6704a5a",
+          "bbox": [
+            87,
+            45,
+            627,
+            705
+          ]
+        },
+        {
+          "frame": 14,
+          "sha256": "83099bc754ba489cb3029fc56135a88c602c8f9410a9569795a5af1b60d109be",
+          "bbox": [
+            79,
+            41,
+            612,
+            704
+          ]
+        },
+        {
+          "frame": 15,
+          "sha256": "da16ae31940d8621bb73b68f3d75d0e65bb25c3cc2926fd3bb1c31a27591bf36",
+          "bbox": [
+            153,
+            49,
+            644,
+            699
+          ]
+        }
+      ],
+      "fps": 12,
+      "ticks": 40,
+      "expectedDuration": 3.3333333333333335,
+      "holds": {
+        "0": 2,
+        "1": 2,
+        "2": 2,
+        "3": 2,
+        "4": 2,
+        "5": 5,
+        "6": 4,
+        "7": 4,
+        "8": 2,
+        "9": 2,
+        "10": 2,
+        "11": 2,
+        "12": 3,
+        "13": 2,
+        "14": 2,
+        "15": 2
+      },
+      "repeats": [],
+      "review": {
+        "staticVisual": true,
+        "runtime": false,
+        "evidence": [
+          "sprites/hd720/qa/alchemy1_end2_contact.png",
+          "sprites/hd720/qa/special_quality_compare.png"
+        ]
+      },
+      "video": "sprites/hd720/videos/anim_alchemy1_end2.webm",
+      "videoSHA256": "248f354797fe12ac4729ab5c82f0120e94c1d8db48703bb0c5209dd2cd710558",
+      "bytes": 701058,
+      "duration": 3.333,
+      "decodedAlpha": {
+        "decoder": "libvpx-vp9",
+        "frames": 40,
+        "allCornersTransparent": true,
+        "opaqueForegroundEveryFrame": true
+      },
+      "encoding": {
+        "crf": 24,
+        "pixFmt": "yuva420p"
+      },
+      "previous512Video": {
+        "path": "sprites/anim_alchemy1_end2.webm",
+        "bytes": 478761,
+        "sha256": "e4620fd31e2bc7caaa97b79ceccf29fff3aff9f8399bb81e838364cc68cdeb66"
+      },
+      "exactAnchors": {
+        "0": "alchemy1_loop:0",
+        "15": "alchemy1_loop:0"
+      },
+      "exactAnchorChecks": [
+        {
+          "frame": 0,
+          "reference": "alchemy1_loop:0",
+          "byteExact": true
+        },
+        {
+          "frame": 15,
+          "reference": "alchemy1_loop:0",
+          "byteExact": true
+        }
+      ]
+    },
+    "alchemy1_end3": {
+      "frames": [
+        {
+          "frame": 0,
+          "source": "sprites/raw/alchemy1_end3_imagegen_sheet.png",
+          "cellBox": [
+            0,
+            0,
+            314,
+            319
+          ],
+          "nativeSize": [
+            314,
+            319
+          ],
+          "sourceLimited": true,
+          "fallback512": false,
+          "scaleNativeTo720": 2.102803738317757,
+          "placement720": [
+            30,
+            28
+          ]
+        },
+        {
+          "frame": 1,
+          "source": "sprites/raw/alchemy1_end3_imagegen_sheet.png",
+          "cellBox": [
+            314,
+            0,
+            627,
+            318
+          ],
+          "nativeSize": [
+            313,
+            318
+          ],
+          "sourceLimited": true,
+          "fallback512": false,
+          "scaleNativeTo720": 2.102803738317757,
+          "placement720": [
+            31,
+            31
+          ]
+        },
+        {
+          "frame": 2,
+          "source": "sprites/raw/alchemy1_end3_imagegen_sheet.png",
+          "cellBox": [
+            627,
+            0,
+            940,
+            318
+          ],
+          "nativeSize": [
+            313,
+            318
+          ],
+          "sourceLimited": true,
+          "fallback512": false,
+          "scaleNativeTo720": 2.102803738317757,
+          "placement720": [
+            31,
+            31
+          ]
+        },
+        {
+          "frame": 3,
+          "source": "sprites/raw/alchemy1_end3_imagegen_sheet.png",
+          "cellBox": [
+            940,
+            0,
+            1254,
+            318
+          ],
+          "nativeSize": [
+            314,
+            318
+          ],
+          "sourceLimited": true,
+          "fallback512": false,
+          "scaleNativeTo720": 2.102803738317757,
+          "placement720": [
+            30,
+            31
+          ]
+        },
+        {
+          "frame": 4,
+          "source": "sprites/raw/alchemy1_end3_imagegen_sheet.png",
+          "cellBox": [
+            0,
+            319,
+            314,
+            630
+          ],
+          "nativeSize": [
+            314,
+            311
+          ],
+          "sourceLimited": true,
+          "fallback512": false,
+          "scaleNativeTo720": 2.102803738317757,
+          "placement720": [
+            30,
+            45
+          ]
+        },
+        {
+          "frame": 5,
+          "source": "sprites/raw/alchemy1_end3_imagegen_sheet.png",
+          "cellBox": [
+            314,
+            318,
+            627,
+            630
+          ],
+          "nativeSize": [
+            313,
+            312
+          ],
+          "sourceLimited": true,
+          "fallback512": false,
+          "scaleNativeTo720": 2.102803738317757,
+          "placement720": [
+            31,
+            44
+          ]
+        },
+        {
+          "frame": 6,
+          "source": "sprites/raw/alchemy1_end3_imagegen_sheet.png",
+          "cellBox": [
+            627,
+            318,
+            940,
+            630
+          ],
+          "nativeSize": [
+            313,
+            312
+          ],
+          "sourceLimited": true,
+          "fallback512": false,
+          "scaleNativeTo720": 2.102803738317757,
+          "placement720": [
+            31,
+            44
+          ]
+        },
+        {
+          "frame": 7,
+          "source": "sprites/raw/alchemy1_end3_imagegen_sheet.png",
+          "cellBox": [
+            940,
+            318,
+            1254,
+            630
+          ],
+          "nativeSize": [
+            314,
+            312
+          ],
+          "sourceLimited": true,
+          "fallback512": false,
+          "scaleNativeTo720": 2.102803738317757,
+          "placement720": [
+            30,
+            44
+          ]
+        },
+        {
+          "frame": 8,
+          "source": "sprites/raw/alchemy1_end3_imagegen_sheet.png",
+          "cellBox": [
+            0,
+            630,
+            314,
+            943
+          ],
+          "nativeSize": [
+            314,
+            313
+          ],
+          "sourceLimited": true,
+          "fallback512": false,
+          "scaleNativeTo720": 2.102803738317757,
+          "placement720": [
+            30,
+            41
+          ]
+        },
+        {
+          "frame": 9,
+          "source": "sprites/raw/alchemy1_end3_imagegen_sheet.png",
+          "cellBox": [
+            314,
+            630,
+            627,
+            942
+          ],
+          "nativeSize": [
+            313,
+            312
+          ],
+          "sourceLimited": true,
+          "fallback512": false,
+          "scaleNativeTo720": 2.102803738317757,
+          "placement720": [
+            31,
+            41
+          ]
+        },
+        {
+          "frame": 10,
+          "source": "sprites/raw/alchemy1_end3_imagegen_sheet.png",
+          "cellBox": [
+            627,
+            630,
+            940,
+            942
+          ],
+          "nativeSize": [
+            313,
+            312
+          ],
+          "sourceLimited": true,
+          "fallback512": false,
+          "scaleNativeTo720": 2.102803738317757,
+          "placement720": [
+            31,
+            44
+          ]
+        },
+        {
+          "frame": 11,
+          "source": "sprites/raw/alchemy1_end3_imagegen_sheet.png",
+          "cellBox": [
+            940,
+            630,
+            1254,
+            943
+          ],
+          "nativeSize": [
+            314,
+            313
+          ],
+          "sourceLimited": true,
+          "fallback512": false,
+          "scaleNativeTo720": 2.102803738317757,
+          "placement720": [
+            30,
+            41
+          ]
+        },
+        {
+          "frame": 12,
+          "source": "sprites/raw/alchemy1_end3_imagegen_sheet.png",
+          "cellBox": [
+            0,
+            943,
+            314,
+            1254
+          ],
+          "nativeSize": [
+            314,
+            311
+          ],
+          "sourceLimited": true,
+          "fallback512": false,
+          "scaleNativeTo720": 2.102803738317757,
+          "placement720": [
+            30,
+            69
+          ]
+        },
+        {
+          "frame": 13,
+          "source": "sprites/raw/alchemy1_end3_imagegen_sheet.png",
+          "cellBox": [
+            314,
+            942,
+            627,
+            1254
+          ],
+          "nativeSize": [
+            313,
+            312
+          ],
+          "sourceLimited": true,
+          "fallback512": false,
+          "scaleNativeTo720": 2.102803738317757,
+          "placement720": [
+            31,
+            66
+          ]
+        },
+        {
+          "frame": 14,
+          "source": "sprites/raw/alchemy1_end3_imagegen_sheet.png",
+          "cellBox": [
+            627,
+            942,
+            940,
+            1254
+          ],
+          "nativeSize": [
+            313,
+            312
+          ],
+          "sourceLimited": true,
+          "fallback512": false,
+          "scaleNativeTo720": 2.102803738317757,
+          "placement720": [
+            31,
+            65
+          ]
+        },
+        {
+          "frame": 15,
+          "source": "sprites/raw/alchemy1_end3_imagegen_sheet.png",
+          "cellBox": [
+            940,
+            943,
+            1254,
+            1254
+          ],
+          "nativeSize": [
+            314,
+            311
+          ],
+          "sourceLimited": true,
+          "fallback512": false,
+          "scaleNativeTo720": 2.102803738317757,
+          "placement720": [
+            30,
+            69
+          ]
+        }
+      ],
+      "uniformSourceScale512": 1.4953271028037383,
+      "count": 16,
+      "size": [
+        720,
+        720
+      ],
+      "framesTouchingCanvas": [],
+      "frameHashes": [
+        {
+          "frame": 0,
+          "sha256": "da16ae31940d8621bb73b68f3d75d0e65bb25c3cc2926fd3bb1c31a27591bf36",
+          "bbox": [
+            153,
+            49,
+            644,
+            699
+          ]
+        },
+        {
+          "frame": 1,
+          "sha256": "ef098a9aca2698f88c37f5584c1557f7498c596c2fd9642fbc80106b1972d7ef",
+          "bbox": [
+            135,
+            47,
+            641,
+            700
+          ]
+        },
+        {
+          "frame": 2,
+          "sha256": "1de7924e20bc9cc71e3aaa9007ff54bd858ec829150b90234c67a7fb27d7a7d5",
+          "bbox": [
+            81,
+            54,
+            645,
+            700
+          ]
+        },
+        {
+          "frame": 3,
+          "sha256": "4ca8a7adcd8fb2de1cb946fdb96296917c81e2b1b06b4f21a3908ed638dfb1d8",
+          "bbox": [
+            84,
+            47,
+            644,
+            700
+          ]
+        },
+        {
+          "frame": 4,
+          "sha256": "752d9a753211184773f0a022a323d34bed06faa5961111fe232cdd886b5fe177",
+          "bbox": [
+            108,
+            55,
+            657,
+            699
+          ]
+        },
+        {
+          "frame": 5,
+          "sha256": "fec8f58a7dfedde29b669468d1c01212d68ca7616e7fb322a962fe952935c24b",
+          "bbox": [
+            68,
+            69,
+            658,
+            700
+          ]
+        },
+        {
+          "frame": 6,
+          "sha256": "8a3d404d9aea09fc2314256ec2cf7b958947c5730bc72efc3888da4b457969f2",
+          "bbox": [
+            93,
+            44,
+            654,
+            700
+          ]
+        },
+        {
+          "frame": 7,
+          "sha256": "df910f94a87bcbb348e016ecef12dbd6f8da079265387feb548e1b54b89f8c21",
+          "bbox": [
+            109,
+            44,
+            649,
+            700
+          ]
+        },
+        {
+          "frame": 8,
+          "sha256": "8191dbef8b55817a474073aabf35b6527d4a9bb5ca2669d6530ea74d837723bc",
+          "bbox": [
+            105,
+            49,
+            661,
+            699
+          ]
+        },
+        {
+          "frame": 9,
+          "sha256": "280201fd2791f25fa1dfb9861baee03ace365a89aacbd2b3aa33c7d5a2b2f900",
+          "bbox": [
+            90,
+            51,
+            658,
+            697
+          ]
+        },
+        {
+          "frame": 10,
+          "sha256": "57b94c92dc3babc97b6f440a8d0babaf644998f18ff9b01aaa3562007628f012",
+          "bbox": [
+            79,
+            44,
+            652,
+            700
+          ]
+        },
+        {
+          "frame": 11,
+          "sha256": "2cb1fa823ea5930238fb49c8ede63c1619eca328558247eb358f887e4d771a76",
+          "bbox": [
+            113,
+            41,
+            645,
+            699
+          ]
+        },
+        {
+          "frame": 12,
+          "sha256": "18bc729f811ce5562f8791c04d0720a53c60ad7d7f0e8117a2d70a917bfb3375",
+          "bbox": [
+            132,
+            70,
+            663,
+            705
+          ]
+        },
+        {
+          "frame": 13,
+          "sha256": "f0c3321f8af5ce4777ab926c1bedf826f644744bc8274c84af800da34f970a9b",
+          "bbox": [
+            104,
+            66,
+            669,
+            704
+          ]
+        },
+        {
+          "frame": 14,
+          "sha256": "704499c63285fd31a04c83e77c1ea09afd71295053b01b85a2ed4b30635363b8",
+          "bbox": [
+            115,
+            65,
+            652,
+            704
+          ]
+        },
+        {
+          "frame": 15,
+          "sha256": "da16ae31940d8621bb73b68f3d75d0e65bb25c3cc2926fd3bb1c31a27591bf36",
+          "bbox": [
+            153,
+            49,
+            644,
+            699
+          ]
+        }
+      ],
+      "fps": 12,
+      "ticks": 40,
+      "expectedDuration": 3.3333333333333335,
+      "holds": {
+        "0": 2,
+        "1": 2,
+        "2": 2,
+        "3": 2,
+        "4": 2,
+        "5": 2,
+        "6": 3,
+        "7": 3,
+        "8": 4,
+        "9": 4,
+        "10": 2,
+        "11": 4,
+        "12": 2,
+        "13": 2,
+        "14": 2,
+        "15": 2
+      },
+      "repeats": [],
+      "review": {
+        "staticVisual": true,
+        "runtime": false,
+        "evidence": [
+          "sprites/hd720/qa/alchemy1_end3_contact.png",
+          "sprites/hd720/qa/special_quality_compare.png"
+        ]
+      },
+      "video": "sprites/hd720/videos/anim_alchemy1_end3.webm",
+      "videoSHA256": "10b7a3a41c3662006b6d1364a09c7733e5060e6336adb761b0646891fb160a65",
+      "bytes": 685409,
+      "duration": 3.333,
+      "decodedAlpha": {
+        "decoder": "libvpx-vp9",
+        "frames": 40,
+        "allCornersTransparent": true,
+        "opaqueForegroundEveryFrame": true
+      },
+      "encoding": {
+        "crf": 24,
+        "pixFmt": "yuva420p"
+      },
+      "previous512Video": {
+        "path": "sprites/anim_alchemy1_end3.webm",
+        "bytes": 467882,
+        "sha256": "962357e3cdee8bb1f3dfc4160814cf1f76ffba528c04d45ccc8bcc95e3f97ff6"
+      },
+      "exactAnchors": {
+        "0": "alchemy1_loop:0",
+        "15": "alchemy1_loop:0"
+      },
+      "exactAnchorChecks": [
+        {
+          "frame": 0,
+          "reference": "alchemy1_loop:0",
+          "byteExact": true
+        },
+        {
+          "frame": 15,
+          "reference": "alchemy1_loop:0",
+          "byteExact": true
+        }
+      ]
+    },
+    "alchemy1_outro": {
+      "frames": [
+        {
+          "frame": 0,
+          "source": "sprites/raw/alchemy1_outro_imagegen_sheet.png",
+          "cellBox": [
+            0,
+            0,
+            314,
+            330
+          ],
+          "nativeSize": [
+            314,
+            330
+          ],
+          "sourceLimited": true,
+          "fallback512": false,
+          "scaleNativeTo720": 2.102803738317757,
+          "placement720": [
+            30,
+            6
+          ]
+        },
+        {
+          "frame": 1,
+          "source": "sprites/raw/alchemy1_outro_imagegen_sheet.png",
+          "cellBox": [
+            314,
+            0,
+            627,
+            331
+          ],
+          "nativeSize": [
+            313,
+            331
+          ],
+          "sourceLimited": true,
+          "fallback512": false,
+          "scaleNativeTo720": 2.102803738317757,
+          "placement720": [
+            31,
+            6
+          ]
+        },
+        {
+          "frame": 2,
+          "source": "sprites/raw/alchemy1_outro_imagegen_sheet.png",
+          "cellBox": [
+            627,
+            0,
+            940,
+            331
+          ],
+          "nativeSize": [
+            313,
+            331
+          ],
+          "sourceLimited": true,
+          "fallback512": false,
+          "scaleNativeTo720": 2.102803738317757,
+          "placement720": [
+            31,
+            6
+          ]
+        },
+        {
+          "frame": 3,
+          "source": "sprites/raw/alchemy1_outro_imagegen_sheet.png",
+          "cellBox": [
+            940,
+            0,
+            1254,
+            331
+          ],
+          "nativeSize": [
+            314,
+            331
+          ],
+          "sourceLimited": true,
+          "fallback512": false,
+          "scaleNativeTo720": 2.102803738317757,
+          "placement720": [
+            30,
+            6
+          ]
+        },
+        {
+          "frame": 4,
+          "source": "sprites/raw/alchemy1_outro_imagegen_sheet.png",
+          "cellBox": [
+            0,
+            330,
+            314,
+            640
+          ],
+          "nativeSize": [
+            314,
+            310
+          ],
+          "sourceLimited": true,
+          "fallback512": false,
+          "scaleNativeTo720": 2.102803738317757,
+          "placement720": [
+            30,
+            45
+          ]
+        },
+        {
+          "frame": 5,
+          "source": "sprites/raw/alchemy1_outro_imagegen_sheet.png",
+          "cellBox": [
+            314,
+            331,
+            627,
+            634
+          ],
+          "nativeSize": [
+            313,
+            303
+          ],
+          "sourceLimited": true,
+          "fallback512": false,
+          "scaleNativeTo720": 2.102803738317757,
+          "placement720": [
+            31,
+            62
+          ]
+        },
+        {
+          "frame": 6,
+          "source": "sprites/raw/alchemy1_outro_imagegen_sheet.png",
+          "cellBox": [
+            627,
+            331,
+            940,
+            631
+          ],
+          "nativeSize": [
+            313,
+            300
+          ],
+          "sourceLimited": true,
+          "fallback512": false,
+          "scaleNativeTo720": 2.102803738317757,
+          "placement720": [
+            31,
+            69
+          ]
+        },
+        {
+          "frame": 7,
+          "source": "sprites/raw/alchemy1_outro_imagegen_sheet.png",
+          "cellBox": [
+            940,
+            331,
+            1254,
+            639
+          ],
+          "nativeSize": [
+            314,
+            308
+          ],
+          "sourceLimited": true,
+          "fallback512": false,
+          "scaleNativeTo720": 2.102803738317757,
+          "placement720": [
+            30,
+            52
+          ]
+        },
+        {
+          "frame": 8,
+          "source": "sprites/raw/alchemy1_outro_imagegen_sheet.png",
+          "cellBox": [
+            0,
+            640,
+            314,
+            940
+          ],
+          "nativeSize": [
+            314,
+            300
+          ],
+          "sourceLimited": true,
+          "fallback512": false,
+          "scaleNativeTo720": 2.102803738317757,
+          "placement720": [
+            30,
+            77
+          ]
+        },
+        {
+          "frame": 9,
+          "source": "sprites/raw/alchemy1_outro_imagegen_sheet.png",
+          "cellBox": [
+            314,
+            634,
+            627,
+            940
+          ],
+          "nativeSize": [
+            313,
+            306
+          ],
+          "sourceLimited": true,
+          "fallback512": false,
+          "scaleNativeTo720": 2.102803738317757,
+          "placement720": [
+            31,
+            69
+          ]
+        },
+        {
+          "frame": 10,
+          "source": "sprites/raw/alchemy1_outro_imagegen_sheet.png",
+          "cellBox": [
+            627,
+            631,
+            940,
+            940
+          ],
+          "nativeSize": [
+            313,
+            309
+          ],
+          "sourceLimited": true,
+          "fallback512": false,
+          "scaleNativeTo720": 2.102803738317757,
+          "placement720": [
+            31,
+            62
+          ]
+        },
+        {
+          "frame": 11,
+          "source": "sprites/raw/alchemy1_outro_imagegen_sheet.png",
+          "cellBox": [
+            940,
+            639,
+            1254,
+            940
+          ],
+          "nativeSize": [
+            314,
+            301
+          ],
+          "sourceLimited": true,
+          "fallback512": false,
+          "scaleNativeTo720": 2.102803738317757,
+          "placement720": [
+            30,
+            79
+          ]
+        },
+        {
+          "frame": 12,
+          "source": "sprites/raw/alchemy1_outro_imagegen_sheet.png",
+          "cellBox": [
+            0,
+            940,
+            314,
+            1254
+          ],
+          "nativeSize": [
+            314,
+            314
+          ],
+          "sourceLimited": true,
+          "fallback512": false,
+          "scaleNativeTo720": 2.102803738317757,
+          "placement720": [
+            30,
+            70
+          ]
+        },
+        {
+          "frame": 13,
+          "source": "sprites/raw/alchemy1_outro_imagegen_sheet.png",
+          "cellBox": [
+            314,
+            940,
+            627,
+            1254
+          ],
+          "nativeSize": [
+            313,
+            314
+          ],
+          "sourceLimited": true,
+          "fallback512": false,
+          "scaleNativeTo720": 2.102803738317757,
+          "placement720": [
+            31,
+            73
+          ]
+        },
+        {
+          "frame": 14,
+          "source": "sprites/raw/alchemy1_outro_imagegen_sheet.png",
+          "cellBox": [
+            627,
+            940,
+            940,
+            1254
+          ],
+          "nativeSize": [
+            313,
+            314
+          ],
+          "sourceLimited": true,
+          "fallback512": false,
+          "scaleNativeTo720": 2.102803738317757,
+          "placement720": [
+            31,
+            73
+          ]
+        },
+        {
+          "frame": 15,
+          "source": "sprites/raw/alchemy1_outro_imagegen_sheet.png",
+          "cellBox": [
+            940,
+            940,
+            1254,
+            1254
+          ],
+          "nativeSize": [
+            314,
+            314
+          ],
+          "sourceLimited": true,
+          "fallback512": false,
+          "scaleNativeTo720": 2.102803738317757,
+          "placement720": [
+            30,
+            73
+          ]
+        }
+      ],
+      "uniformSourceScale512": 1.4953271028037383,
+      "count": 16,
+      "size": [
+        720,
+        720
+      ],
+      "framesTouchingCanvas": [],
+      "frameHashes": [
+        {
+          "frame": 0,
+          "sha256": "da16ae31940d8621bb73b68f3d75d0e65bb25c3cc2926fd3bb1c31a27591bf36",
+          "bbox": [
+            153,
+            49,
+            644,
+            699
+          ]
+        },
+        {
+          "frame": 1,
+          "sha256": "f5c12fa9a5cbe6d16e87be227d698ec796bee7fd3d8e75496cd2f6a656035511",
+          "bbox": [
+            98,
+            16,
+            654,
+            702
+          ]
+        },
+        {
+          "frame": 2,
+          "sha256": "fe3d9bb789e98844f1306cb1dd58b75a1dda888aa94a5a94f028f6d6e2cb53f1",
+          "bbox": [
+            96,
+            18,
+            648,
+            702
+          ]
+        },
+        {
+          "frame": 3,
+          "sha256": "7b550842ec778a69ab9bf5cce3918f1b3d452051ca23ceec40b85e1930cf5e0a",
+          "bbox": [
+            95,
+            18,
+            646,
+            702
+          ]
+        },
+        {
+          "frame": 4,
+          "sha256": "e30b15e3199322b332479809aac869be3c66f9adcd8525c4d670d73062022e36",
+          "bbox": [
+            109,
+            45,
+            672,
+            697
+          ]
+        },
+        {
+          "frame": 5,
+          "sha256": "1897644a0ba805e02c46f994bbca4398f2b2275455d4edc049d2740618b322ad",
+          "bbox": [
+            100,
+            68,
+            610,
+            699
+          ]
+        },
+        {
+          "frame": 6,
+          "sha256": "70947a762715d8a4b86162e6a4e91a72674f316a089a48c7df5e268f031db62c",
+          "bbox": [
+            72,
+            79,
+            627,
+            700
+          ]
+        },
+        {
+          "frame": 7,
+          "sha256": "1be4bfcf791e8996bbed84b170010762d7a521812cbf8ac2450dcca3b52a5663",
+          "bbox": [
+            112,
+            60,
+            531,
+            700
+          ]
+        },
+        {
+          "frame": 8,
+          "sha256": "e096b3eeaa523de96d7734fdb641f0dc02d77b31e4d0a5e752cf43e9f9a4e929",
+          "bbox": [
+            145,
+            77,
+            608,
+            705
+          ]
+        },
+        {
+          "frame": 9,
+          "sha256": "50a0da7cb523df29d732c7cd1811a7ab5a8b86da95ac048c81ce60c6aa103b22",
+          "bbox": [
+            118,
+            85,
+            583,
+            704
+          ]
+        },
+        {
+          "frame": 10,
+          "sha256": "4170a542fe85edf8a6e3ca5e5c5f6d33130150c605bb3c31e3618d017ea619f3",
+          "bbox": [
+            77,
+            62,
+            605,
+            706
+          ]
+        },
+        {
+          "frame": 11,
+          "sha256": "96cba86ce677ac184e53c08445e3aff970451c5cf5b6adf80793465ab4e9a0e6",
+          "bbox": [
+            114,
+            79,
+            567,
+            704
+          ]
+        },
+        {
+          "frame": 12,
+          "sha256": "5365fcb51b2aeb04099120ebd6af52e3bc5661d12b005fe67cba2f4f5a7e8002",
+          "bbox": [
+            170,
+            71,
+            556,
+            701
+          ]
+        },
+        {
+          "frame": 13,
+          "sha256": "5b13b3fb6dc7d60198fd7bfd4fc3dc7fb2d18071d815ab35715f23eb93347174",
+          "bbox": [
+            182,
+            75,
+            534,
+            704
+          ]
+        },
+        {
+          "frame": 14,
+          "sha256": "ccddb5562c562c9098231a8b81eb3d71895744b30d8b1ba8156060cf1df2842f",
+          "bbox": [
+            171,
+            75,
+            517,
+            704
+          ]
+        },
+        {
+          "frame": 15,
+          "sha256": "9ec4a182aef2d98aa0a2e28c7ac01036ea56a3d76af144c9dc6ad2c16571f645",
+          "bbox": [
+            189,
+            66,
+            526,
+            701
+          ]
+        }
+      ],
+      "fps": 12,
+      "ticks": 33,
+      "expectedDuration": 2.75,
+      "holds": {
+        "0": 2,
+        "1": 2,
+        "2": 2,
+        "3": 2,
+        "4": 2,
+        "5": 2,
+        "6": 2,
+        "7": 3,
+        "8": 2,
+        "9": 2,
+        "10": 2,
+        "11": 2,
+        "12": 2,
+        "13": 2,
+        "14": 2,
+        "15": 2
+      },
+      "repeats": [],
+      "review": {
+        "staticVisual": true,
+        "runtime": false,
+        "evidence": [
+          "sprites/hd720/qa/alchemy1_outro_contact.png",
+          "sprites/hd720/qa/special_quality_compare.png"
+        ]
+      },
+      "video": "sprites/hd720/videos/anim_alchemy1_outro.webm",
+      "videoSHA256": "b82ecd89fea9b443f73f880f521e1c3e478340d9b1f2c91a63124512efb93e9a",
+      "bytes": 692981,
+      "duration": 2.75,
+      "decodedAlpha": {
+        "decoder": "libvpx-vp9",
+        "frames": 33,
+        "allCornersTransparent": true,
+        "opaqueForegroundEveryFrame": true
+      },
+      "encoding": {
+        "crf": 24,
+        "pixFmt": "yuva420p"
+      },
+      "previous512Video": {
+        "path": "sprites/anim_alchemy1_outro.webm",
+        "bytes": 469877,
+        "sha256": "427966988916ce946cdd5bd9ff52390b5c9406407a1410f47823d4a754f4f52e"
+      },
+      "exactAnchors": {
+        "0": "alchemy1_loop:0",
+        "15": "idle1_loop:0"
+      },
+      "exactAnchorChecks": [
+        {
+          "frame": 0,
+          "reference": "alchemy1_loop:0",
+          "byteExact": true
+        },
+        {
+          "frame": 15,
+          "reference": "idle1_loop:0",
+          "byteExact": true
+        }
+      ]
+    },
+    "note1_loop": {
+      "frames": [
+        {
+          "frame": 0,
+          "source": "sprites/raw/note1_loop_00.jpg",
+          "nativeSize": [
+            1024,
+            1024
+          ],
+          "sourceLimited": false,
+          "fallback512": false,
+          "scale512": 0.9868421052631579,
+          "dx512": 3.349044123583923,
+          "dy512": 3.631578947368439
+        },
+        {
+          "frame": 1,
+          "source": "sprites/raw/note1_loop_01.jpg",
+          "nativeSize": [
+            1024,
+            1024
+          ],
+          "sourceLimited": false,
+          "fallback512": false,
+          "scale512": 0.9868421052631579,
+          "dx512": 3.349044123583923,
+          "dy512": 3.631578947368439
+        },
+        {
+          "frame": 2,
+          "source": "sprites/raw/note1_loop_02.jpg",
+          "nativeSize": [
+            1024,
+            1024
+          ],
+          "sourceLimited": false,
+          "fallback512": false,
+          "scale512": 0.9868421052631579,
+          "dx512": 3.349044123583923,
+          "dy512": 3.631578947368439
+        },
+        {
+          "frame": 3,
+          "source": "sprites/raw/note1_loop_03.jpg",
+          "nativeSize": [
+            1024,
+            1024
+          ],
+          "sourceLimited": false,
+          "fallback512": false,
+          "scale512": 0.9868421052631579,
+          "dx512": 3.349044123583923,
+          "dy512": 3.631578947368439
+        },
+        {
+          "frame": 4,
+          "source": "sprites/raw/note1_loop_04.jpg",
+          "nativeSize": [
+            1024,
+            1024
+          ],
+          "sourceLimited": false,
+          "fallback512": false,
+          "scale512": 0.9868421052631579,
+          "dx512": 3.349044123583923,
+          "dy512": 3.631578947368439
+        },
+        {
+          "frame": 5,
+          "source": "sprites/raw/note1_loop_05.jpg",
+          "nativeSize": [
+            1024,
+            1024
+          ],
+          "sourceLimited": false,
+          "fallback512": false,
+          "scale512": 0.9868421052631579,
+          "dx512": 3.349044123583923,
+          "dy512": 3.631578947368439
+        },
+        {
+          "frame": 6,
+          "source": "sprites/raw/note1_loop_06.jpg",
+          "nativeSize": [
+            1024,
+            1024
+          ],
+          "sourceLimited": false,
+          "fallback512": false,
+          "scale512": 0.9868421052631579,
+          "dx512": 3.349044123583923,
+          "dy512": 3.631578947368439
+        },
+        {
+          "frame": 7,
+          "source": "sprites/raw/note1_loop_07.jpg",
+          "nativeSize": [
+            1024,
+            1024
+          ],
+          "sourceLimited": false,
+          "fallback512": false,
+          "scale512": 0.9868421052631579,
+          "dx512": 3.349044123583923,
+          "dy512": 3.631578947368439
+        },
+        {
+          "frame": 8,
+          "source": "sprites/raw/note1_loop_08.jpg",
+          "nativeSize": [
+            1024,
+            1024
+          ],
+          "sourceLimited": false,
+          "fallback512": false,
+          "scale512": 0.9868421052631579,
+          "dx512": 3.349044123583923,
+          "dy512": 3.631578947368439
+        },
+        {
+          "frame": 9,
+          "source": "sprites/raw/note1_loop_09.jpg",
+          "nativeSize": [
+            1024,
+            1024
+          ],
+          "sourceLimited": false,
+          "fallback512": false,
+          "scale512": 0.9868421052631579,
+          "dx512": 3.349044123583923,
+          "dy512": 3.631578947368439
+        },
+        {
+          "frame": 10,
+          "source": "sprites/raw/note1_loop_10.jpg",
+          "nativeSize": [
+            1024,
+            1024
+          ],
+          "sourceLimited": false,
+          "fallback512": false,
+          "scale512": 0.9868421052631579,
+          "dx512": 3.349044123583923,
+          "dy512": 3.631578947368439
+        },
+        {
+          "frame": 11,
+          "source": "sprites/raw/note1_loop_11.jpg",
+          "nativeSize": [
+            1024,
+            1024
+          ],
+          "sourceLimited": false,
+          "fallback512": false,
+          "scale512": 0.9868421052631579,
+          "dx512": 3.349044123583923,
+          "dy512": 3.631578947368439
+        },
+        {
+          "frame": 12,
+          "source": "sprites/raw/note1_loop_12.jpg",
+          "nativeSize": [
+            1024,
+            1024
+          ],
+          "sourceLimited": false,
+          "fallback512": false,
+          "scale512": 0.9868421052631579,
+          "dx512": 3.349044123583923,
+          "dy512": 3.631578947368439
+        },
+        {
+          "frame": 13,
+          "source": "sprites/raw/note1_loop_13.jpg",
+          "nativeSize": [
+            1024,
+            1024
+          ],
+          "sourceLimited": false,
+          "fallback512": false,
+          "scale512": 0.9868421052631579,
+          "dx512": 3.349044123583923,
+          "dy512": 3.631578947368439
+        },
+        {
+          "frame": 14,
+          "source": "sprites/raw/note1_loop_14.jpg",
+          "nativeSize": [
+            1024,
+            1024
+          ],
+          "sourceLimited": false,
+          "fallback512": false,
+          "scale512": 0.9868421052631579,
+          "dx512": 3.349044123583923,
+          "dy512": 3.631578947368439
+        },
+        {
+          "frame": 15,
+          "source": "sprites/raw/note1_loop_15.jpg",
+          "nativeSize": [
+            1024,
+            1024
+          ],
+          "sourceLimited": false,
+          "fallback512": false,
+          "scale512": 0.9868421052631579,
+          "dx512": 3.349044123583923,
+          "dy512": 3.631578947368439
+        },
+        {
+          "frame": 16,
+          "source": "sprites/raw/note1_loop_16.jpg",
+          "nativeSize": [
+            1024,
+            1024
+          ],
+          "sourceLimited": false,
+          "fallback512": false,
+          "scale512": 0.9868421052631579,
+          "dx512": 3.349044123583923,
+          "dy512": 3.631578947368439
+        },
+        {
+          "frame": 17,
+          "source": "sprites/raw/note1_loop_17.jpg",
+          "nativeSize": [
+            1024,
+            1024
+          ],
+          "sourceLimited": false,
+          "fallback512": false,
+          "scale512": 0.9868421052631579,
+          "dx512": 3.349044123583923,
+          "dy512": 3.631578947368439
+        },
+        {
+          "frame": 18,
+          "source": "sprites/raw/note1_loop_18.jpg",
+          "nativeSize": [
+            1024,
+            1024
+          ],
+          "sourceLimited": false,
+          "fallback512": false,
+          "scale512": 0.9868421052631579,
+          "dx512": 3.349044123583923,
+          "dy512": 3.631578947368439
+        }
+      ],
+      "exactAnchors": {
+        "18": "note1_loop:0"
+      },
+      "sourceRepairs": "Raw JPG already contains reviewed retouch; original512 key/match reproduces all19 approved PNGs pixel exactly.",
+      "idleStyleNote": "Note uses its approved Flux character, preserving its original identity and registration.",
+      "count": 19,
+      "size": [
+        720,
+        720
+      ],
+      "framesTouchingCanvas": [],
+      "frameHashes": [
+        {
+          "frame": 0,
+          "sha256": "56f5bc0dcc6a4f6f9fa5a1b792064a616440cf60dc542f5b377aeef1b447b52a",
+          "bbox": [
+            178,
+            69,
+            538,
+            709
+          ]
+        },
+        {
+          "frame": 1,
+          "sha256": "086ce7f9a8511cf5bc3e49df7df210fc96d6df5d55f9b4a76f397dd9e0af193c",
+          "bbox": [
+            216,
+            68,
+            500,
+            709
+          ]
+        },
+        {
+          "frame": 2,
+          "sha256": "a3748ff2facba8420f6e45fe9ae3b9e6caaf63726d75ae588aed1d3f1dfa73b2",
+          "bbox": [
+            216,
+            67,
+            617,
+            711
+          ]
+        },
+        {
+          "frame": 3,
+          "sha256": "92545f14b9e5b0e5f5eaaa26e3725de81bac09d81704aaf3e4b168c4365ba037",
+          "bbox": [
+            216,
+            67,
+            593,
+            711
+          ]
+        },
+        {
+          "frame": 4,
+          "sha256": "9ee653b0c322c001aad6ce66e74b49f462d9e1c578aeef1517ebbc312aea585a",
+          "bbox": [
+            216,
+            66,
+            501,
+            711
+          ]
+        },
+        {
+          "frame": 5,
+          "sha256": "d59c69e488609c89b1f3f15a88cc852cf1dbac94e4fcfd227100e656d9e6aadf",
+          "bbox": [
+            216,
+            67,
+            501,
+            711
+          ]
+        },
+        {
+          "frame": 6,
+          "sha256": "45d1f42ccc65252c220f14cf5a80b20d5d7ef8e80e80e0e5cac790fca23dd028",
+          "bbox": [
+            216,
+            67,
+            501,
+            711
+          ]
+        },
+        {
+          "frame": 7,
+          "sha256": "0d2fbbdfa86c7c78008dbd4d933cf0c04a485d7c5e59439ba6095752015a7f1e",
+          "bbox": [
+            216,
+            66,
+            501,
+            711
+          ]
+        },
+        {
+          "frame": 8,
+          "sha256": "f11e551e93c66df959b76ee7bd7ddf5bad63f3f28139ad8a022480734fc2dd0f",
+          "bbox": [
+            216,
+            67,
+            501,
+            711
+          ]
+        },
+        {
+          "frame": 9,
+          "sha256": "45be77028d9cb6ffd8af0bc67b01318afa7e6f3bd19d3b62e649e0d4f3521f6f",
+          "bbox": [
+            216,
+            67,
+            501,
+            711
+          ]
+        },
+        {
+          "frame": 10,
+          "sha256": "3ee05ead83c724849a97df4c609be6f2429d5330e043ffbf1968e230aa7d600b",
+          "bbox": [
+            160,
+            66,
+            501,
+            711
+          ]
+        },
+        {
+          "frame": 11,
+          "sha256": "c80a487d7553a0159add16b25cc16896ac382669e3524b948236ec5d8165d534",
+          "bbox": [
+            216,
+            66,
+            501,
+            711
+          ]
+        },
+        {
+          "frame": 12,
+          "sha256": "621415739d3acf98ffa332257d91e311048cc7e61ca45a928265231eeb97e072",
+          "bbox": [
+            215,
+            66,
+            501,
+            711
+          ]
+        },
+        {
+          "frame": 13,
+          "sha256": "a7b96297f1a6e9712c962986dff3eb1b8becf9b6d7c8fb4d918213e718e44813",
+          "bbox": [
+            216,
+            67,
+            501,
+            711
+          ]
+        },
+        {
+          "frame": 14,
+          "sha256": "bf3ac7d33612f277fb5c35caa99ce478320cda76dd1837eefd62f0459b0131a9",
+          "bbox": [
+            215,
+            66,
+            501,
+            711
+          ]
+        },
+        {
+          "frame": 15,
+          "sha256": "044f37f4a0d7fff5428745db3543a9caffadfcac6503f71ab3d14f59ad91703f",
+          "bbox": [
+            216,
+            66,
+            618,
+            711
+          ]
+        },
+        {
+          "frame": 16,
+          "sha256": "14cda7d4c14ad9c57b530753b981a8c458f3664303d3455708565667169f82f8",
+          "bbox": [
+            215,
+            67,
+            500,
+            710
+          ]
+        },
+        {
+          "frame": 17,
+          "sha256": "a209b1ef7996e38c9efb23bef5c29bfb156ecd70102306f98904a4058685b892",
+          "bbox": [
+            176,
+            68,
+            539,
+            709
+          ]
+        },
+        {
+          "frame": 18,
+          "sha256": "56f5bc0dcc6a4f6f9fa5a1b792064a616440cf60dc542f5b377aeef1b447b52a",
+          "bbox": [
+            178,
+            69,
+            538,
+            709
+          ]
+        }
+      ],
+      "fps": 10,
+      "ticks": 74,
+      "expectedDuration": 7.4,
+      "holds": {
+        "0": 2,
+        "1": 2,
+        "2": 3,
+        "3": 3,
+        "4": 2,
+        "5": 2,
+        "6": 2,
+        "7": 3,
+        "8": 3,
+        "9": 3,
+        "10": 5,
+        "13": 3,
+        "14": 4,
+        "15": 2,
+        "16": 3,
+        "17": 2
+      },
+      "repeats": [
+        {
+          "frames": [
+            5,
+            6
+          ],
+          "times": 3
+        },
+        {
+          "frames": [
+            8,
+            9
+          ],
+          "times": 2
+        },
+        {
+          "frames": [
+            11,
+            12
+          ],
+          "times": 4
+        },
+        {
+          "frames": [
+            13,
+            14
+          ],
+          "times": 2
+        }
+      ],
+      "review": {
+        "staticVisual": true,
+        "runtime": false,
+        "evidence": [
+          "sprites/hd720/qa/note1_loop_contact.png",
+          "sprites/hd720/qa/special_quality_compare.png"
+        ]
+      },
+      "video": "sprites/hd720/videos/anim_note1_loop.webm",
+      "videoSHA256": "f474a72a0289afef42be68bbd67e17b8b4623360f94508f94a16015d288fb992",
+      "bytes": 677230,
+      "duration": 7.4,
+      "decodedAlpha": {
+        "decoder": "libvpx-vp9",
+        "frames": 74,
+        "allCornersTransparent": true,
+        "opaqueForegroundEveryFrame": true
+      },
+      "encoding": {
+        "crf": 24,
+        "pixFmt": "yuva420p"
+      },
+      "previous512Video": {
+        "path": "sprites/anim_note1_loop.webm",
+        "bytes": 328558,
+        "sha256": "4baad8d9c8e567f4a0cc364475e32119e86cf858c2f53482af67c8fc613749d4"
+      },
+      "exactAnchorChecks": [
+        {
+          "frame": 18,
+          "reference": "note1_loop:0",
+          "byteExact": true
+        }
+      ]
+    }
+  },
+  "originalSources": {
+    "anims/rebuild_manifest.json": "c0c91f9c856d4953f262553f340ffb6b86839da681a2a523807764729042611a",
+    "sprites/rebuilt/configs/doze1_registration.json": "60ca8cbad77783a80f39e7a97b988ca6977f11ce6b10c09fe20e591f9c01a92d",
+    "sprites/rebuilt/sheets/doze1_loop_00-01-02-03.png": "75021ed2951c10f2eb5ffcdc586585df1505b3487cbed810fec7b9d009e09397",
+    "sprites/rebuilt/sheets/doze1_loop_04-05-06-07.png": "c607d7c4cffea83dac4b7f216bdbcb44d4c81fabe4483e8579651d4d42612e1a",
+    "sprites/rebuilt/sheets/doze1_loop_08-09-10-11.png": "5c4288c02c3ceb5bbbd95a15fd86fa962cb19925e853ed37232dae9f1928cb91",
+    "sprites/rebuilt/configs/lemon1_loop_registration.json": "29b15e7c40e6bdc45c31c3914502fa16e30a0c681c887b092f5668a2100d9935",
+    "sprites/rebuilt/sheets/lemon1_loop_00-01-02-03.png": "8afe12c3954e6de74ef47e00c42ffe48d18f8014d1899c5cf579b02f1205a0da",
+    "sprites/rebuilt/sheets/lemon1_loop_04-05-06-07.png": "3552dd533970599901b642e80f75a67086b3c491e9086d87b28e2ff00649161e",
+    "sprites/rebuilt/sheets/lemon1_loop_08-09-10-11.png": "520089e1394a3df17615d3077a3226681bbda6194940e1a9382c8b2d256c4beb",
+    "sprites/rebuilt/sheets/lemon1_loop_12-13-14-15.png": "15774e6ab702e9df52378081d2c3a8915b85950dc3d28ad1a655602c7864a096",
+    "sprites/rebuilt/configs/chem1_loop_registration.json": "912e61e20668ae0af53627034bda188df4f1b4890ea3fceb5c8264171a757bb5",
+    "sprites/rebuilt/sheets/chem1_loop_00-01-02-03.png": "0af31fa25996174497d3e4a229d322a16c9d03cd1b53a5107f57b508fc9c8d5b",
+    "sprites/rebuilt/sheets/chem1_loop_04-05-06-07.png": "a1fcb4de2a90e714d5ccf41540a07efe523789899a2569883d0bab0a9ba4fe76",
+    "sprites/rebuilt/sheets/chem1_loop_08-09-10-11.png": "6d6e51fb5d6602a8a270c6e8cac075e8f62ffc106744e136926b9e6c42614cc8",
+    "sprites/rebuilt/raw_poses/chem1_loop_opposite_fixed.png": "ba2ea19e4d9b2cb047df8a0bed0b1be20a8e418a4fa939685d56683812b070c6",
+    "sprites/rebuilt/sheets/chem1_loop_12-13-14-15.png": "dfd65a07b8cab032303da74d991cbe6f516bd45e52298d7183b262faf4dad225",
+    "sprites/rebuilt/raw_poses/chem1_loop_swirl_opposite_fixed.png": "9e71b4118197cbaca17553c954764b20d15e34695508ba32f0d48f087cb1d8bc",
+    "sprites/rebuilt/sheets/chem1_loop_16-17-18.png": "614ed115e0eaf7e0151fa2a02a45c2f9702494eb4a4bb736ee4dc8d87fc931db",
+    "sprites/rebuilt/configs/chem1_start_registration.json": "0e516eeebdee0892e597449c0e44a535631f226a7f6c4f4149d1794c38602da2",
+    "sprites/rebuilt/sheets/chem1_start_00-01-02-03.png": "36537233375687cd2784d56eef3aa77ca1da8520b5ed5c0f85a742004a746786",
+    "sprites/rebuilt/sheets/chem1_start_04-05-06-07.png": "7a9c7e509af67ec7997e36fb23dff222a182ca770e31a56a5a187eada2f3e5e6",
+    "sprites/rebuilt/sheets/chem1_start_08-09-10-11.png": "e3a30b49e693f7e164e3c708bb11a02a5186cfc9fcb094eed44c020bb8f67ffa",
+    "sprites/rebuilt/configs/chem1_end1_registration.json": "3ac937f9174ef585dd6f68919b384e10f48e0cc695bece027253a7d9da08130c",
+    "sprites/rebuilt/sheets/chem1_end1_00-01-02-03.png": "7f7d63e9879fd2a27211393af894a52957f1dc525932872c7731b77199aa1f01",
+    "sprites/rebuilt/sheets/chem1_end1_04-05-06-07.png": "d690f237d6d008ea8eca443dccc1982b6b094079974ae81dd31ff601386f5df3",
+    "sprites/rebuilt/sheets/chem1_end1_08-09-10-11.png": "9de2567b58559c07a366c7683be23fd500585a477d306e066941316738e0511c",
+    "sprites/rebuilt/sheets/chem1_end1_12-13-14-15.png": "841f3cc06a6c59e954f7ee6af6f4587de0323ce48bfdc1669a50260d6d083e6b",
+    "sprites/rebuilt/raw_poses/chem1_end1_crosswipe_fixed.png": "f41a3a4deb2a371caa1fdda0d7a561697304a97642c104794f696f6f8c038ac0",
+    "sprites/rebuilt/sheets/chem1_end1_16-17-18-19.png": "2aaa772bc38be7bb82414206c835a9a05a8623ab7bc51a3858f688f945a472a0",
+    "sprites/rebuilt/raw_poses/chem1_end1_hide_cloth_final.png": "23ffa3b674ecdf4f4be581d6a4bcba4be253142bd84966725dc962fe0446a2e1",
+    "sprites/rebuilt/configs/chem1_end2_plan.json": "54843da5ec28497868fb4705454daa7343f8c36c7000de88cc3d93563ef38de5",
+    "sprites/rebuilt/frames/chem1_loop/chem1_loop_00.png": "82169541d5591e1166c2fb9d9b30a4cc3199789625c5e4fd0321aee13b70951d",
+    "sprites/rebuilt/poses/batches/chem1_end2_00-01-02-03/cell_00.png": "be3415836d399cc19302908920d2df1ad4ffc2a00ef05295db708ea270699753",
+    "sprites/rebuilt/sheets/chem1_end2_00-01-02-03.png": "81cdeabd50e377c25dc34e7c6bfe6829a2065dbdd49428507a8e3883b1bb59e5",
+    "sprites/rebuilt/poses/batches/chem1_end2_00-01-02-03/cell_01.png": "df50f17daea5daf3074392cbff55fa9bf5a8e5b0c1212c213b69f26e982d832d",
+    "sprites/rebuilt/poses/batches/chem1_end2_00-01-02-03/cell_02.png": "88196373044c6a336c943758415a93dba5fab5d63f037255230271dd050d079b",
+    "sprites/rebuilt/poses/batches/chem1_end2_00-01-02-03/cell_03.png": "7f1b788a6028b81f932f31558bcea832f3815d6be0c3efc96aceb7aaa0ee9719",
+    "sprites/rebuilt/poses/batches/chem1_end2_04-05-06-07/cell_00.png": "d2bd19793e472038468539ad7a5c4acc5d4344e3077626428d0152f84dd57ffd",
+    "sprites/rebuilt/sheets/chem1_end2_04-05-06-07.png": "ef8a6eb4be172358d26dacf7f2012a3d7bfee2eb106694861a24de7986c4c078",
+    "sprites/rebuilt/poses/chem1_end2_04_blink_special_native.png": "b3ba0899ce750737ef6ec929661db9d7ba9ffc52cf50945c60f3e25cbdd4e305",
+    "sprites/rebuilt/poses/batches/chem1_end2_04-05-06-07/cell_01.png": "2dfe177aa7918b05f16b0ebeff74e7a86a89437e60ed8e5665e16868ac94121e",
+    "sprites/rebuilt/poses/batches/chem1_end2_04-05-06-07/cell_02.png": "f3170c184fd915963f3c71ee7bbe48e1c3aed008528ba0cddf30bddffcf7c37a",
+    "sprites/rebuilt/poses/batches/chem1_end2_04-05-06-07/cell_03.png": "76f23a39b8743daa6f917c3bf8c0e9bcc6bc87edcf6374c3bcc88b8d8dd16f6a",
+    "sprites/rebuilt/poses/batches/chem1_end2_08-09-10-11/cell_00.png": "62514ea4cee40c1b37c25bf8aa4075f2116a1cce3d6af271a2f575fec03365d0",
+    "sprites/rebuilt/sheets/chem1_end2_08-09-10-11.png": "309135120f3589a7ee55a4169fc11bbd36124ded7976401382793aa8451246d7",
+    "sprites/rebuilt/poses/batches/chem1_end2_08-09-10-11/cell_01.png": "794ef62434d1211cc0dd47160b33ed54d6e384b704768d3f49054430f20826b1",
+    "sprites/rebuilt/poses/batches/chem1_end2_08-09-10-11/cell_02.png": "29953a6970ca72243cb0dd39be98853a31765fc6a1e1a82c6607a810e6d42232",
+    "sprites/rebuilt/poses/batches/chem1_end2_08-09-10-11/cell_03.png": "888a83bf7f630b4d72cec34b1fa2a6d3b42353409332eeb8a150edbee25ee9c1",
+    "sprites/rebuilt/configs/chem1_end3_registration.json": "b01928f592c243ad8522e7637e72562dfb7cbf3e04b7831643bf5afa7d274dc3",
+    "sprites/rebuilt/sheets/chem1_end3_00-01-02-03.png": "ba684afa243a438c23faf7513456b40051981f0436cf2ea048252162abf12ed5",
+    "sprites/rebuilt/sheets/chem1_end3_04-05-06-07.png": "dd6ae61ccb50263d6f69f55950008cfd7081f7f54902e11896257b7094d5166b",
+    "sprites/rebuilt/sheets/chem1_end3_08-09-10-11.png": "ce8511a7856f843e376536e538653f20d92b0f979def74e3885ad01b72f0eb71",
+    "sprites/rebuilt/sheets/chem1_end3_12-13-14-15.png": "de4ac126bc03e85397027ecd2f1b96394d5b524d7936660ce56b72df426abb01",
+    "sprites/rebuilt/raw_poses/chem1_end3_proud.png": "48882876d1bf3b45b46ada525a07d84e8efbedb390a622c704960cc624847e13",
+    "anims/alchemy1_start.json": "8cbb186cca8cfa4dca165a4e920bddf70be601c70c29e7d7c23ff72367790f4b",
+    "sprites/raw/alchemy1_start_imagegen_sheet.png": "d12a1852d5f94beabca533d6b13c87e2fb855f297101a97052d0c877624a29f1",
+    "anims/alchemy1_loop.json": "3c46fae193163d3938625f50661190f6489a0fb34b933d3bed7b4b7688d0de10",
+    "sprites/raw/alchemy1_loop_imagegen_sheet.png": "8d9796cea73e97c27fb9d940b3a02f075ae21afc01fdfd8bed4bc0dff1375605",
+    "anims/alchemy1_end1.json": "3feb61bed69c98c201237b6f449351a8a9587c2f9e14cbc9a4d7961f78229383",
+    "sprites/raw/alchemy1_end1_imagegen_sheet_v2.png": "5e4875f22e9e3ff5279be91d39e08a07884d1710f916f967392847e7c6dae293",
+    "anims/alchemy1_end2.json": "010c0d76da822d43f48a9d667495d0cd8c94b199bd8855f6784f4e372c5a900a",
+    "sprites/raw/alchemy1_end2_imagegen_sheet.png": "dee6703d89679c61937fce0a876df00fbedf234b7b72d93bccff7631afbf7810",
+    "anims/alchemy1_end3.json": "f1dde913292b7a0ef40e6d03f3505b70fb29dbbbdb345c3bf3c2d1a9a859748b",
+    "sprites/raw/alchemy1_end3_imagegen_sheet.png": "f7b506c47ed143df288ad64ab7d438cc76a8b84846f3ea6a228b800bae695969",
+    "anims/alchemy1_outro.json": "c910916753dc125949db5370d6b047aec078a1b3a9ee3b00a3ba2b3eceb19b40",
+    "sprites/raw/alchemy1_outro_imagegen_sheet.png": "2348bf3b9c00b2f611ccef570574116953b4945608e8b0be02854298a9761038",
+    "sprites/rebuilt/frames/idle1_loop/idle1_loop_00.png": "bb8fd83bfa72fe4b7607873af7aa7140fe08b57cd037a2696f7e24ecdfa3bdaa",
+    "anims/note1_loop.json": "5a44e97ed77636aa7f09d082aae049d617ef91e5e8eeb42059b0c6fa4dc33c52",
+    "sprites/raw/note1_loop_00.jpg": "52e96d885d6d894a9ab070d1ebfc159f90bafb16e67b7f0f654a83fb4352e7cd",
+    "sprites/idle1_loop/idle1_loop_00.png": "4f855fd1bfe4538ff5b4965baaeb38a4a1b2f3adb704460a1df1cdbd3e65762c",
+    "sprites/raw/note1_loop_01.jpg": "abc56d91db8e3bfaf74cfce8412192b063b848e8d00378ecfe9f30eac0e844a0",
+    "sprites/raw/note1_loop_02.jpg": "2bc5e160582dee7d0dcc75f375dd32f4d26682c43529b08c920e1dee242466af",
+    "sprites/raw/note1_loop_03.jpg": "1dd88c58e92866414ebd306b16ad30121b6e860dfacabc13719467a0a71db3ce",
+    "sprites/raw/note1_loop_04.jpg": "56bf36de8de9b3d010bc65d24d6bb25769ae0594d0b1dc13b5ffe502d5574075",
+    "sprites/raw/note1_loop_05.jpg": "0d0f8d15358491e88f0cd0d56dcda3bcf33faecc51ca8a9a8018d2a747a8da05",
+    "sprites/raw/note1_loop_06.jpg": "2a498d1ce6ced2f50028180f2e697178d7b807a0484b94fd1e39ebeb105fa4ed",
+    "sprites/raw/note1_loop_07.jpg": "40db93c968dca8ace8f0cf7cf0d7b2ce31ef6bfddd02d54d666d10e34d4468fa",
+    "sprites/raw/note1_loop_08.jpg": "72c7d0b5dc578323e7d8cba594441623995ac9a19d19bee09ab5a22956af94a4",
+    "sprites/raw/note1_loop_09.jpg": "429ba9d34ed8d1734106a44ef12caede7c3e7fe4cda3bb274742aee309f4a11e",
+    "sprites/raw/note1_loop_10.jpg": "aafb9bd580fe16460213216f887d593cb1520fd87478913cdf8a193573b32df5",
+    "sprites/raw/note1_loop_11.jpg": "b573f3fc01ef27c4ec5dc07793834c811c34c92605b35ce883df51d6093116ea",
+    "sprites/raw/note1_loop_12.jpg": "efaf1de7461633a84ba329d329cbbd8b34bb0177134b1ac9e285d67b558eadcf",
+    "sprites/raw/note1_loop_13.jpg": "43c1485e6ac4fbbd2e23782a496766221642854ede2979603d8b5bbd8ae9dd9b",
+    "sprites/raw/note1_loop_14.jpg": "9d2e3bef92047cec43a331ccc80561e6a7e929d23177e43c9d59b533b6b4def0",
+    "sprites/raw/note1_loop_15.jpg": "a2bfa046ea22853f4dda107efa7da4ab3599521eb24f644def7cef24958698e3",
+    "sprites/raw/note1_loop_16.jpg": "27deeb3c173372939e1b8ea50fb2de9cee0e7a9ac49f3fceea132be6763194df",
+    "sprites/raw/note1_loop_17.jpg": "f12c0d048683013ccae2c52b2a44c077bc0be00c37cf76c390369e1444d18afd",
+    "sprites/raw/note1_loop_18.jpg": "52e96d885d6d894a9ab070d1ebfc159f90bafb16e67b7f0f654a83fb4352e7cd"
+  },
+  "byteTotals": {
+    "previous512": 4784539,
+    "new720": 7357915,
+    "ratio": 1.5378524451363025
+  }
+}

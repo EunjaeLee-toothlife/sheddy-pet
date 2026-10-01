@@ -1,0 +1,81 @@
+{
+  "name": "excited1",
+  "base": "sprites/hd720/poses/root/idle_open_00.png",
+  "poses": {
+    "crouch": "sprites/hd720/poses/root/excited1_crouch_00.png",
+    "air": "sprites/hd720/poses/root/excited1_air_00.png"
+  },
+  "match_to_base": true,
+  "no_scale_poses": [
+    "crouch",
+    "air"
+  ],
+  "parts": {
+    "loop": [
+      {
+        "img": "base"
+      },
+      {
+        "img": "base"
+      },
+      {
+        "img": "crouch"
+      },
+      {
+        "img": "crouch"
+      },
+      {
+        "img": "crouch",
+        "dy": 2.109375
+      },
+      {
+        "img": "crouch",
+        "dy": 2.8125
+      },
+      {
+        "img": "air",
+        "dy": -22.5
+      },
+      {
+        "img": "air",
+        "dy": -47.8125
+      },
+      {
+        "img": "air",
+        "dy": -64.6875
+      },
+      {
+        "img": "air",
+        "dy": -64.6875
+      },
+      {
+        "img": "air",
+        "dy": -47.8125
+      },
+      {
+        "img": "air",
+        "dy": -22.5
+      },
+      {
+        "img": "crouch"
+      },
+      {
+        "img": "crouch"
+      },
+      {
+        "img": "base",
+        "dy": -2.109375
+      },
+      {
+        "img": "base",
+        "dy": -1.125
+      },
+      {
+        "img": "base"
+      },
+      {
+        "img": "base"
+      }
+    ]
+  }
+}

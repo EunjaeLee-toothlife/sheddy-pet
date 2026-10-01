@@ -1,0 +1,67 @@
+{
+  "name": "boxing1",
+  "base": "sprites/hd720/poses/root/idle_open_00.png",
+  "poses": {
+    "p0": "sprites/hd720/poses/root/boxing1_loop_00-01-02-03_cell_00.png",
+    "p1": "sprites/hd720/poses/root/boxing1_loop_00-01-02-03_cell_01.png",
+    "p2": "sprites/hd720/poses/root/boxing1_loop_00-01-02-03_cell_02.png",
+    "p3": "sprites/hd720/poses/root/boxing1_loop_00-01-02-03_cell_03.png",
+    "p4": "sprites/hd720/poses/root/boxing1_loop_04-05-06-07_cell_00.png",
+    "p5": "sprites/hd720/poses/root/boxing1_loop_04-05-06-07_cell_01.png",
+    "p6": "sprites/hd720/poses/root/boxing1_loop_04-05-06-07_cell_02.png",
+    "p7": "sprites/hd720/poses/root/boxing1_loop_04-05-06-07_cell_03.png",
+    "p8": "sprites/hd720/poses/root/boxing1_loop_08-09-10-11_cell_00.png",
+    "p9": "sprites/hd720/poses/root/boxing1_loop_08-09-10-11_cell_01.png",
+    "p10": "sprites/hd720/poses/root/boxing1_loop_08-09-10-11_cell_02.png",
+    "p11": "sprites/hd720/poses/root/boxing1_loop_08-09-10-11_cell_03.png"
+  },
+  "match_to_base": true,
+  "horizontal_anchor": "feet",
+  "no_scale_poses": [
+    "p7",
+    "p8"
+  ],
+  "parts": {
+    "loop": [
+      {
+        "img": "p0"
+      },
+      {
+        "img": "p1"
+      },
+      {
+        "img": "p2"
+      },
+      {
+        "img": "p3"
+      },
+      {
+        "img": "p4"
+      },
+      {
+        "img": "p5"
+      },
+      {
+        "img": "p6"
+      },
+      {
+        "img": "p0",
+        "dy": -1.125
+      },
+      {
+        "img": "p0"
+      },
+      {
+        "img": "p0"
+      },
+      {
+        "img": "p0",
+        "dy": -1.6875
+      },
+      {
+        "img": "p0"
+      }
+    ]
+  },
+  "normalization_note": "Standing guard/punch donors match canonical height and shoe-band center. User requested upright front-facing puffed-cheek breathing instead of crouching in displayed frames 8 and 9 (PNG indices 07/08). Shared front guard with a subtle 0.8px breath rise preserves appearance and exact loop close."
+}

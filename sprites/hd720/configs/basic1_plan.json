@@ -1,0 +1,87 @@
+{
+  "name": "basic1",
+  "base": "sprites/hd720/poses/root/idle_open_00.png",
+  "poses": {
+    "L": "sprites/hd720/poses/root/basic1_left_00.png",
+    "R": "sprites/hd720/poses/root/basic1_right_00.png"
+  },
+  "match_to_base": true,
+  "parts": {
+    "loop": [
+      {
+        "img": "base"
+      },
+      {
+        "img": "base"
+      },
+      {
+        "img": "L",
+        "deg": 0.4
+      },
+      {
+        "img": "L",
+        "deg": 0.8,
+        "dy": -0.421875
+      },
+      {
+        "img": "L",
+        "deg": 1.2,
+        "dy": -0.84375
+      },
+      {
+        "img": "L",
+        "deg": 1.2,
+        "dy": -0.84375
+      },
+      {
+        "img": "L",
+        "deg": 0.8,
+        "dy": -0.421875
+      },
+      {
+        "img": "L",
+        "deg": 0.4
+      },
+      {
+        "img": "base"
+      },
+      {
+        "img": "base"
+      },
+      {
+        "img": "R",
+        "deg": -0.4
+      },
+      {
+        "img": "R",
+        "deg": -0.8,
+        "dy": -0.421875
+      },
+      {
+        "img": "R",
+        "deg": -1.2,
+        "dy": -0.84375
+      },
+      {
+        "img": "R",
+        "deg": -1.2,
+        "dy": -0.84375
+      },
+      {
+        "img": "R",
+        "deg": -0.8,
+        "dy": -0.421875
+      },
+      {
+        "img": "R",
+        "deg": -0.4
+      },
+      {
+        "img": "base"
+      },
+      {
+        "img": "base"
+      }
+    ]
+  }
+}

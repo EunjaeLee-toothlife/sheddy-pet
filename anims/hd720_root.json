@@ -1,0 +1,385 @@
+{
+  "size": 720,
+  "clips": [
+    {
+      "clip": "idle1_loop",
+      "frameCount": 18,
+      "fps": 10,
+      "duration": 1.8,
+      "sourceVideo": "sprites/rebuilt/videos/anim_idle1_loop.webm",
+      "video": "sprites/hd720/videos/anim_idle1_loop.webm",
+      "videoSha256": "525bfea86d9096501351c526a25e330a0dfd69fd6943e8b62ac06163d0bbfa05",
+      "method": "Native ImageGen raw donors keyed at720; original procedural motion and patch coordinates scaled720/512."
+    },
+    {
+      "clip": "basic1_loop",
+      "frameCount": 18,
+      "fps": 5,
+      "duration": 3.6,
+      "sourceVideo": "sprites/rebuilt/videos/anim_basic1_loop.webm",
+      "video": "sprites/hd720/videos/anim_basic1_loop.webm",
+      "videoSha256": "71878d62c1680ded910f1a1d6ae73578f156bbe5c0003a28e781aacf41bc7a5a",
+      "method": "Native ImageGen raw donors keyed at720; original procedural motion and patch coordinates scaled720/512."
+    },
+    {
+      "clip": "basic2_loop",
+      "frameCount": 18,
+      "fps": 10,
+      "duration": 1.8,
+      "sourceVideo": "sprites/rebuilt/videos/anim_basic2_loop.webm",
+      "video": "sprites/hd720/videos/anim_basic2_loop.webm",
+      "videoSha256": "5c86d7572cf5b403559c4845e9446b0688262b1342b8368953ffebbf5553f517",
+      "method": "Native ImageGen raw donors keyed at720; original procedural motion and patch coordinates scaled720/512."
+    },
+    {
+      "clip": "basic3_loop",
+      "frameCount": 18,
+      "fps": 10,
+      "duration": 1.8,
+      "sourceVideo": "sprites/rebuilt/videos/anim_basic3_loop.webm",
+      "video": "sprites/hd720/videos/anim_basic3_loop.webm",
+      "videoSha256": "0c6cbe66d8df321ae899c875a1df587bf570fbae80d1f3cc0fd3d9b581142893",
+      "method": "Native ImageGen raw donors keyed at720; original procedural motion and patch coordinates scaled720/512."
+    },
+    {
+      "clip": "happy1_start",
+      "frameCount": 6,
+      "fps": 10,
+      "duration": 0.6,
+      "sourceVideo": "sprites/rebuilt/videos/anim_happy1_start.webm",
+      "video": "sprites/hd720/videos/anim_happy1_start.webm",
+      "videoSha256": "eb3121665b55ecb454ea02210bc4a762196020313daa3448a876a36f6f352f88",
+      "method": "Native ImageGen raw donors keyed at720; original procedural motion and patch coordinates scaled720/512."
+    },
+    {
+      "clip": "happy1_loop",
+      "frameCount": 18,
+      "fps": 10,
+      "duration": 1.8,
+      "sourceVideo": "sprites/rebuilt/videos/anim_happy1_loop.webm",
+      "video": "sprites/hd720/videos/anim_happy1_loop.webm",
+      "videoSha256": "ccbf5cac960c812a01ce99d82d172f9ecac13d29d108eaf1e42717482b5ff239",
+      "method": "Native ImageGen raw donors keyed at720; original procedural motion and patch coordinates scaled720/512."
+    },
+    {
+      "clip": "happy1_end",
+      "frameCount": 6,
+      "fps": 10,
+      "duration": 0.6,
+      "sourceVideo": "sprites/rebuilt/videos/anim_happy1_end.webm",
+      "video": "sprites/hd720/videos/anim_happy1_end.webm",
+      "videoSha256": "f9fc0f87dbb649aac20d522490ede13625d8b3914b217fa7e8c0975859713a26",
+      "method": "Native ImageGen raw donors keyed at720; original procedural motion and patch coordinates scaled720/512."
+    },
+    {
+      "clip": "happy2_loop",
+      "frameCount": 18,
+      "fps": 10,
+      "duration": 1.8,
+      "sourceVideo": "sprites/rebuilt/videos/anim_happy2_loop.webm",
+      "video": "sprites/hd720/videos/anim_happy2_loop.webm",
+      "videoSha256": "21d23fca48d80b04faa551782d9e71dd9c7c963e8943edf6340b37732f78e7b0",
+      "method": "Native ImageGen raw donors keyed at720; original procedural motion and patch coordinates scaled720/512."
+    },
+    {
+      "clip": "excited1_loop",
+      "frameCount": 18,
+      "fps": 10,
+      "duration": 1.8,
+      "sourceVideo": "sprites/rebuilt/videos/anim_excited1_loop.webm",
+      "video": "sprites/hd720/videos/anim_excited1_loop.webm",
+      "videoSha256": "c3b21e0ce64dc21a4ace8ff0517e1c90badcd7f24f1894a6c9a4b6e9d1f5c6f7",
+      "method": "Native ImageGen raw donors keyed at720; original procedural motion and patch coordinates scaled720/512."
+    },
+    {
+      "clip": "boxing1_loop",
+      "frameCount": 12,
+      "fps": 10,
+      "duration": 2.4,
+      "sourceVideo": "sprites/rebuilt/videos/anim_boxing1_loop.webm",
+      "video": "sprites/hd720/videos/anim_boxing1_loop.webm",
+      "videoSha256": "ff08c8784913380a4cbaa04b0d6d2e6d7ed78c594f39754cdb4f69ff2be4b969",
+      "method": "Native ImageGen raw donors keyed at720; original procedural motion and patch coordinates scaled720/512."
+    },
+    {
+      "clip": "sad1_loop",
+      "frameCount": 18,
+      "fps": 10,
+      "duration": 1.8,
+      "sourceVideo": "sprites/rebuilt/videos/anim_sad1_loop.webm",
+      "video": "sprites/hd720/videos/anim_sad1_loop.webm",
+      "videoSha256": "3c4bebe1177c128441257c5129d25b313909e037b8d31ffdfdb626583b823e64",
+      "method": "Native ImageGen raw donors keyed at720; original procedural motion and patch coordinates scaled720/512."
+    },
+    {
+      "clip": "sad2_loop",
+      "frameCount": 18,
+      "fps": 10,
+      "duration": 1.8,
+      "sourceVideo": "sprites/rebuilt/videos/anim_sad2_loop.webm",
+      "video": "sprites/hd720/videos/anim_sad2_loop.webm",
+      "videoSha256": "ec5fb19940dd7b25839a1dca77921c44403f3493f783ba72309fee2004e4efe4",
+      "method": "Native ImageGen raw donors keyed at720; original procedural motion and patch coordinates scaled720/512."
+    },
+    {
+      "clip": "talk_loop",
+      "frameCount": 18,
+      "fps": 10,
+      "duration": 1.8,
+      "sourceVideo": "sprites/rebuilt/videos/anim_talk_loop.webm",
+      "video": "sprites/hd720/videos/anim_talk_loop.webm",
+      "videoSha256": "5c3ffff319b8ab8cca48e1abcabe9b9aaefbc834c405accf2883745738cdcfbb",
+      "method": "Native ImageGen raw donors keyed at720; original procedural motion and patch coordinates scaled720/512."
+    }
+  ],
+  "donors": {
+    "sprites\\rebuilt\\poses\\idle_open_00.png": {
+      "source": "sprites/rebuilt/raw_poses/idle_open.png",
+      "nativeCell": [
+        1254,
+        1254
+      ],
+      "target": "sprites/hd720/poses/root/idle_open_00.png",
+      "sourceLimited": false
+    },
+    "sprites\\rebuilt\\poses\\idle_closed_00.png": {
+      "source": "sprites/rebuilt/raw_poses/idle_closed.png",
+      "nativeCell": [
+        1254,
+        1254
+      ],
+      "target": "sprites/hd720/poses/root/idle_closed_00.png",
+      "sourceLimited": false
+    },
+    "sprites\\rebuilt\\poses\\basic1_left_00.png": {
+      "source": "sprites/rebuilt/raw_poses/basic1_left.png",
+      "nativeCell": [
+        1254,
+        1254
+      ],
+      "target": "sprites/hd720/poses/root/basic1_left_00.png",
+      "sourceLimited": false
+    },
+    "sprites\\rebuilt\\poses\\basic1_right_00.png": {
+      "source": "sprites/rebuilt/raw_poses/basic1_right.png",
+      "nativeCell": [
+        1254,
+        1254
+      ],
+      "target": "sprites/hd720/poses/root/basic1_right_00.png",
+      "sourceLimited": false
+    },
+    "sprites\\rebuilt\\poses\\basic2_mid_00.png": {
+      "source": "sprites/rebuilt/raw_poses/basic2_mid.png",
+      "nativeCell": [
+        1254,
+        1254
+      ],
+      "target": "sprites/hd720/poses/root/basic2_mid_00.png",
+      "sourceLimited": false
+    },
+    "sprites\\rebuilt\\poses\\basic2_full_00.png": {
+      "source": "sprites/rebuilt/raw_poses/basic2_full.png",
+      "nativeCell": [
+        1254,
+        1254
+      ],
+      "target": "sprites/hd720/poses/root/basic2_full_00.png",
+      "sourceLimited": false
+    },
+    "sprites\\rebuilt\\poses\\happy2_wave_00.png": {
+      "source": "sprites/rebuilt/raw_poses/happy2_wave.png",
+      "nativeCell": [
+        1254,
+        1254
+      ],
+      "target": "sprites/hd720/poses/root/happy2_wave_00.png",
+      "sourceLimited": false
+    },
+    "sprites\\rebuilt\\poses\\excited1_crouch_00.png": {
+      "source": "sprites/rebuilt/raw_poses/excited1_crouch.png",
+      "nativeCell": [
+        1254,
+        1254
+      ],
+      "target": "sprites/hd720/poses/root/excited1_crouch_00.png",
+      "sourceLimited": false
+    },
+    "sprites\\rebuilt\\poses\\excited1_air_00.png": {
+      "source": "sprites/rebuilt/raw_poses/excited1_air.png",
+      "nativeCell": [
+        1254,
+        1254
+      ],
+      "target": "sprites/hd720/poses/root/excited1_air_00.png",
+      "sourceLimited": false
+    },
+    "sprites\\rebuilt\\poses\\batches\\boxing1_loop_00-01-02-03\\cell_00.png": {
+      "source": "sprites/rebuilt/sheets/boxing1_loop_00-01-02-03.png",
+      "nativeCell": [
+        627,
+        627
+      ],
+      "target": "sprites/hd720/poses/root/boxing1_loop_00-01-02-03_cell_00.png",
+      "sourceLimited": true
+    },
+    "sprites\\rebuilt\\poses\\batches\\boxing1_loop_00-01-02-03\\cell_01.png": {
+      "source": "sprites/rebuilt/sheets/boxing1_loop_00-01-02-03.png",
+      "nativeCell": [
+        627,
+        627
+      ],
+      "target": "sprites/hd720/poses/root/boxing1_loop_00-01-02-03_cell_01.png",
+      "sourceLimited": true
+    },
+    "sprites\\rebuilt\\poses\\batches\\boxing1_loop_00-01-02-03\\cell_02.png": {
+      "source": "sprites/rebuilt/sheets/boxing1_loop_00-01-02-03.png",
+      "nativeCell": [
+        627,
+        627
+      ],
+      "target": "sprites/hd720/poses/root/boxing1_loop_00-01-02-03_cell_02.png",
+      "sourceLimited": true
+    },
+    "sprites\\rebuilt\\poses\\batches\\boxing1_loop_00-01-02-03\\cell_03.png": {
+      "source": "sprites/rebuilt/sheets/boxing1_loop_00-01-02-03.png",
+      "nativeCell": [
+        627,
+        627
+      ],
+      "target": "sprites/hd720/poses/root/boxing1_loop_00-01-02-03_cell_03.png",
+      "sourceLimited": true
+    },
+    "sprites\\rebuilt\\poses\\batches\\boxing1_loop_04-05-06-07\\cell_00.png": {
+      "source": "sprites/rebuilt/sheets/boxing1_loop_04-05-06-07.png",
+      "nativeCell": [
+        627,
+        627
+      ],
+      "target": "sprites/hd720/poses/root/boxing1_loop_04-05-06-07_cell_00.png",
+      "sourceLimited": true
+    },
+    "sprites\\rebuilt\\poses\\batches\\boxing1_loop_04-05-06-07\\cell_01.png": {
+      "source": "sprites/rebuilt/sheets/boxing1_loop_04-05-06-07.png",
+      "nativeCell": [
+        627,
+        627
+      ],
+      "target": "sprites/hd720/poses/root/boxing1_loop_04-05-06-07_cell_01.png",
+      "sourceLimited": true
+    },
+    "sprites\\rebuilt\\poses\\batches\\boxing1_loop_04-05-06-07\\cell_02.png": {
+      "source": "sprites/rebuilt/sheets/boxing1_loop_04-05-06-07.png",
+      "nativeCell": [
+        627,
+        627
+      ],
+      "target": "sprites/hd720/poses/root/boxing1_loop_04-05-06-07_cell_02.png",
+      "sourceLimited": true
+    },
+    "sprites\\rebuilt\\poses\\batches\\boxing1_loop_04-05-06-07\\cell_03.png": {
+      "source": "sprites/rebuilt/sheets/boxing1_loop_04-05-06-07.png",
+      "nativeCell": [
+        627,
+        627
+      ],
+      "target": "sprites/hd720/poses/root/boxing1_loop_04-05-06-07_cell_03.png",
+      "sourceLimited": true
+    },
+    "sprites\\rebuilt\\poses\\batches\\boxing1_loop_08-09-10-11\\cell_00.png": {
+      "source": "sprites/rebuilt/sheets/boxing1_loop_08-09-10-11.png",
+      "nativeCell": [
+        627,
+        627
+      ],
+      "target": "sprites/hd720/poses/root/boxing1_loop_08-09-10-11_cell_00.png",
+      "sourceLimited": true
+    },
+    "sprites\\rebuilt\\poses\\batches\\boxing1_loop_08-09-10-11\\cell_01.png": {
+      "source": "sprites/rebuilt/sheets/boxing1_loop_08-09-10-11.png",
+      "nativeCell": [
+        627,
+        627
+      ],
+      "target": "sprites/hd720/poses/root/boxing1_loop_08-09-10-11_cell_01.png",
+      "sourceLimited": true
+    },
+    "sprites\\rebuilt\\poses\\batches\\boxing1_loop_08-09-10-11\\cell_02.png": {
+      "source": "sprites/rebuilt/sheets/boxing1_loop_08-09-10-11.png",
+      "nativeCell": [
+        627,
+        627
+      ],
+      "target": "sprites/hd720/poses/root/boxing1_loop_08-09-10-11_cell_02.png",
+      "sourceLimited": true
+    },
+    "sprites\\rebuilt\\poses\\batches\\boxing1_loop_08-09-10-11\\cell_03.png": {
+      "source": "sprites/rebuilt/sheets/boxing1_loop_08-09-10-11.png",
+      "nativeCell": [
+        627,
+        627
+      ],
+      "target": "sprites/hd720/poses/root/boxing1_loop_08-09-10-11_cell_03.png",
+      "sourceLimited": true
+    },
+    "sprites\\rebuilt\\poses\\sad1_slump_00.png": {
+      "source": "sprites/rebuilt/raw_poses/sad1_slump.png",
+      "nativeCell": [
+        1254,
+        1254
+      ],
+      "target": "sprites/hd720/poses/root/sad1_slump_00.png",
+      "sourceLimited": false
+    },
+    "sprites\\rebuilt\\poses\\sad2_crouch_00.png": {
+      "source": "sprites/rebuilt/raw_poses/sad2_crouch.png",
+      "nativeCell": [
+        1254,
+        1254
+      ],
+      "target": "sprites/hd720/poses/root/sad2_crouch_00.png",
+      "sourceLimited": false
+    },
+    "sprites\\rebuilt\\poses\\happy1_mid_00.png": {
+      "source": "sprites/rebuilt/raw_poses/happy1_mid.png",
+      "nativeCell": [
+        1254,
+        1254
+      ],
+      "target": "sprites/hd720/poses/root/happy1_mid_00.png",
+      "sourceLimited": false
+    },
+    "sprites\\rebuilt\\poses\\happy1_full_00.png": {
+      "source": "sprites/rebuilt/raw_poses/happy1_full.png",
+      "nativeCell": [
+        1254,
+        1254
+      ],
+      "target": "sprites/hd720/poses/root/happy1_full_00.png",
+      "sourceLimited": false
+    },
+    "sprites\\rebuilt\\poses\\talk_open_00.png": {
+      "source": "sprites/rebuilt/raw_poses/talk_open.png",
+      "nativeCell": [
+        1254,
+        1254
+      ],
+      "target": "sprites/hd720/poses/root/talk_open_00.png",
+      "sourceLimited": false
+    },
+    "sprites\\rebuilt\\poses\\talk_half_00.png": {
+      "source": "sprites/rebuilt/raw_poses/talk_half.png",
+      "nativeCell": [
+        1254,
+        1254
+      ],
+      "target": "sprites/hd720/poses/root/talk_half_00.png",
+      "sourceLimited": false
+    }
+  },
+  "staticVisualReview": {
+    "all13ContactsInspected": true,
+    "boxingFrames7And8StandingBreath": true,
+    "whiteCoatAndFaceClean": true
+  }
+}
