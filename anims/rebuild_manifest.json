@@ -14606,6 +14606,12 @@
       "state": "listen1",
       "sha256": "3263087c5397bccf41148c7b7e8b6d11f182e53827c77a339423f531a33cf58b",
       "reason": "ImageGen 귀 기울이기 신규 모션. 원본/재구성 모드에서 공통 사용."
+    },
+    {
+      "file": "anim_facepalm1_loop.webm",
+      "state": "facepalm1",
+      "sha256": "16426fe4a10eb31186ac2df7afca9919997baebdac56e40010c73b670ebfabce",
+      "reason": "ImageGen 이마 짚기 신규 모션. 원본/재구성 모드에서 공통 사용."
     }
   ]
 }
