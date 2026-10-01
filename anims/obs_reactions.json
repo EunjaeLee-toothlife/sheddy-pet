@@ -67,5 +67,20 @@
       "6": 2,
       "7": 2
     }
+  },
+  "salute1": {
+    "sheet": "sprites/raw/salute1_imagegen_sheet.png",
+    "sha256": "c3d599c5116981c5c682159725313d36db5727530bb55c78ed8bee183f0096e9",
+    "name": "salute1_loop",
+    "holds": {
+      "0": 2,
+      "1": 2,
+      "2": 2,
+      "3": 4,
+      "4": 6,
+      "5": 4,
+      "6": 2,
+      "7": 2
+    }
   }
 }

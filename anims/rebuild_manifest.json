@@ -14582,6 +14582,12 @@
       "state": "thumbsup1",
       "sha256": "e549547137f7db33f20966de010811fddad507f183c8d2b061478afec9dae95b",
       "reason": "ImageGen 엄지척 신규 모션. 원본/재구성 모드에서 공통 사용."
+    },
+    {
+      "file": "anim_salute1_loop.webm",
+      "state": "salute1",
+      "sha256": "d4874530766309887b4c04fd9d76514f32a2c75ab2784322c3d7629f3dd1c6f0",
+      "reason": "ImageGen 경례 신규 모션. 원본/재구성 모드에서 공통 사용."
     }
   ]
 }
