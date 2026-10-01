@@ -52,5 +52,20 @@
       "6": 2,
       "7": 2
     }
+  },
+  "thumbsup1": {
+    "sheet": "sprites/raw/thumbsup1_imagegen_sheet.png",
+    "sha256": "6009f64534ec14686444c2a03a6939222d2b4f1f87bc884cb4cd6d8fdeef0d32",
+    "name": "thumbsup1_loop",
+    "holds": {
+      "0": 2,
+      "1": 2,
+      "2": 2,
+      "3": 4,
+      "4": 6,
+      "5": 4,
+      "6": 2,
+      "7": 2
+    }
   }
 }

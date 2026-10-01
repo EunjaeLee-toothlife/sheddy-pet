@@ -35,6 +35,13 @@ window.setPetState("clap1");
 window.postMessage({ type: "pet-state", state: "heart1" }, "*");
 ```
 
+추가 모션도 F3 또는 `setPetState`로 실행한다. 모두 2.4초 단발 재생이며 계속 유지로 반복할 수 있다.
+
+| 상태 | 동작 |
+| --- | --- |
+| `thumbsup1` | 엄지척 |
+<!-- 추가 반응 모션 -->
+
 ### 외부에서 상태 바꾸기
 
 ```js

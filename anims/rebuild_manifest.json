@@ -14576,6 +14576,12 @@
       "state": "surprise1",
       "sha256": "8e2d50311d0755dd6b098b24d665453112b4cd1eee70c38e6223915631a68325",
       "reason": "OBS 방송 반응용 ImageGen 신규 모션. 원본/재구성 모드에서 공통 사용."
+    },
+    {
+      "file": "anim_thumbsup1_loop.webm",
+      "state": "thumbsup1",
+      "sha256": "e549547137f7db33f20966de010811fddad507f183c8d2b061478afec9dae95b",
+      "reason": "ImageGen 엄지척 신규 모션. 원본/재구성 모드에서 공통 사용."
     }
   ]
 }
