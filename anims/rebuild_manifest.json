@@ -14558,6 +14558,24 @@
       "state": "note1",
       "sha256": "4baad8d9c8e567f4a0cc364475e32119e86cf858c2f53482af67c8fc613749d4",
       "reason": "Added upstream after the39-clip reconstruction; preserve original artwork and timing."
+    },
+    {
+      "file": "anim_clap1_loop.webm",
+      "state": "clap1",
+      "sha256": "64f4f9bed79d5c6a3283605e198ac2f7568f5b2a5d007b2141b850e1e86648d8",
+      "reason": "OBS 방송 반응용 ImageGen 신규 모션. 원본/재구성 모드에서 공통 사용."
+    },
+    {
+      "file": "anim_heart1_loop.webm",
+      "state": "heart1",
+      "sha256": "13ee37a8ae0c968195daf281708fc49345e27c6a422a4cbe8904b42fa2520263",
+      "reason": "OBS 방송 반응용 ImageGen 신규 모션. 원본/재구성 모드에서 공통 사용."
+    },
+    {
+      "file": "anim_surprise1_loop.webm",
+      "state": "surprise1",
+      "sha256": "8e2d50311d0755dd6b098b24d665453112b4cd1eee70c38e6223915631a68325",
+      "reason": "OBS 방송 반응용 ImageGen 신규 모션. 원본/재구성 모드에서 공통 사용."
     }
   ]
 }

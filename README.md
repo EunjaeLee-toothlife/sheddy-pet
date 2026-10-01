@@ -21,6 +21,19 @@ OBS 브라우저 소스나 웹페이지에 그대로 올려 쓴다.
 | `?hold=8` | 외부 명령으로 바꾼 상태를 주사위로부터 보호할 시간(초) |
 | `?dice=0` | 주사위 끄기 (외부 제어 전용) |
 | `?flip=1` | 좌우 반전 |
+| `?resolution=512` | 합성 캔버스의 긴 변 상한(px). 기본 512, 범위 128~2048. 큰 소스에서 더 높은 해상도가 필요하면 1024 사용 |
+
+### 방송 반응 모션
+
+F3 모션 선택기에서 **박수(`clap1`) · 손하트(`heart1`) · 깜짝 놀람(`surprise1`)**을 고를 수 있다.
+각각 3.2초 / 2초 / 2초 재생 뒤 기본 자세로 돌아온다. `dice=0`이나 일반 `hold` 시간에도 단발 복귀하며,
+**계속 유지**를 켜면 반복한다. 기존 `setPetState`, `postMessage`, BroadcastChannel로도 실행할 수 있다.
+자동 주사위에서는 박수·손하트가 happy, 놀람이 excited 분류에 포함된다.
+
+```js
+window.setPetState("clap1");
+window.postMessage({ type: "pet-state", state: "heart1" }, "*");
+```
 
 ### 외부에서 상태 바꾸기
 
@@ -36,9 +49,16 @@ new BroadcastChannel("sheddy-pet").postMessage("happy1");            // 같은 �
   idle / basic / happy / excited / special / sad)를 뽑고, 그 안에서 `weight`로 모션을 뽑는다. 감정 → 감정 직행은 없고
   항상 idle을 거친다.
 - **전환 순서.** 현재 상태의 `end`(→ `outro`) → 다음 상태의 `start` → `loop`. `end`가 배열이면 그중 하나를 랜덤 재생(멀티 엔딩).
-- **렌더링.** `<video>` 두 개를 더블 버퍼로 쓰고, 화면에는 캔버스 하나만 보인다. 전환은 70ms 크로스 디졸브라 깜박임이 없다.
-- **견고성.** 시작 직후 전 클립(약 6MB)을 받아 blob URL로 보관하고, 로드 실패·타임아웃은 건너뛰며, 1초 주기 워치독이
-  멈춘 전환을 idle로 되돌린다.
+- **렌더링.** `<video>` 두 개와 캔버스 하나를 사용한다. 실제 영상 프레임이 도착할 때만 합성하고,
+  70ms 크로스 디졸브 중에만 화면 주사율로 그린다. 영상 프레임 콜백이 없는 구형 브라우저는 최대 30Hz로 동작한다.
+  OBS 합성 캔버스의 긴 변은 기본 512px이며 CSS가 출력 크기를 맞춘다.
+- **로딩.** 필요한 영상만 받아 최대 4MiB의 LRU blob 캐시에 보관한다. 중복 요청을 합치고 동시 fetch를 2개로 제한한다.
+  다음 상태의 loop는 진입·이탈 영상 재생 중 미리 받는다. 캐시에서 빠진 클립은 다시 필요할 때 로드하므로
+  모든 모션을 미리 받은 방식에 비해 첫 전환에서 네트워크 대기가 생길 수 있다.
+- **숨김·복귀.** 탭 또는 OBS 소스가 숨겨지면 영상 디코딩과 캔버스 합성을 멈춘다. 마지막 그림은 보존하고,
+  복귀하면 재생과 대기 명령을 이어 간다. 숨김 시간은 워치독 타임아웃에서 제외한다.
+  OBS 연결은 공식 [소스 가시성 이벤트](https://github.com/obsproject/obs-browser/blob/master/README.md#register-for-event-callbacks)를 사용한다.
+- **견고성.** 로드 실패·타임아웃은 건너뛰며, 1초 주기 워치독이 멈춘 전환을 idle로 되돌린다.
 
 모션 등록 항목(`widget.html`의 `ANIMS`):
 
@@ -49,6 +69,7 @@ new BroadcastChannel("sheddy-pet").postMessage("happy1");            // 같은 �
 | `category`, `weight` | 주사위 분류와 분류 내 비율 (`weight: 0`이면 주사위 제외) |
 | `minCycles` / `maxCycles` | 최소 유지 사이클 / 이만큼 돌면 idle로 강제 복귀 |
 | `rate` | 재생 배속 (start·loop·end 공통) |
+| `once` / `label` | 한 사이클 뒤 기본 자세 복귀(무기한 유지 제외) / 모션 선택기에 표시할 이름 |
 
 ## 개발
 
@@ -63,7 +84,40 @@ python -m http.server 8474
 
 ```bash
 node tools/widget_check.js
+node tools/widget_check.js --fallback       # 영상 프레임 콜백 없는 OBS/CEF 경로
+node tools/widget_check.js --page docs/index.html
 ```
+
+성능 지표와 반복 비교 보고서는 다음 명령으로 만든다. 기준 커밋을 명시하므로 커밋 이후에도 같은 버전과 비교할 수 있다.
+각 해상도에서 기준/현재를 3회씩, 총 12번 측정한다. 새 Chrome 프로필을 사용하고 실행 순서는 AB/BA로 교대한다.
+
+```bash
+node tools/widget_metrics.js --baseline d909552 --runs 3
+node --test tools/widget_metrics.test.js
+```
+
+원시 표본·브라우저 버전·파일 해시는 `reports/obs-performance.json`, 계산 결과는
+[`reports/obs-performance.md`](reports/obs-performance.md)에 저장한다. 첫 그림 지연, 초당 합성 횟수,
+그리기 픽셀량, 메인 스레드 점유율, 초기 전송량·Blob 보유량, 전환 지연 P95, 숨김 중 작업량을 측정한다.
+중앙값·최소/최대·감소율을 계산하며, 실제 OBS 전체 CPU/GPU 사용률은 포함하지 않는다.
+`--output <경로.json>`으로 별도 결과를 남길 수 있다. 중단된 JSON에는 완료된 표본만 있으며 `summary`가 없으면 미완료다.
+
+간단한 미커밋 변경 비교는 다음 명령을 순서대로 실행한다. 이때 `--baseline`은 Git HEAD의 위젯을 서빙한다.
+대기 상태(`dice=0`), 5초간 그리기 횟수, 캐시 수, 초기 영상 전송량을 출력한다.
+512px/DPR 1과 1024px/DPR 2를 각각 측정한다. `TaskDuration`은 렌더러 메인 스레드 작업 시간이며 OBS 전체 CPU/GPU 사용률이 아니다.
+
+```bash
+node tools/widget_check.js --benchmark --baseline
+node tools/widget_check.js --benchmark
+```
+
+로컬 Chrome 측정(2026-10-01): 512px에서 5초당 그리기 **300 → 50회**, 초기 영상 **8,901,737 → 67,280바이트**.
+1024px/DPR 2에서 캔버스 **2048² → 512²**, 그리기 **300 → 49회**. 실제 부하는 OBS 버전·장면·해상도에 따라 달라진다.
+
+신규 반응 모션은 내장 ImageGen으로 제작했다. [원본 프롬프트](prompts/obs_reactions_imagegen.md),
+[시트·타이밍 정의](anims/obs_reactions.json), `sprites/raw/*_imagegen_sheet.png`를 보관한다.
+Pillow·NumPy와 `libvpx-vp9` 인코더가 포함된 ffmpeg 환경에서 `python3 tools/build_reactions.py`로 재현할 수 있다.
+재인코딩했다면 `anims/rebuild_manifest.json`의 해당 영상 해시를 검수 후 갱신하고 배포본을 다시 만든다.
 
 `widget.html`이나 `sprites/anim_*.webm`을 바꿨으면 Pages 배포본을 다시 만든다. `docs/`는 생성물이므로 직접 고치지 않는다.
 `master`에 들어가면 GitHub Pages(`master` / `docs`)에 반영된다.

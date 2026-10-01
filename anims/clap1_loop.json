@@ -1,0 +1,24 @@
+{
+  "sheet": "sprites/raw/clap1_imagegen_sheet.png",
+  "sha256": "3d3a3e06e71a5b63e945ada92ddb3de8c58be0922d8ee6a1b181f484ac7a4e44",
+  "name": "clap1_loop",
+  "holds": {
+    "0": 2,
+    "1": 2,
+    "2": 2,
+    "3": 3,
+    "4": 3,
+    "5": 4,
+    "6": 2,
+    "7": 2
+  },
+  "repeats": [
+    {
+      "frames": [
+        3,
+        4
+      ],
+      "times": 3
+    }
+  ]
+}

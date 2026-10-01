@@ -1,0 +1,56 @@
+{
+  "clap1": {
+    "sheet": "sprites/raw/clap1_imagegen_sheet.png",
+    "sha256": "3d3a3e06e71a5b63e945ada92ddb3de8c58be0922d8ee6a1b181f484ac7a4e44",
+    "name": "clap1_loop",
+    "holds": {
+      "0": 2,
+      "1": 2,
+      "2": 2,
+      "3": 3,
+      "4": 3,
+      "5": 4,
+      "6": 2,
+      "7": 2
+    },
+    "repeats": [
+      {
+        "frames": [
+          3,
+          4
+        ],
+        "times": 3
+      }
+    ]
+  },
+  "heart1": {
+    "sheet": "sprites/raw/heart1_imagegen_sheet.png",
+    "sha256": "711034f40a051c0c88c8d67017b92e0c8c0e9210d8e5b5990cc4ffc80b310f0a",
+    "name": "heart1_loop",
+    "holds": {
+      "0": 2,
+      "1": 2,
+      "2": 2,
+      "3": 3,
+      "4": 3,
+      "5": 4,
+      "6": 2,
+      "7": 2
+    }
+  },
+  "surprise1": {
+    "sheet": "sprites/raw/surprise1_imagegen_sheet.png",
+    "sha256": "82ab7cea521aaaa10d40ed676c3a746092220fa57a571538357c02dbed8f0ea3",
+    "name": "surprise1_loop",
+    "holds": {
+      "0": 2,
+      "1": 2,
+      "2": 2,
+      "3": 3,
+      "4": 3,
+      "5": 4,
+      "6": 2,
+      "7": 2
+    }
+  }
+}
