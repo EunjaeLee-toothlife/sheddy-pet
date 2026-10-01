@@ -14654,6 +14654,42 @@
       "state": "power1",
       "sha256": "f26272c164af0cf51d82d29b9c5f27afb653c46184e8bd4ee2388f1947efc7a3",
       "reason": "ImageGen 파워 챌린지 전신 춤. 원본/재구성 모드 공통 사용."
+    },
+    {
+      "file": "anim_alchemy1_start.webm",
+      "state": "alchemy1",
+      "sha256": "06a7b2e2cb8bda578378531a6e4827338dd11c48f97c059a11a4795a430a6450",
+      "reason": "ImageGen 마녀 연금술 신규 모션. 원본/재구성 모드에서 공통 사용."
+    },
+    {
+      "file": "anim_alchemy1_loop.webm",
+      "state": "alchemy1",
+      "sha256": "16b3d8a5d913d28d244c761d3926e581bd382dd87dff7b3e1d5123667f782800",
+      "reason": "ImageGen 마녀 연금술 신규 모션. 원본/재구성 모드에서 공통 사용."
+    },
+    {
+      "file": "anim_alchemy1_end1.webm",
+      "state": "alchemy1",
+      "sha256": "e5fe0c0e07aa0c0ef0d42ae802a8d9b13f7d2829d2a5789c9cf283785d7c9c8b",
+      "reason": "ImageGen 마녀 연금술 신규 모션. 원본/재구성 모드에서 공통 사용."
+    },
+    {
+      "file": "anim_alchemy1_end2.webm",
+      "state": "alchemy1",
+      "sha256": "e4620fd31e2bc7caaa97b79ceccf29fff3aff9f8399bb81e838364cc68cdeb66",
+      "reason": "ImageGen 마녀 연금술 신규 모션. 원본/재구성 모드에서 공통 사용."
+    },
+    {
+      "file": "anim_alchemy1_end3.webm",
+      "state": "alchemy1",
+      "sha256": "962357e3cdee8bb1f3dfc4160814cf1f76ffba528c04d45ccc8bcc95e3f97ff6",
+      "reason": "ImageGen 마녀 연금술 신규 모션. 원본/재구성 모드에서 공통 사용."
+    },
+    {
+      "file": "anim_alchemy1_outro.webm",
+      "state": "alchemy1",
+      "sha256": "427966988916ce946cdd5bd9ff52390b5c9406407a1410f47823d4a754f4f52e",
+      "reason": "ImageGen 마녀 연금술 신규 모션. 원본/재구성 모드에서 공통 사용."
     }
   ]
 }

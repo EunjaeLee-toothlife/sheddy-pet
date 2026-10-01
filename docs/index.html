@@ -265,6 +265,11 @@ const ANIMS = {
               end: Array.from({ length: 10 }, (_, i) => `anim_pastry1_end${i + 1}.webm`),
               outro: "anim_pastry1_outro.webm",
               category: "special", weight: 2, minCycles: 2, maxCycles: 4, rate: 0.7 },
+  // 마녀 변신 → 연금술 반복 → 결과 3종 → 정리하고 가운으로 복귀.
+  alchemy1: { start: "anim_alchemy1_start.webm", loop: "anim_alchemy1_loop.webm",
+              end: ["anim_alchemy1_end1.webm", "anim_alchemy1_end2.webm", "anim_alchemy1_end3.webm"],
+              outro: "anim_alchemy1_outro.webm", label: "마녀 연금술",
+              category: "special", weight: 2, minCycles: 2, maxCycles: 3, rate: 1 },
   // 레몬 한 입 (꺼내기 → 베어물기 → 시큼 → 엄지척 → 숨기기) — 완결형 16프레임 @10FPS, rate 0.7, 1회만
   lemon1:   { loop: "anim_lemon1_loop.webm", category: "special", weight: 2, minCycles: 1, maxCycles: 1, rate: 0.7 },
   // 연구 노트 메모 (클립보드 꺼내기 → 끄적 → 고민 → 아이디어! → 빠르게 끄적 → 레몬 낙서 자랑 → 숨기기)
@@ -525,7 +530,7 @@ const CLIP_URL = new Map();
 const clipBytes = new Map(), clipLoads = new Map(), loadQueue = [];
 const CACHE_LIMIT = 4 * 1024 * 1024;
 let cacheBytes = 0, activeLoads = 0;
-const ORIGINAL_CLIPS = new Set(["anim_power1_loop.webm", "anim_shuffle1_loop.webm", "anim_bounce1_loop.webm", "anim_note1_loop.webm", "anim_clap1_loop.webm", "anim_heart1_loop.webm", "anim_surprise1_loop.webm", "anim_kiss1_loop.webm", "anim_pout1_loop.webm", "anim_cheer1_loop.webm", "anim_shush1_loop.webm", "anim_facepalm1_loop.webm", "anim_listen1_loop.webm", "anim_think1_loop.webm", "anim_shrug1_loop.webm", "anim_salute1_loop.webm", "anim_thumbsup1_loop.webm"]);
+const ORIGINAL_CLIPS = new Set(["anim_alchemy1_start.webm", "anim_alchemy1_loop.webm", "anim_alchemy1_end1.webm", "anim_alchemy1_end2.webm", "anim_alchemy1_end3.webm", "anim_alchemy1_outro.webm", "anim_power1_loop.webm", "anim_shuffle1_loop.webm", "anim_bounce1_loop.webm", "anim_note1_loop.webm", "anim_clap1_loop.webm", "anim_heart1_loop.webm", "anim_surprise1_loop.webm", "anim_kiss1_loop.webm", "anim_pout1_loop.webm", "anim_cheer1_loop.webm", "anim_shush1_loop.webm", "anim_facepalm1_loop.webm", "anim_listen1_loop.webm", "anim_think1_loop.webm", "anim_shrug1_loop.webm", "anim_salute1_loop.webm", "anim_thumbsup1_loop.webm"]);
 function assetSrc(file) { return (ORIGINAL_CLIPS.has(file) ? "sprites/" : BASE) + file; }
 function clipSrc(file) { return CLIP_URL.get(file) || assetSrc(file); }
 function makeCacheRoom(bytes) {
