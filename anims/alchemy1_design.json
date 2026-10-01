@@ -1,0 +1,30 @@
+{
+  "state": "alchemy1",
+  "label": "마녀 연금술",
+  "approvedCostume": "output/imagegen/witch-costume-concepts/02-classic-alchemist.png",
+  "imageTool": "built-in ImageGen",
+  "story": ["가운에서 클래식 마녀로 변신", "솥 소환과 재료 투입", "솥 젓기 반복", "세 결과 중 하나", "소품 정리와 가운 복귀"],
+  "endings": {
+    "alchemy1_end1": "황금 레몬: 떠오른 레몬을 받들고 뿌듯해한 뒤 솥으로 돌려보낸다.",
+    "alchemy1_end2": "폭발: 솥이 부풀어 연기가 터지고, 비뚤어진 모자와 검댕을 정리한다.",
+    "alchemy1_end3": "슬라임: 작은 레몬 슬라임이 솥에서 뛰어 머리에 앉고, 쓰다듬은 뒤 솥으로 돌려보낸다."
+  },
+  "invariants": [
+    "선택한 모자·망토·레몬 머리핀·파우치·물약 두 병을 변신 후 끝까지 유지",
+    "손은 두 개이며 소품을 자연스럽게 잡음",
+    "솥·숟가락의 크기와 위치를 클립 사이에 유지",
+    "start 마지막 = loop 첫 프레임; loop 마지막 = loop 첫 프레임",
+    "각 end 첫 프레임 = loop 첫 프레임; 각 end 마지막 = outro 첫 프레임",
+    "start 첫 프레임과 outro 마지막은 기존 idle 기준 이미지",
+    "계속 유지 중에는 loop를 반복하고 종료 명령 뒤 end와 outro를 완주",
+    "512px 투명 VP9, 프레임 가장자리 잘림 없음, 4MiB 캐시 상한 유지"
+  ],
+  "acceptance": [
+    "모든 생성 시트와 전 프레임 육안 검수",
+    "세 결과의 시작·반복·결과·복귀 재생과 정확한 순서 확인",
+    "연금술 반복 중 숨김/복귀와 대기 명령 보존",
+    "기존 widget_check 및 Pages fallback 검사 통과",
+    "원본/재구성 Pages 자산·해시 정합, 배포본 재생성",
+    "원본·프롬프트·프레임·재현 빌더·런타임 연결을 커밋하고 PR 작성"
+  ]
+}
