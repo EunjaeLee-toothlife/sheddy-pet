@@ -111,7 +111,8 @@ const IN_PAGE = async () => {
       await sleep(750);
       const corner = sctx.getImageData(0, 0, 1, 1).data[3];
       const body = sctx.getImageData(Math.floor(screen.width / 2), Math.floor(screen.height * 0.55), 1, 1).data[3];
-      expect(corner === 0 && body === 255, `${name} 배경/몸통 알파 이상: ${corner}/${body}`);
+      // 생성 PNG의 알파와 VP9 양자화로 생기는 거의 불투명한 값도 허용한다.
+      expect(corner === 0 && body >= 250, `${name} 배경/몸통 알파 이상: ${corner}/${body}`);
       if (window.__captureReactions) window.__captureReactions.push({ name, png: screen.toDataURL() });
       await waitFor(idle, 10000, name + " 단발 복귀");
     }
@@ -123,6 +124,27 @@ const IN_PAGE = async () => {
       expect(current === "clap1" && pinnedUntil === Infinity, "반응 모션 유지 실패");
     } finally { motionHold.checked = false; pinnedUntil = 0; }
     return `${reactions.length}개 모션 단발 복귀 + 박수 계속 유지`;
+  });
+
+  const dances = ["bounce1", "shuffle1", "power1"].filter(name => ANIMS[name]);
+  if (dances.length) await check("danceLoops", async w0 => {
+    motionHold.checked = true;
+    try {
+      for (const name of dances) {
+        pickMotion(name);
+        await waitFor(() => current === name && !transitioning, 10000, name + " 유지");
+        let loops = 0, lastTime = vids[front].currentTime;
+        await waitFor(() => {
+          const time = vids[front].currentTime;
+          if (time < lastTime - 0.5) loops++;
+          lastTime = time;
+          return loops >= 2;
+        }, 12000, name + " 두 사이클");
+        expect(current === name && pinnedUntil === Infinity, name + " 반복 유지 실패");
+      }
+      expect(!warns.slice(w0).some(w => w.includes("watchdog:")), "춤 반복 중 워치독 개입");
+    } finally { motionHold.checked = false; pinnedUntil = 0; }
+    return `${dances.length}개 춤 각각 두 사이클, 무기한 유지, 워치독 개입 없음`;
   });
 
   if (window.__reactionsOnly) {
