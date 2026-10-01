@@ -272,6 +272,10 @@ const ANIMS = {
   note1:    { loop: "anim_note1_loop.webm", category: "special", weight: 2, minCycles: 1, maxCycles: 1 },
   sad1:     { loop: "anim_sad1_loop.webm", category: "sad", weight: 1 },
   sad2:     { loop: "anim_sad2_loop.webm", category: "sad", weight: 1 },
+  // 방송 반응: 한 번 완주 후 idle 복귀. '계속 유지'를 켜면 반복한다.
+  clap1:    { loop: "anim_clap1_loop.webm", label: "박수", category: "happy", weight: 2, once: true },
+  heart1:   { loop: "anim_heart1_loop.webm", label: "손하트", category: "happy", weight: 2, once: true },
+  surprise1:{ loop: "anim_surprise1_loop.webm", label: "깜짝 놀람", category: "excited", weight: 1, once: true },
   talk:     { loop: "anim_talk_loop.webm", category: "talk", weight: 0 }, // 주사위 제외, 마이크 전용
 };
 const DEFAULT_STATE = "idle1";
@@ -292,7 +296,8 @@ const MIN_EMOTION_CYCLES = 3;
 // ?ending=1        재구성 후보 검수에서 다중 엔딩 번호 지정 (1부터)
 const IS_DESKTOP = params.get("desktop") === "1" || Boolean(window.deskPet);
 if (IS_DESKTOP) document.body.classList.add("desktop");
-const HOLD_SEC = Number(params.get("hold") || 8);
+const holdValue = Number(params.get("hold") ?? 8);
+const HOLD_SEC = Number.isFinite(holdValue) ? Math.max(0, holdValue) : 8;
 const DICE_ON = params.get("dice") !== "0";
 if (params.get("flip") === "1") {
   document.getElementById("stage").style.transform = "scaleX(-1)";
@@ -305,19 +310,28 @@ let front = 0; // 현재 캔버스에 그리는 소스 비디오
 function backVid() { return vids[1 - front]; }
 
 // ── 단일 캔버스 합성 ─────────────────────────────────────────
-// 두 비디오를 화면에 직접 올리지 않고, rAF 루프가 '활성 비디오(front)'를
-// 하나뿐인 캔버스에 그린다. 전환은 front 포인터만 바꾸는 것이라
+// 두 비디오를 화면에 직접 올리지 않고, 새 영상 프레임이 도착할 때만
+// '활성 비디오(front)'를 캔버스에 그린다. 전환은 front 포인터만 바꾸는 것이라
 // opacity 토글/레이어 교체가 없어 합성 플래시(깜박임)가 발생하지 않는다.
 const screen = document.getElementById("screen");
 const sctx = screen.getContext("2d");
+const resolutionValue = Number(params.get("resolution") || 512);
+const RESOLUTION = Number.isFinite(resolutionValue) ? Math.max(128, Math.min(2048, resolutionValue)) : 512;
+let renderId = 0, frameId = 0, frameVideo = null, fallbackTimer = 0;
+let obsVisible = true, suspended = false, suspendedAt = 0;
+const resumeVideos = new Set();
+let drawCount = 0;
 
 function fitCanvas() {
   const r = screen.parentElement.getBoundingClientRect();
   const dpr = window.devicePixelRatio || 1;
-  const w = Math.max(1, Math.round(r.width * dpr));
-  const h = Math.max(1, Math.round(r.height * dpr));
+  // 원본 영상보다 큰 캔버스를 매 프레임 합성하지 않는다. CSS가 출력 크기를 맞춘다.
+  const scale = IS_DESKTOP ? 1 : Math.min(1, RESOLUTION / Math.max(1, r.width * dpr, r.height * dpr));
+  const w = Math.max(1, Math.round(r.width * dpr * scale));
+  const h = Math.max(1, Math.round(r.height * dpr * scale));
   if (screen.width !== w) screen.width = w;
   if (screen.height !== h) screen.height = h;
+  requestDraw();
 }
 
 let fade = null;      // 진행 중인 크로스 디졸브 { from, to, start, dur }
@@ -334,7 +348,36 @@ function drawVid(v, alpha) {
   sctx.globalAlpha = 1;
 }
 
+function requestDraw() {
+  if (!suspended && !renderId) renderId = requestAnimationFrame(renderLoop);
+}
+
+function cancelFrameWait() {
+  if (frameId) frameVideo.cancelVideoFrameCallback(frameId);
+  frameId = 0;
+  clearTimeout(fallbackTimer);
+  fallbackTimer = 0;
+}
+
+function waitForFrame() {
+  if (suspended || frameId || fallbackTimer) return;
+  const v = vids[front];
+  if (typeof v.requestVideoFrameCallback === "function") {
+    frameVideo = v;
+    frameId = v.requestVideoFrameCallback(() => {
+      frameId = 0;
+      if (v === vids[front]) requestDraw();
+    });
+  } else {
+    // 구형 OBS/CEF에서만 30Hz 폴백을 쓴다.
+    fallbackTimer = setTimeout(() => { fallbackTimer = 0; requestDraw(); }, 1000 / 30);
+  }
+}
+
 function renderLoop() {
+  renderId = 0;
+  if (suspended) return;
+  drawCount++;
   sctx.clearRect(0, 0, screen.width, screen.height);
   if (fade) {
     const t = (performance.now() - fade.start) / fade.dur;
@@ -351,7 +394,8 @@ function renderLoop() {
   } else {
     drawVid(vids[front], 1);
   }
-  requestAnimationFrame(renderLoop);
+  if (fade) requestDraw();
+  else waitForFrame();
 }
 
 function swap() {
@@ -360,6 +404,8 @@ function swap() {
   // 하드컷 대신 짧은 크로스 디졸브로 전환 (old.pause는 페이드 종료 시 처리)
   fade = { from: old, to: vids[1 - front], start: performance.now(), dur: FADE_MS };
   front = 1 - front;  // 캔버스가 그릴 소스를 새 클립으로 전환
+  cancelFrameWait();
+  requestDraw();
 }
 
 // 뒤 버퍼에 클립을 로드하고, 첫 프레임이 실제로 나온 순간 front를 전환
@@ -380,7 +426,7 @@ const REVEAL_FALLBACK_MS = 300;
 const LOAD_TIMEOUT_MS = 15_000;
 let clipSeq = 0;
 const clipOwner = new WeakMap(); // 비디오 버퍼 → 그 버퍼에 마지막으로 걸린 playClip 호출 번호
-function playClip(file, { loop = false, onEnded = null, rate = 1 } = {}) {
+async function playClip(file, { loop = false, onEnded = null, rate = 1 } = {}) {
   // Retire the previous dissolve before reusing its old video buffer.
   // Otherwise a quick state change can load the next clip into fade.from,
   // and the old dissolve's cleanup will pause that newly started clip.
@@ -399,7 +445,10 @@ function playClip(file, { loop = false, onEnded = null, rate = 1 } = {}) {
   v.loop = loop;
   v.onended = null;
   v.onerror = null;
-  v.src = clipSrc(file);
+  v.oncanplaythrough = null;
+  const src = await loadClip(file);
+  if (!live()) return;
+  v.src = src;
   v.load();
   // load()가 playbackRate를 초기화하므로 로드 후에 지정
   v.defaultPlaybackRate = rate;
@@ -432,6 +481,7 @@ function playClip(file, { loop = false, onEnded = null, rate = 1 } = {}) {
       fail("load timeout, skipping");
     }, LOAD_TIMEOUT_MS);
     v.oncanplaythrough = () => {
+      if (!live()) return;
       loaded = true;
       clearTimeout(loadTimer);
       v.oncanplaythrough = null;
@@ -441,51 +491,126 @@ function playClip(file, { loop = false, onEnded = null, rate = 1 } = {}) {
       if (typeof v.requestVideoFrameCallback === "function") {
         v.requestVideoFrameCallback(reveal);
       }
+      if (suspended) { resumeVideos.add(v); reveal(); return; }
       v.play()
         .then(() => setTimeout(reveal, REVEAL_FALLBACK_MS))
-        .catch(err => fail("play failed", err));
+        .catch(err => {
+          if (!live()) return;
+          // 숨김 처리의 pause()가 아직 완료되지 않은 play()를 취소할 수 있다.
+          if (suspended && err.name === "AbortError") { resumeVideos.add(v); reveal(); }
+          else fail("play failed", err);
+        });
     };
     v.onerror = () => { clearTimeout(loadTimer); fail("load failed"); };
   });
 }
 
-// ── 클립 선로딩 ──────────────────────────────────────────────
-// 원격 호스팅(GitHub Pages, OBS 브라우저 소스)에서는 전환마다 네트워크를 타므로
-// 느린 회선에선 직전 프레임에 멈춘 듯 보이고, 실패하면 클립이 통째로 빠진다.
-// 시작 직후 모든 클립을 받아 blob URL로 보관해 이후 전환을 즉시·무네트워크로 만든다.
-// (전체 약 6MB. 데스크톱 앱은 로컬 파일이라 생략.) 받는 동안에는 원래 경로를 쓴다.
+// ── 필요한 클립만 로드하는 4MiB LRU 캐시 ─────────────────────
+// 같은 파일의 중복 요청을 합치고, fetch는 최대 두 개만 진행한다.
+// 재생 중인 URL은 퇴출하지 않으며 큰 단일 파일은 브라우저 스트리밍에 맡긴다.
 const CLIP_URL = new Map();
-// 새로 합쳐진 note1은 재구성 범위 밖이므로 원본 영상 경로를 유지한다.
-function assetSrc(file) { return (file === 'anim_note1_loop.webm' ? 'sprites/' : BASE) + file; }
+const clipBytes = new Map(), clipLoads = new Map(), loadQueue = [];
+const CACHE_LIMIT = 4 * 1024 * 1024;
+let cacheBytes = 0, activeLoads = 0;
+const ORIGINAL_CLIPS = new Set(["anim_note1_loop.webm", "anim_clap1_loop.webm", "anim_heart1_loop.webm", "anim_surprise1_loop.webm"]);
+function assetSrc(file) { return (ORIGINAL_CLIPS.has(file) ? "sprites/" : BASE) + file; }
 function clipSrc(file) { return CLIP_URL.get(file) || assetSrc(file); }
-async function preloadClips() {
-  const files = [...new Set(Object.values(ANIMS).flatMap(a =>
-    [a.start, a.loop, a.outro, ...(Array.isArray(a.end) ? a.end : [a.end])].filter(Boolean)))];
-  const idleLoop = ANIMS[DEFAULT_STATE].loop;
-  files.sort((x, y) => (x === idleLoop ? -1 : y === idleLoop ? 1 : 0)); // idle 먼저
-  let i = 0;
-  async function worker() {
-    while (i < files.length) {
-      const f = files[i++];
-      try {
-        const r = await fetch(assetSrc(f));
-        if (!r.ok) throw new Error(`HTTP ${r.status}`);
-        CLIP_URL.set(f, URL.createObjectURL(await r.blob()));
-      } catch (e) {
-        console.warn("preload failed (will stream on demand):", f, e.message);
-      }
-    }
+function makeCacheRoom(bytes) {
+  for (const [file, url] of CLIP_URL) {
+    if (cacheBytes + bytes <= CACHE_LIMIT) break;
+    if (vids.some(v => v.src === url)) continue;
+    URL.revokeObjectURL(url);
+    CLIP_URL.delete(file);
+    cacheBytes -= clipBytes.get(file) || 0;
+    clipBytes.delete(file);
   }
-  await Promise.all(Array.from({ length: 3 }, worker));
-  console.log(`clips preloaded: ${CLIP_URL.size}/${files.length}`);
+  return cacheBytes + bytes <= CACHE_LIMIT;
 }
-if (!IS_DESKTOP) preloadClips();
+function loadClip(file) {
+  if (IS_DESKTOP || location.protocol === "file:") return Promise.resolve(clipSrc(file));
+  if (CLIP_URL.has(file)) {
+    const url = CLIP_URL.get(file);
+    CLIP_URL.delete(file);
+    CLIP_URL.set(file, url);
+    return Promise.resolve(url);
+  }
+  if (clipLoads.has(file)) return clipLoads.get(file);
+  const promise = new Promise(resolve => loadQueue.push({ file, resolve }));
+  clipLoads.set(file, promise);
+  pumpLoads();
+  return promise;
+}
+function pumpLoads() {
+  while (!suspended && activeLoads < 2 && loadQueue.length) {
+    const { file, resolve } = loadQueue.shift();
+    activeLoads++;
+    const controller = new AbortController();
+    const timer = setTimeout(() => controller.abort(), 5000);
+    (async () => {
+      let src = assetSrc(file);
+      try {
+        const response = await fetch(src, { signal: controller.signal });
+        if (!response.ok) throw new Error(`HTTP ${response.status}`);
+        const blob = await response.blob();
+        if (blob.size <= CACHE_LIMIT && makeCacheRoom(blob.size)) {
+          src = URL.createObjectURL(blob);
+          CLIP_URL.set(file, src);
+          clipBytes.set(file, blob.size);
+          cacheBytes += blob.size;
+        }
+      } catch (e) {
+        console.warn("clip fetch failed (streaming fallback):", file, e.message);
+      } finally {
+        clearTimeout(timer);
+        clipLoads.delete(file);
+        activeLoads--;
+        resolve(src);
+        pumpLoads();
+      }
+    })();
+  }
+}
 
-// 캔버스 크기를 무대에 맞추고 렌더 루프 시작
-// (--pet-scale/desktop 높이 변경도 ResizeObserver로 자동 반영)
+// 숨김 시간은 전환 타임아웃에 포함하지 않는다. 마지막 캔버스는 그대로 보존한다.
+function updateVisibility() {
+  const hidden = !IS_DESKTOP && (document.hidden || !obsVisible);
+  if (hidden === suspended) return;
+  suspended = hidden;
+  if (hidden) {
+    suspendedAt = Date.now();
+    cancelAnimationFrame(renderId);
+    renderId = 0;
+    cancelFrameWait();
+    if (fade) { fade.from.pause(); fade = null; }
+    for (const v of vids) {
+      if (!v.paused && !v.ended) resumeVideos.add(v);
+      v.pause();
+    }
+  } else {
+    if (transitioning) transitionSince += Date.now() - suspendedAt;
+    for (const v of resumeVideos) if (!v.ended) v.play().catch(() => {});
+    resumeVideos.clear();
+    pumpLoads();
+    requestDraw();
+    if (!transitioning && queued) {
+      const q = queued; queued = null;
+      setState(q.name, { pin: q.pin });
+    } else if (!current && !transitioning) setState(DEFAULT_STATE, { pin: false });
+  }
+}
+document.addEventListener("visibilitychange", updateVisibility);
+window.addEventListener("obsSourceVisibleChanged", e => {
+  if (typeof e.detail?.visible !== "boolean") return;
+  obsVisible = e.detail.visible;
+  updateVisibility();
+});
+// play()가 비동기로 완료되는 사이 숨겨진 경우에도 디코더를 즉시 정지한다.
+for (const v of vids) v.addEventListener("playing", () => {
+  if (suspended) { resumeVideos.add(v); v.pause(); }
+});
+
 fitCanvas();
 new ResizeObserver(fitCanvas).observe(screen.parentElement);
-requestAnimationFrame(renderLoop);
 
 // ── 상태 머신 + 주사위 ─────────────────────────────────────
 // 전환 규칙: 현재 상태의 end 재생 → 다음 상태의 start 재생 → loop
@@ -555,6 +680,10 @@ function onCycleEnd() {
     return;
   }
   if (current === "talk") { setState(DEFAULT_STATE, { pin: false }); return; }
+  if (ANIMS[current].once && pinnedUntil !== Infinity) {
+    setState(DEFAULT_STATE, { pin: false });
+    return;
+  }
   if (current === DEFAULT_STATE) idleStreak++; // idle 사이클 1회 완주
   else emotionCycles++;                        // 감정 사이클 1회 완주
   const diceActive = DICE_ON && Date.now() >= pinnedUntil;
@@ -582,10 +711,10 @@ function pinNow() {
 }
 
 async function setState(name, { pin = true } = {}) {
-  if (!ANIMS[name]) { console.warn("unknown state:", name); return; }
+  if (typeof name !== "string" || !Object.prototype.hasOwnProperty.call(ANIMS, name)) { console.warn("unknown state:", name); return; }
   // pin 여부도 함께 보관 — 이름만 넣으면 마이크(talk)처럼 pin 없이 온 요청이
   // 큐를 거치며 pin된 요청으로 바뀌어 주사위가 HOLD_SEC 동안 멈춘다
-  if (transitioning) { queued = { name, pin }; return; }
+  if (transitioning || suspended) { queued = { name, pin }; return; }
   if (name === current) {
     if (pin) pinNow();
     return;
@@ -593,6 +722,7 @@ async function setState(name, { pin = true } = {}) {
   transitioning = true;
   transitionSince = Date.now();
   const gen = ++chainGen;
+  if (!IS_DESKTOP) loadClip(ANIMS[name].loop);
   if (pin) pinNow();
   if (name !== DEFAULT_STATE) { idleStreak = 0; emotionCycles = 0; } // 감정 진입
 
@@ -637,6 +767,7 @@ async function setState(name, { pin = true } = {}) {
 //  * 화면에 그리는 비디오가 끝난 채 방치되어 있으면 사이클 종료 처리를 다시 호출
 const WATCHDOG_MS = 20_000;
 setInterval(() => {
+  if (suspended) return;
   if (transitioning) {
     if (Date.now() - transitionSince > WATCHDOG_MS) {
       console.warn("watchdog: transition stuck for", Date.now() - transitionSince, "ms — resetting to idle");
@@ -882,12 +1013,15 @@ async function startMic(deviceId) {
     const buf = new Float32Array(analyser.fftSize);
     micStatus.textContent = "마이크 감시 중";
     meterTimer = setInterval(() => {
+      if (suspended) return;
       analyser.getFloatTimeDomainData(buf);
       let sum = 0;
       for (let i = 0; i < buf.length; i++) sum += buf[i] * buf[i];
       const rms = Math.sqrt(sum / buf.length);
-      levelBar.style.width = `${Math.min(100, rms / 0.15 * 100)}%`;
-      levelBar.style.background = rms > threshold() ? "#ffb300" : "#4caf50";
+      if (settingsEl.classList.contains("open")) {
+        levelBar.style.width = `${Math.min(100, rms / 0.15 * 100)}%`;
+        levelBar.style.background = rms > threshold() ? "#ffb300" : "#4caf50";
+      }
       const now = Date.now();
       if (rms > threshold()) {
         lastLoudAt = now;
@@ -1000,7 +1134,7 @@ function renderMotionList() {
       row.className = "mic-item";
       row.dataset.name = name;
       const inDice = (a.weight ?? 1) > 0 && cw > 0;
-      row.textContent = name + (inDice ? "" : " (주사위 제외)");
+      row.textContent = name + (a.label ? ` — ${a.label}` : "") + (inDice ? "" : " (주사위 제외)");
       row.addEventListener("click", () => pickMotion(name));
       motionList.appendChild(row);
     }
@@ -1038,7 +1172,9 @@ if (savedDevice && savedDevice !== "__off__") {
 }
 
 // 시작
-setState(params.get("state") || DEFAULT_STATE);
+updateVisibility();
+const initialState = params.get("state");
+setState(Object.prototype.hasOwnProperty.call(ANIMS, initialState) ? initialState : DEFAULT_STATE);
 </script>
 </body>
 </html>
