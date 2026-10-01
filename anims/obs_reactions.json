@@ -172,5 +172,20 @@
       "6": 2,
       "7": 2
     }
+  },
+  "pout1": {
+    "sheet": "sprites/raw/pout1_imagegen_sheet.png",
+    "sha256": "9fd379c940a26da7471487b47af8b24f4bfc17252a487688e9bb460cf35a2b49",
+    "name": "pout1_loop",
+    "holds": {
+      "0": 2,
+      "1": 2,
+      "2": 2,
+      "3": 4,
+      "4": 6,
+      "5": 4,
+      "6": 2,
+      "7": 2
+    }
   }
 }

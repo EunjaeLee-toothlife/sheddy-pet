@@ -14624,6 +14624,12 @@
       "state": "cheer1",
       "sha256": "b45e62ab703cd7bbc05289e4b32df0319593d271e48a2628e245e01e7eaead9e",
       "reason": "ImageGen 주먹 응원 신규 모션. 원본/재구성 모드에서 공통 사용."
+    },
+    {
+      "file": "anim_pout1_loop.webm",
+      "state": "pout1",
+      "sha256": "12342e6f8ff3c0d9228aedf59ba03807ef30db92fbab024bb31e3b8e9ef06813",
+      "reason": "ImageGen 삐짐 신규 모션. 원본/재구성 모드에서 공통 사용."
     }
   ]
 }
