@@ -1399,82 +1399,98 @@
       {
         "height": 560,
         "x": 360,
-        "bottom": 680
+        "bottom": 680,
+        "alignment": "bounds"
       },
       {
         "height": 487,
         "x": 360,
-        "bottom": 680
+        "bottom": 680,
+        "alignment": "bounds"
       },
       {
         "height": 519,
         "x": 360,
-        "bottom": 680
+        "bottom": 680,
+        "alignment": "bounds"
       },
       {
         "height": 499,
         "x": 360,
-        "bottom": 680
+        "bottom": 680,
+        "alignment": "bounds"
       },
       {
         "height": 530,
         "x": 360,
-        "bottom": 680
+        "bottom": 680,
+        "alignment": "bounds"
       },
       {
         "height": 538,
         "x": 360,
-        "bottom": 680
+        "bottom": 680,
+        "alignment": "bounds"
       },
       {
         "height": 531,
         "x": 360,
-        "bottom": 680
+        "bottom": 680,
+        "alignment": "bounds"
       },
       {
         "height": 526,
         "x": 360,
-        "bottom": 680
+        "bottom": 680,
+        "alignment": "bounds"
       },
       {
         "height": 528,
         "x": 360,
-        "bottom": 680
+        "bottom": 680,
+        "alignment": "bounds"
       },
       {
         "height": 529,
         "x": 360,
-        "bottom": 680
+        "bottom": 680,
+        "alignment": "bounds"
       },
       {
         "height": 505,
         "x": 360,
-        "bottom": 680
+        "bottom": 680,
+        "alignment": "bounds"
       },
       {
         "height": 507,
         "x": 360,
-        "bottom": 680
+        "bottom": 680,
+        "alignment": "bounds"
       },
       {
         "height": 508,
         "x": 360,
-        "bottom": 680
+        "bottom": 680,
+        "alignment": "bounds"
       },
       {
         "height": 576,
         "x": 360,
-        "bottom": 680
+        "bottom": 680,
+        "alignment": "bounds"
       },
       {
         "height": 570,
         "x": 360,
-        "bottom": 680
+        "bottom": 680,
+        "alignment": "bounds"
       },
       {
         "height": 560,
         "x": 360,
-        "bottom": 680
+        "bottom": 680,
+        "alignment": "bounds"
       }
     ]
   },

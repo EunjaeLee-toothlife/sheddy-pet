@@ -29,7 +29,12 @@ def verify_sources(config):
             assert 0 < scale <= 1 and abs(scale - source['scale']) < 1e-9, f'원본 확대: {path}'
             resized = tile.resize((round(tile.width * scale), round(tile.height * scale)), Image.Resampling.LANCZOS)
             box = bounds(resized)
-            position = [round(target['x'] - foot_center(resized, box)), round(target['bottom'] - box[3])]
+            center = (box[0] + box[2]) / 2 if target.get('alignment') == 'bounds' else foot_center(resized, box)
+            position = [round(target['x'] - center), round(target['bottom'] - box[3])]
+            full = resized.getchannel('A').getbbox()
+            assert full[2] - full[0] <= 704 and full[3] - full[1] <= 704, f'출력 크기 초과: {path}'
+            position[0] = min(max(position[0], 8 - full[0]), 712 - full[2])
+            position[1] = min(max(position[1], 8 - full[1]), 712 - full[3])
             assert position == source['position'], f'정렬 설정: {path}'
             expected = Image.new('RGBA', (720, 720))
             expected.alpha_composite(resized, tuple(position))

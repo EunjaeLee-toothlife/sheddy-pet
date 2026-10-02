@@ -42,9 +42,14 @@ def build(state):
         assert scale <= 1, f'원본 확대 금지: {state} {i} {scale:.3f}'
         resized = tile.resize((round(tile.width * scale), round(tile.height * scale)), Image.Resampling.LANCZOS)
         rb = bounds(resized)
-        px = round(target['x'] - foot_center(resized, rb))
+        center = (rb[0] + rb[2]) / 2 if target.get('alignment') == 'bounds' else foot_center(resized, rb)
+        px = round(target['x'] - center)
         py = round(target['bottom'] - rb[3])
         full = resized.getchannel('A').getbbox()
+        # 바닥의 소품이 발 중심을 밀어도 크기는 바꾸지 않고 필요한 만큼만 이동한다.
+        assert full[2] - full[0] <= 704 and full[3] - full[1] <= 704, f'출력 크기 초과: {state} {i}'
+        px = min(max(px, 8 - full[0]), 712 - full[2])
+        py = min(max(py, 8 - full[1]), 712 - full[3])
         assert px + full[0] >= 8 and py + full[1] >= 8 and px + full[2] <= 712 and py + full[3] <= 712, f'출력 잘림: {state} {i} {(px,py,full)}'
         frame = Image.new('RGBA', (720, 720))
         frame.alpha_composite(resized, (px, py))

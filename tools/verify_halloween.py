@@ -37,9 +37,10 @@ def verify(motion, anchor_state='witchidle1', part='loop', transform=False):
             assert np.any(alpha > 240) and not any(np.any(edge) for edge in (alpha[0], alpha[-1], alpha[:, 0], alpha[:, -1])), f'프레임 여백/알파: {path}'
         hashes = [sha(p) for p in frames]
         if transform:
-            anchor = ROOT / config['anchor'] if size == 720 else ROOT / 'sprites' / Path(config['anchor']).parent.name / Path(config['anchor']).name
+            anchor = Image.open(ROOT / config['anchor']).convert('RGBA').resize((size, size), Image.Resampling.LANCZOS)
             cocoon = directory.parent / 'transform_normal_start/transform_normal_start_15.png'
-            assert hashes[0 if part == 'start' else -1] == sha(anchor), f'변신 대기 연결: {state}'
+            neutral = Image.open(frames[0 if part == 'start' else -1])
+            assert neutral.tobytes() == anchor.tobytes(), f'변신 대기 연결: {state}'
             assert hashes[-1 if part == 'start' else 0] == sha(cocoon), f'공통 변신 연결: {state}'
             if part == 'loop':
                 departure = sorted((directory.parent / (state + '_start')).glob('*.png'))
