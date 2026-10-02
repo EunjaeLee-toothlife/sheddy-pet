@@ -13,7 +13,7 @@ ROOT = Path(__file__).resolve().parent.parent
 def plan(assets, require_reviewed=False):
     widget = (ROOT / 'widget.html').read_text(encoding='utf-8')
     # 배열로 생성되는 결말까지 포함하도록 순수 레지스트리 선언만 평가한다.
-    registry = 'const ANIMS =' + widget.split('const ANIMS =', 1)[1].split('const DEFAULT_STATE', 1)[0]
+    registry = 'const ANIMS =' + widget.split('const ANIMS =', 1)[1].split('const THEME_STATES', 1)[0]
     script = "const fs=require('fs'),vm=require('vm'); const s=fs.readFileSync(0,'utf8'); process.stdout.write(JSON.stringify(vm.runInNewContext(s+';ANIMS',{}, {timeout:1000})));"
     result = subprocess.run(['node', '-e', script], input=registry, text=True,
                             encoding='utf-8', capture_output=True, check=True)

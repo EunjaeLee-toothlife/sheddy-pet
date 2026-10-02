@@ -208,7 +208,7 @@
 <button id="modeBtn" type="button" title="모드 전환 (F4)" aria-controls="modePanel" aria-expanded="false">모드</button>
 <div id="modePanel" role="group" aria-labelledby="modeTitle">
   <h3 id="modeTitle">모드 전환 (F4로 닫기)</h3>
-  <p>선택하면 위젯을 새로 불러온다.</p>
+  <p>변신 후 선택한 복장으로 바뀐다.</p>
 </div>
 
 <div id="motionPanel">
@@ -385,6 +385,12 @@ const ANIMS = {
   summer_watergun1: { loop: "anim_summer_watergun1_loop.webm", label: "여름휴가 — 물총 놀이", mode: "summer", category: "special", weight: 1, once: true },
   summer_waves1: { loop: "anim_summer_waves1_loop.webm", label: "여름휴가 — 파도와 발장난", mode: "summer", category: "special", weight: 1, once: true },
   summer_fan1: { loop: "anim_summer_fan1_loop.webm", label: "여름휴가 — 부채와 더위", mode: "summer", category: "special", weight: 1, once: true },
+  transform_normal: { start: "anim_transform_normal_start.webm", loop: "anim_transform_normal_loop.webm", mode: "__transform", category: "transition", weight: 0 },
+  transform_halloween: { start: "anim_transform_halloween_start.webm", loop: "anim_transform_halloween_loop.webm", mode: "__transform", category: "transition", weight: 0 },
+  transform_seollal: { start: "anim_transform_seollal_start.webm", loop: "anim_transform_seollal_loop.webm", mode: "__transform", category: "transition", weight: 0 },
+  transform_christmas: { start: "anim_transform_christmas_start.webm", loop: "anim_transform_christmas_loop.webm", mode: "__transform", category: "transition", weight: 0 },
+  transform_childrensday: { start: "anim_transform_childrensday_start.webm", loop: "anim_transform_childrensday_loop.webm", mode: "__transform", category: "transition", weight: 0 },
+  transform_summer: { start: "anim_transform_summer_start.webm", loop: "anim_transform_summer_loop.webm", mode: "__transform", category: "transition", weight: 0 },
   talk:     { loop: "anim_talk_loop.webm", category: "talk", weight: 0 }, // 주사위 제외, 마이크 전용
 };
 const THEME_STATES = {
@@ -394,17 +400,18 @@ const THEME_STATES = {
   childrensday: { idle: "childrensday_breathe1", talk: "childrensday_talk1" },
   summer: { idle: "summer_breathe1", talk: "summer_talk1" },
 };
-const DEFAULT_STATE = Object.prototype.hasOwnProperty.call(THEME_STATES, params.get("mode")) ? THEME_STATES[params.get("mode")].idle : "idle1";
-const TALK_STATE = Object.prototype.hasOwnProperty.call(THEME_STATES, params.get("mode")) ? THEME_STATES[params.get("mode")].talk : "talk";
-const ACTIVE_MODE = DEFAULT_STATE === "idle1" ? undefined : params.get("mode");
+let DEFAULT_STATE = Object.prototype.hasOwnProperty.call(THEME_STATES, params.get("mode")) ? THEME_STATES[params.get("mode")].idle : "idle1";
+let TALK_STATE = Object.prototype.hasOwnProperty.call(THEME_STATES, params.get("mode")) ? THEME_STATES[params.get("mode")].talk : "talk";
+let ACTIVE_MODE = DEFAULT_STATE === "idle1" ? undefined : params.get("mode");
 // 할로윈에서는 변신·원복 없이 마녀 복장 클립만 사용한다. 원본 레지스트리는 자산 목록으로 유지한다.
-const ACTIVE_ANIMS = params.get("mode") === "halloween" ? {
+function animationsForMode(mode) { return mode === "halloween" ? {
   ...Object.fromEntries(Object.entries(ANIMS).filter(([, a]) => a.mode === "halloween")),
   alchemy1: { loop: ANIMS.alchemy1.loop, label: "마녀 — 솥 젓기", category: "special", weight: 1, minCycles: 2, maxCycles: 3 },
   alchemygold1: { loop: ANIMS.alchemy1.end[0], label: "마녀 — 황금 레몬", category: "special", weight: 1, once: true },
   alchemyboom1: { loop: ANIMS.alchemy1.end[1], label: "마녀 — 실험 폭발", category: "special", weight: 1, once: true },
   alchemyslime1: { loop: ANIMS.alchemy1.end[2], label: "마녀 — 레몬 슬라임", category: "special", weight: 1, once: true },
-} : Object.fromEntries(Object.entries(ANIMS).filter(([, a]) => a.mode === ACTIVE_MODE));
+} : Object.fromEntries(Object.entries(ANIMS).filter(([, a]) => a.mode === mode)); }
+let ACTIVE_ANIMS = animationsForMode(ACTIVE_MODE);
 // loop 한 사이클이 끝날 때마다 이 확률로 주사위를 굴려 상태를 다시 뽑음
 // (안 굴리면 현재 loop를 한 번 더 재생)
 const REROLL_CHANCE = 0.35;
@@ -641,7 +648,7 @@ const CLIP_URL = new Map();
 const clipBytes = new Map(), clipLoads = new Map(), loadQueue = [];
 const CACHE_LIMIT = 4 * 1024 * 1024;
 let cacheBytes = 0, activeLoads = 0;
-const ORIGINAL_CLIPS = new Set([...Object.values(ANIMS).filter(a => a.mode).map(a => a.loop), "anim_alchemy1_start.webm", "anim_alchemy1_loop.webm", "anim_alchemy1_end1.webm", "anim_alchemy1_end2.webm", "anim_alchemy1_end3.webm", "anim_alchemy1_outro.webm", "anim_power1_loop.webm", "anim_shuffle1_loop.webm", "anim_bounce1_loop.webm", "anim_note1_loop.webm", "anim_clap1_loop.webm", "anim_heart1_loop.webm", "anim_surprise1_loop.webm", "anim_kiss1_loop.webm", "anim_pout1_loop.webm", "anim_cheer1_loop.webm", "anim_shush1_loop.webm", "anim_facepalm1_loop.webm", "anim_listen1_loop.webm", "anim_think1_loop.webm", "anim_shrug1_loop.webm", "anim_salute1_loop.webm", "anim_thumbsup1_loop.webm"]);
+const ORIGINAL_CLIPS = new Set([...Object.values(ANIMS).filter(a => a.mode).flatMap(a => [a.start, a.loop].filter(Boolean)), "anim_alchemy1_start.webm", "anim_alchemy1_loop.webm", "anim_alchemy1_end1.webm", "anim_alchemy1_end2.webm", "anim_alchemy1_end3.webm", "anim_alchemy1_outro.webm", "anim_power1_loop.webm", "anim_shuffle1_loop.webm", "anim_bounce1_loop.webm", "anim_note1_loop.webm", "anim_clap1_loop.webm", "anim_heart1_loop.webm", "anim_surprise1_loop.webm", "anim_kiss1_loop.webm", "anim_pout1_loop.webm", "anim_cheer1_loop.webm", "anim_shush1_loop.webm", "anim_facepalm1_loop.webm", "anim_listen1_loop.webm", "anim_think1_loop.webm", "anim_shrug1_loop.webm", "anim_salute1_loop.webm", "anim_thumbsup1_loop.webm"]);
 function assetSrc(file) { return (ASSET_SET !== "hd720" && ORIGINAL_CLIPS.has(file) ? "sprites/" : BASE) + file; }
 function clipSrc(file) { return CLIP_URL.get(file) || assetSrc(file); }
 function makeCacheRoom(bytes) {
@@ -749,6 +756,7 @@ let current = null;      // 현재 상태 이름
 let transitioning = false;
 let transitionSince = 0; // transitioning이 true가 된 시각(ms) — 워치독용
 let chainGen = 0;        // 전환 체인 세대 — 새 전환/워치독 리셋마다 올라가 이전 체인을 무효화
+let modeSwitching = false, modeSwitchCancel = null;
 let queued = null;       // 전환 중 들어온 다음 요청 { name, pin }
 let pinnedUntil = 0;     // 외부 명령으로 고정된 시각(ms) — 그때까지 주사위 정지
 let talkActive = false;  // 마이크 게이트 열림 여부
@@ -792,7 +800,7 @@ function rollDice() {
 
 // loop 한 사이클이 끝났을 때
 function onCycleEnd() {
-  if (transitioning) return;
+  if (modeSwitching || transitioning) return;
   if (isDragging) {
     if (current !== "basic1") { setState("basic1", { pin: false }); return; }
     const v = vids[front];
@@ -840,6 +848,7 @@ function pinNow() {
 }
 
 async function setState(name, { pin = true } = {}) {
+  if (modeSwitching) return;
   if (typeof name !== "string" || !Object.prototype.hasOwnProperty.call(ACTIVE_ANIMS, name)) { console.warn("unknown state:", name); return; }
   // pin 여부도 함께 보관 — 이름만 넣으면 마이크(talk)처럼 pin 없이 온 요청이
   // 큐를 거치며 pin된 요청으로 바뀌어 주사위가 HOLD_SEC 동안 멈춘다
@@ -899,6 +908,7 @@ setInterval(() => {
   if (suspended) return;
   if (transitioning) {
     if (Date.now() - transitionSince > WATCHDOG_MS) {
+      if (modeSwitchCancel) { modeSwitchCancel(); return; }
       console.warn("watchdog: transition stuck for", Date.now() - transitionSince, "ms — resetting to idle");
       chainGen++; // 멈춘 체인 무효화 — 뒤늦게 풀려도 더 진행하지 못한다
       transitioning = false;
@@ -1220,14 +1230,92 @@ window.addEventListener("mousemove", () => {
 });
 gearBtn.addEventListener("click", toggleSettings);
 
-// URL의 다른 옵션과 저장된 마이크 설정을 유지하고 모드의 기본 대기로 시작한다.
+// 변신은 기존 버퍼와 캐시를 사용한다. 새로고침 없이 마이크 스트림도 그대로 유지한다.
 const modeBtn = document.getElementById("modeBtn");
 const modePanel = document.getElementById("modePanel");
 function toggleModePanel() {
+  if (modeSwitching) return;
   const open = modePanel.classList.toggle("open");
   modeBtn.setAttribute("aria-expanded", String(open));
   if (open) modePanel.querySelector('[aria-pressed="true"]').focus();
   else modeBtn.focus();
+}
+async function switchMode(mode) {
+  if (modeSwitching) return;
+  if (mode === (ACTIVE_MODE || "")) { toggleModePanel(); return; }
+  if (mode && !Object.prototype.hasOwnProperty.call(THEME_STATES, mode)) return;
+  modeSwitching = true;
+  modePanel.classList.remove("open");
+  modeBtn.setAttribute("aria-expanded", "false");
+  modeBtn.setAttribute("aria-busy", "true");
+  modeBtn.textContent = "변신 중";
+  queued = null;
+  try {
+    // 진행 중인 end/outro 체인은 마저 끝낸다. 숨김 상태에서는 변신을 시작하지 않는다.
+    while (transitioning || suspended) {
+      if (!suspended) { await new Promise(resolve => setTimeout(resolve, 50)); continue; }
+      await new Promise(resolve => {
+        const resume = () => {
+          if (suspended) return;
+          document.removeEventListener("visibilitychange", resume);
+          window.removeEventListener("obsSourceVisibleChanged", resume);
+          resolve();
+        };
+        document.addEventListener("visibilitychange", resume);
+        window.addEventListener("obsSourceVisibleChanged", resume);
+      });
+    }
+    transitioning = true;
+    transitionSince = Date.now();
+    ++chainGen;
+    // 일반 모드의 연금술도 이미 마녀 복장이므로 가운으로 순간 변경하지 않는다.
+    const costume = current === "alchemy1" ? "halloween" : (ACTIVE_MODE || "normal");
+    const departure = ANIMS[`transform_${costume}`].start;
+    const arrival = ANIMS[`transform_${mode || "normal"}`].loop;
+    const idle = mode ? THEME_STATES[mode].idle : "idle1";
+    await Promise.all([loadClip(departure), loadClip(arrival), loadClip(ANIMS[idle].loop)]);
+    const through = file => new Promise((resolve, reject) => {
+      transitionSince = Date.now();
+      modeSwitchCancel = () => reject(new Error("변신 재생 시간 초과"));
+      playClip(file, { onEnded: resolve }).catch(reject);
+    });
+    await through(departure);
+    ACTIVE_MODE = mode || undefined;
+    DEFAULT_STATE = mode ? THEME_STATES[mode].idle : "idle1";
+    TALK_STATE = mode ? THEME_STATES[mode].talk : "talk";
+    ACTIVE_ANIMS = animationsForMode(ACTIVE_MODE);
+    await through(arrival);
+  } catch (error) {
+    console.warn("mode transform:", error.message);
+  } finally {
+    // 실패하더라도 현재 적용된 복장의 대기/말하기로 복구하고 선택 잠금을 푼다.
+    modeSwitchCancel = null;
+    modeSwitching = false;
+    transitioning = false;
+    ++chainGen;
+    queued = null;
+    current = null;
+    pinnedUntil = 0;
+    idleStreak = emotionCycles = 0;
+    motionHold.checked = false;
+    const url = new URL(location.href);
+    if (ACTIVE_MODE) url.searchParams.set("mode", ACTIVE_MODE);
+    else url.searchParams.delete("mode");
+    url.searchParams.delete("state");
+    url.searchParams.delete("ending");
+    history.replaceState(null, "", url.href);
+    for (const key of ["mode", "state", "ending"]) {
+      params.delete(key);
+      if (url.searchParams.has(key)) params.set(key, url.searchParams.get(key));
+    }
+    for (const button of modePanel.querySelectorAll("button")) {
+      button.setAttribute("aria-pressed", String(button.dataset.mode === (ACTIVE_MODE || "")));
+    }
+    modeBtn.textContent = "모드";
+    modeBtn.setAttribute("aria-busy", "false");
+    renderMotionList();
+    await setState(talkActive ? TALK_STATE : DEFAULT_STATE, { pin: false });
+  }
 }
 for (const [mode, label] of [["", "일반"], ["halloween", "할로윈"], ["seollal", "한국 설"], ["christmas", "크리스마스"], ["childrensday", "어린이날"], ["summer", "여름휴가"]]) {
   const button = document.createElement("button");
@@ -1235,15 +1323,7 @@ for (const [mode, label] of [["", "일반"], ["halloween", "할로윈"], ["seoll
   button.textContent = label;
   button.dataset.mode = mode;
   button.setAttribute("aria-pressed", String(mode === (ACTIVE_MODE || "")));
-  button.addEventListener("click", () => {
-    if (mode === (ACTIVE_MODE || "")) { toggleModePanel(); return; }
-    const url = new URL(location.href);
-    if (mode) url.searchParams.set("mode", mode);
-    else url.searchParams.delete("mode");
-    url.searchParams.delete("state");
-    url.searchParams.delete("ending");
-    location.assign(url.href);
-  });
+  button.addEventListener("click", () => switchMode(mode));
   modePanel.appendChild(button);
 }
 modeBtn.addEventListener("click", toggleModePanel);
