@@ -297,9 +297,43 @@ const ANIMS = {
   bounce1: { loop: "anim_bounce1_loop.webm", label: "챌린지 바운스", category: "special", weight: 2, once: true },
   shuffle1: { loop: "anim_shuffle1_loop.webm", label: "셔플 스텝", category: "special", weight: 2, once: true },
   power1: { loop: "anim_power1_loop.webm", label: "파워 챌린지", category: "special", weight: 2, once: true },
+  // 마녀 복장을 유지하는 할로윈 전용 동작. 일반 모드에서는 선택·추첨하지 않는다.
+  witchidle1: { loop: "anim_witchidle1_loop.webm", label: "마녀 대기", mode: "halloween", category: "idle", weight: 1 },
+  broom1: { loop: "anim_broom1_loop.webm", label: "빗자루 비행", mode: "halloween", category: "special", weight: 1, once: true },
+  lantern1: { loop: "anim_lantern1_loop.webm", label: "호박 랜턴", mode: "halloween", category: "special", weight: 1, once: true },
+  ghost1: { loop: "anim_ghost1_loop.webm", label: "꼬마 유령", mode: "halloween", category: "special", weight: 1, once: true },
+  bat1: { loop: "anim_bat1_loop.webm", label: "박쥐 친구", mode: "halloween", category: "special", weight: 1, once: true },
+  candy1: { loop: "anim_candy1_loop.webm", label: "사탕 나눔", mode: "halloween", category: "special", weight: 1, once: true },
+  spellbook1: { loop: "anim_spellbook1_loop.webm", label: "마법책 낭독", mode: "halloween", category: "special", weight: 1, once: true },
+  starspell1: { loop: "anim_starspell1_loop.webm", label: "별빛 마법봉", mode: "halloween", category: "special", weight: 1, once: true },
+  crystal1: { loop: "anim_crystal1_loop.webm", label: "수정구 점술", mode: "halloween", category: "special", weight: 1, once: true },
+  blackcat1: { loop: "anim_blackcat1_loop.webm", label: "검은 고양이", mode: "halloween", category: "special", weight: 1, once: true },
+  raven1: { loop: "anim_raven1_loop.webm", label: "장난꾸러기 까마귀", mode: "halloween", category: "special", weight: 1, once: true },
+  spider1: { loop: "anim_spider1_loop.webm", label: "거미 구조", mode: "halloween", category: "special", weight: 1, once: true },
+  potion1: { loop: "anim_potion1_loop.webm", label: "딸꾹 물약", mode: "halloween", category: "special", weight: 1, once: true },
+  moon1: { loop: "anim_moon1_loop.webm", label: "초승달 그네", mode: "halloween", category: "special", weight: 1, once: true },
+  tarot1: { loop: "anim_tarot1_loop.webm", label: "호박 타로", mode: "halloween", category: "special", weight: 1, once: true },
+  umbrella1: { loop: "anim_umbrella1_loop.webm", label: "유령비 우산", mode: "halloween", category: "special", weight: 1, once: true },
+  witchdance1: { loop: "anim_witchdance1_loop.webm", label: "마녀 스텝 댄스", mode: "halloween", category: "special", weight: 1, once: true },
+  peekaboo1: { loop: "anim_peekaboo1_loop.webm", label: "망토 까꿍", mode: "halloween", category: "special", weight: 1, once: true },
+  candles1: { loop: "anim_candles1_loop.webm", label: "떠다니는 촛불", mode: "halloween", category: "special", weight: 1, once: true },
+  gift1: { loop: "anim_gift1_loop.webm", label: "할로윈 선물상자", mode: "halloween", category: "special", weight: 1, once: true },
+  witchbreathe1: { loop: "anim_witchbreathe1_loop.webm", label: "마녀 — 편안한 숨쉬기", mode: "halloween", category: "idle", weight: 1, minCycles: 1, maxCycles: 2 },
+  witchlook1: { loop: "anim_witchlook1_loop.webm", label: "마녀 — 주변 둘러보기", mode: "halloween", category: "idle", weight: 1, minCycles: 1, maxCycles: 2 },
+  witchtidy1: { loop: "anim_witchtidy1_loop.webm", label: "마녀 — 모자와 망토 정돈", mode: "halloween", category: "idle", weight: 1, minCycles: 1, maxCycles: 2 },
+  witchtalk1: { loop: "anim_witchtalk1_loop.webm", label: "마녀 — 말하기", mode: "halloween", category: "talk", weight: 0 },
   talk:     { loop: "anim_talk_loop.webm", category: "talk", weight: 0 }, // 주사위 제외, 마이크 전용
 };
-const DEFAULT_STATE = "idle1";
+const DEFAULT_STATE = params.get("mode") === "halloween" ? "witchidle1" : "idle1";
+const TALK_STATE = params.get("mode") === "halloween" ? "witchtalk1" : "talk";
+// 할로윈에서는 변신·원복 없이 마녀 복장 클립만 사용한다. 원본 레지스트리는 자산 목록으로 유지한다.
+const ACTIVE_ANIMS = params.get("mode") === "halloween" ? {
+  ...Object.fromEntries(Object.entries(ANIMS).filter(([, a]) => a.mode === "halloween")),
+  alchemy1: { loop: ANIMS.alchemy1.loop, label: "마녀 — 솥 젓기", category: "special", weight: 1, minCycles: 2, maxCycles: 3 },
+  alchemygold1: { loop: ANIMS.alchemy1.end[0], label: "마녀 — 황금 레몬", category: "special", weight: 1, once: true },
+  alchemyboom1: { loop: ANIMS.alchemy1.end[1], label: "마녀 — 실험 폭발", category: "special", weight: 1, once: true },
+  alchemyslime1: { loop: ANIMS.alchemy1.end[2], label: "마녀 — 레몬 슬라임", category: "special", weight: 1, once: true },
+} : Object.fromEntries(Object.entries(ANIMS).filter(([, a]) => !a.mode));
 // loop 한 사이클이 끝날 때마다 이 확률로 주사위를 굴려 상태를 다시 뽑음
 // (안 굴리면 현재 loop를 한 번 더 재생)
 const REROLL_CHANCE = 0.35;
@@ -309,6 +343,7 @@ const MIN_IDLE_CYCLES = 2;
 const MIN_EMOTION_CYCLES = 3;
 
 // ── URL 옵션 ──────────────────────────────────────────────
+// ?mode=halloween   마녀 복장 전용 모션만 재생
 // ?state=happy1     시작 상태
 // ?hold=8           외부 명령(setPetState 등)으로 바뀐 상태를 주사위로부터 보호할 초
 // ?dice=0           주사위 굴리기 끄기 (외부 제어 전용 모드)
@@ -534,7 +569,7 @@ const CLIP_URL = new Map();
 const clipBytes = new Map(), clipLoads = new Map(), loadQueue = [];
 const CACHE_LIMIT = 4 * 1024 * 1024;
 let cacheBytes = 0, activeLoads = 0;
-const ORIGINAL_CLIPS = new Set(["anim_alchemy1_start.webm", "anim_alchemy1_loop.webm", "anim_alchemy1_end1.webm", "anim_alchemy1_end2.webm", "anim_alchemy1_end3.webm", "anim_alchemy1_outro.webm", "anim_power1_loop.webm", "anim_shuffle1_loop.webm", "anim_bounce1_loop.webm", "anim_note1_loop.webm", "anim_clap1_loop.webm", "anim_heart1_loop.webm", "anim_surprise1_loop.webm", "anim_kiss1_loop.webm", "anim_pout1_loop.webm", "anim_cheer1_loop.webm", "anim_shush1_loop.webm", "anim_facepalm1_loop.webm", "anim_listen1_loop.webm", "anim_think1_loop.webm", "anim_shrug1_loop.webm", "anim_salute1_loop.webm", "anim_thumbsup1_loop.webm"]);
+const ORIGINAL_CLIPS = new Set([...Object.values(ANIMS).filter(a => a.mode === "halloween").map(a => a.loop), "anim_alchemy1_start.webm", "anim_alchemy1_loop.webm", "anim_alchemy1_end1.webm", "anim_alchemy1_end2.webm", "anim_alchemy1_end3.webm", "anim_alchemy1_outro.webm", "anim_power1_loop.webm", "anim_shuffle1_loop.webm", "anim_bounce1_loop.webm", "anim_note1_loop.webm", "anim_clap1_loop.webm", "anim_heart1_loop.webm", "anim_surprise1_loop.webm", "anim_kiss1_loop.webm", "anim_pout1_loop.webm", "anim_cheer1_loop.webm", "anim_shush1_loop.webm", "anim_facepalm1_loop.webm", "anim_listen1_loop.webm", "anim_think1_loop.webm", "anim_shrug1_loop.webm", "anim_salute1_loop.webm", "anim_thumbsup1_loop.webm"]);
 function assetSrc(file) { return (ASSET_SET !== "hd720" && ORIGINAL_CLIPS.has(file) ? "sprites/" : BASE) + file; }
 function clipSrc(file) { return CLIP_URL.get(file) || assetSrc(file); }
 function makeCacheRoom(bytes) {
@@ -661,7 +696,7 @@ function pickWeighted(items, weightOf) {
 
 function rollDice() {
   // 감정은 최소 유지 사이클(애니메이션별 minCycles 우선)을 채우기 전엔 끝나지 않음
-  const minCycles = ANIMS[current].minCycles ?? MIN_EMOTION_CYCLES;
+  const minCycles = ACTIVE_ANIMS[current].minCycles ?? MIN_EMOTION_CYCLES;
   if (current !== DEFAULT_STATE && emotionCycles < minCycles) {
     return current;
   }
@@ -671,7 +706,7 @@ function rollDice() {
   // 감정 직후에는 idle을 MIN_IDLE_CYCLES 이상 완주해야 다음 감정 허용
   if (idleStreak < MIN_IDLE_CYCLES) return current;
   // weight 0 이거나 분류 가중치가 없는/0인 애니메이션은 주사위 제외
-  const pool = Object.entries(ANIMS).filter(([, a]) =>
+  const pool = Object.entries(ACTIVE_ANIMS).filter(([, a]) =>
     (a.weight ?? 1) > 0 && (CATEGORY_WEIGHTS[a.category] ?? 0) > 0);
   if (!pool.length) return current;
   // 1차 주사위: 분류 선택 (등록된 애니메이션이 있는 분류만 후보)
@@ -694,15 +729,15 @@ function onCycleEnd() {
     return;
   }
   // 마이크에 신호가 들어오는 동안은 talk 상태를 계속 유지
-  if (talkActive) {
-    if (current !== "talk") { setState("talk", { pin: false }); return; }
+  if (talkActive && ACTIVE_ANIMS[TALK_STATE]) {
+    if (current !== TALK_STATE) { setState(TALK_STATE, { pin: false }); return; }
     const v = vids[front];
     v.currentTime = 0;
     v.play().catch(() => {});
     return;
   }
-  if (current === "talk") { setState(DEFAULT_STATE, { pin: false }); return; }
-  if (ANIMS[current].once && pinnedUntil !== Infinity) {
+  if (current === TALK_STATE) { setState(DEFAULT_STATE, { pin: false }); return; }
+  if (ACTIVE_ANIMS[current].once && pinnedUntil !== Infinity) {
     setState(DEFAULT_STATE, { pin: false });
     return;
   }
@@ -710,7 +745,7 @@ function onCycleEnd() {
   else emotionCycles++;                        // 감정 사이클 1회 완주
   const diceActive = DICE_ON && Date.now() >= pinnedUntil;
   // maxCycles 도달 시 강제 idle 복귀 (외부 제어 모드/pin 중에는 손대지 않음)
-  const maxCycles = ANIMS[current].maxCycles;
+  const maxCycles = ACTIVE_ANIMS[current].maxCycles;
   if (diceActive && current !== DEFAULT_STATE && maxCycles &&
       emotionCycles >= maxCycles) {
     setState(DEFAULT_STATE, { pin: false });
@@ -733,7 +768,7 @@ function pinNow() {
 }
 
 async function setState(name, { pin = true } = {}) {
-  if (typeof name !== "string" || !Object.prototype.hasOwnProperty.call(ANIMS, name)) { console.warn("unknown state:", name); return; }
+  if (typeof name !== "string" || !Object.prototype.hasOwnProperty.call(ACTIVE_ANIMS, name)) { console.warn("unknown state:", name); return; }
   // pin 여부도 함께 보관 — 이름만 넣으면 마이크(talk)처럼 pin 없이 온 요청이
   // 큐를 거치며 pin된 요청으로 바뀌어 주사위가 HOLD_SEC 동안 멈춘다
   if (transitioning || suspended) { queued = { name, pin }; return; }
@@ -744,7 +779,7 @@ async function setState(name, { pin = true } = {}) {
   transitioning = true;
   transitionSince = Date.now();
   const gen = ++chainGen;
-  if (!IS_DESKTOP) loadClip(ANIMS[name].loop);
+  if (!IS_DESKTOP) loadClip(ACTIVE_ANIMS[name].loop);
   if (pin) pinNow();
   if (name !== DEFAULT_STATE) { idleStreak = 0; emotionCycles = 0; } // 감정 진입
 
@@ -757,7 +792,7 @@ async function setState(name, { pin = true } = {}) {
 
   // 1) 현재 상태의 end 클립 (있으면) 재생하고 끝날 때까지 대기
   //    end가 배열이면 그중 하나를 랜덤으로 재생 (멀티 엔딩)
-  const cur = current && ANIMS[current];
+  const cur = current && ACTIVE_ANIMS[current];
   if (cur && cur.end) {
     const ends = Array.isArray(cur.end) ? cur.end : [cur.end];
     const requestedEnding = Number(params.get('ending'));
@@ -770,7 +805,7 @@ async function setState(name, { pin = true } = {}) {
   }
 
   // 2) 다음 상태의 start (있으면) → loop (사이클 끝마다 주사위)
-  const next = ANIMS[name];
+  const next = ACTIVE_ANIMS[name];
   const rate = next.rate ?? 1;
   if (next.start && !await playThrough(next.start, rate)) return;
   current = name; // onCycleEnd가 참조하므로 loop 시작 전에 갱신
@@ -1033,7 +1068,7 @@ async function startMic(deviceId) {
     analyser.fftSize = 1024;
     src.connect(analyser);
     const buf = new Float32Array(analyser.fftSize);
-    micStatus.textContent = "마이크 감시 중";
+    micStatus.textContent = ACTIVE_ANIMS[TALK_STATE] ? "마이크 감시 중" : "할로윈 모드: 음량 표시만 사용";
     meterTimer = setInterval(() => {
       if (suspended) return;
       analyser.getFloatTimeDomainData(buf);
@@ -1044,13 +1079,14 @@ async function startMic(deviceId) {
         levelBar.style.width = `${Math.min(100, rms / 0.15 * 100)}%`;
         levelBar.style.background = rms > threshold() ? "#ffb300" : "#4caf50";
       }
+      if (!ACTIVE_ANIMS[TALK_STATE]) return; // 전용 말하기 모션이 없는 테마는 음량 표시만 유지
       const now = Date.now();
       if (rms > threshold()) {
         lastLoudAt = now;
         if (!talkActive) {
           talkActive = true;
           micStatus.textContent = "🗣 말하는 중";
-          if (current !== "talk") setState("talk", { pin: false });
+          if (current !== TALK_STATE) setState(TALK_STATE, { pin: false });
         }
       } else if (talkActive && now - lastLoudAt > RELEASE_MS) {
         talkActive = false;
@@ -1143,7 +1179,7 @@ function renderMotionList() {
   });
   motionList.appendChild(auto);
   // 분류(category)별로 묶어서 표시 — 2중 주사위 구조를 그대로 보여줌
-  const entries = Object.entries(ANIMS);
+  const entries = Object.entries(ACTIVE_ANIMS);
   const cats = [...new Set(entries.map(([, a]) => a.category))];
   for (const cat of cats) {
     const head = document.createElement("div");
@@ -1186,7 +1222,7 @@ navigator.mediaDevices.addEventListener?.("devicechange", () => {
 
 // 저장된 장치가 있으면 자동 시작 (OBS는 권한 자동 허용)
 const savedDevice = localStorage.getItem("petMicDevice");
-if (savedDevice && savedDevice !== "__off__") {
+if (ACTIVE_ANIMS[TALK_STATE] && savedDevice && savedDevice !== "__off__") {
   navigator.mediaDevices.getUserMedia({ audio: true })
     .then(tmp => { tmp.getTracks().forEach(t => t.stop()); return listDevices(); })
     .then(() => startMic(savedDevice))
@@ -1196,7 +1232,7 @@ if (savedDevice && savedDevice !== "__off__") {
 // 시작
 updateVisibility();
 const initialState = params.get("state");
-setState(Object.prototype.hasOwnProperty.call(ANIMS, initialState) ? initialState : DEFAULT_STATE);
+setState(Object.prototype.hasOwnProperty.call(ACTIVE_ANIMS, initialState) ? initialState : DEFAULT_STATE);
 </script>
 </body>
 </html>

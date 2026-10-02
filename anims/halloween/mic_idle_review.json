@@ -1,0 +1,110 @@
+{
+  "motions": [
+    {
+      "id": "witchbreathe1",
+      "label": "마녀 — 편안한 숨쉬기",
+      "role": "idle",
+      "poseSlots": 16,
+      "durationSeconds": 4.0
+    },
+    {
+      "id": "witchlook1",
+      "label": "마녀 — 주변 둘러보기",
+      "role": "idle",
+      "poseSlots": 16,
+      "durationSeconds": 4.0
+    },
+    {
+      "id": "witchtidy1",
+      "label": "마녀 — 모자와 망토 정돈",
+      "role": "idle",
+      "poseSlots": 16,
+      "durationSeconds": 4.0
+    },
+    {
+      "id": "witchtalk1",
+      "label": "마녀 — 말하기",
+      "role": "talk",
+      "poseSlots": 16,
+      "durationSeconds": 1.3333333333333333
+    }
+  ],
+  "imageSource": "Built-in ImageGen; refs/halloween_neutral.png",
+  "staticReview": "4 원본 시트, 조립 64포즈, 실제 디코딩 영상 샘플, 위젯 캡처 확인",
+  "preview": "output/halloween/mic-idle-preview.mp4",
+  "checks": {
+    "assets": [
+      "PASS witchidle1: 16 poses, 32 ticks, 512/720 RGBA VP9, 414268 bytes",
+      "PASS broom1: 16 poses, 36 ticks, 512/720 RGBA VP9, 618736 bytes",
+      "PASS lantern1: 16 poses, 36 ticks, 512/720 RGBA VP9, 537839 bytes",
+      "PASS ghost1: 16 poses, 36 ticks, 512/720 RGBA VP9, 509662 bytes",
+      "PASS bat1: 16 poses, 36 ticks, 512/720 RGBA VP9, 525563 bytes",
+      "PASS candy1: 16 poses, 36 ticks, 512/720 RGBA VP9, 524668 bytes",
+      "PASS spellbook1: 16 poses, 36 ticks, 512/720 RGBA VP9, 562006 bytes",
+      "PASS starspell1: 16 poses, 36 ticks, 512/720 RGBA VP9, 537582 bytes",
+      "PASS crystal1: 16 poses, 36 ticks, 512/720 RGBA VP9, 467317 bytes",
+      "PASS blackcat1: 16 poses, 36 ticks, 512/720 RGBA VP9, 462493 bytes",
+      "PASS raven1: 16 poses, 36 ticks, 512/720 RGBA VP9, 500941 bytes",
+      "PASS spider1: 16 poses, 36 ticks, 512/720 RGBA VP9, 492574 bytes",
+      "PASS potion1: 16 poses, 36 ticks, 512/720 RGBA VP9, 497962 bytes",
+      "PASS moon1: 16 poses, 36 ticks, 512/720 RGBA VP9, 584945 bytes",
+      "PASS tarot1: 16 poses, 36 ticks, 512/720 RGBA VP9, 521823 bytes",
+      "PASS umbrella1: 16 poses, 36 ticks, 512/720 RGBA VP9, 531638 bytes",
+      "PASS witchdance1: 16 poses, 36 ticks, 512/720 RGBA VP9, 481462 bytes",
+      "PASS peekaboo1: 16 poses, 36 ticks, 512/720 RGBA VP9, 483079 bytes",
+      "PASS candles1: 16 poses, 36 ticks, 512/720 RGBA VP9, 628904 bytes",
+      "PASS gift1: 16 poses, 36 ticks, 512/720 RGBA VP9, 560784 bytes",
+      "PASS witchbreathe1: 16 poses, 48 ticks, 512/720 RGBA VP9, 434109 bytes",
+      "PASS witchlook1: 16 poses, 48 ticks, 512/720 RGBA VP9, 455848 bytes",
+      "PASS witchtidy1: 16 poses, 48 ticks, 512/720 RGBA VP9, 456554 bytes",
+      "PASS witchtalk1: 16 poses, 16 ticks, 512/720 RGBA VP9, 375752 bytes",
+      "PASS 24 clips / 384 poses / 12166509 HD bytes"
+    ],
+    "normal": [
+      "PASS  renderBudget 3초 29회, 433×433",
+      "PASS  newReactions 16개 모션 단발 복귀 + 박수 계속 유지",
+      "PASS  danceLoops   3개 춤 각각 두 사이클, 무기한 유지, 워치독 개입 없음",
+      "PASS  alchemyEndings alchemy1_start → alchemy1_loop → alchemy1_end1 → alchemy1_outro → idle1_loop | alchemy1_start → alchemy1_loop → alchemy1_end2 → alchemy1_outro → idle1_loop | alchemy1_start → alchemy1_loop → alchemy1_end3 → alchemy1_outro → idle1_loop",
+      "PASS  alchemyHold  두 사이클 무기한 유지, 숨김 중 draw/재생 0, 큐 실행과 원복 정상",
+      "PASS  visibility   숨김 중 draw/재생 0, 전환과 큐 복구",
+      "PASS  cacheBudget  11/62클립, 4125684바이트, 동시 요청 2",
+      "PASS  pausePendingPlay play 완료 전 숨김/복귀 정상",
+      "PASS  cycles       재시작 지연 [10,7,12,8]ms",
+      "PASS  transitions  pastry1_start → pastry1_loop → pastry1_end2 → pastry1_outro → idle1_loop | happy1_start → happy1_loop → happy1_end → idle1_loop",
+      "PASS  queuedTalk   알파 최소 255, talk 시작 지연 [0,0,0,11]ms",
+      "PASS  holdQueue    pinnedUntil = Infinity 유지",
+      "PASS  staleChain   리셋 뒤에도 current = idle1 유지"
+    ],
+    "halloweenMic": [
+      "PASS  modeScope    일반 시작 상태 대체, 선택기 28종, 외부 일반 모션 차단, 초기 영상 1개",
+      "PASS  witchIdle    대기 루프 두 사이클 연속 재생",
+      "PASS  witchResults 동작 27종 실제 재생 후 마녀 복장으로 복귀, 투명 720 영상",
+      "PASS  witchHold    두 사이클 유지, 숨김 중 작업 0, 유효한 큐와 Infinity 보존",
+      "PASS  witchMic     무음/음량 임계값, 마녀 말하기 두 사이클, 해제 지연, 마녀 복귀, 장치 해제",
+      "PASS  witchAutomatic 실제 자동 추첨·복귀, 전용 클립만 요청, 캐시 3812894B",
+      "PASS  mode=halloween&state=alchemyslime1&dice=0 → alchemyslime1",
+      "PASS  mode=unknown&dice=0 → idle1"
+    ],
+    "halloweenFallback": [
+      "PASS  modeScope    일반 시작 상태 대체, 선택기 28종, 외부 일반 모션 차단, 초기 영상 1개",
+      "PASS  witchIdle    대기 루프 두 사이클 연속 재생",
+      "PASS  witchResults 동작 27종 실제 재생 후 마녀 복장으로 복귀, 투명 720 영상",
+      "PASS  witchHold    두 사이클 유지, 숨김 중 작업 0, 유효한 큐와 Infinity 보존",
+      "PASS  witchMic     무음/음량 임계값, 마녀 말하기 두 사이클, 해제 지연, 마녀 복귀, 장치 해제",
+      "PASS  witchAutomatic 실제 자동 추첨·복귀, 전용 클립만 요청, 캐시 3812894B",
+      "PASS  mode=halloween&state=alchemyslime1&dice=0 → alchemyslime1",
+      "PASS  mode=unknown&dice=0 → idle1"
+    ],
+    "deployment": [
+      "720/512 전용 24클립 디코딩 검사 통과",
+      "hd720/기존/재구성 86클립 배포 검사 통과",
+      "기존 82클립 자산 및 검수 기록 보존",
+      "위젯과 생성 Pages 코드 동일"
+    ]
+  },
+  "limitations": [
+    "마이크는 실제 장치 대신 테스트 파형을 기존 RMS 타이머에 공급하여 검증",
+    "실제 OBS 실행 검증은 포함하지 않음",
+    "생성 포즈 기반 애니메이션으로 미세한 형태·크기 변화가 남아 있음"
+  ]
+}
