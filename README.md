@@ -29,15 +29,46 @@ OBS 브라우저 소스나 웹페이지에 그대로 올려 쓴다.
 
 `https://eunjaelee-toothlife.github.io/sheddy-pet/?mode=halloween`
 
-처음부터 마녀 복장으로 솥을 젓고, 황금 레몬·폭발·레몬 슬라임을 무작위로 보여 준 뒤 솥 젓기로 돌아온다.
-F3에는 이 네 동작만 표시한다. `mode`를 생략하거나 다른 값을 쓰면 기존 일반 모드로 동작한다.
-추가 영상 다운로드 없이 기존 연금술 클립을 사용하며 가운 변신·원복 클립은 재생하지 않는다.
+처음부터 소품 없는 마녀 대기로 시작한다. 신규 20종과 기존 연금술 4종, 총 24개 동작을 F3에서 선택하거나 자동 추첨으로 재생한다.
+일반 모드에서는 신규 20종이 선택·추첨되지 않는다. 가운 변신·원복 영상도 할로윈 모드에서는 재생하지 않는다.
 
-- `&state=alchemyslime1`: 슬라임부터 시작. 선택 가능한 상태는 `alchemy1`, `alchemygold1`, `alchemyboom1`, `alchemyslime1`.
-- `&dice=0`: 자동 추첨을 끈다. 선택한 결과 동작은 한 번 재생 후 솥 젓기로 돌아온다.
+| 상태 | 동작 |
+| --- | --- |
+| `witchidle1` | 마녀 대기 |
+| `broom1` | 빗자루 비행 |
+| `lantern1` | 호박 랜턴 |
+| `ghost1` | 꼬마 유령 |
+| `bat1` | 박쥐 친구 |
+| `candy1` | 사탕 나눔 |
+| `spellbook1` | 마법책 낭독 |
+| `starspell1` | 별빛 마법봉 |
+| `crystal1` | 수정구 점술 |
+| `blackcat1` | 검은 고양이 |
+| `raven1` | 장난꾸러기 까마귀 |
+| `spider1` | 거미 구조 |
+| `potion1` | 딸꾹 물약 |
+| `moon1` | 초승달 그네 |
+| `tarot1` | 호박 타로 |
+| `umbrella1` | 유령비 우산 |
+| `witchdance1` | 마녀 스텝 댄스 |
+| `peekaboo1` | 망토 까꿍 |
+| `candles1` | 떠다니는 촛불 |
+| `gift1` | 할로윈 선물상자 |
+
+기존 연금술: `alchemy1` 솥 젓기, `alchemygold1` 황금 레몬, `alchemyboom1` 실험 폭발, `alchemyslime1` 레몬 슬라임.
+
+- `&state=broom1`: 빗자루 비행부터 시작한다.
+- 신규 동작은 대기 16포즈/2.67초, 나머지 각 16포즈/3초의 투명 VP9 영상이다. 기본 720px, 이전 자산 모드에는 512px를 제공한다.
+- `&dice=0`: 자동 추첨을 끈다. 단발 동작은 한 번 재생 후 마녀 대기로 돌아온다.
 - F3의 “계속 유지”: 선택한 동작을 반복한다.
-- 일반 모션을 `state`로 지정하면 솥 젓기로 시작하며, `setPetState`의 일반 모션 요청은 무시한다.
+- 일반 모션을 `state`로 지정하면 마녀 대기로 시작하며, `setPetState`의 일반 모션 요청은 무시한다.
 - 전용 말하기 모션이 없어 저장된 마이크를 자동 시작하지 않는다. 직접 마이크를 켜면 음량 표시만 동작한다.
+- 모든 영상을 선로딩하지 않는다. 최초에는 대기 영상 하나만 받고, 이후 필요한 영상만 가져오며 기존 4MiB 캐시 상한을 유지한다.
+
+[20종 모아보기 영상](output/halloween/motions-preview.mp4)에서 각 동작을 두 번씩 확인할 수 있다.
+
+제작 프롬프트와 포즈 순서는 `anims/halloween/motions.json`, ImageGen 원본은 `sprites/raw/halloween/`에 보관한다.
+`python tools/build_halloween.py`로 조립하고 `python tools/verify_halloween.py --register`로 신규 자산을 검증·등록한 뒤 Pages를 생성한다.
 
 ### 마녀 연금술
 

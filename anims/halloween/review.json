@@ -1,0 +1,85 @@
+{
+  "motions": 20,
+  "poseSlots": 320,
+  "source": "Built-in ImageGen with refs/halloween_neutral.png",
+  "sourceSheetDimensions": [
+    1254,
+    1254
+  ],
+  "encodedDimensions": [
+    720,
+    512
+  ],
+  "fps": 12,
+  "durationSeconds": {
+    "witchidle1": 2.6666666666666665,
+    "actions": 3
+  },
+  "visualReview": {
+    "all20SourceSheets": true,
+    "all320AssembledPoses": true,
+    "all20DecodedVideoSamples": true,
+    "runtimeCaptures": 23,
+    "notes": "모자·망토·금발·레몬 장식 유지, 전신/소품 여백 확인. 생성 포즈 기반 동작으로 미세한 크기·형태 변화는 남아 있음."
+  },
+  "preview": "output/halloween/motions-preview.mp4",
+  "checks": {
+    "assets": [
+      "PASS witchidle1: 16 poses, 32 ticks, 512/720 RGBA VP9, 414268 bytes",
+      "PASS broom1: 16 poses, 36 ticks, 512/720 RGBA VP9, 618736 bytes",
+      "PASS lantern1: 16 poses, 36 ticks, 512/720 RGBA VP9, 537839 bytes",
+      "PASS ghost1: 16 poses, 36 ticks, 512/720 RGBA VP9, 509662 bytes",
+      "PASS bat1: 16 poses, 36 ticks, 512/720 RGBA VP9, 525563 bytes",
+      "PASS candy1: 16 poses, 36 ticks, 512/720 RGBA VP9, 524668 bytes",
+      "PASS spellbook1: 16 poses, 36 ticks, 512/720 RGBA VP9, 562006 bytes",
+      "PASS starspell1: 16 poses, 36 ticks, 512/720 RGBA VP9, 537582 bytes",
+      "PASS crystal1: 16 poses, 36 ticks, 512/720 RGBA VP9, 467317 bytes",
+      "PASS blackcat1: 16 poses, 36 ticks, 512/720 RGBA VP9, 462493 bytes",
+      "PASS raven1: 16 poses, 36 ticks, 512/720 RGBA VP9, 500941 bytes",
+      "PASS spider1: 16 poses, 36 ticks, 512/720 RGBA VP9, 492574 bytes",
+      "PASS potion1: 16 poses, 36 ticks, 512/720 RGBA VP9, 497962 bytes",
+      "PASS moon1: 16 poses, 36 ticks, 512/720 RGBA VP9, 584945 bytes",
+      "PASS tarot1: 16 poses, 36 ticks, 512/720 RGBA VP9, 521823 bytes",
+      "PASS umbrella1: 16 poses, 36 ticks, 512/720 RGBA VP9, 531638 bytes",
+      "PASS witchdance1: 16 poses, 36 ticks, 512/720 RGBA VP9, 481462 bytes",
+      "PASS peekaboo1: 16 poses, 36 ticks, 512/720 RGBA VP9, 483079 bytes",
+      "PASS candles1: 16 poses, 36 ticks, 512/720 RGBA VP9, 628904 bytes",
+      "PASS gift1: 16 poses, 36 ticks, 512/720 RGBA VP9, 560784 bytes",
+      "PASS 20 clips / 320 poses / 10444246 HD bytes"
+    ],
+    "normal": [
+      "PASS  renderBudget 3초 30회, 433×433",
+      "PASS  newReactions 16개 모션 단발 복귀 + 박수 계속 유지",
+      "PASS  danceLoops   3개 춤 각각 두 사이클, 무기한 유지, 워치독 개입 없음",
+      "PASS  alchemyEndings alchemy1_start → alchemy1_loop → alchemy1_end1 → alchemy1_outro → idle1_loop | alchemy1_start → alchemy1_loop → alchemy1_end2 → alchemy1_outro → idle1_loop | alchemy1_start → alchemy1_loop → alchemy1_end3 → alchemy1_outro → idle1_loop",
+      "PASS  alchemyHold  두 사이클 무기한 유지, 숨김 중 draw/재생 0, 큐 실행과 원복 정상",
+      "PASS  visibility   숨김 중 draw/재생 0, 전환과 큐 복구",
+      "PASS  cacheBudget  11/62클립, 4125684바이트, 동시 요청 2",
+      "PASS  pausePendingPlay play 완료 전 숨김/복귀 정상",
+      "PASS  cycles       재시작 지연 [11,11,10,11]ms",
+      "PASS  transitions  pastry1_start → pastry1_loop → pastry1_end1 → pastry1_outro → idle1_loop | happy1_start → happy1_loop → happy1_end → idle1_loop",
+      "PASS  queuedTalk   알파 최소 255, talk 시작 지연 [0,0,0,0]ms",
+      "PASS  holdQueue    pinnedUntil = Infinity 유지",
+      "PASS  staleChain   리셋 뒤에도 current = idle1 유지"
+    ],
+    "halloween": [
+      "PASS  modeScope    일반 시작 상태 대체, 선택기 24종, 외부 일반 모션 차단, 초기 영상 1개",
+      "PASS  witchIdle    대기 루프 두 사이클 연속 재생",
+      "PASS  witchResults 동작 23종 실제 재생 후 마녀 복장으로 복귀, 투명 720 영상",
+      "PASS  witchHold    두 사이클 유지, 마이크 격리, 숨김 중 작업 0, 유효한 큐와 Infinity 보존",
+      "PASS  witchAutomatic 실제 자동 추첨·복귀, 전용 클립만 요청, 캐시 4101399B",
+      "PASS  mode=halloween&state=alchemyslime1&dice=0 → alchemyslime1",
+      "PASS  mode=unknown&dice=0 → idle1"
+    ],
+    "halloweenFallback": [
+      "PASS  modeScope    일반 시작 상태 대체, 선택기 24종, 외부 일반 모션 차단, 초기 영상 1개",
+      "PASS  witchIdle    대기 루프 두 사이클 연속 재생",
+      "PASS  witchResults 동작 23종 실제 재생 후 마녀 복장으로 복귀, 투명 720 영상",
+      "PASS  witchHold    두 사이클 유지, 마이크 격리, 숨김 중 작업 0, 유효한 큐와 Infinity 보존",
+      "PASS  witchAutomatic 실제 자동 추첨·복귀, 전용 클립만 요청, 캐시 4101399B",
+      "PASS  mode=halloween&state=alchemyslime1&dice=0 → alchemyslime1",
+      "PASS  mode=unknown&dice=0 → idle1"
+    ],
+    "fallbackRerunNote": "최초 병렬 실행에서는 워치독 경고 1회로 실패. 경고에 상태 진단을 추가하고 단독으로 재실행해 7개 검사 통과. 원인은 확정하지 않았으며 런타임 워치독 로직은 변경하지 않음."
+  }
+}
