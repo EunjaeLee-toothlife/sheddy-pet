@@ -1,0 +1,25 @@
+Use case: illustration-story. Asset type: production transparent animation sprite sheet for an OBS mascot.
+Input image 1 is character identity and costume REFERENCE only. Create ONE square high-detail sprite sheet, exactly 4 columns by 4 rows = 16 chronological full-body poses, left to right then top to bottom. True transparent RGBA background. No text, grid lines, labels, shadows, scenery, or background.
+Preserve exactly the reference character: blonde wavy hair, warm amber eyes, lemon hair clip on viewer RIGHT, same cute chibi proportions and polished anime shading. Outfit in EVERY cell: Yellow sunhat with lemon badge, ivory tee, blue denim short overalls with lemon patch, coral backpack, white socks, yellow sneakers.
+Remove handheld concept props except when the action calls for them. Keep hands empty at beginning and end. Accessories worn on head/body remain throughout. Exactly two arms and hands. Do not mirror.
+CRITICAL: draw figures SMALL, only 60-65% of each equal cell height. All hair, hats, feet, props and effects INSIDE their own cell. Broad fully transparent gutters between every cell and at sheet outer edges. Fixed camera, consistent character size and foot baseline; expressive distinct full-body poses that tell the requested story.
+Motion: 풍선 친구. 풍선 친구
+Pose 0 and 15 must match exactly, neutral relaxed standing empty hands. Introduce props early and put them away by pose 14. No costume changes.
+Exactly these 16 poses:
+0: neutral standing, empty hands
+1: Take yellow star balloon on string
+2: hold string low
+3: lift hand
+4: balloon rises
+5: look up
+6: wind pulls left
+7: lean right
+8: balloon pulls right
+9: regain balance
+10: hug balloon gently
+11: delighted smile
+12: release hug
+13: lower balloon
+14: send balloon floating away
+15: neutral standing, empty hands
+CRITICAL LAYOUT REPAIR: exactly 16 cells. Each character must be SMALL, only 45-50% of cell height. Keep ALL props close to her body: SMALL star balloon on a SHORT string, never above the cell top. Keep entire character and every prop INSIDE CENTRAL 70% of each cell, leaving 15% completely empty transparent gutters on EVERY side. Never cut any hat, shoe, hand, balloon or airplane. No overlap between neighboring cells.
