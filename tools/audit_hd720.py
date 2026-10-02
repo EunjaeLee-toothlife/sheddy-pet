@@ -21,7 +21,7 @@ def probe(path):
 
 def registry():
     widget = (ROOT / 'widget.html').read_text(encoding='utf-8')
-    script = 'const ANIMS =' + widget.split('const ANIMS =', 1)[1].split('const DEFAULT_STATE', 1)[0]
+    script = 'const ANIMS =' + widget.split('const ANIMS =', 1)[1].split('const THEME_STATES', 1)[0]
     code = "const fs=require('fs'),vm=require('vm');let s=fs.readFileSync(0,'utf8');process.stdout.write(JSON.stringify(vm.runInNewContext(s+';ANIMS')));"
     return json.loads(subprocess.check_output(['node', '-e', code], input=script, text=True, encoding='utf-8'))
 

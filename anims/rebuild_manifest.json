@@ -15074,6 +15074,78 @@
       "state": "summer_fan1",
       "sha256": "721342fe9c48a0f00e6f8c00b348feb5a077b2df79ccbfc011b16010c3850d20",
       "reason": "ImageGen 기념일 전용 모션. 원본/재구성 모드에서 공통 사용."
+    },
+    {
+      "file": "anim_transform_normal_start.webm",
+      "state": "transform_normal",
+      "sha256": "1aaa93c39e49cc6f4edfb0071dbf05e3d0160d67235f3e5a85e98e9772cb93d5",
+      "reason": "ImageGen 복장 변신. 원본/재구성 모드 공통 사용."
+    },
+    {
+      "file": "anim_transform_normal_loop.webm",
+      "state": "transform_normal",
+      "sha256": "788d66243f077b3ceeb73ae41087a21421b3e7d641587805b6c84f055f0af031",
+      "reason": "ImageGen 복장 변신. 원본/재구성 모드 공통 사용."
+    },
+    {
+      "file": "anim_transform_halloween_start.webm",
+      "state": "transform_halloween",
+      "sha256": "e15a71f65d6105d75d0fb0a400a6f770bd66a575bd9f72d86e0508f921214d06",
+      "reason": "ImageGen 복장 변신. 원본/재구성 모드 공통 사용."
+    },
+    {
+      "file": "anim_transform_halloween_loop.webm",
+      "state": "transform_halloween",
+      "sha256": "d944a5d5f1b29b9d1360815c40fcaa0f9c8b311f9e6042c3bb6cd12b54d2cb16",
+      "reason": "ImageGen 복장 변신. 원본/재구성 모드 공통 사용."
+    },
+    {
+      "file": "anim_transform_seollal_start.webm",
+      "state": "transform_seollal",
+      "sha256": "d3ff2e88efe03d9ff0ef5f40e80d1a0639948b5e3b63420213128e7c87fa4b30",
+      "reason": "ImageGen 복장 변신. 원본/재구성 모드 공통 사용."
+    },
+    {
+      "file": "anim_transform_seollal_loop.webm",
+      "state": "transform_seollal",
+      "sha256": "384c2f149b90b46617834cfab1a53439a04ea7a8d88b6413428bf3b9a71653cb",
+      "reason": "ImageGen 복장 변신. 원본/재구성 모드 공통 사용."
+    },
+    {
+      "file": "anim_transform_christmas_start.webm",
+      "state": "transform_christmas",
+      "sha256": "afa4ae57b20e80d9da80c85fde243648b062ad3fa487cb8ff45e1fecbcab8434",
+      "reason": "ImageGen 복장 변신. 원본/재구성 모드 공통 사용."
+    },
+    {
+      "file": "anim_transform_christmas_loop.webm",
+      "state": "transform_christmas",
+      "sha256": "274930cf96b8acd4e37d01efb6cdd05e80c3ae59eb104972d48796ddc225442d",
+      "reason": "ImageGen 복장 변신. 원본/재구성 모드 공통 사용."
+    },
+    {
+      "file": "anim_transform_childrensday_start.webm",
+      "state": "transform_childrensday",
+      "sha256": "8cc2ecf322fa69526ef607bdb76cf7d54618ef82000ac1c79051e8714261a206",
+      "reason": "ImageGen 복장 변신. 원본/재구성 모드 공통 사용."
+    },
+    {
+      "file": "anim_transform_childrensday_loop.webm",
+      "state": "transform_childrensday",
+      "sha256": "42016471484201540c49a2e82a53c3f3988ae65d7e3490b23ae3fd9589b74708",
+      "reason": "ImageGen 복장 변신. 원본/재구성 모드 공통 사용."
+    },
+    {
+      "file": "anim_transform_summer_start.webm",
+      "state": "transform_summer",
+      "sha256": "757609ab0fbc78c629b0812eb4ba50f71403a7c3b62fd5333fd3e0f5d3328509",
+      "reason": "ImageGen 복장 변신. 원본/재구성 모드 공통 사용."
+    },
+    {
+      "file": "anim_transform_summer_loop.webm",
+      "state": "transform_summer",
+      "sha256": "67e4faa83c3101f05695468a38c6aa634f20701ce3abc14e18ffb5b47cd04f2c",
+      "reason": "ImageGen 복장 변신. 원본/재구성 모드 공통 사용."
     }
   ]
 }

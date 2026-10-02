@@ -40,7 +40,7 @@ def boxes_for(sheet):
     return boxes
 
 
-def prepare(sheet, config):
+def prepare(sheet, config, close_loop=True):
     tiles = []
     mask = np.asarray(sheet.getchannel('A')) > 128
     for i, box in enumerate(config['cellBoxes']):
@@ -84,7 +84,8 @@ def prepare(sheet, config):
         if not bounds or min(bounds[:2]) < 8 or max(bounds[2:]) > 712:
             raise ValueError(f'출력 여백 부족: {config["name"]} {i} {bounds}')
         frames.append(frame)
-    frames[-1] = frames[0].copy()
+    if close_loop:
+        frames[-1] = frames[0].copy()
     return frames
 
 

@@ -581,6 +581,111 @@ async function main() {
     if (argv.includes("--reactions-only")) await send("Page.addScriptToEvaluateOnNewDocument", { source: "window.__reactionsOnly=true;" });
     if (argv.includes("--capture")) await send("Page.addScriptToEvaluateOnNewDocument", { source: "window.__captureReactions=[];" });
     if (FALLBACK) await send("Page.addScriptToEvaluateOnNewDocument", { source: "delete HTMLVideoElement.prototype.requestVideoFrameCallback; delete HTMLVideoElement.prototype.cancelVideoFrameCallback;" });
+    if (argv.includes("--mode-switch")) {
+      const evaluate = async expression => {
+        const r = await send("Runtime.evaluate", { expression, awaitPromise: true, returnByValue: true });
+        if (r.result?.exceptionDetails) throw Error(r.result.exceptionDetails.exception?.description || r.result.exceptionDetails.text);
+        return r.result?.result?.value;
+      };
+      const waitMode = async mode => {
+        const until = Date.now() + 15000;
+        while (Date.now() < until) {
+          // 내비게이션 도중에는 이전 실행 컨텍스트가 사라질 수 있다.
+          const r = await send("Runtime.evaluate", { expression: `typeof current !== 'undefined' && params.get('mode') === ${JSON.stringify(mode || null)} && current === (talkActive ? TALK_STATE : DEFAULT_STATE) && !modeSwitching && !transitioning && vids[front].videoWidth === 720 && !vids[front].paused`, returnByValue: true });
+          if (r.result?.result?.value === true) return;
+          await sleep(100);
+        }
+        throw Error(`모드 전환 시간 초과: ${mode || "일반"}`);
+      };
+      const assert = (ok, detail) => { if (!ok) throw Error(detail); };
+      await send("Page.navigate", { url: `http://127.0.0.1:${server.address().port}/${PAGE}?dice=0&flip=1&resolution=720&hold=8&assets=hd720#widget` });
+      await waitMode("");
+      await evaluate(`(async()=>{
+        window.__pageToken = performance.timeOrigin;
+        window.__micLevel = 0; window.__micStopped = false;
+        window.__testStream = {getTracks:()=>[{stop(){window.__micStopped=true;}}],getAudioTracks:()=>[{getSettings:()=>({deviceId:'__test__'})}]};
+        navigator.mediaDevices.getUserMedia = async()=>window.__testStream;
+        navigator.mediaDevices.enumerateDevices = async()=>[];
+        audioCtx = {resume:async()=>{},createMediaStreamSource:()=>({connect(){}}),createAnalyser:()=>({fftSize:1024,getFloatTimeDomainData(buf){buf.fill(window.__micLevel);}})};
+        threshSlider.value='0.055'; threshSlider.dispatchEvent(new Event('input'));
+        await startMic('__test__');
+        window.__switchClips=[];
+        const original=playClip;
+        playClip=function(file,opts){if(modeSwitching && file.includes('transform_'))window.__switchClips.push(file);return original(file,opts);};
+      })()`);
+      if (argv.includes("--capture")) await evaluate(`window.__chunks=[]; window.__recordStream=screen.captureStream(20); window.__recorder=new MediaRecorder(window.__recordStream,{mimeType:'video/webm'}); window.__recorder.ondataavailable=e=>window.__chunks.push(e.data); window.__recorder.start()`);
+      for (const mode of ["halloween", "seollal", "christmas", "childrensday", "summer", ""]) {
+        if (mode === "halloween") await evaluate(`void setState('alchemy1')`);
+        const previous = mode === "halloween" ? "halloween" : await evaluate(`ACTIVE_MODE || 'normal'`);
+        await evaluate(`window.__switchClips=[]; history.replaceState(null, '', location.pathname + location.search + '&state=happy1&ending=3#widget'); window.dispatchEvent(new MouseEvent('mousemove')); modeBtn.click()`);
+        assert(await evaluate(`modeBtn.classList.contains('show') && modeBtn.getAttribute('aria-expanded') === 'true' && modePanel.querySelectorAll('button').length === 6 && modePanel.querySelector('[aria-pressed="true"]').dataset.mode === (ACTIVE_MODE || '')`), "모드 패널 표시/선택 오류");
+        // 실제 버튼 클릭으로 변신을 시작한다.
+        const point = await evaluate(`(()=>{const b=modePanel.querySelector('[data-mode="${mode}"]'); b.scrollIntoView({block:'nearest'}); const r=b.getBoundingClientRect(); return {x:r.x+r.width/2,y:r.y+r.height/2};})()`);
+        await send("Input.dispatchMouseEvent", { type: "mousePressed", ...point, button: "left", clickCount: 1 });
+        await send("Input.dispatchMouseEvent", { type: "mouseReleased", ...point, button: "left", clickCount: 1 });
+        assert(await evaluate(`modeSwitching && modeBtn.getAttribute('aria-busy')==='true'`), "변신 시작 누락");
+        await evaluate(`setPetState(TALK_STATE); void switchMode('summer'); window.__micLevel=0.08`);
+        await waitMode(mode);
+        assert(await evaluate(`JSON.stringify(window.__switchClips)===JSON.stringify(['anim_transform_${previous}_start.webm','anim_transform_${mode || "normal"}_loop.webm']) && performance.timeOrigin===window.__pageToken && micStream===window.__testStream && !window.__micStopped && current===TALK_STATE && cacheBytes<=CACHE_LIMIT`), "변신 순서/연속 클릭 차단/마이크 유지 실패");
+        assert(await evaluate(`params.get('flip')==='1' && params.get('resolution')==='720' && params.get('hold')==='8' && params.get('dice')==='0' && params.get('assets')==='hd720' && location.hash==='#widget' && !params.has('state') && !params.has('ending') && localStorage.getItem('petMicDevice')==='__test__' && threshSlider.value==='0.055'`), "옵션/마이크 설정 보존 또는 모션 초기화 실패");
+        assert(await evaluate(`Object.values(ACTIVE_ANIMS).every(a=>!a.mode || a.mode===ACTIVE_MODE) && modePanel.querySelector('[aria-pressed="true"]').dataset.mode===(ACTIVE_MODE || '')`), "모드/선택 표시 불일치");
+        console.log(`PASS  modeSwitch ${mode || "일반"}: 이탈 → 등장 → 말하기, 재로딩 없음, 연속 클릭 차단, 마이크 연결 유지, 캐시 상한 준수`);
+      }
+      if (argv.includes("--capture")) {
+        const data = await evaluate(`new Promise(resolve=>{window.__recorder.onstop=()=>{const reader=new FileReader();reader.onload=()=>resolve(reader.result);reader.readAsDataURL(new Blob(window.__chunks,{type:'video/webm'}));window.__recordStream.getTracks().forEach(t=>t.stop());};window.__recorder.stop();})`);
+        const file = path.join(os.tmpdir(), "sheddy-mode-transform.webm");
+        fs.writeFileSync(file, Buffer.from(data.split(",")[1], "base64"));
+        console.log("QA", file);
+      }
+      await evaluate(`window.__micLevel=0`);
+      await sleep(600);
+      await waitMode("");
+      // 변신 도중 OBS에서 숨겼을 때 프레임/재생을 멈추고 같은 단계부터 이어간다.
+      await evaluate(`void switchMode('christmas')`);
+      await sleep(500);
+      const frozen = await evaluate(`window.dispatchEvent(new CustomEvent('obsSourceVisibleChanged',{detail:{visible:false}})); ({draws:drawCount,time:vids[front].currentTime})`);
+      await sleep(1100);
+      assert(await evaluate(`modeSwitching && drawCount===${frozen.draws} && vids.every(v=>v.paused) && Math.abs(vids[front].currentTime-${frozen.time})<0.05`), "변신 숨김 중 재생/그리기 발생");
+      await evaluate(`window.dispatchEvent(new CustomEvent('obsSourceVisibleChanged',{detail:{visible:true}}))`);
+      await waitMode('christmas');
+      console.log("PASS  transformHidden 숨김 중 작업 정지, 복귀 후 변신 완주");
+      // 재생 오류가 나도 전환 잠금이 풀리고 선택한 복장으로 복귀해야 한다.
+      await evaluate(`window.__realPlay=playClip; playClip=function(file,opts){if(file.includes('transform_'))return window.__realPlay('missing-transform.webm',opts);return window.__realPlay(file,opts);}; void switchMode('seollal')`);
+      await waitMode('seollal');
+      await evaluate(`playClip=window.__realPlay`);
+      assert(await evaluate(`!modeSwitching && modeBtn.getAttribute('aria-busy')==='false'`), "영상 실패 후 잠금 유실");
+      console.log("PASS  transformFailure 영상 로드 실패 후 대기 복구와 잠금 해제");
+      // 정상 종료 이벤트가 유실된 경우 기존 워치독으로 빠져나온다.
+      await evaluate(`window.__beforeStall=playClip; playClip=function(file,opts){return window.__beforeStall(file,file.includes('transform_')?{...opts,onEnded:null}:opts);}; void switchMode('summer')`);
+      await sleep(500);
+      await evaluate(`transitionSince=Date.now()-WATCHDOG_MS-1`);
+      await waitMode('seollal');
+      await evaluate(`playClip=window.__beforeStall`);
+      console.log("PASS  transformWatchdog ended 유실 복구, 적용 전 복장 보존");
+      const beforeHidden = await evaluate(`window.dispatchEvent(new CustomEvent('obsSourceVisibleChanged',{detail:{visible:false}})); void switchMode('summer'); window.__switchClips.length`);
+      await sleep(300);
+      assert(await evaluate(`modeSwitching && ACTIVE_MODE==='seollal' && window.__switchClips.length===${beforeHidden}`), "숨김 상태에서 변신 시작");
+      await evaluate(`window.dispatchEvent(new CustomEvent('obsSourceVisibleChanged',{detail:{visible:true}}))`);
+      await waitMode('summer');
+      console.log("PASS  transformDeferred 숨김 중 선택 대기, 복귀 이벤트로 시작");
+      await evaluate(`window.__sameMode=true; modeBtn.click(); modePanel.querySelector('[aria-pressed="true"]').click()`);
+      await sleep(300);
+      assert(await evaluate(`window.__sameMode && !modePanel.classList.contains('open') && modeBtn.getAttribute('aria-expanded')==='false'`), "현재 모드 선택 시 불필요한 재로딩");
+      await evaluate(`window.dispatchEvent(new KeyboardEvent('keydown',{code:'F4'}))`);
+      assert(await evaluate(`modePanel.classList.contains('open') && document.activeElement===modePanel.querySelector('[aria-pressed="true"]')`), "F4/키보드 포커스 오류");
+      if (argv.includes("--capture")) {
+        const shot = await send("Page.captureScreenshot", { format: "png" });
+        const file = path.join(os.tmpdir(), "sheddy-mode-switch.png");
+        fs.writeFileSync(file, Buffer.from(shot.result.data, "base64"));
+        console.log("QA", file);
+      }
+      await evaluate(`window.dispatchEvent(new KeyboardEvent('keydown',{code:'Escape'}))`);
+      assert(await evaluate(`!modePanel.classList.contains('open') && document.activeElement===modeBtn`), "Escape 닫기/포커스 복귀 오류");
+      console.log("PASS  modePanel 현재 모드 재선택·F4·Escape·포커스 복귀");
+      failed = false;
+      ws.close();
+      return;
+    }
     if (BENCHMARK) {
       await send("Page.addScriptToEvaluateOnNewDocument", { source: "window.__canvasDraws=0; const clear=CanvasRenderingContext2D.prototype.clearRect; CanvasRenderingContext2D.prototype.clearRect=function(...args){window.__canvasDraws++; return clear.apply(this,args)};" });
       await send("Emulation.setDeviceMetricsOverride", { width: 512, height: 512, deviceScaleFactor: 1, mobile: false });

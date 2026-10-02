@@ -67,6 +67,18 @@
 const seq = (dir, name, n = 18) => Array.from({ length: n }, (_, i) =>
   `sprites/${dir}/${name}_${String(i).padStart(2, "0")}.png`);
 const ANIMATIONS = [
+  { name: "일반 — 변신 시작", frames: Array.from({ length: 16 }, (_, i) => `sprites/transform_normal_start/transform_normal_start_${String(i).padStart(2, "0")}.png`), webm: "sprites/anim_transform_normal_start.webm", fps: 12 },
+  { name: "일반 — 변신 등장", frames: Array.from({ length: 16 }, (_, i) => `sprites/transform_normal_loop/transform_normal_loop_${String(i).padStart(2, "0")}.png`), webm: "sprites/anim_transform_normal_loop.webm", fps: 12 },
+  { name: "할로윈 — 변신 시작", frames: Array.from({ length: 16 }, (_, i) => `sprites/transform_halloween_start/transform_halloween_start_${String(i).padStart(2, "0")}.png`), webm: "sprites/anim_transform_halloween_start.webm", fps: 12 },
+  { name: "할로윈 — 변신 등장", frames: Array.from({ length: 16 }, (_, i) => `sprites/transform_halloween_loop/transform_halloween_loop_${String(i).padStart(2, "0")}.png`), webm: "sprites/anim_transform_halloween_loop.webm", fps: 12 },
+  { name: "설 — 변신 시작", frames: Array.from({ length: 16 }, (_, i) => `sprites/transform_seollal_start/transform_seollal_start_${String(i).padStart(2, "0")}.png`), webm: "sprites/anim_transform_seollal_start.webm", fps: 12 },
+  { name: "설 — 변신 등장", frames: Array.from({ length: 16 }, (_, i) => `sprites/transform_seollal_loop/transform_seollal_loop_${String(i).padStart(2, "0")}.png`), webm: "sprites/anim_transform_seollal_loop.webm", fps: 12 },
+  { name: "크리스마스 — 변신 시작", frames: Array.from({ length: 16 }, (_, i) => `sprites/transform_christmas_start/transform_christmas_start_${String(i).padStart(2, "0")}.png`), webm: "sprites/anim_transform_christmas_start.webm", fps: 12 },
+  { name: "크리스마스 — 변신 등장", frames: Array.from({ length: 16 }, (_, i) => `sprites/transform_christmas_loop/transform_christmas_loop_${String(i).padStart(2, "0")}.png`), webm: "sprites/anim_transform_christmas_loop.webm", fps: 12 },
+  { name: "어린이날 — 변신 시작", frames: Array.from({ length: 16 }, (_, i) => `sprites/transform_childrensday_start/transform_childrensday_start_${String(i).padStart(2, "0")}.png`), webm: "sprites/anim_transform_childrensday_start.webm", fps: 12 },
+  { name: "어린이날 — 변신 등장", frames: Array.from({ length: 16 }, (_, i) => `sprites/transform_childrensday_loop/transform_childrensday_loop_${String(i).padStart(2, "0")}.png`), webm: "sprites/anim_transform_childrensday_loop.webm", fps: 12 },
+  { name: "여름휴가 — 변신 시작", frames: Array.from({ length: 16 }, (_, i) => `sprites/transform_summer_start/transform_summer_start_${String(i).padStart(2, "0")}.png`), webm: "sprites/anim_transform_summer_start.webm", fps: 12 },
+  { name: "여름휴가 — 변신 등장", frames: Array.from({ length: 16 }, (_, i) => `sprites/transform_summer_loop/transform_summer_loop_${String(i).padStart(2, "0")}.png`), webm: "sprites/anim_transform_summer_loop.webm", fps: 12 },
   { name: "seollal_breathe1 설 — 편안한 숨쉬기", frames: seq("seollal_breathe1_loop", "seollal_breathe1_loop", 16), webm: "sprites/anim_seollal_breathe1_loop.webm" },
   { name: "seollal_look1 설 — 주변 둘러보기", frames: seq("seollal_look1_loop", "seollal_look1_loop", 16), webm: "sprites/anim_seollal_look1_loop.webm" },
   { name: "seollal_tidy1 설 — 옷고름 정돈", frames: seq("seollal_tidy1_loop", "seollal_tidy1_loop", 16), webm: "sprites/anim_seollal_tidy1_loop.webm" },
