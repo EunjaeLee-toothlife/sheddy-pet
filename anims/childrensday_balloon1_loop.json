@@ -1,106 +1,6 @@
 {
   "name": "childrensday_balloon1_loop",
   "state": "childrensday_balloon1",
-  "sheet": "sprites/raw/seasonal/childrensday_balloon1.png",
-  "sha256": "12cf77b6636b5e8c2b5d0fd991ea270124b26af5873eb355e42cfa82f275542a",
-  "cellBoxes": [
-    [
-      0,
-      0,
-      325,
-      326
-    ],
-    [
-      325,
-      0,
-      627,
-      326
-    ],
-    [
-      627,
-      0,
-      940,
-      327
-    ],
-    [
-      940,
-      0,
-      1254,
-      327
-    ],
-    [
-      0,
-      326,
-      325,
-      650
-    ],
-    [
-      325,
-      326,
-      627,
-      650
-    ],
-    [
-      627,
-      327,
-      940,
-      648
-    ],
-    [
-      940,
-      327,
-      1254,
-      649
-    ],
-    [
-      0,
-      650,
-      325,
-      940
-    ],
-    [
-      325,
-      650,
-      627,
-      940
-    ],
-    [
-      627,
-      648,
-      940,
-      940
-    ],
-    [
-      940,
-      649,
-      1254,
-      940
-    ],
-    [
-      0,
-      940,
-      325,
-      1254
-    ],
-    [
-      325,
-      940,
-      627,
-      1254
-    ],
-    [
-      627,
-      940,
-      940,
-      1254
-    ],
-    [
-      940,
-      940,
-      1254,
-      1254
-    ]
-  ],
   "fps": 12,
   "holds": {
     "0": 2,
@@ -119,5 +19,437 @@
     "13": 2,
     "14": 2,
     "15": 2
-  }
+  },
+  "nativeSources": [
+    {
+      "anchor": "sprites/hd720/frames/childrensday_breathe1_loop/childrensday_breathe1_loop_00.png",
+      "sourceSha256": "abf2e90af0b1b6e2244bfd83397094aaf5c5436eadc5db20bc9037ee43e459d0"
+    },
+    {
+      "source": "sprites/raw/native/seasonal/childrensday_balloon1/00-01.png",
+      "sourceSha256": "51335280ce31b77b0f5f7d55a2591b12c976a5f471238b1f9309cefc0717d03e",
+      "cell": [
+        887,
+        0,
+        1774,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        106,
+        51,
+        707,
+        846
+      ],
+      "scale": 0.7257861635220125,
+      "position": [
+        74,
+        65
+      ],
+      "target": {
+        "height": 577,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/childrensday_balloon1/02-03.png",
+      "sourceSha256": "d0c5bf70a7de9234f914deec224e79b1c50d9f53c278f33b200f5fc7002403d5",
+      "cell": [
+        0,
+        0,
+        887,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        190,
+        56,
+        751,
+        825
+      ],
+      "scale": 0.7074122236671001,
+      "position": [
+        45,
+        97
+      ],
+      "target": {
+        "height": 544,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/childrensday_balloon1/02-03.png",
+      "sourceSha256": "d0c5bf70a7de9234f914deec224e79b1c50d9f53c278f33b200f5fc7002403d5",
+      "cell": [
+        887,
+        0,
+        1774,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        139,
+        56,
+        724,
+        825
+      ],
+      "scale": 0.7152145643693107,
+      "position": [
+        48,
+        91
+      ],
+      "target": {
+        "height": 550,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/childrensday_balloon1/04-05.png",
+      "sourceSha256": "3a406536429dd826f6f6048c07e64d8700a78623efb53d3758b145f9404280db",
+      "cell": [
+        0,
+        0,
+        887,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        237,
+        16,
+        778,
+        835
+      ],
+      "scale": 0.7851037851037851,
+      "position": [
+        -16,
+        25
+      ],
+      "target": {
+        "height": 643,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/childrensday_balloon1/04-05.png",
+      "sourceSha256": "3a406536429dd826f6f6048c07e64d8700a78623efb53d3758b145f9404280db",
+      "cell": [
+        887,
+        0,
+        1774,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        182,
+        22,
+        644,
+        835
+      ],
+      "scale": 0.7933579335793358,
+      "position": [
+        40,
+        17
+      ],
+      "target": {
+        "height": 645,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/childrensday_balloon1/06-07.png",
+      "sourceSha256": "c770f65b8c90aa38c50c05aa533e5fa75998bf6d9a4152ac282eb9d64182be21",
+      "cell": [
+        0,
+        0,
+        887,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        104,
+        16,
+        791,
+        828
+      ],
+      "scale": 0.7032019704433498,
+      "position": [
+        23,
+        97
+      ],
+      "target": {
+        "height": 571,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/childrensday_balloon1/06-07.png",
+      "sourceSha256": "c770f65b8c90aa38c50c05aa533e5fa75998bf6d9a4152ac282eb9d64182be21",
+      "cell": [
+        887,
+        0,
+        1774,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        83,
+        55,
+        814,
+        826
+      ],
+      "scale": 0.6744487678339819,
+      "position": [
+        160,
+        123
+      ],
+      "target": {
+        "height": 520,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/childrensday_balloon1/08-09.png",
+      "sourceSha256": "164d122760c8f50e1efcae95809e3be4700bdc0b1aa3eee49acf4782ea66adec",
+      "cell": [
+        0,
+        0,
+        887,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        115,
+        111,
+        876,
+        797
+      ],
+      "scale": 0.6967930029154519,
+      "position": [
+        41,
+        125
+      ],
+      "target": {
+        "height": 478,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/childrensday_balloon1/08-09.png",
+      "sourceSha256": "164d122760c8f50e1efcae95809e3be4700bdc0b1aa3eee49acf4782ea66adec",
+      "cell": [
+        887,
+        0,
+        1774,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        127,
+        140,
+        854,
+        800
+      ],
+      "scale": 0.7606060606060606,
+      "position": [
+        -14,
+        71
+      ],
+      "target": {
+        "height": 502,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/childrensday_balloon1/10-11.png",
+      "sourceSha256": "bb25ceae0ee0de1a2b2bb8a5db5dae469c09c8c1db33e8a9716a7cf9a2309b29",
+      "cell": [
+        0,
+        0,
+        887,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        162,
+        57,
+        744,
+        822
+      ],
+      "scale": 0.6875816993464052,
+      "position": [
+        49,
+        115
+      ],
+      "target": {
+        "height": 526,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/childrensday_balloon1/10-11.png",
+      "sourceSha256": "bb25ceae0ee0de1a2b2bb8a5db5dae469c09c8c1db33e8a9716a7cf9a2309b29",
+      "cell": [
+        887,
+        0,
+        1774,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        111,
+        57,
+        781,
+        822
+      ],
+      "scale": 0.7111111111111111,
+      "position": [
+        55,
+        95
+      ],
+      "target": {
+        "height": 544,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/childrensday_balloon1/12-13.png",
+      "sourceSha256": "56e53d1a33850c4afaa299bd7b54835d135cd5527caf49ee3dacb6ae1885f9ab",
+      "cell": [
+        0,
+        0,
+        887,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        151,
+        48,
+        839,
+        810
+      ],
+      "scale": 0.7191601049868767,
+      "position": [
+        29,
+        98
+      ],
+      "target": {
+        "height": 548,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/childrensday_balloon1/12-13.png",
+      "sourceSha256": "56e53d1a33850c4afaa299bd7b54835d135cd5527caf49ee3dacb6ae1885f9ab",
+      "cell": [
+        887,
+        0,
+        1774,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        137,
+        58,
+        763,
+        810
+      ],
+      "scale": 0.726063829787234,
+      "position": [
+        68,
+        92
+      ],
+      "target": {
+        "height": 546,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/childrensday_balloon1/14-15.png",
+      "sourceSha256": "d14b6c4788a0b4c6c9e2a376870354374aaeb7dc49a13849a6fe3bd9bda70043",
+      "cell": [
+        0,
+        0,
+        887,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        183,
+        29,
+        852,
+        845
+      ],
+      "scale": 0.7218137254901961,
+      "position": [
+        34,
+        71
+      ],
+      "target": {
+        "height": 589,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "anchor": "sprites/hd720/frames/childrensday_breathe1_loop/childrensday_breathe1_loop_00.png",
+      "sourceSha256": "abf2e90af0b1b6e2244bfd83397094aaf5c5436eadc5db20bc9037ee43e459d0"
+    }
+  ],
+  "sourcePipeline": "native-pairs-v1",
+  "anchor": "sprites/hd720/frames/childrensday_breathe1_loop/childrensday_breathe1_loop_00.png"
 }

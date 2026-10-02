@@ -1,106 +1,6 @@
 {
   "name": "seollal_soup1_loop",
   "state": "seollal_soup1",
-  "sheet": "sprites/raw/seasonal/seollal_soup1.png",
-  "sha256": "31f444e71eb84c7686a2ff0cb46e46e0c65b01b383ffec0eafc89006f85d1c14",
-  "cellBoxes": [
-    [
-      0,
-      0,
-      314,
-      314
-    ],
-    [
-      314,
-      0,
-      627,
-      314
-    ],
-    [
-      627,
-      0,
-      940,
-      314
-    ],
-    [
-      940,
-      0,
-      1254,
-      314
-    ],
-    [
-      0,
-      314,
-      314,
-      627
-    ],
-    [
-      314,
-      314,
-      627,
-      627
-    ],
-    [
-      627,
-      314,
-      940,
-      627
-    ],
-    [
-      940,
-      314,
-      1254,
-      627
-    ],
-    [
-      0,
-      627,
-      314,
-      940
-    ],
-    [
-      314,
-      627,
-      627,
-      940
-    ],
-    [
-      627,
-      627,
-      940,
-      940
-    ],
-    [
-      940,
-      627,
-      1254,
-      940
-    ],
-    [
-      0,
-      940,
-      314,
-      1254
-    ],
-    [
-      314,
-      940,
-      627,
-      1254
-    ],
-    [
-      627,
-      940,
-      940,
-      1254
-    ],
-    [
-      940,
-      940,
-      1254,
-      1254
-    ]
-  ],
   "fps": 12,
   "holds": {
     "0": 2,
@@ -119,5 +19,437 @@
     "13": 2,
     "14": 2,
     "15": 2
-  }
+  },
+  "nativeSources": [
+    {
+      "anchor": "sprites/hd720/frames/seollal_breathe1_loop/seollal_breathe1_loop_00.png",
+      "sourceSha256": "ad041795dd715bbd912cb74682cb0c4fad813fd5952eddf743bd1e350e4fb6ab"
+    },
+    {
+      "source": "sprites/raw/native/seasonal/seollal_soup1/00-01.png",
+      "sourceSha256": "68ac06b7de26c3f40ea33c8783899aef6d84337f65e689934587ba3dc5f4e31a",
+      "cell": [
+        887,
+        0,
+        1774,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        128,
+        36,
+        652,
+        846
+      ],
+      "scale": 0.6938271604938272,
+      "position": [
+        89,
+        94
+      ],
+      "target": {
+        "height": 562,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/seollal_soup1/02-03.png",
+      "sourceSha256": "9700e70248ce943912be54408c217b31021f5919968096cc1baab4be7205df50",
+      "cell": [
+        0,
+        0,
+        887,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        242,
+        79,
+        754,
+        823
+      ],
+      "scale": 0.7567204301075269,
+      "position": [
+        -17,
+        58
+      ],
+      "target": {
+        "height": 563,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/seollal_soup1/02-03.png",
+      "sourceSha256": "9700e70248ce943912be54408c217b31021f5919968096cc1baab4be7205df50",
+      "cell": [
+        887,
+        0,
+        1774,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        104,
+        77,
+        629,
+        824
+      ],
+      "scale": 0.7576974564926372,
+      "position": [
+        79,
+        56
+      ],
+      "target": {
+        "height": 566,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/seollal_soup1/04-05.png",
+      "sourceSha256": "88b1d247c6420c19db2a0dead7b0df10a5ca90ecd62ae3784b3457ea62a76cc3",
+      "cell": [
+        0,
+        0,
+        887,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        209,
+        59,
+        753,
+        831
+      ],
+      "scale": 0.7357512953367875,
+      "position": [
+        7,
+        68
+      ],
+      "target": {
+        "height": 568,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/seollal_soup1/04-05.png",
+      "sourceSha256": "88b1d247c6420c19db2a0dead7b0df10a5ca90ecd62ae3784b3457ea62a76cc3",
+      "cell": [
+        887,
+        0,
+        1774,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        104,
+        62,
+        644,
+        831
+      ],
+      "scale": 0.7373211963589077,
+      "position": [
+        92,
+        67
+      ],
+      "target": {
+        "height": 567,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/seollal_soup1/06-07.png",
+      "sourceSha256": "8adcd1b2ced1d29631cdd19a11b349ff13a323b6f5043773076115a5e3c92652",
+      "cell": [
+        0,
+        0,
+        887,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        173,
+        49,
+        735,
+        841
+      ],
+      "scale": 0.7146464646464646,
+      "position": [
+        39,
+        79
+      ],
+      "target": {
+        "height": 566,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/seollal_soup1/06-07.png",
+      "sourceSha256": "8adcd1b2ced1d29631cdd19a11b349ff13a323b6f5043773076115a5e3c92652",
+      "cell": [
+        887,
+        0,
+        1774,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        118,
+        52,
+        705,
+        839
+      ],
+      "scale": 0.7229987293519695,
+      "position": [
+        71,
+        74
+      ],
+      "target": {
+        "height": 569,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/seollal_soup1/08-09.png",
+      "sourceSha256": "b962e49ae98f9fce1fa2cf9047876c1058a6da6235d6e16b57c4a3fc235d425f",
+      "cell": [
+        0,
+        0,
+        887,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        193,
+        34,
+        768,
+        832
+      ],
+      "scale": 0.7105263157894737,
+      "position": [
+        22,
+        89
+      ],
+      "target": {
+        "height": 567,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/seollal_soup1/08-09.png",
+      "sourceSha256": "b962e49ae98f9fce1fa2cf9047876c1058a6da6235d6e16b57c4a3fc235d425f",
+      "cell": [
+        887,
+        0,
+        1774,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        128,
+        34,
+        683,
+        830
+      ],
+      "scale": 0.7110552763819096,
+      "position": [
+        62,
+        90
+      ],
+      "target": {
+        "height": 566,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/seollal_soup1/10-11.png",
+      "sourceSha256": "172f3b275e9c328acdf2b316841f92a5994ae541dc5ead49ff7ab1f60b117e5e",
+      "cell": [
+        0,
+        0,
+        887,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        205,
+        25,
+        776,
+        831
+      ],
+      "scale": 0.7022332506203474,
+      "position": [
+        18,
+        96
+      ],
+      "target": {
+        "height": 566,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/seollal_soup1/10-11.png",
+      "sourceSha256": "172f3b275e9c328acdf2b316841f92a5994ae541dc5ead49ff7ab1f60b117e5e",
+      "cell": [
+        887,
+        0,
+        1774,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        107,
+        26,
+        689,
+        831
+      ],
+      "scale": 0.7018633540372671,
+      "position": [
+        83,
+        96
+      ],
+      "target": {
+        "height": 565,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/seollal_soup1/12-13.png",
+      "sourceSha256": "0f461d50a3422a72857cb6d4877a57df5ad9c4c0f6456e495c34255fa29905ca",
+      "cell": [
+        0,
+        0,
+        887,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        226,
+        66,
+        751,
+        822
+      ],
+      "scale": 0.746031746031746,
+      "position": [
+        2,
+        66
+      ],
+      "target": {
+        "height": 564,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/seollal_soup1/12-13.png",
+      "sourceSha256": "0f461d50a3422a72857cb6d4877a57df5ad9c4c0f6456e495c34255fa29905ca",
+      "cell": [
+        887,
+        0,
+        1774,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        124,
+        71,
+        647,
+        829
+      ],
+      "scale": 0.7519788918205804,
+      "position": [
+        81,
+        57
+      ],
+      "target": {
+        "height": 570,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/seollal_soup1/14-15.png",
+      "sourceSha256": "3e96ef697456c55ebaccd4a928d6845926ac97590e29d7cee48c040d27f35ad3",
+      "cell": [
+        0,
+        0,
+        887,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        219,
+        37,
+        738,
+        844
+      ],
+      "scale": 0.7038413878562577,
+      "position": [
+        20,
+        86
+      ],
+      "target": {
+        "height": 568,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "anchor": "sprites/hd720/frames/seollal_breathe1_loop/seollal_breathe1_loop_00.png",
+      "sourceSha256": "ad041795dd715bbd912cb74682cb0c4fad813fd5952eddf743bd1e350e4fb6ab"
+    }
+  ],
+  "sourcePipeline": "native-pairs-v1",
+  "anchor": "sprites/hd720/frames/seollal_breathe1_loop/seollal_breathe1_loop_00.png"
 }

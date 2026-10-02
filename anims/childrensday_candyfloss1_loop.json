@@ -1,106 +1,6 @@
 {
   "name": "childrensday_candyfloss1_loop",
   "state": "childrensday_candyfloss1",
-  "sheet": "sprites/raw/seasonal/childrensday_candyfloss1.png",
-  "sha256": "3a06e362d38c5c736e02df8c50761d2246a5df9bcba0e37d37421ea147151639",
-  "cellBoxes": [
-    [
-      0,
-      0,
-      314,
-      315
-    ],
-    [
-      314,
-      0,
-      627,
-      316
-    ],
-    [
-      627,
-      0,
-      940,
-      317
-    ],
-    [
-      940,
-      0,
-      1254,
-      316
-    ],
-    [
-      0,
-      315,
-      314,
-      628
-    ],
-    [
-      314,
-      316,
-      627,
-      629
-    ],
-    [
-      627,
-      317,
-      940,
-      629
-    ],
-    [
-      940,
-      316,
-      1254,
-      629
-    ],
-    [
-      0,
-      628,
-      314,
-      940
-    ],
-    [
-      314,
-      629,
-      627,
-      940
-    ],
-    [
-      627,
-      629,
-      940,
-      940
-    ],
-    [
-      940,
-      629,
-      1254,
-      940
-    ],
-    [
-      0,
-      940,
-      314,
-      1254
-    ],
-    [
-      314,
-      940,
-      627,
-      1254
-    ],
-    [
-      627,
-      940,
-      940,
-      1254
-    ],
-    [
-      940,
-      940,
-      1254,
-      1254
-    ]
-  ],
   "fps": 12,
   "holds": {
     "0": 2,
@@ -119,5 +19,437 @@
     "13": 2,
     "14": 2,
     "15": 2
-  }
+  },
+  "nativeSources": [
+    {
+      "anchor": "sprites/hd720/frames/childrensday_breathe1_loop/childrensday_breathe1_loop_00.png",
+      "sourceSha256": "abf2e90af0b1b6e2244bfd83397094aaf5c5436eadc5db20bc9037ee43e459d0"
+    },
+    {
+      "source": "sprites/raw/native/seasonal/childrensday_candyfloss1/00-01.png",
+      "sourceSha256": "f2693511e66647bf7128537c02ad62784c47c85541efac1b7faf0c5ad4120e7d",
+      "cell": [
+        887,
+        0,
+        1774,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        128,
+        59,
+        704,
+        817
+      ],
+      "scale": 0.7401055408970977,
+      "position": [
+        55,
+        76
+      ],
+      "target": {
+        "height": 561,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/childrensday_candyfloss1/02-03.png",
+      "sourceSha256": "b1e3a3c7142673460d534f6084d82d15b5d365b8f7d8bb79c3bf020b5ae7c9bc",
+      "cell": [
+        0,
+        0,
+        887,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        220,
+        57,
+        755,
+        824
+      ],
+      "scale": 0.7314211212516297,
+      "position": [
+        9,
+        77
+      ],
+      "target": {
+        "height": 561,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/childrensday_candyfloss1/02-03.png",
+      "sourceSha256": "b1e3a3c7142673460d534f6084d82d15b5d365b8f7d8bb79c3bf020b5ae7c9bc",
+      "cell": [
+        887,
+        0,
+        1774,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        128,
+        63,
+        706,
+        825
+      ],
+      "scale": 0.7257217847769029,
+      "position": [
+        82,
+        81
+      ],
+      "target": {
+        "height": 553,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/childrensday_candyfloss1/04-05.png",
+      "sourceSha256": "35eff5b6fb07707d4f1e0ed9ef462c47953ca1204829163414fca7f83b9d2c2f",
+      "cell": [
+        0,
+        0,
+        887,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        225,
+        32,
+        809,
+        822
+      ],
+      "scale": 0.7151898734177216,
+      "position": [
+        7,
+        92
+      ],
+      "target": {
+        "height": 565,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/childrensday_candyfloss1/04-05.png",
+      "sourceSha256": "35eff5b6fb07707d4f1e0ed9ef462c47953ca1204829163414fca7f83b9d2c2f",
+      "cell": [
+        887,
+        0,
+        1774,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        119,
+        51,
+        668,
+        822
+      ],
+      "scale": 0.7328145265888456,
+      "position": [
+        68,
+        77
+      ],
+      "target": {
+        "height": 565,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/childrensday_candyfloss1/06-07.png",
+      "sourceSha256": "1409a87e520668618280cab6711c7da6ca89367b8980f9ebbb4193baa180b0fa",
+      "cell": [
+        0,
+        0,
+        887,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        214,
+        48,
+        813,
+        835
+      ],
+      "scale": 0.7166454891994918,
+      "position": [
+        -11,
+        81
+      ],
+      "target": {
+        "height": 564,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/childrensday_candyfloss1/06-07.png",
+      "sourceSha256": "1409a87e520668618280cab6711c7da6ca89367b8980f9ebbb4193baa180b0fa",
+      "cell": [
+        887,
+        0,
+        1774,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        95,
+        54,
+        664,
+        834
+      ],
+      "scale": 0.7217948717948718,
+      "position": [
+        79,
+        78
+      ],
+      "target": {
+        "height": 563,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/childrensday_candyfloss1/08-09.png",
+      "sourceSha256": "090dd7b829a29747bfc42de0863351de81127b5f93944e26ec08792436b9379d",
+      "cell": [
+        0,
+        0,
+        887,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        171,
+        49,
+        777,
+        828
+      ],
+      "scale": 0.7252888318356868,
+      "position": [
+        31,
+        80
+      ],
+      "target": {
+        "height": 565,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/childrensday_candyfloss1/08-09.png",
+      "sourceSha256": "090dd7b829a29747bfc42de0863351de81127b5f93944e26ec08792436b9379d",
+      "cell": [
+        887,
+        0,
+        1774,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        129,
+        63,
+        733,
+        838
+      ],
+      "scale": 0.7316129032258064,
+      "position": [
+        64,
+        67
+      ],
+      "target": {
+        "height": 567,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/childrensday_candyfloss1/10-11.png",
+      "sourceSha256": "17fb30dc2754fbfbd4d60f7e8900ad83f87ae627da8dc853cacb6eab81640d71",
+      "cell": [
+        0,
+        0,
+        887,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        213,
+        33,
+        802,
+        818
+      ],
+      "scale": 0.7159235668789808,
+      "position": [
+        -14,
+        94
+      ],
+      "target": {
+        "height": 562,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/childrensday_candyfloss1/10-11.png",
+      "sourceSha256": "17fb30dc2754fbfbd4d60f7e8900ad83f87ae627da8dc853cacb6eab81640d71",
+      "cell": [
+        887,
+        0,
+        1774,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        82,
+        40,
+        637,
+        825
+      ],
+      "scale": 0.7210191082802547,
+      "position": [
+        107,
+        85
+      ],
+      "target": {
+        "height": 566,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/childrensday_candyfloss1/12-13.png",
+      "sourceSha256": "3d3660047848bcb9ddb6d37febc1a6f0bc7c6cb1c09008606826c0700b06b8dd",
+      "cell": [
+        0,
+        0,
+        887,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        178,
+        48,
+        806,
+        833
+      ],
+      "scale": 0.6929936305732484,
+      "position": [
+        -9,
+        103
+      ],
+      "target": {
+        "height": 544,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/childrensday_candyfloss1/12-13.png",
+      "sourceSha256": "3d3660047848bcb9ddb6d37febc1a6f0bc7c6cb1c09008606826c0700b06b8dd",
+      "cell": [
+        887,
+        0,
+        1774,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        101,
+        56,
+        683,
+        832
+      ],
+      "scale": 0.7100515463917526,
+      "position": [
+        112,
+        89
+      ],
+      "target": {
+        "height": 551,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/childrensday_candyfloss1/14-15.png",
+      "sourceSha256": "a12bb495b8ae8dab05fff5c1a8757d9e16b0da6467317546306e1b0da329673d",
+      "cell": [
+        0,
+        0,
+        887,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        238,
+        45,
+        797,
+        831
+      ],
+      "scale": 0.7048346055979644,
+      "position": [
+        18,
+        94
+      ],
+      "target": {
+        "height": 554,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "anchor": "sprites/hd720/frames/childrensday_breathe1_loop/childrensday_breathe1_loop_00.png",
+      "sourceSha256": "abf2e90af0b1b6e2244bfd83397094aaf5c5436eadc5db20bc9037ee43e459d0"
+    }
+  ],
+  "sourcePipeline": "native-pairs-v1",
+  "anchor": "sprites/hd720/frames/childrensday_breathe1_loop/childrensday_breathe1_loop_00.png"
 }

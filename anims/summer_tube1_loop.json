@@ -1,106 +1,6 @@
 {
   "name": "summer_tube1_loop",
   "state": "summer_tube1",
-  "sheet": "sprites/raw/seasonal/summer_tube1.png",
-  "sha256": "53fdc2226dc85f5b02ea994a89c069523dd98dafd6a666a0cc3eb1eebf0489e8",
-  "cellBoxes": [
-    [
-      0,
-      0,
-      314,
-      314
-    ],
-    [
-      314,
-      0,
-      627,
-      314
-    ],
-    [
-      627,
-      0,
-      940,
-      314
-    ],
-    [
-      940,
-      0,
-      1254,
-      314
-    ],
-    [
-      0,
-      314,
-      314,
-      627
-    ],
-    [
-      314,
-      314,
-      627,
-      627
-    ],
-    [
-      627,
-      314,
-      940,
-      627
-    ],
-    [
-      940,
-      314,
-      1254,
-      627
-    ],
-    [
-      0,
-      627,
-      314,
-      938
-    ],
-    [
-      314,
-      627,
-      627,
-      940
-    ],
-    [
-      627,
-      627,
-      940,
-      940
-    ],
-    [
-      940,
-      627,
-      1254,
-      940
-    ],
-    [
-      0,
-      938,
-      314,
-      1254
-    ],
-    [
-      314,
-      940,
-      627,
-      1254
-    ],
-    [
-      627,
-      940,
-      940,
-      1254
-    ],
-    [
-      940,
-      940,
-      1254,
-      1254
-    ]
-  ],
   "fps": 12,
   "holds": {
     "0": 2,
@@ -119,5 +19,437 @@
     "13": 2,
     "14": 2,
     "15": 2
-  }
+  },
+  "nativeSources": [
+    {
+      "anchor": "sprites/hd720/frames/summer_breathe1_loop/summer_breathe1_loop_00.png",
+      "sourceSha256": "e50b39adcc8200f5495cd45f252f3ba537f0c091ca863033272e08f47c3d2c1e"
+    },
+    {
+      "source": "sprites/raw/native/seasonal/summer_tube1/00-01.png",
+      "sourceSha256": "fc3cbe9fbf0a34b7d1521e5fb04930f16bfd0009e59442876d4fad9df6e90f1d",
+      "cell": [
+        887,
+        0,
+        1774,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        107,
+        91,
+        710,
+        850
+      ],
+      "scale": 0.7206851119894598,
+      "position": [
+        59,
+        67
+      ],
+      "target": {
+        "height": 547,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/summer_tube1/02-03.png",
+      "sourceSha256": "498a59ffc88c895fc83d9e1dd76080360dda08bd94bfec3fa1655a428c1c46cd",
+      "cell": [
+        0,
+        0,
+        887,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        129,
+        87,
+        819,
+        817
+      ],
+      "scale": 0.6410958904109589,
+      "position": [
+        -56,
+        156
+      ],
+      "target": {
+        "height": 468,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/summer_tube1/02-03.png",
+      "sourceSha256": "498a59ffc88c895fc83d9e1dd76080360dda08bd94bfec3fa1655a428c1c46cd",
+      "cell": [
+        887,
+        0,
+        1774,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        99,
+        87,
+        765,
+        821
+      ],
+      "scale": 0.6880108991825613,
+      "position": [
+        50,
+        115
+      ],
+      "target": {
+        "height": 505,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/summer_tube1/04-05.png",
+      "sourceSha256": "84ca06f05da9c05664b215a0693de5162c4f3c56a8defbe09affe2a04a97b048",
+      "cell": [
+        0,
+        0,
+        887,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        92,
+        47,
+        795,
+        830
+      ],
+      "scale": 0.6934865900383141,
+      "position": [
+        107,
+        105
+      ],
+      "target": {
+        "height": 543,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/summer_tube1/04-05.png",
+      "sourceSha256": "84ca06f05da9c05664b215a0693de5162c4f3c56a8defbe09affe2a04a97b048",
+      "cell": [
+        887,
+        0,
+        1774,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        93,
+        48,
+        803,
+        828
+      ],
+      "scale": 0.7128205128205128,
+      "position": [
+        100,
+        90
+      ],
+      "target": {
+        "height": 556,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/summer_tube1/06-07.png",
+      "sourceSha256": "a3c3d09c7a4d5202d3b69079861354d7d664f2b23207833dbb032f2eee56e64c",
+      "cell": [
+        0,
+        0,
+        887,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        215,
+        53,
+        847,
+        833
+      ],
+      "scale": 0.7384615384615385,
+      "position": [
+        13,
+        65
+      ],
+      "target": {
+        "height": 576,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/summer_tube1/06-07.png",
+      "sourceSha256": "a3c3d09c7a4d5202d3b69079861354d7d664f2b23207833dbb032f2eee56e64c",
+      "cell": [
+        887,
+        0,
+        1774,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        111,
+        38,
+        645,
+        832
+      ],
+      "scale": 0.7267002518891688,
+      "position": [
+        103,
+        75
+      ],
+      "target": {
+        "height": 577,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/summer_tube1/08-09.png",
+      "sourceSha256": "432269eda50f821c7dd73672cc6be2d38bb5c7d9ad042d5f1ee171c4e2428f4c",
+      "cell": [
+        0,
+        0,
+        887,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        195,
+        60,
+        779,
+        848
+      ],
+      "scale": 0.7170050761421319,
+      "position": [
+        26,
+        72
+      ],
+      "target": {
+        "height": 565,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/summer_tube1/08-09.png",
+      "sourceSha256": "432269eda50f821c7dd73672cc6be2d38bb5c7d9ad042d5f1ee171c4e2428f4c",
+      "cell": [
+        887,
+        0,
+        1774,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        62,
+        92,
+        764,
+        855
+      ],
+      "scale": 0.72870249017038,
+      "position": [
+        4,
+        57
+      ],
+      "target": {
+        "height": 556,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/summer_tube1/10-11.png",
+      "sourceSha256": "66418efafd1306d52191c6a3353771f136856b52041a0bab76e756d555257922",
+      "cell": [
+        0,
+        0,
+        887,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        156,
+        46,
+        805,
+        859
+      ],
+      "scale": 0.6924969249692496,
+      "position": [
+        41,
+        85
+      ],
+      "target": {
+        "height": 563,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/summer_tube1/10-11.png",
+      "sourceSha256": "66418efafd1306d52191c6a3353771f136856b52041a0bab76e756d555257922",
+      "cell": [
+        887,
+        0,
+        1774,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        71,
+        47,
+        693,
+        859
+      ],
+      "scale": 0.6798029556650246,
+      "position": [
+        105,
+        96
+      ],
+      "target": {
+        "height": 552,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/summer_tube1/12-13.png",
+      "sourceSha256": "b354b019ed9575420f22c3e1fcf136f9a530b61e91baf8e59682d2b03ee38a06",
+      "cell": [
+        0,
+        0,
+        887,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        184,
+        42,
+        735,
+        836
+      ],
+      "scale": 0.7191435768261965,
+      "position": [
+        18,
+        79
+      ],
+      "target": {
+        "height": 571,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/summer_tube1/12-13.png",
+      "sourceSha256": "b354b019ed9575420f22c3e1fcf136f9a530b61e91baf8e59682d2b03ee38a06",
+      "cell": [
+        887,
+        0,
+        1774,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        73,
+        214,
+        705,
+        835
+      ],
+      "scale": 0.7359098228663447,
+      "position": [
+        -21,
+        65
+      ],
+      "target": {
+        "height": 457,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/summer_tube1/14-15.png",
+      "sourceSha256": "891ffa9f99dded2f5f8c504d0b27fd173ac61ad579801e8872d9d6aaf2dffa19",
+      "cell": [
+        0,
+        0,
+        887,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        214,
+        200,
+        824,
+        848
+      ],
+      "scale": 0.7191358024691358,
+      "position": [
+        -69,
+        70
+      ],
+      "target": {
+        "height": 466,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "anchor": "sprites/hd720/frames/summer_breathe1_loop/summer_breathe1_loop_00.png",
+      "sourceSha256": "e50b39adcc8200f5495cd45f252f3ba537f0c091ca863033272e08f47c3d2c1e"
+    }
+  ],
+  "sourcePipeline": "native-pairs-v1",
+  "anchor": "sprites/hd720/frames/summer_breathe1_loop/summer_breathe1_loop_00.png"
 }

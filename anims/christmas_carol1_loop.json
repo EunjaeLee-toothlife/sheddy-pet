@@ -1,106 +1,6 @@
 {
   "name": "christmas_carol1_loop",
   "state": "christmas_carol1",
-  "sheet": "sprites/raw/seasonal/christmas_carol1.png",
-  "sha256": "3f06ad4402f398dcc06f69e80b6f149956ae8a4a0ef77481216251ee23045e23",
-  "cellBoxes": [
-    [
-      0,
-      0,
-      314,
-      314
-    ],
-    [
-      314,
-      0,
-      627,
-      314
-    ],
-    [
-      627,
-      0,
-      940,
-      314
-    ],
-    [
-      940,
-      0,
-      1254,
-      314
-    ],
-    [
-      0,
-      314,
-      314,
-      627
-    ],
-    [
-      314,
-      314,
-      627,
-      627
-    ],
-    [
-      627,
-      314,
-      940,
-      627
-    ],
-    [
-      940,
-      314,
-      1254,
-      627
-    ],
-    [
-      0,
-      627,
-      314,
-      935
-    ],
-    [
-      314,
-      627,
-      627,
-      933
-    ],
-    [
-      627,
-      627,
-      940,
-      933
-    ],
-    [
-      940,
-      627,
-      1254,
-      933
-    ],
-    [
-      0,
-      935,
-      314,
-      1254
-    ],
-    [
-      314,
-      933,
-      627,
-      1254
-    ],
-    [
-      627,
-      933,
-      940,
-      1254
-    ],
-    [
-      940,
-      933,
-      1254,
-      1254
-    ]
-  ],
   "fps": 12,
   "holds": {
     "0": 2,
@@ -119,5 +19,437 @@
     "13": 2,
     "14": 2,
     "15": 2
-  }
+  },
+  "nativeSources": [
+    {
+      "anchor": "sprites/hd720/frames/christmas_breathe1_loop/christmas_breathe1_loop_00.png",
+      "sourceSha256": "b4accc101d1611b5ae81670d02f5e58a90a578ee4c0898841a7beded206bfe03"
+    },
+    {
+      "source": "sprites/raw/native/seasonal/christmas_carol1/00-01.png",
+      "sourceSha256": "854192a8047ad992e2b2b81d6157306c2a12234f5c3451e973ff08c0825d5ee2",
+      "cell": [
+        887,
+        0,
+        1774,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        158,
+        54,
+        669,
+        851
+      ],
+      "scale": 0.698870765370138,
+      "position": [
+        65,
+        85
+      ],
+      "target": {
+        "height": 557,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/christmas_carol1/02-03.png",
+      "sourceSha256": "f3d8f40e4a78cd8011dfc1f81acf4cb60984cf12ece9d19964be01bb703ae8cb",
+      "cell": [
+        0,
+        0,
+        887,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        199,
+        22,
+        766,
+        839
+      ],
+      "scale": 0.6756425948592412,
+      "position": [
+        31,
+        113
+      ],
+      "target": {
+        "height": 552,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/christmas_carol1/02-03.png",
+      "sourceSha256": "f3d8f40e4a78cd8011dfc1f81acf4cb60984cf12ece9d19964be01bb703ae8cb",
+      "cell": [
+        887,
+        0,
+        1774,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        155,
+        47,
+        684,
+        844
+      ],
+      "scale": 0.6913425345043914,
+      "position": [
+        55,
+        97
+      ],
+      "target": {
+        "height": 551,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/christmas_carol1/04-05.png",
+      "sourceSha256": "d780a5042a710c89eefac3ddb9d22c9d7407e773d08ea749e6a336cdee91273a",
+      "cell": [
+        0,
+        0,
+        887,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        269,
+        26,
+        803,
+        846
+      ],
+      "scale": 0.6829268292682927,
+      "position": [
+        -31,
+        102
+      ],
+      "target": {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/christmas_carol1/04-05.png",
+      "sourceSha256": "d780a5042a710c89eefac3ddb9d22c9d7407e773d08ea749e6a336cdee91273a",
+      "cell": [
+        887,
+        0,
+        1774,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        132,
+        53,
+        646,
+        846
+      ],
+      "scale": 0.699873896595208,
+      "position": [
+        79,
+        87
+      ],
+      "target": {
+        "height": 555,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/christmas_carol1/06-07.png",
+      "sourceSha256": "02068741bf27634a7199008fa0e3d47f19668cd099072216ec01a7d2defd37bf",
+      "cell": [
+        0,
+        0,
+        887,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        242,
+        28,
+        783,
+        842
+      ],
+      "scale": 0.6670761670761671,
+      "position": [
+        -2,
+        118
+      ],
+      "target": {
+        "height": 543,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/christmas_carol1/06-07.png",
+      "sourceSha256": "02068741bf27634a7199008fa0e3d47f19668cd099072216ec01a7d2defd37bf",
+      "cell": [
+        887,
+        0,
+        1774,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        99,
+        28,
+        671,
+        841
+      ],
+      "scale": 0.6863468634686347,
+      "position": [
+        93,
+        103
+      ],
+      "target": {
+        "height": 558,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/christmas_carol1/08-09.png",
+      "sourceSha256": "667bd6b94cd7763ee96a3de630a83c635781666cc732eeb7391553910c0e13c5",
+      "cell": [
+        0,
+        0,
+        887,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        194,
+        36,
+        817,
+        851
+      ],
+      "scale": 0.6736196319018405,
+      "position": [
+        32,
+        106
+      ],
+      "target": {
+        "height": 549,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/christmas_carol1/08-09.png",
+      "sourceSha256": "667bd6b94cd7763ee96a3de630a83c635781666cc732eeb7391553910c0e13c5",
+      "cell": [
+        887,
+        0,
+        1774,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        102,
+        47,
+        651,
+        851
+      ],
+      "scale": 0.677860696517413,
+      "position": [
+        114,
+        103
+      ],
+      "target": {
+        "height": 545,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/christmas_carol1/10-11.png",
+      "sourceSha256": "b02683aedecda4531c4a5e536c338f1c0613c83998f1932426c78d8eb9b55611",
+      "cell": [
+        0,
+        0,
+        887,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        202,
+        43,
+        754,
+        832
+      ],
+      "scale": 0.6907477820025348,
+      "position": [
+        45,
+        105
+      ],
+      "target": {
+        "height": 545,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/christmas_carol1/10-11.png",
+      "sourceSha256": "b02683aedecda4531c4a5e536c338f1c0613c83998f1932426c78d8eb9b55611",
+      "cell": [
+        887,
+        0,
+        1774,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        121,
+        41,
+        663,
+        832
+      ],
+      "scale": 0.7016434892541087,
+      "position": [
+        84,
+        96
+      ],
+      "target": {
+        "height": 555,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/christmas_carol1/12-13.png",
+      "sourceSha256": "5d9aea713ce385a4d9c06950b35d5fba8c7cdf5cfcca0ebcc3aab9ceb3cde3d5",
+      "cell": [
+        0,
+        0,
+        887,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        230,
+        26,
+        769,
+        852
+      ],
+      "scale": 0.6719128329297821,
+      "position": [
+        1,
+        108
+      ],
+      "target": {
+        "height": 555,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/christmas_carol1/12-13.png",
+      "sourceSha256": "5d9aea713ce385a4d9c06950b35d5fba8c7cdf5cfcca0ebcc3aab9ceb3cde3d5",
+      "cell": [
+        887,
+        0,
+        1774,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        145,
+        32,
+        686,
+        854
+      ],
+      "scale": 0.6763990267639902,
+      "position": [
+        82,
+        103
+      ],
+      "target": {
+        "height": 556,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/christmas_carol1/14-15.png",
+      "sourceSha256": "5735a5da0dc4f73564b2cbe614112ea4bc48d45ebae0f305f853f790e90c4c09",
+      "cell": [
+        0,
+        0,
+        887,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        198,
+        43,
+        741,
+        843
+      ],
+      "scale": 0.69625,
+      "position": [
+        43,
+        93
+      ],
+      "target": {
+        "height": 557,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "anchor": "sprites/hd720/frames/christmas_breathe1_loop/christmas_breathe1_loop_00.png",
+      "sourceSha256": "b4accc101d1611b5ae81670d02f5e58a90a578ee4c0898841a7beded206bfe03"
+    }
+  ],
+  "sourcePipeline": "native-pairs-v1",
+  "anchor": "sprites/hd720/frames/christmas_breathe1_loop/christmas_breathe1_loop_00.png"
 }

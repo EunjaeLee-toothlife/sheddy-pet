@@ -1,106 +1,6 @@
 {
   "name": "seollal_pouch1_loop",
   "state": "seollal_pouch1",
-  "sheet": "sprites/raw/seasonal/seollal_pouch1.png",
-  "sha256": "b41a60f68f10b5985f5eea335fb3068d1ce72569a0a32becfd46028ab7602d72",
-  "cellBoxes": [
-    [
-      0,
-      0,
-      314,
-      314
-    ],
-    [
-      314,
-      0,
-      627,
-      314
-    ],
-    [
-      627,
-      0,
-      940,
-      314
-    ],
-    [
-      940,
-      0,
-      1254,
-      314
-    ],
-    [
-      0,
-      314,
-      314,
-      627
-    ],
-    [
-      314,
-      314,
-      627,
-      627
-    ],
-    [
-      627,
-      314,
-      940,
-      627
-    ],
-    [
-      940,
-      314,
-      1254,
-      627
-    ],
-    [
-      0,
-      627,
-      314,
-      940
-    ],
-    [
-      314,
-      627,
-      627,
-      940
-    ],
-    [
-      627,
-      627,
-      940,
-      940
-    ],
-    [
-      940,
-      627,
-      1254,
-      940
-    ],
-    [
-      0,
-      940,
-      314,
-      1254
-    ],
-    [
-      314,
-      940,
-      627,
-      1254
-    ],
-    [
-      627,
-      940,
-      940,
-      1254
-    ],
-    [
-      940,
-      940,
-      1254,
-      1254
-    ]
-  ],
   "fps": 12,
   "holds": {
     "0": 2,
@@ -119,5 +19,437 @@
     "13": 2,
     "14": 2,
     "15": 2
-  }
+  },
+  "nativeSources": [
+    {
+      "anchor": "sprites/hd720/frames/seollal_breathe1_loop/seollal_breathe1_loop_00.png",
+      "sourceSha256": "ad041795dd715bbd912cb74682cb0c4fad813fd5952eddf743bd1e350e4fb6ab"
+    },
+    {
+      "source": "sprites/raw/native/seasonal/seollal_pouch1/00-01.png",
+      "sourceSha256": "acd3fa11ca6c0c898da1e9e3c6fab12cf57bdc1968c1086f979b88a2fbac40e5",
+      "cell": [
+        887,
+        0,
+        1774,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        104,
+        49,
+        662,
+        831
+      ],
+      "scale": 0.7148337595907929,
+      "position": [
+        63,
+        86
+      ],
+      "target": {
+        "height": 559,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/seollal_pouch1/02-03.png",
+      "sourceSha256": "fc0b7d5e3091d632665a8bcd7e7e0bb9bd927e28427465a0aa9a6a67b4c1e451",
+      "cell": [
+        0,
+        0,
+        887,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        207,
+        34,
+        767,
+        828
+      ],
+      "scale": 0.707808564231738,
+      "position": [
+        14,
+        94
+      ],
+      "target": {
+        "height": 562,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/seollal_pouch1/02-03.png",
+      "sourceSha256": "fc0b7d5e3091d632665a8bcd7e7e0bb9bd927e28427465a0aa9a6a67b4c1e451",
+      "cell": [
+        887,
+        0,
+        1774,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        102,
+        39,
+        704,
+        833
+      ],
+      "scale": 0.7002518891687658,
+      "position": [
+        86,
+        97
+      ],
+      "target": {
+        "height": 556,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/seollal_pouch1/04-05.png",
+      "sourceSha256": "45d60813d45055b55b857b6289b7b5cfca6db33b872d0c0df139b8b98e01b91a",
+      "cell": [
+        0,
+        0,
+        887,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        179,
+        31,
+        732,
+        844
+      ],
+      "scale": 0.7023370233702337,
+      "position": [
+        30,
+        87
+      ],
+      "target": {
+        "height": 571,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/seollal_pouch1/04-05.png",
+      "sourceSha256": "45d60813d45055b55b857b6289b7b5cfca6db33b872d0c0df139b8b98e01b91a",
+      "cell": [
+        887,
+        0,
+        1774,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        130,
+        31,
+        680,
+        844
+      ],
+      "scale": 0.7035670356703567,
+      "position": [
+        61,
+        86
+      ],
+      "target": {
+        "height": 572,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/seollal_pouch1/06-07.png",
+      "sourceSha256": "9e5cbcef337812ebd1512f2976f62547878e56e499ef92d61d9b565373aa1c20",
+      "cell": [
+        0,
+        0,
+        887,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        224,
+        68,
+        778,
+        828
+      ],
+      "scale": 0.75,
+      "position": [
+        -19,
+        59
+      ],
+      "target": {
+        "height": 570,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/seollal_pouch1/06-07.png",
+      "sourceSha256": "9e5cbcef337812ebd1512f2976f62547878e56e499ef92d61d9b565373aa1c20",
+      "cell": [
+        887,
+        0,
+        1774,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        86,
+        85,
+        637,
+        829
+      ],
+      "scale": 0.7701612903225806,
+      "position": [
+        76,
+        42
+      ],
+      "target": {
+        "height": 573,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/seollal_pouch1/08-09.png",
+      "sourceSha256": "ad55bff055a5101ad28b2e16c6477c2ed5ffc0d1b549116bcb7fec2a9eeb91a1",
+      "cell": [
+        0,
+        0,
+        887,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        181,
+        26,
+        771,
+        845
+      ],
+      "scale": 0.6947496947496947,
+      "position": [
+        27,
+        93
+      ],
+      "target": {
+        "height": 569,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/seollal_pouch1/08-09.png",
+      "sourceSha256": "ad55bff055a5101ad28b2e16c6477c2ed5ffc0d1b549116bcb7fec2a9eeb91a1",
+      "cell": [
+        887,
+        0,
+        1774,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        87,
+        25,
+        697,
+        845
+      ],
+      "scale": 0.698780487804878,
+      "position": [
+        86,
+        90
+      ],
+      "target": {
+        "height": 573,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/seollal_pouch1/10-11.png",
+      "sourceSha256": "3c64cd3763f298b614c63dd736a59fc3c4f5ca570abadb217396f073dc909726",
+      "cell": [
+        0,
+        0,
+        887,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        181,
+        34,
+        781,
+        843
+      ],
+      "scale": 0.7021013597033374,
+      "position": [
+        20,
+        88
+      ],
+      "target": {
+        "height": 568,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/seollal_pouch1/10-11.png",
+      "sourceSha256": "3c64cd3763f298b614c63dd736a59fc3c4f5ca570abadb217396f073dc909726",
+      "cell": [
+        887,
+        0,
+        1774,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        106,
+        34,
+        683,
+        843
+      ],
+      "scale": 0.7033374536464772,
+      "position": [
+        79,
+        87
+      ],
+      "target": {
+        "height": 569,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/seollal_pouch1/12-13.png",
+      "sourceSha256": "87de6141da3f993a4e1df6955dd27a0a7f158e696b423c33300cf02e0b86af92",
+      "cell": [
+        0,
+        0,
+        887,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        196,
+        34,
+        753,
+        835
+      ],
+      "scale": 0.7116104868913857,
+      "position": [
+        6,
+        86
+      ],
+      "target": {
+        "height": 570,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/seollal_pouch1/12-13.png",
+      "sourceSha256": "87de6141da3f993a4e1df6955dd27a0a7f158e696b423c33300cf02e0b86af92",
+      "cell": [
+        887,
+        0,
+        1774,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        104,
+        38,
+        685,
+        835
+      ],
+      "scale": 0.7189460476787954,
+      "position": [
+        65,
+        79
+      ],
+      "target": {
+        "height": 573,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/seollal_pouch1/14-15.png",
+      "sourceSha256": "e3dc366ab631db5e79b01b4fcc16fdc0cb8908ba36b04a47810ec1612bd32b12",
+      "cell": [
+        0,
+        0,
+        887,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        243,
+        69,
+        758,
+        827
+      ],
+      "scale": 0.7493403693931399,
+      "position": [
+        -23,
+        60
+      ],
+      "target": {
+        "height": 568,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "anchor": "sprites/hd720/frames/seollal_breathe1_loop/seollal_breathe1_loop_00.png",
+      "sourceSha256": "ad041795dd715bbd912cb74682cb0c4fad813fd5952eddf743bd1e350e4fb6ab"
+    }
+  ],
+  "sourcePipeline": "native-pairs-v1",
+  "anchor": "sprites/hd720/frames/seollal_breathe1_loop/seollal_breathe1_loop_00.png"
 }

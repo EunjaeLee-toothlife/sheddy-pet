@@ -1,106 +1,6 @@
 {
   "name": "summer_sandcastle1_loop",
   "state": "summer_sandcastle1",
-  "sheet": "sprites/raw/seasonal/summer_sandcastle1.png",
-  "sha256": "708ff707aa59a8b310c414bcf28bb0d3388358e9db3e54e38aeb8448b79731ff",
-  "cellBoxes": [
-    [
-      0,
-      0,
-      314,
-      336
-    ],
-    [
-      314,
-      0,
-      627,
-      321
-    ],
-    [
-      627,
-      0,
-      940,
-      323
-    ],
-    [
-      940,
-      0,
-      1254,
-      324
-    ],
-    [
-      0,
-      336,
-      314,
-      627
-    ],
-    [
-      314,
-      321,
-      627,
-      632
-    ],
-    [
-      627,
-      323,
-      940,
-      628
-    ],
-    [
-      940,
-      324,
-      1254,
-      627
-    ],
-    [
-      0,
-      627,
-      314,
-      940
-    ],
-    [
-      314,
-      632,
-      627,
-      940
-    ],
-    [
-      627,
-      628,
-      940,
-      935
-    ],
-    [
-      940,
-      627,
-      1254,
-      932
-    ],
-    [
-      0,
-      940,
-      314,
-      1254
-    ],
-    [
-      314,
-      940,
-      627,
-      1254
-    ],
-    [
-      627,
-      935,
-      940,
-      1254
-    ],
-    [
-      940,
-      932,
-      1254,
-      1254
-    ]
-  ],
   "fps": 12,
   "holds": {
     "0": 2,
@@ -119,5 +19,451 @@
     "13": 2,
     "14": 2,
     "15": 2
-  }
+  },
+  "nativeSources": [
+    {
+      "anchor": "sprites/hd720/frames/summer_breathe1_loop/summer_breathe1_loop_00.png",
+      "sourceSha256": "e50b39adcc8200f5495cd45f252f3ba537f0c091ca863033272e08f47c3d2c1e"
+    },
+    {
+      "source": "sprites/raw/native/seasonal/summer_sandcastle1/00-01.png",
+      "sourceSha256": "2540cef0f417dc536cc415d18e5b759178e22fd32456a2c58d9060f20bd77b48",
+      "cell": [
+        887,
+        0,
+        1774,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        109,
+        200,
+        737,
+        854
+      ],
+      "scale": 0.7155963302752294,
+      "position": [
+        58,
+        69
+      ],
+      "target": {
+        "height": 468,
+        "x": 360,
+        "bottom": 680,
+        "alignment": "bounds"
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/summer_sandcastle1/02-03.png",
+      "sourceSha256": "91526aa2e7db079ad5bbbe4752b75b52863b2431b459b506fa8493880103bbcd",
+      "cell": [
+        0,
+        0,
+        887,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        123,
+        54,
+        861,
+        833
+      ],
+      "scale": 0.6097560975609756,
+      "position": [
+        60,
+        172
+      ],
+      "target": {
+        "height": 475,
+        "x": 360,
+        "bottom": 680,
+        "alignment": "bounds"
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/summer_sandcastle1/02-03.png",
+      "sourceSha256": "91526aa2e7db079ad5bbbe4752b75b52863b2431b459b506fa8493880103bbcd",
+      "cell": [
+        887,
+        0,
+        1774,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        89,
+        54,
+        815,
+        829
+      ],
+      "scale": 0.6141935483870967,
+      "position": [
+        82,
+        171
+      ],
+      "target": {
+        "height": 476,
+        "x": 360,
+        "bottom": 680,
+        "alignment": "bounds"
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/summer_sandcastle1/04-05.png",
+      "sourceSha256": "ab8c9a63570a2d881986e832e8bfbc2d39650a79cd36c9e64b710adf9d26e11e",
+      "cell": [
+        0,
+        0,
+        887,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        156,
+        155,
+        807,
+        811
+      ],
+      "scale": 0.7057926829268293,
+      "position": [
+        20,
+        107
+      ],
+      "target": {
+        "height": 463,
+        "x": 360,
+        "bottom": 680,
+        "alignment": "bounds"
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/summer_sandcastle1/04-05.png",
+      "sourceSha256": "ab8c9a63570a2d881986e832e8bfbc2d39650a79cd36c9e64b710adf9d26e11e",
+      "cell": [
+        887,
+        0,
+        1774,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        98,
+        124,
+        733,
+        826
+      ],
+      "scale": 0.7037037037037037,
+      "position": [
+        68,
+        99
+      ],
+      "target": {
+        "height": 494,
+        "x": 360,
+        "bottom": 680,
+        "alignment": "bounds"
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/summer_sandcastle1/06-07.png",
+      "sourceSha256": "35dd9a2fc9e87ea2647095ac7a2515c6afacc98108dd17137e40b69cf49b7fa9",
+      "cell": [
+        0,
+        0,
+        887,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        104,
+        97,
+        781,
+        816
+      ],
+      "scale": 0.6787204450625869,
+      "position": [
+        60,
+        126
+      ],
+      "target": {
+        "height": 488,
+        "x": 360,
+        "bottom": 680,
+        "alignment": "bounds"
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/summer_sandcastle1/06-07.png",
+      "sourceSha256": "35dd9a2fc9e87ea2647095ac7a2515c6afacc98108dd17137e40b69cf49b7fa9",
+      "cell": [
+        887,
+        0,
+        1774,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        109,
+        100,
+        838,
+        812
+      ],
+      "scale": 0.6671348314606742,
+      "position": [
+        44,
+        138
+      ],
+      "target": {
+        "height": 475,
+        "x": 360,
+        "bottom": 680,
+        "alignment": "bounds"
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/summer_sandcastle1/08-09.png",
+      "sourceSha256": "e69d59072dcb23be59896bf6f22135171c45f629e8c454117d2c8cd6141f9035",
+      "cell": [
+        0,
+        0,
+        887,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        115,
+        133,
+        881,
+        828
+      ],
+      "scale": 0.6330935251798561,
+      "position": [
+        44,
+        156
+      ],
+      "target": {
+        "height": 440,
+        "x": 360,
+        "bottom": 680,
+        "alignment": "bounds"
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/summer_sandcastle1/08-09.png",
+      "sourceSha256": "e69d59072dcb23be59896bf6f22135171c45f629e8c454117d2c8cd6141f9035",
+      "cell": [
+        887,
+        0,
+        1774,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        89,
+        135,
+        801,
+        833
+      ],
+      "scale": 0.6489971346704871,
+      "position": [
+        71,
+        139
+      ],
+      "target": {
+        "height": 453,
+        "x": 360,
+        "bottom": 680,
+        "alignment": "bounds"
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/summer_sandcastle1/10-11.png",
+      "sourceSha256": "e91ca2d14cdcb023996cb2edc946bae08a1c1977b0db62fe43ac1804213d9d6b",
+      "cell": [
+        0,
+        0,
+        887,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        139,
+        151,
+        826,
+        827
+      ],
+      "scale": 0.6804733727810651,
+      "position": [
+        32,
+        117
+      ],
+      "target": {
+        "height": 460,
+        "x": 360,
+        "bottom": 680,
+        "alignment": "bounds"
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/summer_sandcastle1/10-11.png",
+      "sourceSha256": "e91ca2d14cdcb023996cb2edc946bae08a1c1977b0db62fe43ac1804213d9d6b",
+      "cell": [
+        887,
+        0,
+        1774,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        91,
+        88,
+        803,
+        838
+      ],
+      "scale": 0.6613333333333333,
+      "position": [
+        64,
+        125
+      ],
+      "target": {
+        "height": 496,
+        "x": 360,
+        "bottom": 680,
+        "alignment": "bounds"
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/summer_sandcastle1/12-13.png",
+      "sourceSha256": "8ae825609670e237377984932eb4f2dd22b04b7667f1743eabb9ef647cb12052",
+      "cell": [
+        0,
+        0,
+        887,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        115,
+        109,
+        883,
+        823
+      ],
+      "scale": 0.6624649859943977,
+      "position": [
+        30,
+        134
+      ],
+      "target": {
+        "height": 473,
+        "x": 360,
+        "bottom": 680,
+        "alignment": "bounds"
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/summer_sandcastle1/12-13.png",
+      "sourceSha256": "8ae825609670e237377984932eb4f2dd22b04b7667f1743eabb9ef647cb12052",
+      "cell": [
+        887,
+        0,
+        1774,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        184,
+        193,
+        798,
+        800
+      ],
+      "scale": 0.7347611202635914,
+      "position": [
+        0,
+        92
+      ],
+      "target": {
+        "height": 446,
+        "x": 360,
+        "bottom": 680,
+        "alignment": "bounds"
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/summer_sandcastle1/14-15.png",
+      "sourceSha256": "b62d70e26e31bd6a53b2e6c4e44f41829fed85ce9cd3279e18ab183676e6c316",
+      "cell": [
+        0,
+        0,
+        887,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        133,
+        45,
+        785,
+        860
+      ],
+      "scale": 0.6012269938650306,
+      "position": [
+        84,
+        163
+      ],
+      "target": {
+        "height": 490,
+        "x": 360,
+        "bottom": 680,
+        "alignment": "bounds"
+      }
+    },
+    {
+      "anchor": "sprites/hd720/frames/summer_breathe1_loop/summer_breathe1_loop_00.png",
+      "sourceSha256": "e50b39adcc8200f5495cd45f252f3ba537f0c091ca863033272e08f47c3d2c1e"
+    }
+  ],
+  "sourcePipeline": "native-pairs-v1",
+  "anchor": "sprites/hd720/frames/summer_breathe1_loop/summer_breathe1_loop_00.png"
 }

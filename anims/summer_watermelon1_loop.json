@@ -1,106 +1,6 @@
 {
   "name": "summer_watermelon1_loop",
   "state": "summer_watermelon1",
-  "sheet": "sprites/raw/seasonal/summer_watermelon1.png",
-  "sha256": "66ac89769a2a02e95b9249724fb37e540c947c556aca9e1df249fbb23c227967",
-  "cellBoxes": [
-    [
-      0,
-      0,
-      314,
-      314
-    ],
-    [
-      314,
-      0,
-      627,
-      314
-    ],
-    [
-      627,
-      0,
-      940,
-      314
-    ],
-    [
-      940,
-      0,
-      1254,
-      314
-    ],
-    [
-      0,
-      314,
-      314,
-      627
-    ],
-    [
-      314,
-      314,
-      627,
-      627
-    ],
-    [
-      627,
-      314,
-      940,
-      627
-    ],
-    [
-      940,
-      314,
-      1254,
-      627
-    ],
-    [
-      0,
-      627,
-      314,
-      940
-    ],
-    [
-      314,
-      627,
-      627,
-      940
-    ],
-    [
-      627,
-      627,
-      940,
-      940
-    ],
-    [
-      940,
-      627,
-      1254,
-      940
-    ],
-    [
-      0,
-      940,
-      314,
-      1254
-    ],
-    [
-      314,
-      940,
-      627,
-      1254
-    ],
-    [
-      627,
-      940,
-      940,
-      1254
-    ],
-    [
-      940,
-      940,
-      1254,
-      1254
-    ]
-  ],
   "fps": 12,
   "holds": {
     "0": 2,
@@ -119,5 +19,437 @@
     "13": 2,
     "14": 2,
     "15": 2
-  }
+  },
+  "nativeSources": [
+    {
+      "anchor": "sprites/hd720/frames/summer_breathe1_loop/summer_breathe1_loop_00.png",
+      "sourceSha256": "e50b39adcc8200f5495cd45f252f3ba537f0c091ca863033272e08f47c3d2c1e"
+    },
+    {
+      "source": "sprites/raw/native/seasonal/summer_watermelon1/00-01.png",
+      "sourceSha256": "cdf5c04b027673efc4eac76c49e95e1c0cd17e1fe103f3efd8441e34c398916f",
+      "cell": [
+        887,
+        0,
+        1774,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        150,
+        167,
+        760,
+        864
+      ],
+      "scale": 0.7417503586800573,
+      "position": [
+        46,
+        39
+      ],
+      "target": {
+        "height": 517,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/summer_watermelon1/02-03.png",
+      "sourceSha256": "3e5cadc2db9a63871a225774ef82ecfc765629689c7646560c798e724356c495",
+      "cell": [
+        0,
+        0,
+        887,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        185,
+        52,
+        768,
+        831
+      ],
+      "scale": 0.7163029525032092,
+      "position": [
+        34,
+        85
+      ],
+      "target": {
+        "height": 558,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/summer_watermelon1/02-03.png",
+      "sourceSha256": "3e5cadc2db9a63871a225774ef82ecfc765629689c7646560c798e724356c495",
+      "cell": [
+        887,
+        0,
+        1774,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        121,
+        54,
+        679,
+        831
+      ],
+      "scale": 0.722007722007722,
+      "position": [
+        25,
+        80
+      ],
+      "target": {
+        "height": 561,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/summer_watermelon1/04-05.png",
+      "sourceSha256": "60d1e4f97404ac919545e443c8d0520365baf6d867e3894a6b88b0f96f6df360",
+      "cell": [
+        0,
+        0,
+        887,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        197,
+        57,
+        809,
+        841
+      ],
+      "scale": 0.7181122448979592,
+      "position": [
+        -1,
+        76
+      ],
+      "target": {
+        "height": 563,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/summer_watermelon1/04-05.png",
+      "sourceSha256": "60d1e4f97404ac919545e443c8d0520365baf6d867e3894a6b88b0f96f6df360",
+      "cell": [
+        887,
+        0,
+        1774,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        88,
+        55,
+        708,
+        841
+      ],
+      "scale": 0.7162849872773537,
+      "position": [
+        54,
+        78
+      ],
+      "target": {
+        "height": 563,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/summer_watermelon1/06-07.png",
+      "sourceSha256": "8f74acca048b649859e3ff2e5f965a86f7fff1965298c0b013293e7cd9a6c812",
+      "cell": [
+        0,
+        0,
+        887,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        173,
+        44,
+        780,
+        828
+      ],
+      "scale": 0.7257653061224489,
+      "position": [
+        -3,
+        79
+      ],
+      "target": {
+        "height": 569,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/summer_watermelon1/06-07.png",
+      "sourceSha256": "8f74acca048b649859e3ff2e5f965a86f7fff1965298c0b013293e7cd9a6c812",
+      "cell": [
+        887,
+        0,
+        1774,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        130,
+        63,
+        733,
+        830
+      ],
+      "scale": 0.7327249022164276,
+      "position": [
+        53,
+        72
+      ],
+      "target": {
+        "height": 562,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/summer_watermelon1/08-09.png",
+      "sourceSha256": "5b20ed556aa7762f01224c101c6615e2ae7c2500b814cc2460af7ddb03505f16",
+      "cell": [
+        0,
+        0,
+        887,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        186,
+        43,
+        815,
+        845
+      ],
+      "scale": 0.7044887780548629,
+      "position": [
+        5,
+        85
+      ],
+      "target": {
+        "height": 565,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/summer_watermelon1/08-09.png",
+      "sourceSha256": "5b20ed556aa7762f01224c101c6615e2ae7c2500b814cc2460af7ddb03505f16",
+      "cell": [
+        887,
+        0,
+        1774,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        88,
+        55,
+        717,
+        845
+      ],
+      "scale": 0.7113924050632912,
+      "position": [
+        84,
+        79
+      ],
+      "target": {
+        "height": 562,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/summer_watermelon1/10-11.png",
+      "sourceSha256": "9f2dd03882f6f4b78538bbb34456f81b9edbe71f228a6c031a747a77113a749f",
+      "cell": [
+        0,
+        0,
+        887,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        169,
+        47,
+        806,
+        837
+      ],
+      "scale": 0.7177215189873418,
+      "position": [
+        40,
+        79
+      ],
+      "target": {
+        "height": 567,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/summer_watermelon1/10-11.png",
+      "sourceSha256": "9f2dd03882f6f4b78538bbb34456f81b9edbe71f228a6c031a747a77113a749f",
+      "cell": [
+        887,
+        0,
+        1774,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        111,
+        47,
+        721,
+        840
+      ],
+      "scale": 0.7099621689785625,
+      "position": [
+        61,
+        84
+      ],
+      "target": {
+        "height": 563,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/summer_watermelon1/12-13.png",
+      "sourceSha256": "b2637b0175d01f50ebe07dadd038ad4e7ca0d49aa958e2a0f7298a70403a5fbc",
+      "cell": [
+        0,
+        0,
+        887,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        170,
+        33,
+        775,
+        830
+      ],
+      "scale": 0.7013801756587202,
+      "position": [
+        26,
+        98
+      ],
+      "target": {
+        "height": 559,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/summer_watermelon1/12-13.png",
+      "sourceSha256": "b2637b0175d01f50ebe07dadd038ad4e7ca0d49aa958e2a0f7298a70403a5fbc",
+      "cell": [
+        887,
+        0,
+        1774,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        115,
+        58,
+        718,
+        835
+      ],
+      "scale": 0.7155727155727156,
+      "position": [
+        75,
+        82
+      ],
+      "target": {
+        "height": 556,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/summer_watermelon1/14-15.png",
+      "sourceSha256": "d174435eba42f2ebead72f9a15e55076565bb76d53094dceea00e1ce3d5f5c67",
+      "cell": [
+        0,
+        0,
+        887,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        201,
+        78,
+        805,
+        815
+      ],
+      "scale": 0.7367706919945726,
+      "position": [
+        12,
+        79
+      ],
+      "target": {
+        "height": 543,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "anchor": "sprites/hd720/frames/summer_breathe1_loop/summer_breathe1_loop_00.png",
+      "sourceSha256": "e50b39adcc8200f5495cd45f252f3ba537f0c091ca863033272e08f47c3d2c1e"
+    }
+  ],
+  "sourcePipeline": "native-pairs-v1",
+  "anchor": "sprites/hd720/frames/summer_breathe1_loop/summer_breathe1_loop_00.png"
 }

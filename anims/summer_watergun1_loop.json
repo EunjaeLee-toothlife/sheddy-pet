@@ -1,106 +1,6 @@
 {
   "name": "summer_watergun1_loop",
   "state": "summer_watergun1",
-  "sheet": "sprites/raw/seasonal/summer_watergun1.png",
-  "sha256": "dd870502222d0f6d694c935212f66a17db2acba8ad6e466bd1948368ee4f13aa",
-  "cellBoxes": [
-    [
-      0,
-      0,
-      314,
-      314
-    ],
-    [
-      314,
-      0,
-      627,
-      314
-    ],
-    [
-      627,
-      0,
-      940,
-      314
-    ],
-    [
-      940,
-      0,
-      1254,
-      314
-    ],
-    [
-      0,
-      314,
-      314,
-      627
-    ],
-    [
-      314,
-      314,
-      627,
-      627
-    ],
-    [
-      627,
-      314,
-      940,
-      627
-    ],
-    [
-      940,
-      314,
-      1254,
-      627
-    ],
-    [
-      0,
-      627,
-      314,
-      940
-    ],
-    [
-      314,
-      627,
-      627,
-      940
-    ],
-    [
-      627,
-      627,
-      940,
-      940
-    ],
-    [
-      940,
-      627,
-      1254,
-      940
-    ],
-    [
-      0,
-      940,
-      314,
-      1254
-    ],
-    [
-      314,
-      940,
-      627,
-      1254
-    ],
-    [
-      627,
-      940,
-      940,
-      1254
-    ],
-    [
-      940,
-      940,
-      1254,
-      1254
-    ]
-  ],
   "fps": 12,
   "holds": {
     "0": 2,
@@ -119,5 +19,437 @@
     "13": 2,
     "14": 2,
     "15": 2
-  }
+  },
+  "nativeSources": [
+    {
+      "anchor": "sprites/hd720/frames/summer_breathe1_loop/summer_breathe1_loop_00.png",
+      "sourceSha256": "e50b39adcc8200f5495cd45f252f3ba537f0c091ca863033272e08f47c3d2c1e"
+    },
+    {
+      "source": "sprites/raw/native/seasonal/summer_watergun1/00-01.png",
+      "sourceSha256": "e8a52fa75b1cb7ceebab4ef719c34522fcea54ba75fe5b17f5b344ba1d697abc",
+      "cell": [
+        887,
+        0,
+        1774,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        127,
+        48,
+        704,
+        855
+      ],
+      "scale": 0.6914498141263941,
+      "position": [
+        83,
+        89
+      ],
+      "target": {
+        "height": 558,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/summer_watergun1/02-03.png",
+      "sourceSha256": "b1fb485afb1f8f8005e5d51681afcd55498aa24ddd4d0814634ae5ac13d3c10b",
+      "cell": [
+        0,
+        0,
+        887,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        205,
+        44,
+        826,
+        843
+      ],
+      "scale": 0.6983729662077597,
+      "position": [
+        40,
+        92
+      ],
+      "target": {
+        "height": 558,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/summer_watergun1/02-03.png",
+      "sourceSha256": "b1fb485afb1f8f8005e5d51681afcd55498aa24ddd4d0814634ae5ac13d3c10b",
+      "cell": [
+        887,
+        0,
+        1774,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        114,
+        45,
+        735,
+        843
+      ],
+      "scale": 0.6979949874686717,
+      "position": [
+        113,
+        91
+      ],
+      "target": {
+        "height": 557,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/summer_watergun1/04-05.png",
+      "sourceSha256": "5649b519544a9f60dce37cdeca561d839b700d2d819fa525dfcb68063a60f8ec",
+      "cell": [
+        0,
+        0,
+        887,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        134,
+        52,
+        749,
+        826
+      ],
+      "scale": 0.7054263565891473,
+      "position": [
+        108,
+        97
+      ],
+      "target": {
+        "height": 546,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/summer_watergun1/04-05.png",
+      "sourceSha256": "5649b519544a9f60dce37cdeca561d839b700d2d819fa525dfcb68063a60f8ec",
+      "cell": [
+        887,
+        0,
+        1774,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        36,
+        71,
+        798,
+        826
+      ],
+      "scale": 0.7178807947019867,
+      "position": [
+        102,
+        87
+      ],
+      "target": {
+        "height": 542,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/summer_watergun1/06-07.png",
+      "sourceSha256": "a009b0a9a0d4bbd4baae508c9fbe07002348ac8423052eb5d84fce548a03d4cb",
+      "cell": [
+        0,
+        0,
+        887,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        206,
+        58,
+        854,
+        846
+      ],
+      "scale": 0.6916243654822335,
+      "position": [
+        39,
+        95
+      ],
+      "target": {
+        "height": 545,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/summer_watergun1/06-07.png",
+      "sourceSha256": "a009b0a9a0d4bbd4baae508c9fbe07002348ac8423052eb5d84fce548a03d4cb",
+      "cell": [
+        887,
+        0,
+        1774,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        57,
+        58,
+        763,
+        841
+      ],
+      "scale": 0.6934865900383141,
+      "position": [
+        136,
+        97
+      ],
+      "target": {
+        "height": 543,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/summer_watergun1/08-09.png",
+      "sourceSha256": "0d600aa8ae447d767155a7730989b69468d9f2be20788a50600a708da73a1a1c",
+      "cell": [
+        0,
+        0,
+        887,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        109,
+        68,
+        880,
+        825
+      ],
+      "scale": 0.7173051519154557,
+      "position": [
+        -39,
+        89
+      ],
+      "target": {
+        "height": 543,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/summer_watergun1/08-09.png",
+      "sourceSha256": "0d600aa8ae447d767155a7730989b69468d9f2be20788a50600a708da73a1a1c",
+      "cell": [
+        887,
+        0,
+        1774,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        145,
+        71,
+        737,
+        825
+      ],
+      "scale": 0.7241379310344828,
+      "position": [
+        -20,
+        83
+      ],
+      "target": {
+        "height": 546,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/summer_watergun1/10-11.png",
+      "sourceSha256": "71ab2f96e95af920492bb606cb0c500157f9200d1637e6fd745f7f3fed391405",
+      "cell": [
+        0,
+        0,
+        887,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        107,
+        88,
+        832,
+        841
+      ],
+      "scale": 0.6188579017264276,
+      "position": [
+        109,
+        160
+      ],
+      "target": {
+        "height": 466,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/summer_watergun1/10-11.png",
+      "sourceSha256": "71ab2f96e95af920492bb606cb0c500157f9200d1637e6fd745f7f3fed391405",
+      "cell": [
+        887,
+        0,
+        1774,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        130,
+        51,
+        761,
+        845
+      ],
+      "scale": 0.707808564231738,
+      "position": [
+        91,
+        82
+      ],
+      "target": {
+        "height": 562,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/summer_watergun1/12-13.png",
+      "sourceSha256": "c03b9261ad8aaf5ded194843d38a5d1eb4775bc7e2edafafec21cf1acb6ba2c8",
+      "cell": [
+        0,
+        0,
+        887,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        170,
+        43,
+        777,
+        832
+      ],
+      "scale": 0.7160963244613435,
+      "position": [
+        52,
+        84
+      ],
+      "target": {
+        "height": 565,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/summer_watergun1/12-13.png",
+      "sourceSha256": "c03b9261ad8aaf5ded194843d38a5d1eb4775bc7e2edafafec21cf1acb6ba2c8",
+      "cell": [
+        887,
+        0,
+        1774,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        128,
+        57,
+        737,
+        829
+      ],
+      "scale": 0.7215025906735751,
+      "position": [
+        6,
+        82
+      ],
+      "target": {
+        "height": 557,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/summer_watergun1/14-15.png",
+      "sourceSha256": "a55f8c845c0783f0ac3c32921769488b41231aeca827eb63b289f4863d90d746",
+      "cell": [
+        0,
+        0,
+        887,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        219,
+        60,
+        811,
+        838
+      ],
+      "scale": 0.7159383033419023,
+      "position": [
+        -44,
+        80
+      ],
+      "target": {
+        "height": 557,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "anchor": "sprites/hd720/frames/summer_breathe1_loop/summer_breathe1_loop_00.png",
+      "sourceSha256": "e50b39adcc8200f5495cd45f252f3ba537f0c091ca863033272e08f47c3d2c1e"
+    }
+  ],
+  "sourcePipeline": "native-pairs-v1",
+  "anchor": "sprites/hd720/frames/summer_breathe1_loop/summer_breathe1_loop_00.png"
 }

@@ -1,106 +1,6 @@
 {
   "name": "childrensday_robot1_loop",
   "state": "childrensday_robot1",
-  "sheet": "sprites/raw/seasonal/childrensday_robot1.png",
-  "sha256": "d59cb0c28d38a14e1c40b3dea75cfe2245ab02760d4a205746016c205e405896",
-  "cellBoxes": [
-    [
-      0,
-      0,
-      322,
-      326
-    ],
-    [
-      322,
-      0,
-      627,
-      325
-    ],
-    [
-      627,
-      0,
-      940,
-      323
-    ],
-    [
-      940,
-      0,
-      1254,
-      314
-    ],
-    [
-      0,
-      326,
-      322,
-      627
-    ],
-    [
-      322,
-      325,
-      627,
-      627
-    ],
-    [
-      627,
-      323,
-      940,
-      627
-    ],
-    [
-      940,
-      314,
-      1254,
-      627
-    ],
-    [
-      0,
-      627,
-      322,
-      940
-    ],
-    [
-      322,
-      627,
-      627,
-      938
-    ],
-    [
-      627,
-      627,
-      940,
-      940
-    ],
-    [
-      940,
-      627,
-      1254,
-      940
-    ],
-    [
-      0,
-      940,
-      322,
-      1254
-    ],
-    [
-      322,
-      938,
-      627,
-      1254
-    ],
-    [
-      627,
-      940,
-      940,
-      1254
-    ],
-    [
-      940,
-      940,
-      1254,
-      1254
-    ]
-  ],
   "fps": 12,
   "holds": {
     "0": 2,
@@ -119,5 +19,451 @@
     "13": 2,
     "14": 2,
     "15": 2
-  }
+  },
+  "nativeSources": [
+    {
+      "anchor": "sprites/hd720/frames/childrensday_breathe1_loop/childrensday_breathe1_loop_00.png",
+      "sourceSha256": "abf2e90af0b1b6e2244bfd83397094aaf5c5436eadc5db20bc9037ee43e459d0"
+    },
+    {
+      "source": "sprites/raw/native/seasonal/childrensday_robot1/00-01.png",
+      "sourceSha256": "0d2db7e39f95b0cf45a38aa2f1971352a1901603c964775dd8e3b45002ccc6dd",
+      "cell": [
+        887,
+        0,
+        1774,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        145,
+        70,
+        639,
+        833
+      ],
+      "scale": 0.7247706422018348,
+      "position": [
+        76,
+        76
+      ],
+      "target": {
+        "height": 553,
+        "x": 360,
+        "bottom": 680,
+        "alignment": "bounds"
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/childrensday_robot1/02-03.png",
+      "sourceSha256": "56ab25bdefedf76cf55e8008143346f76630ceced7fddd9ae88136688e28925c",
+      "cell": [
+        0,
+        0,
+        887,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        194,
+        52,
+        765,
+        828
+      ],
+      "scale": 0.6945876288659794,
+      "position": [
+        27,
+        105
+      ],
+      "target": {
+        "height": 539,
+        "x": 360,
+        "bottom": 680,
+        "alignment": "bounds"
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/childrensday_robot1/02-03.png",
+      "sourceSha256": "56ab25bdefedf76cf55e8008143346f76630ceced7fddd9ae88136688e28925c",
+      "cell": [
+        887,
+        0,
+        1774,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        111,
+        162,
+        694,
+        813
+      ],
+      "scale": 0.7219662058371735,
+      "position": [
+        70,
+        93
+      ],
+      "target": {
+        "height": 470,
+        "x": 360,
+        "bottom": 680,
+        "alignment": "bounds"
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/childrensday_robot1/04-05.png",
+      "sourceSha256": "620b5dafd3bf7d4bf57d573ae41d0dd226b1f407811d060ad0aa178630b5fa01",
+      "cell": [
+        0,
+        0,
+        887,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        152,
+        87,
+        811,
+        818
+      ],
+      "scale": 0.6757865937072504,
+      "position": [
+        35,
+        127
+      ],
+      "target": {
+        "height": 494,
+        "x": 360,
+        "bottom": 680,
+        "alignment": "bounds"
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/childrensday_robot1/04-05.png",
+      "sourceSha256": "620b5dafd3bf7d4bf57d573ae41d0dd226b1f407811d060ad0aa178630b5fa01",
+      "cell": [
+        887,
+        0,
+        1774,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        74,
+        125,
+        795,
+        803
+      ],
+      "scale": 0.6519174041297935,
+      "position": [
+        77,
+        157
+      ],
+      "target": {
+        "height": 442,
+        "x": 360,
+        "bottom": 680,
+        "alignment": "bounds"
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/childrensday_robot1/06-07.png",
+      "sourceSha256": "09c49bf176dddfa5cfa7ae1b663fad41245744313bb9dbf4c6f5562be5407d74",
+      "cell": [
+        0,
+        0,
+        887,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        83,
+        89,
+        872,
+        806
+      ],
+      "scale": 0.6666666666666666,
+      "position": [
+        42,
+        143
+      ],
+      "target": {
+        "height": 478,
+        "x": 360,
+        "bottom": 680,
+        "alignment": "bounds"
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/childrensday_robot1/06-07.png",
+      "sourceSha256": "09c49bf176dddfa5cfa7ae1b663fad41245744313bb9dbf4c6f5562be5407d74",
+      "cell": [
+        887,
+        0,
+        1774,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        44,
+        91,
+        805,
+        798
+      ],
+      "scale": 0.6534653465346535,
+      "position": [
+        82,
+        158
+      ],
+      "target": {
+        "height": 462,
+        "x": 360,
+        "bottom": 680,
+        "alignment": "bounds"
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/childrensday_robot1/08-09.png",
+      "sourceSha256": "6fed4de72950f4697060ab8f921ad3f74f495c9bbc2e809930b2a9b1ed162633",
+      "cell": [
+        0,
+        0,
+        887,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        77,
+        133,
+        856,
+        801
+      ],
+      "scale": 0.6482035928143712,
+      "position": [
+        58,
+        160
+      ],
+      "target": {
+        "height": 433,
+        "x": 360,
+        "bottom": 680,
+        "alignment": "bounds"
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/childrensday_robot1/08-09.png",
+      "sourceSha256": "6fed4de72950f4697060ab8f921ad3f74f495c9bbc2e809930b2a9b1ed162633",
+      "cell": [
+        887,
+        0,
+        1774,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        127,
+        71,
+        771,
+        824
+      ],
+      "scale": 0.6826029216467463,
+      "position": [
+        54,
+        118
+      ],
+      "target": {
+        "height": 514,
+        "x": 360,
+        "bottom": 680,
+        "alignment": "bounds"
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/childrensday_robot1/10-11.png",
+      "sourceSha256": "98ab2ce763a2a7fd1531a038b501cbc0f4755704ac8a8c348d25ea52adf09fd7",
+      "cell": [
+        0,
+        0,
+        887,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        111,
+        55,
+        873,
+        835
+      ],
+      "scale": 0.6423076923076924,
+      "position": [
+        44,
+        143
+      ],
+      "target": {
+        "height": 501,
+        "x": 360,
+        "bottom": 680,
+        "alignment": "bounds"
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/childrensday_robot1/10-11.png",
+      "sourceSha256": "98ab2ce763a2a7fd1531a038b501cbc0f4755704ac8a8c348d25ea52adf09fd7",
+      "cell": [
+        887,
+        0,
+        1774,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        107,
+        60,
+        711,
+        831
+      ],
+      "scale": 0.6549935149156939,
+      "position": [
+        92,
+        135
+      ],
+      "target": {
+        "height": 505,
+        "x": 360,
+        "bottom": 680,
+        "alignment": "bounds"
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/childrensday_robot1/12-13.png",
+      "sourceSha256": "81aed4b6279a4b9191496ccd584f9acdf9d45cb747a1c16ba380b0f2f01c3830",
+      "cell": [
+        0,
+        0,
+        887,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        164,
+        86,
+        826,
+        809
+      ],
+      "scale": 0.6348547717842323,
+      "position": [
+        46,
+        167
+      ],
+      "target": {
+        "height": 459,
+        "x": 360,
+        "bottom": 680,
+        "alignment": "bounds"
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/childrensday_robot1/12-13.png",
+      "sourceSha256": "81aed4b6279a4b9191496ccd584f9acdf9d45cb747a1c16ba380b0f2f01c3830",
+      "cell": [
+        887,
+        0,
+        1774,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        102,
+        52,
+        718,
+        857
+      ],
+      "scale": 0.6521739130434783,
+      "position": [
+        93,
+        122
+      ],
+      "target": {
+        "height": 525,
+        "x": 360,
+        "bottom": 680,
+        "alignment": "bounds"
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/childrensday_robot1/14-15.png",
+      "sourceSha256": "f98843e38f4d178a577232690dda8aed3c88e16298c0672c07e4135cd118f3f4",
+      "cell": [
+        0,
+        0,
+        887,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        282,
+        185,
+        848,
+        812
+      ],
+      "scale": 0.7432216905901117,
+      "position": [
+        -60,
+        77
+      ],
+      "target": {
+        "height": 466,
+        "x": 360,
+        "bottom": 680,
+        "alignment": "bounds"
+      }
+    },
+    {
+      "anchor": "sprites/hd720/frames/childrensday_breathe1_loop/childrensday_breathe1_loop_00.png",
+      "sourceSha256": "abf2e90af0b1b6e2244bfd83397094aaf5c5436eadc5db20bc9037ee43e459d0"
+    }
+  ],
+  "sourcePipeline": "native-pairs-v1",
+  "anchor": "sprites/hd720/frames/childrensday_breathe1_loop/childrensday_breathe1_loop_00.png"
 }

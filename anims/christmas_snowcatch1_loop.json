@@ -1,106 +1,6 @@
 {
   "name": "christmas_snowcatch1_loop",
   "state": "christmas_snowcatch1",
-  "sheet": "sprites/raw/seasonal/christmas_snowcatch1.png",
-  "sha256": "eab336ae8b2bea67c8cf38d4f7b5efbde030549e374620e3f83ad5d2149f018d",
-  "cellBoxes": [
-    [
-      0,
-      0,
-      314,
-      314
-    ],
-    [
-      314,
-      0,
-      627,
-      314
-    ],
-    [
-      627,
-      0,
-      940,
-      314
-    ],
-    [
-      940,
-      0,
-      1254,
-      314
-    ],
-    [
-      0,
-      314,
-      314,
-      627
-    ],
-    [
-      314,
-      314,
-      627,
-      627
-    ],
-    [
-      627,
-      314,
-      940,
-      627
-    ],
-    [
-      940,
-      314,
-      1254,
-      627
-    ],
-    [
-      0,
-      627,
-      314,
-      933
-    ],
-    [
-      314,
-      627,
-      627,
-      938
-    ],
-    [
-      627,
-      627,
-      940,
-      940
-    ],
-    [
-      940,
-      627,
-      1254,
-      937
-    ],
-    [
-      0,
-      933,
-      314,
-      1254
-    ],
-    [
-      314,
-      938,
-      627,
-      1254
-    ],
-    [
-      627,
-      940,
-      940,
-      1254
-    ],
-    [
-      940,
-      937,
-      1254,
-      1254
-    ]
-  ],
   "fps": 12,
   "holds": {
     "0": 2,
@@ -119,5 +19,437 @@
     "13": 2,
     "14": 2,
     "15": 2
-  }
+  },
+  "nativeSources": [
+    {
+      "anchor": "sprites/hd720/frames/christmas_breathe1_loop/christmas_breathe1_loop_00.png",
+      "sourceSha256": "b4accc101d1611b5ae81670d02f5e58a90a578ee4c0898841a7beded206bfe03"
+    },
+    {
+      "source": "sprites/raw/native/seasonal/christmas_snowcatch1/00-01.png",
+      "sourceSha256": "d7a041ba5f5421db7af5ed4201a0b35d7081221079a13f07af458f882830d15b",
+      "cell": [
+        887,
+        0,
+        1774,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        132,
+        76,
+        666,
+        836
+      ],
+      "scale": 0.7197368421052631,
+      "position": [
+        60,
+        79
+      ],
+      "target": {
+        "height": 547,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/christmas_snowcatch1/02-03.png",
+      "sourceSha256": "78090cdd4c55da1c49d2eb4388e447868d10864f2426097bec8675c20407307c",
+      "cell": [
+        0,
+        0,
+        887,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        256,
+        38,
+        783,
+        834
+      ],
+      "scale": 0.6972361809045227,
+      "position": [
+        -17,
+        99
+      ],
+      "target": {
+        "height": 555,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/christmas_snowcatch1/02-03.png",
+      "sourceSha256": "78090cdd4c55da1c49d2eb4388e447868d10864f2426097bec8675c20407307c",
+      "cell": [
+        887,
+        0,
+        1774,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        116,
+        76,
+        709,
+        833
+      ],
+      "scale": 0.6922060766182299,
+      "position": [
+        74,
+        103
+      ],
+      "target": {
+        "height": 524,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/christmas_snowcatch1/04-05.png",
+      "sourceSha256": "1241954f82c470bb8d080f5305f0ec521817aa70d1599c2ab3defb4d40ab8fae",
+      "cell": [
+        0,
+        0,
+        887,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        217,
+        24,
+        750,
+        845
+      ],
+      "scale": 0.6918392204628502,
+      "position": [
+        19,
+        95
+      ],
+      "target": {
+        "height": 568,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/christmas_snowcatch1/04-05.png",
+      "sourceSha256": "1241954f82c470bb8d080f5305f0ec521817aa70d1599c2ab3defb4d40ab8fae",
+      "cell": [
+        887,
+        0,
+        1774,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        107,
+        21,
+        643,
+        845
+      ],
+      "scale": 0.6978155339805825,
+      "position": [
+        83,
+        90
+      ],
+      "target": {
+        "height": 575,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/christmas_snowcatch1/06-07.png",
+      "sourceSha256": "2e7de91ca6e75df743c4c5216ca9d57c63296933987ab0973e581c5284ffcbd1",
+      "cell": [
+        0,
+        0,
+        887,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        204,
+        34,
+        752,
+        841
+      ],
+      "scale": 0.7087980173482032,
+      "position": [
+        0,
+        84
+      ],
+      "target": {
+        "height": 572,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/christmas_snowcatch1/06-07.png",
+      "sourceSha256": "2e7de91ca6e75df743c4c5216ca9d57c63296933987ab0973e581c5284ffcbd1",
+      "cell": [
+        887,
+        0,
+        1774,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        117,
+        48,
+        684,
+        841
+      ],
+      "scale": 0.7061790668348046,
+      "position": [
+        44,
+        87
+      ],
+      "target": {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/christmas_snowcatch1/08-09.png",
+      "sourceSha256": "b8f74ff63b9b2ef121b04d8597285213eaf40550f12338782c109224e7c3d534",
+      "cell": [
+        0,
+        0,
+        887,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        182,
+        60,
+        767,
+        827
+      ],
+      "scale": 0.7040417209908736,
+      "position": [
+        16,
+        98
+      ],
+      "target": {
+        "height": 540,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/christmas_snowcatch1/08-09.png",
+      "sourceSha256": "b8f74ff63b9b2ef121b04d8597285213eaf40550f12338782c109224e7c3d534",
+      "cell": [
+        887,
+        0,
+        1774,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        182,
+        84,
+        749,
+        822
+      ],
+      "scale": 0.7208672086720868,
+      "position": [
+        -2,
+        88
+      ],
+      "target": {
+        "height": 532,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/christmas_snowcatch1/10-11.png",
+      "sourceSha256": "2c5941a955f0377634a2568d77fd7e6637c0288ea7c6ae2a9d8e74bf3cae340d",
+      "cell": [
+        0,
+        0,
+        887,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        180,
+        39,
+        835,
+        855
+      ],
+      "scale": 0.6850490196078431,
+      "position": [
+        -33,
+        94
+      ],
+      "target": {
+        "height": 559,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/christmas_snowcatch1/10-11.png",
+      "sourceSha256": "2c5941a955f0377634a2568d77fd7e6637c0288ea7c6ae2a9d8e74bf3cae340d",
+      "cell": [
+        887,
+        0,
+        1774,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        137,
+        57,
+        688,
+        841
+      ],
+      "scale": 0.6721938775510204,
+      "position": [
+        60,
+        115
+      ],
+      "target": {
+        "height": 527,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/christmas_snowcatch1/12-13.png",
+      "sourceSha256": "dfae8ed2cf487652d11d8697b8a46491fa0c3bd6dc2ea71b772b5941fa47e7db",
+      "cell": [
+        0,
+        0,
+        887,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        269,
+        33,
+        796,
+        844
+      ],
+      "scale": 0.7065351418002466,
+      "position": [
+        -16,
+        84
+      ],
+      "target": {
+        "height": 573,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/christmas_snowcatch1/12-13.png",
+      "sourceSha256": "dfae8ed2cf487652d11d8697b8a46491fa0c3bd6dc2ea71b772b5941fa47e7db",
+      "cell": [
+        887,
+        0,
+        1774,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        108,
+        54,
+        644,
+        844
+      ],
+      "scale": 0.7126582278481013,
+      "position": [
+        96,
+        79
+      ],
+      "target": {
+        "height": 563,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/christmas_snowcatch1/14-15.png",
+      "sourceSha256": "2b9e2043c8d32fad255df69c94a5dbba73ac0135af20db763de3b66c2c1de1c2",
+      "cell": [
+        0,
+        0,
+        887,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        196,
+        53,
+        700,
+        830
+      ],
+      "scale": 0.7207207207207207,
+      "position": [
+        16,
+        82
+      ],
+      "target": {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "anchor": "sprites/hd720/frames/christmas_breathe1_loop/christmas_breathe1_loop_00.png",
+      "sourceSha256": "b4accc101d1611b5ae81670d02f5e58a90a578ee4c0898841a7beded206bfe03"
+    }
+  ],
+  "sourcePipeline": "native-pairs-v1",
+  "anchor": "sprites/hd720/frames/christmas_breathe1_loop/christmas_breathe1_loop_00.png"
 }

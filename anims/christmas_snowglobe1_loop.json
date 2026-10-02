@@ -1,106 +1,6 @@
 {
   "name": "christmas_snowglobe1_loop",
   "state": "christmas_snowglobe1",
-  "sheet": "sprites/raw/seasonal/christmas_snowglobe1.png",
-  "sha256": "36135b70e6a8a988b3600c0021adf5bfdd1af8156426867876d9ca03a0518193",
-  "cellBoxes": [
-    [
-      0,
-      0,
-      314,
-      314
-    ],
-    [
-      314,
-      0,
-      627,
-      314
-    ],
-    [
-      627,
-      0,
-      940,
-      314
-    ],
-    [
-      940,
-      0,
-      1254,
-      314
-    ],
-    [
-      0,
-      314,
-      314,
-      627
-    ],
-    [
-      314,
-      314,
-      627,
-      627
-    ],
-    [
-      627,
-      314,
-      940,
-      627
-    ],
-    [
-      940,
-      314,
-      1254,
-      627
-    ],
-    [
-      0,
-      627,
-      314,
-      940
-    ],
-    [
-      314,
-      627,
-      627,
-      940
-    ],
-    [
-      627,
-      627,
-      940,
-      940
-    ],
-    [
-      940,
-      627,
-      1254,
-      940
-    ],
-    [
-      0,
-      940,
-      314,
-      1254
-    ],
-    [
-      314,
-      940,
-      627,
-      1254
-    ],
-    [
-      627,
-      940,
-      940,
-      1254
-    ],
-    [
-      940,
-      940,
-      1254,
-      1254
-    ]
-  ],
   "fps": 12,
   "holds": {
     "0": 2,
@@ -119,5 +19,437 @@
     "13": 2,
     "14": 2,
     "15": 2
-  }
+  },
+  "nativeSources": [
+    {
+      "anchor": "sprites/hd720/frames/christmas_breathe1_loop/christmas_breathe1_loop_00.png",
+      "sourceSha256": "b4accc101d1611b5ae81670d02f5e58a90a578ee4c0898841a7beded206bfe03"
+    },
+    {
+      "source": "sprites/raw/native/seasonal/christmas_snowglobe1/00-01.png",
+      "sourceSha256": "a7ffbcfa619d71ace4d14dff4d1fd2ee7e59ed8b5c63ee8073a90e9539239bef",
+      "cell": [
+        887,
+        0,
+        1774,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        114,
+        47,
+        657,
+        836
+      ],
+      "scale": 0.7046894803548795,
+      "position": [
+        77,
+        91
+      ],
+      "target": {
+        "height": 556,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/christmas_snowglobe1/02-03.png",
+      "sourceSha256": "31e3d7f10233049328bd4f5e26a1571474b439ea8e07e6970cecee11e4091532",
+      "cell": [
+        0,
+        0,
+        887,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        243,
+        43,
+        752,
+        837
+      ],
+      "scale": 0.6939546599496221,
+      "position": [
+        -9,
+        99
+      ],
+      "target": {
+        "height": 551,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/christmas_snowglobe1/02-03.png",
+      "sourceSha256": "31e3d7f10233049328bd4f5e26a1571474b439ea8e07e6970cecee11e4091532",
+      "cell": [
+        887,
+        0,
+        1774,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        147,
+        46,
+        661,
+        837
+      ],
+      "scale": 0.7092288242730721,
+      "position": [
+        91,
+        87
+      ],
+      "target": {
+        "height": 561,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/christmas_snowglobe1/04-05.png",
+      "sourceSha256": "ce424d56bf48bdf9eb8b6afe77633c2c9b9ef4794668d8df90a6e57205701d20",
+      "cell": [
+        0,
+        0,
+        887,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        180,
+        31,
+        766,
+        838
+      ],
+      "scale": 0.6988847583643123,
+      "position": [
+        34,
+        95
+      ],
+      "target": {
+        "height": 564,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/christmas_snowglobe1/04-05.png",
+      "sourceSha256": "ce424d56bf48bdf9eb8b6afe77633c2c9b9ef4794668d8df90a6e57205701d20",
+      "cell": [
+        887,
+        0,
+        1774,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        136,
+        39,
+        722,
+        834
+      ],
+      "scale": 0.7056603773584905,
+      "position": [
+        61,
+        91
+      ],
+      "target": {
+        "height": 561,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/christmas_snowglobe1/06-07.png",
+      "sourceSha256": "74c0c3a69c599378c074e41248f31363d905b44157ba5b0ec229d6efa44d6595",
+      "cell": [
+        0,
+        0,
+        887,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        208,
+        46,
+        744,
+        841
+      ],
+      "scale": 0.7094339622641509,
+      "position": [
+        6,
+        84
+      ],
+      "target": {
+        "height": 564,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/christmas_snowglobe1/06-07.png",
+      "sourceSha256": "74c0c3a69c599378c074e41248f31363d905b44157ba5b0ec229d6efa44d6595",
+      "cell": [
+        887,
+        0,
+        1774,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        118,
+        112,
+        653,
+        841
+      ],
+      "scale": 0.7311385459533608,
+      "position": [
+        88,
+        65
+      ],
+      "target": {
+        "height": 533,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/christmas_snowglobe1/08-09.png",
+      "sourceSha256": "dc12ea3ed01289aa6cc776be9e8ac28786491ef9edacd94f7c4df018bece5a92",
+      "cell": [
+        0,
+        0,
+        887,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        195,
+        43,
+        802,
+        833
+      ],
+      "scale": 0.6924050632911393,
+      "position": [
+        23,
+        104
+      ],
+      "target": {
+        "height": 547,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/christmas_snowglobe1/08-09.png",
+      "sourceSha256": "dc12ea3ed01289aa6cc776be9e8ac28786491ef9edacd94f7c4df018bece5a92",
+      "cell": [
+        887,
+        0,
+        1774,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        124,
+        40,
+        649,
+        838
+      ],
+      "scale": 0.7092731829573935,
+      "position": [
+        73,
+        86
+      ],
+      "target": {
+        "height": 566,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/christmas_snowglobe1/10-11.png",
+      "sourceSha256": "ca050cac8262666780d1b157406a6ea19da5736f42af8684f97c1b41779bbbd6",
+      "cell": [
+        0,
+        0,
+        887,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        235,
+        42,
+        799,
+        833
+      ],
+      "scale": 0.6927939317319848,
+      "position": [
+        -5,
+        103
+      ],
+      "target": {
+        "height": 548,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/christmas_snowglobe1/10-11.png",
+      "sourceSha256": "ca050cac8262666780d1b157406a6ea19da5736f42af8684f97c1b41779bbbd6",
+      "cell": [
+        887,
+        0,
+        1774,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        107,
+        48,
+        675,
+        834
+      ],
+      "scale": 0.7035623409669212,
+      "position": [
+        79,
+        94
+      ],
+      "target": {
+        "height": 553,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/christmas_snowglobe1/12-13.png",
+      "sourceSha256": "6bd1eaf00b2a5a2af2413d8516ed2f3f07e255b540f78a1396456459ee5f4f4c",
+      "cell": [
+        0,
+        0,
+        887,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        203,
+        26,
+        794,
+        837
+      ],
+      "scale": 0.688039457459926,
+      "position": [
+        -1,
+        104
+      ],
+      "target": {
+        "height": 558,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/christmas_snowglobe1/12-13.png",
+      "sourceSha256": "6bd1eaf00b2a5a2af2413d8516ed2f3f07e255b540f78a1396456459ee5f4f4c",
+      "cell": [
+        887,
+        0,
+        1774,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        123,
+        42,
+        649,
+        845
+      ],
+      "scale": 0.6911581569115816,
+      "position": [
+        83,
+        96
+      ],
+      "target": {
+        "height": 555,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/christmas_snowglobe1/14-15.png",
+      "sourceSha256": "37748326f121ee321575f3906e158e60ee354d5378464b18b7e15aff40c71b2f",
+      "cell": [
+        0,
+        0,
+        887,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        202,
+        39,
+        737,
+        838
+      ],
+      "scale": 0.6933667083854819,
+      "position": [
+        12,
+        99
+      ],
+      "target": {
+        "height": 554,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "anchor": "sprites/hd720/frames/christmas_breathe1_loop/christmas_breathe1_loop_00.png",
+      "sourceSha256": "b4accc101d1611b5ae81670d02f5e58a90a578ee4c0898841a7beded206bfe03"
+    }
+  ],
+  "sourcePipeline": "native-pairs-v1",
+  "anchor": "sprites/hd720/frames/christmas_breathe1_loop/christmas_breathe1_loop_00.png"
 }

@@ -1,106 +1,6 @@
 {
   "name": "seollal_look1_loop",
   "state": "seollal_look1",
-  "sheet": "sprites/raw/seasonal/seollal_look1.png",
-  "sha256": "c33d11be7f4ad36f6b2365b06b4375a0dd7156739aa911e4b9b37f12c703ead3",
-  "cellBoxes": [
-    [
-      0,
-      0,
-      314,
-      314
-    ],
-    [
-      314,
-      0,
-      627,
-      314
-    ],
-    [
-      627,
-      0,
-      940,
-      314
-    ],
-    [
-      940,
-      0,
-      1254,
-      314
-    ],
-    [
-      0,
-      314,
-      314,
-      627
-    ],
-    [
-      314,
-      314,
-      627,
-      626
-    ],
-    [
-      627,
-      314,
-      940,
-      627
-    ],
-    [
-      940,
-      314,
-      1254,
-      627
-    ],
-    [
-      0,
-      627,
-      314,
-      931
-    ],
-    [
-      314,
-      626,
-      627,
-      932
-    ],
-    [
-      627,
-      627,
-      940,
-      930
-    ],
-    [
-      940,
-      627,
-      1254,
-      932
-    ],
-    [
-      0,
-      931,
-      314,
-      1254
-    ],
-    [
-      314,
-      932,
-      627,
-      1254
-    ],
-    [
-      627,
-      930,
-      940,
-      1254
-    ],
-    [
-      940,
-      932,
-      1254,
-      1254
-    ]
-  ],
   "fps": 12,
   "holds": {
     "0": 3,
@@ -119,5 +19,437 @@
     "13": 3,
     "14": 3,
     "15": 3
-  }
+  },
+  "nativeSources": [
+    {
+      "anchor": "sprites/hd720/frames/seollal_breathe1_loop/seollal_breathe1_loop_00.png",
+      "sourceSha256": "ad041795dd715bbd912cb74682cb0c4fad813fd5952eddf743bd1e350e4fb6ab"
+    },
+    {
+      "source": "sprites/raw/native/seasonal/seollal_look1/00-01.png",
+      "sourceSha256": "22510aa146a60f0091cbbcf62a9b7e23d1a418081479bda569811e1587b9828d",
+      "cell": [
+        887,
+        0,
+        1774,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        133,
+        51,
+        655,
+        839
+      ],
+      "scale": 0.7106598984771574,
+      "position": [
+        83,
+        84
+      ],
+      "target": {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/seollal_look1/02-03.png",
+      "sourceSha256": "f2faf24e68f59781732485ee48074faa20a11d4949bbee6aa46d0ae035ff3c8f",
+      "cell": [
+        0,
+        0,
+        887,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        208,
+        37,
+        743,
+        832
+      ],
+      "scale": 0.7044025157232704,
+      "position": [
+        23,
+        93
+      ],
+      "target": {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/seollal_look1/02-03.png",
+      "sourceSha256": "f2faf24e68f59781732485ee48074faa20a11d4949bbee6aa46d0ae035ff3c8f",
+      "cell": [
+        887,
+        0,
+        1774,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        77,
+        38,
+        603,
+        833
+      ],
+      "scale": 0.7044025157232704,
+      "position": [
+        117,
+        93
+      ],
+      "target": {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/seollal_look1/04-05.png",
+      "sourceSha256": "32e58889d4f25eadd786779a29aeef1c0337dfe6753051ec417e9ddc06418aed",
+      "cell": [
+        0,
+        0,
+        887,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        199,
+        45,
+        734,
+        828
+      ],
+      "scale": 0.7151979565772669,
+      "position": [
+        30,
+        88
+      ],
+      "target": {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/seollal_look1/04-05.png",
+      "sourceSha256": "32e58889d4f25eadd786779a29aeef1c0337dfe6753051ec417e9ddc06418aed",
+      "cell": [
+        887,
+        0,
+        1774,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        144,
+        44,
+        676,
+        829
+      ],
+      "scale": 0.7133757961783439,
+      "position": [
+        74,
+        88
+      ],
+      "target": {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/seollal_look1/06-07.png",
+      "sourceSha256": "5e2ccb009195d366a54490e533f0d22cd403a211d78ec82a9534deb014d6c78c",
+      "cell": [
+        0,
+        0,
+        887,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        243,
+        44,
+        813,
+        840
+      ],
+      "scale": 0.7035175879396985,
+      "position": [
+        -28,
+        89
+      ],
+      "target": {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/seollal_look1/06-07.png",
+      "sourceSha256": "5e2ccb009195d366a54490e533f0d22cd403a211d78ec82a9534deb014d6c78c",
+      "cell": [
+        887,
+        0,
+        1774,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        110,
+        53,
+        666,
+        840
+      ],
+      "scale": 0.7115628970775095,
+      "position": [
+        81,
+        83
+      ],
+      "target": {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/seollal_look1/08-09.png",
+      "sourceSha256": "2cf8c2aec565c9d6a372b57095a2a2ce3fdba873088949fed5de654e8f32d368",
+      "cell": [
+        0,
+        0,
+        887,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        206,
+        33,
+        774,
+        836
+      ],
+      "scale": 0.6973848069738481,
+      "position": [
+        9,
+        97
+      ],
+      "target": {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/seollal_look1/08-09.png",
+      "sourceSha256": "2cf8c2aec565c9d6a372b57095a2a2ce3fdba873088949fed5de654e8f32d368",
+      "cell": [
+        887,
+        0,
+        1774,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        140,
+        44,
+        695,
+        837
+      ],
+      "scale": 0.7061790668348046,
+      "position": [
+        64,
+        90
+      ],
+      "target": {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/seollal_look1/10-11.png",
+      "sourceSha256": "376bd67fda453a7cb248209d03514bf7e438e383bb1b3b9e77ef123487765c35",
+      "cell": [
+        0,
+        0,
+        887,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        239,
+        42,
+        803,
+        835
+      ],
+      "scale": 0.7061790668348046,
+      "position": [
+        -9,
+        91
+      ],
+      "target": {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/seollal_look1/10-11.png",
+      "sourceSha256": "376bd67fda453a7cb248209d03514bf7e438e383bb1b3b9e77ef123487765c35",
+      "cell": [
+        887,
+        0,
+        1774,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        101,
+        54,
+        678,
+        834
+      ],
+      "scale": 0.717948717948718,
+      "position": [
+        70,
+        81
+      ],
+      "target": {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/seollal_look1/12-13.png",
+      "sourceSha256": "04dcef6198c53dff6ce2f7ad6f5c79a498f2bcc313d50e2ca57c7611ef98c258",
+      "cell": [
+        0,
+        0,
+        887,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        213,
+        48,
+        779,
+        834
+      ],
+      "scale": 0.712468193384224,
+      "position": [
+        3,
+        86
+      ],
+      "target": {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/seollal_look1/12-13.png",
+      "sourceSha256": "04dcef6198c53dff6ce2f7ad6f5c79a498f2bcc313d50e2ca57c7611ef98c258",
+      "cell": [
+        887,
+        0,
+        1774,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        102,
+        48,
+        668,
+        835
+      ],
+      "scale": 0.7115628970775095,
+      "position": [
+        83,
+        86
+      ],
+      "target": {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/seollal_look1/14-15.png",
+      "sourceSha256": "3e8fa0f153c1545b4f38cb88496d3f48d988f152b2cda3c2b8832b118f00fb4e",
+      "cell": [
+        0,
+        0,
+        887,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        227,
+        43,
+        759,
+        833
+      ],
+      "scale": 0.7088607594936709,
+      "position": [
+        8,
+        89
+      ],
+      "target": {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "anchor": "sprites/hd720/frames/seollal_breathe1_loop/seollal_breathe1_loop_00.png",
+      "sourceSha256": "ad041795dd715bbd912cb74682cb0c4fad813fd5952eddf743bd1e350e4fb6ab"
+    }
+  ],
+  "sourcePipeline": "native-pairs-v1",
+  "anchor": "sprites/hd720/frames/seollal_breathe1_loop/seollal_breathe1_loop_00.png"
 }
