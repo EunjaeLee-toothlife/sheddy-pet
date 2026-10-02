@@ -609,7 +609,7 @@
       "sprites/hd720/frames/seollal_bow1_loop/seollal_bow1_loop_06.png",
       "sprites/hd720/frames/seollal_bow1_loop/seollal_bow1_loop_07.png"
     ],
-    "promptFile": "anims/native/guided.prompt.txt"
+    "promptFile": "anims/native/wide.prompt.txt"
   },
   {
     "id": "seollal_bow1",
