@@ -14810,6 +14810,30 @@
       "state": "gift1",
       "sha256": "d43865ce59bae70ff2bdb19464dfc56f4320d610a38a7f2be7c4de1790695152",
       "reason": "ImageGen 할로윈 전용 모션. 원본/재구성 모드에서 공통 사용."
+    },
+    {
+      "file": "anim_witchbreathe1_loop.webm",
+      "state": "witchbreathe1",
+      "sha256": "8312d38cfc4a10f834a8ee9291d792b0efc7490603342b5a54c635470cae7b3d",
+      "reason": "ImageGen 할로윈 전용 모션. 원본/재구성 모드에서 공통 사용."
+    },
+    {
+      "file": "anim_witchlook1_loop.webm",
+      "state": "witchlook1",
+      "sha256": "fe068b7144c6dabcd7ace00daa184c0212848d5bd5712bebc960cbe553b513a8",
+      "reason": "ImageGen 할로윈 전용 모션. 원본/재구성 모드에서 공통 사용."
+    },
+    {
+      "file": "anim_witchtidy1_loop.webm",
+      "state": "witchtidy1",
+      "sha256": "91375d219db1b4157082434cc83d48a33e75fd92db7d8b7d5506ee818c21fdb5",
+      "reason": "ImageGen 할로윈 전용 모션. 원본/재구성 모드에서 공통 사용."
+    },
+    {
+      "file": "anim_witchtalk1_loop.webm",
+      "state": "witchtalk1",
+      "sha256": "ff9f09122c19f1b8e428622a9928f5a2b6ec06d83b2838c22b1975c5f2534dac",
+      "reason": "ImageGen 할로윈 전용 모션. 원본/재구성 모드에서 공통 사용."
     }
   ]
 }

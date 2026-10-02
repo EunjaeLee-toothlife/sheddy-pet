@@ -403,11 +403,11 @@ const IN_HALLOWEEN = async () => {
     await wait(() => at("witchidle1"), "일반 시작 상태의 마녀 대체");
     pinnedUntil = Infinity;
     expect(DEFAULT_STATE === "witchidle1", "기본 복장이 마녀가 아님");
-    expect(JSON.stringify([...motionList.querySelectorAll("[data-name]")].map(el => el.dataset.name)) === JSON.stringify(names), "선택기에 일반 모션 노출");
+    expect(JSON.stringify([...motionList.querySelectorAll("[data-name]")].map(el => el.dataset.name).sort()) === JSON.stringify([...names].sort()), "선택기에 일반 모션 노출");
     setPetState("happy1"); setPetState("talk");
     expect(at("witchidle1") && !queued, "일반 외부 명령 허용");
     expect(CLIP_URL.size === 1 && CLIP_URL.has(files[0]), "불필요한 초기 영상 로딩");
-    result.push({ name: "modeScope", ok: true, detail: "일반 시작 상태 대체, 선택기 24종, 외부 일반 모션 차단, 초기 영상 1개" });
+    result.push({ name: "modeScope", ok: true, detail: "일반 시작 상태 대체, 선택기 28종, 외부 일반 모션 차단, 초기 영상 1개" });
 
     let idleLoops = 0, idleTime = vids[front].currentTime;
     await wait(() => {
@@ -422,18 +422,17 @@ const IN_HALLOWEEN = async () => {
       pinnedUntil = 0;
       setPetState(name);
       await wait(() => at(name), name);
-      await sleep(1200);
+      await sleep(name === TALK_STATE ? 400 : 1200);
       expect(sctx.getImageData(0, 0, 1, 1).data[3] === 0, "배경 알파 오류");
       expect(vids[front].videoWidth === 720 && !vids[front].paused, "720 영상 재생 오류");
       if (window.__captureReactions) window.__captureReactions.push({ name, png: screen.toDataURL() });
       await wait(() => at("witchidle1"), name + " 마녀 복귀");
     }
-    result.push({ name: "witchResults", ok: true, detail: "동작 23종 실제 재생 후 마녀 복장으로 복귀, 투명 720 영상" });
+    result.push({ name: "witchResults", ok: true, detail: "동작 27종 실제 재생 후 마녀 복장으로 복귀, 투명 720 영상" });
 
     motionHold.checked = true;
     pickMotion("alchemygold1");
     await wait(() => at("alchemygold1"), "결과 유지");
-    talkActive = true; // 마이크 게이트가 열려도 일반 talk로 전환하지 않는다.
     let loops = 0, lastTime = vids[front].currentTime;
     await wait(() => {
       const time = vids[front].currentTime;
@@ -441,7 +440,7 @@ const IN_HALLOWEEN = async () => {
       lastTime = time;
       return loops >= 2;
     }, "결과 두 사이클");
-    expect(pinnedUntil === Infinity && at("alchemygold1"), "유지/마이크 격리 실패");
+    expect(pinnedUntil === Infinity && at("alchemygold1"), "무기한 유지 실패");
     visibility(false);
     const draws = drawCount, time = vids[front].currentTime;
     setState("alchemyslime1", { pin: false });
@@ -454,7 +453,49 @@ const IN_HALLOWEEN = async () => {
     expect(pinnedUntil === Infinity, "큐를 거치며 무기한 유지 유실");
     motionHold.checked = false; pinnedUntil = 0; talkActive = false;
     await wait(() => at("witchidle1"), "유지 해제 후 마녀 복귀");
-    result.push({ name: "witchHold", ok: true, detail: "두 사이클 유지, 마이크 격리, 숨김 중 작업 0, 유효한 큐와 Infinity 보존" });
+    result.push({ name: "witchHold", ok: true, detail: "두 사이클 유지, 숨김 중 작업 0, 유효한 큐와 Infinity 보존" });
+
+    // 실제 마이크를 열지 않고 입력 파형만 대체해 RMS/해제 지연/테마 상태 연결을 검사한다.
+    const media = navigator.mediaDevices;
+    const getUserMedia = media.getUserMedia, enumerateDevices = media.enumerateDevices;
+    const oldAudioCtx = audioCtx, oldThreshold = threshSlider.value;
+    const oldDevice = localStorage.getItem("petMicDevice");
+    let level = 0, stopped = false;
+    const track = { stop() { stopped = true; }, getSettings() { return { deviceId: "test-halloween" }; } };
+    try {
+      media.getUserMedia = async () => ({ getTracks: () => [track], getAudioTracks: () => [track] });
+      media.enumerateDevices = async () => [];
+      audioCtx = { resume: async () => {}, createMediaStreamSource: () => ({ connect() {} }),
+        createAnalyser: () => ({ fftSize: 1024, getFloatTimeDomainData(buf) { buf.fill(level); } }) };
+      threshSlider.value = "0.03";
+      await startMic("__default__");
+      await sleep(150);
+      expect(!talkActive && at(DEFAULT_STATE), "무음에서 말하기 시작");
+      level = 0.08;
+      await wait(() => talkActive && at("witchtalk1"), "마녀 마이크 진입");
+      expect(TALK_STATE === "witchtalk1" && ACTIVE_ANIMS[TALK_STATE].weight === 0, "일반 talk 연결 또는 추첨 포함");
+      let loops = 0, time = vids[front].currentTime;
+      await wait(() => {
+        const next = vids[front].currentTime;
+        if (next < time - 0.5) loops++;
+        time = next;
+        return loops >= 2;
+      }, "마녀 말하기 두 사이클");
+      level = 0.005;
+      await sleep(180);
+      expect(talkActive, "마이크 해제 지연 누락");
+      await wait(() => !talkActive && at(DEFAULT_STATE), "무음 후 마녀 대기 복귀");
+      level = 0.08;
+      await wait(() => talkActive && at(TALK_STATE), "마이크 재진입");
+      stopMic();
+      await wait(() => at(DEFAULT_STATE), "마이크 끄기 복귀");
+      expect(stopped && !meterTimer && !micStream, "마이크 자원 미해제");
+      result.push({ name: "witchMic", ok: true, detail: "무음/음량 임계값, 마녀 말하기 두 사이클, 해제 지연, 마녀 복귀, 장치 해제" });
+    } finally {
+      stopMic(); audioCtx = oldAudioCtx; threshSlider.value = oldThreshold;
+      media.getUserMedia = getUserMedia; media.enumerateDevices = enumerateDevices;
+      if (oldDevice === null) localStorage.removeItem("petMicDevice"); else localStorage.setItem("petMicDevice", oldDevice);
+    }
 
     // 실제 ended 이벤트와 주사위를 거쳐 결과가 선택되고 다시 마녀 대기로 돌아오는지 확인한다.
     idleStreak = 0;

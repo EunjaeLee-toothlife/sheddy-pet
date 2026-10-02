@@ -1,4 +1,4 @@
-"""신규 할로윈 20종의 원본·프레임·영상만 검증하고 기존 검수 기록을 보존한다."""
+"""신규 할로윈 모션의 원본·프레임·영상만 검증하고 기존 검수 기록을 보존한다."""
 import argparse
 import json
 from pathlib import Path
@@ -71,7 +71,7 @@ def main():
     parser.add_argument('--register', action='store_true', help='신규 기술 검수 기록을 자산 목록에 반영')
     args = parser.parse_args()
     motions = json.loads((ROOT / 'anims/halloween/motions.json').read_text())
-    assert len(motions) == len({m['id'] for m in motions}) == 20
+    assert len(motions) == len({m['id'] for m in motions}) == 24
     records = [verify(m) for m in motions]
     if args.register:
         hd_path = ROOT / 'anims/hd720_manifest.json'

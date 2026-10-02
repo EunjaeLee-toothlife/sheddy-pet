@@ -298,7 +298,7 @@ const ANIMS = {
   shuffle1: { loop: "anim_shuffle1_loop.webm", label: "셔플 스텝", category: "special", weight: 2, once: true },
   power1: { loop: "anim_power1_loop.webm", label: "파워 챌린지", category: "special", weight: 2, once: true },
   // 마녀 복장을 유지하는 할로윈 전용 동작. 일반 모드에서는 선택·추첨하지 않는다.
-  witchidle1: { loop: "anim_witchidle1_loop.webm", label: "마녀 대기", mode: "halloween", category: "special", weight: 1 },
+  witchidle1: { loop: "anim_witchidle1_loop.webm", label: "마녀 대기", mode: "halloween", category: "idle", weight: 1 },
   broom1: { loop: "anim_broom1_loop.webm", label: "빗자루 비행", mode: "halloween", category: "special", weight: 1, once: true },
   lantern1: { loop: "anim_lantern1_loop.webm", label: "호박 랜턴", mode: "halloween", category: "special", weight: 1, once: true },
   ghost1: { loop: "anim_ghost1_loop.webm", label: "꼬마 유령", mode: "halloween", category: "special", weight: 1, once: true },
@@ -318,9 +318,14 @@ const ANIMS = {
   peekaboo1: { loop: "anim_peekaboo1_loop.webm", label: "망토 까꿍", mode: "halloween", category: "special", weight: 1, once: true },
   candles1: { loop: "anim_candles1_loop.webm", label: "떠다니는 촛불", mode: "halloween", category: "special", weight: 1, once: true },
   gift1: { loop: "anim_gift1_loop.webm", label: "할로윈 선물상자", mode: "halloween", category: "special", weight: 1, once: true },
+  witchbreathe1: { loop: "anim_witchbreathe1_loop.webm", label: "마녀 — 편안한 숨쉬기", mode: "halloween", category: "idle", weight: 1, minCycles: 1, maxCycles: 2 },
+  witchlook1: { loop: "anim_witchlook1_loop.webm", label: "마녀 — 주변 둘러보기", mode: "halloween", category: "idle", weight: 1, minCycles: 1, maxCycles: 2 },
+  witchtidy1: { loop: "anim_witchtidy1_loop.webm", label: "마녀 — 모자와 망토 정돈", mode: "halloween", category: "idle", weight: 1, minCycles: 1, maxCycles: 2 },
+  witchtalk1: { loop: "anim_witchtalk1_loop.webm", label: "마녀 — 말하기", mode: "halloween", category: "talk", weight: 0 },
   talk:     { loop: "anim_talk_loop.webm", category: "talk", weight: 0 }, // 주사위 제외, 마이크 전용
 };
 const DEFAULT_STATE = params.get("mode") === "halloween" ? "witchidle1" : "idle1";
+const TALK_STATE = params.get("mode") === "halloween" ? "witchtalk1" : "talk";
 // 할로윈에서는 변신·원복 없이 마녀 복장 클립만 사용한다. 원본 레지스트리는 자산 목록으로 유지한다.
 const ACTIVE_ANIMS = params.get("mode") === "halloween" ? {
   ...Object.fromEntries(Object.entries(ANIMS).filter(([, a]) => a.mode === "halloween")),
@@ -724,14 +729,14 @@ function onCycleEnd() {
     return;
   }
   // 마이크에 신호가 들어오는 동안은 talk 상태를 계속 유지
-  if (talkActive && ACTIVE_ANIMS.talk) {
-    if (current !== "talk") { setState("talk", { pin: false }); return; }
+  if (talkActive && ACTIVE_ANIMS[TALK_STATE]) {
+    if (current !== TALK_STATE) { setState(TALK_STATE, { pin: false }); return; }
     const v = vids[front];
     v.currentTime = 0;
     v.play().catch(() => {});
     return;
   }
-  if (current === "talk") { setState(DEFAULT_STATE, { pin: false }); return; }
+  if (current === TALK_STATE) { setState(DEFAULT_STATE, { pin: false }); return; }
   if (ACTIVE_ANIMS[current].once && pinnedUntil !== Infinity) {
     setState(DEFAULT_STATE, { pin: false });
     return;
@@ -1063,7 +1068,7 @@ async function startMic(deviceId) {
     analyser.fftSize = 1024;
     src.connect(analyser);
     const buf = new Float32Array(analyser.fftSize);
-    micStatus.textContent = ACTIVE_ANIMS.talk ? "마이크 감시 중" : "할로윈 모드: 음량 표시만 사용";
+    micStatus.textContent = ACTIVE_ANIMS[TALK_STATE] ? "마이크 감시 중" : "할로윈 모드: 음량 표시만 사용";
     meterTimer = setInterval(() => {
       if (suspended) return;
       analyser.getFloatTimeDomainData(buf);
@@ -1074,14 +1079,14 @@ async function startMic(deviceId) {
         levelBar.style.width = `${Math.min(100, rms / 0.15 * 100)}%`;
         levelBar.style.background = rms > threshold() ? "#ffb300" : "#4caf50";
       }
-      if (!ACTIVE_ANIMS.talk) return; // 전용 말하기 모션이 없는 테마는 음량 표시만 유지
+      if (!ACTIVE_ANIMS[TALK_STATE]) return; // 전용 말하기 모션이 없는 테마는 음량 표시만 유지
       const now = Date.now();
       if (rms > threshold()) {
         lastLoudAt = now;
         if (!talkActive) {
           talkActive = true;
           micStatus.textContent = "🗣 말하는 중";
-          if (current !== "talk") setState("talk", { pin: false });
+          if (current !== TALK_STATE) setState(TALK_STATE, { pin: false });
         }
       } else if (talkActive && now - lastLoudAt > RELEASE_MS) {
         talkActive = false;
@@ -1217,7 +1222,7 @@ navigator.mediaDevices.addEventListener?.("devicechange", () => {
 
 // 저장된 장치가 있으면 자동 시작 (OBS는 권한 자동 허용)
 const savedDevice = localStorage.getItem("petMicDevice");
-if (ACTIVE_ANIMS.talk && savedDevice && savedDevice !== "__off__") {
+if (ACTIVE_ANIMS[TALK_STATE] && savedDevice && savedDevice !== "__off__") {
   navigator.mediaDevices.getUserMedia({ audio: true })
     .then(tmp => { tmp.getTracks().forEach(t => t.stop()); return listDevices(); })
     .then(() => startMic(savedDevice))
