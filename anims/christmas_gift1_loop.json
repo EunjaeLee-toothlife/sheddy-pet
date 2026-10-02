@@ -1,106 +1,6 @@
 {
   "name": "christmas_gift1_loop",
   "state": "christmas_gift1",
-  "sheet": "sprites/raw/seasonal/christmas_gift1.png",
-  "sha256": "0299d310d70659eba3f33e234df42f7904d6ccc2d4a95c215332a5954e0a70f9",
-  "cellBoxes": [
-    [
-      0,
-      0,
-      314,
-      316
-    ],
-    [
-      314,
-      0,
-      627,
-      314
-    ],
-    [
-      627,
-      0,
-      940,
-      315
-    ],
-    [
-      940,
-      0,
-      1254,
-      316
-    ],
-    [
-      0,
-      316,
-      314,
-      627
-    ],
-    [
-      314,
-      314,
-      627,
-      627
-    ],
-    [
-      627,
-      315,
-      940,
-      627
-    ],
-    [
-      940,
-      316,
-      1254,
-      627
-    ],
-    [
-      0,
-      627,
-      314,
-      940
-    ],
-    [
-      314,
-      627,
-      627,
-      938
-    ],
-    [
-      627,
-      627,
-      940,
-      940
-    ],
-    [
-      940,
-      627,
-      1254,
-      940
-    ],
-    [
-      0,
-      940,
-      314,
-      1254
-    ],
-    [
-      314,
-      938,
-      627,
-      1254
-    ],
-    [
-      627,
-      940,
-      940,
-      1254
-    ],
-    [
-      940,
-      940,
-      1254,
-      1254
-    ]
-  ],
   "fps": 12,
   "holds": {
     "0": 2,
@@ -119,5 +19,437 @@
     "13": 2,
     "14": 2,
     "15": 2
-  }
+  },
+  "nativeSources": [
+    {
+      "anchor": "sprites/hd720/frames/christmas_breathe1_loop/christmas_breathe1_loop_00.png",
+      "sourceSha256": "b4accc101d1611b5ae81670d02f5e58a90a578ee4c0898841a7beded206bfe03"
+    },
+    {
+      "source": "sprites/raw/native/seasonal/christmas_gift1/00-01.png",
+      "sourceSha256": "405599db8b9badfd4e51a27fe6796e14db5f3a9735a4158ffc2525d510d6032f",
+      "cell": [
+        887,
+        0,
+        1774,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        105,
+        57,
+        639,
+        849
+      ],
+      "scale": 0.6957070707070707,
+      "position": [
+        99,
+        90
+      ],
+      "target": {
+        "height": 551,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/christmas_gift1/02-03.png",
+      "sourceSha256": "a10a0f0ba19abfce46c7131fcc3147f933fd14fd4d67943070dcadaf2056ecaf",
+      "cell": [
+        0,
+        0,
+        887,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        218,
+        30,
+        747,
+        839
+      ],
+      "scale": 0.6897404202719407,
+      "position": [
+        19,
+        101
+      ],
+      "target": {
+        "height": 558,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/christmas_gift1/02-03.png",
+      "sourceSha256": "a10a0f0ba19abfce46c7131fcc3147f933fd14fd4d67943070dcadaf2056ecaf",
+      "cell": [
+        887,
+        0,
+        1774,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        107,
+        72,
+        685,
+        838
+      ],
+      "scale": 0.7193211488250653,
+      "position": [
+        64,
+        77
+      ],
+      "target": {
+        "height": 551,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/christmas_gift1/04-05.png",
+      "sourceSha256": "78f3b9e70c10201fcb0ad911fe1349369ba8a70319a39f8264489e8a5b960046",
+      "cell": [
+        0,
+        0,
+        887,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        251,
+        48,
+        795,
+        833
+      ],
+      "scale": 0.6980891719745222,
+      "position": [
+        -15,
+        99
+      ],
+      "target": {
+        "height": 548,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/christmas_gift1/04-05.png",
+      "sourceSha256": "78f3b9e70c10201fcb0ad911fe1349369ba8a70319a39f8264489e8a5b960046",
+      "cell": [
+        887,
+        0,
+        1774,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        133,
+        47,
+        662,
+        832
+      ],
+      "scale": 0.70828025477707,
+      "position": [
+        74,
+        91
+      ],
+      "target": {
+        "height": 556,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/christmas_gift1/06-07.png",
+      "sourceSha256": "5cfbd50ad13b34e3ee60c984566db0c45065979016139ef24b0802182592ce86",
+      "cell": [
+        0,
+        0,
+        887,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        195,
+        33,
+        779,
+        833
+      ],
+      "scale": 0.695,
+      "position": [
+        22,
+        102
+      ],
+      "target": {
+        "height": 556,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/christmas_gift1/06-07.png",
+      "sourceSha256": "5cfbd50ad13b34e3ee60c984566db0c45065979016139ef24b0802182592ce86",
+      "cell": [
+        887,
+        0,
+        1774,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        130,
+        97,
+        657,
+        833
+      ],
+      "scale": 0.717391304347826,
+      "position": [
+        51,
+        83
+      ],
+      "target": {
+        "height": 528,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/christmas_gift1/08-09.png",
+      "sourceSha256": "9edbcf512d3d84b75bacbc62a7414b9ad904610aab566ad01abf8396a6e0e174",
+      "cell": [
+        0,
+        0,
+        887,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        202,
+        32,
+        804,
+        845
+      ],
+      "scale": 0.6678966789667896,
+      "position": [
+        4,
+        116
+      ],
+      "target": {
+        "height": 543,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/christmas_gift1/08-09.png",
+      "sourceSha256": "9edbcf512d3d84b75bacbc62a7414b9ad904610aab566ad01abf8396a6e0e174",
+      "cell": [
+        887,
+        0,
+        1774,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        86,
+        52,
+        696,
+        852
+      ],
+      "scale": 0.67875,
+      "position": [
+        68,
+        102
+      ],
+      "target": {
+        "height": 543,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/christmas_gift1/10-11.png",
+      "sourceSha256": "0e584a9c432d99baa3a8ed067ab25699a99688d01d5d76f25f8e7198aef9106c",
+      "cell": [
+        0,
+        0,
+        887,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        226,
+        39,
+        789,
+        823
+      ],
+      "scale": 0.7066326530612245,
+      "position": [
+        -15,
+        98
+      ],
+      "target": {
+        "height": 554,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/christmas_gift1/10-11.png",
+      "sourceSha256": "0e584a9c432d99baa3a8ed067ab25699a99688d01d5d76f25f8e7198aef9106c",
+      "cell": [
+        887,
+        0,
+        1774,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        109,
+        67,
+        636,
+        818
+      ],
+      "scale": 0.7310252996005326,
+      "position": [
+        92,
+        83
+      ],
+      "target": {
+        "height": 549,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/christmas_gift1/12-13.png",
+      "sourceSha256": "674f654d2e1ec47014206fec1e496a322fac1f79044f92b1e6575f80b072be71",
+      "cell": [
+        0,
+        0,
+        886,
+        887
+      ],
+      "nativeSize": [
+        886,
+        887
+      ],
+      "nativeBounds": [
+        232,
+        44,
+        779,
+        834
+      ],
+      "scale": 0.689873417721519,
+      "position": [
+        7,
+        104
+      ],
+      "target": {
+        "height": 545,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/christmas_gift1/12-13.png",
+      "sourceSha256": "674f654d2e1ec47014206fec1e496a322fac1f79044f92b1e6575f80b072be71",
+      "cell": [
+        886,
+        0,
+        1773,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        102,
+        47,
+        654,
+        834
+      ],
+      "scale": 0.7039390088945362,
+      "position": [
+        96,
+        93
+      ],
+      "target": {
+        "height": 554,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/christmas_gift1/14-15.png",
+      "sourceSha256": "0353031eba39018a58fd1020059e9a5772802cc84502584e065c27e358a15dcb",
+      "cell": [
+        0,
+        0,
+        887,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        234,
+        55,
+        776,
+        839
+      ],
+      "scale": 0.6977040816326531,
+      "position": [
+        0,
+        95
+      ],
+      "target": {
+        "height": 547,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "anchor": "sprites/hd720/frames/christmas_breathe1_loop/christmas_breathe1_loop_00.png",
+      "sourceSha256": "b4accc101d1611b5ae81670d02f5e58a90a578ee4c0898841a7beded206bfe03"
+    }
+  ],
+  "sourcePipeline": "native-pairs-v1",
+  "anchor": "sprites/hd720/frames/christmas_breathe1_loop/christmas_breathe1_loop_00.png"
 }

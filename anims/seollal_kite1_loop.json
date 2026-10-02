@@ -1,106 +1,6 @@
 {
   "name": "seollal_kite1_loop",
   "state": "seollal_kite1",
-  "sheet": "sprites/raw/seasonal/seollal_kite1.png",
-  "sha256": "1bbd56ca804ebc4c9ca567891b8a702fca4cdcb553422e2631fa76c563d2e371",
-  "cellBoxes": [
-    [
-      0,
-      0,
-      314,
-      321
-    ],
-    [
-      314,
-      0,
-      627,
-      322
-    ],
-    [
-      627,
-      0,
-      940,
-      322
-    ],
-    [
-      940,
-      0,
-      1254,
-      322
-    ],
-    [
-      0,
-      321,
-      314,
-      633
-    ],
-    [
-      314,
-      322,
-      627,
-      634
-    ],
-    [
-      627,
-      322,
-      940,
-      632
-    ],
-    [
-      940,
-      322,
-      1254,
-      633
-    ],
-    [
-      0,
-      633,
-      314,
-      942
-    ],
-    [
-      314,
-      634,
-      627,
-      943
-    ],
-    [
-      627,
-      632,
-      940,
-      942
-    ],
-    [
-      940,
-      633,
-      1254,
-      943
-    ],
-    [
-      0,
-      942,
-      314,
-      1254
-    ],
-    [
-      314,
-      943,
-      627,
-      1254
-    ],
-    [
-      627,
-      942,
-      940,
-      1254
-    ],
-    [
-      940,
-      943,
-      1254,
-      1254
-    ]
-  ],
   "fps": 12,
   "holds": {
     "0": 2,
@@ -119,5 +19,437 @@
     "13": 2,
     "14": 2,
     "15": 2
-  }
+  },
+  "nativeSources": [
+    {
+      "anchor": "sprites/hd720/frames/seollal_breathe1_loop/seollal_breathe1_loop_00.png",
+      "sourceSha256": "ad041795dd715bbd912cb74682cb0c4fad813fd5952eddf743bd1e350e4fb6ab"
+    },
+    {
+      "source": "sprites/raw/native/seasonal/seollal_kite1/00-01.png",
+      "sourceSha256": "66188af2e496eb624ce09edc58abd4935f38fdb35111c9f150a3cd6f82bf5cc5",
+      "cell": [
+        887,
+        0,
+        1774,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        134,
+        44,
+        701,
+        838
+      ],
+      "scale": 0.7040302267002518,
+      "position": [
+        48,
+        91
+      ],
+      "target": {
+        "height": 559,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/seollal_kite1/02-03.png",
+      "sourceSha256": "721d9c974d45e0a72d55df4f65d7e6c9752dd75c3c057cf712720f62756ee192",
+      "cell": [
+        0,
+        0,
+        887,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        194,
+        57,
+        875,
+        806
+      ],
+      "scale": 0.7463284379172229,
+      "position": [
+        10,
+        78
+      ],
+      "target": {
+        "height": 559,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/seollal_kite1/02-03.png",
+      "sourceSha256": "721d9c974d45e0a72d55df4f65d7e6c9752dd75c3c057cf712720f62756ee192",
+      "cell": [
+        887,
+        0,
+        1774,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        150,
+        57,
+        659,
+        805
+      ],
+      "scale": 0.7393048128342246,
+      "position": [
+        42,
+        84
+      ],
+      "target": {
+        "height": 553,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/seollal_kite1/04-05.png",
+      "sourceSha256": "bbc63a9431f07fb044e13dc73da13aea0d5da701437f3808623ff779bf07ebf5",
+      "cell": [
+        0,
+        0,
+        887,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        96,
+        12,
+        788,
+        855
+      ],
+      "scale": 0.7224199288256228,
+      "position": [
+        -18,
+        62
+      ],
+      "target": {
+        "height": 609,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/seollal_kite1/04-05.png",
+      "sourceSha256": "bbc63a9431f07fb044e13dc73da13aea0d5da701437f3808623ff779bf07ebf5",
+      "cell": [
+        887,
+        0,
+        1774,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        94,
+        15,
+        789,
+        853
+      ],
+      "scale": 0.7267303102625299,
+      "position": [
+        -20,
+        60
+      ],
+      "target": {
+        "height": 609,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/seollal_kite1/06-07.png",
+      "sourceSha256": "faf3df6a471e69ac2d41b6410b21d1f855e1e6de8d7b51d10b6731872c454b48",
+      "cell": [
+        0,
+        0,
+        887,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        46,
+        14,
+        878,
+        841
+      ],
+      "scale": 0.6698911729141476,
+      "position": [
+        -20,
+        117
+      ],
+      "target": {
+        "height": 554,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/seollal_kite1/06-07.png",
+      "sourceSha256": "faf3df6a471e69ac2d41b6410b21d1f855e1e6de8d7b51d10b6731872c454b48",
+      "cell": [
+        887,
+        0,
+        1774,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        49,
+        13,
+        834,
+        835
+      ],
+      "scale": 0.7214111922141119,
+      "position": [
+        -9,
+        78
+      ],
+      "target": {
+        "height": 593,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/seollal_kite1/08-09.png",
+      "sourceSha256": "ce9bf1cbee7e1015abc353ac2d98e14d160586a04cf62b9efbf7ccbfdcf46226",
+      "cell": [
+        0,
+        0,
+        887,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        117,
+        46,
+        854,
+        843
+      ],
+      "scale": 0.7415307402760352,
+      "position": [
+        23,
+        54
+      ],
+      "target": {
+        "height": 591,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/seollal_kite1/08-09.png",
+      "sourceSha256": "ce9bf1cbee7e1015abc353ac2d98e14d160586a04cf62b9efbf7ccbfdcf46226",
+      "cell": [
+        887,
+        0,
+        1774,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        127,
+        49,
+        798,
+        832
+      ],
+      "scale": 0.7547892720306514,
+      "position": [
+        4,
+        52
+      ],
+      "target": {
+        "height": 591,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/seollal_kite1/10-11.png",
+      "sourceSha256": "7c8cd09987b8c1db2eddf8ace1821659f10f9bcd141c53aa313d80ad28943c54",
+      "cell": [
+        0,
+        0,
+        887,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        147,
+        38,
+        835,
+        830
+      ],
+      "scale": 0.7474747474747475,
+      "position": [
+        28,
+        60
+      ],
+      "target": {
+        "height": 592,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/seollal_kite1/10-11.png",
+      "sourceSha256": "7c8cd09987b8c1db2eddf8ace1821659f10f9bcd141c53aa313d80ad28943c54",
+      "cell": [
+        887,
+        0,
+        1774,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        106,
+        134,
+        820,
+        822
+      ],
+      "scale": 0.6962209302325582,
+      "position": [
+        66,
+        107
+      ],
+      "target": {
+        "height": 479,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/seollal_kite1/12-13.png",
+      "sourceSha256": "139d9c26c730b87330ec640211bcbfe94dd4516f79d546d0606967fa15e549b5",
+      "cell": [
+        0,
+        0,
+        887,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        172,
+        80,
+        781,
+        833
+      ],
+      "scale": 0.5936254980079682,
+      "position": [
+        105,
+        185
+      ],
+      "target": {
+        "height": 447,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/seollal_kite1/12-13.png",
+      "sourceSha256": "139d9c26c730b87330ec640211bcbfe94dd4516f79d546d0606967fa15e549b5",
+      "cell": [
+        887,
+        0,
+        1774,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        112,
+        89,
+        681,
+        835
+      ],
+      "scale": 0.6193029490616622,
+      "position": [
+        115,
+        163
+      ],
+      "target": {
+        "height": 462,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/seollal_kite1/14-15.png",
+      "sourceSha256": "90f9bd770fff98c87c0b0f42aea6de65df5d1eb74de2586c49354d32d268e76c",
+      "cell": [
+        0,
+        0,
+        887,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        201,
+        155,
+        816,
+        851
+      ],
+      "scale": 0.6652298850574713,
+      "position": [
+        10,
+        114
+      ],
+      "target": {
+        "height": 463,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "anchor": "sprites/hd720/frames/seollal_breathe1_loop/seollal_breathe1_loop_00.png",
+      "sourceSha256": "ad041795dd715bbd912cb74682cb0c4fad813fd5952eddf743bd1e350e4fb6ab"
+    }
+  ],
+  "sourcePipeline": "native-pairs-v1",
+  "anchor": "sprites/hd720/frames/seollal_breathe1_loop/seollal_breathe1_loop_00.png"
 }

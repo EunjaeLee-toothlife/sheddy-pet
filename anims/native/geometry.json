@@ -1,0 +1,4052 @@
+{
+  "seollal_breathe1": {
+    "theme": "seasonal",
+    "mode": "seollal",
+    "anchor": "sprites/hd720/frames/seollal_breathe1_loop/seollal_breathe1_loop_00.png",
+    "poses": [
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      }
+    ]
+  },
+  "seollal_look1": {
+    "theme": "seasonal",
+    "mode": "seollal",
+    "anchor": "sprites/hd720/frames/seollal_breathe1_loop/seollal_breathe1_loop_00.png",
+    "poses": [
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      }
+    ]
+  },
+  "seollal_tidy1": {
+    "theme": "seasonal",
+    "mode": "seollal",
+    "anchor": "sprites/hd720/frames/seollal_breathe1_loop/seollal_breathe1_loop_00.png",
+    "poses": [
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      }
+    ]
+  },
+  "seollal_talk1": {
+    "theme": "seasonal",
+    "mode": "seollal",
+    "anchor": "sprites/hd720/frames/seollal_breathe1_loop/seollal_breathe1_loop_00.png",
+    "poses": [
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      }
+    ]
+  },
+  "seollal_bow1": {
+    "theme": "seasonal",
+    "mode": "seollal",
+    "anchor": "sprites/hd720/frames/seollal_breathe1_loop/seollal_breathe1_loop_00.png",
+    "poses": [
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 559,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 559,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 473,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 479,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 449,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 325,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 314,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 434,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 473,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 478,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 486,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 546,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 579,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 571,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      }
+    ]
+  },
+  "seollal_pouch1": {
+    "theme": "seasonal",
+    "mode": "seollal",
+    "anchor": "sprites/hd720/frames/seollal_breathe1_loop/seollal_breathe1_loop_00.png",
+    "poses": [
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 559,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 562,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 556,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 571,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 572,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 570,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 573,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 569,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 573,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 568,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 569,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 570,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 573,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 568,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      }
+    ]
+  },
+  "seollal_yut1": {
+    "theme": "seasonal",
+    "mode": "seollal",
+    "anchor": "sprites/hd720/frames/seollal_breathe1_loop/seollal_breathe1_loop_00.png",
+    "poses": [
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 556,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 516,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 521,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 592,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 598,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 527,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 484,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 458,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 526,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 525,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 491,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 503,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      }
+    ]
+  },
+  "seollal_soup1": {
+    "theme": "seasonal",
+    "mode": "seollal",
+    "anchor": "sprites/hd720/frames/seollal_breathe1_loop/seollal_breathe1_loop_00.png",
+    "poses": [
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 562,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 563,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 566,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 568,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 567,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 566,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 569,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 567,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 566,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 566,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 565,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 564,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 570,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 568,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      }
+    ]
+  },
+  "seollal_kite1": {
+    "theme": "seasonal",
+    "mode": "seollal",
+    "anchor": "sprites/hd720/frames/seollal_breathe1_loop/seollal_breathe1_loop_00.png",
+    "poses": [
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 559,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 559,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 553,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 609,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 609,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 554,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 593,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 591,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 591,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 592,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 479,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 447,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 462,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 463,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      }
+    ]
+  },
+  "seollal_jegi1": {
+    "theme": "seasonal",
+    "mode": "seollal",
+    "anchor": "sprites/hd720/frames/seollal_breathe1_loop/seollal_breathe1_loop_00.png",
+    "poses": [
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 464,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 558,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 557,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 557,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 551,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 564,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 557,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 528,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 529,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 519,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 521,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 574,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 570,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 529,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      }
+    ]
+  },
+  "christmas_breathe1": {
+    "theme": "seasonal",
+    "mode": "christmas",
+    "anchor": "sprites/hd720/frames/christmas_breathe1_loop/christmas_breathe1_loop_00.png",
+    "poses": [
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      }
+    ]
+  },
+  "christmas_look1": {
+    "theme": "seasonal",
+    "mode": "christmas",
+    "anchor": "sprites/hd720/frames/christmas_breathe1_loop/christmas_breathe1_loop_00.png",
+    "poses": [
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      }
+    ]
+  },
+  "christmas_tidy1": {
+    "theme": "seasonal",
+    "mode": "christmas",
+    "anchor": "sprites/hd720/frames/christmas_breathe1_loop/christmas_breathe1_loop_00.png",
+    "poses": [
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      }
+    ]
+  },
+  "christmas_talk1": {
+    "theme": "seasonal",
+    "mode": "christmas",
+    "anchor": "sprites/hd720/frames/christmas_breathe1_loop/christmas_breathe1_loop_00.png",
+    "poses": [
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      }
+    ]
+  },
+  "christmas_gift1": {
+    "theme": "seasonal",
+    "mode": "christmas",
+    "anchor": "sprites/hd720/frames/christmas_breathe1_loop/christmas_breathe1_loop_00.png",
+    "poses": [
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 551,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 558,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 551,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 548,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 556,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 556,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 528,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 543,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 543,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 554,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 549,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 545,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 554,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 547,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      }
+    ]
+  },
+  "christmas_fishbread1": {
+    "theme": "seasonal",
+    "mode": "christmas",
+    "anchor": "sprites/hd720/frames/christmas_breathe1_loop/christmas_breathe1_loop_00.png",
+    "poses": [
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 559,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 564,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 553,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 566,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 563,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 551,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 565,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 568,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 568,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 554,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 568,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 563,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 555,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      }
+    ]
+  },
+  "christmas_snowman1": {
+    "theme": "seasonal",
+    "mode": "christmas",
+    "anchor": "sprites/hd720/frames/christmas_breathe1_loop/christmas_breathe1_loop_00.png",
+    "poses": [
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680,
+        "alignment": "bounds"
+      },
+      {
+        "height": 487,
+        "x": 360,
+        "bottom": 680,
+        "alignment": "bounds"
+      },
+      {
+        "height": 519,
+        "x": 360,
+        "bottom": 680,
+        "alignment": "bounds"
+      },
+      {
+        "height": 499,
+        "x": 360,
+        "bottom": 680,
+        "alignment": "bounds"
+      },
+      {
+        "height": 530,
+        "x": 360,
+        "bottom": 680,
+        "alignment": "bounds"
+      },
+      {
+        "height": 538,
+        "x": 360,
+        "bottom": 680,
+        "alignment": "bounds"
+      },
+      {
+        "height": 531,
+        "x": 360,
+        "bottom": 680,
+        "alignment": "bounds"
+      },
+      {
+        "height": 526,
+        "x": 360,
+        "bottom": 680,
+        "alignment": "bounds"
+      },
+      {
+        "height": 528,
+        "x": 360,
+        "bottom": 680,
+        "alignment": "bounds"
+      },
+      {
+        "height": 529,
+        "x": 360,
+        "bottom": 680,
+        "alignment": "bounds"
+      },
+      {
+        "height": 505,
+        "x": 360,
+        "bottom": 680,
+        "alignment": "bounds"
+      },
+      {
+        "height": 507,
+        "x": 360,
+        "bottom": 680,
+        "alignment": "bounds"
+      },
+      {
+        "height": 508,
+        "x": 360,
+        "bottom": 680,
+        "alignment": "bounds"
+      },
+      {
+        "height": 576,
+        "x": 360,
+        "bottom": 680,
+        "alignment": "bounds"
+      },
+      {
+        "height": 570,
+        "x": 360,
+        "bottom": 680,
+        "alignment": "bounds"
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680,
+        "alignment": "bounds"
+      }
+    ]
+  },
+  "christmas_carol1": {
+    "theme": "seasonal",
+    "mode": "christmas",
+    "anchor": "sprites/hd720/frames/christmas_breathe1_loop/christmas_breathe1_loop_00.png",
+    "poses": [
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 557,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 552,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 551,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 555,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 543,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 558,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 549,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 545,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 545,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 555,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 555,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 556,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 557,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      }
+    ]
+  },
+  "christmas_snowglobe1": {
+    "theme": "seasonal",
+    "mode": "christmas",
+    "anchor": "sprites/hd720/frames/christmas_breathe1_loop/christmas_breathe1_loop_00.png",
+    "poses": [
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 556,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 551,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 561,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 564,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 561,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 564,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 533,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 547,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 566,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 548,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 553,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 558,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 555,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 554,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      }
+    ]
+  },
+  "christmas_snowcatch1": {
+    "theme": "seasonal",
+    "mode": "christmas",
+    "anchor": "sprites/hd720/frames/christmas_breathe1_loop/christmas_breathe1_loop_00.png",
+    "poses": [
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 547,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 555,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 524,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 568,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 575,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 572,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 540,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 532,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 559,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 527,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 573,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 563,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      }
+    ]
+  },
+  "childrensday_breathe1": {
+    "theme": "seasonal",
+    "mode": "childrensday",
+    "anchor": "sprites/hd720/frames/childrensday_breathe1_loop/childrensday_breathe1_loop_00.png",
+    "poses": [
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      }
+    ]
+  },
+  "childrensday_look1": {
+    "theme": "seasonal",
+    "mode": "childrensday",
+    "anchor": "sprites/hd720/frames/childrensday_breathe1_loop/childrensday_breathe1_loop_00.png",
+    "poses": [
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      }
+    ]
+  },
+  "childrensday_tidy1": {
+    "theme": "seasonal",
+    "mode": "childrensday",
+    "anchor": "sprites/hd720/frames/childrensday_breathe1_loop/childrensday_breathe1_loop_00.png",
+    "poses": [
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      }
+    ]
+  },
+  "childrensday_talk1": {
+    "theme": "seasonal",
+    "mode": "childrensday",
+    "anchor": "sprites/hd720/frames/childrensday_breathe1_loop/childrensday_breathe1_loop_00.png",
+    "poses": [
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      }
+    ]
+  },
+  "childrensday_bubbles1": {
+    "theme": "seasonal",
+    "mode": "childrensday",
+    "anchor": "sprites/hd720/frames/childrensday_breathe1_loop/childrensday_breathe1_loop_00.png",
+    "poses": [
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 558,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 559,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 558,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 545,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 574,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 565,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 587,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 569,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 536,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 548,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 547,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 544,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      }
+    ]
+  },
+  "childrensday_balloon1": {
+    "theme": "seasonal",
+    "mode": "childrensday",
+    "anchor": "sprites/hd720/frames/childrensday_breathe1_loop/childrensday_breathe1_loop_00.png",
+    "poses": [
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 577,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 544,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 550,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 643,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 645,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 571,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 520,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 478,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 502,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 526,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 544,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 548,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 546,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 589,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      }
+    ]
+  },
+  "childrensday_robot1": {
+    "theme": "seasonal",
+    "mode": "childrensday",
+    "anchor": "sprites/hd720/frames/childrensday_breathe1_loop/childrensday_breathe1_loop_00.png",
+    "poses": [
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680,
+        "alignment": "bounds"
+      },
+      {
+        "height": 553,
+        "x": 360,
+        "bottom": 680,
+        "alignment": "bounds"
+      },
+      {
+        "height": 539,
+        "x": 360,
+        "bottom": 680,
+        "alignment": "bounds"
+      },
+      {
+        "height": 470,
+        "x": 360,
+        "bottom": 680,
+        "alignment": "bounds"
+      },
+      {
+        "height": 494,
+        "x": 360,
+        "bottom": 680,
+        "alignment": "bounds"
+      },
+      {
+        "height": 442,
+        "x": 360,
+        "bottom": 680,
+        "alignment": "bounds"
+      },
+      {
+        "height": 478,
+        "x": 360,
+        "bottom": 680,
+        "alignment": "bounds"
+      },
+      {
+        "height": 462,
+        "x": 360,
+        "bottom": 680,
+        "alignment": "bounds"
+      },
+      {
+        "height": 433,
+        "x": 360,
+        "bottom": 680,
+        "alignment": "bounds"
+      },
+      {
+        "height": 514,
+        "x": 360,
+        "bottom": 680,
+        "alignment": "bounds"
+      },
+      {
+        "height": 501,
+        "x": 360,
+        "bottom": 680,
+        "alignment": "bounds"
+      },
+      {
+        "height": 505,
+        "x": 360,
+        "bottom": 680,
+        "alignment": "bounds"
+      },
+      {
+        "height": 459,
+        "x": 360,
+        "bottom": 680,
+        "alignment": "bounds"
+      },
+      {
+        "height": 525,
+        "x": 360,
+        "bottom": 680,
+        "alignment": "bounds"
+      },
+      {
+        "height": 466,
+        "x": 360,
+        "bottom": 680,
+        "alignment": "bounds"
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680,
+        "alignment": "bounds"
+      }
+    ]
+  },
+  "childrensday_plane1": {
+    "theme": "seasonal",
+    "mode": "childrensday",
+    "anchor": "sprites/hd720/frames/childrensday_breathe1_loop/childrensday_breathe1_loop_00.png",
+    "poses": [
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 558,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 562,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 559,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 557,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 557,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 565,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 554,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 541,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 545,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 540,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 504,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 483,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 531,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 544,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      }
+    ]
+  },
+  "childrensday_candyfloss1": {
+    "theme": "seasonal",
+    "mode": "childrensday",
+    "anchor": "sprites/hd720/frames/childrensday_breathe1_loop/childrensday_breathe1_loop_00.png",
+    "poses": [
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 561,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 561,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 553,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 565,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 565,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 564,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 563,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 565,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 567,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 562,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 566,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 544,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 551,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 554,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      }
+    ]
+  },
+  "childrensday_pinwheel1": {
+    "theme": "seasonal",
+    "mode": "childrensday",
+    "anchor": "sprites/hd720/frames/childrensday_breathe1_loop/childrensday_breathe1_loop_00.png",
+    "poses": [
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 558,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 559,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 557,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 561,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 561,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 561,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 551,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 546,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 562,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 572,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 519,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 555,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 553,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      }
+    ]
+  },
+  "summer_breathe1": {
+    "theme": "seasonal",
+    "mode": "summer",
+    "anchor": "sprites/hd720/frames/summer_breathe1_loop/summer_breathe1_loop_00.png",
+    "poses": [
+      {
+        "height": 559,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 559,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 559,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 559,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 559,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 559,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 559,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 559,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 559,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 559,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 559,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 559,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 559,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 559,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 559,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 559,
+        "x": 360,
+        "bottom": 680
+      }
+    ]
+  },
+  "summer_look1": {
+    "theme": "seasonal",
+    "mode": "summer",
+    "anchor": "sprites/hd720/frames/summer_breathe1_loop/summer_breathe1_loop_00.png",
+    "poses": [
+      {
+        "height": 559,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 559,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 559,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 559,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 559,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 559,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 559,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 559,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 559,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 559,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 559,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 559,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 559,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 559,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 559,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 559,
+        "x": 360,
+        "bottom": 680
+      }
+    ]
+  },
+  "summer_tidy1": {
+    "theme": "seasonal",
+    "mode": "summer",
+    "anchor": "sprites/hd720/frames/summer_breathe1_loop/summer_breathe1_loop_00.png",
+    "poses": [
+      {
+        "height": 559,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 559,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 559,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 559,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 559,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 559,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 559,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 559,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 559,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 559,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 559,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 559,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 559,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 559,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 559,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 559,
+        "x": 360,
+        "bottom": 680
+      }
+    ]
+  },
+  "summer_talk1": {
+    "theme": "seasonal",
+    "mode": "summer",
+    "anchor": "sprites/hd720/frames/summer_breathe1_loop/summer_breathe1_loop_00.png",
+    "poses": [
+      {
+        "height": 559,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 559,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 559,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 559,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 559,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 559,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 559,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 559,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 559,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 559,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 559,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 559,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 559,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 559,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 559,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 559,
+        "x": 360,
+        "bottom": 680
+      }
+    ]
+  },
+  "summer_tube1": {
+    "theme": "seasonal",
+    "mode": "summer",
+    "anchor": "sprites/hd720/frames/summer_breathe1_loop/summer_breathe1_loop_00.png",
+    "poses": [
+      {
+        "height": 559,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 547,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 468,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 505,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 543,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 556,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 576,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 577,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 565,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 556,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 563,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 552,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 571,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 457,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 466,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 559,
+        "x": 360,
+        "bottom": 680
+      }
+    ]
+  },
+  "summer_sandcastle1": {
+    "theme": "seasonal",
+    "mode": "summer",
+    "anchor": "sprites/hd720/frames/summer_breathe1_loop/summer_breathe1_loop_00.png",
+    "poses": [
+      {
+        "height": 559,
+        "x": 360,
+        "bottom": 680,
+        "alignment": "bounds"
+      },
+      {
+        "height": 468,
+        "x": 360,
+        "bottom": 680,
+        "alignment": "bounds"
+      },
+      {
+        "height": 475,
+        "x": 360,
+        "bottom": 680,
+        "alignment": "bounds"
+      },
+      {
+        "height": 476,
+        "x": 360,
+        "bottom": 680,
+        "alignment": "bounds"
+      },
+      {
+        "height": 463,
+        "x": 360,
+        "bottom": 680,
+        "alignment": "bounds"
+      },
+      {
+        "height": 494,
+        "x": 360,
+        "bottom": 680,
+        "alignment": "bounds"
+      },
+      {
+        "height": 488,
+        "x": 360,
+        "bottom": 680,
+        "alignment": "bounds"
+      },
+      {
+        "height": 475,
+        "x": 360,
+        "bottom": 680,
+        "alignment": "bounds"
+      },
+      {
+        "height": 440,
+        "x": 360,
+        "bottom": 680,
+        "alignment": "bounds"
+      },
+      {
+        "height": 453,
+        "x": 360,
+        "bottom": 680,
+        "alignment": "bounds"
+      },
+      {
+        "height": 460,
+        "x": 360,
+        "bottom": 680,
+        "alignment": "bounds"
+      },
+      {
+        "height": 496,
+        "x": 360,
+        "bottom": 680,
+        "alignment": "bounds"
+      },
+      {
+        "height": 473,
+        "x": 360,
+        "bottom": 680,
+        "alignment": "bounds"
+      },
+      {
+        "height": 446,
+        "x": 360,
+        "bottom": 680,
+        "alignment": "bounds"
+      },
+      {
+        "height": 490,
+        "x": 360,
+        "bottom": 680,
+        "alignment": "bounds"
+      },
+      {
+        "height": 559,
+        "x": 360,
+        "bottom": 680,
+        "alignment": "bounds"
+      }
+    ]
+  },
+  "summer_watermelon1": {
+    "theme": "seasonal",
+    "mode": "summer",
+    "anchor": "sprites/hd720/frames/summer_breathe1_loop/summer_breathe1_loop_00.png",
+    "poses": [
+      {
+        "height": 559,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 517,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 558,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 561,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 563,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 563,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 569,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 562,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 565,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 562,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 567,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 563,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 559,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 556,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 543,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 559,
+        "x": 360,
+        "bottom": 680
+      }
+    ]
+  },
+  "summer_watergun1": {
+    "theme": "seasonal",
+    "mode": "summer",
+    "anchor": "sprites/hd720/frames/summer_breathe1_loop/summer_breathe1_loop_00.png",
+    "poses": [
+      {
+        "height": 559,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 558,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 558,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 557,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 546,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 542,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 545,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 543,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 543,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 546,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 466,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 562,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 565,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 557,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 557,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 559,
+        "x": 360,
+        "bottom": 680
+      }
+    ]
+  },
+  "summer_waves1": {
+    "theme": "seasonal",
+    "mode": "summer",
+    "anchor": "sprites/hd720/frames/summer_breathe1_loop/summer_breathe1_loop_00.png",
+    "poses": [
+      {
+        "height": 559,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 554,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 554,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 549,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 564,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 541,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 562,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 556,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 558,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 580,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 548,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 561,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 557,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 550,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 557,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 559,
+        "x": 360,
+        "bottom": 680
+      }
+    ]
+  },
+  "summer_fan1": {
+    "theme": "seasonal",
+    "mode": "summer",
+    "anchor": "sprites/hd720/frames/summer_breathe1_loop/summer_breathe1_loop_00.png",
+    "poses": [
+      {
+        "height": 559,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 565,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 565,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 572,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 572,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 570,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 572,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 576,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 570,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 576,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 574,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 573,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 574,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 577,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 559,
+        "x": 360,
+        "bottom": 680
+      }
+    ]
+  },
+  "transform_normal": {
+    "theme": "transform",
+    "mode": "normal",
+    "anchor": "sprites/hd720/frames/idle1_loop/idle1_loop_00.png",
+    "poses": [
+      {
+        "height": 633,
+        "x": 345.0,
+        "bottom": 700
+      },
+      {
+        "height": 609,
+        "x": 345.0,
+        "bottom": 700
+      },
+      {
+        "height": 635,
+        "x": 345.0,
+        "bottom": 700
+      },
+      {
+        "height": 635,
+        "x": 345.0,
+        "bottom": 700
+      },
+      {
+        "height": 634,
+        "x": 345.0,
+        "bottom": 700
+      },
+      {
+        "height": 634,
+        "x": 345.0,
+        "bottom": 700
+      },
+      {
+        "height": 651,
+        "x": 345.0,
+        "bottom": 700
+      },
+      {
+        "height": 645,
+        "x": 345.0,
+        "bottom": 700
+      },
+      {
+        "height": 614,
+        "x": 345.0,
+        "bottom": 700
+      },
+      {
+        "height": 617,
+        "x": 345.0,
+        "bottom": 700
+      },
+      {
+        "height": 645,
+        "x": 345.0,
+        "bottom": 700
+      },
+      {
+        "height": 619,
+        "x": 345.0,
+        "bottom": 700
+      },
+      {
+        "height": 634,
+        "x": 345.0,
+        "bottom": 700
+      },
+      {
+        "height": 598,
+        "x": 352,
+        "bottom": 690
+      },
+      {
+        "height": 553,
+        "x": 358,
+        "bottom": 679
+      },
+      {
+        "height": 569,
+        "x": 358,
+        "bottom": 679
+      }
+    ]
+  },
+  "transform_halloween": {
+    "theme": "transform",
+    "mode": "halloween",
+    "anchor": "sprites/hd720/frames/witchidle1_loop/witchidle1_loop_00.png",
+    "poses": [
+      {
+        "height": 561,
+        "x": 374.0,
+        "bottom": 681
+      },
+      {
+        "height": 563,
+        "x": 374.0,
+        "bottom": 681
+      },
+      {
+        "height": 556,
+        "x": 374.0,
+        "bottom": 681
+      },
+      {
+        "height": 558,
+        "x": 374.0,
+        "bottom": 681
+      },
+      {
+        "height": 561,
+        "x": 374.0,
+        "bottom": 681
+      },
+      {
+        "height": 561,
+        "x": 374.0,
+        "bottom": 681
+      },
+      {
+        "height": 564,
+        "x": 374.0,
+        "bottom": 681
+      },
+      {
+        "height": 555,
+        "x": 374.0,
+        "bottom": 681
+      },
+      {
+        "height": 518,
+        "x": 374.0,
+        "bottom": 681
+      },
+      {
+        "height": 511,
+        "x": 374.0,
+        "bottom": 681
+      },
+      {
+        "height": 520,
+        "x": 374.0,
+        "bottom": 681
+      },
+      {
+        "height": 528,
+        "x": 374.0,
+        "bottom": 681
+      },
+      {
+        "height": 541,
+        "x": 374.0,
+        "bottom": 681
+      },
+      {
+        "height": 544,
+        "x": 374.0,
+        "bottom": 681
+      },
+      {
+        "height": 533,
+        "x": 374.0,
+        "bottom": 681
+      },
+      {
+        "height": 570,
+        "x": 374.0,
+        "bottom": 681
+      }
+    ]
+  },
+  "transform_seollal": {
+    "theme": "transform",
+    "mode": "seollal",
+    "anchor": "sprites/hd720/frames/seollal_breathe1_loop/seollal_breathe1_loop_00.png",
+    "poses": [
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 681
+      },
+      {
+        "height": 549,
+        "x": 360,
+        "bottom": 681
+      },
+      {
+        "height": 543,
+        "x": 360,
+        "bottom": 681
+      },
+      {
+        "height": 555,
+        "x": 360,
+        "bottom": 681
+      },
+      {
+        "height": 569,
+        "x": 360,
+        "bottom": 681
+      },
+      {
+        "height": 570,
+        "x": 360,
+        "bottom": 681
+      },
+      {
+        "height": 566,
+        "x": 360,
+        "bottom": 681
+      },
+      {
+        "height": 570,
+        "x": 360,
+        "bottom": 681
+      },
+      {
+        "height": 531,
+        "x": 360,
+        "bottom": 681
+      },
+      {
+        "height": 534,
+        "x": 360,
+        "bottom": 681
+      },
+      {
+        "height": 534,
+        "x": 360,
+        "bottom": 681
+      },
+      {
+        "height": 550,
+        "x": 360,
+        "bottom": 681
+      },
+      {
+        "height": 625,
+        "x": 360,
+        "bottom": 681
+      },
+      {
+        "height": 624,
+        "x": 360,
+        "bottom": 681
+      },
+      {
+        "height": 624,
+        "x": 360,
+        "bottom": 681
+      },
+      {
+        "height": 569,
+        "x": 360,
+        "bottom": 681
+      }
+    ]
+  },
+  "transform_christmas": {
+    "theme": "transform",
+    "mode": "christmas",
+    "anchor": "sprites/hd720/frames/christmas_breathe1_loop/christmas_breathe1_loop_00.png",
+    "poses": [
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 556,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 562,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 557,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 551,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 544,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 507,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 515,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 522,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 516,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 550,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 554,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 540,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 569,
+        "x": 360,
+        "bottom": 680
+      }
+    ]
+  },
+  "transform_childrensday": {
+    "theme": "transform",
+    "mode": "childrensday",
+    "anchor": "sprites/hd720/frames/childrensday_breathe1_loop/childrensday_breathe1_loop_00.png",
+    "poses": [
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 557,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 553,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 561,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 588,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 583,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 584,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 582,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 557,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 558,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 562,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 561,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 583,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 588,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 575,
+        "x": 360,
+        "bottom": 680
+      },
+      {
+        "height": 569,
+        "x": 360,
+        "bottom": 680
+      }
+    ]
+  },
+  "transform_summer": {
+    "theme": "transform",
+    "mode": "summer",
+    "anchor": "sprites/hd720/frames/summer_breathe1_loop/summer_breathe1_loop_00.png",
+    "poses": [
+      {
+        "height": 559,
+        "x": 360,
+        "bottom": 679
+      },
+      {
+        "height": 545,
+        "x": 360,
+        "bottom": 679
+      },
+      {
+        "height": 556,
+        "x": 360,
+        "bottom": 679
+      },
+      {
+        "height": 545,
+        "x": 360,
+        "bottom": 679
+      },
+      {
+        "height": 559,
+        "x": 360,
+        "bottom": 679
+      },
+      {
+        "height": 560,
+        "x": 360,
+        "bottom": 679
+      },
+      {
+        "height": 565,
+        "x": 360,
+        "bottom": 679
+      },
+      {
+        "height": 562,
+        "x": 360,
+        "bottom": 679
+      },
+      {
+        "height": 533,
+        "x": 360,
+        "bottom": 679
+      },
+      {
+        "height": 530,
+        "x": 360,
+        "bottom": 679
+      },
+      {
+        "height": 548,
+        "x": 360,
+        "bottom": 679
+      },
+      {
+        "height": 555,
+        "x": 360,
+        "bottom": 679
+      },
+      {
+        "height": 588,
+        "x": 360,
+        "bottom": 679
+      },
+      {
+        "height": 584,
+        "x": 360,
+        "bottom": 679
+      },
+      {
+        "height": 582,
+        "x": 360,
+        "bottom": 679
+      },
+      {
+        "height": 568,
+        "x": 360,
+        "bottom": 679
+      }
+    ]
+  }
+}

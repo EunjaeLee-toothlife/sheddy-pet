@@ -1,106 +1,464 @@
 {
   "name": "transform_normal_loop",
   "state": "transform_normal",
-  "sheet": "sprites/raw/transform/normal.png",
-  "sha256": "e7d302f11e44b223da3175aaaa505feeaabcd218f9be6fef5cbe4d6cc76a9c65",
-  "cellBoxes": [
-    [
-      0,
-      0,
-      314,
-      314
-    ],
-    [
-      314,
-      0,
-      627,
-      314
-    ],
-    [
-      627,
-      0,
-      940,
-      314
-    ],
-    [
-      940,
-      0,
-      1254,
-      314
-    ],
-    [
-      0,
-      314,
-      314,
-      627
-    ],
-    [
-      314,
-      314,
-      627,
-      627
-    ],
-    [
-      627,
-      314,
-      940,
-      627
-    ],
-    [
-      940,
-      314,
-      1254,
-      627
-    ],
-    [
-      0,
-      627,
-      314,
-      936
-    ],
-    [
-      314,
-      627,
-      627,
-      939
-    ],
-    [
-      627,
-      627,
-      940,
-      940
-    ],
-    [
-      940,
-      627,
-      1254,
-      933
-    ],
-    [
-      0,
-      936,
-      314,
-      1254
-    ],
-    [
-      314,
-      939,
-      627,
-      1254
-    ],
-    [
-      627,
-      940,
-      940,
-      1254
-    ],
-    [
-      940,
-      933,
-      1254,
-      1254
-    ]
-  ],
   "fps": 12,
-  "holds": {}
+  "holds": {},
+  "nativeSources": [
+    {
+      "source": "sprites/raw/native/transform/transform_normal/14-15.png",
+      "sourceSha256": "8dd8693b2697b6fb32038a5e0dc34203508a8488c2fd393214df8af94382af01",
+      "cell": [
+        887,
+        0,
+        1774,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        100,
+        62,
+        748,
+        844
+      ],
+      "scale": 0.7276214833759591,
+      "position": [
+        51,
+        65
+      ],
+      "target": {
+        "height": 569,
+        "x": 358,
+        "bottom": 679
+      }
+    },
+    {
+      "source": "sprites/raw/native/transform/transform_normal/14-15.png",
+      "sourceSha256": "8dd8693b2697b6fb32038a5e0dc34203508a8488c2fd393214df8af94382af01",
+      "cell": [
+        0,
+        0,
+        887,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        181,
+        76,
+        741,
+        859
+      ],
+      "scale": 0.7062579821200511,
+      "position": [
+        27,
+        73
+      ],
+      "target": {
+        "height": 553,
+        "x": 358,
+        "bottom": 679
+      }
+    },
+    {
+      "source": "sprites/raw/native/transform/transform_normal/12-13.png",
+      "sourceSha256": "bd6316d3a7d19fe7efb53b5ad59c21455568db5207831277d5b31990dcb81973",
+      "cell": [
+        887,
+        0,
+        1774,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        162,
+        44,
+        708,
+        853
+      ],
+      "scale": 0.7391841779975278,
+      "position": [
+        33,
+        59
+      ],
+      "target": {
+        "height": 598,
+        "x": 352,
+        "bottom": 690
+      }
+    },
+    {
+      "source": "sprites/raw/native/transform/transform_normal/12-13.png",
+      "sourceSha256": "bd6316d3a7d19fe7efb53b5ad59c21455568db5207831277d5b31990dcb81973",
+      "cell": [
+        0,
+        0,
+        887,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        148,
+        36,
+        804,
+        840
+      ],
+      "scale": 0.7885572139303483,
+      "position": [
+        -29,
+        38
+      ],
+      "target": {
+        "height": 634,
+        "x": 345.0,
+        "bottom": 700
+      }
+    },
+    {
+      "source": "sprites/raw/native/transform/transform_normal/10-11.png",
+      "sourceSha256": "ddc70e8ff3100e221d4a8eec144b41907b865a5df3c6e5df6571768bbd2f1cd9",
+      "cell": [
+        887,
+        0,
+        1774,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        95,
+        61,
+        809,
+        858
+      ],
+      "scale": 0.7766624843161857,
+      "position": [
+        -51,
+        33
+      ],
+      "target": {
+        "height": 619,
+        "x": 345.0,
+        "bottom": 700
+      }
+    },
+    {
+      "source": "sprites/raw/native/transform/transform_normal/10-11.png",
+      "sourceSha256": "ddc70e8ff3100e221d4a8eec144b41907b865a5df3c6e5df6571768bbd2f1cd9",
+      "cell": [
+        0,
+        0,
+        887,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        83,
+        36,
+        825,
+        863
+      ],
+      "scale": 0.7799274486094316,
+      "position": [
+        -24,
+        27
+      ],
+      "target": {
+        "height": 645,
+        "x": 345.0,
+        "bottom": 700
+      }
+    },
+    {
+      "source": "sprites/raw/native/transform/transform_normal/08-09.png",
+      "sourceSha256": "f4fd429f0f93f7d89a3eae30698463384f75d4a6ea57d474b4d3d031efb5f328",
+      "cell": [
+        887,
+        0,
+        1774,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        96,
+        39,
+        783,
+        839
+      ],
+      "scale": 0.77125,
+      "position": [
+        24,
+        53
+      ],
+      "target": {
+        "height": 617,
+        "x": 345.0,
+        "bottom": 700
+      }
+    },
+    {
+      "source": "sprites/raw/native/transform/transform_normal/08-09.png",
+      "sourceSha256": "f4fd429f0f93f7d89a3eae30698463384f75d4a6ea57d474b4d3d031efb5f328",
+      "cell": [
+        0,
+        0,
+        887,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        103,
+        48,
+        858,
+        827
+      ],
+      "scale": 0.7881899871630296,
+      "position": [
+        -9,
+        49
+      ],
+      "target": {
+        "height": 614,
+        "x": 345.0,
+        "bottom": 700
+      }
+    },
+    {
+      "source": "sprites/raw/native/transform/transform_normal/06-07.png",
+      "sourceSha256": "0bb424253976795eb78765f08ba9584ccf46683dea20e6d1c7c3299ec68a9fc3",
+      "cell": [
+        887,
+        0,
+        1774,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        83,
+        83,
+        791,
+        848
+      ],
+      "scale": 0.8431372549019608,
+      "position": [
+        8,
+        -15
+      ],
+      "target": {
+        "height": 645,
+        "x": 345.0,
+        "bottom": 700
+      }
+    },
+    {
+      "source": "sprites/raw/native/transform/transform_normal/06-07.png",
+      "sourceSha256": "0bb424253976795eb78765f08ba9584ccf46683dea20e6d1c7c3299ec68a9fc3",
+      "cell": [
+        0,
+        0,
+        887,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        117,
+        52,
+        881,
+        838
+      ],
+      "scale": 0.8282442748091603,
+      "position": [
+        -52,
+        6
+      ],
+      "target": {
+        "height": 651,
+        "x": 345.0,
+        "bottom": 700
+      }
+    },
+    {
+      "source": "sprites/raw/native/transform/transform_normal/04-05.png",
+      "sourceSha256": "874d5db69bd903f2747d410ab9f23dad5bd16e59449d3a01a82f3789738bce7d",
+      "cell": [
+        887,
+        0,
+        1774,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        141,
+        45,
+        697,
+        836
+      ],
+      "scale": 0.8015170670037927,
+      "position": [
+        -10,
+        30
+      ],
+      "target": {
+        "height": 634,
+        "x": 345.0,
+        "bottom": 700
+      }
+    },
+    {
+      "source": "sprites/raw/native/transform/transform_normal/04-05.png",
+      "sourceSha256": "874d5db69bd903f2747d410ab9f23dad5bd16e59449d3a01a82f3789738bce7d",
+      "cell": [
+        0,
+        0,
+        887,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        224,
+        45,
+        710,
+        836
+      ],
+      "scale": 0.8015170670037927,
+      "position": [
+        -25,
+        30
+      ],
+      "target": {
+        "height": 634,
+        "x": 345.0,
+        "bottom": 700
+      }
+    },
+    {
+      "source": "sprites/raw/native/transform/transform_normal/02-03.png",
+      "sourceSha256": "cbe8882d69b93692f6719be266faa58bc7482cc690a5339a95a04592d87ed041",
+      "cell": [
+        887,
+        0,
+        1774,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        125,
+        27,
+        594,
+        845
+      ],
+      "scale": 0.7762836185819071,
+      "position": [
+        74,
+        44
+      ],
+      "target": {
+        "height": 635,
+        "x": 345.0,
+        "bottom": 700
+      }
+    },
+    {
+      "source": "sprites/raw/native/transform/transform_normal/02-03.png",
+      "sourceSha256": "cbe8882d69b93692f6719be266faa58bc7482cc690a5339a95a04592d87ed041",
+      "cell": [
+        0,
+        0,
+        887,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        285,
+        27,
+        752,
+        845
+      ],
+      "scale": 0.7762836185819071,
+      "position": [
+        -48,
+        44
+      ],
+      "target": {
+        "height": 635,
+        "x": 345.0,
+        "bottom": 700
+      }
+    },
+    {
+      "source": "sprites/raw/native/transform/transform_normal/00-01.png",
+      "sourceSha256": "1683e39329a69f2711af185cbdecb3fccc2e486b2f39c3b1692310ad9c729a72",
+      "cell": [
+        887,
+        0,
+        1774,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        166,
+        75,
+        621,
+        866
+      ],
+      "scale": 0.7699115044247787,
+      "position": [
+        103,
+        33
+      ],
+      "target": {
+        "height": 609,
+        "x": 345.0,
+        "bottom": 700
+      }
+    },
+    {
+      "anchor": "sprites/hd720/frames/idle1_loop/idle1_loop_00.png",
+      "sourceSha256": "9ec4a182aef2d98aa0a2e28c7ac01036ea56a3d76af144c9dc6ad2c16571f645"
+    }
+  ],
+  "sourcePipeline": "native-pairs-v1",
+  "anchor": "sprites/hd720/frames/idle1_loop/idle1_loop_00.png"
 }

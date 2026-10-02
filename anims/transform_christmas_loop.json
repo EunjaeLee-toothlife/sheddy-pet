@@ -1,106 +1,438 @@
 {
   "name": "transform_christmas_loop",
   "state": "transform_christmas",
-  "sheet": "sprites/raw/transform/christmas.png",
-  "sha256": "0d54068a13b76fad83eff1eccbe827498bebafc61fc416940ea67eddb12072a5",
-  "cellBoxes": [
-    [
-      0,
-      0,
-      314,
-      314
-    ],
-    [
-      314,
-      0,
-      627,
-      314
-    ],
-    [
-      627,
-      0,
-      940,
-      314
-    ],
-    [
-      940,
-      0,
-      1254,
-      314
-    ],
-    [
-      0,
-      314,
-      314,
-      627
-    ],
-    [
-      314,
-      314,
-      627,
-      627
-    ],
-    [
-      627,
-      314,
-      940,
-      627
-    ],
-    [
-      940,
-      314,
-      1254,
-      627
-    ],
-    [
-      0,
-      627,
-      314,
-      928
-    ],
-    [
-      314,
-      627,
-      627,
-      927
-    ],
-    [
-      627,
-      627,
-      940,
-      932
-    ],
-    [
-      940,
-      627,
-      1254,
-      930
-    ],
-    [
-      0,
-      928,
-      314,
-      1254
-    ],
-    [
-      314,
-      927,
-      627,
-      1254
-    ],
-    [
-      627,
-      932,
-      940,
-      1254
-    ],
-    [
-      940,
-      930,
-      1254,
-      1254
-    ]
-  ],
   "fps": 12,
-  "holds": {}
+  "holds": {},
+  "nativeSources": [
+    {
+      "anchor": "sprites/hd720/frames/transform_normal_start/transform_normal_start_15.png",
+      "sourceSha256": "8f8a07f5d69700f2eb2a815de2e9a1e07779994b5125dfdb8a993efa0658d901"
+    },
+    {
+      "source": "sprites/raw/native/transform/transform_christmas/14-15.png",
+      "sourceSha256": "791564e7500a4a1627bd49ccc6868ff322fd5707acd8274f083615e5c8d99677",
+      "cell": [
+        0,
+        0,
+        887,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        182,
+        107,
+        721,
+        826
+      ],
+      "scale": 0.7510431154381085,
+      "position": [
+        27,
+        60
+      ],
+      "target": {
+        "height": 540,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/transform/transform_christmas/12-13.png",
+      "sourceSha256": "ba7a48b9210880d184761e26e36119cdba9a0b4628a7cc224e5cb685e90e78b0",
+      "cell": [
+        887,
+        0,
+        1774,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        164,
+        57,
+        688,
+        840
+      ],
+      "scale": 0.7075351213282248,
+      "position": [
+        59,
+        85
+      ],
+      "target": {
+        "height": 554,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/transform/transform_christmas/12-13.png",
+      "sourceSha256": "ba7a48b9210880d184761e26e36119cdba9a0b4628a7cc224e5cb685e90e78b0",
+      "cell": [
+        0,
+        0,
+        887,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        166,
+        65,
+        819,
+        834
+      ],
+      "scale": 0.7152145643693107,
+      "position": [
+        11,
+        84
+      ],
+      "target": {
+        "height": 550,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/transform/transform_christmas/10-11.png",
+      "sourceSha256": "307e1c2ba2e6a0fbddd28f306df14138361e67dc1dbae2826e6c8db00a5817b6",
+      "cell": [
+        887,
+        0,
+        1774,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        41,
+        97,
+        742,
+        808
+      ],
+      "scale": 0.7257383966244726,
+      "position": [
+        -7,
+        93
+      ],
+      "target": {
+        "height": 516,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/transform/transform_christmas/10-11.png",
+      "sourceSha256": "307e1c2ba2e6a0fbddd28f306df14138361e67dc1dbae2826e6c8db00a5817b6",
+      "cell": [
+        0,
+        0,
+        887,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        176,
+        35,
+        824,
+        812
+      ],
+      "scale": 0.6718146718146718,
+      "position": [
+        31,
+        134
+      ],
+      "target": {
+        "height": 522,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/transform/transform_christmas/08-09.png",
+      "sourceSha256": "4a51655c914fa20b8512e82ab4ce38274dc342f3629515699a1963ae7e7caac6",
+      "cell": [
+        887,
+        0,
+        1774,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        169,
+        104,
+        767,
+        841
+      ],
+      "scale": 0.6987788331071914,
+      "position": [
+        -20,
+        92
+      ],
+      "target": {
+        "height": 515,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/transform/transform_christmas/08-09.png",
+      "sourceSha256": "4a51655c914fa20b8512e82ab4ce38274dc342f3629515699a1963ae7e7caac6",
+      "cell": [
+        0,
+        0,
+        887,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        80,
+        84,
+        858,
+        828
+      ],
+      "scale": 0.6814516129032258,
+      "position": [
+        32,
+        116
+      ],
+      "target": {
+        "height": 507,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/transform/transform_christmas/06-07.png",
+      "sourceSha256": "29e68ba6c52c1e8984e6159b6122babbf6aee09e61a67132add8328e63f22e56",
+      "cell": [
+        887,
+        0,
+        1774,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        96,
+        52,
+        780,
+        842
+      ],
+      "scale": 0.6886075949367089,
+      "position": [
+        1,
+        100
+      ],
+      "target": {
+        "height": 544,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/transform/transform_christmas/06-07.png",
+      "sourceSha256": "29e68ba6c52c1e8984e6159b6122babbf6aee09e61a67132add8328e63f22e56",
+      "cell": [
+        0,
+        0,
+        887,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        120,
+        35,
+        863,
+        832
+      ],
+      "scale": 0.7026348808030113,
+      "position": [
+        42,
+        96
+      ],
+      "target": {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/transform/transform_christmas/04-05.png",
+      "sourceSha256": "c29784f0e080b1eb93d871e1131116a94ff4565002f1777e4b3b3abc48eaf62d",
+      "cell": [
+        887,
+        0,
+        1774,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        103,
+        12,
+        723,
+        852
+      ],
+      "scale": 0.655952380952381,
+      "position": [
+        81,
+        121
+      ],
+      "target": {
+        "height": 551,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/transform/transform_christmas/04-05.png",
+      "sourceSha256": "c29784f0e080b1eb93d871e1131116a94ff4565002f1777e4b3b3abc48eaf62d",
+      "cell": [
+        0,
+        0,
+        887,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        185,
+        12,
+        766,
+        852
+      ],
+      "scale": 0.6666666666666666,
+      "position": [
+        27,
+        112
+      ],
+      "target": {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/transform/transform_christmas/02-03.png",
+      "sourceSha256": "1ac7a64ad74cdb670454eb93e9c57f5562de7ef487300cb5d470129263849b12",
+      "cell": [
+        887,
+        0,
+        1774,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        139,
+        49,
+        689,
+        842
+      ],
+      "scale": 0.7023959646910467,
+      "position": [
+        64,
+        89
+      ],
+      "target": {
+        "height": 557,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/transform/transform_christmas/02-03.png",
+      "sourceSha256": "1ac7a64ad74cdb670454eb93e9c57f5562de7ef487300cb5d470129263849b12",
+      "cell": [
+        0,
+        0,
+        887,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        200,
+        38,
+        742,
+        843
+      ],
+      "scale": 0.698136645962733,
+      "position": [
+        38,
+        91
+      ],
+      "target": {
+        "height": 562,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/transform/transform_christmas/00-01.png",
+      "sourceSha256": "469d13a929b6da4c2d1b1a802048e14cf952788f39eea5cb73281b577bdd7fa7",
+      "cell": [
+        887,
+        0,
+        1774,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        105,
+        79,
+        631,
+        844
+      ],
+      "scale": 0.726797385620915,
+      "position": [
+        107,
+        67
+      ],
+      "target": {
+        "height": 556,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "anchor": "sprites/hd720/frames/christmas_breathe1_loop/christmas_breathe1_loop_00.png",
+      "sourceSha256": "b4accc101d1611b5ae81670d02f5e58a90a578ee4c0898841a7beded206bfe03"
+    }
+  ],
+  "sourcePipeline": "native-pairs-v1",
+  "anchor": "sprites/hd720/frames/christmas_breathe1_loop/christmas_breathe1_loop_00.png"
 }

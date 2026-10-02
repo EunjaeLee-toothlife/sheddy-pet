@@ -1,106 +1,6 @@
 {
   "name": "childrensday_tidy1_loop",
   "state": "childrensday_tidy1",
-  "sheet": "sprites/raw/seasonal/childrensday_tidy1.png",
-  "sha256": "19de7266fcf9bdcbb26e020367bb0f7eee262c40e38c4d1f2392881b45188832",
-  "cellBoxes": [
-    [
-      0,
-      0,
-      314,
-      315
-    ],
-    [
-      314,
-      0,
-      627,
-      315
-    ],
-    [
-      627,
-      0,
-      940,
-      315
-    ],
-    [
-      940,
-      0,
-      1254,
-      315
-    ],
-    [
-      0,
-      315,
-      314,
-      628
-    ],
-    [
-      314,
-      315,
-      627,
-      628
-    ],
-    [
-      627,
-      315,
-      940,
-      628
-    ],
-    [
-      940,
-      315,
-      1254,
-      628
-    ],
-    [
-      0,
-      628,
-      314,
-      940
-    ],
-    [
-      314,
-      628,
-      627,
-      940
-    ],
-    [
-      627,
-      628,
-      940,
-      940
-    ],
-    [
-      940,
-      628,
-      1254,
-      940
-    ],
-    [
-      0,
-      940,
-      314,
-      1254
-    ],
-    [
-      314,
-      940,
-      627,
-      1254
-    ],
-    [
-      627,
-      940,
-      940,
-      1254
-    ],
-    [
-      940,
-      940,
-      1254,
-      1254
-    ]
-  ],
   "fps": 12,
   "holds": {
     "0": 3,
@@ -119,5 +19,437 @@
     "13": 3,
     "14": 3,
     "15": 3
-  }
+  },
+  "nativeSources": [
+    {
+      "anchor": "sprites/hd720/frames/childrensday_breathe1_loop/childrensday_breathe1_loop_00.png",
+      "sourceSha256": "abf2e90af0b1b6e2244bfd83397094aaf5c5436eadc5db20bc9037ee43e459d0"
+    },
+    {
+      "source": "sprites/raw/native/seasonal/childrensday_tidy1/00-01.png",
+      "sourceSha256": "275bbba30ac4b86e624215fe653b0f0f3d74cbeff119c91bc97dfe95cb1a9cf9",
+      "cell": [
+        887,
+        0,
+        1774,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        161,
+        42,
+        647,
+        825
+      ],
+      "scale": 0.7151979565772669,
+      "position": [
+        62,
+        90
+      ],
+      "target": {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/childrensday_tidy1/02-03.png",
+      "sourceSha256": "e5f8c6e965d3f0d99ec14e304f40d3f7eafda6e71b1db19412cf4e8ed8301667",
+      "cell": [
+        0,
+        0,
+        887,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        203,
+        33,
+        735,
+        834
+      ],
+      "scale": 0.6991260923845194,
+      "position": [
+        45,
+        97
+      ],
+      "target": {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/childrensday_tidy1/02-03.png",
+      "sourceSha256": "e5f8c6e965d3f0d99ec14e304f40d3f7eafda6e71b1db19412cf4e8ed8301667",
+      "cell": [
+        887,
+        0,
+        1774,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        160,
+        33,
+        683,
+        834
+      ],
+      "scale": 0.6991260923845194,
+      "position": [
+        81,
+        97
+      ],
+      "target": {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/childrensday_tidy1/04-05.png",
+      "sourceSha256": "89d1c4ec88240c356aee513279cd79c4e823c1e65ad8c8a57844f3e4bdf65a95",
+      "cell": [
+        0,
+        0,
+        887,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        196,
+        55,
+        742,
+        836
+      ],
+      "scale": 0.7170294494238156,
+      "position": [
+        27,
+        81
+      ],
+      "target": {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/childrensday_tidy1/04-05.png",
+      "sourceSha256": "89d1c4ec88240c356aee513279cd79c4e823c1e65ad8c8a57844f3e4bdf65a95",
+      "cell": [
+        887,
+        0,
+        1774,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        118,
+        55,
+        649,
+        838
+      ],
+      "scale": 0.7151979565772669,
+      "position": [
+        102,
+        81
+      ],
+      "target": {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/childrensday_tidy1/06-07.png",
+      "sourceSha256": "e6b8fa9eadf8fc978de4f47a730e6b1c87673c157554f93dc148b503febf41c0",
+      "cell": [
+        0,
+        0,
+        887,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        219,
+        46,
+        777,
+        824
+      ],
+      "scale": 0.7197943444730077,
+      "position": [
+        17,
+        88
+      ],
+      "target": {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/childrensday_tidy1/06-07.png",
+      "sourceSha256": "e6b8fa9eadf8fc978de4f47a730e6b1c87673c157554f93dc148b503febf41c0",
+      "cell": [
+        887,
+        0,
+        1774,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        128,
+        49,
+        665,
+        824
+      ],
+      "scale": 0.7225806451612903,
+      "position": [
+        64,
+        84
+      ],
+      "target": {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/childrensday_tidy1/08-09.png",
+      "sourceSha256": "1952e268ebf38d9385d8eec03183cca3d9eec9ae8b9ae9d1fa800afe777ac5e8",
+      "cell": [
+        0,
+        0,
+        887,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        236,
+        43,
+        816,
+        841
+      ],
+      "scale": 0.7017543859649122,
+      "position": [
+        -19,
+        90
+      ],
+      "target": {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/childrensday_tidy1/08-09.png",
+      "sourceSha256": "1952e268ebf38d9385d8eec03183cca3d9eec9ae8b9ae9d1fa800afe777ac5e8",
+      "cell": [
+        887,
+        0,
+        1774,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        122,
+        45,
+        696,
+        844
+      ],
+      "scale": 0.7008760951188986,
+      "position": [
+        53,
+        88
+      ],
+      "target": {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/childrensday_tidy1/10-11.png",
+      "sourceSha256": "e8a3ac6f047b899e32ee23cc693c77b7f70133b6b828a086e6e3ecb6bdaa0506",
+      "cell": [
+        0,
+        0,
+        887,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        223,
+        46,
+        773,
+        825
+      ],
+      "scale": 0.7188703465982028,
+      "position": [
+        10,
+        87
+      ],
+      "target": {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/childrensday_tidy1/10-11.png",
+      "sourceSha256": "e8a3ac6f047b899e32ee23cc693c77b7f70133b6b828a086e6e3ecb6bdaa0506",
+      "cell": [
+        887,
+        0,
+        1774,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        113,
+        48,
+        657,
+        830
+      ],
+      "scale": 0.7161125319693095,
+      "position": [
+        92,
+        86
+      ],
+      "target": {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/childrensday_tidy1/12-13.png",
+      "sourceSha256": "69d9b8bf1c3314d6f0542c0852f845bacfb7f3c32eb4f50b229a32cf9a49b88b",
+      "cell": [
+        0,
+        0,
+        887,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        238,
+        53,
+        761,
+        831
+      ],
+      "scale": 0.7197943444730077,
+      "position": [
+        11,
+        83
+      ],
+      "target": {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/childrensday_tidy1/12-13.png",
+      "sourceSha256": "69d9b8bf1c3314d6f0542c0852f845bacfb7f3c32eb4f50b229a32cf9a49b88b",
+      "cell": [
+        887,
+        0,
+        1774,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        111,
+        52,
+        632,
+        830
+      ],
+      "scale": 0.7197943444730077,
+      "position": [
+        77,
+        83
+      ],
+      "target": {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/childrensday_tidy1/14-15.png",
+      "sourceSha256": "7dc2c1b38325686eb1f90b48007d85569065f7e66206aee8e83e9aeb17fe26fc",
+      "cell": [
+        0,
+        0,
+        887,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        237,
+        42,
+        767,
+        839
+      ],
+      "scale": 0.7026348808030113,
+      "position": [
+        10,
+        91
+      ],
+      "target": {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "anchor": "sprites/hd720/frames/childrensday_breathe1_loop/childrensday_breathe1_loop_00.png",
+      "sourceSha256": "abf2e90af0b1b6e2244bfd83397094aaf5c5436eadc5db20bc9037ee43e459d0"
+    }
+  ],
+  "sourcePipeline": "native-pairs-v1",
+  "anchor": "sprites/hd720/frames/childrensday_breathe1_loop/childrensday_breathe1_loop_00.png"
 }

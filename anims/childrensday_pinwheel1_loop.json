@@ -1,106 +1,6 @@
 {
   "name": "childrensday_pinwheel1_loop",
   "state": "childrensday_pinwheel1",
-  "sheet": "sprites/raw/seasonal/childrensday_pinwheel1.png",
-  "sha256": "b2d3b43633d5eec99f222b1b5792cdf00af8453dd2f6e1888a3840ede9e4c749",
-  "cellBoxes": [
-    [
-      0,
-      0,
-      314,
-      314
-    ],
-    [
-      314,
-      0,
-      627,
-      314
-    ],
-    [
-      627,
-      0,
-      940,
-      314
-    ],
-    [
-      940,
-      0,
-      1254,
-      314
-    ],
-    [
-      0,
-      314,
-      314,
-      627
-    ],
-    [
-      314,
-      314,
-      627,
-      627
-    ],
-    [
-      627,
-      314,
-      940,
-      627
-    ],
-    [
-      940,
-      314,
-      1254,
-      627
-    ],
-    [
-      0,
-      627,
-      314,
-      936
-    ],
-    [
-      314,
-      627,
-      627,
-      940
-    ],
-    [
-      627,
-      627,
-      940,
-      940
-    ],
-    [
-      940,
-      627,
-      1254,
-      940
-    ],
-    [
-      0,
-      936,
-      314,
-      1254
-    ],
-    [
-      314,
-      940,
-      627,
-      1254
-    ],
-    [
-      627,
-      940,
-      940,
-      1254
-    ],
-    [
-      940,
-      940,
-      1254,
-      1254
-    ]
-  ],
   "fps": 12,
   "holds": {
     "0": 2,
@@ -119,5 +19,437 @@
     "13": 2,
     "14": 2,
     "15": 2
-  }
+  },
+  "nativeSources": [
+    {
+      "anchor": "sprites/hd720/frames/childrensday_breathe1_loop/childrensday_breathe1_loop_00.png",
+      "sourceSha256": "abf2e90af0b1b6e2244bfd83397094aaf5c5436eadc5db20bc9037ee43e459d0"
+    },
+    {
+      "source": "sprites/raw/native/seasonal/childrensday_pinwheel1/00-01.png",
+      "sourceSha256": "18b0fb53f50716bc7f27d195416eebfe7e39ed71f0f62ecca7f3840757256394",
+      "cell": [
+        887,
+        0,
+        1774,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        90,
+        58,
+        724,
+        833
+      ],
+      "scale": 0.72,
+      "position": [
+        85,
+        80
+      ],
+      "target": {
+        "height": 558,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/childrensday_pinwheel1/02-03.png",
+      "sourceSha256": "a6f9cd466c5dfa71576922c8065f6c051cbbe753d5eba6d842e00306d9a827cf",
+      "cell": [
+        0,
+        0,
+        887,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        220,
+        48,
+        742,
+        834
+      ],
+      "scale": 0.7111959287531806,
+      "position": [
+        -1,
+        87
+      ],
+      "target": {
+        "height": 559,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/childrensday_pinwheel1/02-03.png",
+      "sourceSha256": "a6f9cd466c5dfa71576922c8065f6c051cbbe753d5eba6d842e00306d9a827cf",
+      "cell": [
+        887,
+        0,
+        1774,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        129,
+        57,
+        645,
+        834
+      ],
+      "scale": 0.7168597168597168,
+      "position": [
+        57,
+        82
+      ],
+      "target": {
+        "height": 557,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/childrensday_pinwheel1/04-05.png",
+      "sourceSha256": "5b6ce2d7e94898ff5759dc08b33f2eb03fe05a05275497efccb2334c3619a7b2",
+      "cell": [
+        0,
+        0,
+        887,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        192,
+        40,
+        759,
+        843
+      ],
+      "scale": 0.6973848069738481,
+      "position": [
+        22,
+        92
+      ],
+      "target": {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/childrensday_pinwheel1/04-05.png",
+      "sourceSha256": "5b6ce2d7e94898ff5759dc08b33f2eb03fe05a05275497efccb2334c3619a7b2",
+      "cell": [
+        887,
+        0,
+        1774,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        89,
+        40,
+        731,
+        843
+      ],
+      "scale": 0.6986301369863014,
+      "position": [
+        99,
+        91
+      ],
+      "target": {
+        "height": 561,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/childrensday_pinwheel1/06-07.png",
+      "sourceSha256": "65bd832c424e8e20b436e3b202e850052f64842ccac09a3d989d5792fb2d478b",
+      "cell": [
+        0,
+        0,
+        887,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        148,
+        42,
+        841,
+        834
+      ],
+      "scale": 0.7083333333333334,
+      "position": [
+        20,
+        89
+      ],
+      "target": {
+        "height": 561,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/childrensday_pinwheel1/06-07.png",
+      "sourceSha256": "65bd832c424e8e20b436e3b202e850052f64842ccac09a3d989d5792fb2d478b",
+      "cell": [
+        887,
+        0,
+        1774,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        94,
+        42,
+        754,
+        837
+      ],
+      "scale": 0.7056603773584905,
+      "position": [
+        68,
+        89
+      ],
+      "target": {
+        "height": 561,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/childrensday_pinwheel1/08-09.png",
+      "sourceSha256": "171228c00116ee6b500fac0b9205383b6c835106ee77025c6ca03046d7317064",
+      "cell": [
+        0,
+        0,
+        887,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        80,
+        57,
+        813,
+        830
+      ],
+      "scale": 0.7128072445019404,
+      "position": [
+        21,
+        89
+      ],
+      "target": {
+        "height": 551,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/childrensday_pinwheel1/08-09.png",
+      "sourceSha256": "171228c00116ee6b500fac0b9205383b6c835106ee77025c6ca03046d7317064",
+      "cell": [
+        887,
+        0,
+        1774,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        89,
+        73,
+        769,
+        840
+      ],
+      "scale": 0.711864406779661,
+      "position": [
+        54,
+        82
+      ],
+      "target": {
+        "height": 546,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/childrensday_pinwheel1/10-11.png",
+      "sourceSha256": "47014e7c8c25b610936b9e92342a602d7653ee99dcb7c7b436824f86d7926a1c",
+      "cell": [
+        0,
+        0,
+        887,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        164,
+        36,
+        818,
+        838
+      ],
+      "scale": 0.7007481296758105,
+      "position": [
+        -15,
+        93
+      ],
+      "target": {
+        "height": 562,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/childrensday_pinwheel1/10-11.png",
+      "sourceSha256": "47014e7c8c25b610936b9e92342a602d7653ee99dcb7c7b436824f86d7926a1c",
+      "cell": [
+        887,
+        0,
+        1774,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        101,
+        36,
+        743,
+        838
+      ],
+      "scale": 0.713216957605985,
+      "position": [
+        29,
+        82
+      ],
+      "target": {
+        "height": 572,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/childrensday_pinwheel1/12-13.png",
+      "sourceSha256": "d7353f164cbcad08b9fd9537302b550f43c0e2f9c4159fdf5d7a83fc9883dbcc",
+      "cell": [
+        0,
+        0,
+        887,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        186,
+        58,
+        794,
+        804
+      ],
+      "scale": 0.6957104557640751,
+      "position": [
+        62,
+        121
+      ],
+      "target": {
+        "height": 519,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/childrensday_pinwheel1/12-13.png",
+      "sourceSha256": "d7353f164cbcad08b9fd9537302b550f43c0e2f9c4159fdf5d7a83fc9883dbcc",
+      "cell": [
+        887,
+        0,
+        1774,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        141,
+        72,
+        673,
+        828
+      ],
+      "scale": 0.7341269841269841,
+      "position": [
+        59,
+        72
+      ],
+      "target": {
+        "height": 555,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/childrensday_pinwheel1/14-15.png",
+      "sourceSha256": "0303a8d2acb76601c6818a9114e472788b6e927bf524a0aa158fc4cedb9dfb41",
+      "cell": [
+        0,
+        0,
+        887,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        224,
+        57,
+        759,
+        829
+      ],
+      "scale": 0.716321243523316,
+      "position": [
+        -8,
+        86
+      ],
+      "target": {
+        "height": 553,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "anchor": "sprites/hd720/frames/childrensday_breathe1_loop/childrensday_breathe1_loop_00.png",
+      "sourceSha256": "abf2e90af0b1b6e2244bfd83397094aaf5c5436eadc5db20bc9037ee43e459d0"
+    }
+  ],
+  "sourcePipeline": "native-pairs-v1",
+  "anchor": "sprites/hd720/frames/childrensday_breathe1_loop/childrensday_breathe1_loop_00.png"
 }

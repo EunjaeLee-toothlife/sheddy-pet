@@ -1,106 +1,6 @@
 {
   "name": "christmas_snowman1_loop",
   "state": "christmas_snowman1",
-  "sheet": "sprites/raw/seasonal/christmas_snowman1.png",
-  "sha256": "779f377ecb2a5aa04c55709ebf9fadbb7d3c754d911c165f289d541827806a6b",
-  "cellBoxes": [
-    [
-      0,
-      0,
-      314,
-      314
-    ],
-    [
-      314,
-      0,
-      627,
-      316
-    ],
-    [
-      627,
-      0,
-      940,
-      318
-    ],
-    [
-      940,
-      0,
-      1254,
-      314
-    ],
-    [
-      0,
-      314,
-      314,
-      627
-    ],
-    [
-      314,
-      316,
-      627,
-      627
-    ],
-    [
-      627,
-      318,
-      940,
-      627
-    ],
-    [
-      940,
-      314,
-      1254,
-      627
-    ],
-    [
-      0,
-      627,
-      314,
-      940
-    ],
-    [
-      314,
-      627,
-      627,
-      935
-    ],
-    [
-      627,
-      627,
-      940,
-      937
-    ],
-    [
-      940,
-      627,
-      1254,
-      940
-    ],
-    [
-      0,
-      940,
-      314,
-      1254
-    ],
-    [
-      314,
-      935,
-      627,
-      1254
-    ],
-    [
-      627,
-      937,
-      940,
-      1254
-    ],
-    [
-      940,
-      940,
-      1254,
-      1254
-    ]
-  ],
   "fps": 12,
   "holds": {
     "0": 2,
@@ -119,5 +19,451 @@
     "13": 2,
     "14": 2,
     "15": 2
-  }
+  },
+  "nativeSources": [
+    {
+      "anchor": "sprites/hd720/frames/christmas_breathe1_loop/christmas_breathe1_loop_00.png",
+      "sourceSha256": "b4accc101d1611b5ae81670d02f5e58a90a578ee4c0898841a7beded206bfe03"
+    },
+    {
+      "source": "sprites/raw/native/seasonal/christmas_snowman1/00-01.png",
+      "sourceSha256": "3797bdacaaa8776f83d22f0ec03f47bc66e17cd6d8c372fc99169e98d57c6c38",
+      "cell": [
+        887,
+        0,
+        1774,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        129,
+        183,
+        643,
+        867
+      ],
+      "scale": 0.7119883040935673,
+      "position": [
+        85,
+        62
+      ],
+      "target": {
+        "height": 487,
+        "x": 360,
+        "bottom": 680,
+        "alignment": "bounds"
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/christmas_snowman1/02-03.png",
+      "sourceSha256": "7330d627f45cbb4bb2ee815c3be03736a37eedbf62f37961a8ddbb0002eb1877",
+      "cell": [
+        0,
+        0,
+        887,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        149,
+        81,
+        771,
+        846
+      ],
+      "scale": 0.6784313725490196,
+      "position": [
+        48,
+        106
+      ],
+      "target": {
+        "height": 519,
+        "x": 360,
+        "bottom": 680,
+        "alignment": "bounds"
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/christmas_snowman1/02-03.png",
+      "sourceSha256": "7330d627f45cbb4bb2ee815c3be03736a37eedbf62f37961a8ddbb0002eb1877",
+      "cell": [
+        887,
+        0,
+        1774,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        78,
+        99,
+        639,
+        842
+      ],
+      "scale": 0.6716016150740243,
+      "position": [
+        119,
+        115
+      ],
+      "target": {
+        "height": 499,
+        "x": 360,
+        "bottom": 680,
+        "alignment": "bounds"
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/christmas_snowman1/04-05.png",
+      "sourceSha256": "15e3241fb0d3fa1b91972e2079cdffc4f92ac07857929a7e49922ec3fb013f15",
+      "cell": [
+        0,
+        0,
+        887,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        156,
+        35,
+        734,
+        837
+      ],
+      "scale": 0.6608478802992519,
+      "position": [
+        66,
+        127
+      ],
+      "target": {
+        "height": 530,
+        "x": 360,
+        "bottom": 680,
+        "alignment": "bounds"
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/christmas_snowman1/04-05.png",
+      "sourceSha256": "15e3241fb0d3fa1b91972e2079cdffc4f92ac07857929a7e49922ec3fb013f15",
+      "cell": [
+        887,
+        0,
+        1774,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        33,
+        63,
+        612,
+        847
+      ],
+      "scale": 0.6862244897959183,
+      "position": [
+        138,
+        99
+      ],
+      "target": {
+        "height": 538,
+        "x": 360,
+        "bottom": 680,
+        "alignment": "bounds"
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/christmas_snowman1/06-07.png",
+      "sourceSha256": "2b14b8d8669562b73d6c10aefb9088f9f7a0e602781109605d848c986ac2b978",
+      "cell": [
+        0,
+        0,
+        887,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        129,
+        48,
+        805,
+        830
+      ],
+      "scale": 0.6790281329923273,
+      "position": [
+        43,
+        117
+      ],
+      "target": {
+        "height": 531,
+        "x": 360,
+        "bottom": 680,
+        "alignment": "bounds"
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/christmas_snowman1/06-07.png",
+      "sourceSha256": "2b14b8d8669562b73d6c10aefb9088f9f7a0e602781109605d848c986ac2b978",
+      "cell": [
+        887,
+        0,
+        1774,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        81,
+        63,
+        757,
+        832
+      ],
+      "scale": 0.6840052015604682,
+      "position": [
+        73,
+        110
+      ],
+      "target": {
+        "height": 526,
+        "x": 360,
+        "bottom": 680,
+        "alignment": "bounds"
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/christmas_snowman1/08-09.png",
+      "sourceSha256": "b6052c48ef4e61963985f304cc105e1ef8a607f043f348280f2b4885f548936c",
+      "cell": [
+        0,
+        0,
+        887,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        152,
+        72,
+        801,
+        825
+      ],
+      "scale": 0.701195219123506,
+      "position": [
+        26,
+        101
+      ],
+      "target": {
+        "height": 528,
+        "x": 360,
+        "bottom": 680,
+        "alignment": "bounds"
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/christmas_snowman1/08-09.png",
+      "sourceSha256": "b6052c48ef4e61963985f304cc105e1ef8a607f043f348280f2b4885f548936c",
+      "cell": [
+        887,
+        0,
+        1774,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        63,
+        75,
+        739,
+        825
+      ],
+      "scale": 0.7053333333333334,
+      "position": [
+        77,
+        97
+      ],
+      "target": {
+        "height": 529,
+        "x": 360,
+        "bottom": 680,
+        "alignment": "bounds"
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/christmas_snowman1/10-11.png",
+      "sourceSha256": "cf67612cf85ac75ecf865ef25e0eecf5395ead8b76b020c3a851e6f3d6525f48",
+      "cell": [
+        0,
+        0,
+        887,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        172,
+        74,
+        838,
+        823
+      ],
+      "scale": 0.6742323097463284,
+      "position": [
+        20,
+        125
+      ],
+      "target": {
+        "height": 505,
+        "x": 360,
+        "bottom": 680,
+        "alignment": "bounds"
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/christmas_snowman1/10-11.png",
+      "sourceSha256": "cf67612cf85ac75ecf865ef25e0eecf5395ead8b76b020c3a851e6f3d6525f48",
+      "cell": [
+        887,
+        0,
+        1774,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        58,
+        88,
+        746,
+        821
+      ],
+      "scale": 0.6916780354706685,
+      "position": [
+        82,
+        111
+      ],
+      "target": {
+        "height": 507,
+        "x": 360,
+        "bottom": 680,
+        "alignment": "bounds"
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/christmas_snowman1/12-13.png",
+      "sourceSha256": "bc454ec095a27fa022a1a8582db315597b2e018e46a7e7569585c640700f1981",
+      "cell": [
+        0,
+        0,
+        887,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        251,
+        169,
+        806,
+        822
+      ],
+      "scale": 0.777947932618683,
+      "position": [
+        -51,
+        41
+      ],
+      "target": {
+        "height": 508,
+        "x": 360,
+        "bottom": 680,
+        "alignment": "bounds"
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/christmas_snowman1/12-13.png",
+      "sourceSha256": "bc454ec095a27fa022a1a8582db315597b2e018e46a7e7569585c640700f1981",
+      "cell": [
+        887,
+        0,
+        1774,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        122,
+        42,
+        718,
+        836
+      ],
+      "scale": 0.72544080604534,
+      "position": [
+        56,
+        74
+      ],
+      "target": {
+        "height": 576,
+        "x": 360,
+        "bottom": 680,
+        "alignment": "bounds"
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/christmas_snowman1/14-15.png",
+      "sourceSha256": "d550a52a2b75f7b1e9294d16e5780c614859165b54df512a2d93542a00056d09",
+      "cell": [
+        0,
+        0,
+        887,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        229,
+        18,
+        739,
+        869
+      ],
+      "scale": 0.6698002350176263,
+      "position": [
+        36,
+        98
+      ],
+      "target": {
+        "height": 570,
+        "x": 360,
+        "bottom": 680,
+        "alignment": "bounds"
+      }
+    },
+    {
+      "anchor": "sprites/hd720/frames/christmas_breathe1_loop/christmas_breathe1_loop_00.png",
+      "sourceSha256": "b4accc101d1611b5ae81670d02f5e58a90a578ee4c0898841a7beded206bfe03"
+    }
+  ],
+  "sourcePipeline": "native-pairs-v1",
+  "anchor": "sprites/hd720/frames/christmas_breathe1_loop/christmas_breathe1_loop_00.png"
 }

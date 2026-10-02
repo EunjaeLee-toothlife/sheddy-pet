@@ -16,6 +16,15 @@ def main():
     cocoon = None
     for motion in motions:
         mode = motion['mode']
+        existing = json.loads((ROOT / f'anims/transform_{mode}_start.json').read_text())
+        if existing.get('sourcePipeline') == 'native-pairs-v1':
+            from build_native_motion import build
+            from verify_native_motion import verify_state
+            build('transform_' + mode)
+            records.extend(verify_state('transform_' + mode))
+            if cocoon is None:
+                cocoon = Image.open(ROOT / 'sprites/hd720/frames/transform_normal_start/transform_normal_start_15.png').convert('RGBA')
+            continue
         raw = ROOT / f'sprites/raw/transform/{mode}.png'
         sheet = Image.open(raw)
         assert sheet.mode == 'RGBA' and sheet.getchannel('A').getextrema()[0] == 0

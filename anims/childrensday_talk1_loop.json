@@ -1,106 +1,6 @@
 {
   "name": "childrensday_talk1_loop",
   "state": "childrensday_talk1",
-  "sheet": "sprites/raw/seasonal/childrensday_talk1.png",
-  "sha256": "93f3b825c37e63ed453c074093760f290daaa881942a18dda0e21398dab7d221",
-  "cellBoxes": [
-    [
-      0,
-      0,
-      314,
-      314
-    ],
-    [
-      314,
-      0,
-      627,
-      314
-    ],
-    [
-      627,
-      0,
-      940,
-      314
-    ],
-    [
-      940,
-      0,
-      1254,
-      314
-    ],
-    [
-      0,
-      314,
-      314,
-      627
-    ],
-    [
-      314,
-      314,
-      627,
-      625
-    ],
-    [
-      627,
-      314,
-      940,
-      627
-    ],
-    [
-      940,
-      314,
-      1254,
-      627
-    ],
-    [
-      0,
-      627,
-      314,
-      934
-    ],
-    [
-      314,
-      625,
-      627,
-      933
-    ],
-    [
-      627,
-      627,
-      940,
-      934
-    ],
-    [
-      940,
-      627,
-      1254,
-      934
-    ],
-    [
-      0,
-      934,
-      314,
-      1254
-    ],
-    [
-      314,
-      933,
-      627,
-      1254
-    ],
-    [
-      627,
-      934,
-      940,
-      1254
-    ],
-    [
-      940,
-      934,
-      1254,
-      1254
-    ]
-  ],
   "fps": 12,
   "holds": {
     "0": 1,
@@ -119,5 +19,437 @@
     "13": 1,
     "14": 1,
     "15": 1
-  }
+  },
+  "nativeSources": [
+    {
+      "anchor": "sprites/hd720/frames/childrensday_breathe1_loop/childrensday_breathe1_loop_00.png",
+      "sourceSha256": "abf2e90af0b1b6e2244bfd83397094aaf5c5436eadc5db20bc9037ee43e459d0"
+    },
+    {
+      "source": "sprites/raw/native/seasonal/childrensday_talk1/00-01.png",
+      "sourceSha256": "6fc26a6d8f80a011079099fd5d45142394b21f197b0811be7c1b7b3ba1151705",
+      "cell": [
+        887,
+        0,
+        1774,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        121,
+        45,
+        632,
+        838
+      ],
+      "scale": 0.7061790668348046,
+      "position": [
+        74,
+        89
+      ],
+      "target": {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/childrensday_talk1/02-03.png",
+      "sourceSha256": "782bf7a7e891fd4ec6580ba8d21646d397fa15cfa12b48fbc7470870381c12b0",
+      "cell": [
+        0,
+        0,
+        887,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        193,
+        37,
+        738,
+        826
+      ],
+      "scale": 0.7097591888466414,
+      "position": [
+        20,
+        94
+      ],
+      "target": {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/childrensday_talk1/02-03.png",
+      "sourceSha256": "782bf7a7e891fd4ec6580ba8d21646d397fa15cfa12b48fbc7470870381c12b0",
+      "cell": [
+        887,
+        0,
+        1774,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        134,
+        39,
+        684,
+        827
+      ],
+      "scale": 0.7106598984771574,
+      "position": [
+        69,
+        93
+      ],
+      "target": {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/childrensday_talk1/04-05.png",
+      "sourceSha256": "218a2864f7d08cede16b0faea3b9746d7b4c04c621e05aa8fa6f89010e130575",
+      "cell": [
+        0,
+        0,
+        887,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        245,
+        49,
+        769,
+        833
+      ],
+      "scale": 0.7142857142857143,
+      "position": [
+        -18,
+        85
+      ],
+      "target": {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/childrensday_talk1/04-05.png",
+      "sourceSha256": "218a2864f7d08cede16b0faea3b9746d7b4c04c621e05aa8fa6f89010e130575",
+      "cell": [
+        887,
+        0,
+        1774,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        112,
+        56,
+        649,
+        833
+      ],
+      "scale": 0.7207207207207207,
+      "position": [
+        75,
+        80
+      ],
+      "target": {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/childrensday_talk1/06-07.png",
+      "sourceSha256": "fc6ac3065bf99df707141a833ff32f5cd6c53e87a8c2d60e87169f52fac26a8b",
+      "cell": [
+        0,
+        0,
+        887,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        216,
+        32,
+        747,
+        834
+      ],
+      "scale": 0.6982543640897756,
+      "position": [
+        -9,
+        98
+      ],
+      "target": {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/childrensday_talk1/06-07.png",
+      "sourceSha256": "fc6ac3065bf99df707141a833ff32f5cd6c53e87a8c2d60e87169f52fac26a8b",
+      "cell": [
+        887,
+        0,
+        1774,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        114,
+        45,
+        645,
+        829
+      ],
+      "scale": 0.7142857142857143,
+      "position": [
+        67,
+        87
+      ],
+      "target": {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/childrensday_talk1/08-09.png",
+      "sourceSha256": "9f5305fc8cd91d579c88d80b163081ae9ab889cc7a5ee023632275a0f7f8e2e0",
+      "cell": [
+        0,
+        0,
+        887,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        230,
+        50,
+        770,
+        831
+      ],
+      "scale": 0.7170294494238156,
+      "position": [
+        -32,
+        84
+      ],
+      "target": {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/childrensday_talk1/08-09.png",
+      "sourceSha256": "9f5305fc8cd91d579c88d80b163081ae9ab889cc7a5ee023632275a0f7f8e2e0",
+      "cell": [
+        887,
+        0,
+        1774,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        131,
+        51,
+        668,
+        832
+      ],
+      "scale": 0.7170294494238156,
+      "position": [
+        63,
+        84
+      ],
+      "target": {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/childrensday_talk1/10-11.png",
+      "sourceSha256": "3673d76786890d3da7a93a91d8fafca81bad6e3db56cb9b849b8239278195f79",
+      "cell": [
+        0,
+        0,
+        887,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        190,
+        51,
+        737,
+        827
+      ],
+      "scale": 0.7216494845360825,
+      "position": [
+        3,
+        83
+      ],
+      "target": {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/childrensday_talk1/10-11.png",
+      "sourceSha256": "3673d76786890d3da7a93a91d8fafca81bad6e3db56cb9b849b8239278195f79",
+      "cell": [
+        887,
+        0,
+        1774,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        133,
+        51,
+        672,
+        829
+      ],
+      "scale": 0.7197943444730077,
+      "position": [
+        64,
+        84
+      ],
+      "target": {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/childrensday_talk1/12-13.png",
+      "sourceSha256": "f857ff8d338351a754a66dd54d920384f08df8ef1dea2eafdca417abe523e468",
+      "cell": [
+        0,
+        0,
+        887,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        214,
+        44,
+        771,
+        844
+      ],
+      "scale": 0.7,
+      "position": [
+        8,
+        89
+      ],
+      "target": {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/childrensday_talk1/12-13.png",
+      "sourceSha256": "f857ff8d338351a754a66dd54d920384f08df8ef1dea2eafdca417abe523e468",
+      "cell": [
+        887,
+        0,
+        1774,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        119,
+        47,
+        663,
+        844
+      ],
+      "scale": 0.7026348808030113,
+      "position": [
+        84,
+        87
+      ],
+      "target": {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native/seasonal/childrensday_talk1/14-15.png",
+      "sourceSha256": "23f1559318d861e6085f5fbd49cb87ee952f1c4f1eb7d48fdfdb04825c52b0c0",
+      "cell": [
+        0,
+        0,
+        887,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        230,
+        54,
+        746,
+        830
+      ],
+      "scale": 0.7216494845360825,
+      "position": [
+        -3,
+        81
+      ],
+      "target": {
+        "height": 560,
+        "x": 360,
+        "bottom": 680
+      }
+    },
+    {
+      "anchor": "sprites/hd720/frames/childrensday_breathe1_loop/childrensday_breathe1_loop_00.png",
+      "sourceSha256": "abf2e90af0b1b6e2244bfd83397094aaf5c5436eadc5db20bc9037ee43e459d0"
+    }
+  ],
+  "sourcePipeline": "native-pairs-v1",
+  "anchor": "sprites/hd720/frames/childrensday_breathe1_loop/childrensday_breathe1_loop_00.png"
 }

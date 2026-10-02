@@ -1,106 +1,438 @@
 {
   "name": "transform_halloween_loop",
   "state": "transform_halloween",
-  "sheet": "sprites/raw/transform/halloween.png",
-  "sha256": "b81f499e55b64613520de77913a77fee772a25c66dea552559cfa4bd4952a835",
-  "cellBoxes": [
-    [
-      0,
-      0,
-      306,
-      322
-    ],
-    [
-      306,
-      0,
-      611,
-      322
-    ],
-    [
-      611,
-      0,
-      916,
-      322
-    ],
-    [
-      916,
-      0,
-      1222,
-      322
-    ],
-    [
-      0,
-      322,
-      306,
-      644
-    ],
-    [
-      306,
-      322,
-      611,
-      644
-    ],
-    [
-      611,
-      322,
-      916,
-      644
-    ],
-    [
-      916,
-      322,
-      1222,
-      641
-    ],
-    [
-      0,
-      644,
-      306,
-      943
-    ],
-    [
-      306,
-      644,
-      611,
-      947
-    ],
-    [
-      611,
-      644,
-      916,
-      953
-    ],
-    [
-      916,
-      641,
-      1222,
-      947
-    ],
-    [
-      0,
-      943,
-      306,
-      1287
-    ],
-    [
-      306,
-      947,
-      611,
-      1287
-    ],
-    [
-      611,
-      953,
-      916,
-      1287
-    ],
-    [
-      916,
-      947,
-      1222,
-      1287
-    ]
-  ],
   "fps": 12,
-  "holds": {}
+  "holds": {},
+  "nativeSources": [
+    {
+      "anchor": "sprites/hd720/frames/transform_normal_start/transform_normal_start_15.png",
+      "sourceSha256": "8f8a07f5d69700f2eb2a815de2e9a1e07779994b5125dfdb8a993efa0658d901"
+    },
+    {
+      "source": "sprites/raw/native/transform/transform_halloween/14-15.png",
+      "sourceSha256": "eb58157b144610820924a6f36c6e69382648b77c9879a39c7cd970fc66fa3718",
+      "cell": [
+        0,
+        0,
+        887,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        176,
+        54,
+        753,
+        833
+      ],
+      "scale": 0.6842105263157895,
+      "position": [
+        59,
+        111
+      ],
+      "target": {
+        "height": 533,
+        "x": 374.0,
+        "bottom": 681
+      }
+    },
+    {
+      "source": "sprites/raw/native/transform/transform_halloween/12-13.png",
+      "sourceSha256": "c31960a707e9bb71f72740f00c882fb70ae3aeead317c1d4f6c0cdee263eab70",
+      "cell": [
+        887,
+        0,
+        1774,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        167,
+        59,
+        712,
+        818
+      ],
+      "scale": 0.7167325428194994,
+      "position": [
+        60,
+        94
+      ],
+      "target": {
+        "height": 544,
+        "x": 374.0,
+        "bottom": 681
+      }
+    },
+    {
+      "source": "sprites/raw/native/transform/transform_halloween/12-13.png",
+      "sourceSha256": "c31960a707e9bb71f72740f00c882fb70ae3aeead317c1d4f6c0cdee263eab70",
+      "cell": [
+        0,
+        0,
+        887,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        155,
+        62,
+        814,
+        821
+      ],
+      "scale": 0.7127799736495388,
+      "position": [
+        39,
+        96
+      ],
+      "target": {
+        "height": 541,
+        "x": 374.0,
+        "bottom": 681
+      }
+    },
+    {
+      "source": "sprites/raw/native/transform/transform_halloween/10-11.png",
+      "sourceSha256": "5dc918572cb04e4ecd39e0c1fa662a2b91486403dc94c0f6a10129b975e71a94",
+      "cell": [
+        887,
+        0,
+        1774,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        105,
+        54,
+        779,
+        846
+      ],
+      "scale": 0.6666666666666666,
+      "position": [
+        -7,
+        117
+      ],
+      "target": {
+        "height": 528,
+        "x": 374.0,
+        "bottom": 681
+      }
+    },
+    {
+      "source": "sprites/raw/native/transform/transform_halloween/10-11.png",
+      "sourceSha256": "5dc918572cb04e4ecd39e0c1fa662a2b91486403dc94c0f6a10129b975e71a94",
+      "cell": [
+        0,
+        0,
+        887,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        112,
+        44,
+        777,
+        836
+      ],
+      "scale": 0.6565656565656566,
+      "position": [
+        115,
+        133
+      ],
+      "target": {
+        "height": 520,
+        "x": 374.0,
+        "bottom": 681
+      }
+    },
+    {
+      "source": "sprites/raw/native/transform/transform_halloween/08-09.png",
+      "sourceSha256": "8d6d6ba38d0ad26639c5e88cf095a1a1cd41f6939103fe8a9f29023a5f60fd5f",
+      "cell": [
+        887,
+        0,
+        1774,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        50,
+        44,
+        778,
+        858
+      ],
+      "scale": 0.6277641277641277,
+      "position": [
+        102,
+        142
+      ],
+      "target": {
+        "height": 511,
+        "x": 374.0,
+        "bottom": 681
+      }
+    },
+    {
+      "source": "sprites/raw/native/transform/transform_halloween/08-09.png",
+      "sourceSha256": "8d6d6ba38d0ad26639c5e88cf095a1a1cd41f6939103fe8a9f29023a5f60fd5f",
+      "cell": [
+        0,
+        0,
+        887,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        120,
+        21,
+        850,
+        838
+      ],
+      "scale": 0.6340269277845777,
+      "position": [
+        125,
+        150
+      ],
+      "target": {
+        "height": 518,
+        "x": 374.0,
+        "bottom": 681
+      }
+    },
+    {
+      "source": "sprites/raw/native/transform/transform_halloween/06-07.png",
+      "sourceSha256": "917008e750ba67ee1626ea4b28e8c3402291efb23dccf44dfbbc135ed299abb1",
+      "cell": [
+        887,
+        0,
+        1774,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        84,
+        48,
+        735,
+        840
+      ],
+      "scale": 0.7007575757575758,
+      "position": [
+        59,
+        92
+      ],
+      "target": {
+        "height": 555,
+        "x": 374.0,
+        "bottom": 681
+      }
+    },
+    {
+      "source": "sprites/raw/native/transform/transform_halloween/06-07.png",
+      "sourceSha256": "917008e750ba67ee1626ea4b28e8c3402291efb23dccf44dfbbc135ed299abb1",
+      "cell": [
+        0,
+        0,
+        887,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        139,
+        22,
+        860,
+        837
+      ],
+      "scale": 0.6920245398773006,
+      "position": [
+        -2,
+        102
+      ],
+      "target": {
+        "height": 564,
+        "x": 374.0,
+        "bottom": 681
+      }
+    },
+    {
+      "source": "sprites/raw/native/transform/transform_halloween/04-05.png",
+      "sourceSha256": "e1c909e76110430c8986aabe6f9754a219bc6cbfb15ec03d8f2f528c2e13334c",
+      "cell": [
+        887,
+        0,
+        1774,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        144,
+        47,
+        693,
+        840
+      ],
+      "scale": 0.7074401008827238,
+      "position": [
+        84,
+        87
+      ],
+      "target": {
+        "height": 561,
+        "x": 374.0,
+        "bottom": 681
+      }
+    },
+    {
+      "source": "sprites/raw/native/transform/transform_halloween/04-05.png",
+      "sourceSha256": "e1c909e76110430c8986aabe6f9754a219bc6cbfb15ec03d8f2f528c2e13334c",
+      "cell": [
+        0,
+        0,
+        887,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        218,
+        46,
+        757,
+        841
+      ],
+      "scale": 0.7056603773584905,
+      "position": [
+        41,
+        88
+      ],
+      "target": {
+        "height": 561,
+        "x": 374.0,
+        "bottom": 681
+      }
+    },
+    {
+      "source": "sprites/raw/native/transform/transform_halloween/02-03.png",
+      "sourceSha256": "7c99e768322cc7fcd76aae817f3d8cfe07ccfcf2c96282714db2e3997d4d8365",
+      "cell": [
+        887,
+        0,
+        1774,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        122,
+        28,
+        659,
+        847
+      ],
+      "scale": 0.6813186813186813,
+      "position": [
+        109,
+        104
+      ],
+      "target": {
+        "height": 558,
+        "x": 374.0,
+        "bottom": 681
+      }
+    },
+    {
+      "source": "sprites/raw/native/transform/transform_halloween/02-03.png",
+      "sourceSha256": "7c99e768322cc7fcd76aae817f3d8cfe07ccfcf2c96282714db2e3997d4d8365",
+      "cell": [
+        0,
+        0,
+        887,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        214,
+        28,
+        763,
+        848
+      ],
+      "scale": 0.6780487804878049,
+      "position": [
+        49,
+        106
+      ],
+      "target": {
+        "height": 556,
+        "x": 374.0,
+        "bottom": 681
+      }
+    },
+    {
+      "source": "sprites/raw/native/transform/transform_halloween/00-01.png",
+      "sourceSha256": "483a9c1b67ed2e226830be8450913a7dda2a227d19359a119e7c74be92eee38c",
+      "cell": [
+        887,
+        0,
+        1774,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        165,
+        48,
+        682,
+        852
+      ],
+      "scale": 0.7002487562189055,
+      "position": [
+        59,
+        85
+      ],
+      "target": {
+        "height": 563,
+        "x": 374.0,
+        "bottom": 681
+      }
+    },
+    {
+      "anchor": "sprites/hd720/frames/witchidle1_loop/witchidle1_loop_00.png",
+      "sourceSha256": "daf5e2677a7f084c2c5727a1e28c98c3cb5cb4d9d2a5aa2aa7f7c747352c79bd"
+    }
+  ],
+  "sourcePipeline": "native-pairs-v1",
+  "anchor": "sprites/hd720/frames/witchidle1_loop/witchidle1_loop_00.png"
 }
