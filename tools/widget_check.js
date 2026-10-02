@@ -509,7 +509,8 @@ const IN_THEME = async () => {
 
     // 실제 ended 이벤트와 주사위를 거쳐 결과가 선택되고 다시 테마 대기로 돌아오는지 확인한다.
     idleStreak = 0;
-    Math.random = () => 0.3;
+    // 대기 3종인 기념일은 두 번째 대기를 뽑아 기본 대기 재선택을 피한다.
+    Math.random = () => seasonal ? 0.34 : 0.3;
     await wait(() => current !== DEFAULT_STATE && !transitioning, "테마 자동 추첨");
     await wait(() => at(DEFAULT_STATE), "자동 결과 복귀");
     const requests = performance.getEntriesByType("resource").filter(r => r.name.endsWith(".webm"));

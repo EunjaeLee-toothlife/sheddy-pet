@@ -1,0 +1,286 @@
+{
+  "date": "2026-10-02",
+  "browser": "headless Chrome",
+  "generation": "built-in ImageGen",
+  "prompts": "anims/seasonal/motions.json",
+  "repairPrompts": [
+    "anims/seasonal/childrensday_balloon1-repair.prompt.txt",
+    "anims/seasonal/childrensday_breathe1-repair.prompt.txt",
+    "anims/seasonal/childrensday_plane1-repair.prompt.txt",
+    "anims/seasonal/christmas_snowman1-repair.prompt.txt",
+    "anims/seasonal/seollal_kite1-repair.prompt.txt",
+    "anims/seasonal/summer_watergun1-repair.prompt.txt"
+  ],
+  "sources": "sprites/raw/seasonal/",
+  "runtimeSha256": {
+    "widget.html": "7b9bfd4ef908710d6782103454452a0301a5cc1331f2592c8c046ed1f871f056",
+    "docs/index.html": "7b9bfd4ef908710d6782103454452a0301a5cc1331f2592c8c046ed1f871f056",
+    "tools/widget_check.js": "3df7e42f7529c324fc28aaf1f92137c16407dc26a8131ae78470cb6ee3429535"
+  },
+  "motionCount": 40,
+  "poseCount": 640,
+  "cacheLimitBytes": 4194304,
+  "technical": [
+    {
+      "mode": "seollal",
+      "roles": {
+        "idle": 3,
+        "talk": 1,
+        "special": 6
+      },
+      "results": [
+        "PASS seollal_breathe1: 16 poses, 48 ticks, 512/720 RGBA VP9, 498547 bytes",
+        "PASS seollal_look1: 16 poses, 48 ticks, 512/720 RGBA VP9, 566680 bytes",
+        "PASS seollal_tidy1: 16 poses, 48 ticks, 512/720 RGBA VP9, 586657 bytes",
+        "PASS seollal_talk1: 16 poses, 16 ticks, 512/720 RGBA VP9, 453607 bytes",
+        "PASS seollal_bow1: 16 poses, 36 ticks, 512/720 RGBA VP9, 534891 bytes",
+        "PASS seollal_pouch1: 16 poses, 36 ticks, 512/720 RGBA VP9, 604711 bytes",
+        "PASS seollal_yut1: 16 poses, 36 ticks, 512/720 RGBA VP9, 651460 bytes",
+        "PASS seollal_soup1: 16 poses, 36 ticks, 512/720 RGBA VP9, 593246 bytes",
+        "PASS seollal_kite1: 16 poses, 36 ticks, 512/720 RGBA VP9, 622835 bytes",
+        "PASS seollal_jegi1: 16 poses, 36 ticks, 512/720 RGBA VP9, 645802 bytes",
+        "PASS 10 clips / 160 poses / 5758436 HD bytes"
+      ]
+    },
+    {
+      "mode": "christmas",
+      "roles": {
+        "idle": 3,
+        "talk": 1,
+        "special": 6
+      },
+      "results": [
+        "PASS christmas_breathe1: 16 poses, 48 ticks, 512/720 RGBA VP9, 482493 bytes",
+        "PASS christmas_look1: 16 poses, 48 ticks, 512/720 RGBA VP9, 529900 bytes",
+        "PASS christmas_tidy1: 16 poses, 48 ticks, 512/720 RGBA VP9, 512918 bytes",
+        "PASS christmas_talk1: 16 poses, 16 ticks, 512/720 RGBA VP9, 428589 bytes",
+        "PASS christmas_gift1: 16 poses, 36 ticks, 512/720 RGBA VP9, 577188 bytes",
+        "PASS christmas_fishbread1: 16 poses, 36 ticks, 512/720 RGBA VP9, 552502 bytes",
+        "PASS christmas_snowman1: 16 poses, 36 ticks, 512/720 RGBA VP9, 516696 bytes",
+        "PASS christmas_carol1: 16 poses, 36 ticks, 512/720 RGBA VP9, 548433 bytes",
+        "PASS christmas_snowglobe1: 16 poses, 36 ticks, 512/720 RGBA VP9, 572071 bytes",
+        "PASS christmas_snowcatch1: 16 poses, 36 ticks, 512/720 RGBA VP9, 554164 bytes",
+        "PASS 10 clips / 160 poses / 5274954 HD bytes"
+      ]
+    },
+    {
+      "mode": "childrensday",
+      "roles": {
+        "idle": 3,
+        "talk": 1,
+        "special": 6
+      },
+      "results": [
+        "PASS childrensday_breathe1: 16 poses, 48 ticks, 512/720 RGBA VP9, 496589 bytes",
+        "PASS childrensday_look1: 16 poses, 48 ticks, 512/720 RGBA VP9, 544180 bytes",
+        "PASS childrensday_tidy1: 16 poses, 48 ticks, 512/720 RGBA VP9, 576280 bytes",
+        "PASS childrensday_talk1: 16 poses, 16 ticks, 512/720 RGBA VP9, 498407 bytes",
+        "PASS childrensday_bubbles1: 16 poses, 36 ticks, 512/720 RGBA VP9, 621961 bytes",
+        "PASS childrensday_balloon1: 16 poses, 36 ticks, 512/720 RGBA VP9, 636709 bytes",
+        "PASS childrensday_robot1: 16 poses, 36 ticks, 512/720 RGBA VP9, 621764 bytes",
+        "PASS childrensday_plane1: 16 poses, 36 ticks, 512/720 RGBA VP9, 590570 bytes",
+        "PASS childrensday_candyfloss1: 16 poses, 36 ticks, 512/720 RGBA VP9, 583550 bytes",
+        "PASS childrensday_pinwheel1: 16 poses, 36 ticks, 512/720 RGBA VP9, 640676 bytes",
+        "PASS 10 clips / 160 poses / 5810686 HD bytes"
+      ]
+    },
+    {
+      "mode": "summer",
+      "roles": {
+        "idle": 3,
+        "talk": 1,
+        "special": 6
+      },
+      "results": [
+        "PASS summer_breathe1: 16 poses, 48 ticks, 512/720 RGBA VP9, 554112 bytes",
+        "PASS summer_look1: 16 poses, 48 ticks, 512/720 RGBA VP9, 580211 bytes",
+        "PASS summer_tidy1: 16 poses, 48 ticks, 512/720 RGBA VP9, 657302 bytes",
+        "PASS summer_talk1: 16 poses, 16 ticks, 512/720 RGBA VP9, 504619 bytes",
+        "PASS summer_tube1: 16 poses, 36 ticks, 512/720 RGBA VP9, 677526 bytes",
+        "PASS summer_sandcastle1: 16 poses, 36 ticks, 512/720 RGBA VP9, 651872 bytes",
+        "PASS summer_watermelon1: 16 poses, 36 ticks, 512/720 RGBA VP9, 641738 bytes",
+        "PASS summer_watergun1: 16 poses, 36 ticks, 512/720 RGBA VP9, 667199 bytes",
+        "PASS summer_waves1: 16 poses, 36 ticks, 512/720 RGBA VP9, 744302 bytes",
+        "PASS summer_fan1: 16 poses, 36 ticks, 512/720 RGBA VP9, 645139 bytes",
+        "PASS 10 clips / 160 poses / 6324020 HD bytes"
+      ]
+    }
+  ],
+  "checksPassed": 94,
+  "checks": [
+    {
+      "mode": "normal",
+      "page": "widget.html",
+      "requestVideoFrameCallback": true,
+      "passed": 13,
+      "results": [
+        "PASS  renderBudget 3초 29회, 433×433",
+        "PASS  newReactions 16개 모션 단발 복귀 + 박수 계속 유지",
+        "PASS  danceLoops   3개 춤 각각 두 사이클, 무기한 유지, 워치독 개입 없음",
+        "PASS  alchemyEndings alchemy1_start → alchemy1_loop → alchemy1_end1 → alchemy1_outro → idle1_loop | alchemy1_start → alchemy1_loop → alchemy1_end2 → alchemy1_outro → idle1_loop | alchemy1_start → alchemy1_loop → alchemy1_end3 → alchemy1_outro → idle1_loop",
+        "PASS  alchemyHold  두 사이클 무기한 유지, 숨김 중 draw/재생 0, 큐 실행과 원복 정상",
+        "PASS  visibility   숨김 중 draw/재생 0, 전환과 큐 복구",
+        "PASS  cacheBudget  11/62클립, 4125684바이트, 동시 요청 2",
+        "PASS  pausePendingPlay play 완료 전 숨김/복귀 정상",
+        "PASS  cycles       재시작 지연 [7,9,5,5]ms",
+        "PASS  transitions  pastry1_start → pastry1_loop → pastry1_end4 → pastry1_outro → idle1_loop | happy1_start → happy1_loop → happy1_end → idle1_loop",
+        "PASS  queuedTalk   알파 최소 255, talk 시작 지연 [0,0,0,0]ms",
+        "PASS  holdQueue    pinnedUntil = Infinity 유지",
+        "PASS  staleChain   리셋 뒤에도 current = idle1 유지"
+      ]
+    },
+    {
+      "mode": "halloween",
+      "page": "widget.html",
+      "requestVideoFrameCallback": true,
+      "passed": 9,
+      "results": [
+        "PASS  modeScope    일반 시작 상태 대체, 선택기 28종, 외부 일반 모션 차단, 초기 영상 1개",
+        "PASS  themeIdle    대기 루프 두 사이클 연속 재생",
+        "PASS  themeResults 동작 27종 실제 재생 후 테마 복장으로 복귀, 투명 720 영상",
+        "PASS  themeHold    두 사이클 유지, 숨김 중 작업 0, 유효한 큐와 Infinity 보존",
+        "PASS  themeMic     무음/음량 임계값, 테마 말하기 두 사이클, 해제 지연, 테마 복귀, 장치 해제",
+        "PASS  themeAutomatic 실제 자동 추첨·복귀, 전용 클립만 요청, 캐시 3812894B",
+        "PASS  mode=halloween&state=alchemyslime1&dice=0 → alchemyslime1",
+        "PASS  mode=unknown&dice=0 → idle1",
+        "PASS  mode=__proto__&dice=0 → idle1"
+      ]
+    },
+    {
+      "mode": "seollal",
+      "page": "widget.html",
+      "requestVideoFrameCallback": true,
+      "passed": 9,
+      "results": [
+        "PASS  modeScope    일반 시작 상태 대체, 선택기 10종, 외부 일반 모션 차단, 초기 영상 1개",
+        "PASS  themeIdle    대기 루프 두 사이클 연속 재생",
+        "PASS  themeResults 동작 9종 실제 재생 후 테마 복장으로 복귀, 투명 720 영상",
+        "PASS  themeHold    두 사이클 유지, 숨김 중 작업 0, 유효한 큐와 Infinity 보존",
+        "PASS  themeMic     무음/음량 임계값, 테마 말하기 두 사이클, 해제 지연, 테마 복귀, 장치 해제",
+        "PASS  themeAutomatic 실제 자동 추첨·복귀, 전용 클립만 요청, 캐시 3927073B",
+        "PASS  mode=seollal&state=seollal_talk1&dice=0 → seollal_talk1",
+        "PASS  mode=unknown&dice=0 → idle1",
+        "PASS  mode=__proto__&dice=0 → idle1"
+      ]
+    },
+    {
+      "mode": "seollal",
+      "page": "docs/index.html",
+      "requestVideoFrameCallback": false,
+      "passed": 9,
+      "results": [
+        "PASS  modeScope    일반 시작 상태 대체, 선택기 10종, 외부 일반 모션 차단, 초기 영상 1개",
+        "PASS  themeIdle    대기 루프 두 사이클 연속 재생",
+        "PASS  themeResults 동작 9종 실제 재생 후 테마 복장으로 복귀, 투명 720 영상",
+        "PASS  themeHold    두 사이클 유지, 숨김 중 작업 0, 유효한 큐와 Infinity 보존",
+        "PASS  themeMic     무음/음량 임계값, 테마 말하기 두 사이클, 해제 지연, 테마 복귀, 장치 해제",
+        "PASS  themeAutomatic 실제 자동 추첨·복귀, 전용 클립만 요청, 캐시 3927073B",
+        "PASS  mode=seollal&state=seollal_talk1&dice=0 → seollal_talk1",
+        "PASS  mode=unknown&dice=0 → idle1",
+        "PASS  mode=__proto__&dice=0 → idle1"
+      ]
+    },
+    {
+      "mode": "christmas",
+      "page": "widget.html",
+      "requestVideoFrameCallback": true,
+      "passed": 9,
+      "results": [
+        "PASS  modeScope    일반 시작 상태 대체, 선택기 10종, 외부 일반 모션 차단, 초기 영상 1개",
+        "PASS  themeIdle    대기 루프 두 사이클 연속 재생",
+        "PASS  themeResults 동작 9종 실제 재생 후 테마 복장으로 복귀, 투명 720 영상",
+        "PASS  themeHold    두 사이클 유지, 숨김 중 작업 0, 유효한 큐와 Infinity 보존",
+        "PASS  themeMic     무음/음량 임계값, 테마 말하기 두 사이클, 해제 지연, 테마 복귀, 장치 해제",
+        "PASS  themeAutomatic 실제 자동 추첨·복귀, 전용 클립만 요청, 캐시 3696907B",
+        "PASS  mode=christmas&state=christmas_talk1&dice=0 → christmas_talk1",
+        "PASS  mode=unknown&dice=0 → idle1",
+        "PASS  mode=__proto__&dice=0 → idle1"
+      ]
+    },
+    {
+      "mode": "christmas",
+      "page": "docs/index.html",
+      "requestVideoFrameCallback": false,
+      "passed": 9,
+      "results": [
+        "PASS  modeScope    일반 시작 상태 대체, 선택기 10종, 외부 일반 모션 차단, 초기 영상 1개",
+        "PASS  themeIdle    대기 루프 두 사이클 연속 재생",
+        "PASS  themeResults 동작 9종 실제 재생 후 테마 복장으로 복귀, 투명 720 영상",
+        "PASS  themeHold    두 사이클 유지, 숨김 중 작업 0, 유효한 큐와 Infinity 보존",
+        "PASS  themeMic     무음/음량 임계값, 테마 말하기 두 사이클, 해제 지연, 테마 복귀, 장치 해제",
+        "PASS  themeAutomatic 실제 자동 추첨·복귀, 전용 클립만 요청, 캐시 3696907B",
+        "PASS  mode=christmas&state=christmas_talk1&dice=0 → christmas_talk1",
+        "PASS  mode=unknown&dice=0 → idle1",
+        "PASS  mode=__proto__&dice=0 → idle1"
+      ]
+    },
+    {
+      "mode": "childrensday",
+      "page": "widget.html",
+      "requestVideoFrameCallback": true,
+      "passed": 9,
+      "results": [
+        "PASS  modeScope    일반 시작 상태 대체, 선택기 10종, 외부 일반 모션 차단, 초기 영상 1개",
+        "PASS  themeIdle    대기 루프 두 사이클 연속 재생",
+        "PASS  themeResults 동작 9종 실제 재생 후 테마 복장으로 복귀, 투명 720 영상",
+        "PASS  themeHold    두 사이클 유지, 숨김 중 작업 0, 유효한 큐와 Infinity 보존",
+        "PASS  themeMic     무음/음량 임계값, 테마 말하기 두 사이클, 해제 지연, 테마 복귀, 장치 해제",
+        "PASS  themeAutomatic 실제 자동 추첨·복귀, 전용 클립만 요청, 캐시 4022072B",
+        "PASS  mode=childrensday&state=childrensday_talk1&dice=0 → childrensday_talk1",
+        "PASS  mode=unknown&dice=0 → idle1",
+        "PASS  mode=__proto__&dice=0 → idle1"
+      ]
+    },
+    {
+      "mode": "childrensday",
+      "page": "docs/index.html",
+      "requestVideoFrameCallback": false,
+      "passed": 9,
+      "results": [
+        "PASS  modeScope    일반 시작 상태 대체, 선택기 10종, 외부 일반 모션 차단, 초기 영상 1개",
+        "PASS  themeIdle    대기 루프 두 사이클 연속 재생",
+        "PASS  themeResults 동작 9종 실제 재생 후 테마 복장으로 복귀, 투명 720 영상",
+        "PASS  themeHold    두 사이클 유지, 숨김 중 작업 0, 유효한 큐와 Infinity 보존",
+        "PASS  themeMic     무음/음량 임계값, 테마 말하기 두 사이클, 해제 지연, 테마 복귀, 장치 해제",
+        "PASS  themeAutomatic 실제 자동 추첨·복귀, 전용 클립만 요청, 캐시 4022072B",
+        "PASS  mode=childrensday&state=childrensday_talk1&dice=0 → childrensday_talk1",
+        "PASS  mode=unknown&dice=0 → idle1",
+        "PASS  mode=__proto__&dice=0 → idle1"
+      ]
+    },
+    {
+      "mode": "summer",
+      "page": "widget.html",
+      "requestVideoFrameCallback": true,
+      "passed": 9,
+      "results": [
+        "PASS  modeScope    일반 시작 상태 대체, 선택기 10종, 외부 일반 모션 차단, 초기 영상 1개",
+        "PASS  themeIdle    대기 루프 두 사이클 연속 재생",
+        "PASS  themeResults 동작 9종 실제 재생 후 테마 복장으로 복귀, 투명 720 영상",
+        "PASS  themeHold    두 사이클 유지, 숨김 중 작업 0, 유효한 큐와 Infinity 보존",
+        "PASS  themeMic     무음/음량 임계값, 테마 말하기 두 사이클, 해제 지연, 테마 복귀, 장치 해제",
+        "PASS  themeAutomatic 실제 자동 추첨·복귀, 전용 클립만 요청, 캐시 3613479B",
+        "PASS  mode=summer&state=summer_talk1&dice=0 → summer_talk1",
+        "PASS  mode=unknown&dice=0 → idle1",
+        "PASS  mode=__proto__&dice=0 → idle1"
+      ]
+    },
+    {
+      "mode": "summer",
+      "page": "docs/index.html",
+      "requestVideoFrameCallback": false,
+      "passed": 9,
+      "results": [
+        "PASS  modeScope    일반 시작 상태 대체, 선택기 10종, 외부 일반 모션 차단, 초기 영상 1개",
+        "PASS  themeIdle    대기 루프 두 사이클 연속 재생",
+        "PASS  themeResults 동작 9종 실제 재생 후 테마 복장으로 복귀, 투명 720 영상",
+        "PASS  themeHold    두 사이클 유지, 숨김 중 작업 0, 유효한 큐와 Infinity 보존",
+        "PASS  themeMic     무음/음량 임계값, 테마 말하기 두 사이클, 해제 지연, 테마 복귀, 장치 해제",
+        "PASS  themeAutomatic 실제 자동 추첨·복귀, 전용 클립만 요청, 캐시 3613479B",
+        "PASS  mode=summer&state=summer_talk1&dice=0 → summer_talk1",
+        "PASS  mode=unknown&dice=0 → idle1",
+        "PASS  mode=__proto__&dice=0 → idle1"
+      ]
+    }
+  ]
+}
