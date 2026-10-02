@@ -14834,6 +14834,246 @@
       "state": "witchtalk1",
       "sha256": "ff9f09122c19f1b8e428622a9928f5a2b6ec06d83b2838c22b1975c5f2534dac",
       "reason": "ImageGen 할로윈 전용 모션. 원본/재구성 모드에서 공통 사용."
+    },
+    {
+      "file": "anim_seollal_breathe1_loop.webm",
+      "state": "seollal_breathe1",
+      "sha256": "2bbd83e67b152cabd5625dd5726ef44ed4566bcf0b0932815658898ab1b1fbfb",
+      "reason": "ImageGen 기념일 전용 모션. 원본/재구성 모드에서 공통 사용."
+    },
+    {
+      "file": "anim_seollal_look1_loop.webm",
+      "state": "seollal_look1",
+      "sha256": "312f1edb6c76c3cdac2706238ddb78733d7c64d3ca633ed169645dabe2d4e1db",
+      "reason": "ImageGen 기념일 전용 모션. 원본/재구성 모드에서 공통 사용."
+    },
+    {
+      "file": "anim_seollal_tidy1_loop.webm",
+      "state": "seollal_tidy1",
+      "sha256": "0e773557005f16f9a1f48a349b5d198f666f30346b728e95754326230db3dd49",
+      "reason": "ImageGen 기념일 전용 모션. 원본/재구성 모드에서 공통 사용."
+    },
+    {
+      "file": "anim_seollal_talk1_loop.webm",
+      "state": "seollal_talk1",
+      "sha256": "5a89563bdea6a82d42ab94dd95c98c06034eb000ce017866779dca55bceb5880",
+      "reason": "ImageGen 기념일 전용 모션. 원본/재구성 모드에서 공통 사용."
+    },
+    {
+      "file": "anim_seollal_bow1_loop.webm",
+      "state": "seollal_bow1",
+      "sha256": "91c33ec54e2306a6cb308938d05e8a666280f8e1d1cebbe956323078f3e7d21f",
+      "reason": "ImageGen 기념일 전용 모션. 원본/재구성 모드에서 공통 사용."
+    },
+    {
+      "file": "anim_seollal_pouch1_loop.webm",
+      "state": "seollal_pouch1",
+      "sha256": "7d0a7780a83bad7aaf10f7cc8cd3fbe596aed0317cba4726cf47066317d9257e",
+      "reason": "ImageGen 기념일 전용 모션. 원본/재구성 모드에서 공통 사용."
+    },
+    {
+      "file": "anim_seollal_yut1_loop.webm",
+      "state": "seollal_yut1",
+      "sha256": "0cbea74fa1909c3b2a118e70cd8e65b9c1ec886c4877b7a4cea33053ec2a14bc",
+      "reason": "ImageGen 기념일 전용 모션. 원본/재구성 모드에서 공통 사용."
+    },
+    {
+      "file": "anim_seollal_soup1_loop.webm",
+      "state": "seollal_soup1",
+      "sha256": "134f78ff3442e7e49b0e1bbdc567c43d7677d2efdbcd302c0a79385cbdec5658",
+      "reason": "ImageGen 기념일 전용 모션. 원본/재구성 모드에서 공통 사용."
+    },
+    {
+      "file": "anim_seollal_kite1_loop.webm",
+      "state": "seollal_kite1",
+      "sha256": "67c3a572cae0863ad0eaf7706f148f6d11280b70693c19571bc8ccfd3a350efc",
+      "reason": "ImageGen 기념일 전용 모션. 원본/재구성 모드에서 공통 사용."
+    },
+    {
+      "file": "anim_seollal_jegi1_loop.webm",
+      "state": "seollal_jegi1",
+      "sha256": "2eb598ea3d5c145b9be3c5f668dff41518488e74a2a0141b6d1aabcaaa3cb013",
+      "reason": "ImageGen 기념일 전용 모션. 원본/재구성 모드에서 공통 사용."
+    },
+    {
+      "file": "anim_christmas_breathe1_loop.webm",
+      "state": "christmas_breathe1",
+      "sha256": "a2ccb99bdb02f4ed42f4a5504610737044d19118531f4d84569f746d412e05b5",
+      "reason": "ImageGen 기념일 전용 모션. 원본/재구성 모드에서 공통 사용."
+    },
+    {
+      "file": "anim_christmas_look1_loop.webm",
+      "state": "christmas_look1",
+      "sha256": "4f7cccee7c5eabc79afc86d0bfb85da5a5ce412cb54e01f47108d209a84d34fc",
+      "reason": "ImageGen 기념일 전용 모션. 원본/재구성 모드에서 공통 사용."
+    },
+    {
+      "file": "anim_christmas_tidy1_loop.webm",
+      "state": "christmas_tidy1",
+      "sha256": "829224ce17c574311cf28ff0e966f805e96aedb8b75aabedfb43fe013b98597d",
+      "reason": "ImageGen 기념일 전용 모션. 원본/재구성 모드에서 공통 사용."
+    },
+    {
+      "file": "anim_christmas_talk1_loop.webm",
+      "state": "christmas_talk1",
+      "sha256": "a9926e797548aecebe51e7a570f6d67a91c56acf66beb47c1b69dcf089282ddb",
+      "reason": "ImageGen 기념일 전용 모션. 원본/재구성 모드에서 공통 사용."
+    },
+    {
+      "file": "anim_christmas_gift1_loop.webm",
+      "state": "christmas_gift1",
+      "sha256": "4b5cb531ab66d7006d10e14f4ed0923c77e8fca493e0fe476e194593b133d828",
+      "reason": "ImageGen 기념일 전용 모션. 원본/재구성 모드에서 공통 사용."
+    },
+    {
+      "file": "anim_christmas_fishbread1_loop.webm",
+      "state": "christmas_fishbread1",
+      "sha256": "e5708d2c993a5df4850d5956a8ac470fa0f3222ced2d5395d71d95c293400681",
+      "reason": "ImageGen 기념일 전용 모션. 원본/재구성 모드에서 공통 사용."
+    },
+    {
+      "file": "anim_christmas_snowman1_loop.webm",
+      "state": "christmas_snowman1",
+      "sha256": "120219f63bb30082989394f45c5d218bc0acb9f211ca487f4b7f598a449c7b89",
+      "reason": "ImageGen 기념일 전용 모션. 원본/재구성 모드에서 공통 사용."
+    },
+    {
+      "file": "anim_christmas_carol1_loop.webm",
+      "state": "christmas_carol1",
+      "sha256": "6a4f0cd51b8eeab618aa5d3cc94cadd4be81ffeca070412bfcb0f696dcc98307",
+      "reason": "ImageGen 기념일 전용 모션. 원본/재구성 모드에서 공통 사용."
+    },
+    {
+      "file": "anim_christmas_snowglobe1_loop.webm",
+      "state": "christmas_snowglobe1",
+      "sha256": "a0e51a7dc1e1c38e3b0adafaabed5a989cae0bf11b281838a71bf2c1c8cfe45c",
+      "reason": "ImageGen 기념일 전용 모션. 원본/재구성 모드에서 공통 사용."
+    },
+    {
+      "file": "anim_christmas_snowcatch1_loop.webm",
+      "state": "christmas_snowcatch1",
+      "sha256": "f17a786b61c745935704fdb29f725484412cbb0b64e2ca6ab980f9bf571149f5",
+      "reason": "ImageGen 기념일 전용 모션. 원본/재구성 모드에서 공통 사용."
+    },
+    {
+      "file": "anim_childrensday_breathe1_loop.webm",
+      "state": "childrensday_breathe1",
+      "sha256": "bd6493c7febd459cf3959242bb8111b21b09607a744ba2470aa1b9e6402a37e2",
+      "reason": "ImageGen 기념일 전용 모션. 원본/재구성 모드에서 공통 사용."
+    },
+    {
+      "file": "anim_childrensday_look1_loop.webm",
+      "state": "childrensday_look1",
+      "sha256": "f54ca77f18aac57cee850aced0b4647a5cfcc20dcc9e21ca2f6b1b1b8772eec5",
+      "reason": "ImageGen 기념일 전용 모션. 원본/재구성 모드에서 공통 사용."
+    },
+    {
+      "file": "anim_childrensday_tidy1_loop.webm",
+      "state": "childrensday_tidy1",
+      "sha256": "58c30216ac992e744fb385ae4ed01c151ef309089bf80726e9c2e7fcb84ebb16",
+      "reason": "ImageGen 기념일 전용 모션. 원본/재구성 모드에서 공통 사용."
+    },
+    {
+      "file": "anim_childrensday_talk1_loop.webm",
+      "state": "childrensday_talk1",
+      "sha256": "31c4d819fa09e53818f8f348b20fb7a1b16c6af12eef4a2cd0b2a42b94daf173",
+      "reason": "ImageGen 기념일 전용 모션. 원본/재구성 모드에서 공통 사용."
+    },
+    {
+      "file": "anim_childrensday_bubbles1_loop.webm",
+      "state": "childrensday_bubbles1",
+      "sha256": "c242bed734bc6eb0e7f808af765fe621c22801212c28a340f1563a7fbbcee8fc",
+      "reason": "ImageGen 기념일 전용 모션. 원본/재구성 모드에서 공통 사용."
+    },
+    {
+      "file": "anim_childrensday_balloon1_loop.webm",
+      "state": "childrensday_balloon1",
+      "sha256": "d87ceed0f8cc25747499d76732e4c4606f16eb9f1454f51c78ead458bcacc061",
+      "reason": "ImageGen 기념일 전용 모션. 원본/재구성 모드에서 공통 사용."
+    },
+    {
+      "file": "anim_childrensday_robot1_loop.webm",
+      "state": "childrensday_robot1",
+      "sha256": "959ebac6aac1574f4d4296f86d8a2c28c8f69af1667c58ca29ce24b6d2efaae1",
+      "reason": "ImageGen 기념일 전용 모션. 원본/재구성 모드에서 공통 사용."
+    },
+    {
+      "file": "anim_childrensday_plane1_loop.webm",
+      "state": "childrensday_plane1",
+      "sha256": "dc80792eb8d167c3d1f637d68192b349165023cc357a40bfcce2656da5da6fcf",
+      "reason": "ImageGen 기념일 전용 모션. 원본/재구성 모드에서 공통 사용."
+    },
+    {
+      "file": "anim_childrensday_candyfloss1_loop.webm",
+      "state": "childrensday_candyfloss1",
+      "sha256": "8e6ddb02fd73096695b16c960a6c46f15c27d9a46e324e786d6439284b5abd34",
+      "reason": "ImageGen 기념일 전용 모션. 원본/재구성 모드에서 공통 사용."
+    },
+    {
+      "file": "anim_childrensday_pinwheel1_loop.webm",
+      "state": "childrensday_pinwheel1",
+      "sha256": "2a3c8ad31c8d3a9d8bbee08e0b0949adf49ea9933a3e2efb0882a1c2be9d4b09",
+      "reason": "ImageGen 기념일 전용 모션. 원본/재구성 모드에서 공통 사용."
+    },
+    {
+      "file": "anim_summer_breathe1_loop.webm",
+      "state": "summer_breathe1",
+      "sha256": "3571ff25f01e838e63bcae4c3fd802167a476b9f8b61f42f6c63cafaa166a1e6",
+      "reason": "ImageGen 기념일 전용 모션. 원본/재구성 모드에서 공통 사용."
+    },
+    {
+      "file": "anim_summer_look1_loop.webm",
+      "state": "summer_look1",
+      "sha256": "285f51a10f1e9a0604dc904a3559099431761cd3bb5280d460f9a18320d7cc18",
+      "reason": "ImageGen 기념일 전용 모션. 원본/재구성 모드에서 공통 사용."
+    },
+    {
+      "file": "anim_summer_tidy1_loop.webm",
+      "state": "summer_tidy1",
+      "sha256": "4708e62c6a02ca2aad1274f197698db9fb054286f735b7207a19c96d5ae3e706",
+      "reason": "ImageGen 기념일 전용 모션. 원본/재구성 모드에서 공통 사용."
+    },
+    {
+      "file": "anim_summer_talk1_loop.webm",
+      "state": "summer_talk1",
+      "sha256": "cea576f64f4917f8da949557515b92fb6e42ad333aaff6237c7445a4c93f1cb8",
+      "reason": "ImageGen 기념일 전용 모션. 원본/재구성 모드에서 공통 사용."
+    },
+    {
+      "file": "anim_summer_tube1_loop.webm",
+      "state": "summer_tube1",
+      "sha256": "9a3f3a36138c0427be5cdcff1ff29fdf4bb8cc8004dbe214b6b48e690856fac0",
+      "reason": "ImageGen 기념일 전용 모션. 원본/재구성 모드에서 공통 사용."
+    },
+    {
+      "file": "anim_summer_sandcastle1_loop.webm",
+      "state": "summer_sandcastle1",
+      "sha256": "bbcbb3b9a7a4df972cefc54fc72bebdd7fff6f002bb483fec0411bfa7366de31",
+      "reason": "ImageGen 기념일 전용 모션. 원본/재구성 모드에서 공통 사용."
+    },
+    {
+      "file": "anim_summer_watermelon1_loop.webm",
+      "state": "summer_watermelon1",
+      "sha256": "6d2cd5a1b2df7f6b7d58dd77b80c70969f91014db2cc4ef8cb1b925243dd3775",
+      "reason": "ImageGen 기념일 전용 모션. 원본/재구성 모드에서 공통 사용."
+    },
+    {
+      "file": "anim_summer_watergun1_loop.webm",
+      "state": "summer_watergun1",
+      "sha256": "2011e1df97cdf3091c09da2c995783b4d6c58eed35f7cd61fcff70860a1bd011",
+      "reason": "ImageGen 기념일 전용 모션. 원본/재구성 모드에서 공통 사용."
+    },
+    {
+      "file": "anim_summer_waves1_loop.webm",
+      "state": "summer_waves1",
+      "sha256": "d122382703d5ba7514d10fdd23b0b513c6f3e8afc68eba671ba31689743bbd0a",
+      "reason": "ImageGen 기념일 전용 모션. 원본/재구성 모드에서 공통 사용."
+    },
+    {
+      "file": "anim_summer_fan1_loop.webm",
+      "state": "summer_fan1",
+      "sha256": "721342fe9c48a0f00e6f8c00b348feb5a077b2df79ccbfc011b16010c3850d20",
+      "reason": "ImageGen 기념일 전용 모션. 원본/재구성 모드에서 공통 사용."
     }
   ]
 }

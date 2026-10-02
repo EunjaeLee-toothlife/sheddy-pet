@@ -1,0 +1,25 @@
+Use case: illustration-story. Asset type: production transparent animation sprite sheet for an OBS mascot.
+Input image 1 is character identity and costume REFERENCE only. Create ONE square high-detail sprite sheet, exactly 4 columns by 4 rows = 16 chronological full-body poses, left to right then top to bottom. True transparent RGBA background. No text, grid lines, labels, shadows, scenery, or background.
+Preserve exactly the reference character: blonde wavy hair, warm amber eyes, lemon hair clip on viewer RIGHT, same cute chibi proportions and polished anime shading. Outfit in EVERY cell: Straw hat with aqua ribbon and sunglasses on brim, aqua lemon print Hawaiian shirt, ivory tee, coral shorts, brown sandals.
+Remove handheld concept props except when the action calls for them. Keep hands empty at beginning and end. Accessories worn on head/body remain throughout. Exactly two arms and hands. Do not mirror.
+CRITICAL: draw figures SMALL, only 60-65% of each equal cell height. All hair, hats, feet, props and effects INSIDE their own cell. Broad fully transparent gutters between every cell and at sheet outer edges. Fixed camera, consistent character size and foot baseline; expressive distinct full-body poses that tell the requested story.
+Motion: 물총 놀이. 물총 놀이
+Pose 0 and 15 must match exactly, neutral relaxed standing empty hands. Introduce props early and put them away by pose 14. No costume changes.
+Exactly these 16 poses:
+0: neutral standing, empty hands
+1: Take colorful small water pistol
+2: pump once
+3: pump twice
+4: aim slightly left
+5: squirt short water arc
+6: recoil playfully
+7: aim right
+8: squirt again
+9: incoming small splash surprises
+10: duck shoulders
+11: laugh
+12: lower water pistol
+13: shake off drops
+14: put away
+15: neutral standing, empty hands
+CRITICAL LAYOUT REPAIR: draw each full character SMALL, only 50% of cell height, and keep at least 15% completely transparent gutters on EVERY cell side. The water pistol squirts a VERY SHORT stream that curves down near her hands. All droplets stay very close to the character, never reach cell boundaries. No long water jets, no large splash, no overflow. Every hat, foot, hand, prop and drop must be entirely visible within its own cell.

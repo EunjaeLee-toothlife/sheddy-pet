@@ -12,7 +12,7 @@ from audit_hd720 import probe, sha
 ROOT = Path(__file__).resolve().parent.parent
 
 
-def verify(motion):
+def verify(motion, anchor_state='witchidle1'):
     state = motion['id']
     name = state + '_loop'
     config = json.loads((ROOT / f'anims/{name}.json').read_text())
@@ -32,7 +32,7 @@ def verify(motion):
             alpha = np.asarray(im.getchannel('A'))
             assert np.any(alpha > 240) and not any(np.any(edge) for edge in (alpha[0], alpha[-1], alpha[:, 0], alpha[:, -1])), f'프레임 여백/알파: {path}'
         hashes = [sha(p) for p in frames]
-        anchor = directory.parent / 'witchidle1_loop/witchidle1_loop_00.png'
+        anchor = directory.parent / f'{anchor_state}_loop/{anchor_state}_loop_00.png'
         assert hashes[0] == hashes[-1] == sha(anchor), f'공통 대기 연결: {state}'
         assert len(set(hashes)) >= 12, f'독립 포즈 부족: {state}'
         info = probe(video)

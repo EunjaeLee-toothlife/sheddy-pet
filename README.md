@@ -92,6 +92,41 @@ python tools/verify_alchemy.py
 python tools/deploy_pages.py
 ```
 
+### 기념일 모드
+
+OBS 브라우저 소스 URL에 아래 `mode`를 붙이면 해당 복장의 모션만 재생한다.
+각 모드는 **대기 3종 + 마이크 말하기 1종 + 테마 동작 6종**으로 구성된다.
+F3 선택기·자동 추첨·외부 상태 명령도 같은 모드 안에서만 동작한다.
+잘못된 모드 이름은 일반 모드로 돌아간다.
+
+| URL 옵션 | 복장 | 테마 동작 |
+| --- | --- | --- |
+| `?mode=seollal` | 색동저고리·청록 치마·레몬 노리개 | 세배, 복주머니, 윷놀이, 떡국, 방패연, 제기차기 |
+| `?mode=christmas` | 빨간 숏패딩·체크 목도리·귀달이 방한모 | 보자기 선물, 붕어빵, 눈사람, 캐럴 율동, 스노볼, 첫눈 |
+| `?mode=childrensday` | 노란 모자·멜빵바지·작은 배낭 | 비눗방울, 풍선, 로봇, 종이비행기, 솜사탕, 바람개비 |
+| `?mode=summer` | 밀짚모자·레몬 셔츠·반바지 | 튜브, 모래성, 수박, 물총, 파도, 부채 |
+
+테마 동작은 한 번 재생한 뒤 해당 복장의 대기로 돌아간다. F3의 **계속 유지**로 반복할 수 있다.
+마이크 입력 시 해당 복장의 말하기로 전환하고 무음이 되면 같은 복장의 대기로 복귀한다.
+예: `?mode=seollal&state=seollal_bow1`, `setPetState("christmas_fishbread1")`.
+기존 4MiB LRU 캐시·영상 버퍼 2개·숨김 시 정지 정책을 그대로 사용하며 다른 모드 영상을 미리 받지 않는다.
+
+확정 복장은 `output/imagegen/seasonal-costume-concepts/`, 모션별 내장 ImageGen 프롬프트와 타이밍은
+`anims/seasonal/motions.json`, 생성 원본은 `sprites/raw/seasonal/`에 보관한다.
+크리스마스는 한국 겨울 감성의 `02-christmas-korean-v2.png`를 기준으로 한다.
+재생성·수정 프롬프트는 `anims/seasonal/*-repair.prompt.txt`, 검증 결과는 `reports/seasonal-modes.json`에 보관한다.
+
+```bash
+python tools/build_seasonal.py
+python tools/verify_seasonal.py --register
+python tools/deploy_pages.py
+node tools/widget_check.js --mode seollal --page docs/index.html
+node tools/widget_check.js --mode christmas --fallback --page docs/index.html
+```
+
+위젯 검사는 `--mode childrensday`, `--mode summer`에도 동일하게 실행한다.
+조립에는 Pillow·NumPy와 `libvpx-vp9` 인코더/디코더를 지원하는 ffmpeg가 필요하다.
+
 ### 방송 반응 모션
 
 F3 모션 선택기에서 **박수(`clap1`) · 손하트(`heart1`) · 깜짝 놀람(`surprise1`)**을 고를 수 있다.

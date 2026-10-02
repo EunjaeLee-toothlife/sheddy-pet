@@ -1,0 +1,25 @@
+Use case: illustration-story. Asset type: production transparent animation sprite sheet for an OBS mascot.
+Input image 1 is character identity and costume REFERENCE only. Create ONE square high-detail sprite sheet, exactly 4 columns by 4 rows = 16 chronological full-body poses, left to right then top to bottom. True transparent RGBA background. No text, grid lines, labels, shadows, scenery, or background.
+Preserve exactly the reference character: blonde wavy hair, warm amber eyes, lemon hair clip on viewer RIGHT, same cute chibi proportions and polished anime shading. Outfit in EVERY cell: Ivory jeogori with pastel saekdong striped sleeves, coral goreum ribbon, long teal floral chima, lemon norigae, coral hair ribbon, cream socks and coral floral shoes.
+Remove handheld concept props except when the action calls for them. Keep hands empty at beginning and end. Accessories worn on head/body remain throughout. Exactly two arms and hands. Do not mirror.
+CRITICAL: draw figures SMALL, only 60-65% of each equal cell height. All hair, hats, feet, props and effects INSIDE their own cell. Broad fully transparent gutters between every cell and at sheet outer edges. Fixed camera, consistent character size and foot baseline; expressive distinct full-body poses that tell the requested story.
+Motion: 방패연 날리기. 방패연 날리기
+Pose 0 and 15 must match exactly, neutral relaxed standing empty hands. Introduce props early and put them away by pose 14. No costume changes.
+Exactly these 16 poses:
+0: neutral standing, empty hands
+1: Unfold small Korean bangpae kite with round central hole
+2: lift kite
+3: grip string reel
+4: release kite
+5: kite rises upper left
+6: reel string
+7: lean back
+8: kite turns right
+9: follow with gaze
+10: delighted smile
+11: gently reel in
+12: catch kite
+13: fold kite
+14: put away
+15: neutral standing, empty hands
+REPAIR LAYOUT: every pose plus kite MUST fit entirely inside its cell with a clear 15% gutter on all four sides. Make character only 50% of cell height and kite tiny, close to her body. Never let string or kite extend off screen. Keep the entire flying kite visible within the cell in EVERY flying frame. No out-of-frame kite. NO panel overlaps.

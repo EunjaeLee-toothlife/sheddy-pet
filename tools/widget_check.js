@@ -27,6 +27,8 @@ const BENCHMARK = argv.includes("--benchmark");
 const BASELINE = argv.includes("--baseline");
 const FALLBACK = argv.includes("--fallback");
 const HALLOWEEN = argv.includes("--halloween");
+const SEASONAL = argv.includes("--mode") ? argv[argv.indexOf("--mode") + 1] : null;
+if (SEASONAL && !["seollal", "christmas", "childrensday", "summer"].includes(SEASONAL)) throw Error("알 수 없는 기념일 모드");
 const baselineHTML = require.main === module && BASELINE ? execFileSync("git", ["show", "HEAD:widget.html"], { cwd: ROOT }) : null;
 const sleep = ms => new Promise(r => setTimeout(r, ms));
 
@@ -93,7 +95,7 @@ const IN_PAGE = async () => {
 
   await waitFor(idle, 30000, "initial idle");
   await waitFor(() => CLIP_URL.size > 0 && !document.hidden, 30000, "preload / visible page");
-  expect(window.__halloweenStates.every(n => !ACTIVE_ANIMS[n] && !motionList.querySelector(`[data-name="${n}"]`)), "일반 모드에 할로윈 모션 노출");
+  expect(Object.entries(ANIMS).filter(([, a]) => a.mode).every(([n]) => !ACTIVE_ANIMS[n] && !motionList.querySelector(`[data-name="${n}"]`)), "일반 모드에 테마 모션 노출");
   setPetState("broom1");
   expect(idle() && !queued, "일반 모드에서 할로윈 외부 명령 허용");
   await sleep(1500); // 선로딩 마무리
@@ -385,7 +387,8 @@ const IN_PAGE = async () => {
 };
 
 // node tools/widget_check.js --halloween [--fallback] [--page docs/index.html]
-const IN_HALLOWEEN = async () => {
+// node tools/widget_check.js --mode seollal|christmas|childrensday|summer [--fallback]
+const IN_THEME = async () => {
   const sleep = ms => new Promise(r => setTimeout(r, ms));
   const expect = (ok, message) => { if (!ok) throw Error(message); };
   const wait = async (test, label, ms = 15000) => {
@@ -393,21 +396,28 @@ const IN_HALLOWEEN = async () => {
     while (!test()) { if (Date.now() > until) throw Error(label + " 시간 초과"); await sleep(20); }
   };
   const at = name => current === name && !transitioning;
-  const names = [...window.__halloweenStates, "alchemy1", "alchemygold1", "alchemyboom1", "alchemyslime1"];
-  const files = [...window.__halloweenStates.map(n => `anim_${n}_loop.webm`), "anim_alchemy1_loop.webm", ...[1, 2, 3].map(i => `anim_alchemy1_end${i}.webm`)];
+  const seasonal = window.__seasonalStates;
+  const names = seasonal || [...window.__halloweenStates, "alchemy1", "alchemygold1", "alchemyboom1", "alchemyslime1"];
+  const heldState = seasonal ? names[4] : "alchemygold1";
+  const queuedState = seasonal ? names[5] : "alchemyslime1";
+  const files = seasonal ? seasonal.map(n => `anim_${n}_loop.webm`) : [...window.__halloweenStates.map(n => `anim_${n}_loop.webm`), "anim_alchemy1_loop.webm", ...[1, 2, 3].map(i => `anim_alchemy1_end${i}.webm`)];
   const warnings = [], warn = console.warn, random = Math.random;
   console.warn = (...args) => { warnings.push(args.join(" ") + ` [state=${current}, time=${vids[front].currentTime}, paused=${vids[front].paused}]`); warn.apply(console, args); };
   const visibility = visible => window.dispatchEvent(new CustomEvent("obsSourceVisibleChanged", { detail: { visible } }));
   const result = [];
   try {
-    await wait(() => at("witchidle1"), "일반 시작 상태의 마녀 대체");
+    await wait(() => at(DEFAULT_STATE), "일반 시작 상태의 테마 대체");
     pinnedUntil = Infinity;
-    expect(DEFAULT_STATE === "witchidle1", "기본 복장이 마녀가 아님");
+    expect(DEFAULT_STATE === (seasonal ? seasonal[0] : "witchidle1"), "기본 복장이 테마가 아님");
     expect(JSON.stringify([...motionList.querySelectorAll("[data-name]")].map(el => el.dataset.name).sort()) === JSON.stringify([...names].sort()), "선택기에 일반 모션 노출");
     setPetState("happy1"); setPetState("talk");
-    expect(at("witchidle1") && !queued, "일반 외부 명령 허용");
+    expect(at(DEFAULT_STATE) && !queued, "일반 외부 명령 허용");
+    for (const [name, animation] of Object.entries(ANIMS)) {
+      if (animation.mode && !names.includes(name)) setPetState(name);
+    }
+    expect(at(DEFAULT_STATE) && !queued, "다른 테마의 외부 명령 허용");
     expect(CLIP_URL.size === 1 && CLIP_URL.has(files[0]), "불필요한 초기 영상 로딩");
-    result.push({ name: "modeScope", ok: true, detail: "일반 시작 상태 대체, 선택기 28종, 외부 일반 모션 차단, 초기 영상 1개" });
+    result.push({ name: "modeScope", ok: true, detail: `일반 시작 상태 대체, 선택기 ${names.length}종, 외부 일반 모션 차단, 초기 영상 1개` });
 
     let idleLoops = 0, idleTime = vids[front].currentTime;
     await wait(() => {
@@ -415,8 +425,8 @@ const IN_HALLOWEEN = async () => {
       if (time < idleTime - 0.5) idleLoops++;
       idleTime = time;
       return idleLoops >= 2;
-    }, "마녀 대기 두 사이클");
-    result.push({ name: "witchIdle", ok: true, detail: "대기 루프 두 사이클 연속 재생" });
+    }, "테마 대기 두 사이클");
+    result.push({ name: "themeIdle", ok: true, detail: "대기 루프 두 사이클 연속 재생" });
 
     for (const name of names.slice(1)) {
       pinnedUntil = 0;
@@ -426,13 +436,13 @@ const IN_HALLOWEEN = async () => {
       expect(sctx.getImageData(0, 0, 1, 1).data[3] === 0, "배경 알파 오류");
       expect(vids[front].videoWidth === 720 && !vids[front].paused, "720 영상 재생 오류");
       if (window.__captureReactions) window.__captureReactions.push({ name, png: screen.toDataURL() });
-      await wait(() => at("witchidle1"), name + " 마녀 복귀");
+      await wait(() => at(DEFAULT_STATE), name + " 테마 복귀");
     }
-    result.push({ name: "witchResults", ok: true, detail: "동작 27종 실제 재생 후 마녀 복장으로 복귀, 투명 720 영상" });
+    result.push({ name: "themeResults", ok: true, detail: `동작 ${names.length - 1}종 실제 재생 후 테마 복장으로 복귀, 투명 720 영상` });
 
     motionHold.checked = true;
-    pickMotion("alchemygold1");
-    await wait(() => at("alchemygold1"), "결과 유지");
+    pickMotion(heldState);
+    await wait(() => at(heldState), "결과 유지");
     let loops = 0, lastTime = vids[front].currentTime;
     await wait(() => {
       const time = vids[front].currentTime;
@@ -440,20 +450,20 @@ const IN_HALLOWEEN = async () => {
       lastTime = time;
       return loops >= 2;
     }, "결과 두 사이클");
-    expect(pinnedUntil === Infinity && at("alchemygold1"), "무기한 유지 실패");
+    expect(pinnedUntil === Infinity && at(heldState), "무기한 유지 실패");
     visibility(false);
     const draws = drawCount, time = vids[front].currentTime;
-    setState("alchemyslime1", { pin: false });
+    setState(queuedState, { pin: false });
     setPetState("idle1");
     await sleep(1200);
     expect(drawCount === draws && vids.every(v => v.paused) && Math.abs(vids[front].currentTime - time) < 0.05, "숨김 중 재생/그리기");
-    expect(queued?.name === "alchemyslime1", "일반 명령이 유효한 대기 요청을 덮어씀");
+    expect(queued?.name === queuedState, "일반 명령이 유효한 대기 요청을 덮어씀");
     visibility(true);
-    await wait(() => at("alchemyslime1"), "숨김 복귀 후 요청 실행");
+    await wait(() => at(queuedState), "숨김 복귀 후 요청 실행");
     expect(pinnedUntil === Infinity, "큐를 거치며 무기한 유지 유실");
     motionHold.checked = false; pinnedUntil = 0; talkActive = false;
-    await wait(() => at("witchidle1"), "유지 해제 후 마녀 복귀");
-    result.push({ name: "witchHold", ok: true, detail: "두 사이클 유지, 숨김 중 작업 0, 유효한 큐와 Infinity 보존" });
+    await wait(() => at(DEFAULT_STATE), "유지 해제 후 테마 복귀");
+    result.push({ name: "themeHold", ok: true, detail: "두 사이클 유지, 숨김 중 작업 0, 유효한 큐와 Infinity 보존" });
 
     // 실제 마이크를 열지 않고 입력 파형만 대체해 RMS/해제 지연/테마 상태 연결을 검사한다.
     const media = navigator.mediaDevices;
@@ -472,41 +482,42 @@ const IN_HALLOWEEN = async () => {
       await sleep(150);
       expect(!talkActive && at(DEFAULT_STATE), "무음에서 말하기 시작");
       level = 0.08;
-      await wait(() => talkActive && at("witchtalk1"), "마녀 마이크 진입");
-      expect(TALK_STATE === "witchtalk1" && ACTIVE_ANIMS[TALK_STATE].weight === 0, "일반 talk 연결 또는 추첨 포함");
+      await wait(() => talkActive && at(TALK_STATE), "테마 마이크 진입");
+      expect(TALK_STATE === (seasonal ? seasonal[3] : "witchtalk1") && ACTIVE_ANIMS[TALK_STATE].weight === 0, "일반 talk 연결 또는 추첨 포함");
       let loops = 0, time = vids[front].currentTime;
       await wait(() => {
         const next = vids[front].currentTime;
         if (next < time - 0.5) loops++;
         time = next;
         return loops >= 2;
-      }, "마녀 말하기 두 사이클");
+      }, "테마 말하기 두 사이클");
       level = 0.005;
       await sleep(180);
       expect(talkActive, "마이크 해제 지연 누락");
-      await wait(() => !talkActive && at(DEFAULT_STATE), "무음 후 마녀 대기 복귀");
+      await wait(() => !talkActive && at(DEFAULT_STATE), "무음 후 테마 대기 복귀");
       level = 0.08;
       await wait(() => talkActive && at(TALK_STATE), "마이크 재진입");
       stopMic();
       await wait(() => at(DEFAULT_STATE), "마이크 끄기 복귀");
       expect(stopped && !meterTimer && !micStream, "마이크 자원 미해제");
-      result.push({ name: "witchMic", ok: true, detail: "무음/음량 임계값, 마녀 말하기 두 사이클, 해제 지연, 마녀 복귀, 장치 해제" });
+      result.push({ name: "themeMic", ok: true, detail: "무음/음량 임계값, 테마 말하기 두 사이클, 해제 지연, 테마 복귀, 장치 해제" });
     } finally {
       stopMic(); audioCtx = oldAudioCtx; threshSlider.value = oldThreshold;
       media.getUserMedia = getUserMedia; media.enumerateDevices = enumerateDevices;
       if (oldDevice === null) localStorage.removeItem("petMicDevice"); else localStorage.setItem("petMicDevice", oldDevice);
     }
 
-    // 실제 ended 이벤트와 주사위를 거쳐 결과가 선택되고 다시 마녀 대기로 돌아오는지 확인한다.
+    // 실제 ended 이벤트와 주사위를 거쳐 결과가 선택되고 다시 테마 대기로 돌아오는지 확인한다.
     idleStreak = 0;
-    Math.random = () => 0.3;
-    await wait(() => current !== DEFAULT_STATE && !transitioning, "할로윈 자동 추첨");
-    await wait(() => at("witchidle1"), "자동 결과 복귀");
+    // 대기 3종인 기념일은 두 번째 대기를 뽑아 기본 대기 재선택을 피한다.
+    Math.random = () => seasonal ? 0.34 : 0.3;
+    await wait(() => current !== DEFAULT_STATE && !transitioning, "테마 자동 추첨");
+    await wait(() => at(DEFAULT_STATE), "자동 결과 복귀");
     const requests = performance.getEntriesByType("resource").filter(r => r.name.endsWith(".webm"));
     expect(requests.every(r => files.includes(r.name.split("/").pop())), "일반/변신/원복 영상 요청 발생");
     expect(cacheBytes <= CACHE_LIMIT, "캐시 상한 초과");
-    expect(!warnings.some(w => w.includes("watchdog")), "할로윈 워치독 개입: " + warnings.filter(w => w.includes("watchdog")).join(" | "));
-    result.push({ name: "witchAutomatic", ok: true, detail: `실제 자동 추첨·복귀, 전용 클립만 요청, 캐시 ${cacheBytes}B` });
+    expect(!warnings.some(w => w.includes("watchdog")), "테마 워치독 개입: " + warnings.filter(w => w.includes("watchdog")).join(" | "));
+    result.push({ name: "themeAutomatic", ok: true, detail: `실제 자동 추첨·복귀, 전용 클립만 요청, 캐시 ${cacheBytes}B` });
   } finally {
     Math.random = random; console.warn = warn; talkActive = false;
     motionHold.checked = false; pinnedUntil = 0; visibility(true);
@@ -563,6 +574,10 @@ async function main() {
     await send("Page.enable");
     const halloweenStates = JSON.parse(fs.readFileSync(path.join(ROOT, "anims/halloween/motions.json"), "utf8")).map(m => m.id);
     await send("Page.addScriptToEvaluateOnNewDocument", { source: `window.__halloweenStates=${JSON.stringify(halloweenStates)};` });
+    if (SEASONAL) {
+      const states = JSON.parse(fs.readFileSync(path.join(ROOT, "anims/seasonal/motions.json"), "utf8")).filter(m => m.mode === SEASONAL).map(m => m.id);
+      await send("Page.addScriptToEvaluateOnNewDocument", { source: `window.__seasonalStates=${JSON.stringify(states)};` });
+    }
     if (argv.includes("--reactions-only")) await send("Page.addScriptToEvaluateOnNewDocument", { source: "window.__reactionsOnly=true;" });
     if (argv.includes("--capture")) await send("Page.addScriptToEvaluateOnNewDocument", { source: "window.__captureReactions=[];" });
     if (FALLBACK) await send("Page.addScriptToEvaluateOnNewDocument", { source: "delete HTMLVideoElement.prototype.requestVideoFrameCallback; delete HTMLVideoElement.prototype.cancelVideoFrameCallback;" });
@@ -571,7 +586,7 @@ async function main() {
       await send("Emulation.setDeviceMetricsOverride", { width: 512, height: 512, deviceScaleFactor: 1, mobile: false });
       await send("Performance.enable");
     }
-    await send("Page.navigate", { url: `http://127.0.0.1:${server.address().port}/${PAGE}?${HALLOWEEN ? "mode=halloween&state=happy1&hold=0" : "dice=0"}` });
+    await send("Page.navigate", { url: `http://127.0.0.1:${server.address().port}/${PAGE}?${SEASONAL ? `mode=${SEASONAL}&state=happy1&hold=0` : HALLOWEEN ? "mode=halloween&state=happy1&hold=0" : "dice=0"}` });
     await sleep(1000);
     console.log(`checking ${PAGE}${BASELINE ? " (HEAD 기준)" : ""}${FALLBACK ? " (rVFC 미지원)" : ""}…`);
     if (BENCHMARK) {
@@ -588,7 +603,7 @@ async function main() {
       ws.close();
       return;
     }
-    const r = await send("Runtime.evaluate", { expression: `(${HALLOWEEN ? IN_HALLOWEEN : IN_PAGE})()`, awaitPromise: true, returnByValue: true });
+    const r = await send("Runtime.evaluate", { expression: `(${(HALLOWEEN || SEASONAL) ? IN_THEME : IN_PAGE})()`, awaitPromise: true, returnByValue: true });
     if (r.result.exceptionDetails) throw new Error(r.result.exceptionDetails.exception?.description || r.result.exceptionDetails.text);
     const results = r.result.result.value;
     for (const c of results) console.log(`${c.ok ? "PASS" : "FAIL"}  ${c.name.padEnd(12)} ${c.detail}`);
@@ -600,8 +615,9 @@ async function main() {
         console.log("QA", file);
       }
     }
-    if (HALLOWEEN) {
-      for (const [query, expected] of [["mode=halloween&state=alchemyslime1&dice=0", "alchemyslime1"], ["mode=unknown&dice=0", "idle1"]]) {
+    if (HALLOWEEN || SEASONAL) {
+      const state = SEASONAL ? `${SEASONAL}_talk1` : "alchemyslime1";
+      for (const [query, expected] of [[`mode=${SEASONAL || "halloween"}&state=${state}&dice=0`, state], ["mode=unknown&dice=0", "idle1"], ["mode=__proto__&dice=0", "idle1"]]) {
         await send("Page.navigate", { url: `http://127.0.0.1:${server.address().port}/${PAGE}?${query}` });
         await sleep(1000);
         const check = await send("Runtime.evaluate", { expression: `(async()=>{const until=Date.now()+15000;while((!current||transitioning)&&Date.now()<until)await new Promise(r=>setTimeout(r,20));return current===${JSON.stringify(expected)}&&!transitioning;})()`, awaitPromise: true, returnByValue: true });

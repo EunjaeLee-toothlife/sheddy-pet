@@ -1,0 +1,25 @@
+Use case: illustration-story. Asset type: production transparent animation sprite sheet for an OBS mascot.
+Input image 1 is character identity and costume REFERENCE only. Create ONE square high-detail sprite sheet, exactly 4 columns by 4 rows = 16 chronological full-body poses, left to right then top to bottom. True transparent RGBA background. No text, grid lines, labels, shadows, scenery, or background.
+Preserve exactly the reference character: blonde wavy hair, warm amber eyes, lemon hair clip on viewer RIGHT, same cute chibi proportions and polished anime shading. Outfit in EVERY cell: Cherry red short puffer, ivory cable knit sweater, green checked scarf, ivory fleece earflap hat, oatmeal shorts, opaque charcoal leggings and beige shearling boots. Contemporary Korean winter outing; no Santa or elf costume.
+Remove handheld concept props except when the action calls for them. Keep hands empty at beginning and end. Accessories worn on head/body remain throughout. Exactly two arms and hands. Do not mirror.
+CRITICAL: draw figures SMALL, only 60-65% of each equal cell height. All hair, hats, feet, props and effects INSIDE their own cell. Broad fully transparent gutters between every cell and at sheet outer edges. Fixed camera, consistent character size and foot baseline; expressive distinct full-body poses that tell the requested story.
+Motion: 꼬마 눈사람. 꼬마 눈사람
+Pose 0 and 15 must match exactly, neutral relaxed standing empty hands. Introduce props early and put them away by pose 14. No costume changes.
+Exactly these 16 poses:
+0: neutral standing, empty hands
+1: Kneel beside small snowball
+2: roll snowball
+3: pat round body
+4: make smaller head ball
+5: stack head
+6: add two coal eyes
+7: add carrot nose
+8: wrap green scarf
+9: place tiny red cap
+10: admire snowman
+11: snowman tilts
+12: gently straighten
+13: wave goodbye
+14: rise as snowman softly disappears
+15: neutral standing, empty hands
+CRITICAL LAYOUT REPAIR: exactly 16 occupied cells, never a blank cell. Draw both character and snowman SMALL, inside central 60% of every cell. Snowman no taller than her knee. Every cell must have a broad empty transparent margin all around it. No snow cloud or melting effect: put the small snowman away in a small bag and stand up for frames 13-14. No element may touch outer canvas edges or cross a cell boundary.
