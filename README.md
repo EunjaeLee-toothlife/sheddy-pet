@@ -147,6 +147,8 @@ python -m http.server 8474
 node tools/widget_check.js
 node tools/widget_check.js --fallback       # 영상 프레임 콜백 없는 OBS/CEF 경로
 node tools/widget_check.js --page docs/index.html
+node tools/widget_check.js --halloween --page docs/index.html
+node tools/widget_check.js --halloween --fallback --page docs/index.html
 ```
 
 성능 지표와 반복 비교 보고서는 다음 명령으로 만든다. 기준 커밋을 명시하므로 커밋 이후에도 같은 버전과 비교할 수 있다.

@@ -26,6 +26,7 @@ const PAGE = argv.includes("--page") ? argv[argv.indexOf("--page") + 1] : "widge
 const BENCHMARK = argv.includes("--benchmark");
 const BASELINE = argv.includes("--baseline");
 const FALLBACK = argv.includes("--fallback");
+const HALLOWEEN = argv.includes("--halloween");
 const baselineHTML = require.main === module && BASELINE ? execFileSync("git", ["show", "HEAD:widget.html"], { cwd: ROOT }) : null;
 const sleep = ms => new Promise(r => setTimeout(r, ms));
 
@@ -380,6 +381,86 @@ const IN_PAGE = async () => {
   return results;
 };
 
+// node tools/widget_check.js --halloween [--fallback] [--page docs/index.html]
+const IN_HALLOWEEN = async () => {
+  const sleep = ms => new Promise(r => setTimeout(r, ms));
+  const expect = (ok, message) => { if (!ok) throw Error(message); };
+  const wait = async (test, label, ms = 15000) => {
+    const until = Date.now() + ms;
+    while (!test()) { if (Date.now() > until) throw Error(label + " 시간 초과"); await sleep(20); }
+  };
+  const at = name => current === name && !transitioning;
+  const names = ["alchemy1", "alchemygold1", "alchemyboom1", "alchemyslime1"];
+  const files = ["anim_alchemy1_loop.webm", ...[1, 2, 3].map(i => `anim_alchemy1_end${i}.webm`)];
+  const warnings = [], warn = console.warn, random = Math.random;
+  console.warn = (...args) => { warnings.push(args.join(" ")); warn.apply(console, args); };
+  const visibility = visible => window.dispatchEvent(new CustomEvent("obsSourceVisibleChanged", { detail: { visible } }));
+  const result = [];
+  try {
+    await wait(() => at("alchemy1"), "일반 시작 상태의 마녀 대체");
+    pinnedUntil = Infinity;
+    expect(DEFAULT_STATE === "alchemy1", "기본 복장이 마녀가 아님");
+    expect(JSON.stringify([...motionList.querySelectorAll("[data-name]")].map(el => el.dataset.name)) === JSON.stringify(names), "선택기에 일반 모션 노출");
+    setPetState("happy1"); setPetState("talk");
+    expect(at("alchemy1") && !queued, "일반 외부 명령 허용");
+    expect(CLIP_URL.size === 1 && CLIP_URL.has(files[0]), "불필요한 초기 영상 로딩");
+    result.push({ name: "modeScope", ok: true, detail: "일반 시작 상태 대체, 선택기 4종, 외부 일반 모션 차단, 초기 영상 1개" });
+
+    for (const name of names.slice(1)) {
+      pinnedUntil = 0;
+      setPetState(name);
+      await wait(() => at(name), name);
+      await sleep(600);
+      expect(sctx.getImageData(0, 0, 1, 1).data[3] === 0, "배경 알파 오류");
+      expect(vids[front].videoWidth === 720 && !vids[front].paused, "720 영상 재생 오류");
+      if (window.__captureReactions) window.__captureReactions.push({ name, png: screen.toDataURL() });
+      await wait(() => at("alchemy1"), name + " 마녀 복귀");
+    }
+    result.push({ name: "witchResults", ok: true, detail: "결과 3종 실제 재생 후 마녀 복장으로 복귀, 투명 720 영상" });
+
+    motionHold.checked = true;
+    pickMotion("alchemygold1");
+    await wait(() => at("alchemygold1"), "결과 유지");
+    talkActive = true; // 마이크 게이트가 열려도 일반 talk로 전환하지 않는다.
+    let loops = 0, lastTime = vids[front].currentTime;
+    await wait(() => {
+      const time = vids[front].currentTime;
+      if (time < lastTime - 0.5) loops++;
+      lastTime = time;
+      return loops >= 2;
+    }, "결과 두 사이클");
+    expect(pinnedUntil === Infinity && at("alchemygold1"), "유지/마이크 격리 실패");
+    visibility(false);
+    const draws = drawCount, time = vids[front].currentTime;
+    setState("alchemyslime1", { pin: false });
+    setPetState("idle1");
+    await sleep(1200);
+    expect(drawCount === draws && vids.every(v => v.paused) && Math.abs(vids[front].currentTime - time) < 0.05, "숨김 중 재생/그리기");
+    expect(queued?.name === "alchemyslime1", "일반 명령이 유효한 대기 요청을 덮어씀");
+    visibility(true);
+    await wait(() => at("alchemyslime1"), "숨김 복귀 후 요청 실행");
+    expect(pinnedUntil === Infinity, "큐를 거치며 무기한 유지 유실");
+    motionHold.checked = false; pinnedUntil = 0; talkActive = false;
+    await wait(() => at("alchemy1"), "유지 해제 후 마녀 복귀");
+    result.push({ name: "witchHold", ok: true, detail: "두 사이클 유지, 마이크 격리, 숨김 중 작업 0, 유효한 큐와 Infinity 보존" });
+
+    // 실제 ended 이벤트와 주사위를 거쳐 결과가 선택되고 다시 솥 젓기로 돌아오는지 확인한다.
+    idleStreak = 0;
+    Math.random = () => 0.3;
+    await wait(() => at("alchemygold1"), "할로윈 자동 추첨");
+    await wait(() => at("alchemy1"), "자동 결과 복귀");
+    const requests = performance.getEntriesByType("resource").filter(r => r.name.endsWith(".webm"));
+    expect(requests.every(r => files.includes(r.name.split("/").pop())), "일반/변신/원복 영상 요청 발생");
+    expect(cacheBytes <= CACHE_LIMIT, "캐시 상한 초과");
+    expect(!warnings.some(w => w.includes("watchdog")), "할로윈 워치독 개입");
+    result.push({ name: "witchAutomatic", ok: true, detail: `실제 자동 추첨·복귀, 전용 클립만 요청, 캐시 ${cacheBytes}B` });
+  } finally {
+    Math.random = random; console.warn = warn; talkActive = false;
+    motionHold.checked = false; pinnedUntil = 0; visibility(true);
+  }
+  return result;
+};
+
 // 동일 브라우저/영상/시간으로 현재 파일과 HEAD의 캔버스 작업량을 비교한다.
 // node tools/widget_check.js --benchmark [--baseline] [--fallback]
 const IN_BENCHMARK = async () => {
@@ -435,7 +516,7 @@ async function main() {
       await send("Emulation.setDeviceMetricsOverride", { width: 512, height: 512, deviceScaleFactor: 1, mobile: false });
       await send("Performance.enable");
     }
-    await send("Page.navigate", { url: `http://127.0.0.1:${server.address().port}/${PAGE}?dice=0` });
+    await send("Page.navigate", { url: `http://127.0.0.1:${server.address().port}/${PAGE}?${HALLOWEEN ? "mode=halloween&state=happy1&hold=0" : "dice=0"}` });
     await sleep(1000);
     console.log(`checking ${PAGE}${BASELINE ? " (HEAD 기준)" : ""}${FALLBACK ? " (rVFC 미지원)" : ""}…`);
     if (BENCHMARK) {
@@ -452,7 +533,7 @@ async function main() {
       ws.close();
       return;
     }
-    const r = await send("Runtime.evaluate", { expression: `(${IN_PAGE})()`, awaitPromise: true, returnByValue: true });
+    const r = await send("Runtime.evaluate", { expression: `(${HALLOWEEN ? IN_HALLOWEEN : IN_PAGE})()`, awaitPromise: true, returnByValue: true });
     if (r.result.exceptionDetails) throw new Error(r.result.exceptionDetails.exception?.description || r.result.exceptionDetails.text);
     const results = r.result.result.value;
     for (const c of results) console.log(`${c.ok ? "PASS" : "FAIL"}  ${c.name.padEnd(12)} ${c.detail}`);
@@ -462,6 +543,16 @@ async function main() {
         const file = path.join(os.tmpdir(), `sheddy-${name}-runtime.png`);
         fs.writeFileSync(file, Buffer.from(png.split(",")[1], "base64"));
         console.log("QA", file);
+      }
+    }
+    if (HALLOWEEN) {
+      for (const [query, expected] of [["mode=halloween&state=alchemyslime1&dice=0", "alchemyslime1"], ["mode=unknown&dice=0", "idle1"]]) {
+        await send("Page.navigate", { url: `http://127.0.0.1:${server.address().port}/${PAGE}?${query}` });
+        await sleep(1000);
+        const check = await send("Runtime.evaluate", { expression: `(async()=>{const until=Date.now()+15000;while((!current||transitioning)&&Date.now()<until)await new Promise(r=>setTimeout(r,20));return current===${JSON.stringify(expected)}&&!transitioning;})()`, awaitPromise: true, returnByValue: true });
+        const ok = check.result.result?.value === true;
+        results.push({ name: query, ok });
+        console.log(`${ok ? "PASS" : "FAIL"}  ${query} → ${expected}`);
       }
     }
     failed = results.some(c => !c.ok);
