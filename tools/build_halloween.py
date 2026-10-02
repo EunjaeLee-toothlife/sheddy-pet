@@ -88,10 +88,10 @@ def prepare(sheet, config):
     return frames
 
 
-def build(motion):
+def build(motion, theme='halloween', anchor_state='witchidle1'):
     state = motion['id']
     name = state + '_loop'
-    raw = ROOT / f'sprites/raw/halloween/{state}.png'
+    raw = ROOT / f'sprites/raw/{theme}/{state}.png'
     sheet = Image.open(raw)
     if sheet.mode != 'RGBA' or sheet.getchannel('A').getextrema()[0] != 0:
         raise ValueError('투명 원본이 아님: ' + str(raw))
@@ -103,8 +103,8 @@ def build(motion):
     if config['sha256'] != sha(raw):
         raise ValueError('원본 변경: ' + str(raw))
     frames = prepare(sheet, config)
-    if state != 'witchidle1':
-        anchor = Image.open(ROOT / 'sprites/hd720/frames/witchidle1_loop/witchidle1_loop_00.png').convert('RGBA')
+    if state != anchor_state:
+        anchor = Image.open(ROOT / f'sprites/hd720/frames/{anchor_state}_loop/{anchor_state}_loop_00.png').convert('RGBA')
         frames[0] = anchor.copy()
         frames[-1] = anchor.copy()
     write_json(path, config)
@@ -117,7 +117,7 @@ def build(motion):
             frame.resize((size, size), Image.Resampling.LANCZOS).save(directory / f'{name}_{i:02d}.png')
         subprocess.run([sys.executable, str(ROOT / 'tools/encode_holds.py'), str(path), '--fps', str(config['fps']),
                         '--frames-dir', str(directory), '--out', str(output)], cwd=ROOT, check=True)
-    qa = ROOT / 'sprites/hd720/qa/halloween'
+    qa = ROOT / f'sprites/hd720/qa/{theme}'
     qa.mkdir(parents=True, exist_ok=True)
     contact = Image.new('RGB', (960, 1040), '#e7e5ee')
     draw = ImageDraw.Draw(contact)
