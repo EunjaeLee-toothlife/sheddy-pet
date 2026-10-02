@@ -62,8 +62,8 @@
     height: calc(16px * var(--pet-scale));
   }
 
-  /* 마우스 오버 시 나타나는 버튼들 (⚙️ 설정 / 🎭 모션 선택) */
-  #gearBtn, #motionBtn {
+  /* 마우스 오버 시 나타나는 설정 / 모션 / 모드 버튼 */
+  #gearBtn, #motionBtn, #modeBtn {
     position: fixed; top: 10px; left: 10px; z-index: 11;
     width: 36px; height: 36px; border-radius: 50%;
     background: rgba(30, 30, 34, .75); color: #fff;
@@ -72,8 +72,26 @@
     opacity: 0; pointer-events: none; transition: opacity .25s;
     -webkit-app-region: no-drag;
   }
-  #gearBtn.show, #motionBtn.show { opacity: 1; pointer-events: auto; }
+  #gearBtn.show, #motionBtn.show, #modeBtn.show, #modeBtn:focus-visible { opacity: 1; pointer-events: auto; }
   #motionBtn { top: auto; bottom: 10px; }
+  #modeBtn { top: auto; bottom: 56px; width: 52px; border-radius: 18px; font-size: 13px; }
+  #modePanel {
+    position: fixed; bottom: 100px; left: 12px; z-index: 12;
+    display: none; gap: 6px; grid-template-columns: repeat(2, minmax(0, 1fr));
+    box-sizing: border-box; width: 260px; padding: 12px; border-radius: 10px;
+    max-width: calc(100vw - 24px); max-height: calc(100vh - 112px); overflow-y: auto;
+    background: rgba(30, 30, 34, .92); color: #eee; font: 13px "Segoe UI", sans-serif;
+    -webkit-app-region: no-drag;
+  }
+  #modePanel.open { display: grid; }
+  #modePanel h3, #modePanel p { grid-column: 1 / -1; margin: 0 0 4px; font-size: 13px; }
+  #modePanel p { color: #aaa; font-size: 12px; }
+  #modePanel button {
+    border: none; border-radius: 6px; padding: 9px 4px;
+    background: rgba(255,255,255,.1); color: inherit; font: inherit; cursor: pointer;
+  }
+  #modePanel button:hover, #modePanel button:focus-visible { background: rgba(255,255,255,.22); }
+  #modePanel button[aria-pressed="true"] { background: #f5c518; color: #222; font-weight: 600; }
   body.desktop #gearBtn, body.desktop #motionBtn {
     top: auto;
     left: calc(10px * var(--pet-scale));
@@ -187,6 +205,11 @@
 
 <!-- 좌측 하단: 모션 선택 버튼 + 패널 (OBS: 소스 우클릭 → 상호작용) -->
 <button id="motionBtn" type="button" title="모션 선택">🎭</button>
+<button id="modeBtn" type="button" title="모드 전환 (F4)" aria-controls="modePanel" aria-expanded="false">모드</button>
+<div id="modePanel" role="group" aria-labelledby="modeTitle">
+  <h3 id="modeTitle">모드 전환 (F4로 닫기)</h3>
+  <p>선택하면 위젯을 새로 불러온다.</p>
+</div>
 
 <div id="motionPanel">
   <h3>🎭 모션 선택 <span style="font-weight:400;color:#888">(🎭/F3로 닫기)</span></h3>
@@ -1187,13 +1210,48 @@ let gearTimer = null;
 window.addEventListener("mousemove", () => {
   gearBtn.classList.add("show");
   motionBtn.classList.add("show");
+  modeBtn.classList.add("show");
   clearTimeout(gearTimer);
   gearTimer = setTimeout(() => {
     gearBtn.classList.remove("show");
     motionBtn.classList.remove("show");
+    modeBtn.classList.remove("show");
   }, 2500);
 });
 gearBtn.addEventListener("click", toggleSettings);
+
+// URL의 다른 옵션과 저장된 마이크 설정을 유지하고 모드의 기본 대기로 시작한다.
+const modeBtn = document.getElementById("modeBtn");
+const modePanel = document.getElementById("modePanel");
+function toggleModePanel() {
+  const open = modePanel.classList.toggle("open");
+  modeBtn.setAttribute("aria-expanded", String(open));
+  if (open) modePanel.querySelector('[aria-pressed="true"]').focus();
+  else modeBtn.focus();
+}
+for (const [mode, label] of [["", "일반"], ["halloween", "할로윈"], ["seollal", "한국 설"], ["christmas", "크리스마스"], ["childrensday", "어린이날"], ["summer", "여름휴가"]]) {
+  const button = document.createElement("button");
+  button.type = "button";
+  button.textContent = label;
+  button.dataset.mode = mode;
+  button.setAttribute("aria-pressed", String(mode === (ACTIVE_MODE || "")));
+  button.addEventListener("click", () => {
+    if (mode === (ACTIVE_MODE || "")) { toggleModePanel(); return; }
+    const url = new URL(location.href);
+    if (mode) url.searchParams.set("mode", mode);
+    else url.searchParams.delete("mode");
+    url.searchParams.delete("state");
+    url.searchParams.delete("ending");
+    location.assign(url.href);
+  });
+  modePanel.appendChild(button);
+}
+modeBtn.addEventListener("click", toggleModePanel);
+window.addEventListener("keydown", e => {
+  if (e.code !== "F4" && !(e.code === "Escape" && modePanel.classList.contains("open"))) return;
+  e.preventDefault();
+  toggleModePanel();
+});
 
 // ── 모션 선택기 (좌측 하단, 🎭/F3) ────────────────────────────
 // 등록된 모든 애니메이션을 나열하고, 클릭하면 해당 모션을 강제 실행한다.

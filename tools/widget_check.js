@@ -581,6 +581,56 @@ async function main() {
     if (argv.includes("--reactions-only")) await send("Page.addScriptToEvaluateOnNewDocument", { source: "window.__reactionsOnly=true;" });
     if (argv.includes("--capture")) await send("Page.addScriptToEvaluateOnNewDocument", { source: "window.__captureReactions=[];" });
     if (FALLBACK) await send("Page.addScriptToEvaluateOnNewDocument", { source: "delete HTMLVideoElement.prototype.requestVideoFrameCallback; delete HTMLVideoElement.prototype.cancelVideoFrameCallback;" });
+    if (argv.includes("--mode-switch")) {
+      const evaluate = async expression => {
+        const r = await send("Runtime.evaluate", { expression, returnByValue: true });
+        if (r.result?.exceptionDetails) throw Error(r.result.exceptionDetails.exception?.description || r.result.exceptionDetails.text);
+        return r.result?.result?.value;
+      };
+      const waitMode = async mode => {
+        const until = Date.now() + 15000;
+        while (Date.now() < until) {
+          // 내비게이션 도중에는 이전 실행 컨텍스트가 사라질 수 있다.
+          const r = await send("Runtime.evaluate", { expression: `typeof current !== 'undefined' && params.get('mode') === ${JSON.stringify(mode || null)} && current === DEFAULT_STATE && !transitioning && vids[front].videoWidth === 720 && !vids[front].paused`, returnByValue: true });
+          if (r.result?.result?.value === true) return;
+          await sleep(100);
+        }
+        throw Error(`모드 전환 시간 초과: ${mode || "일반"}`);
+      };
+      const assert = (ok, detail) => { if (!ok) throw Error(detail); };
+      await send("Page.navigate", { url: `http://127.0.0.1:${server.address().port}/${PAGE}?dice=0&flip=1&resolution=720&hold=8&assets=hd720#widget` });
+      await waitMode("");
+      await evaluate(`localStorage.setItem('petMicDevice', '__off__'); localStorage.setItem('petMicThresh', '0.055')`);
+      for (const mode of ["halloween", "seollal", "christmas", "childrensday", "summer", ""]) {
+        await evaluate(`history.replaceState(null, '', location.pathname + location.search + '&state=happy1&ending=3#widget'); window.dispatchEvent(new MouseEvent('mousemove')); modeBtn.click()`);
+        assert(await evaluate(`modeBtn.classList.contains('show') && modeBtn.getAttribute('aria-expanded') === 'true' && modePanel.querySelectorAll('button').length === 6 && modePanel.querySelector('[aria-pressed="true"]').dataset.mode === (ACTIVE_MODE || '')`), "모드 패널 표시/선택 오류");
+        // 작은 OBS 뷰포트에서도 실제 버튼 위치를 눌러 내비게이션한다.
+        const point = await evaluate(`(()=>{const b=modePanel.querySelector('[data-mode="${mode}"]'); b.scrollIntoView({block:'nearest'}); const r=b.getBoundingClientRect(); return {x:r.x+r.width/2,y:r.y+r.height/2};})()`);
+        await send("Input.dispatchMouseEvent", { type: "mousePressed", ...point, button: "left", clickCount: 1 });
+        await send("Input.dispatchMouseEvent", { type: "mouseReleased", ...point, button: "left", clickCount: 1 });
+        await waitMode(mode);
+        assert(await evaluate(`params.get('flip')==='1' && params.get('resolution')==='720' && params.get('hold')==='8' && params.get('dice')==='0' && params.get('assets')==='hd720' && location.hash==='#widget' && !params.has('state') && !params.has('ending') && localStorage.getItem('petMicDevice')==='__off__' && threshSlider.value==='0.055' && CLIP_URL.size===1`), "옵션/마이크 설정 보존 또는 모션 초기화 실패");
+        assert(await evaluate(`Object.values(ACTIVE_ANIMS).every(a=>!a.mode || a.mode===ACTIVE_MODE) && modePanel.querySelector('[aria-pressed="true"]').dataset.mode===(ACTIVE_MODE || '')`), "모드/선택 표시 불일치");
+        console.log(`PASS  modeSwitch ${mode || "일반"}: 실제 클릭 → 대기 재생, 옵션/마이크 설정 유지, 초기 클립 1개`);
+      }
+      await evaluate(`window.__sameMode=true; modeBtn.click(); modePanel.querySelector('[aria-pressed="true"]').click()`);
+      await sleep(300);
+      assert(await evaluate(`window.__sameMode && !modePanel.classList.contains('open') && modeBtn.getAttribute('aria-expanded')==='false'`), "현재 모드 선택 시 불필요한 재로딩");
+      await evaluate(`window.dispatchEvent(new KeyboardEvent('keydown',{code:'F4'}))`);
+      assert(await evaluate(`modePanel.classList.contains('open') && document.activeElement===modePanel.querySelector('[aria-pressed="true"]')`), "F4/키보드 포커스 오류");
+      if (argv.includes("--capture")) {
+        const shot = await send("Page.captureScreenshot", { format: "png" });
+        const file = path.join(os.tmpdir(), "sheddy-mode-switch.png");
+        fs.writeFileSync(file, Buffer.from(shot.result.data, "base64"));
+        console.log("QA", file);
+      }
+      await evaluate(`window.dispatchEvent(new KeyboardEvent('keydown',{code:'Escape'}))`);
+      assert(await evaluate(`!modePanel.classList.contains('open') && document.activeElement===modeBtn`), "Escape 닫기/포커스 복귀 오류");
+      console.log("PASS  modePanel 현재 모드 재선택·F4·Escape·포커스 복귀");
+      failed = false;
+      ws.close();
+      return;
+    }
     if (BENCHMARK) {
       await send("Page.addScriptToEvaluateOnNewDocument", { source: "window.__canvasDraws=0; const clear=CanvasRenderingContext2D.prototype.clearRect; CanvasRenderingContext2D.prototype.clearRect=function(...args){window.__canvasDraws++; return clear.apply(this,args)};" });
       await send("Emulation.setDeviceMetricsOverride", { width: 512, height: 512, deviceScaleFactor: 1, mobile: false });
