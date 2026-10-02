@@ -84,6 +84,22 @@
       "PASS  witchAutomatic 실제 자동 추첨·복귀, 전용 클립만 요청, 캐시 3812894B",
       "PASS  mode=halloween&state=alchemyslime1&dice=0 → alchemyslime1",
       "PASS  mode=unknown&dice=0 → idle1"
+    ],
+    "halloweenFallback": [
+      "PASS  modeScope    일반 시작 상태 대체, 선택기 28종, 외부 일반 모션 차단, 초기 영상 1개",
+      "PASS  witchIdle    대기 루프 두 사이클 연속 재생",
+      "PASS  witchResults 동작 27종 실제 재생 후 마녀 복장으로 복귀, 투명 720 영상",
+      "PASS  witchHold    두 사이클 유지, 숨김 중 작업 0, 유효한 큐와 Infinity 보존",
+      "PASS  witchMic     무음/음량 임계값, 마녀 말하기 두 사이클, 해제 지연, 마녀 복귀, 장치 해제",
+      "PASS  witchAutomatic 실제 자동 추첨·복귀, 전용 클립만 요청, 캐시 3812894B",
+      "PASS  mode=halloween&state=alchemyslime1&dice=0 → alchemyslime1",
+      "PASS  mode=unknown&dice=0 → idle1"
+    ],
+    "deployment": [
+      "720/512 전용 24클립 디코딩 검사 통과",
+      "hd720/기존/재구성 86클립 배포 검사 통과",
+      "기존 82클립 자산 및 검수 기록 보존",
+      "위젯과 생성 Pages 코드 동일"
     ]
   },
   "limitations": [
