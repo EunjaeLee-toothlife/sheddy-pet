@@ -16,7 +16,11 @@ def verify(motion, anchor_state='witchidle1'):
     state = motion['id']
     name = state + '_loop'
     config = json.loads((ROOT / f'anims/{name}.json').read_text())
-    assert sha(ROOT / config['sheet']) == config['sha256'], f'원본 해시: {state}'
+    if config.get('sourcePipeline') == 'native-pairs-v1':
+        from verify_native_sources import verify_sources
+        verify_sources(config)
+    else:
+        assert sha(ROOT / config['sheet']) == config['sha256'], f'원본 해시: {state}'
     assert config['fps'] == motion['fps'] and config['holds'] == motion['holds'], f'타이밍 설정: {state}'
     ticks = sum(int(config['holds'].get(str(i), 1)) for i in range(16))
     assets = []
