@@ -4876,7 +4876,7 @@
       "sprites/hd720/frames/summer_sandcastle1_loop/summer_sandcastle1_loop_12.png",
       "sprites/hd720/frames/summer_sandcastle1_loop/summer_sandcastle1_loop_13.png"
     ],
-    "promptFile": "anims/native/guided.prompt.txt"
+    "promptFile": "anims/native/wide.prompt.txt"
   },
   {
     "id": "summer_sandcastle1",
