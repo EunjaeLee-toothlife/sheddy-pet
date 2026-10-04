@@ -3,22 +3,22 @@
   "state": "childrensday_plane1",
   "fps": 12,
   "holds": {
-    "0": 2,
+    "0": 4,
     "1": 2,
     "2": 2,
     "3": 2,
-    "4": 2,
+    "4": 6,
     "5": 2,
-    "6": 2,
-    "7": 4,
-    "8": 4,
-    "9": 2,
+    "6": 9,
+    "7": 2,
+    "8": 5,
+    "9": 10,
     "10": 2,
     "11": 2,
     "12": 2,
-    "13": 2,
+    "13": 8,
     "14": 2,
-    "15": 2
+    "15": 4
   },
   "nativeSources": [
     {
@@ -451,5 +451,6 @@
     }
   ],
   "sourcePipeline": "native-pairs-v1",
-  "anchor": "sprites/hd720/frames/childrensday_breathe1_loop/childrensday_breathe1_loop_00.png"
+  "anchor": "sprites/hd720/frames/childrensday_breathe1_loop/childrensday_breathe1_loop_00.png",
+  "timingNote": "이동은 2틱 유지, 동작별 등장·행동·감상 포즈에 여유를 둔다."
 }

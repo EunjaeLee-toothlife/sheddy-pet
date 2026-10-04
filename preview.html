@@ -218,6 +218,21 @@ let playing = true;
 let timer = null;
 let preloaded = [];
 
+function playbackFrames(clip) {
+  const frames = [];
+  for (let i = 0; i < clip.frames.length;) {
+    const repeat = (clip.repeats || []).find(r => r.frames[0] === i);
+    const end = repeat ? repeat.frames[1] : i;
+    for (let n = 0; n < (repeat?.times || 1); n++) {
+      for (let j = i; j <= end; j++) {
+        for (let tick = 0; tick < (clip.holds?.[j] || 1); tick++) frames.push(clip.frames[j]);
+      }
+    }
+    i = end + 1;
+  }
+  return { frames, webm: clip.candidate, fps: clip.fps, rate: clip.rate || 1 };
+}
+
 async function initialize() {
   // 실제 위젯과 같은 720 리소스 및 확정 프레임 수를 사용한다.
   const response = await fetch("anims/hd720_manifest.json");
@@ -229,14 +244,13 @@ async function initialize() {
     const name = animation.webm.split("/").pop().replace(/^anim_|\.webm$/g, "");
     const clip = clips.get(name);
     if (clip) {
-      Object.assign(animation, { frames: clip.frames, webm: clip.candidate, fps: clip.fps });
+      Object.assign(animation, playbackFrames(clip));
       registered.add(name);
     }
   }
   // 목록에서 빠졌던 실험 모션을 포함해 런타임 전체 클립을 검수할 수 있다.
   for (const clip of manifest.clips) {
-    if (!registered.has(clip.clip)) ANIMATIONS.push({ name: `${clip.state} — ${clip.clip}`,
-      frames: clip.frames, webm: clip.candidate, fps: clip.fps });
+    if (!registered.has(clip.clip)) ANIMATIONS.push({ name: `${clip.state} — ${clip.clip}`, ...playbackFrames(clip) });
   }
   ANIMATIONS.forEach((a, i) => {
   const opt = document.createElement("option");
@@ -256,6 +270,7 @@ function load(idx) {
   preloaded = current.frames.map(src => { const im = new Image(); im.src = src; return im; });
   if (current.webm) {
     video.src = current.webm + bust;
+    video.playbackRate = current.rate;
     video.style.display = "";
     webmMeta.textContent = current.webm;
   } else {
@@ -277,7 +292,8 @@ function restartTimer() {
   clearInterval(timer);
   if (playing) {
     tick();
-    timer = setInterval(tick, 1000 / Number(fpsSlider.value));
+    video.playbackRate = current.rate * Number(fpsSlider.value) / current.fps;
+    timer = setInterval(tick, 1000 / (Number(fpsSlider.value) * current.rate));
   }
 }
 

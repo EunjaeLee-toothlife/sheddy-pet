@@ -1,1 +1,9 @@
-{"name": "lemon1_loop", "holds": {}, "repeats": []}
+{
+  "name": "lemon1_loop",
+  "holds": {
+    "3": 2,
+    "7": 3,
+    "11": 4
+  },
+  "repeats": []
+}

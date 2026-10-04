@@ -3,22 +3,22 @@
   "state": "christmas_snowglobe1",
   "fps": 12,
   "holds": {
-    "0": 2,
+    "0": 4,
     "1": 2,
     "2": 2,
-    "3": 2,
+    "3": 6,
     "4": 2,
     "5": 2,
-    "6": 2,
-    "7": 4,
-    "8": 4,
+    "6": 10,
+    "7": 2,
+    "8": 8,
     "9": 2,
-    "10": 2,
+    "10": 9,
     "11": 2,
-    "12": 2,
+    "12": 7,
     "13": 2,
     "14": 2,
-    "15": 2
+    "15": 4
   },
   "nativeSources": [
     {
@@ -451,5 +451,6 @@
     }
   ],
   "sourcePipeline": "native-pairs-v1",
-  "anchor": "sprites/hd720/frames/christmas_breathe1_loop/christmas_breathe1_loop_00.png"
+  "anchor": "sprites/hd720/frames/christmas_breathe1_loop/christmas_breathe1_loop_00.png",
+  "timingNote": "이동은 2틱 유지, 동작별 등장·행동·감상 포즈에 여유를 둔다."
 }

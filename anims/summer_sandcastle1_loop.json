@@ -3,22 +3,22 @@
   "state": "summer_sandcastle1",
   "fps": 12,
   "holds": {
-    "0": 2,
+    "0": 4,
     "1": 2,
     "2": 2,
-    "3": 2,
+    "3": 6,
     "4": 2,
     "5": 2,
-    "6": 2,
-    "7": 4,
-    "8": 4,
-    "9": 2,
+    "6": 8,
+    "7": 2,
+    "8": 2,
+    "9": 8,
     "10": 2,
-    "11": 2,
+    "11": 10,
     "12": 2,
-    "13": 2,
+    "13": 6,
     "14": 2,
-    "15": 2
+    "15": 4
   },
   "nativeSources": [
     {
@@ -465,5 +465,6 @@
     }
   ],
   "sourcePipeline": "native-pairs-v1",
-  "anchor": "sprites/hd720/frames/summer_breathe1_loop/summer_breathe1_loop_00.png"
+  "anchor": "sprites/hd720/frames/summer_breathe1_loop/summer_breathe1_loop_00.png",
+  "timingNote": "이동은 2틱 유지, 동작별 등장·행동·감상 포즈에 여유를 둔다."
 }

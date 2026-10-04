@@ -1,6 +1,10 @@
 {
   "fps": 10,
-  "holds": {},
+  "holds": {
+    "3": 2,
+    "7": 3,
+    "11": 4
+  },
   "repeats": [],
   "name": "lemon1_loop"
 }

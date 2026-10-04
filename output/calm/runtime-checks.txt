@@ -1,0 +1,150 @@
+[normal]
+checking widget.html…
+PASS  renderBudget 3초 30회, 433×433
+PASS  newReactions 16개 모션 단발 복귀 + 박수 계속 유지
+PASS  danceLoops   3개 춤 각각 두 사이클, 무기한 유지, 워치독 개입 없음
+PASS  alchemyEndings alchemy1_start → alchemy1_loop → alchemy1_end1 → alchemy1_outro → idle1_loop | alchemy1_start → alchemy1_loop → alchemy1_end2 → alchemy1_outro → idle1_loop | alchemy1_start → alchemy1_loop → alchemy1_end3 → alchemy1_outro → idle1_loop
+PASS  alchemyHold  두 사이클 무기한 유지, 숨김 중 draw/재생 0, 큐 실행과 원복 정상
+PASS  visibility   숨김 중 draw/재생 0, 전환과 큐 복구
+PASS  cacheBudget  19/62클립, 4172206바이트, 동시 요청 2
+PASS  pausePendingPlay play 완료 전 숨김/복귀 정상
+PASS  cycles       재시작 지연 [4,5,5,7]ms
+PASS  transitions  pastry1_start → pastry1_loop → pastry1_end2 → pastry1_outro → idle1_loop | happy1_start → happy1_loop → happy1_end → idle1_loop
+PASS  queuedTalk   알파 최소 255, talk 시작 지연 [0,0,12,0]ms
+PASS  holdQueue    pinnedUntil = Infinity 유지
+PASS  staleChain   리셋 뒤에도 current = idle1 유지
+
+[seollal]
+checking widget.html…
+PASS  modeScope    일반 시작 상태 대체, 선택기 10종, 외부 일반 모션 차단, 초기 영상 1개
+PASS  themeIdle    대기 루프 두 사이클 연속 재생
+PASS  themeResults 동작 9종 실제 재생 후 테마 복장으로 복귀, 투명 720 영상
+PASS  themeHold    두 사이클 유지, 숨김 중 작업 0, 유효한 큐와 Infinity 보존
+PASS  themeMic     무음/음량 임계값, 테마 말하기 두 사이클, 해제 지연, 테마 복귀, 장치 해제
+PASS  themeAutomatic 실제 자동 추첨·복귀, 전용 클립만 요청, 캐시 3931700B
+PASS  mode=seollal&state=seollal_talk1&dice=0 → seollal_talk1
+PASS  mode=unknown&dice=0 → idle1
+PASS  mode=__proto__&dice=0 → idle1
+
+[childrensday]
+checking widget.html…
+PASS  modeScope    일반 시작 상태 대체, 선택기 10종, 외부 일반 모션 차단, 초기 영상 1개
+PASS  themeIdle    대기 루프 두 사이클 연속 재생
+PASS  themeResults 동작 9종 실제 재생 후 테마 복장으로 복귀, 투명 720 영상
+PASS  themeHold    두 사이클 유지, 숨김 중 작업 0, 유효한 큐와 Infinity 보존
+PASS  themeMic     무음/음량 임계값, 테마 말하기 두 사이클, 해제 지연, 테마 복귀, 장치 해제
+PASS  themeAutomatic 실제 자동 추첨·복귀, 전용 클립만 요청, 캐시 3740393B
+PASS  mode=childrensday&state=childrensday_talk1&dice=0 → childrensday_talk1
+PASS  mode=unknown&dice=0 → idle1
+PASS  mode=__proto__&dice=0 → idle1
+
+[halloween]
+checking widget.html…
+PASS  modeScope    일반 시작 상태 대체, 선택기 28종, 외부 일반 모션 차단, 초기 영상 1개
+PASS  themeIdle    대기 루프 두 사이클 연속 재생
+PASS  themeResults 동작 27종 실제 재생 후 테마 복장으로 복귀, 투명 720 영상
+PASS  themeHold    두 사이클 유지, 숨김 중 작업 0, 유효한 큐와 Infinity 보존
+PASS  themeMic     무음/음량 임계값, 테마 말하기 두 사이클, 해제 지연, 테마 복귀, 장치 해제
+PASS  themeAutomatic 실제 자동 추첨·복귀, 전용 클립만 요청, 캐시 3763819B
+PASS  mode=halloween&state=alchemyslime1&dice=0 → alchemyslime1
+PASS  mode=unknown&dice=0 → idle1
+PASS  mode=__proto__&dice=0 → idle1
+
+[christmas]
+checking widget.html…
+PASS  modeScope    일반 시작 상태 대체, 선택기 10종, 외부 일반 모션 차단, 초기 영상 1개
+PASS  themeIdle    대기 루프 두 사이클 연속 재생
+PASS  themeResults 동작 9종 실제 재생 후 테마 복장으로 복귀, 투명 720 영상
+PASS  themeHold    두 사이클 유지, 숨김 중 작업 0, 유효한 큐와 Infinity 보존
+PASS  themeMic     무음/음량 임계값, 테마 말하기 두 사이클, 해제 지연, 테마 복귀, 장치 해제
+PASS  themeAutomatic 실제 자동 추첨·복귀, 전용 클립만 요청, 캐시 3673590B
+PASS  mode=christmas&state=christmas_talk1&dice=0 → christmas_talk1
+PASS  mode=unknown&dice=0 → idle1
+PASS  mode=__proto__&dice=0 → idle1
+
+[summer]
+checking widget.html…
+PASS  modeScope    일반 시작 상태 대체, 선택기 10종, 외부 일반 모션 차단, 초기 영상 1개
+PASS  themeIdle    대기 루프 두 사이클 연속 재생
+PASS  themeResults 동작 9종 실제 재생 후 테마 복장으로 복귀, 투명 720 영상
+PASS  themeHold    두 사이클 유지, 숨김 중 작업 0, 유효한 큐와 Infinity 보존
+PASS  themeMic     무음/음량 임계값, 테마 말하기 두 사이클, 해제 지연, 테마 복귀, 장치 해제
+PASS  themeAutomatic 실제 자동 추첨·복귀, 전용 클립만 요청, 캐시 3396234B
+PASS  mode=summer&state=summer_talk1&dice=0 → summer_talk1
+PASS  mode=unknown&dice=0 → idle1
+PASS  mode=__proto__&dice=0 → idle1
+
+[docs-fallback]
+checking docs/index.html (rVFC 미지원)…
+PASS  renderBudget 3초 60회, 433×433
+PASS  newReactions 16개 모션 단발 복귀 + 박수 계속 유지
+PASS  danceLoops   3개 춤 각각 두 사이클, 무기한 유지, 워치독 개입 없음
+PASS  alchemyEndings alchemy1_start → alchemy1_loop → alchemy1_end1 → alchemy1_outro → idle1_loop | alchemy1_start → alchemy1_loop → alchemy1_end2 → alchemy1_outro → idle1_loop | alchemy1_start → alchemy1_loop → alchemy1_end3 → alchemy1_outro → idle1_loop
+PASS  alchemyHold  두 사이클 무기한 유지, 숨김 중 draw/재생 0, 큐 실행과 원복 정상
+PASS  visibility   숨김 중 draw/재생 0, 전환과 큐 복구
+PASS  cacheBudget  19/62클립, 4172206바이트, 동시 요청 2
+PASS  pausePendingPlay play 완료 전 숨김/복귀 정상
+PASS  cycles       재시작 지연 [12,11,11,12]ms
+PASS  transitions  pastry1_start → pastry1_loop → pastry1_end10 → pastry1_outro → idle1_loop | happy1_start → happy1_loop → happy1_end → idle1_loop
+PASS  queuedTalk   알파 최소 255, talk 시작 지연 [0,0,0,0]ms
+PASS  holdQueue    pinnedUntil = Infinity 유지
+PASS  staleChain   리셋 뒤에도 current = idle1 유지
+
+[mode-switch]
+PASS  modeSwitch halloween: 이탈 → 등장 → 말하기, 재로딩 없음, 연속 클릭 차단, 마이크 연결 유지, 캐시 상한 준수
+PASS  modeSwitch seollal: 이탈 → 등장 → 말하기, 재로딩 없음, 연속 클릭 차단, 마이크 연결 유지, 캐시 상한 준수
+PASS  modeSwitch christmas: 이탈 → 등장 → 말하기, 재로딩 없음, 연속 클릭 차단, 마이크 연결 유지, 캐시 상한 준수
+PASS  modeSwitch childrensday: 이탈 → 등장 → 말하기, 재로딩 없음, 연속 클릭 차단, 마이크 연결 유지, 캐시 상한 준수
+PASS  modeSwitch summer: 이탈 → 등장 → 말하기, 재로딩 없음, 연속 클릭 차단, 마이크 연결 유지, 캐시 상한 준수
+PASS  modeSwitch 일반: 이탈 → 등장 → 말하기, 재로딩 없음, 연속 클릭 차단, 마이크 연결 유지, 캐시 상한 준수
+PASS  transformHidden 숨김 중 작업 정지, 복귀 후 변신 완주
+PASS  transformFailure 영상 로드 실패 후 대기 복구와 잠금 해제
+PASS  transformWatchdog ended 유실 복구, 적용 전 복장 보존
+PASS  transformDeferred 숨김 중 선택 대기, 복귀 이벤트로 시작
+PASS  modePanel 현재 모드 재선택·F4·Escape·포커스 복귀
+
+[root]
+PASS canvas 1280×720 DPR1 → 720²
+PASS canvas 720×1280 DPR1 → 720²
+PASS canvas 320×640 DPR1 → 320²
+PASS canvas 1280×720 DPR2 → 720²
+PASS idle1_loop 720² 24 draws
+PASS basic1_loop 720² 22 draws
+PASS basic2_loop 720² 22 draws
+PASS basic3_loop 720² 22 draws
+PASS happy1_start 720² 10 draws
+PASS happy1_loop 720² 22 draws
+PASS happy1_end 720² 10 draws
+PASS happy2_loop 720² 22 draws
+PASS excited1_loop 720² 22 draws
+PASS boxing1_loop 720² 28 draws
+PASS sad1_loop 720² 22 draws
+PASS sad2_loop 720² 22 draws
+PASS talk_loop 720² 22 draws
+PASS all 13 runtime clips
+
+[dances]
+PASS canvas 1280×720 DPR1 → 720²
+PASS canvas 720×1280 DPR1 → 720²
+PASS canvas 320×640 DPR1 → 320²
+PASS canvas 1280×720 DPR2 → 720²
+PASS dance1_loop 720² 23 draws
+PASS dance2_loop 720² 20 draws
+PASS dance3_loop 720² 20 draws
+PASS all 3 runtime clips (dance)
+
+[lemon]
+PASS canvas 1280×720 DPR1 → 720²
+PASS canvas 720×1280 DPR1 → 720²
+PASS canvas 320×640 DPR1 → 320²
+PASS canvas 1280×720 DPR2 → 720²
+PASS lemon1_loop 720² 27 draws
+PASS all 1 runtime clips (lemon)
+
+[parapara]
+PASS canvas 1280×720 DPR1 → 720²
+PASS canvas 720×1280 DPR1 → 720²
+PASS canvas 320×640 DPR1 → 320²
+PASS canvas 1280×720 DPR2 → 720²
+PASS parapara1_loop 720² 31 draws
+PASS all 1 runtime clips (parapara)
