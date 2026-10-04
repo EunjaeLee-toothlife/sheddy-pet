@@ -1,0 +1,22 @@
+{
+  "before": {
+    "ended": true,
+    "cycles": 0,
+    "time": 3.6
+  },
+  "afterWatchdog": {
+    "ended": false,
+    "cycles": 1,
+    "time": 0
+  },
+  "afterEvent": {
+    "ended": false,
+    "cycles": 2,
+    "time": 0
+  },
+  "warnings": [
+    "watchdog: ended clip left on screen — re-running cycle end"
+  ]
+}
+Error: 같은 종료를 워치독과 ended가 중복 처리함
+    at /Users/toonation-eunjaelee/.codex/worktrees/a09f/SP/tools/widget_ended_race_check.js:30:62

@@ -1,0 +1,21 @@
+FF
+======================================================================
+FAIL: test_character_survives_matte_cleanup (__main__.OriginalAlphaTest.test_character_survives_matte_cleanup) (clip='chem1_end1', index=4)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/toonation-eunjaelee/.codex/worktrees/a09f/SP/tools/test_original_alpha.py", line 20, in test_character_survives_matte_cleanup
+    self.assertGreater(int((alpha > 240).sum()), 30_000)
+AssertionError: 0 not greater than 30000
+
+======================================================================
+FAIL: test_character_survives_matte_cleanup (__main__.OriginalAlphaTest.test_character_survives_matte_cleanup) (clip='chem1_end3', index=16)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/toonation-eunjaelee/.codex/worktrees/a09f/SP/tools/test_original_alpha.py", line 20, in test_character_survives_matte_cleanup
+    self.assertGreater(int((alpha > 240).sum()), 30_000)
+AssertionError: 15 not greater than 30000
+
+----------------------------------------------------------------------
+Ran 1 test in 0.013s
+
+FAILED (failures=2)

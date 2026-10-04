@@ -1,0 +1,106 @@
+{
+  "cycles": [
+    {
+      "before": {
+        "ended": true,
+        "cycles": 0,
+        "time": 3.6
+      },
+      "afterWatchdog": {
+        "ended": true,
+        "cycles": 0,
+        "time": 3.6
+      },
+      "afterEvent": {
+        "ended": false,
+        "cycles": 1,
+        "time": 0
+      },
+      "afterGrace": {
+        "ended": false,
+        "cycles": 1,
+        "time": 0.190507
+      }
+    },
+    {
+      "before": {
+        "ended": true,
+        "cycles": 1,
+        "time": 3.6
+      },
+      "afterWatchdog": {
+        "ended": true,
+        "cycles": 1,
+        "time": 3.6
+      },
+      "afterEvent": {
+        "ended": false,
+        "cycles": 2,
+        "time": 0
+      },
+      "afterGrace": {
+        "ended": false,
+        "cycles": 2,
+        "time": 0.188135
+      }
+    },
+    {
+      "before": {
+        "ended": true,
+        "cycles": 2,
+        "time": 3.6
+      },
+      "afterWatchdog": {
+        "ended": true,
+        "cycles": 2,
+        "time": 3.6
+      },
+      "afterEvent": {
+        "ended": false,
+        "cycles": 3,
+        "time": 0
+      },
+      "afterGrace": {
+        "ended": false,
+        "cycles": 3,
+        "time": 0.187942
+      }
+    }
+  ],
+  "normalWarnings": [],
+  "recovered": {
+    "before": {
+      "ended": true,
+      "cycles": 3,
+      "time": 3.6
+    },
+    "afterWatchdog": {
+      "ended": false,
+      "cycles": 4,
+      "time": 0.094504
+    },
+    "afterEvent": {
+      "ended": false,
+      "cycles": 4,
+      "time": 0.094504
+    },
+    "warnings": [
+      "watchdog: ended clip left on screen — re-running cycle end"
+    ]
+  },
+  "reused": {
+    "ownerChanged": true,
+    "before": {
+      "ended": false,
+      "cycles": 0,
+      "time": 0.1922
+    },
+    "after": {
+      "ended": false,
+      "cycles": 0,
+      "time": 0.393927
+    },
+    "warnings": []
+  }
+}
+PASS 연속 3사이클 중복 방지, 이벤트 유실 복구, 늦은 이벤트·재사용 버퍼 보호

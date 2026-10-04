@@ -9189,7 +9189,7 @@
     }
   },
   "originalSources": {
-    "anims/rebuild_manifest.json": "4c1f77c503597411714e356491a82dd44efd29ac8029e8b024322226ed5935a4",
+    "anims/rebuild_manifest.json": "6cc0ac087049da0cf129b4cde18303413bcc078cc9cb1f78cbab0dec8b3dd89d",
     "sprites/rebuilt/configs/doze1_registration.json": "60ca8cbad77783a80f39e7a97b988ca6977f11ce6b10c09fe20e591f9c01a92d",
     "sprites/rebuilt/sheets/doze1_loop_00-01-02-03.png": "75021ed2951c10f2eb5ffcdc586585df1505b3487cbed810fec7b9d009e09397",
     "sprites/rebuilt/sheets/doze1_loop_04-05-06-07.png": "c607d7c4cffea83dac4b7f216bdbcb44d4c81fabe4483e8579651d4d42612e1a",

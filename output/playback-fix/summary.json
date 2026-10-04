@@ -1,0 +1,55 @@
+{
+  "baselineCommit": "bee1b65",
+  "verdict": "fixed_and_verified",
+  "runtime": {
+    "widgetSha256": "9a673ba41d1864a7d7590c7f991ccb029e11e507395e4931c6a11d11e88fd419",
+    "pagesSha256": "9a673ba41d1864a7d7590c7f991ccb029e11e507395e4931c6a11d11e88fd419",
+    "normalControlCases": 13,
+    "pagesFallbackControlCases": 13,
+    "stateModeCombinations": 107,
+    "statesByMode": {
+      "normal": 39,
+      "halloween": 28,
+      "seollal": 10,
+      "christmas": 10,
+      "childrensday": 10,
+      "summer": 10
+    },
+    "observedStateEnded": 325,
+    "unexpectedWarnings": 0,
+    "raceRegression": "3 consecutive cycles + missing event recovery + late event + reused buffer"
+  },
+  "assets": {
+    "runtimeVideos": 315,
+    "pngPoses": 4715,
+    "decodedTicks": 12275,
+    "pagesCopies": 315,
+    "alphaMissingTicks": 0,
+    "poseSubstitutions": 0,
+    "repairedFrames": 2,
+    "repairedVideos": 2,
+    "defaultAssetSet": "hd720",
+    "defaultSize": [
+      720,
+      720
+    ]
+  },
+  "evidence": {
+    "alpha-after.log": "8c48a33d2c359464395f74f0b2034ed8bf3608b2775d4035d227ae6fba0e0ce0",
+    "alpha-before.log": "3deea1c5887f329cccb9c66c7ef3935abf50ef5e3d0f76355d10246015f2f16c",
+    "alpha-recovery.json": "3453206072af8692d431d8e61826da207633f2f928085ad568a618d43c43cf1e",
+    "alpha-recovery.png": "54b6a40e9c9cded972b05e613b263c4f59b7124b2cd04010eb3e50e2df1fe70b",
+    "asset-audit.json": "bb1048256829719e98e7de2ade9b0dd843b8aa21a4ce51086ee5a058e7c98c86",
+    "asset-audit.log": "4a7a373cfb1a551fce01a00fa3fa185775179fc8e47f4d5210b094c7751cb238",
+    "audit-tests.log": "33060fd73862c5e1af97335504d5b45211fce6d229657f556d8deceeadc52ce4",
+    "deploy.log": "e4df3188c7f0fc8f5cc4c3b0559383a8828b362fbdc60ec57831cd1254698b67",
+    "ended-race-after.log": "ee97e145563097de550d6f57827e3ccec5fce447fef91e3f7252e6fd5f9bf44c",
+    "ended-race-before.log": "067eaca419dd55992838fc7ea13c4b090207d4ae3b2811b35f077dc7ee4325b5",
+    "original-chem.log": "e9688753136c72926620a4438ff753f81ba6b6f4bc896c96c27ea9424a5b93fc",
+    "pages-mode-switch.log": "6f83622678fc82b5a69eff42d657de04fe35ad6da7bbc43649f2c7875e082edd",
+    "pages-widget-fallback.log": "930d138d64052131d890c8ea8294954ad7758e0692df7f046fb8127934db5e4b",
+    "states.log": "62eff686882a59d58f36cc80a2a24cf0beda47f2e78b8e377ff1b81699069605",
+    "widget.log": "599610229f426e93b786120ff94861fe64689f81ff7fc6a9489661263c1547f1"
+  },
+  "limits": "macOS headless Chrome; OBS app and remote Pages server not executed"
+}

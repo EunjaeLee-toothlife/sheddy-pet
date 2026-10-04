@@ -21,13 +21,38 @@ const sleep=ms=>new Promise(r=>setTimeout(r,ms));
    await wait(()=>current==='idle1'&&!transitioning);pinnedUntil=Infinity;
    await setState('basic1',{pin:false});await wait(()=>current==='basic1'&&!transitioning&&!fade);
    const warnings=[];console.warn=(...a)=>warnings.push(a.join(' '));const v=vids[front],ended=v.onended;
-   return await new Promise(resolve=>{v.onended=()=>{const before={ended:v.ended,cycles:emotionCycles,time:v.currentTime};
-     window.__watchdogProbe();const afterWatchdog={ended:v.ended,cycles:emotionCycles,time:v.currentTime};
-     ended();const afterEvent={ended:v.ended,cycles:emotionCycles,time:v.currentTime};
-     v.onended=ended;resolve({before,afterWatchdog,afterEvent,warnings});};});
+   const snapshot=()=>({ended:v.ended,cycles:emotionCycles,time:v.currentTime});
+   const cycles=[];
+   // 정상 이벤트 직전 워치독이 실행되는 순서를 세 사이클 연속 강제한다.
+   for(let i=0;i<3;i++){
+    const cycle=await new Promise(resolve=>{v.onended=()=>{const before=snapshot();
+      window.__watchdogProbe();const afterWatchdog=snapshot();
+      ended();const afterEvent=snapshot();v.onended=ended;
+      setTimeout(()=>resolve({before,afterWatchdog,afterEvent,afterGrace:snapshot()}),200);};});
+    cycles.push(cycle);
+   }
+   const normalWarnings=[...warnings];warnings.length=0;
+   // 정상 이벤트가 유실되면 복구하고, 그 뒤 늦게 도착한 이벤트는 무시한다.
+   const recovered=await new Promise(resolve=>{v.onended=()=>{const before=snapshot();
+     window.__watchdogProbe();setTimeout(()=>{const afterWatchdog=snapshot();
+       ended();const afterEvent=snapshot();v.onended=ended;
+       resolve({before,afterWatchdog,afterEvent,warnings:[...warnings]});},200);};});
+   // 복구 예약 직후 두 버퍼를 재사용해도 이전 콜백이 새 상태를 바꾸면 안 된다.
+   warnings.length=0;
+   const reused=await new Promise((resolve,reject)=>{v.onended=async()=>{try{
+     window.__watchdogProbe();
+     await setState('happy1',{pin:false});await setState('basic1',{pin:false});
+     const before=snapshot();ended();await new Promise(r=>setTimeout(r,200));
+     resolve({ownerChanged:clipOwner.get(v)!==oldOwner,before,after:snapshot(),warnings:[...warnings]});
+   }catch(e){reject(e);}};const oldOwner=clipOwner.get(v);});
+   return {cycles,normalWarnings,recovered,reused};
   })()`);
   console.log(JSON.stringify(result,null,2));
-  if(result.afterEvent.cycles!==result.before.cycles+1)throw Error('같은 종료를 워치독과 ended가 중복 처리함');
-  console.log('PASS 한 종료에 한 사이클 증가');
+  for(const c of result.cycles)if(c.afterEvent.cycles!==c.before.cycles+1||c.afterGrace.cycles!==c.afterEvent.cycles)throw Error('같은 종료를 워치독과 ended가 중복 처리함');
+  if(result.normalWarnings.length)throw Error('정상 종료에 워치독 개입');
+  const r=result.recovered;
+  if(r.afterWatchdog.cycles!==r.before.cycles+1||r.afterEvent.cycles!==r.afterWatchdog.cycles||r.warnings.length!==1)throw Error('이벤트 유실 복구 또는 지연 이벤트 차단 실패');
+  if(!result.reused.ownerChanged||result.reused.after.cycles!==result.reused.before.cycles||result.reused.warnings.length)throw Error('재사용한 버퍼에 오래된 종료 처리 적용');
+  console.log('PASS 연속 3사이클 중복 방지, 이벤트 유실 복구, 늦은 이벤트·재사용 버퍼 보호');
  }finally{ws?.close();chrome.kill();server.close();await sleep(500);fs.rmSync(profile,{recursive:true,force:true})}
 })().catch(e=>{console.error(e);process.exitCode=1});

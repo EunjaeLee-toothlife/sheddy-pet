@@ -295,7 +295,7 @@ python tools/deploy_pages.py
 
 `anims/hd720_manifest.json`이 138개 영상의 프레임·해시·원본·타이밍을 기록한다.
 클립 검사는 각 영상을 같은 버퍼에서 두 번 완주하고, `--states`는 6개 모드의 모든 선택 가능한 상태를 두 사이클 유지한 뒤 대기로 복귀시킨다. `--assets`와 `--fallback`으로 512px 호환 자산과 구형 렌더 경로도 검사한다. 범위·발견 사항·실행 기록은 [전체 재생 안정성 검토](anims/playback_stability_review.md)에 정리한다.
-`node tools/widget_ended_race_check.js`는 워치독이 네이티브 종료 이벤트 직전에 실행되는 순서를 통제한다. 현재는 사이클 중복 처리 결함을 재현해 실패하며, 해결 후 한 종료당 사이클이 한 번만 증가해야 통과한다.
+`node tools/widget_ended_race_check.js`는 워치독이 네이티브 종료 이벤트 직전에 실행되는 순서를 통제한다. 연속 3사이클의 중복 방지, 이벤트 유실 복구, 지연 이벤트와 재사용 버퍼 보호를 검사한다. `python tools/test_original_alpha.py`는 원본 화학 엔딩 2장의 본체 알파가 사라지는 회귀를 검사한다. 수정 전후 증거는 [재생 안정성 수정 기록](anims/playback_stability_fix.md)에 정리한다.
 재생성 후에는 720 PNG를 육안 검수하고 런타임 검사를 다시 진행한다.
 고해상도 재제작 포즈는 `python tools/build_native_motion.py broom1 bounce1 shuffle1 power1 lemon1`처럼 상태를 지정해 조립한다. 전체 대상·원본 검증·현재 검사 결과는 [대기·모션 검수 기록](anims/calm_motion_review.md)에 정리한다.
 512 PNG/WebM도 호환 경로로 제공한다. 고해상도 재제작 항목은 두 해상도를 함께 갱신한다. 과거 저해상도 프레임은 Git 이력에 남아 있으며, 기존 생성 절차는 아래와 같다.

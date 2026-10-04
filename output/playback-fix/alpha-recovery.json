@@ -1,0 +1,34 @@
+{
+  "method": "기존 slice_and_key.py의 최대 연결 성분 매트 정리로 원본 JPG 시퀀스를 임시 재처리한 뒤 결함 PNG 2장만 교체",
+  "pipelineSha256": "ef5e1db6f08b99004b6317fc66629b545478eb230f36aacdfe462dca3e4df686",
+  "originalManifestBefore": "4c1f77c503597411714e356491a82dd44efd29ac8029e8b024322226ed5935a4",
+  "frames": [
+    {
+      "clip": "chem1_end1",
+      "index": 4,
+      "source": "sprites/raw/chem1_end1_04.jpg",
+      "sourceSha256": "e05a92ac9d57bcab0e19fecbd34b05e6ae0177443eb3a75cf30ad6320847e773",
+      "frame": "sprites/chem1_end1/chem1_end1_04.png",
+      "beforeSha256": "65bfab6ef8a16b2168cb05caa73f96c991ce855a3953a9d4eab1124ce00027f3",
+      "afterSha256": "c3346ef190e0fc96531582c7e9625c61c5c6f2070c65cf9286a496a08fba6b89",
+      "opaquePixelsBefore": 0,
+      "opaquePixelsAfter": 61519,
+      "videoBeforeSha256": "3938b054f70fa0efc9e970307847051f0853b207aa1112a01e1f36c754eec228",
+      "videoAfterSha256": "8a1b6e78cd5dad9dac7d592518a378eb96925fd80f53a279bc913725b5a448de"
+    },
+    {
+      "clip": "chem1_end3",
+      "index": 16,
+      "source": "sprites/raw/chem1_end3_16.jpg",
+      "sourceSha256": "da1cf6ac615b85f58298722b14fe8b04cb8025a9d847c35f58347d53c2534ca1",
+      "frame": "sprites/chem1_end3/chem1_end3_16.png",
+      "beforeSha256": "07f5c277d025e70dd7ef0ee0d834575fb79c639ddd7a3d74fd95dbc460379e43",
+      "afterSha256": "66e2308d94f73312b9a17f33b0d637840a000e403636361df6991cee1bc7d60c",
+      "opaquePixelsBefore": 15,
+      "opaquePixelsAfter": 61453,
+      "videoBeforeSha256": "38e8c9b5c05306215cc0dbcd00478488b14c3e70fffe2d4482ce6327ff94c0d5",
+      "videoAfterSha256": "fda60cdd3d6d0ce77aea3d3b44c170a25028abc4e251fd6ac2d9f9f2f9621649"
+    }
+  ],
+  "originalManifestAfter": "6cc0ac087049da0cf129b4cde18303413bcc078cc9cb1f78cbab0dec8b3dd89d"
+}
