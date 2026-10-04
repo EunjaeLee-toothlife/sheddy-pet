@@ -1,0 +1,16 @@
+CHECK widget.html assets=hd720 fallback=false clips=138
+PASS canvas 1280×720 DPR1 → 720²
+PASS canvas 720×1280 DPR1 → 720²
+PASS canvas 320×640 DPR1 → 320²
+PASS canvas 1280×720 DPR2 → 720²
+PASS state seollal/seollal_look1 2 cycles / 3 ended / idle return
+PASS state seollal/seollal_tidy1 2 cycles / 3 ended / idle return
+PASS state seollal/seollal_talk1 2 cycles / 3 ended / idle return
+PASS state seollal/seollal_bow1 2 cycles / 3 ended / idle return
+PASS state seollal/seollal_pouch1 2 cycles / 3 ended / idle return
+PASS state seollal/seollal_yut1 2 cycles / 3 ended / idle return
+PASS state seollal/seollal_soup1 2 cycles / 3 ended / idle return
+PASS state seollal/seollal_kite1 2 cycles / 3 ended / idle return
+PASS state seollal/seollal_jegi1 2 cycles / 3 ended / idle return
+PASS state seollal/seollal_breathe1 2 cycles / 2 ended / idle return
+PASS all 10 actual states / 1 modes (hd720)

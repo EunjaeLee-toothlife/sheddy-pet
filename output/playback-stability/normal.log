@@ -1,0 +1,14 @@
+checking widget.html…
+PASS  renderBudget 3초 30회, 433×433
+PASS  newReactions 16개 모션 단발 복귀 + 박수 계속 유지
+PASS  danceLoops   3개 춤 각각 두 사이클, 무기한 유지, 워치독 개입 없음
+PASS  alchemyEndings alchemy1_start → alchemy1_loop → alchemy1_end1 → alchemy1_outro → idle1_loop | alchemy1_start → alchemy1_loop → alchemy1_end2 → alchemy1_outro → idle1_loop | alchemy1_start → alchemy1_loop → alchemy1_end3 → alchemy1_outro → idle1_loop
+PASS  alchemyHold  두 사이클 무기한 유지, 숨김 중 draw/재생 0, 큐 실행과 원복 정상
+PASS  visibility   숨김 중 draw/재생 0, 전환과 큐 복구
+PASS  cacheBudget  13/62클립, 4077135바이트, 동시 요청 2
+PASS  pausePendingPlay play 완료 전 숨김/복귀 정상
+PASS  cycles       재시작 지연 [4,12,8,11]ms
+PASS  transitions  pastry1_start → pastry1_loop → pastry1_end8 → pastry1_outro → idle1_loop | happy1_start → happy1_loop → happy1_end → idle1_loop
+PASS  queuedTalk   알파 최소 255, talk 시작 지연 [0,0,0,0]ms
+PASS  holdQueue    pinnedUntil = Infinity 유지
+PASS  staleChain   리셋 뒤에도 current = idle1 유지

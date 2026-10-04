@@ -1,0 +1,19 @@
+CHECK widget.html assets=hd720 fallback=false clips=138
+PASS canvas 1280×720 DPR1 → 720²
+PASS canvas 720×1280 DPR1 → 720²
+PASS canvas 320×640 DPR1 → 320²
+PASS canvas 1280×720 DPR2 → 720²
+PASS state normal/basic1 2 cycles / 3 ended / idle return
+PASS state normal/basic2 2 cycles / 3 ended / idle return
+PASS state normal/basic3 2 cycles / 3 ended / idle return
+PASS state normal/doze1 2 cycles / 3 ended / idle return
+PASS state normal/happy1 2 cycles / 5 ended / idle return
+PASS state normal/happy2 2 cycles / 3 ended / idle return
+PASS state normal/happy3 2 cycles / 3 ended / idle return
+PASS state normal/excited1 2 cycles / 3 ended / idle return
+PASS state normal/boxing1 2 cycles / 3 ended / idle return
+PASS state normal/dance1 2 cycles / 3 ended / idle return
+Error: Error: 실제 완주 오류 yaho1 {"calls":["anim_yaho1_loop.webm","anim_idle1_loop.webm"],"completed":[{"file":"anim_yaho1_loop.webm","ended":true,"error":null,"width":720,"height":720,"rate":0.53,"time":1.4,"duration":1.4},{"file":"anim_yaho1_loop.webm","ended":true,"error":null,"width":720,"height":720,"rate":0.53,"time":1.4,"duration":1.4},{"file":"anim_idle1_loop.webm","ended":false,"error":null,"width":720,"height":720,"rate":1,"time":0,"duration":1.8}]} warnings=["watchdog: ended clip left on screen — re-running cycle end"]
+    at <anonymous>:14:130
+    at evaluate (/Users/toonation-eunjaelee/.codex/worktrees/a09f/SP/tools/widget_hd720_check.js:44:49)
+    at async main (/Users/toonation-eunjaelee/.codex/worktrees/a09f/SP/tools/widget_hd720_check.js:145:26)

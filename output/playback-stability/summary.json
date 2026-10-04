@@ -1,0 +1,293 @@
+{
+  "baselineCommit": "f670347",
+  "review": "anims/playback_stability_review.md",
+  "clipRuns": [
+    {
+      "name": "hd720",
+      "command": "node tools/widget_hd720_check.js",
+      "clips": 138,
+      "actualEnded": 276,
+      "maximumObservedDrawGapMs": 251,
+      "log": "output/playback-stability/hd720.log"
+    },
+    {
+      "name": "original",
+      "command": "node tools/widget_hd720_check.js --assets original",
+      "clips": 138,
+      "actualEnded": 276,
+      "maximumObservedDrawGapMs": 250,
+      "log": "output/playback-stability/original.log"
+    },
+    {
+      "name": "rebuilt-fallback",
+      "command": "node tools/widget_hd720_check.js --page docs/index.html --assets rebuilt --fallback",
+      "clips": 138,
+      "actualEnded": 276,
+      "maximumObservedDrawGapMs": 103,
+      "log": "output/playback-stability/rebuilt-fallback.log"
+    }
+  ],
+  "scope": "read-only runtime/assets review; test coverage extended",
+  "remainingFindings": [
+    "watchdog and native ended double-count one cycle; reproduced in two continuous state runs and controlled event-order probe",
+    "original chem1_end1 frame 4 alpha dropout",
+    "original chem1_end3 frame 16 alpha dropout"
+  ],
+  "states": {
+    "modeStateCombinationsCovered": 107,
+    "allContinuousRunsPassed": false,
+    "cases": [
+      "childrensday/childrensday_balloon1",
+      "childrensday/childrensday_breathe1",
+      "childrensday/childrensday_bubbles1",
+      "childrensday/childrensday_candyfloss1",
+      "childrensday/childrensday_look1",
+      "childrensday/childrensday_pinwheel1",
+      "childrensday/childrensday_plane1",
+      "childrensday/childrensday_robot1",
+      "childrensday/childrensday_talk1",
+      "childrensday/childrensday_tidy1",
+      "christmas/christmas_breathe1",
+      "christmas/christmas_carol1",
+      "christmas/christmas_fishbread1",
+      "christmas/christmas_gift1",
+      "christmas/christmas_look1",
+      "christmas/christmas_snowcatch1",
+      "christmas/christmas_snowglobe1",
+      "christmas/christmas_snowman1",
+      "christmas/christmas_talk1",
+      "christmas/christmas_tidy1",
+      "halloween/alchemy1",
+      "halloween/alchemyboom1",
+      "halloween/alchemygold1",
+      "halloween/alchemyslime1",
+      "halloween/bat1",
+      "halloween/blackcat1",
+      "halloween/broom1",
+      "halloween/candles1",
+      "halloween/candy1",
+      "halloween/crystal1",
+      "halloween/ghost1",
+      "halloween/gift1",
+      "halloween/lantern1",
+      "halloween/moon1",
+      "halloween/peekaboo1",
+      "halloween/potion1",
+      "halloween/raven1",
+      "halloween/spellbook1",
+      "halloween/spider1",
+      "halloween/starspell1",
+      "halloween/tarot1",
+      "halloween/umbrella1",
+      "halloween/witchbreathe1",
+      "halloween/witchdance1",
+      "halloween/witchidle1",
+      "halloween/witchlook1",
+      "halloween/witchtalk1",
+      "halloween/witchtidy1",
+      "normal/alchemy1",
+      "normal/basic1",
+      "normal/basic2",
+      "normal/basic3",
+      "normal/bounce1",
+      "normal/boxing1",
+      "normal/cheer1",
+      "normal/chem1",
+      "normal/clap1",
+      "normal/dance1",
+      "normal/dance2",
+      "normal/dance3",
+      "normal/doze1",
+      "normal/excited1",
+      "normal/facepalm1",
+      "normal/happy1",
+      "normal/happy2",
+      "normal/happy3",
+      "normal/heart1",
+      "normal/idle1",
+      "normal/kiss1",
+      "normal/lemon1",
+      "normal/listen1",
+      "normal/note1",
+      "normal/parapara1",
+      "normal/pastry1",
+      "normal/pout1",
+      "normal/power1",
+      "normal/sad1",
+      "normal/sad2",
+      "normal/salute1",
+      "normal/shrug1",
+      "normal/shuffle1",
+      "normal/shush1",
+      "normal/surprise1",
+      "normal/talk",
+      "normal/think1",
+      "normal/thumbsup1",
+      "normal/yaho1",
+      "seollal/seollal_bow1",
+      "seollal/seollal_breathe1",
+      "seollal/seollal_jegi1",
+      "seollal/seollal_kite1",
+      "seollal/seollal_look1",
+      "seollal/seollal_pouch1",
+      "seollal/seollal_soup1",
+      "seollal/seollal_talk1",
+      "seollal/seollal_tidy1",
+      "seollal/seollal_yut1",
+      "summer/summer_breathe1",
+      "summer/summer_fan1",
+      "summer/summer_look1",
+      "summer/summer_sandcastle1",
+      "summer/summer_talk1",
+      "summer/summer_tidy1",
+      "summer/summer_tube1",
+      "summer/summer_watergun1",
+      "summer/summer_watermelon1",
+      "summer/summer_waves1"
+    ],
+    "runs": [
+      {
+        "name": "states",
+        "exitCode": 1,
+        "passedCases": 71,
+        "log": "output/playback-stability/states.log"
+      },
+      {
+        "name": "states-confirmation",
+        "exitCode": 1,
+        "passedCases": 10,
+        "log": "output/playback-stability/states-confirmation.log"
+      },
+      {
+        "name": "states-seollal",
+        "exitCode": 0,
+        "passedCases": 10,
+        "log": "output/playback-stability/states-seollal.log"
+      },
+      {
+        "name": "states-christmas",
+        "exitCode": 0,
+        "passedCases": 10,
+        "log": "output/playback-stability/states-christmas.log"
+      },
+      {
+        "name": "states-childrensday",
+        "exitCode": 0,
+        "passedCases": 10,
+        "log": "output/playback-stability/states-childrensday.log"
+      },
+      {
+        "name": "states-summer",
+        "exitCode": 0,
+        "passedCases": 10,
+        "log": "output/playback-stability/states-summer.log"
+      }
+    ],
+    "finding": "워치독과 늦은 ended 이벤트가 같은 사이클을 중복 처리한다."
+  },
+  "verdict": "issues_found",
+  "controlChecks": [
+    {
+      "name": "pages-normal-fallback",
+      "command": [
+        "node",
+        "tools/widget_check.js",
+        "--page",
+        "docs/index.html",
+        "--fallback"
+      ],
+      "exitCode": 0,
+      "log": "output/playback-stability/pages-normal-fallback.log"
+    },
+    {
+      "name": "pages-mode-switch",
+      "command": [
+        "node",
+        "tools/widget_check.js",
+        "--page",
+        "docs/index.html",
+        "--mode-switch",
+        "--fallback"
+      ],
+      "exitCode": 0,
+      "log": "output/playback-stability/pages-mode-switch.log"
+    },
+    {
+      "name": "theme-halloween",
+      "command": [
+        "node",
+        "tools/widget_check.js",
+        "--page",
+        "docs/index.html",
+        "--fallback",
+        "--halloween"
+      ],
+      "exitCode": 0,
+      "log": "output/playback-stability/theme-halloween.log"
+    },
+    {
+      "name": "theme-seollal",
+      "command": [
+        "node",
+        "tools/widget_check.js",
+        "--page",
+        "docs/index.html",
+        "--fallback",
+        "--mode",
+        "seollal"
+      ],
+      "exitCode": 0,
+      "log": "output/playback-stability/theme-seollal.log"
+    },
+    {
+      "name": "theme-christmas",
+      "command": [
+        "node",
+        "tools/widget_check.js",
+        "--page",
+        "docs/index.html",
+        "--fallback",
+        "--mode",
+        "christmas"
+      ],
+      "exitCode": 0,
+      "log": "output/playback-stability/theme-christmas.log"
+    },
+    {
+      "name": "theme-childrensday",
+      "command": [
+        "node",
+        "tools/widget_check.js",
+        "--page",
+        "docs/index.html",
+        "--fallback",
+        "--mode",
+        "childrensday"
+      ],
+      "exitCode": 0,
+      "log": "output/playback-stability/theme-childrensday.log"
+    },
+    {
+      "name": "theme-summer",
+      "command": [
+        "node",
+        "tools/widget_check.js",
+        "--page",
+        "docs/index.html",
+        "--fallback",
+        "--mode",
+        "summer"
+      ],
+      "exitCode": 0,
+      "log": "output/playback-stability/theme-summer.log"
+    }
+  ],
+  "runtimeHashes": {
+    "widget.html": "95ac4865386d98cd9e2317b3c049de18a0a0fdffcb97c3b4283fcceebe74348b",
+    "docs/index.html": "95ac4865386d98cd9e2317b3c049de18a0a0fdffcb97c3b4283fcceebe74348b",
+    "preview.html": "dae5ab87d8fb37e303cbf41a521c1cd8d7ea6659c31e98cdc46c790a995077c1",
+    "tools/widget_hd720_check.js": "eaf8148ea7a43e9a56b00ef7b31f6dd717f96178a2edb705845d0d259aee8a8c",
+    "tools/widget_check.js": "b595f9c29d73e6e8978f474ef83d07e9e67c5d55ce5c084639a08fe4c4bc13b5",
+    "tools/widget_ended_race_check.js": "315eb9bd369e8eb245039f74292b868d89662b3d02f09858a99b01aa03bc3a5b"
+  }
+}

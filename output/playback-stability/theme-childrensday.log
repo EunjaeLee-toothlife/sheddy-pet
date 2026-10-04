@@ -1,0 +1,10 @@
+checking docs/index.html (rVFC 미지원)…
+PASS  modeScope    일반 시작 상태 대체, 선택기 10종, 외부 일반 모션 차단, 초기 영상 1개
+PASS  themeIdle    대기 루프 두 사이클 연속 재생
+PASS  themeResults 동작 9종 실제 재생 후 테마 복장으로 복귀, 투명 720 영상
+PASS  themeHold    두 사이클 유지, 숨김 중 작업 0, 유효한 큐와 Infinity 보존
+PASS  themeMic     무음/음량 임계값, 테마 말하기 두 사이클, 해제 지연, 테마 복귀, 장치 해제
+PASS  themeAutomatic 실제 자동 추첨·복귀, 전용 클립만 요청, 캐시 3949562B
+PASS  mode=childrensday&state=childrensday_talk1&dice=0 → childrensday_talk1
+PASS  mode=unknown&dice=0 → idle1
+PASS  mode=__proto__&dice=0 → idle1
