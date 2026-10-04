@@ -16,7 +16,10 @@ if __name__ == '__main__':
     for motion in motions:
         if not args.states or motion['id'] in args.states:
             config = json.loads((ROOT / f'anims/{motion["id"]}_loop.json').read_text())
-            if config.get('sourcePipeline') == 'native-pairs-v1':
+            if config.get('sourcePipeline') == 'calm-face-v1':
+                from compose_calm_motion import build as build_calm
+                build_calm(motion['id'])
+            elif config.get('sourcePipeline') == 'native-pairs-v1':
                 from build_native_motion import build as build_native
                 build_native(motion['id'])
             else:

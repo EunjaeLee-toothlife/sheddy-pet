@@ -16,7 +16,11 @@ def verify(motion, anchor_state='witchidle1', part='loop', transform=False):
     state = motion['id']
     name = state + '_' + part
     config = json.loads((ROOT / f'anims/{name}.json').read_text())
-    if config.get('sourcePipeline') == 'native-pairs-v1':
+    calm = config.get('sourcePipeline') == 'calm-face-v1'
+    if calm:
+        from compose_calm_motion import verify_sources
+        verify_sources(config)
+    elif config.get('sourcePipeline') == 'native-pairs-v1':
         from verify_native_sources import verify_sources
         verify_sources(config)
     else:
@@ -48,7 +52,9 @@ def verify(motion, anchor_state='witchidle1', part='loop', transform=False):
         else:
             anchor = directory.parent / f'{anchor_state}_loop/{anchor_state}_loop_00.png'
             assert hashes[0] == hashes[-1] == sha(anchor), f'공통 대기 연결: {state}'
-        assert len(set(hashes)) >= (14 if transform else 12), f'독립 포즈 부족: {state}'
+        # 얼굴 합성은 동일 몸체를 의도적으로 재사용한다. 원본 재현성 검사는 위에서 별도로 수행한다.
+        minimum = 3 if calm and config['faceRole'] == 'talk' else 8 if calm else 14 if transform else 12
+        assert len(set(hashes)) >= minimum, f'독립 포즈 부족: {state}'
         info = probe(video)
         stream = info['streams'][0]
         duration = float(info['format']['duration'])

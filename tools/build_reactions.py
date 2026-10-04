@@ -8,6 +8,7 @@ import sys
 
 from PIL import Image, ImageOps
 from slice_and_key import chroma_key, body_box, match_to
+from insert_inbetweens import insert_inbetweens
 
 ROOT = Path(__file__).resolve().parent.parent
 
@@ -72,6 +73,7 @@ def main():
             raise ValueError(f'원본 시트 해시 불일치: {source}')
         frames = prepare_frames(Image.open(source), config,
                                 ROOT / 'sprites/rebuilt/frames/idle1_loop/idle1_loop_00.png')
+        frames = insert_inbetweens(frames, config)
         dest = ROOT / 'sprites' / config['name']
         dest.mkdir(exist_ok=True)
         for i, frame in enumerate(frames):

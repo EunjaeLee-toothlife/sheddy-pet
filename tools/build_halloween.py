@@ -92,6 +92,10 @@ def prepare(sheet, config, close_loop=True):
 def build(motion, theme='halloween', anchor_state='witchidle1'):
     state = motion['id']
     name = state + '_loop'
+    existing = ROOT / f'anims/{name}.json'
+    if existing.exists() and json.loads(existing.read_text()).get('sourcePipeline') == 'calm-face-v1':
+        from compose_calm_motion import build as build_calm
+        return build_calm(state)
     raw = ROOT / f'sprites/raw/{theme}/{state}.png'
     sheet = Image.open(raw)
     if sheet.mode != 'RGBA' or sheet.getchannel('A').getextrema()[0] != 0:
@@ -106,6 +110,19 @@ def build(motion, theme='halloween', anchor_state='witchidle1'):
     frames = prepare(sheet, config)
     if state != anchor_state:
         anchor = Image.open(ROOT / f'sprites/hd720/frames/{anchor_state}_loop/{anchor_state}_loop_00.png').convert('RGBA')
+        if state in ('witchlook1', 'witchtidy1'):
+            # 서 있는 잔동작의 시트 배치 오차를 제거한다. 모자와 팔의 의도된 움직임은 보존한다.
+            def foot_x(image):
+                alpha = np.asarray(image.getchannel('A')) > 128
+                bottom = np.nonzero(alpha)[0].max() + 1
+                return round(float(np.median(np.nonzero(alpha[bottom - 17:bottom])[1])))
+            center = foot_x(anchor)
+            stable = []
+            for frame in frames:
+                aligned = Image.new('RGBA', frame.size)
+                aligned.paste(frame, (center - foot_x(frame), 0))
+                stable.append(aligned)
+            frames = stable
         frames[0] = anchor.copy()
         frames[-1] = anchor.copy()
     write_json(path, config)

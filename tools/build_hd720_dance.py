@@ -257,6 +257,8 @@ def main():
             native_transparent=False
         else:
             frames,evidence=reaction_frames(cfg,reference);fps=cfg.get('fps',10);rate=1;timing=ROOT/'anims'/f'{name}.json'
+            from insert_inbetweens import insert_inbetweens
+            frames=insert_inbetweens(frames,cfg)
             source_image=Image.open(ROOT/cfg['sheet'])
             native_transparent=source_image.mode=='RGBA' and source_image.getchannel('A').getextrema()[0]<255
         settings=json.loads(timing.read_text(encoding='utf-8'))
@@ -287,7 +289,14 @@ def main():
                               'frames':matte_repair,'changedPixels':sum(x['changedPixels'] for x in matte_repair)},
                'originalVideo':{'path':original_video.relative_to(ROOT).as_posix(),'sha256':sha(original_video),'duration':original_duration,'unchangedTimingVerified':True},
                'contact':contact(name,frames),'audit':audit,'review':{'staticVisual':False,'alphaTechnical':True,'runtimeSeams':False}}
+        if cfg.get('inbetweens'):
+            entry['inbetweens']=cfg['inbetweens']
+            entry['method']='기존 16개 키 포즈를 보존하고 검수한 ImageGen 중간 포즈를 지정 구간에 삽입'
+            entry['limitation']='기존 키 포즈의 원본 해상도는 유지하며 중간 포즈만 새로 생성했다.'
         ledger['clips']=[x for x in ledger['clips'] if x['clip']!=name]+[entry]
+        ledger.setdefault('summary',{}).update(clips=len(ledger['clips']),
+            frames=sum(x['count'] for x in ledger['clips']),
+            expandedTicks=sum(x['expandedTicks'] for x in ledger['clips']))
         ledger_path.write_text(json.dumps(ledger,indent=2)+'\n',encoding='utf-8')
         print(f'PASS {name}: {len(frames)} frames / {len(order)} ticks / {fps}fps',flush=True)
 

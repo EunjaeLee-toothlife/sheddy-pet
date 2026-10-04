@@ -509,9 +509,13 @@ const IN_THEME = async () => {
 
     // 실제 ended 이벤트와 주사위를 거쳐 결과가 선택되고 다시 테마 대기로 돌아오는지 확인한다.
     idleStreak = 0;
-    // 대기 3종인 기념일은 두 번째 대기를 뽑아 기본 대기 재선택을 피한다.
-    Math.random = () => seasonal ? 0.34 : 0.3;
+    // 정적인 대기를 충분히 쉰 뒤 basic 잔동작을 한 번 선택한다.
+    Math.random = () => 0;
+    await wait(() => idleStreak >= MIN_IDLE_CYCLES, "테마 최소 대기");
+    const choices = [0, seasonal ? 0.7 : 0.9, 0]; // 재추첨 → basic 분류 → 첫 잔동작
+    Math.random = () => choices.shift() ?? 0;
     await wait(() => current !== DEFAULT_STATE && !transitioning, "테마 자동 추첨");
+    expect(ACTIVE_ANIMS[current].category === "basic" && ACTIVE_ANIMS[current].once, "잔동작이 대기 루프로 반복됨");
     await wait(() => at(DEFAULT_STATE), "자동 결과 복귀");
     const requests = performance.getEntriesByType("resource").filter(r => r.name.endsWith(".webm"));
     expect(requests.every(r => files.includes(r.name.split("/").pop())), "일반/변신/원복 영상 요청 발생");

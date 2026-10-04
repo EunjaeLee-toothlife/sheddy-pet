@@ -2,7 +2,7 @@
   "name": "lemon1_loop",
   "ref": "refs/chibi_base.png",
   "chain": true,
-  "note": "Lemon bite gag, 16-frame completed sequence @10FPS (1.6s; widget rate 0.7, play 1-2 cycles). From idle she pulls a whole lemon from behind her back, presents it, bites it, her face scrunches up sour and she shivers, shakes it off with a big exhale, grins with a thumbs-up, hides the lemon behind her back and returns to idle. PROP RULES: the lemon is ALWAYS in the hand on the RIGHT side of the image; opaque bright yellow; whole until the bite, then shows a big bite mark for the rest.",
+  "note": "Lemon bite gag, 16-frame completed sequence @10FPS (4.0s; widget rate 0.7, play 1 cycle). From idle she pulls a whole lemon from behind her back, presents it, bites it, her face scrunches up sour and she shivers, shakes it off with a big exhale, grins with a thumbs-up, hides the lemon behind her back and returns to idle. PROP RULES: the lemon is ALWAYS in the hand on the RIGHT side of the image; opaque bright yellow; whole until the bite, then shows a big bite mark for the rest.",
   "frames": [
     "Pose: BASE: standing upright and relaxed, feet close together under her hips, both arms resting naturally at her sides with open hands, calm small smile, head level. No props visible. The small lemon-slice hair clip stays on the same side of her bangs as in the reference image, do not mirror the character.",
     "Pose: feet close together, both arms swinging back behind her body with hands hidden behind her back, mischievous closed-mouth smirk, eyes glancing sideways. No props visible yet. The small lemon-slice hair clip stays on the same side of her bangs as in the reference image, do not mirror the character.",
@@ -20,5 +20,23 @@
     "Pose: both hands hidden behind her back, lemon no longer visible, content closed-eye smile with pink cheeks, a small satisfied 'hmm~' expression. Feet close together. The small lemon-slice hair clip stays on the same side of her bangs as in the reference image, do not mirror the character.",
     "Pose: both arms swinging back down to her sides, hands opening, eyes opening, calm happy smile. Feet close together. No props visible. The small lemon-slice hair clip stays on the same side of her bangs as in the reference image, do not mirror the character.",
     "Pose: SEAMLESS LOOP CLOSER — must match frame 0 exactly: standing upright and relaxed, feet close together under her hips, both arms resting naturally at her sides with open hands, calm small smile, head level. No props visible. The small lemon-slice hair clip stays on the same side of her bangs as in the reference image, do not mirror the character."
-  ]
+  ],
+  "holds": {
+    "0": 2,
+    "1": 2,
+    "2": 2,
+    "3": 4,
+    "4": 2,
+    "5": 2,
+    "6": 2,
+    "7": 5,
+    "8": 2,
+    "9": 2,
+    "10": 2,
+    "11": 5,
+    "12": 2,
+    "13": 2,
+    "14": 2,
+    "15": 2
+  }
 }

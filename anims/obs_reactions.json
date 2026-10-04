@@ -214,30 +214,36 @@
     "preserve_motion": true,
     "fps": 15,
     "holds": {
-      "0": 2,
-      "1": 2,
-      "2": 2,
-      "3": 2,
-      "4": 2,
-      "5": 2,
-      "6": 2,
-      "7": 2,
-      "8": 2,
-      "9": 2,
-      "10": 2,
-      "11": 2,
-      "12": 2,
-      "13": 2,
-      "14": 2,
-      "15": 2
+      "0": 4,
+      "1": 4,
+      "2": 4,
+      "3": 4,
+      "4": 4,
+      "5": 4,
+      "6": 4,
+      "7": 4,
+      "8": 3,
+      "9": 4,
+      "10": 4,
+      "11": 4,
+      "12": 4,
+      "13": 3,
+      "14": 4,
+      "15": 4,
+      "16": 4,
+      "17": 4
     },
-    "repeats": [
+    "repeats": [],
+    "inbetweens": [
       {
-        "frames": [
-          1,
-          14
-        ],
-        "times": 2
+        "after": 7,
+        "source": "sprites/raw/inbetweens/bounce1-7-midpoint.png",
+        "sha256": "df1942ba90e827b97d14c3c938aa763f4a3d6ccf06029403644412b6afb46210"
+      },
+      {
+        "after": 11,
+        "source": "sprites/raw/inbetweens/bounce1-11-midpoint.png",
+        "sha256": "4f4318de71db3612c477949c8ae0d004f9855dc665ba77f9d6e452374de56f05"
       }
     ]
   },
@@ -252,30 +258,36 @@
     "preserve_motion": true,
     "fps": 15,
     "holds": {
-      "0": 2,
-      "1": 2,
-      "2": 2,
-      "3": 2,
-      "4": 2,
-      "5": 2,
-      "6": 2,
-      "7": 2,
-      "8": 2,
-      "9": 2,
-      "10": 2,
-      "11": 2,
-      "12": 2,
-      "13": 2,
-      "14": 2,
-      "15": 2
+      "0": 4,
+      "1": 4,
+      "2": 4,
+      "3": 4,
+      "4": 4,
+      "5": 4,
+      "6": 4,
+      "7": 4,
+      "8": 4,
+      "9": 4,
+      "10": 4,
+      "11": 4,
+      "12": 3,
+      "13": 4,
+      "14": 3,
+      "15": 4,
+      "16": 4,
+      "17": 4
     },
-    "repeats": [
+    "repeats": [],
+    "inbetweens": [
       {
-        "frames": [
-          1,
-          14
-        ],
-        "times": 2
+        "after": 11,
+        "source": "sprites/raw/inbetweens/shuffle1-11-midpoint.png",
+        "sha256": "88f76b4a1859a1d3d5f6fa66eb38aa264ea7e6ce31e44edddb8eb92772e3f439"
+      },
+      {
+        "after": 12,
+        "source": "sprites/raw/inbetweens/shuffle1-12-midpoint.png",
+        "sha256": "53b63ae94dda8d4adaf47ffd53f6568887fda2dfe749ed5b69fcb97dda1135cf"
       }
     ]
   },
@@ -290,32 +302,50 @@
     "preserve_motion": true,
     "fps": 15,
     "holds": {
-      "0": 2,
-      "1": 2,
-      "2": 2,
-      "3": 2,
-      "4": 2,
-      "5": 2,
-      "6": 2,
-      "7": 2,
-      "8": 2,
-      "9": 2,
-      "10": 2,
-      "11": 2,
-      "12": 2,
-      "13": 2,
-      "14": 2,
-      "15": 2
+      "0": 4,
+      "1": 4,
+      "2": 4,
+      "3": 4,
+      "4": 4,
+      "5": 4,
+      "6": 4,
+      "7": 4,
+      "8": 4,
+      "9": 4,
+      "10": 4,
+      "11": 3,
+      "12": 4,
+      "13": 3,
+      "14": 4,
+      "15": 4,
+      "16": 4,
+      "17": 4
     },
-    "repeats": [
+    "repeats": [],
+    "row_offset": 16,
+    "inbetweens": [
       {
-        "frames": [
-          1,
-          14
-        ],
-        "times": 2
+        "after": 10,
+        "source": "sprites/raw/inbetweens/power1.png",
+        "sha256": "8b2a073ab47a00393788ee11c4a3f14a23448393453073e1fcad1fe59b7fb771",
+        "box": [
+          0,
+          0,
+          627,
+          627
+        ]
+      },
+      {
+        "after": 11,
+        "source": "sprites/raw/inbetweens/power1.png",
+        "sha256": "8b2a073ab47a00393788ee11c4a3f14a23448393453073e1fcad1fe59b7fb771",
+        "box": [
+          0,
+          627,
+          627,
+          1254
+        ]
       }
-    ],
-    "row_offset": 16
+    ]
   }
 }
