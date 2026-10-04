@@ -9,22 +9,36 @@
   "preserve_motion": true,
   "fps": 15,
   "holds": {
-    "0": 3,
-    "1": 3,
-    "2": 3,
-    "3": 3,
-    "4": 3,
-    "5": 3,
-    "6": 3,
-    "7": 3,
+    "0": 4,
+    "1": 4,
+    "2": 4,
+    "3": 4,
+    "4": 4,
+    "5": 4,
+    "6": 4,
+    "7": 4,
     "8": 3,
-    "9": 3,
-    "10": 3,
-    "11": 3,
-    "12": 3,
+    "9": 4,
+    "10": 4,
+    "11": 4,
+    "12": 4,
     "13": 3,
-    "14": 3,
-    "15": 3
+    "14": 4,
+    "15": 4,
+    "16": 4,
+    "17": 4
   },
-  "repeats": []
+  "repeats": [],
+  "inbetweens": [
+    {
+      "after": 7,
+      "source": "sprites/raw/inbetweens/bounce1-7-midpoint.png",
+      "sha256": "df1942ba90e827b97d14c3c938aa763f4a3d6ccf06029403644412b6afb46210"
+    },
+    {
+      "after": 11,
+      "source": "sprites/raw/inbetweens/bounce1-11-midpoint.png",
+      "sha256": "4f4318de71db3612c477949c8ae0d004f9855dc665ba77f9d6e452374de56f05"
+    }
+  ]
 }

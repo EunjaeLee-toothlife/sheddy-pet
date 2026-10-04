@@ -148,3 +148,86 @@ PASS canvas 320×640 DPR1 → 320²
 PASS canvas 1280×720 DPR2 → 720²
 PASS parapara1_loop 720² 31 draws
 PASS all 1 runtime clips (parapara)
+
+최종 재생 시간·중간 포즈 검증 (2026-10-05)
+최종 자산 해시: output/calm/asset-audit.json
+
+[final-timing-halloween]
+checking widget.html…
+PASS  modeScope    일반 시작 상태 대체, 선택기 28종, 외부 일반 모션 차단, 초기 영상 1개
+PASS  themeIdle    대기 루프 두 사이클 연속 재생
+PASS  themeResults 동작 27종 실제 재생 후 테마 복장으로 복귀, 투명 720 영상
+PASS  themeHold    두 사이클 유지, 숨김 중 작업 0, 유효한 큐와 Infinity 보존
+PASS  themeMic     무음/음량 임계값, 테마 말하기 두 사이클, 해제 지연, 테마 복귀, 장치 해제
+PASS  themeAutomatic 실제 자동 추첨·복귀, 전용 클립만 요청, 캐시 3763819B
+PASS  mode=halloween&state=alchemyslime1&dice=0 → alchemyslime1
+PASS  mode=unknown&dice=0 → idle1
+PASS  mode=__proto__&dice=0 → idle1
+
+[final-timing-seollal]
+checking widget.html…
+PASS  modeScope    일반 시작 상태 대체, 선택기 10종, 외부 일반 모션 차단, 초기 영상 1개
+PASS  themeIdle    대기 루프 두 사이클 연속 재생
+PASS  themeResults 동작 9종 실제 재생 후 테마 복장으로 복귀, 투명 720 영상
+PASS  themeHold    두 사이클 유지, 숨김 중 작업 0, 유효한 큐와 Infinity 보존
+PASS  themeMic     무음/음량 임계값, 테마 말하기 두 사이클, 해제 지연, 테마 복귀, 장치 해제
+PASS  themeAutomatic 실제 자동 추첨·복귀, 전용 클립만 요청, 캐시 4169018B
+PASS  mode=seollal&state=seollal_talk1&dice=0 → seollal_talk1
+PASS  mode=unknown&dice=0 → idle1
+PASS  mode=__proto__&dice=0 → idle1
+
+[final-timing-christmas]
+checking widget.html…
+PASS  modeScope    일반 시작 상태 대체, 선택기 10종, 외부 일반 모션 차단, 초기 영상 1개
+PASS  themeIdle    대기 루프 두 사이클 연속 재생
+PASS  themeResults 동작 9종 실제 재생 후 테마 복장으로 복귀, 투명 720 영상
+PASS  themeHold    두 사이클 유지, 숨김 중 작업 0, 유효한 큐와 Infinity 보존
+PASS  themeMic     무음/음량 임계값, 테마 말하기 두 사이클, 해제 지연, 테마 복귀, 장치 해제
+PASS  themeAutomatic 실제 자동 추첨·복귀, 전용 클립만 요청, 캐시 3786575B
+PASS  mode=christmas&state=christmas_talk1&dice=0 → christmas_talk1
+PASS  mode=unknown&dice=0 → idle1
+PASS  mode=__proto__&dice=0 → idle1
+
+[final-timing-childrensday]
+checking widget.html…
+PASS  modeScope    일반 시작 상태 대체, 선택기 10종, 외부 일반 모션 차단, 초기 영상 1개
+PASS  themeIdle    대기 루프 두 사이클 연속 재생
+PASS  themeResults 동작 9종 실제 재생 후 테마 복장으로 복귀, 투명 720 영상
+PASS  themeHold    두 사이클 유지, 숨김 중 작업 0, 유효한 큐와 Infinity 보존
+PASS  themeMic     무음/음량 임계값, 테마 말하기 두 사이클, 해제 지연, 테마 복귀, 장치 해제
+PASS  themeAutomatic 실제 자동 추첨·복귀, 전용 클립만 요청, 캐시 3949562B
+PASS  mode=childrensday&state=childrensday_talk1&dice=0 → childrensday_talk1
+PASS  mode=unknown&dice=0 → idle1
+PASS  mode=__proto__&dice=0 → idle1
+
+[final-timing-summer]
+checking widget.html…
+PASS  modeScope    일반 시작 상태 대체, 선택기 10종, 외부 일반 모션 차단, 초기 영상 1개
+PASS  themeIdle    대기 루프 두 사이클 연속 재생
+PASS  themeResults 동작 9종 실제 재생 후 테마 복장으로 복귀, 투명 720 영상
+PASS  themeHold    두 사이클 유지, 숨김 중 작업 0, 유효한 큐와 Infinity 보존
+PASS  themeMic     무음/음량 임계값, 테마 말하기 두 사이클, 해제 지연, 테마 복귀, 장치 해제
+PASS  themeAutomatic 실제 자동 추첨·복귀, 전용 클립만 요청, 캐시 3604338B
+PASS  mode=summer&state=summer_talk1&dice=0 → summer_talk1
+PASS  mode=unknown&dice=0 → idle1
+PASS  mode=__proto__&dice=0 → idle1
+
+[final-inbetweens-normal]
+checking widget.html…
+PASS  renderBudget 3초 30회, 433×433
+PASS  newReactions 16개 모션 단발 복귀 + 박수 계속 유지
+PASS  danceLoops   3개 춤 각각 두 사이클, 무기한 유지, 워치독 개입 없음
+
+[final-inbetweens-fallback]
+checking docs/index.html (rVFC 미지원)…
+PASS  renderBudget 3초 61회, 433×433
+PASS  newReactions 16개 모션 단발 복귀 + 박수 계속 유지
+PASS  danceLoops   3개 춤 각각 두 사이클, 무기한 유지, 워치독 개입 없음
+
+[final-inbetweens-lemon]
+PASS canvas 1280×720 DPR1 → 720²
+PASS canvas 720×1280 DPR1 → 720²
+PASS canvas 320×640 DPR1 → 320²
+PASS canvas 1280×720 DPR2 → 720²
+PASS lemon1_loop 720² 47 draws
+PASS all 1 runtime clips (lemon)

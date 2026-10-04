@@ -4254,7 +4254,7 @@
       "part": "loop",
       "rate": 0.7,
       "sourceVideo": "sprites/rebuilt/videos/anim_lemon1_loop.webm",
-      "sourceVideoSha256": "5ef2499645f01b221fcfa7b2a3877cc148a0ef3dba3b03ac96d48b0701b5eb97",
+      "sourceVideoSha256": "85e93f52d35308b5201886875940b29e03beba515f7046ada50bbde3562cfa7d",
       "sourceFrames": [
         "sprites/rebuilt/frames/lemon1_loop/lemon1_loop_00.png",
         "sprites/rebuilt/frames/lemon1_loop/lemon1_loop_01.png",
@@ -4328,19 +4328,32 @@
         "9ec4a182aef2d98aa0a2e28c7ac01036ea56a3d76af144c9dc6ad2c16571f645"
       ],
       "candidate": "sprites/hd720/videos/anim_lemon1_loop.webm",
-      "videoSha256": "e616dfa3e9598cbfee563ae9ccc2aaad87032d90952550199dea06bbf3f96cde",
+      "videoSha256": "7cbef4504373523a3e81ca2fb7a432c1f564cfeb6bc9db6ad5bf7fb1c9528274",
       "frameCount": 16,
-      "duration": 2.2,
-      "decodedTicks": 22,
+      "duration": 4.0,
+      "decodedTicks": 40,
       "fps": 10,
       "holds": {
-        "3": 2,
-        "7": 3,
-        "11": 4
+        "0": 2,
+        "1": 2,
+        "2": 2,
+        "3": 4,
+        "4": 2,
+        "5": 2,
+        "6": 2,
+        "7": 5,
+        "8": 2,
+        "9": 2,
+        "10": 2,
+        "11": 5,
+        "12": 2,
+        "13": 2,
+        "14": 2,
+        "15": 2
       },
       "repeats": [],
-      "sourceBytes": 238588,
-      "candidateBytes": 368487,
+      "sourceBytes": 270800,
+      "candidateBytes": 418265,
       "technicalReview": {
         "dimensions": true,
         "alpha": true,
@@ -4349,12 +4362,12 @@
         "decodedTickCount": true
       },
       "status": "reviewed",
+      "reviewRecord": "anims/calm_motion_review.md",
       "review": {
         "technical": true,
         "staticVisual": true,
         "runtimePlayback": true
-      },
-      "reviewRecord": "anims/calm_motion_review.md"
+      }
     },
     {
       "clip": "note1_loop",
@@ -5793,7 +5806,7 @@
       "part": "loop",
       "rate": 1,
       "sourceVideo": "sprites/anim_bounce1_loop.webm",
-      "sourceVideoSha256": "49d364765ec8b07e107af0c42d9d374bb9939bbab82ae5197306ee0058b05b51",
+      "sourceVideoSha256": "35c144f2f9ca3e91f6b7756df6c15b80e127e650fb5fa22402e747a878ecbcf1",
       "sourceFrames": [
         "sprites/bounce1_loop/bounce1_loop_00.png",
         "sprites/bounce1_loop/bounce1_loop_01.png",
@@ -5810,7 +5823,9 @@
         "sprites/bounce1_loop/bounce1_loop_12.png",
         "sprites/bounce1_loop/bounce1_loop_13.png",
         "sprites/bounce1_loop/bounce1_loop_14.png",
-        "sprites/bounce1_loop/bounce1_loop_15.png"
+        "sprites/bounce1_loop/bounce1_loop_15.png",
+        "sprites/bounce1_loop/bounce1_loop_16.png",
+        "sprites/bounce1_loop/bounce1_loop_17.png"
       ],
       "sourceFrameHashes": [
         "88a0e5acb3d9fac586a5ec6234117bbd41f82523fb6a1d11f253534859586a9f",
@@ -5821,10 +5836,12 @@
         "29d6d98b87aed76408663403a0a2df8d2d47b82f72626fdaa727ac16835f1855",
         "49abe188085b45a38ea85bd1fd49336c4516d400ce58961de251a044d6b19247",
         "990726c5ec019a2f5b3da250056f327ea17237c071fa64db66e08c26b35a507f",
+        "965f9ceff70457e89cda350af7cb1ff9409f905bb04dfe5d121931597c293be1",
         "bdef45835e7026e4f5120fae58ae8fd6074c268dc9a06b17ae944a05d7f445a4",
         "9ab0eb315aaa012e36c5a311cb108ede83eff60c8356c47df1034ce9be447a66",
         "ed020117839fe21e8502202e5a3d0c122cc4b1587d5ec8c32ce968af098cc3e3",
         "5c1649410fef8008a2547f98982ddba163bdb01bc5f5f18219611eb9f3360f2c",
+        "d475b492cbca5532445f6db207e8e30b52fb30490e56fbfde3794912236abdfd",
         "89d14326bb342cee16c18ec79d958164632b9818c168cef310118970318b529a",
         "10c0f30338c86d8dafcd1c6d23a8699e2ebb422879bd84b8617a26cce249f476",
         "52bb0143a5e12f5a88e7f30f1c689401f11edf9c2cfe98652910c1b08a232ddd",
@@ -5846,7 +5863,9 @@
         "sprites/hd720/frames/bounce1_loop/bounce1_loop_12.png",
         "sprites/hd720/frames/bounce1_loop/bounce1_loop_13.png",
         "sprites/hd720/frames/bounce1_loop/bounce1_loop_14.png",
-        "sprites/hd720/frames/bounce1_loop/bounce1_loop_15.png"
+        "sprites/hd720/frames/bounce1_loop/bounce1_loop_15.png",
+        "sprites/hd720/frames/bounce1_loop/bounce1_loop_16.png",
+        "sprites/hd720/frames/bounce1_loop/bounce1_loop_17.png"
       ],
       "frameHashes": [
         "56305b9e6363a64a783725cbcacb5116fa351035ee037dfdb968956ec92d8223",
@@ -5857,42 +5876,46 @@
         "b27ccd71a55e25cf5f6b117e1ff89554a46a5d4ccd34c8df75be317c9c41e619",
         "6dbcf9343e6f6ebeacb6520c0be72ca5e38ff890443b8ded7eee870f1d62ab47",
         "7a42fb7f3b6c2cf35513c7d8d0b6ed0c455564bd55f5e8b753f3c9950b1a4692",
+        "ee7821cc1f9107d028b8313c3e1271c9dcd7f7cef183045a5fc52114df03b3cd",
         "52c1bbe374a5a4a9e6c0ba3ccb69a31fbd5ddad6a1917ff30bec88ca387737f0",
         "67fb5cb32d311bf9b4dadf79905ca62522960d647933ef79483b23fcebf3b43e",
         "09fffdc5a0c463bb6421035050f3fea4dd4e46dae87765d779b1a6ab22a95ceb",
         "67820484d2f6dc6ba0a00a5bc2601f70c11d08b1948a8844bb7b9797c01ec5fb",
+        "bb87ac3e863c289d228cc742749f92a0f4cd4559bec42035c0afb0cab576aadf",
         "85e2f66e365431ecd63f5407341679a2c0c40b1c95656a171b3f41dfb8a52a26",
         "d00782c806e4fbbd80689dfbb9a70bed55a746d5472f7db3c81e27afce3d4807",
         "9820409b26b2b643bddbbe284510aaf5855ec6bd8f0d5d2bdf21f7c4994fdd65",
         "56305b9e6363a64a783725cbcacb5116fa351035ee037dfdb968956ec92d8223"
       ],
       "candidate": "sprites/hd720/videos/anim_bounce1_loop.webm",
-      "videoSha256": "87dfcf5e0116bcfacbb09e608fe16bed97ccb9fbeb2d25746f7cedad4b31f760",
-      "frameCount": 16,
-      "duration": 3.2,
-      "decodedTicks": 48,
+      "videoSha256": "4ffd2b3cbf694c5ea16a8fa0879e3424038f6909be8863c825afdee0a5f7cacf",
+      "frameCount": 18,
+      "duration": 4.666666666666667,
+      "decodedTicks": 70,
       "fps": 15,
       "holds": {
-        "0": 3,
-        "1": 3,
-        "2": 3,
-        "3": 3,
-        "4": 3,
-        "5": 3,
-        "6": 3,
-        "7": 3,
+        "0": 4,
+        "1": 4,
+        "2": 4,
+        "3": 4,
+        "4": 4,
+        "5": 4,
+        "6": 4,
+        "7": 4,
         "8": 3,
-        "9": 3,
-        "10": 3,
-        "11": 3,
-        "12": 3,
+        "9": 4,
+        "10": 4,
+        "11": 4,
+        "12": 4,
         "13": 3,
-        "14": 3,
-        "15": 3
+        "14": 4,
+        "15": 4,
+        "16": 4,
+        "17": 4
       },
       "repeats": [],
-      "sourceBytes": 357232,
-      "candidateBytes": 550825,
+      "sourceBytes": 431088,
+      "candidateBytes": 672207,
       "technicalReview": {
         "dimensions": true,
         "alpha": true,
@@ -5901,12 +5924,12 @@
         "decodedTickCount": true
       },
       "status": "reviewed",
+      "reviewRecord": "anims/calm_motion_review.md",
       "review": {
         "technical": true,
         "staticVisual": true,
         "runtimePlayback": true
-      },
-      "reviewRecord": "anims/calm_motion_review.md"
+      }
     },
     {
       "clip": "shuffle1_loop",
@@ -5914,7 +5937,7 @@
       "part": "loop",
       "rate": 1,
       "sourceVideo": "sprites/anim_shuffle1_loop.webm",
-      "sourceVideoSha256": "5a5703db6fca560be9d0f54f2fda1a595fbed2f6f9a88552663f4f604e14a305",
+      "sourceVideoSha256": "d020b40f69a5d85cb961cda3691458984bcb6e13647f32d360bc209fb941b052",
       "sourceFrames": [
         "sprites/shuffle1_loop/shuffle1_loop_00.png",
         "sprites/shuffle1_loop/shuffle1_loop_01.png",
@@ -5931,7 +5954,9 @@
         "sprites/shuffle1_loop/shuffle1_loop_12.png",
         "sprites/shuffle1_loop/shuffle1_loop_13.png",
         "sprites/shuffle1_loop/shuffle1_loop_14.png",
-        "sprites/shuffle1_loop/shuffle1_loop_15.png"
+        "sprites/shuffle1_loop/shuffle1_loop_15.png",
+        "sprites/shuffle1_loop/shuffle1_loop_16.png",
+        "sprites/shuffle1_loop/shuffle1_loop_17.png"
       ],
       "sourceFrameHashes": [
         "d2545cf6d1ae344166b309d4641ad8fe903d7f548da7afc8096103d1478ff576",
@@ -5946,7 +5971,9 @@
         "d63066ec3e82e931d2d944a28b103cbb78976dc2198d4588454af60ca4cef0b5",
         "4090d3dd0f564dc5d4dcf13f14e1d461074a3241252487eb53b93bb799b6d49c",
         "7975e7e1e471cd5fd12370adc6e3ce4f29c968cbcd802b79ef8814bbb2ed3be1",
+        "6b0fbf95ff67ce9204fd543c7b1577472a3c005c8623ee0fe82056828a1c19d5",
         "425d0d99ad2c1580a013fb5d0b22bf5a8ec1aa540f4c1d8d197287276e6140b9",
+        "20620779bd41825ad2dd71f33d9f8d073ef3d0014635b4c674b5fbcb259e0ebc",
         "c4b8ec74aa353d7bcdc80b66b6313de94253418c775a33163ed72404932d0193",
         "4ffc15601d31aeaf275d9cf677fad0a4dbbd99ce6ec2fa6cc2ad89baad3613de",
         "d2545cf6d1ae344166b309d4641ad8fe903d7f548da7afc8096103d1478ff576"
@@ -5967,7 +5994,9 @@
         "sprites/hd720/frames/shuffle1_loop/shuffle1_loop_12.png",
         "sprites/hd720/frames/shuffle1_loop/shuffle1_loop_13.png",
         "sprites/hd720/frames/shuffle1_loop/shuffle1_loop_14.png",
-        "sprites/hd720/frames/shuffle1_loop/shuffle1_loop_15.png"
+        "sprites/hd720/frames/shuffle1_loop/shuffle1_loop_15.png",
+        "sprites/hd720/frames/shuffle1_loop/shuffle1_loop_16.png",
+        "sprites/hd720/frames/shuffle1_loop/shuffle1_loop_17.png"
       ],
       "frameHashes": [
         "ced23048563e8e148f66391ab0d3ecf46546fa1c5bb7379535e2b0698429b430",
@@ -5982,38 +6011,42 @@
         "c468449ca61fe64eeb015cef0344f70a978b88fb9c1d0e12d09c51a921b8e643",
         "44d22899eab9e73cea042d872c5454e1a3fb2c06f9e041c8061f7750a84ae19a",
         "4fb41635f43880f7a32dad2cf8e62a9bb32eef38b0571d6fa4efd7f848562e78",
+        "29b59ad2fd50ce8471fba0fa2e0ffcf0978564da9888a6c148a028accafc8e63",
         "687e945e895f4055ff4972d5a630af9e272f28fd0bbf92cb9e61eebaba54a190",
+        "19fde187b5c9dad5a7c3d841cd439eacf78fcc916eae08213d2a58643097bfd8",
         "9fdea4e4c56134931bef91a59136f5fcfa523d0c4e85d9d7c229490245d496a0",
         "bd4e750311049530205a2655d3b31bac9248471c2a9aa157cae47a447cecd6ca",
         "ced23048563e8e148f66391ab0d3ecf46546fa1c5bb7379535e2b0698429b430"
       ],
       "candidate": "sprites/hd720/videos/anim_shuffle1_loop.webm",
-      "videoSha256": "72f5837aba6156d6b89e9ed594adc3b755216dbd1fd1d1402e7fd49be17c1f0c",
-      "frameCount": 16,
-      "duration": 3.2,
-      "decodedTicks": 48,
+      "videoSha256": "1c877912035e2a4e9db8d485f4c056ed6fdb8056e8b7dcacce83a1d287365972",
+      "frameCount": 18,
+      "duration": 4.666666666666667,
+      "decodedTicks": 70,
       "fps": 15,
       "holds": {
-        "0": 3,
-        "1": 3,
-        "2": 3,
-        "3": 3,
-        "4": 3,
-        "5": 3,
-        "6": 3,
-        "7": 3,
-        "8": 3,
-        "9": 3,
-        "10": 3,
-        "11": 3,
+        "0": 4,
+        "1": 4,
+        "2": 4,
+        "3": 4,
+        "4": 4,
+        "5": 4,
+        "6": 4,
+        "7": 4,
+        "8": 4,
+        "9": 4,
+        "10": 4,
+        "11": 4,
         "12": 3,
-        "13": 3,
+        "13": 4,
         "14": 3,
-        "15": 3
+        "15": 4,
+        "16": 4,
+        "17": 4
       },
       "repeats": [],
-      "sourceBytes": 334374,
-      "candidateBytes": 537636,
+      "sourceBytes": 413399,
+      "candidateBytes": 667745,
       "technicalReview": {
         "dimensions": true,
         "alpha": true,
@@ -6022,12 +6055,12 @@
         "decodedTickCount": true
       },
       "status": "reviewed",
+      "reviewRecord": "anims/calm_motion_review.md",
       "review": {
         "technical": true,
         "staticVisual": true,
         "runtimePlayback": true
-      },
-      "reviewRecord": "anims/calm_motion_review.md"
+      }
     },
     {
       "clip": "power1_loop",
@@ -6035,7 +6068,7 @@
       "part": "loop",
       "rate": 1,
       "sourceVideo": "sprites/anim_power1_loop.webm",
-      "sourceVideoSha256": "30e75160b773ef2c546bbeeac77238f06c96a516619249a2d213ac21b7708e1e",
+      "sourceVideoSha256": "d386a87505705bf9342ceec1ad61d3e46673dc513c99dae3a339b898617d507f",
       "sourceFrames": [
         "sprites/power1_loop/power1_loop_00.png",
         "sprites/power1_loop/power1_loop_01.png",
@@ -6052,7 +6085,9 @@
         "sprites/power1_loop/power1_loop_12.png",
         "sprites/power1_loop/power1_loop_13.png",
         "sprites/power1_loop/power1_loop_14.png",
-        "sprites/power1_loop/power1_loop_15.png"
+        "sprites/power1_loop/power1_loop_15.png",
+        "sprites/power1_loop/power1_loop_16.png",
+        "sprites/power1_loop/power1_loop_17.png"
       ],
       "sourceFrameHashes": [
         "47814a9335535c447f5f0f526cdacf36475957ec5834420c16ea10488df6662b",
@@ -6066,7 +6101,9 @@
         "d71949f011f3e5e4ba3e71566464ec0f6fc64c2858bbedbacc1597fa4c8d2bd0",
         "be0e8d9ddd74d1a29617c9069f8fdb8751f37385f834f5b7ea543b8add9b8682",
         "858b49da7fb367c1472ebd0fd865511f85aa376ea4948e2ef29c6c3a01aa4d3e",
+        "48da4714c02132c4737ca9f71e2af0bc9a713107a44cf54e7247926b149e69d4",
         "746148452f35dbb10862b49512c4d80d07e04dc53f64aa24065fa686bae98468",
+        "5dc43db091c8dd704504e191a58dae96ddf982b21cef83f29af25749362ea478",
         "e577fe4c64d7ed4b39cbe8ea5e58532e731b65fe63a840bb2c330af4ff573efc",
         "8c4681249a6d1ed23b93c75c4ebbb7d668c5c5a78c1d3b069e6dfb53c3aef945",
         "2d1aec080d06591864483e32257f6b054f6601a655c57caaf749ed8cfd9a9b3c",
@@ -6088,7 +6125,9 @@
         "sprites/hd720/frames/power1_loop/power1_loop_12.png",
         "sprites/hd720/frames/power1_loop/power1_loop_13.png",
         "sprites/hd720/frames/power1_loop/power1_loop_14.png",
-        "sprites/hd720/frames/power1_loop/power1_loop_15.png"
+        "sprites/hd720/frames/power1_loop/power1_loop_15.png",
+        "sprites/hd720/frames/power1_loop/power1_loop_16.png",
+        "sprites/hd720/frames/power1_loop/power1_loop_17.png"
       ],
       "frameHashes": [
         "a442061a722a6e02b23b5a68f9f0da1d6b3d519582b84b1008985a39f0e9575c",
@@ -6102,39 +6141,43 @@
         "ddb29137be4c7f7fe87b9d5a435880f6fa47d1ecaa3810dfaf704188063ebdad",
         "6282ec3bd21c7a4ca6188a9438f16765c7cfc189bf7ba546430d4ab690ac60d6",
         "d92d4b99f0e685f4fb39c36cf0dbfe42f6d17d2b663f2105e346a214974069c8",
+        "3aa6e19baf3f2cb49c2198b8d2a242939be9fcfbae69dd845b2263b21447711b",
         "5e3cfd9677669dad314caa87047e7b55d51aa57003fb7c9416093cbfaf455870",
+        "0fa6f78e5a609319e6f8a45ecfc6ba2203fdbc957e98e2871611d3cb3e9af857",
         "688beda28230afd8f0c820a25e0870458d60386a7fd6a8f4132a82496ea5e3dc",
         "6a0ba746f86d799d94f538d6d36719c6b60260983d1db227fdd09b7c5c2e65e3",
         "a24987104d5d0a8e052459b260ec616bdb4814ad377ba17da6dff5b876131924",
         "a442061a722a6e02b23b5a68f9f0da1d6b3d519582b84b1008985a39f0e9575c"
       ],
       "candidate": "sprites/hd720/videos/anim_power1_loop.webm",
-      "videoSha256": "cb3ae010f57e2911ee1db83c9d244ec5da4d2df312d75634905f082e674c288d",
-      "frameCount": 16,
-      "duration": 3.2,
-      "decodedTicks": 48,
+      "videoSha256": "5ddff34af6811b86f7495c2924ed0526bb7d462f8cb36c6e4352907fb1f71e34",
+      "frameCount": 18,
+      "duration": 4.666666666666667,
+      "decodedTicks": 70,
       "fps": 15,
       "holds": {
-        "0": 3,
-        "1": 3,
-        "2": 3,
-        "3": 3,
-        "4": 3,
-        "5": 3,
-        "6": 3,
-        "7": 3,
-        "8": 3,
-        "9": 3,
-        "10": 3,
+        "0": 4,
+        "1": 4,
+        "2": 4,
+        "3": 4,
+        "4": 4,
+        "5": 4,
+        "6": 4,
+        "7": 4,
+        "8": 4,
+        "9": 4,
+        "10": 4,
         "11": 3,
-        "12": 3,
+        "12": 4,
         "13": 3,
-        "14": 3,
-        "15": 3
+        "14": 4,
+        "15": 4,
+        "16": 4,
+        "17": 4
       },
       "repeats": [],
-      "sourceBytes": 311873,
-      "candidateBytes": 484927,
+      "sourceBytes": 388131,
+      "candidateBytes": 602905,
       "technicalReview": {
         "dimensions": true,
         "alpha": true,
@@ -6143,12 +6186,12 @@
         "decodedTickCount": true
       },
       "status": "reviewed",
+      "reviewRecord": "anims/calm_motion_review.md",
       "review": {
         "technical": true,
         "staticVisual": true,
         "runtimePlayback": true
-      },
-      "reviewRecord": "anims/calm_motion_review.md"
+      }
     },
     {
       "clip": "talk_loop",
@@ -6391,7 +6434,7 @@
       "part": "loop",
       "rate": 1,
       "sourceVideo": "sprites/anim_broom1_loop.webm",
-      "sourceVideoSha256": "664fa2a2aa8ff1ae2d9e565995daaa71b61a51ebd966100e265cf9e734db5ae1",
+      "sourceVideoSha256": "368f79efb1ca520333a7bf536511ae7f5d9fb48652ddc390184fa73f3e7bd2a0",
       "sourceFrames": [
         "sprites/broom1_loop/broom1_loop_00.png",
         "sprites/broom1_loop/broom1_loop_01.png",
@@ -6465,32 +6508,32 @@
         "daf5e2677a7f084c2c5727a1e28c98c3cb5cb4d9d2a5aa2aa7f7c747352c79bd"
       ],
       "candidate": "sprites/hd720/videos/anim_broom1_loop.webm",
-      "videoSha256": "4fd224f855b777f0caf75436386fc5182556c8d42da1ecc16e2236e9a2418efd",
+      "videoSha256": "1c4500e102222e4b6f001bcbb0f64f826441c13c29f9197766b6e13bf3531415",
       "frameCount": 16,
-      "duration": 5.083,
-      "decodedTicks": 61,
+      "duration": 6.166666666666667,
+      "decodedTicks": 74,
       "fps": 12,
       "holds": {
-        "0": 4,
-        "1": 2,
+        "0": 6,
+        "1": 3,
         "2": 6,
-        "3": 2,
+        "3": 3,
         "4": 6,
-        "5": 2,
-        "6": 2,
-        "7": 2,
+        "5": 3,
+        "6": 3,
+        "7": 3,
         "8": 10,
-        "9": 2,
+        "9": 3,
         "10": 7,
-        "11": 2,
-        "12": 2,
+        "11": 3,
+        "12": 3,
         "13": 6,
-        "14": 2,
-        "15": 4
+        "14": 3,
+        "15": 6
       },
       "repeats": [],
-      "sourceBytes": 450476,
-      "candidateBytes": 654131,
+      "sourceBytes": 447578,
+      "candidateBytes": 649979,
       "technicalReview": {
         "dimensions": true,
         "alpha": true,
@@ -6502,12 +6545,12 @@
         "distinctPoses": true
       },
       "status": "reviewed",
+      "reviewRecord": "anims/calm_motion_review.md",
       "review": {
         "technical": true,
         "staticVisual": true,
         "runtimePlayback": true
-      },
-      "reviewRecord": "anims/calm_motion_review.md"
+      }
     },
     {
       "clip": "lantern1_loop",
@@ -6515,7 +6558,7 @@
       "part": "loop",
       "rate": 1,
       "sourceVideo": "sprites/anim_lantern1_loop.webm",
-      "sourceVideoSha256": "e954e0b3f0d74add7320370a4e6c5e50fcfd630717efa02416250ee87b3174ef",
+      "sourceVideoSha256": "6dba3a5348dd1b5a544cc08c1d1feb5c119691036722b08381f4dc92d4e389bf",
       "sourceFrames": [
         "sprites/lantern1_loop/lantern1_loop_00.png",
         "sprites/lantern1_loop/lantern1_loop_01.png",
@@ -6589,32 +6632,32 @@
         "daf5e2677a7f084c2c5727a1e28c98c3cb5cb4d9d2a5aa2aa7f7c747352c79bd"
       ],
       "candidate": "sprites/hd720/videos/anim_lantern1_loop.webm",
-      "videoSha256": "6b7d35dd3e66bb73a5497a731d70d1dc50be238fb318f2eef3a8b2840793d5da",
+      "videoSha256": "0dbeb9c2a3c2dfb48df462fb47e9d995375cc58aa53363b44a2fbc2dd8468c0c",
       "frameCount": 16,
-      "duration": 4.916,
-      "decodedTicks": 59,
+      "duration": 6.083333333333333,
+      "decodedTicks": 73,
       "fps": 12,
       "holds": {
-        "0": 4,
-        "1": 2,
-        "2": 2,
+        "0": 6,
+        "1": 3,
+        "2": 3,
         "3": 6,
-        "4": 2,
-        "5": 2,
-        "6": 2,
+        "4": 3,
+        "5": 3,
+        "6": 3,
         "7": 8,
-        "8": 2,
-        "9": 2,
-        "10": 2,
+        "8": 3,
+        "9": 3,
+        "10": 3,
         "11": 10,
         "12": 7,
-        "13": 2,
-        "14": 2,
-        "15": 4
+        "13": 3,
+        "14": 3,
+        "15": 6
       },
       "repeats": [],
-      "sourceBytes": 365180,
-      "candidateBytes": 531961,
+      "sourceBytes": 380196,
+      "candidateBytes": 553651,
       "technicalReview": {
         "dimensions": true,
         "alpha": true,
@@ -6626,12 +6669,12 @@
         "distinctPoses": true
       },
       "status": "reviewed",
+      "reviewRecord": "anims/calm_motion_review.md",
       "review": {
         "technical": true,
         "staticVisual": true,
         "runtimePlayback": true
-      },
-      "reviewRecord": "anims/calm_motion_review.md"
+      }
     },
     {
       "clip": "ghost1_loop",
@@ -6639,7 +6682,7 @@
       "part": "loop",
       "rate": 1,
       "sourceVideo": "sprites/anim_ghost1_loop.webm",
-      "sourceVideoSha256": "1485928fef95137badc2b6375310872330cd1f5c29458841c7d56990391410f4",
+      "sourceVideoSha256": "d0233031bba10c9f6e2edfdb6fb2c847f34c369eea5f67b3f7edb2830bf6fa8a",
       "sourceFrames": [
         "sprites/ghost1_loop/ghost1_loop_00.png",
         "sprites/ghost1_loop/ghost1_loop_01.png",
@@ -6713,32 +6756,32 @@
         "daf5e2677a7f084c2c5727a1e28c98c3cb5cb4d9d2a5aa2aa7f7c747352c79bd"
       ],
       "candidate": "sprites/hd720/videos/anim_ghost1_loop.webm",
-      "videoSha256": "a51caf7bc493485e054463e7e7907f752c227ef12f59cce5310b7da017ec3c13",
+      "videoSha256": "6b8b56c9b21e66e607a7848eeb5cf865a23afd4960fc8959af669cf42de45492",
       "frameCount": 16,
-      "duration": 4.916,
-      "decodedTicks": 59,
+      "duration": 6.0,
+      "decodedTicks": 72,
       "fps": 12,
       "holds": {
-        "0": 4,
-        "1": 2,
-        "2": 2,
+        "0": 6,
+        "1": 3,
+        "2": 3,
         "3": 6,
-        "4": 2,
+        "4": 3,
         "5": 5,
-        "6": 2,
-        "7": 2,
-        "8": 2,
+        "6": 3,
+        "7": 3,
+        "8": 3,
         "9": 7,
-        "10": 2,
-        "11": 2,
+        "10": 3,
+        "11": 3,
         "12": 10,
         "13": 5,
-        "14": 2,
-        "15": 4
+        "14": 3,
+        "15": 6
       },
       "repeats": [],
-      "sourceBytes": 341716,
-      "candidateBytes": 492659,
+      "sourceBytes": 377795,
+      "candidateBytes": 544334,
       "technicalReview": {
         "dimensions": true,
         "alpha": true,
@@ -6750,12 +6793,12 @@
         "distinctPoses": true
       },
       "status": "reviewed",
+      "reviewRecord": "anims/calm_motion_review.md",
       "review": {
         "technical": true,
         "staticVisual": true,
         "runtimePlayback": true
-      },
-      "reviewRecord": "anims/calm_motion_review.md"
+      }
     },
     {
       "clip": "bat1_loop",
@@ -6763,7 +6806,7 @@
       "part": "loop",
       "rate": 1,
       "sourceVideo": "sprites/anim_bat1_loop.webm",
-      "sourceVideoSha256": "19f1f9add13750e694f6b7feaf555ac0160ba44706dfa4b09eca8ae6871bddab",
+      "sourceVideoSha256": "a1f798a062a1e6b1b427545f0c5f0137c843acbfb44b2a86992d4893ed7c11cc",
       "sourceFrames": [
         "sprites/bat1_loop/bat1_loop_00.png",
         "sprites/bat1_loop/bat1_loop_01.png",
@@ -6837,32 +6880,32 @@
         "daf5e2677a7f084c2c5727a1e28c98c3cb5cb4d9d2a5aa2aa7f7c747352c79bd"
       ],
       "candidate": "sprites/hd720/videos/anim_bat1_loop.webm",
-      "videoSha256": "cafee94e548a22a9761092d71c5fda9fb3e1c5554528ce7ece47f6b0bd658bdc",
+      "videoSha256": "aff7dd568948691fa1b1cd6ee655a355e5ee8dd8d4e4f3c985dcd7b9deee9206",
       "frameCount": 16,
-      "duration": 4.916,
-      "decodedTicks": 59,
+      "duration": 6.0,
+      "decodedTicks": 72,
       "fps": 12,
       "holds": {
-        "0": 4,
-        "1": 2,
+        "0": 6,
+        "1": 3,
         "2": 5,
-        "3": 2,
+        "3": 3,
         "4": 6,
-        "5": 2,
-        "6": 2,
-        "7": 2,
+        "5": 3,
+        "6": 3,
+        "7": 3,
         "8": 9,
-        "9": 2,
+        "9": 3,
         "10": 8,
-        "11": 2,
+        "11": 3,
         "12": 5,
-        "13": 2,
-        "14": 2,
-        "15": 4
+        "13": 3,
+        "14": 3,
+        "15": 6
       },
       "repeats": [],
-      "sourceBytes": 363268,
-      "candidateBytes": 525386,
+      "sourceBytes": 399299,
+      "candidateBytes": 574491,
       "technicalReview": {
         "dimensions": true,
         "alpha": true,
@@ -6874,12 +6917,12 @@
         "distinctPoses": true
       },
       "status": "reviewed",
+      "reviewRecord": "anims/calm_motion_review.md",
       "review": {
         "technical": true,
         "staticVisual": true,
         "runtimePlayback": true
-      },
-      "reviewRecord": "anims/calm_motion_review.md"
+      }
     },
     {
       "clip": "candy1_loop",
@@ -6887,7 +6930,7 @@
       "part": "loop",
       "rate": 1,
       "sourceVideo": "sprites/anim_candy1_loop.webm",
-      "sourceVideoSha256": "68b9ce0e70a0f728fbe39611a98cb23a0968cc3a11e7a7491bd966505d165a72",
+      "sourceVideoSha256": "0d9bdbdc49251aa2fabe47cad44c47c9e53b770534b04fc5edacc2a50814ef1d",
       "sourceFrames": [
         "sprites/candy1_loop/candy1_loop_00.png",
         "sprites/candy1_loop/candy1_loop_01.png",
@@ -6961,32 +7004,32 @@
         "daf5e2677a7f084c2c5727a1e28c98c3cb5cb4d9d2a5aa2aa7f7c747352c79bd"
       ],
       "candidate": "sprites/hd720/videos/anim_candy1_loop.webm",
-      "videoSha256": "cbf019910479ee673b696227461f0f7971007ca61018dc2e5fd904bb581b7c2b",
+      "videoSha256": "bed2c22602fcdad2b5c653180eb1c637eb168cb705fcead3115b6f54dffa6ff2",
       "frameCount": 16,
-      "duration": 4.916,
-      "decodedTicks": 59,
+      "duration": 6.0,
+      "decodedTicks": 72,
       "fps": 12,
       "holds": {
-        "0": 4,
-        "1": 2,
-        "2": 2,
+        "0": 6,
+        "1": 3,
+        "2": 3,
         "3": 5,
-        "4": 2,
-        "5": 2,
+        "4": 3,
+        "5": 3,
         "6": 6,
-        "7": 2,
-        "8": 2,
+        "7": 3,
+        "8": 3,
         "9": 6,
-        "10": 2,
+        "10": 3,
         "11": 10,
         "12": 6,
-        "13": 2,
-        "14": 2,
-        "15": 4
+        "13": 3,
+        "14": 3,
+        "15": 6
       },
       "repeats": [],
-      "sourceBytes": 357668,
-      "candidateBytes": 515148,
+      "sourceBytes": 394610,
+      "candidateBytes": 565974,
       "technicalReview": {
         "dimensions": true,
         "alpha": true,
@@ -6998,12 +7041,12 @@
         "distinctPoses": true
       },
       "status": "reviewed",
+      "reviewRecord": "anims/calm_motion_review.md",
       "review": {
         "technical": true,
         "staticVisual": true,
         "runtimePlayback": true
-      },
-      "reviewRecord": "anims/calm_motion_review.md"
+      }
     },
     {
       "clip": "spellbook1_loop",
@@ -7011,7 +7054,7 @@
       "part": "loop",
       "rate": 1,
       "sourceVideo": "sprites/anim_spellbook1_loop.webm",
-      "sourceVideoSha256": "168eb533c7611dbadcad1f375bbbcedbceec192ffe29ad778d0d0b17fb98b4a1",
+      "sourceVideoSha256": "f006b74e7e497db68411a3b8bd23f64c81ee3adb501ed371ee5ae6759bc5d4d7",
       "sourceFrames": [
         "sprites/spellbook1_loop/spellbook1_loop_00.png",
         "sprites/spellbook1_loop/spellbook1_loop_01.png",
@@ -7085,32 +7128,32 @@
         "daf5e2677a7f084c2c5727a1e28c98c3cb5cb4d9d2a5aa2aa7f7c747352c79bd"
       ],
       "candidate": "sprites/hd720/videos/anim_spellbook1_loop.webm",
-      "videoSha256": "fccb62a7591bb4b2984b7f1466cd69d7900480f4b376d607c3c4231a663a86bf",
+      "videoSha256": "46b2bf84b483978f045f1244152a220a11fbc61050ec148609d7074c9443ea21",
       "frameCount": 16,
-      "duration": 5.0,
-      "decodedTicks": 60,
+      "duration": 6.083333333333333,
+      "decodedTicks": 73,
       "fps": 12,
       "holds": {
-        "0": 4,
-        "1": 2,
-        "2": 2,
+        "0": 6,
+        "1": 3,
+        "2": 3,
         "3": 5,
-        "4": 2,
+        "4": 3,
         "5": 9,
-        "6": 2,
-        "7": 2,
+        "6": 3,
+        "7": 3,
         "8": 6,
-        "9": 2,
-        "10": 2,
+        "9": 3,
+        "10": 3,
         "11": 8,
         "12": 6,
-        "13": 2,
-        "14": 2,
-        "15": 4
+        "13": 3,
+        "14": 3,
+        "15": 6
       },
       "repeats": [],
-      "sourceBytes": 376594,
-      "candidateBytes": 545351,
+      "sourceBytes": 411623,
+      "candidateBytes": 595936,
       "technicalReview": {
         "dimensions": true,
         "alpha": true,
@@ -7122,12 +7165,12 @@
         "distinctPoses": true
       },
       "status": "reviewed",
+      "reviewRecord": "anims/calm_motion_review.md",
       "review": {
         "technical": true,
         "staticVisual": true,
         "runtimePlayback": true
-      },
-      "reviewRecord": "anims/calm_motion_review.md"
+      }
     },
     {
       "clip": "starspell1_loop",
@@ -7135,7 +7178,7 @@
       "part": "loop",
       "rate": 1,
       "sourceVideo": "sprites/anim_starspell1_loop.webm",
-      "sourceVideoSha256": "c3a25195c0148f21bcef7e1689ef70c516f2cac36ffd2c1b10083709990c354a",
+      "sourceVideoSha256": "22b5fe5cfd0d3b000749c9fad2bd11d084200cea5c7bf7f2c2bf24eab6163431",
       "sourceFrames": [
         "sprites/starspell1_loop/starspell1_loop_00.png",
         "sprites/starspell1_loop/starspell1_loop_01.png",
@@ -7209,32 +7252,32 @@
         "daf5e2677a7f084c2c5727a1e28c98c3cb5cb4d9d2a5aa2aa7f7c747352c79bd"
       ],
       "candidate": "sprites/hd720/videos/anim_starspell1_loop.webm",
-      "videoSha256": "afd29f3519b98a022e67d4efbaa1ba0462735cab049ad470a24bf3305c733c85",
+      "videoSha256": "205f35037a3fac57522c5cb16f3d6e455c5f48b14fd2807036556d74c142bd3f",
       "frameCount": 16,
-      "duration": 4.916,
-      "decodedTicks": 59,
+      "duration": 6.0,
+      "decodedTicks": 72,
       "fps": 12,
       "holds": {
-        "0": 4,
-        "1": 2,
-        "2": 2,
+        "0": 6,
+        "1": 3,
+        "2": 3,
         "3": 5,
-        "4": 2,
-        "5": 2,
+        "4": 3,
+        "5": 3,
         "6": 7,
-        "7": 2,
+        "7": 3,
         "8": 7,
-        "9": 2,
+        "9": 3,
         "10": 7,
-        "11": 2,
+        "11": 3,
         "12": 7,
-        "13": 2,
-        "14": 2,
-        "15": 4
+        "13": 3,
+        "14": 3,
+        "15": 6
       },
       "repeats": [],
-      "sourceBytes": 367742,
-      "candidateBytes": 532770,
+      "sourceBytes": 405702,
+      "candidateBytes": 585091,
       "technicalReview": {
         "dimensions": true,
         "alpha": true,
@@ -7246,12 +7289,12 @@
         "distinctPoses": true
       },
       "status": "reviewed",
+      "reviewRecord": "anims/calm_motion_review.md",
       "review": {
         "technical": true,
         "staticVisual": true,
         "runtimePlayback": true
-      },
-      "reviewRecord": "anims/calm_motion_review.md"
+      }
     },
     {
       "clip": "crystal1_loop",
@@ -7259,7 +7302,7 @@
       "part": "loop",
       "rate": 1,
       "sourceVideo": "sprites/anim_crystal1_loop.webm",
-      "sourceVideoSha256": "0f1af5f98eea6f8e6bb1be977b4780a2669829b57264dd153e509fcb450a010b",
+      "sourceVideoSha256": "fa1f088af2076a1bd5bb81636824f31414d2c006d30921a81a3e035ef8c0462d",
       "sourceFrames": [
         "sprites/crystal1_loop/crystal1_loop_00.png",
         "sprites/crystal1_loop/crystal1_loop_01.png",
@@ -7333,32 +7376,32 @@
         "daf5e2677a7f084c2c5727a1e28c98c3cb5cb4d9d2a5aa2aa7f7c747352c79bd"
       ],
       "candidate": "sprites/hd720/videos/anim_crystal1_loop.webm",
-      "videoSha256": "b1b9bc9c3672e275d20a214e8f725d6b740b9be9e59eb442a4a67e5a12b04672",
+      "videoSha256": "886c3a62551c6911fa90a3420b56dcc559a0966841c1ab2b1a013a437c79dbeb",
       "frameCount": 16,
-      "duration": 5.166,
-      "decodedTicks": 62,
+      "duration": 6.25,
+      "decodedTicks": 75,
       "fps": 12,
       "holds": {
-        "0": 4,
-        "1": 2,
-        "2": 2,
+        "0": 6,
+        "1": 3,
+        "2": 3,
         "3": 5,
-        "4": 2,
+        "4": 3,
         "5": 8,
-        "6": 2,
+        "6": 3,
         "7": 7,
-        "8": 2,
+        "8": 3,
         "9": 8,
-        "10": 2,
-        "11": 2,
+        "10": 3,
+        "11": 3,
         "12": 8,
-        "13": 2,
-        "14": 2,
-        "15": 4
+        "13": 3,
+        "14": 3,
+        "15": 6
       },
       "repeats": [],
-      "sourceBytes": 334242,
-      "candidateBytes": 480786,
+      "sourceBytes": 350745,
+      "candidateBytes": 504108,
       "technicalReview": {
         "dimensions": true,
         "alpha": true,
@@ -7370,12 +7413,12 @@
         "distinctPoses": true
       },
       "status": "reviewed",
+      "reviewRecord": "anims/calm_motion_review.md",
       "review": {
         "technical": true,
         "staticVisual": true,
         "runtimePlayback": true
-      },
-      "reviewRecord": "anims/calm_motion_review.md"
+      }
     },
     {
       "clip": "blackcat1_loop",
@@ -7383,7 +7426,7 @@
       "part": "loop",
       "rate": 1,
       "sourceVideo": "sprites/anim_blackcat1_loop.webm",
-      "sourceVideoSha256": "2af5348ec3f3d551af13525e391e3b7d8ad5ab2341e4ab723c125f7a199f0168",
+      "sourceVideoSha256": "650b105153fb287045394b251ebe20bf4c6c9b6b30f791bef345db3c6992c1c1",
       "sourceFrames": [
         "sprites/blackcat1_loop/blackcat1_loop_00.png",
         "sprites/blackcat1_loop/blackcat1_loop_01.png",
@@ -7457,32 +7500,32 @@
         "daf5e2677a7f084c2c5727a1e28c98c3cb5cb4d9d2a5aa2aa7f7c747352c79bd"
       ],
       "candidate": "sprites/hd720/videos/anim_blackcat1_loop.webm",
-      "videoSha256": "7adee14bcadb75883b73815fbcefc36e0b99975985ca9cbed3cf082b41c67c62",
+      "videoSha256": "ce6aff02d514cb4d868b0af71ce2da0cb726a4e72f8fb87d4c2ebb778dcbd5c1",
       "frameCount": 16,
-      "duration": 5.083,
-      "decodedTicks": 61,
+      "duration": 6.166666666666667,
+      "decodedTicks": 74,
       "fps": 12,
       "holds": {
-        "0": 4,
-        "1": 2,
-        "2": 2,
+        "0": 6,
+        "1": 3,
+        "2": 3,
         "3": 6,
-        "4": 2,
-        "5": 2,
-        "6": 2,
+        "4": 3,
+        "5": 3,
+        "6": 3,
         "7": 7,
-        "8": 2,
+        "8": 3,
         "9": 10,
-        "10": 2,
-        "11": 2,
+        "10": 3,
+        "11": 3,
         "12": 7,
-        "13": 2,
+        "13": 3,
         "14": 5,
-        "15": 4
+        "15": 6
       },
       "repeats": [],
-      "sourceBytes": 321820,
-      "candidateBytes": 465292,
+      "sourceBytes": 351704,
+      "candidateBytes": 506489,
       "technicalReview": {
         "dimensions": true,
         "alpha": true,
@@ -7494,12 +7537,12 @@
         "distinctPoses": true
       },
       "status": "reviewed",
+      "reviewRecord": "anims/calm_motion_review.md",
       "review": {
         "technical": true,
         "staticVisual": true,
         "runtimePlayback": true
-      },
-      "reviewRecord": "anims/calm_motion_review.md"
+      }
     },
     {
       "clip": "raven1_loop",
@@ -7507,7 +7550,7 @@
       "part": "loop",
       "rate": 1,
       "sourceVideo": "sprites/anim_raven1_loop.webm",
-      "sourceVideoSha256": "e4ffb23e9b1bcb4b5754c4185f27981c02076e5621df19d67952632e9687247b",
+      "sourceVideoSha256": "30e0463e13c049f7531bcd9a65b71e80a8755d1b6f8518166e62a004c69500b3",
       "sourceFrames": [
         "sprites/raven1_loop/raven1_loop_00.png",
         "sprites/raven1_loop/raven1_loop_01.png",
@@ -7581,32 +7624,32 @@
         "daf5e2677a7f084c2c5727a1e28c98c3cb5cb4d9d2a5aa2aa7f7c747352c79bd"
       ],
       "candidate": "sprites/hd720/videos/anim_raven1_loop.webm",
-      "videoSha256": "3fd754a94ff10d6bf26fa6b5284ce559c59e892796b772aeb5aca58441b634bc",
+      "videoSha256": "ce70fcbbc22709e5f74c81a797d8bc1a00c9003de780ee6364902b4c270dc9c7",
       "frameCount": 16,
-      "duration": 4.916,
-      "decodedTicks": 59,
+      "duration": 6.0,
+      "decodedTicks": 72,
       "fps": 12,
       "holds": {
-        "0": 4,
-        "1": 2,
-        "2": 2,
+        "0": 6,
+        "1": 3,
+        "2": 3,
         "3": 7,
-        "4": 2,
-        "5": 2,
+        "4": 3,
+        "5": 3,
         "6": 6,
-        "7": 2,
-        "8": 2,
+        "7": 3,
+        "8": 3,
         "9": 6,
-        "10": 2,
+        "10": 3,
         "11": 8,
-        "12": 2,
-        "13": 2,
+        "12": 3,
+        "13": 3,
         "14": 6,
-        "15": 4
+        "15": 6
       },
       "repeats": [],
-      "sourceBytes": 349643,
-      "candidateBytes": 502805,
+      "sourceBytes": 374618,
+      "candidateBytes": 536047,
       "technicalReview": {
         "dimensions": true,
         "alpha": true,
@@ -7618,12 +7661,12 @@
         "distinctPoses": true
       },
       "status": "reviewed",
+      "reviewRecord": "anims/calm_motion_review.md",
       "review": {
         "technical": true,
         "staticVisual": true,
         "runtimePlayback": true
-      },
-      "reviewRecord": "anims/calm_motion_review.md"
+      }
     },
     {
       "clip": "spider1_loop",
@@ -7631,7 +7674,7 @@
       "part": "loop",
       "rate": 1,
       "sourceVideo": "sprites/anim_spider1_loop.webm",
-      "sourceVideoSha256": "97c989b679fd30239f950bde82584fa67bd5bf8c88ce6b67ae4994e64b2ba727",
+      "sourceVideoSha256": "b0ada24c31f4b6145ab45a8c975484b90f0908bc39f7de2e55f56a7bc6afeaf4",
       "sourceFrames": [
         "sprites/spider1_loop/spider1_loop_00.png",
         "sprites/spider1_loop/spider1_loop_01.png",
@@ -7705,32 +7748,32 @@
         "daf5e2677a7f084c2c5727a1e28c98c3cb5cb4d9d2a5aa2aa7f7c747352c79bd"
       ],
       "candidate": "sprites/hd720/videos/anim_spider1_loop.webm",
-      "videoSha256": "87afeae17e8556af940ef2278cbcef0aa008c4474781af9af3537be73204308d",
+      "videoSha256": "7a67920cb27ee831bd219645850ceb11e804503f8f4a9f53f8fda286a50adc16",
       "frameCount": 16,
-      "duration": 5.0,
-      "decodedTicks": 60,
+      "duration": 6.083333333333333,
+      "decodedTicks": 73,
       "fps": 12,
       "holds": {
-        "0": 4,
-        "1": 2,
-        "2": 2,
+        "0": 6,
+        "1": 3,
+        "2": 3,
         "3": 6,
-        "4": 2,
-        "5": 2,
+        "4": 3,
+        "5": 3,
         "6": 6,
-        "7": 2,
+        "7": 3,
         "8": 8,
         "9": 8,
-        "10": 2,
-        "11": 2,
+        "10": 3,
+        "11": 3,
         "12": 6,
-        "13": 2,
-        "14": 2,
-        "15": 4
+        "13": 3,
+        "14": 3,
+        "15": 6
       },
       "repeats": [],
-      "sourceBytes": 343200,
-      "candidateBytes": 495219,
+      "sourceBytes": 367376,
+      "candidateBytes": 528026,
       "technicalReview": {
         "dimensions": true,
         "alpha": true,
@@ -7742,12 +7785,12 @@
         "distinctPoses": true
       },
       "status": "reviewed",
+      "reviewRecord": "anims/calm_motion_review.md",
       "review": {
         "technical": true,
         "staticVisual": true,
         "runtimePlayback": true
-      },
-      "reviewRecord": "anims/calm_motion_review.md"
+      }
     },
     {
       "clip": "potion1_loop",
@@ -7755,7 +7798,7 @@
       "part": "loop",
       "rate": 1,
       "sourceVideo": "sprites/anim_potion1_loop.webm",
-      "sourceVideoSha256": "7cc712031ba23a285b499ca5de23d01de6ca88179fc4dd1480a6816022d26c16",
+      "sourceVideoSha256": "b86e1b36a3613e00c3426124ce52b7b645688e2fafff163266fbd8ed5576fcd0",
       "sourceFrames": [
         "sprites/potion1_loop/potion1_loop_00.png",
         "sprites/potion1_loop/potion1_loop_01.png",
@@ -7829,32 +7872,32 @@
         "daf5e2677a7f084c2c5727a1e28c98c3cb5cb4d9d2a5aa2aa7f7c747352c79bd"
       ],
       "candidate": "sprites/hd720/videos/anim_potion1_loop.webm",
-      "videoSha256": "e244099784bf225b3746e96c4f00c46752c241b1146b003b5eaa36763716255c",
+      "videoSha256": "c7ffffa5a7e4245b32d897a45f82f5c05f36d1d517f6eee30602cc8280f9a0c4",
       "frameCount": 16,
-      "duration": 5.0,
-      "decodedTicks": 60,
+      "duration": 6.083333333333333,
+      "decodedTicks": 73,
       "fps": 12,
       "holds": {
-        "0": 4,
-        "1": 2,
-        "2": 2,
+        "0": 6,
+        "1": 3,
+        "2": 3,
         "3": 5,
-        "4": 2,
+        "4": 3,
         "5": 7,
-        "6": 2,
-        "7": 2,
+        "6": 3,
+        "7": 3,
         "8": 8,
-        "9": 2,
+        "9": 3,
         "10": 6,
         "11": 8,
-        "12": 2,
-        "13": 2,
-        "14": 2,
-        "15": 4
+        "12": 3,
+        "13": 3,
+        "14": 3,
+        "15": 6
       },
       "repeats": [],
-      "sourceBytes": 345648,
-      "candidateBytes": 497392,
+      "sourceBytes": 357728,
+      "candidateBytes": 512997,
       "technicalReview": {
         "dimensions": true,
         "alpha": true,
@@ -7866,12 +7909,12 @@
         "distinctPoses": true
       },
       "status": "reviewed",
+      "reviewRecord": "anims/calm_motion_review.md",
       "review": {
         "technical": true,
         "staticVisual": true,
         "runtimePlayback": true
-      },
-      "reviewRecord": "anims/calm_motion_review.md"
+      }
     },
     {
       "clip": "moon1_loop",
@@ -7879,7 +7922,7 @@
       "part": "loop",
       "rate": 1,
       "sourceVideo": "sprites/anim_moon1_loop.webm",
-      "sourceVideoSha256": "42758d5d337baa593a049d459d5a68f0b91ca7605fc80957f2926ef6810386ab",
+      "sourceVideoSha256": "5e0d98be37033f76561d2b93d43ca504fabacd968cca95360247066c0deb1fbf",
       "sourceFrames": [
         "sprites/moon1_loop/moon1_loop_00.png",
         "sprites/moon1_loop/moon1_loop_01.png",
@@ -7953,32 +7996,32 @@
         "daf5e2677a7f084c2c5727a1e28c98c3cb5cb4d9d2a5aa2aa7f7c747352c79bd"
       ],
       "candidate": "sprites/hd720/videos/anim_moon1_loop.webm",
-      "videoSha256": "e017b8df51bafe902c8b827e86d31d164e4389027c8f7e1af4ec4cfc28e46abc",
+      "videoSha256": "33b36251438a3978f30dc064a5c35cfc817a49ac57a9d0792c28c389cc17c35d",
       "frameCount": 16,
-      "duration": 5.166,
-      "decodedTicks": 62,
+      "duration": 6.25,
+      "decodedTicks": 75,
       "fps": 12,
       "holds": {
-        "0": 4,
-        "1": 2,
+        "0": 6,
+        "1": 3,
         "2": 6,
-        "3": 2,
-        "4": 2,
+        "3": 3,
+        "4": 3,
         "5": 6,
-        "6": 2,
-        "7": 2,
+        "6": 3,
+        "7": 3,
         "8": 12,
-        "9": 2,
+        "9": 3,
         "10": 6,
-        "11": 2,
-        "12": 2,
+        "11": 3,
+        "12": 3,
         "13": 6,
-        "14": 2,
-        "15": 4
+        "14": 3,
+        "15": 6
       },
       "repeats": [],
-      "sourceBytes": 411621,
-      "candidateBytes": 595078,
+      "sourceBytes": 428313,
+      "candidateBytes": 619535,
       "technicalReview": {
         "dimensions": true,
         "alpha": true,
@@ -7990,12 +8033,12 @@
         "distinctPoses": true
       },
       "status": "reviewed",
+      "reviewRecord": "anims/calm_motion_review.md",
       "review": {
         "technical": true,
         "staticVisual": true,
         "runtimePlayback": true
-      },
-      "reviewRecord": "anims/calm_motion_review.md"
+      }
     },
     {
       "clip": "tarot1_loop",
@@ -8003,7 +8046,7 @@
       "part": "loop",
       "rate": 1,
       "sourceVideo": "sprites/anim_tarot1_loop.webm",
-      "sourceVideoSha256": "f9bd7f921211f2196a0fb310693aada8fbeb802ec44210bd8e68cb7fc5cb1980",
+      "sourceVideoSha256": "b0a51b623ee227efab26c43cccdb03bb8fcc88992324e897b017f5cd7d3b3edc",
       "sourceFrames": [
         "sprites/tarot1_loop/tarot1_loop_00.png",
         "sprites/tarot1_loop/tarot1_loop_01.png",
@@ -8077,32 +8120,32 @@
         "daf5e2677a7f084c2c5727a1e28c98c3cb5cb4d9d2a5aa2aa7f7c747352c79bd"
       ],
       "candidate": "sprites/hd720/videos/anim_tarot1_loop.webm",
-      "videoSha256": "c553406835dc85ed4f8e05a6547a7c8f40145fb11d271ed41b9e3388411cf6f4",
+      "videoSha256": "de9ad4d86075ddad53c7f9db35f58e4f3a39c2ebaecc6bc2b958a4a4f94a2531",
       "frameCount": 16,
-      "duration": 5.0,
-      "decodedTicks": 60,
+      "duration": 6.166666666666667,
+      "decodedTicks": 74,
       "fps": 12,
       "holds": {
-        "0": 4,
-        "1": 2,
-        "2": 2,
+        "0": 6,
+        "1": 3,
+        "2": 3,
         "3": 7,
-        "4": 2,
+        "4": 3,
         "5": 7,
-        "6": 2,
-        "7": 2,
+        "6": 3,
+        "7": 3,
         "8": 8,
-        "9": 2,
+        "9": 3,
         "10": 10,
-        "11": 2,
-        "12": 2,
-        "13": 2,
-        "14": 2,
-        "15": 4
+        "11": 3,
+        "12": 3,
+        "13": 3,
+        "14": 3,
+        "15": 6
       },
       "repeats": [],
-      "sourceBytes": 374688,
-      "candidateBytes": 537395,
+      "sourceBytes": 402592,
+      "candidateBytes": 574557,
       "technicalReview": {
         "dimensions": true,
         "alpha": true,
@@ -8114,12 +8157,12 @@
         "distinctPoses": true
       },
       "status": "reviewed",
+      "reviewRecord": "anims/calm_motion_review.md",
       "review": {
         "technical": true,
         "staticVisual": true,
         "runtimePlayback": true
-      },
-      "reviewRecord": "anims/calm_motion_review.md"
+      }
     },
     {
       "clip": "umbrella1_loop",
@@ -8127,7 +8170,7 @@
       "part": "loop",
       "rate": 1,
       "sourceVideo": "sprites/anim_umbrella1_loop.webm",
-      "sourceVideoSha256": "2ba4d5928515484c0a509018cd211c95ee08dd6464854017aea80f5421b70d85",
+      "sourceVideoSha256": "d2e11110450dcabf2ccf6f111b390b6ea92e41739f588157aca0e5cc31cc7089",
       "sourceFrames": [
         "sprites/umbrella1_loop/umbrella1_loop_00.png",
         "sprites/umbrella1_loop/umbrella1_loop_01.png",
@@ -8201,32 +8244,32 @@
         "daf5e2677a7f084c2c5727a1e28c98c3cb5cb4d9d2a5aa2aa7f7c747352c79bd"
       ],
       "candidate": "sprites/hd720/videos/anim_umbrella1_loop.webm",
-      "videoSha256": "7782a4efcf2f24ec33d8b230b755fd15fc900f48cbb4d3f43ec61601447e0a5d",
+      "videoSha256": "f65f41fd790fc5e3c8958254b5ddaa4a0fbcc966eaa4b627471d2a4d608c919f",
       "frameCount": 16,
-      "duration": 5.083,
-      "decodedTicks": 61,
+      "duration": 6.166666666666667,
+      "decodedTicks": 74,
       "fps": 12,
       "holds": {
-        "0": 4,
-        "1": 2,
-        "2": 2,
+        "0": 6,
+        "1": 3,
+        "2": 3,
         "3": 6,
-        "4": 2,
-        "5": 2,
+        "4": 3,
+        "5": 3,
         "6": 7,
-        "7": 2,
+        "7": 3,
         "8": 8,
         "9": 8,
-        "10": 2,
-        "11": 2,
+        "10": 3,
+        "11": 3,
         "12": 6,
-        "13": 2,
-        "14": 2,
-        "15": 4
+        "13": 3,
+        "14": 3,
+        "15": 6
       },
       "repeats": [],
-      "sourceBytes": 363476,
-      "candidateBytes": 527530,
+      "sourceBytes": 387897,
+      "candidateBytes": 559977,
       "technicalReview": {
         "dimensions": true,
         "alpha": true,
@@ -8238,12 +8281,12 @@
         "distinctPoses": true
       },
       "status": "reviewed",
+      "reviewRecord": "anims/calm_motion_review.md",
       "review": {
         "technical": true,
         "staticVisual": true,
         "runtimePlayback": true
-      },
-      "reviewRecord": "anims/calm_motion_review.md"
+      }
     },
     {
       "clip": "witchdance1_loop",
@@ -8251,7 +8294,7 @@
       "part": "loop",
       "rate": 1,
       "sourceVideo": "sprites/anim_witchdance1_loop.webm",
-      "sourceVideoSha256": "abfe521e67760300de377f06ac8549a386251c6329ace29677c655e42b000fab",
+      "sourceVideoSha256": "07af87cae6332a4cf1fee27dab40c55d3a60ced99e7d04f74bc108cafff72300",
       "sourceFrames": [
         "sprites/witchdance1_loop/witchdance1_loop_00.png",
         "sprites/witchdance1_loop/witchdance1_loop_01.png",
@@ -8325,32 +8368,32 @@
         "daf5e2677a7f084c2c5727a1e28c98c3cb5cb4d9d2a5aa2aa7f7c747352c79bd"
       ],
       "candidate": "sprites/hd720/videos/anim_witchdance1_loop.webm",
-      "videoSha256": "bd701022f6bb70632eb9fdb464e7f851faadd3e6924a6e9aafad4a1de7d4f357",
+      "videoSha256": "0513e5f74343a5f6b604acb24875b1fd6aa086bd210d3f47f394f05a3cce648b",
       "frameCount": 16,
-      "duration": 4.333,
-      "decodedTicks": 52,
+      "duration": 5.416666666666667,
+      "decodedTicks": 65,
       "fps": 12,
       "holds": {
-        "0": 4,
-        "1": 2,
-        "2": 2,
+        "0": 6,
+        "1": 3,
+        "2": 3,
         "3": 4,
-        "4": 2,
-        "5": 2,
+        "4": 3,
+        "5": 3,
         "6": 4,
-        "7": 2,
-        "8": 2,
+        "7": 3,
+        "8": 3,
         "9": 5,
-        "10": 2,
+        "10": 3,
         "11": 5,
-        "12": 2,
+        "12": 3,
         "13": 8,
-        "14": 2,
-        "15": 4
+        "14": 3,
+        "15": 6
       },
       "repeats": [],
-      "sourceBytes": 336875,
-      "candidateBytes": 484926,
+      "sourceBytes": 354290,
+      "candidateBytes": 510296,
       "technicalReview": {
         "dimensions": true,
         "alpha": true,
@@ -8362,12 +8405,12 @@
         "distinctPoses": true
       },
       "status": "reviewed",
+      "reviewRecord": "anims/calm_motion_review.md",
       "review": {
         "technical": true,
         "staticVisual": true,
         "runtimePlayback": true
-      },
-      "reviewRecord": "anims/calm_motion_review.md"
+      }
     },
     {
       "clip": "peekaboo1_loop",
@@ -8375,7 +8418,7 @@
       "part": "loop",
       "rate": 1,
       "sourceVideo": "sprites/anim_peekaboo1_loop.webm",
-      "sourceVideoSha256": "d635ad87e1a9615cabcd71be683e7f2de68cc65f16b5772dcdbee83230bcb526",
+      "sourceVideoSha256": "ebdd5a335e2eb54d3a0eddc30370aaf14e31a9755bbf3a0c53ff0be975a9d66a",
       "sourceFrames": [
         "sprites/peekaboo1_loop/peekaboo1_loop_00.png",
         "sprites/peekaboo1_loop/peekaboo1_loop_01.png",
@@ -8449,32 +8492,32 @@
         "daf5e2677a7f084c2c5727a1e28c98c3cb5cb4d9d2a5aa2aa7f7c747352c79bd"
       ],
       "candidate": "sprites/hd720/videos/anim_peekaboo1_loop.webm",
-      "videoSha256": "9fd0dc38a554f71f649ba3efc963d38c3771ad1f803923b0bacfca8004e542f4",
+      "videoSha256": "622b02e3c01f533561363884a455a3e286774c891faa826f55bb3c0e9c65acd5",
       "frameCount": 16,
-      "duration": 5.166,
-      "decodedTicks": 62,
+      "duration": 6.25,
+      "decodedTicks": 75,
       "fps": 12,
       "holds": {
-        "0": 4,
-        "1": 2,
-        "2": 2,
+        "0": 6,
+        "1": 3,
+        "2": 3,
         "3": 7,
-        "4": 2,
-        "5": 2,
+        "4": 3,
+        "5": 3,
         "6": 7,
-        "7": 2,
+        "7": 3,
         "8": 9,
-        "9": 2,
-        "10": 2,
+        "9": 3,
+        "10": 3,
         "11": 8,
-        "12": 2,
+        "12": 3,
         "13": 5,
-        "14": 2,
-        "15": 4
+        "14": 3,
+        "15": 6
       },
       "repeats": [],
-      "sourceBytes": 337132,
-      "candidateBytes": 487028,
+      "sourceBytes": 367953,
+      "candidateBytes": 530298,
       "technicalReview": {
         "dimensions": true,
         "alpha": true,
@@ -8486,12 +8529,12 @@
         "distinctPoses": true
       },
       "status": "reviewed",
+      "reviewRecord": "anims/calm_motion_review.md",
       "review": {
         "technical": true,
         "staticVisual": true,
         "runtimePlayback": true
-      },
-      "reviewRecord": "anims/calm_motion_review.md"
+      }
     },
     {
       "clip": "candles1_loop",
@@ -8499,7 +8542,7 @@
       "part": "loop",
       "rate": 1,
       "sourceVideo": "sprites/anim_candles1_loop.webm",
-      "sourceVideoSha256": "2291232eef683d619b8a2d9b79a73082d4c17d6efbaf17a770c746c8b96a6392",
+      "sourceVideoSha256": "549151f658e7e4ac43f050113a8b42942b447e35364e8f40521fc0d09df0d56e",
       "sourceFrames": [
         "sprites/candles1_loop/candles1_loop_00.png",
         "sprites/candles1_loop/candles1_loop_01.png",
@@ -8573,32 +8616,32 @@
         "daf5e2677a7f084c2c5727a1e28c98c3cb5cb4d9d2a5aa2aa7f7c747352c79bd"
       ],
       "candidate": "sprites/hd720/videos/anim_candles1_loop.webm",
-      "videoSha256": "73980568a66b7f484e188c0bedba84d7aeddf3170ce240fc208151ee8bf03757",
+      "videoSha256": "54be08fd7ef646302f97a4c6779b306816e9a1cd55ab56a22b41b8126e072146",
       "frameCount": 16,
-      "duration": 5.083,
-      "decodedTicks": 61,
+      "duration": 6.166666666666667,
+      "decodedTicks": 74,
       "fps": 12,
       "holds": {
-        "0": 4,
-        "1": 2,
-        "2": 2,
+        "0": 6,
+        "1": 3,
+        "2": 3,
         "3": 6,
-        "4": 2,
-        "5": 2,
+        "4": 3,
+        "5": 3,
         "6": 7,
-        "7": 2,
-        "8": 2,
+        "7": 3,
+        "8": 3,
         "9": 9,
-        "10": 2,
+        "10": 3,
         "11": 8,
-        "12": 2,
+        "12": 3,
         "13": 5,
-        "14": 2,
-        "15": 4
+        "14": 3,
+        "15": 6
       },
       "repeats": [],
-      "sourceBytes": 438273,
-      "candidateBytes": 636153,
+      "sourceBytes": 450117,
+      "candidateBytes": 650188,
       "technicalReview": {
         "dimensions": true,
         "alpha": true,
@@ -8610,12 +8653,12 @@
         "distinctPoses": true
       },
       "status": "reviewed",
+      "reviewRecord": "anims/calm_motion_review.md",
       "review": {
         "technical": true,
         "staticVisual": true,
         "runtimePlayback": true
-      },
-      "reviewRecord": "anims/calm_motion_review.md"
+      }
     },
     {
       "clip": "gift1_loop",
@@ -8623,7 +8666,7 @@
       "part": "loop",
       "rate": 1,
       "sourceVideo": "sprites/anim_gift1_loop.webm",
-      "sourceVideoSha256": "c62d3406ac5673961c124ce945ee6f255eb69a07e43f98f5fa7ec33623974f2a",
+      "sourceVideoSha256": "92946a38749f3dc116c44189e518de09ac88b00027549b496282e478130dfbe8",
       "sourceFrames": [
         "sprites/gift1_loop/gift1_loop_00.png",
         "sprites/gift1_loop/gift1_loop_01.png",
@@ -8697,32 +8740,32 @@
         "daf5e2677a7f084c2c5727a1e28c98c3cb5cb4d9d2a5aa2aa7f7c747352c79bd"
       ],
       "candidate": "sprites/hd720/videos/anim_gift1_loop.webm",
-      "videoSha256": "0554069b64e85722109631252400fb525f299feddf92e752b622db3e2b259b42",
+      "videoSha256": "05ea3b92cf57b1e9b596658d805808b4b53b5c4c1990e815ff802e13b7ecb4bf",
       "frameCount": 16,
-      "duration": 5.333,
-      "decodedTicks": 64,
+      "duration": 6.416666666666667,
+      "decodedTicks": 77,
       "fps": 12,
       "holds": {
-        "0": 4,
-        "1": 2,
-        "2": 2,
+        "0": 6,
+        "1": 3,
+        "2": 3,
         "3": 6,
-        "4": 2,
+        "4": 3,
         "5": 7,
-        "6": 2,
-        "7": 2,
+        "6": 3,
+        "7": 3,
         "8": 10,
-        "9": 2,
+        "9": 3,
         "10": 7,
-        "11": 2,
+        "11": 3,
         "12": 8,
-        "13": 2,
-        "14": 2,
-        "15": 4
+        "13": 3,
+        "14": 3,
+        "15": 6
       },
       "repeats": [],
-      "sourceBytes": 379604,
-      "candidateBytes": 551037,
+      "sourceBytes": 415988,
+      "candidateBytes": 600462,
       "technicalReview": {
         "dimensions": true,
         "alpha": true,
@@ -8734,12 +8777,12 @@
         "distinctPoses": true
       },
       "status": "reviewed",
+      "reviewRecord": "anims/calm_motion_review.md",
       "review": {
         "technical": true,
         "staticVisual": true,
         "runtimePlayback": true
-      },
-      "reviewRecord": "anims/calm_motion_review.md"
+      }
     },
     {
       "clip": "witchbreathe1_loop",
@@ -9737,7 +9780,7 @@
       "part": "loop",
       "rate": 1,
       "sourceVideo": "sprites/anim_seollal_bow1_loop.webm",
-      "sourceVideoSha256": "eedc361c3c5948d7f4e5271d0e274f9e1d02a7cdc4b1a7a4ae40898127c63aa2",
+      "sourceVideoSha256": "c050452303caebe4214d1b3603b69c3cced1422f027c57f8867a2a8f7256ecec",
       "sourceFrames": [
         "sprites/seollal_bow1_loop/seollal_bow1_loop_00.png",
         "sprites/seollal_bow1_loop/seollal_bow1_loop_01.png",
@@ -9811,32 +9854,32 @@
         "ad041795dd715bbd912cb74682cb0c4fad813fd5952eddf743bd1e350e4fb6ab"
       ],
       "candidate": "sprites/hd720/videos/anim_seollal_bow1_loop.webm",
-      "videoSha256": "3d65d7fe78603c3aca4f0f826229caa9deae2721a14b1e85ba5010590c1b1a6c",
+      "videoSha256": "9071205b7926533a7a12b91a31b637016ecf958dc3b6a991f1f12d167ce2846e",
       "frameCount": 16,
-      "duration": 5.666,
-      "decodedTicks": 68,
+      "duration": 6.666666666666667,
+      "decodedTicks": 80,
       "fps": 12,
       "holds": {
-        "0": 4,
-        "1": 2,
+        "0": 6,
+        "1": 3,
         "2": 6,
-        "3": 2,
+        "3": 3,
         "4": 7,
-        "5": 2,
+        "5": 3,
         "6": 6,
         "7": 12,
-        "8": 2,
-        "9": 2,
+        "8": 3,
+        "9": 3,
         "10": 6,
-        "11": 2,
-        "12": 2,
+        "11": 3,
+        "12": 3,
         "13": 7,
-        "14": 2,
-        "15": 4
+        "14": 3,
+        "15": 6
       },
       "repeats": [],
-      "sourceBytes": 402813,
-      "candidateBytes": 661388,
+      "sourceBytes": 443076,
+      "candidateBytes": 731193,
       "technicalReview": {
         "dimensions": true,
         "alpha": true,
@@ -9848,12 +9891,12 @@
         "distinctPoses": true
       },
       "status": "reviewed",
+      "reviewRecord": "anims/calm_motion_review.md",
       "review": {
         "technical": true,
         "staticVisual": true,
         "runtimePlayback": true
-      },
-      "reviewRecord": "anims/calm_motion_review.md"
+      }
     },
     {
       "clip": "seollal_pouch1_loop",
@@ -9861,7 +9904,7 @@
       "part": "loop",
       "rate": 1,
       "sourceVideo": "sprites/anim_seollal_pouch1_loop.webm",
-      "sourceVideoSha256": "1340bb553ff2f0c239ca4a41585ed3ae6999bd6dfd5130e8ea0a704d5faed8f7",
+      "sourceVideoSha256": "2582b241124ce5368e03da234a843b8a57ec1cc0bf0670d6982fdd22bd56b9b0",
       "sourceFrames": [
         "sprites/seollal_pouch1_loop/seollal_pouch1_loop_00.png",
         "sprites/seollal_pouch1_loop/seollal_pouch1_loop_01.png",
@@ -9935,32 +9978,32 @@
         "ad041795dd715bbd912cb74682cb0c4fad813fd5952eddf743bd1e350e4fb6ab"
       ],
       "candidate": "sprites/hd720/videos/anim_seollal_pouch1_loop.webm",
-      "videoSha256": "5b82f6b389a36dd2c1870a0901de93a60c1679ebb203c523596e80e42179a73c",
+      "videoSha256": "ece9c234338182256123b577e02d1cef6483070cc4b19f854c8fe7cb9169aba7",
       "frameCount": 16,
-      "duration": 5.25,
-      "decodedTicks": 63,
+      "duration": 6.333333333333333,
+      "decodedTicks": 76,
       "fps": 12,
       "holds": {
-        "0": 4,
-        "1": 2,
-        "2": 2,
+        "0": 6,
+        "1": 3,
+        "2": 3,
         "3": 7,
-        "4": 2,
+        "4": 3,
         "5": 7,
-        "6": 2,
-        "7": 2,
+        "6": 3,
+        "7": 3,
         "8": 9,
-        "9": 2,
+        "9": 3,
         "10": 8,
-        "11": 2,
+        "11": 3,
         "12": 6,
-        "13": 2,
-        "14": 2,
-        "15": 4
+        "13": 3,
+        "14": 3,
+        "15": 6
       },
       "repeats": [],
-      "sourceBytes": 473169,
-      "candidateBytes": 773858,
+      "sourceBytes": 511844,
+      "candidateBytes": 831899,
       "technicalReview": {
         "dimensions": true,
         "alpha": true,
@@ -9972,12 +10015,12 @@
         "distinctPoses": true
       },
       "status": "reviewed",
+      "reviewRecord": "anims/calm_motion_review.md",
       "review": {
         "technical": true,
         "staticVisual": true,
         "runtimePlayback": true
-      },
-      "reviewRecord": "anims/calm_motion_review.md"
+      }
     },
     {
       "clip": "seollal_yut1_loop",
@@ -9985,7 +10028,7 @@
       "part": "loop",
       "rate": 1,
       "sourceVideo": "sprites/anim_seollal_yut1_loop.webm",
-      "sourceVideoSha256": "d8880b94d962a78a1b2f15da31aae74ac336914957d332c227e5da65f8816b5d",
+      "sourceVideoSha256": "f0451183a5cab3c58508ebd1fb7f18f793b4b8c208b8e338bafd875f27659bff",
       "sourceFrames": [
         "sprites/seollal_yut1_loop/seollal_yut1_loop_00.png",
         "sprites/seollal_yut1_loop/seollal_yut1_loop_01.png",
@@ -10059,32 +10102,32 @@
         "ad041795dd715bbd912cb74682cb0c4fad813fd5952eddf743bd1e350e4fb6ab"
       ],
       "candidate": "sprites/hd720/videos/anim_seollal_yut1_loop.webm",
-      "videoSha256": "850f8246790125222ea5cca5d31c53d5ee48dfaa9a79be95cf0d29e58cee9d37",
+      "videoSha256": "06477f1bfae2bbc9df723b1186c232f10fba039900e1e60d10b424e18a9a55c3",
       "frameCount": 16,
-      "duration": 5.166,
-      "decodedTicks": 62,
+      "duration": 6.25,
+      "decodedTicks": 75,
       "fps": 12,
       "holds": {
-        "0": 4,
-        "1": 2,
-        "2": 2,
+        "0": 6,
+        "1": 3,
+        "2": 3,
         "3": 5,
-        "4": 2,
+        "4": 3,
         "5": 7,
-        "6": 2,
-        "7": 2,
+        "6": 3,
+        "7": 3,
         "8": 9,
-        "9": 2,
+        "9": 3,
         "10": 9,
-        "11": 2,
-        "12": 2,
+        "11": 3,
+        "12": 3,
         "13": 6,
-        "14": 2,
-        "15": 4
+        "14": 3,
+        "15": 6
       },
       "repeats": [],
-      "sourceBytes": 502042,
-      "candidateBytes": 818573,
+      "sourceBytes": 506006,
+      "candidateBytes": 824395,
       "technicalReview": {
         "dimensions": true,
         "alpha": true,
@@ -10096,12 +10139,12 @@
         "distinctPoses": true
       },
       "status": "reviewed",
+      "reviewRecord": "anims/calm_motion_review.md",
       "review": {
         "technical": true,
         "staticVisual": true,
         "runtimePlayback": true
-      },
-      "reviewRecord": "anims/calm_motion_review.md"
+      }
     },
     {
       "clip": "seollal_soup1_loop",
@@ -10109,7 +10152,7 @@
       "part": "loop",
       "rate": 1,
       "sourceVideo": "sprites/anim_seollal_soup1_loop.webm",
-      "sourceVideoSha256": "ba8eaa177312d81a484fb9923b3210354b650831f3965ef4365b451acfe64a80",
+      "sourceVideoSha256": "32b3ebe18b02919ceb06508fdfdd503585b9a0d9101d08335ab1ca27566194d0",
       "sourceFrames": [
         "sprites/seollal_soup1_loop/seollal_soup1_loop_00.png",
         "sprites/seollal_soup1_loop/seollal_soup1_loop_01.png",
@@ -10183,32 +10226,32 @@
         "ad041795dd715bbd912cb74682cb0c4fad813fd5952eddf743bd1e350e4fb6ab"
       ],
       "candidate": "sprites/hd720/videos/anim_seollal_soup1_loop.webm",
-      "videoSha256": "82c68efb5e611d7be5e1cba4bef412632abee8cfff0a6310a2716e00de276e7c",
+      "videoSha256": "3d13712295d6e921a3a05955776dced1c85aa61647bcd24da89dd4d1ac3e982c",
       "frameCount": 16,
-      "duration": 5.0,
-      "decodedTicks": 60,
+      "duration": 6.166666666666667,
+      "decodedTicks": 74,
       "fps": 12,
       "holds": {
-        "0": 4,
-        "1": 2,
-        "2": 2,
+        "0": 6,
+        "1": 3,
+        "2": 3,
         "3": 6,
-        "4": 2,
-        "5": 2,
+        "4": 3,
+        "5": 3,
         "6": 8,
-        "7": 2,
-        "8": 2,
+        "7": 3,
+        "8": 3,
         "9": 10,
-        "10": 2,
-        "11": 2,
+        "10": 3,
+        "11": 3,
         "12": 8,
-        "13": 2,
-        "14": 2,
-        "15": 4
+        "13": 3,
+        "14": 3,
+        "15": 6
       },
       "repeats": [],
-      "sourceBytes": 431032,
-      "candidateBytes": 704239,
+      "sourceBytes": 459013,
+      "candidateBytes": 751332,
       "technicalReview": {
         "dimensions": true,
         "alpha": true,
@@ -10220,12 +10263,12 @@
         "distinctPoses": true
       },
       "status": "reviewed",
+      "reviewRecord": "anims/calm_motion_review.md",
       "review": {
         "technical": true,
         "staticVisual": true,
         "runtimePlayback": true
-      },
-      "reviewRecord": "anims/calm_motion_review.md"
+      }
     },
     {
       "clip": "seollal_kite1_loop",
@@ -10233,7 +10276,7 @@
       "part": "loop",
       "rate": 1,
       "sourceVideo": "sprites/anim_seollal_kite1_loop.webm",
-      "sourceVideoSha256": "a8b038a025f76edb6d3490d5a2105e4157bb7dcd84224e1d72282c8ab627f756",
+      "sourceVideoSha256": "83ddec6dab6efab85b634c75695a5ab2e2628a0b36a4faa71fa9f07e56a8ea58",
       "sourceFrames": [
         "sprites/seollal_kite1_loop/seollal_kite1_loop_00.png",
         "sprites/seollal_kite1_loop/seollal_kite1_loop_01.png",
@@ -10307,32 +10350,32 @@
         "ad041795dd715bbd912cb74682cb0c4fad813fd5952eddf743bd1e350e4fb6ab"
       ],
       "candidate": "sprites/hd720/videos/anim_seollal_kite1_loop.webm",
-      "videoSha256": "a034784b6d16c82bacbbff4f810e9a781d0e7b44f46d0ae9532749afe4fdc48a",
+      "videoSha256": "893ed669d48f1155103eb6b59e2f2b5e295ef7f071c3e3f2818ecf12ce5647a7",
       "frameCount": 16,
-      "duration": 5.166,
-      "decodedTicks": 62,
+      "duration": 6.25,
+      "decodedTicks": 75,
       "fps": 12,
       "holds": {
-        "0": 4,
-        "1": 2,
-        "2": 2,
+        "0": 6,
+        "1": 3,
+        "2": 3,
         "3": 6,
-        "4": 2,
+        "4": 3,
         "5": 9,
-        "6": 2,
-        "7": 2,
+        "6": 3,
+        "7": 3,
         "8": 7,
-        "9": 2,
+        "9": 3,
         "10": 8,
-        "11": 2,
+        "11": 3,
         "12": 6,
-        "13": 2,
-        "14": 2,
-        "15": 4
+        "13": 3,
+        "14": 3,
+        "15": 6
       },
       "repeats": [],
-      "sourceBytes": 461477,
-      "candidateBytes": 755096,
+      "sourceBytes": 498627,
+      "candidateBytes": 820417,
       "technicalReview": {
         "dimensions": true,
         "alpha": true,
@@ -10344,12 +10387,12 @@
         "distinctPoses": true
       },
       "status": "reviewed",
+      "reviewRecord": "anims/calm_motion_review.md",
       "review": {
         "technical": true,
         "staticVisual": true,
         "runtimePlayback": true
-      },
-      "reviewRecord": "anims/calm_motion_review.md"
+      }
     },
     {
       "clip": "seollal_jegi1_loop",
@@ -10357,7 +10400,7 @@
       "part": "loop",
       "rate": 1,
       "sourceVideo": "sprites/anim_seollal_jegi1_loop.webm",
-      "sourceVideoSha256": "86c40c859d4285a0523347ad921197dc1e845e7d21329151284d245d89456b9b",
+      "sourceVideoSha256": "12410469dd2c643067a9289dd1419691e8bb38d33dfc508c6d9dabfd92e7f511",
       "sourceFrames": [
         "sprites/seollal_jegi1_loop/seollal_jegi1_loop_00.png",
         "sprites/seollal_jegi1_loop/seollal_jegi1_loop_01.png",
@@ -10431,32 +10474,32 @@
         "ad041795dd715bbd912cb74682cb0c4fad813fd5952eddf743bd1e350e4fb6ab"
       ],
       "candidate": "sprites/hd720/videos/anim_seollal_jegi1_loop.webm",
-      "videoSha256": "5e7b28da00110786b0304644ca24c28a4b49b5004c126a5f4c600bdbde4d4525",
+      "videoSha256": "76e5836d058a8dd41603accc06508f0b89aba8ed5b8c7cb34a9b2e2e5b20a7db",
       "frameCount": 16,
-      "duration": 4.666,
-      "decodedTicks": 56,
+      "duration": 5.75,
+      "decodedTicks": 69,
       "fps": 12,
       "holds": {
-        "0": 4,
-        "1": 2,
+        "0": 6,
+        "1": 3,
         "2": 6,
-        "3": 2,
-        "4": 2,
+        "3": 3,
+        "4": 3,
         "5": 5,
-        "6": 2,
-        "7": 2,
+        "6": 3,
+        "7": 3,
         "8": 5,
-        "9": 2,
-        "10": 2,
+        "9": 3,
+        "10": 3,
         "11": 5,
-        "12": 2,
+        "12": 3,
         "13": 9,
-        "14": 2,
-        "15": 4
+        "14": 3,
+        "15": 6
       },
       "repeats": [],
-      "sourceBytes": 518814,
-      "candidateBytes": 846332,
+      "sourceBytes": 547244,
+      "candidateBytes": 890483,
       "technicalReview": {
         "dimensions": true,
         "alpha": true,
@@ -10468,12 +10511,12 @@
         "distinctPoses": true
       },
       "status": "reviewed",
+      "reviewRecord": "anims/calm_motion_review.md",
       "review": {
         "technical": true,
         "staticVisual": true,
         "runtimePlayback": true
-      },
-      "reviewRecord": "anims/calm_motion_review.md"
+      }
     },
     {
       "clip": "christmas_breathe1_loop",
@@ -10975,7 +11018,7 @@
       "part": "loop",
       "rate": 1,
       "sourceVideo": "sprites/anim_christmas_gift1_loop.webm",
-      "sourceVideoSha256": "92b14d959d7a4dbb5273344d4ea3779ce55a49804180e0970f11fbc1b362ec2f",
+      "sourceVideoSha256": "5d905bdc8994342a08b97ac81604632b6c61805ba0b9c43011034f26929a33a0",
       "sourceFrames": [
         "sprites/christmas_gift1_loop/christmas_gift1_loop_00.png",
         "sprites/christmas_gift1_loop/christmas_gift1_loop_01.png",
@@ -11049,32 +11092,32 @@
         "b4accc101d1611b5ae81670d02f5e58a90a578ee4c0898841a7beded206bfe03"
       ],
       "candidate": "sprites/hd720/videos/anim_christmas_gift1_loop.webm",
-      "videoSha256": "4358943a395889e7fd4b09ec068025ba650c1ba635c1594d5afd0f1c9ae1f448",
+      "videoSha256": "647db899fe6144b77c1f0abb404c127d37a70061728099b0db6036687711fb6c",
       "frameCount": 16,
-      "duration": 5.25,
-      "decodedTicks": 63,
+      "duration": 6.333333333333333,
+      "decodedTicks": 76,
       "fps": 12,
       "holds": {
-        "0": 4,
-        "1": 2,
-        "2": 2,
+        "0": 6,
+        "1": 3,
+        "2": 3,
         "3": 6,
-        "4": 2,
+        "4": 3,
         "5": 6,
-        "6": 2,
-        "7": 2,
+        "6": 3,
+        "7": 3,
         "8": 9,
-        "9": 2,
+        "9": 3,
         "10": 10,
-        "11": 2,
-        "12": 2,
+        "11": 3,
+        "12": 3,
         "13": 6,
-        "14": 2,
-        "15": 4
+        "14": 3,
+        "15": 6
       },
       "repeats": [],
-      "sourceBytes": 424359,
-      "candidateBytes": 697994,
+      "sourceBytes": 449031,
+      "candidateBytes": 738594,
       "technicalReview": {
         "dimensions": true,
         "alpha": true,
@@ -11086,12 +11129,12 @@
         "distinctPoses": true
       },
       "status": "reviewed",
+      "reviewRecord": "anims/calm_motion_review.md",
       "review": {
         "technical": true,
         "staticVisual": true,
         "runtimePlayback": true
-      },
-      "reviewRecord": "anims/calm_motion_review.md"
+      }
     },
     {
       "clip": "christmas_fishbread1_loop",
@@ -11099,7 +11142,7 @@
       "part": "loop",
       "rate": 1,
       "sourceVideo": "sprites/anim_christmas_fishbread1_loop.webm",
-      "sourceVideoSha256": "1b3db2d70e9b89a2e95bba41f6648849d5663ebbe2695cc7589b7a8561189a32",
+      "sourceVideoSha256": "67d2349615c74c46eeedbaab57eb72e579c26ccc10693b3c3706a804b218d354",
       "sourceFrames": [
         "sprites/christmas_fishbread1_loop/christmas_fishbread1_loop_00.png",
         "sprites/christmas_fishbread1_loop/christmas_fishbread1_loop_01.png",
@@ -11173,32 +11216,32 @@
         "b4accc101d1611b5ae81670d02f5e58a90a578ee4c0898841a7beded206bfe03"
       ],
       "candidate": "sprites/hd720/videos/anim_christmas_fishbread1_loop.webm",
-      "videoSha256": "6cfc3b1c0b07e18fe6cbf97a8e663efc05e90196a4831e89a2276c9902ad15a9",
+      "videoSha256": "486642bb9ad35092c7b5e940fea9ac46a98a631449d50fe58ec1ba7c400ef496",
       "frameCount": 16,
-      "duration": 5.083,
-      "decodedTicks": 61,
+      "duration": 6.166666666666667,
+      "decodedTicks": 74,
       "fps": 12,
       "holds": {
-        "0": 4,
-        "1": 2,
-        "2": 2,
+        "0": 6,
+        "1": 3,
+        "2": 3,
         "3": 6,
-        "4": 2,
+        "4": 3,
         "5": 6,
-        "6": 2,
+        "6": 3,
         "7": 7,
-        "8": 2,
+        "8": 3,
         "9": 7,
-        "10": 2,
-        "11": 2,
+        "10": 3,
+        "11": 3,
         "12": 9,
-        "13": 2,
-        "14": 2,
-        "15": 4
+        "13": 3,
+        "14": 3,
+        "15": 6
       },
       "repeats": [],
-      "sourceBytes": 400041,
-      "candidateBytes": 663485,
+      "sourceBytes": 433314,
+      "candidateBytes": 716318,
       "technicalReview": {
         "dimensions": true,
         "alpha": true,
@@ -11210,12 +11253,12 @@
         "distinctPoses": true
       },
       "status": "reviewed",
+      "reviewRecord": "anims/calm_motion_review.md",
       "review": {
         "technical": true,
         "staticVisual": true,
         "runtimePlayback": true
-      },
-      "reviewRecord": "anims/calm_motion_review.md"
+      }
     },
     {
       "clip": "christmas_snowman1_loop",
@@ -11223,7 +11266,7 @@
       "part": "loop",
       "rate": 1,
       "sourceVideo": "sprites/anim_christmas_snowman1_loop.webm",
-      "sourceVideoSha256": "902933c8a87742034f6a01c5665d4c53c82c9120eb8d27b6d2dd9f2849f5d8ab",
+      "sourceVideoSha256": "902d0816f3058528ab1cf7b26690d903819a38a9e6b99ba53099a7817edd186b",
       "sourceFrames": [
         "sprites/christmas_snowman1_loop/christmas_snowman1_loop_00.png",
         "sprites/christmas_snowman1_loop/christmas_snowman1_loop_01.png",
@@ -11297,32 +11340,32 @@
         "b4accc101d1611b5ae81670d02f5e58a90a578ee4c0898841a7beded206bfe03"
       ],
       "candidate": "sprites/hd720/videos/anim_christmas_snowman1_loop.webm",
-      "videoSha256": "6e96cbe92f9483e48d7d37b6f41cdaa179cdc8b4a9f2f1b2d84a96320c425125",
+      "videoSha256": "d95387ae089730bd9c2f46ff19bdfcb0848e7b333a53dd9462a04549c85cd4bd",
       "frameCount": 16,
-      "duration": 5.25,
-      "decodedTicks": 63,
+      "duration": 6.333333333333333,
+      "decodedTicks": 76,
       "fps": 12,
       "holds": {
-        "0": 4,
-        "1": 2,
-        "2": 2,
+        "0": 6,
+        "1": 3,
+        "2": 3,
         "3": 6,
-        "4": 2,
+        "4": 3,
         "5": 6,
-        "6": 2,
-        "7": 2,
+        "6": 3,
+        "7": 3,
         "8": 6,
-        "9": 2,
+        "9": 3,
         "10": 12,
-        "11": 2,
+        "11": 3,
         "12": 7,
-        "13": 2,
-        "14": 2,
-        "15": 4
+        "13": 3,
+        "14": 3,
+        "15": 6
       },
       "repeats": [],
-      "sourceBytes": 399695,
-      "candidateBytes": 656984,
+      "sourceBytes": 425437,
+      "candidateBytes": 703939,
       "technicalReview": {
         "dimensions": true,
         "alpha": true,
@@ -11334,12 +11377,12 @@
         "distinctPoses": true
       },
       "status": "reviewed",
+      "reviewRecord": "anims/calm_motion_review.md",
       "review": {
         "technical": true,
         "staticVisual": true,
         "runtimePlayback": true
-      },
-      "reviewRecord": "anims/calm_motion_review.md"
+      }
     },
     {
       "clip": "christmas_carol1_loop",
@@ -11347,7 +11390,7 @@
       "part": "loop",
       "rate": 1,
       "sourceVideo": "sprites/anim_christmas_carol1_loop.webm",
-      "sourceVideoSha256": "5602081ebeea8ab62b0b7a2e9c2b22f7b5f097a4d8c28fdca5d1b86f8cfd2f5f",
+      "sourceVideoSha256": "331ad80e710fa349e058c2d251e887fefdb375c9b1ed030b0442d84062c10324",
       "sourceFrames": [
         "sprites/christmas_carol1_loop/christmas_carol1_loop_00.png",
         "sprites/christmas_carol1_loop/christmas_carol1_loop_01.png",
@@ -11421,32 +11464,32 @@
         "b4accc101d1611b5ae81670d02f5e58a90a578ee4c0898841a7beded206bfe03"
       ],
       "candidate": "sprites/hd720/videos/anim_christmas_carol1_loop.webm",
-      "videoSha256": "3ce2f6515dc070b61789191ead321552ed200352f34fa6e3f804d02f45ff44b1",
+      "videoSha256": "5885324bb43a7576763552c0a507939e7dd9092a137d511ec0add0c0d33d04a4",
       "frameCount": 16,
-      "duration": 4.583,
-      "decodedTicks": 55,
+      "duration": 5.666666666666667,
+      "decodedTicks": 68,
       "fps": 12,
       "holds": {
-        "0": 4,
-        "1": 2,
+        "0": 6,
+        "1": 3,
         "2": 5,
-        "3": 2,
-        "4": 2,
+        "3": 3,
+        "4": 3,
         "5": 4,
-        "6": 2,
+        "6": 3,
         "7": 7,
-        "8": 2,
-        "9": 2,
+        "8": 3,
+        "9": 3,
         "10": 4,
-        "11": 2,
-        "12": 2,
+        "11": 3,
+        "12": 3,
         "13": 9,
-        "14": 2,
-        "15": 4
+        "14": 3,
+        "15": 6
       },
       "repeats": [],
-      "sourceBytes": 418125,
-      "candidateBytes": 693380,
+      "sourceBytes": 428072,
+      "candidateBytes": 706463,
       "technicalReview": {
         "dimensions": true,
         "alpha": true,
@@ -11458,12 +11501,12 @@
         "distinctPoses": true
       },
       "status": "reviewed",
+      "reviewRecord": "anims/calm_motion_review.md",
       "review": {
         "technical": true,
         "staticVisual": true,
         "runtimePlayback": true
-      },
-      "reviewRecord": "anims/calm_motion_review.md"
+      }
     },
     {
       "clip": "christmas_snowglobe1_loop",
@@ -11471,7 +11514,7 @@
       "part": "loop",
       "rate": 1,
       "sourceVideo": "sprites/anim_christmas_snowglobe1_loop.webm",
-      "sourceVideoSha256": "836bab32141cfbb9f6251f7e0d27c73e1d2eb7625f3c88a5a432511edf46b219",
+      "sourceVideoSha256": "936236a9fa55f2c1aaae4d5c203b57a666bde5e5c372bcdfbbe9d8a0858a874e",
       "sourceFrames": [
         "sprites/christmas_snowglobe1_loop/christmas_snowglobe1_loop_00.png",
         "sprites/christmas_snowglobe1_loop/christmas_snowglobe1_loop_01.png",
@@ -11545,32 +11588,32 @@
         "b4accc101d1611b5ae81670d02f5e58a90a578ee4c0898841a7beded206bfe03"
       ],
       "candidate": "sprites/hd720/videos/anim_christmas_snowglobe1_loop.webm",
-      "videoSha256": "bcfdbc5bd18c07e7863de6afa335a320f3c0b35b6eb2ae9bfd002aa3daf72a06",
+      "videoSha256": "12f3c5f214b02fe803e27e7ee889ce6cf624d70b8efb5bef06c3c236bfcfac6b",
       "frameCount": 16,
-      "duration": 5.5,
-      "decodedTicks": 66,
+      "duration": 6.583333333333333,
+      "decodedTicks": 79,
       "fps": 12,
       "holds": {
-        "0": 4,
-        "1": 2,
-        "2": 2,
+        "0": 6,
+        "1": 3,
+        "2": 3,
         "3": 6,
-        "4": 2,
-        "5": 2,
+        "4": 3,
+        "5": 3,
         "6": 10,
-        "7": 2,
+        "7": 3,
         "8": 8,
-        "9": 2,
+        "9": 3,
         "10": 9,
-        "11": 2,
+        "11": 3,
         "12": 7,
-        "13": 2,
-        "14": 2,
-        "15": 4
+        "13": 3,
+        "14": 3,
+        "15": 6
       },
       "repeats": [],
-      "sourceBytes": 433407,
-      "candidateBytes": 720426,
+      "sourceBytes": 429748,
+      "candidateBytes": 708578,
       "technicalReview": {
         "dimensions": true,
         "alpha": true,
@@ -11582,12 +11625,12 @@
         "distinctPoses": true
       },
       "status": "reviewed",
+      "reviewRecord": "anims/calm_motion_review.md",
       "review": {
         "technical": true,
         "staticVisual": true,
         "runtimePlayback": true
-      },
-      "reviewRecord": "anims/calm_motion_review.md"
+      }
     },
     {
       "clip": "christmas_snowcatch1_loop",
@@ -11595,7 +11638,7 @@
       "part": "loop",
       "rate": 1,
       "sourceVideo": "sprites/anim_christmas_snowcatch1_loop.webm",
-      "sourceVideoSha256": "5985630bb62af7699c8feb9d1d36f287e1a3e66077397c4d2591039caa799fc6",
+      "sourceVideoSha256": "cfafa404c49fd145a31e46595cfa115e694beb3bc07a8848044f6931d52942ae",
       "sourceFrames": [
         "sprites/christmas_snowcatch1_loop/christmas_snowcatch1_loop_00.png",
         "sprites/christmas_snowcatch1_loop/christmas_snowcatch1_loop_01.png",
@@ -11669,32 +11712,32 @@
         "b4accc101d1611b5ae81670d02f5e58a90a578ee4c0898841a7beded206bfe03"
       ],
       "candidate": "sprites/hd720/videos/anim_christmas_snowcatch1_loop.webm",
-      "videoSha256": "a62aae536cef7aa60d1e563c4c119194f3733d173837e221a47fa90574cc383f",
+      "videoSha256": "dc698c7a188034e89d275042c0c398c940e23a3a139b61104842553628aadb4e",
       "frameCount": 16,
-      "duration": 5.166,
-      "decodedTicks": 62,
+      "duration": 6.25,
+      "decodedTicks": 75,
       "fps": 12,
       "holds": {
-        "0": 4,
-        "1": 2,
-        "2": 2,
+        "0": 6,
+        "1": 3,
+        "2": 3,
         "3": 6,
-        "4": 2,
+        "4": 3,
         "5": 7,
-        "6": 2,
+        "6": 3,
         "7": 7,
-        "8": 2,
-        "9": 2,
-        "10": 2,
+        "8": 3,
+        "9": 3,
+        "10": 3,
         "11": 8,
-        "12": 2,
+        "12": 3,
         "13": 8,
-        "14": 2,
-        "15": 4
+        "14": 3,
+        "15": 6
       },
       "repeats": [],
-      "sourceBytes": 439039,
-      "candidateBytes": 721644,
+      "sourceBytes": 457406,
+      "candidateBytes": 753044,
       "technicalReview": {
         "dimensions": true,
         "alpha": true,
@@ -11706,12 +11749,12 @@
         "distinctPoses": true
       },
       "status": "reviewed",
+      "reviewRecord": "anims/calm_motion_review.md",
       "review": {
         "technical": true,
         "staticVisual": true,
         "runtimePlayback": true
-      },
-      "reviewRecord": "anims/calm_motion_review.md"
+      }
     },
     {
       "clip": "childrensday_breathe1_loop",
@@ -12213,7 +12256,7 @@
       "part": "loop",
       "rate": 1,
       "sourceVideo": "sprites/anim_childrensday_bubbles1_loop.webm",
-      "sourceVideoSha256": "5fd100bac8ac5d90796b88450e4c7928725bf6b5adb6b9707ee5a42245d4535c",
+      "sourceVideoSha256": "420e90e05598ee255b83646d3e3e3025c75e05252a0c134d8dde0c9516aba812",
       "sourceFrames": [
         "sprites/childrensday_bubbles1_loop/childrensday_bubbles1_loop_00.png",
         "sprites/childrensday_bubbles1_loop/childrensday_bubbles1_loop_01.png",
@@ -12287,32 +12330,32 @@
         "abf2e90af0b1b6e2244bfd83397094aaf5c5436eadc5db20bc9037ee43e459d0"
       ],
       "candidate": "sprites/hd720/videos/anim_childrensday_bubbles1_loop.webm",
-      "videoSha256": "59bb82e162959f3b73735c2878fad3518685c64192da156fe9c40b8b740b2913",
+      "videoSha256": "18ef6064e329b4dd30fa6bb1479745af78322210f95fcd7bf36dee6d8ec3fff1",
       "frameCount": 16,
-      "duration": 5.333,
-      "decodedTicks": 64,
+      "duration": 6.416666666666667,
+      "decodedTicks": 77,
       "fps": 12,
       "holds": {
-        "0": 4,
-        "1": 2,
-        "2": 2,
+        "0": 6,
+        "1": 3,
+        "2": 3,
         "3": 6,
-        "4": 2,
-        "5": 2,
+        "4": 3,
+        "5": 3,
         "6": 8,
-        "7": 2,
+        "7": 3,
         "8": 9,
-        "9": 2,
+        "9": 3,
         "10": 7,
-        "11": 2,
+        "11": 3,
         "12": 8,
-        "13": 2,
-        "14": 2,
-        "15": 4
+        "13": 3,
+        "14": 3,
+        "15": 6
       },
       "repeats": [],
-      "sourceBytes": 446195,
-      "candidateBytes": 722799,
+      "sourceBytes": 484841,
+      "candidateBytes": 783372,
       "technicalReview": {
         "dimensions": true,
         "alpha": true,
@@ -12324,12 +12367,12 @@
         "distinctPoses": true
       },
       "status": "reviewed",
+      "reviewRecord": "anims/calm_motion_review.md",
       "review": {
         "technical": true,
         "staticVisual": true,
         "runtimePlayback": true
-      },
-      "reviewRecord": "anims/calm_motion_review.md"
+      }
     },
     {
       "clip": "childrensday_balloon1_loop",
@@ -12337,7 +12380,7 @@
       "part": "loop",
       "rate": 1,
       "sourceVideo": "sprites/anim_childrensday_balloon1_loop.webm",
-      "sourceVideoSha256": "955d09d22864620d68fa105626a098caf290aab5ad697d7c7181d647dc4c545a",
+      "sourceVideoSha256": "894194dd4293aa4e89cdd1e7d1988eac2e1cc8f2c93845611fe565f33dc49794",
       "sourceFrames": [
         "sprites/childrensday_balloon1_loop/childrensday_balloon1_loop_00.png",
         "sprites/childrensday_balloon1_loop/childrensday_balloon1_loop_01.png",
@@ -12411,32 +12454,32 @@
         "abf2e90af0b1b6e2244bfd83397094aaf5c5436eadc5db20bc9037ee43e459d0"
       ],
       "candidate": "sprites/hd720/videos/anim_childrensday_balloon1_loop.webm",
-      "videoSha256": "3ef04cf6bf0b465b4a20dd1feec77f753f3cd3f34fec877319f31152a99e4d78",
+      "videoSha256": "7db18dd6f476629627cc80a73ba9d096af832db00a18eaff968f8e2cf7c2c881",
       "frameCount": 16,
-      "duration": 5.25,
-      "decodedTicks": 63,
+      "duration": 6.333333333333333,
+      "decodedTicks": 76,
       "fps": 12,
       "holds": {
-        "0": 4,
-        "1": 2,
-        "2": 2,
+        "0": 6,
+        "1": 3,
+        "2": 3,
         "3": 6,
-        "4": 2,
+        "4": 3,
         "5": 8,
-        "6": 2,
+        "6": 3,
         "7": 6,
-        "8": 2,
-        "9": 2,
+        "8": 3,
+        "9": 3,
         "10": 9,
-        "11": 2,
-        "12": 2,
-        "13": 2,
+        "11": 3,
+        "12": 3,
+        "13": 3,
         "14": 8,
-        "15": 4
+        "15": 6
       },
       "repeats": [],
-      "sourceBytes": 475052,
-      "candidateBytes": 771934,
+      "sourceBytes": 496345,
+      "candidateBytes": 803794,
       "technicalReview": {
         "dimensions": true,
         "alpha": true,
@@ -12448,12 +12491,12 @@
         "distinctPoses": true
       },
       "status": "reviewed",
+      "reviewRecord": "anims/calm_motion_review.md",
       "review": {
         "technical": true,
         "staticVisual": true,
         "runtimePlayback": true
-      },
-      "reviewRecord": "anims/calm_motion_review.md"
+      }
     },
     {
       "clip": "childrensday_robot1_loop",
@@ -12461,7 +12504,7 @@
       "part": "loop",
       "rate": 1,
       "sourceVideo": "sprites/anim_childrensday_robot1_loop.webm",
-      "sourceVideoSha256": "f63e934963c4e7ec94d4e422ab28e59341d63ba2c327aa3464befd3c60ab9751",
+      "sourceVideoSha256": "0b462f0f3a44b17c118eab8307e3cbb6ca15a114d9baea1a4448d4d1780d4135",
       "sourceFrames": [
         "sprites/childrensday_robot1_loop/childrensday_robot1_loop_00.png",
         "sprites/childrensday_robot1_loop/childrensday_robot1_loop_01.png",
@@ -12535,32 +12578,32 @@
         "abf2e90af0b1b6e2244bfd83397094aaf5c5436eadc5db20bc9037ee43e459d0"
       ],
       "candidate": "sprites/hd720/videos/anim_childrensday_robot1_loop.webm",
-      "videoSha256": "9f0c596d35e97885035747e33448bb22b6398e1db0035d5ccd3b6359a3d2f976",
+      "videoSha256": "5e186e9bf452c4035e1fc8086214742c283f8dfb0614c69e92a080a36d5c9d73",
       "frameCount": 16,
-      "duration": 5.333,
-      "decodedTicks": 64,
+      "duration": 6.416666666666667,
+      "decodedTicks": 77,
       "fps": 12,
       "holds": {
-        "0": 4,
-        "1": 2,
-        "2": 2,
+        "0": 6,
+        "1": 3,
+        "2": 3,
         "3": 6,
-        "4": 2,
+        "4": 3,
         "5": 8,
-        "6": 2,
-        "7": 2,
+        "6": 3,
+        "7": 3,
         "8": 8,
-        "9": 2,
+        "9": 3,
         "10": 7,
-        "11": 2,
-        "12": 2,
+        "11": 3,
+        "12": 3,
         "13": 9,
-        "14": 2,
-        "15": 4
+        "14": 3,
+        "15": 6
       },
       "repeats": [],
-      "sourceBytes": 454462,
-      "candidateBytes": 739935,
+      "sourceBytes": 497260,
+      "candidateBytes": 803229,
       "technicalReview": {
         "dimensions": true,
         "alpha": true,
@@ -12572,12 +12615,12 @@
         "distinctPoses": true
       },
       "status": "reviewed",
+      "reviewRecord": "anims/calm_motion_review.md",
       "review": {
         "technical": true,
         "staticVisual": true,
         "runtimePlayback": true
-      },
-      "reviewRecord": "anims/calm_motion_review.md"
+      }
     },
     {
       "clip": "childrensday_plane1_loop",
@@ -12585,7 +12628,7 @@
       "part": "loop",
       "rate": 1,
       "sourceVideo": "sprites/anim_childrensday_plane1_loop.webm",
-      "sourceVideoSha256": "cf801e26174ea6a4e459fcf82683a41e11351d48c55acf4be0fa10a2bd3dc9bb",
+      "sourceVideoSha256": "7568423aef3e31c138d6b0eefdfc95f44e6d0b03e1acf903db1c28bef34814ec",
       "sourceFrames": [
         "sprites/childrensday_plane1_loop/childrensday_plane1_loop_00.png",
         "sprites/childrensday_plane1_loop/childrensday_plane1_loop_01.png",
@@ -12659,32 +12702,32 @@
         "abf2e90af0b1b6e2244bfd83397094aaf5c5436eadc5db20bc9037ee43e459d0"
       ],
       "candidate": "sprites/hd720/videos/anim_childrensday_plane1_loop.webm",
-      "videoSha256": "beb2499ba38a7fbc70eb77bd9f45e3029ca3316d88c9f2059252e7050b98b098",
+      "videoSha256": "65d59aa98c500eb28b90f1007b181a6eab7686f071d25a97f9a0d44aaf81d5f2",
       "frameCount": 16,
-      "duration": 5.333,
-      "decodedTicks": 64,
+      "duration": 6.416666666666667,
+      "decodedTicks": 77,
       "fps": 12,
       "holds": {
-        "0": 4,
-        "1": 2,
-        "2": 2,
-        "3": 2,
+        "0": 6,
+        "1": 3,
+        "2": 3,
+        "3": 3,
         "4": 6,
-        "5": 2,
+        "5": 3,
         "6": 9,
-        "7": 2,
+        "7": 3,
         "8": 5,
         "9": 10,
-        "10": 2,
-        "11": 2,
-        "12": 2,
+        "10": 3,
+        "11": 3,
+        "12": 3,
         "13": 8,
-        "14": 2,
-        "15": 4
+        "14": 3,
+        "15": 6
       },
       "repeats": [],
-      "sourceBytes": 447997,
-      "candidateBytes": 727326,
+      "sourceBytes": 440731,
+      "candidateBytes": 714361,
       "technicalReview": {
         "dimensions": true,
         "alpha": true,
@@ -12696,12 +12739,12 @@
         "distinctPoses": true
       },
       "status": "reviewed",
+      "reviewRecord": "anims/calm_motion_review.md",
       "review": {
         "technical": true,
         "staticVisual": true,
         "runtimePlayback": true
-      },
-      "reviewRecord": "anims/calm_motion_review.md"
+      }
     },
     {
       "clip": "childrensday_candyfloss1_loop",
@@ -12709,7 +12752,7 @@
       "part": "loop",
       "rate": 1,
       "sourceVideo": "sprites/anim_childrensday_candyfloss1_loop.webm",
-      "sourceVideoSha256": "1a78b4a080e4e02cb8ed62bbc6b1090b8caa015bf608b4bdfc4af8ad73737d7a",
+      "sourceVideoSha256": "d102d11cc2ded67ea090b01385726a99ed7aa132f9838b6f958a719c125dfcf8",
       "sourceFrames": [
         "sprites/childrensday_candyfloss1_loop/childrensday_candyfloss1_loop_00.png",
         "sprites/childrensday_candyfloss1_loop/childrensday_candyfloss1_loop_01.png",
@@ -12783,32 +12826,32 @@
         "abf2e90af0b1b6e2244bfd83397094aaf5c5436eadc5db20bc9037ee43e459d0"
       ],
       "candidate": "sprites/hd720/videos/anim_childrensday_candyfloss1_loop.webm",
-      "videoSha256": "0d2ab25ef3120c8a4e016b726bd096e52dbbee90f33f78f4eb3f22d04c7b3e06",
+      "videoSha256": "40d45726128351209d19c5b5ee5ff3e0d343be5d2a8652db10b6dc82290260c6",
       "frameCount": 16,
-      "duration": 5.25,
-      "decodedTicks": 63,
+      "duration": 6.333333333333333,
+      "decodedTicks": 76,
       "fps": 12,
       "holds": {
-        "0": 4,
-        "1": 2,
+        "0": 6,
+        "1": 3,
         "2": 6,
-        "3": 2,
-        "4": 2,
+        "3": 3,
+        "4": 3,
         "5": 7,
         "6": 9,
-        "7": 2,
-        "8": 2,
+        "7": 3,
+        "8": 3,
         "9": 7,
-        "10": 2,
-        "11": 2,
+        "10": 3,
+        "11": 3,
         "12": 8,
-        "13": 2,
-        "14": 2,
-        "15": 4
+        "13": 3,
+        "14": 3,
+        "15": 6
       },
       "repeats": [],
-      "sourceBytes": 423756,
-      "candidateBytes": 686880,
+      "sourceBytes": 452730,
+      "candidateBytes": 734869,
       "technicalReview": {
         "dimensions": true,
         "alpha": true,
@@ -12820,12 +12863,12 @@
         "distinctPoses": true
       },
       "status": "reviewed",
+      "reviewRecord": "anims/calm_motion_review.md",
       "review": {
         "technical": true,
         "staticVisual": true,
         "runtimePlayback": true
-      },
-      "reviewRecord": "anims/calm_motion_review.md"
+      }
     },
     {
       "clip": "childrensday_pinwheel1_loop",
@@ -12833,7 +12876,7 @@
       "part": "loop",
       "rate": 1,
       "sourceVideo": "sprites/anim_childrensday_pinwheel1_loop.webm",
-      "sourceVideoSha256": "8eaf047d845eb4d98a7bb0787194fe4da96889c7e62220ed129643c58b7aba8a",
+      "sourceVideoSha256": "ed0033345351d00428f95d603b10a1b060237e52434210fe4ff3ea9dc8d8c2b4",
       "sourceFrames": [
         "sprites/childrensday_pinwheel1_loop/childrensday_pinwheel1_loop_00.png",
         "sprites/childrensday_pinwheel1_loop/childrensday_pinwheel1_loop_01.png",
@@ -12907,32 +12950,32 @@
         "abf2e90af0b1b6e2244bfd83397094aaf5c5436eadc5db20bc9037ee43e459d0"
       ],
       "candidate": "sprites/hd720/videos/anim_childrensday_pinwheel1_loop.webm",
-      "videoSha256": "9873ea3902d2f160d42418a993e60f78f9d2e2d6504b96d026b266fcc27f6f90",
+      "videoSha256": "f5321bad2582befd9e996252843535b7754517c97974af4e25d258a81498d7c1",
       "frameCount": 16,
-      "duration": 5.166,
-      "decodedTicks": 62,
+      "duration": 6.25,
+      "decodedTicks": 75,
       "fps": 12,
       "holds": {
-        "0": 4,
-        "1": 2,
-        "2": 2,
+        "0": 6,
+        "1": 3,
+        "2": 3,
         "3": 6,
-        "4": 2,
+        "4": 3,
         "5": 7,
-        "6": 2,
+        "6": 3,
         "7": 8,
-        "8": 2,
-        "9": 2,
+        "8": 3,
+        "9": 3,
         "10": 9,
-        "11": 2,
+        "11": 3,
         "12": 6,
-        "13": 2,
-        "14": 2,
-        "15": 4
+        "13": 3,
+        "14": 3,
+        "15": 6
       },
       "repeats": [],
-      "sourceBytes": 460478,
-      "candidateBytes": 742909,
+      "sourceBytes": 504436,
+      "candidateBytes": 811656,
       "technicalReview": {
         "dimensions": true,
         "alpha": true,
@@ -12944,12 +12987,12 @@
         "distinctPoses": true
       },
       "status": "reviewed",
+      "reviewRecord": "anims/calm_motion_review.md",
       "review": {
         "technical": true,
         "staticVisual": true,
         "runtimePlayback": true
-      },
-      "reviewRecord": "anims/calm_motion_review.md"
+      }
     },
     {
       "clip": "summer_breathe1_loop",
@@ -13451,7 +13494,7 @@
       "part": "loop",
       "rate": 1,
       "sourceVideo": "sprites/anim_summer_tube1_loop.webm",
-      "sourceVideoSha256": "e9cf3cc15ae7113434c12315f791e7522ec5b53dce086bd73dd225a38a1751d3",
+      "sourceVideoSha256": "f472461b28f41c370677e58d6a687cb622f211b33e9ef03432507b264f73014e",
       "sourceFrames": [
         "sprites/summer_tube1_loop/summer_tube1_loop_00.png",
         "sprites/summer_tube1_loop/summer_tube1_loop_01.png",
@@ -13525,32 +13568,32 @@
         "e50b39adcc8200f5495cd45f252f3ba537f0c091ca863033272e08f47c3d2c1e"
       ],
       "candidate": "sprites/hd720/videos/anim_summer_tube1_loop.webm",
-      "videoSha256": "14fb0cd18a69088bbee5647b492375480c9b5b07a30fb31f1bf87c98f19f9c74",
+      "videoSha256": "d8691aa0c9c39b3db9e066b989c7cc7aabda7fbc3aafc41574799729f5ff83ca",
       "frameCount": 16,
-      "duration": 5.583,
-      "decodedTicks": 67,
+      "duration": 6.583333333333333,
+      "decodedTicks": 79,
       "fps": 12,
       "holds": {
-        "0": 4,
-        "1": 2,
+        "0": 6,
+        "1": 3,
         "2": 6,
-        "3": 2,
+        "3": 3,
         "4": 6,
-        "5": 2,
+        "5": 3,
         "6": 8,
-        "7": 2,
+        "7": 3,
         "8": 8,
-        "9": 2,
-        "10": 2,
+        "9": 3,
+        "10": 3,
         "11": 9,
-        "12": 2,
+        "12": 3,
         "13": 6,
-        "14": 2,
-        "15": 4
+        "14": 3,
+        "15": 6
       },
       "repeats": [],
-      "sourceBytes": 532107,
-      "candidateBytes": 855488,
+      "sourceBytes": 564914,
+      "candidateBytes": 907085,
       "technicalReview": {
         "dimensions": true,
         "alpha": true,
@@ -13562,12 +13605,12 @@
         "distinctPoses": true
       },
       "status": "reviewed",
+      "reviewRecord": "anims/calm_motion_review.md",
       "review": {
         "technical": true,
         "staticVisual": true,
         "runtimePlayback": true
-      },
-      "reviewRecord": "anims/calm_motion_review.md"
+      }
     },
     {
       "clip": "summer_sandcastle1_loop",
@@ -13575,7 +13618,7 @@
       "part": "loop",
       "rate": 1,
       "sourceVideo": "sprites/anim_summer_sandcastle1_loop.webm",
-      "sourceVideoSha256": "c852e2eb2a525a48033eed2abaddb50570de01535d97fea58a8d5ab60e2499a7",
+      "sourceVideoSha256": "4b4c3190e142b649a91cbfbd31eb9bdc0e8c36bddeb194e4cf9e842012feff7c",
       "sourceFrames": [
         "sprites/summer_sandcastle1_loop/summer_sandcastle1_loop_00.png",
         "sprites/summer_sandcastle1_loop/summer_sandcastle1_loop_01.png",
@@ -13649,32 +13692,32 @@
         "e50b39adcc8200f5495cd45f252f3ba537f0c091ca863033272e08f47c3d2c1e"
       ],
       "candidate": "sprites/hd720/videos/anim_summer_sandcastle1_loop.webm",
-      "videoSha256": "f247f34fbfdfaf386b838b4e9a6d8ca605257468f174ed170b437f36b4df6e0a",
+      "videoSha256": "e37e3cbe735d3f00f74d70c39531a708d013bdfab943ed24f58109d41170070b",
       "frameCount": 16,
-      "duration": 5.333,
-      "decodedTicks": 64,
+      "duration": 6.416666666666667,
+      "decodedTicks": 77,
       "fps": 12,
       "holds": {
-        "0": 4,
-        "1": 2,
-        "2": 2,
+        "0": 6,
+        "1": 3,
+        "2": 3,
         "3": 6,
-        "4": 2,
-        "5": 2,
+        "4": 3,
+        "5": 3,
         "6": 8,
-        "7": 2,
-        "8": 2,
+        "7": 3,
+        "8": 3,
         "9": 8,
-        "10": 2,
+        "10": 3,
         "11": 10,
-        "12": 2,
+        "12": 3,
         "13": 6,
-        "14": 2,
-        "15": 4
+        "14": 3,
+        "15": 6
       },
       "repeats": [],
-      "sourceBytes": 491762,
-      "candidateBytes": 810362,
+      "sourceBytes": 537494,
+      "candidateBytes": 885866,
       "technicalReview": {
         "dimensions": true,
         "alpha": true,
@@ -13686,12 +13729,12 @@
         "distinctPoses": true
       },
       "status": "reviewed",
+      "reviewRecord": "anims/calm_motion_review.md",
       "review": {
         "technical": true,
         "staticVisual": true,
         "runtimePlayback": true
-      },
-      "reviewRecord": "anims/calm_motion_review.md"
+      }
     },
     {
       "clip": "summer_watermelon1_loop",
@@ -13699,7 +13742,7 @@
       "part": "loop",
       "rate": 1,
       "sourceVideo": "sprites/anim_summer_watermelon1_loop.webm",
-      "sourceVideoSha256": "cafdef16c634f314c0ddef111e1706a620b41fcc2c8b6e2f1b22cdd139951520",
+      "sourceVideoSha256": "98bd54c5cd2f4528981177a6986e2d7dc81fda5e1f70aa56d06918a545de7f87",
       "sourceFrames": [
         "sprites/summer_watermelon1_loop/summer_watermelon1_loop_00.png",
         "sprites/summer_watermelon1_loop/summer_watermelon1_loop_01.png",
@@ -13773,32 +13816,32 @@
         "e50b39adcc8200f5495cd45f252f3ba537f0c091ca863033272e08f47c3d2c1e"
       ],
       "candidate": "sprites/hd720/videos/anim_summer_watermelon1_loop.webm",
-      "videoSha256": "a55154a241843223e8494954d250dcdc2634f48dc7ff9e51b7ed00bfdd295954",
+      "videoSha256": "de87fea6272b9eac884d385de6fb4b3b277e3444e924db386cb549c9621d35b5",
       "frameCount": 16,
-      "duration": 5.166,
-      "decodedTicks": 62,
+      "duration": 6.25,
+      "decodedTicks": 75,
       "fps": 12,
       "holds": {
-        "0": 4,
-        "1": 2,
-        "2": 2,
+        "0": 6,
+        "1": 3,
+        "2": 3,
         "3": 6,
         "4": 7,
-        "5": 2,
+        "5": 3,
         "6": 8,
-        "7": 2,
-        "8": 2,
+        "7": 3,
+        "8": 3,
         "9": 6,
-        "10": 2,
-        "11": 2,
+        "10": 3,
+        "11": 3,
         "12": 9,
-        "13": 2,
-        "14": 2,
-        "15": 4
+        "13": 3,
+        "14": 3,
+        "15": 6
       },
       "repeats": [],
-      "sourceBytes": 475840,
-      "candidateBytes": 776919,
+      "sourceBytes": 493401,
+      "candidateBytes": 806841,
       "technicalReview": {
         "dimensions": true,
         "alpha": true,
@@ -13810,12 +13853,12 @@
         "distinctPoses": true
       },
       "status": "reviewed",
+      "reviewRecord": "anims/calm_motion_review.md",
       "review": {
         "technical": true,
         "staticVisual": true,
         "runtimePlayback": true
-      },
-      "reviewRecord": "anims/calm_motion_review.md"
+      }
     },
     {
       "clip": "summer_watergun1_loop",
@@ -13823,7 +13866,7 @@
       "part": "loop",
       "rate": 1,
       "sourceVideo": "sprites/anim_summer_watergun1_loop.webm",
-      "sourceVideoSha256": "3b28094b13d66c68aee095dbf20c9663ddfa27b2924fd001418c456102e9a47d",
+      "sourceVideoSha256": "7c8f76a90383409f0a1174862831f2213ff176817fa90e9dbf027646b3707d76",
       "sourceFrames": [
         "sprites/summer_watergun1_loop/summer_watergun1_loop_00.png",
         "sprites/summer_watergun1_loop/summer_watergun1_loop_01.png",
@@ -13897,32 +13940,32 @@
         "e50b39adcc8200f5495cd45f252f3ba537f0c091ca863033272e08f47c3d2c1e"
       ],
       "candidate": "sprites/hd720/videos/anim_summer_watergun1_loop.webm",
-      "videoSha256": "bd8f08b44f1947acc8fbd4332764049aa1ebe628d90170d89dc11f34115b0e11",
+      "videoSha256": "ad57e8750ad3e5ba2193ae2cf163bb70d1e590d1ee3372682a66759f91df94dd",
       "frameCount": 16,
-      "duration": 4.916,
-      "decodedTicks": 59,
+      "duration": 6.0,
+      "decodedTicks": 72,
       "fps": 12,
       "holds": {
-        "0": 4,
-        "1": 2,
-        "2": 2,
+        "0": 6,
+        "1": 3,
+        "2": 3,
         "3": 5,
-        "4": 2,
+        "4": 3,
         "5": 6,
-        "6": 2,
-        "7": 2,
+        "6": 3,
+        "7": 3,
         "8": 6,
         "9": 7,
-        "10": 2,
+        "10": 3,
         "11": 9,
-        "12": 2,
-        "13": 2,
-        "14": 2,
-        "15": 4
+        "12": 3,
+        "13": 3,
+        "14": 3,
+        "15": 6
       },
       "repeats": [],
-      "sourceBytes": 510613,
-      "candidateBytes": 825829,
+      "sourceBytes": 528001,
+      "candidateBytes": 857485,
       "technicalReview": {
         "dimensions": true,
         "alpha": true,
@@ -13934,12 +13977,12 @@
         "distinctPoses": true
       },
       "status": "reviewed",
+      "reviewRecord": "anims/calm_motion_review.md",
       "review": {
         "technical": true,
         "staticVisual": true,
         "runtimePlayback": true
-      },
-      "reviewRecord": "anims/calm_motion_review.md"
+      }
     },
     {
       "clip": "summer_waves1_loop",
@@ -13947,7 +13990,7 @@
       "part": "loop",
       "rate": 1,
       "sourceVideo": "sprites/anim_summer_waves1_loop.webm",
-      "sourceVideoSha256": "47fa4de8acd9fe9c14a501eb2dd4e0d454e58ac984a85538519bbc5f87c4aec7",
+      "sourceVideoSha256": "ad469b0a10297cead81fd698f70a49e276a6cac77b5fbf91c0e080dccaf2da5f",
       "sourceFrames": [
         "sprites/summer_waves1_loop/summer_waves1_loop_00.png",
         "sprites/summer_waves1_loop/summer_waves1_loop_01.png",
@@ -14021,32 +14064,32 @@
         "e50b39adcc8200f5495cd45f252f3ba537f0c091ca863033272e08f47c3d2c1e"
       ],
       "candidate": "sprites/hd720/videos/anim_summer_waves1_loop.webm",
-      "videoSha256": "551805363e36cf9df203c173124a095c54b51f5d6a1e16b34e3821b80023df61",
+      "videoSha256": "9e4332ad7ae1a5d45496b58d5afa8f6e860ac46cedc90a21686730d6698d94a5",
       "frameCount": 16,
-      "duration": 4.833,
-      "decodedTicks": 58,
+      "duration": 5.916666666666667,
+      "decodedTicks": 71,
       "fps": 12,
       "holds": {
-        "0": 4,
-        "1": 2,
+        "0": 6,
+        "1": 3,
         "2": 5,
-        "3": 2,
+        "3": 3,
         "4": 6,
-        "5": 2,
-        "6": 2,
+        "5": 3,
+        "6": 3,
         "7": 7,
-        "8": 2,
+        "8": 3,
         "9": 6,
-        "10": 2,
-        "11": 2,
+        "10": 3,
+        "11": 3,
         "12": 8,
-        "13": 2,
-        "14": 2,
-        "15": 4
+        "13": 3,
+        "14": 3,
+        "15": 6
       },
       "repeats": [],
-      "sourceBytes": 622292,
-      "candidateBytes": 1005187,
+      "sourceBytes": 652940,
+      "candidateBytes": 1052059,
       "technicalReview": {
         "dimensions": true,
         "alpha": true,
@@ -14058,12 +14101,12 @@
         "distinctPoses": true
       },
       "status": "reviewed",
+      "reviewRecord": "anims/calm_motion_review.md",
       "review": {
         "technical": true,
         "staticVisual": true,
         "runtimePlayback": true
-      },
-      "reviewRecord": "anims/calm_motion_review.md"
+      }
     },
     {
       "clip": "summer_fan1_loop",
@@ -14071,7 +14114,7 @@
       "part": "loop",
       "rate": 1,
       "sourceVideo": "sprites/anim_summer_fan1_loop.webm",
-      "sourceVideoSha256": "07205c125483ec37d02376fe83c448ab00babee63218681bf70ecd640fbc3d12",
+      "sourceVideoSha256": "2ddd82a72f38059fbadfc4bf1d712004e6f487560b3206dba3722f98a3b80253",
       "sourceFrames": [
         "sprites/summer_fan1_loop/summer_fan1_loop_00.png",
         "sprites/summer_fan1_loop/summer_fan1_loop_01.png",
@@ -14145,32 +14188,32 @@
         "e50b39adcc8200f5495cd45f252f3ba537f0c091ca863033272e08f47c3d2c1e"
       ],
       "candidate": "sprites/hd720/videos/anim_summer_fan1_loop.webm",
-      "videoSha256": "160286612a2fb122ae18418265ce746895355ebecf627e12547735ea77e793ab",
+      "videoSha256": "89915f317a877c1e6e258512236b9b6c4679080a03a46bc0bb74c9bc29201563",
       "frameCount": 16,
-      "duration": 5.333,
-      "decodedTicks": 64,
+      "duration": 6.416666666666667,
+      "decodedTicks": 77,
       "fps": 12,
       "holds": {
-        "0": 4,
-        "1": 2,
-        "2": 2,
+        "0": 6,
+        "1": 3,
+        "2": 3,
         "3": 6,
-        "4": 2,
+        "4": 3,
         "5": 7,
-        "6": 2,
-        "7": 2,
+        "6": 3,
+        "7": 3,
         "8": 10,
-        "9": 2,
+        "9": 3,
         "10": 7,
-        "11": 2,
+        "11": 3,
         "12": 8,
-        "13": 2,
-        "14": 2,
-        "15": 4
+        "13": 3,
+        "14": 3,
+        "15": 6
       },
       "repeats": [],
-      "sourceBytes": 479118,
-      "candidateBytes": 777137,
+      "sourceBytes": 527780,
+      "candidateBytes": 858140,
       "technicalReview": {
         "dimensions": true,
         "alpha": true,
@@ -14182,12 +14225,12 @@
         "distinctPoses": true
       },
       "status": "reviewed",
+      "reviewRecord": "anims/calm_motion_review.md",
       "review": {
         "technical": true,
         "staticVisual": true,
         "runtimePlayback": true
-      },
-      "reviewRecord": "anims/calm_motion_review.md"
+      }
     },
     {
       "clip": "transform_normal_start",
@@ -15500,9 +15543,9 @@
   ],
   "sourcePreservation": false,
   "clipCount": 138,
-  "frameCount": 2062,
-  "sourceVideoBytes": 42377428,
-  "candidateVideoBytes": 65911746,
+  "frameCount": 2068,
+  "sourceVideoBytes": 43752043,
+  "candidateVideoBytes": 68014690,
   "workers": [
     "anims/hd720_dance.json",
     "anims/hd720_pastry.json",
@@ -15548,7 +15591,13 @@
       "assets": "output/calm/asset-audit.json",
       "normalAndFiveThemes": true,
       "pagesFallback": true,
-      "modeSwitch": true
+      "modeSwitch": true,
+      "longerTimingAndSixInbetweens": {
+        "fiveThemes": true,
+        "normalDanceTwoCycles": true,
+        "pagesFallbackDanceTwoCycles": true,
+        "lemonCompletion": true
+      }
     }
   },
   "sourceChangeNote": "2026-10-05: 사용자 요청으로 대기·말하기를 얼굴 합성으로 재제작하고 512/720 동작 타이밍을 함께 조정. 최초 업스케일 보존 검사의 source_snapshot은 역사적 기준으로 유지한다. 현재 자산은 audit_animation_assets.py로 검사한다."

@@ -11333,14 +11333,27 @@
       "count": 16,
       "cols": 5,
       "rows": 4,
-      "sourceDuration": 2.2,
+      "sourceDuration": 4.0,
       "holds": {
-        "3": 2,
-        "7": 3,
-        "11": 4
+        "0": 2,
+        "1": 2,
+        "2": 2,
+        "3": 4,
+        "4": 2,
+        "5": 2,
+        "6": 2,
+        "7": 5,
+        "8": 2,
+        "9": 2,
+        "10": 2,
+        "11": 5,
+        "12": 2,
+        "13": 2,
+        "14": 2,
+        "15": 2
       },
       "repeats": [],
-      "motionNote": "Lemon bite gag, 16-frame completed sequence @10FPS (2.2s; widget rate 0.7, play 1 cycle). From idle she pulls a whole lemon from behind her back, presents it, bites it, her face scrunches up sour and she shivers, shakes it off with a big exhale, grins with a thumbs-up, hides the lemon behind her back and returns to idle. PROP RULES: the lemon is ALWAYS in the hand on the RIGHT side of the image; opaque bright yellow; whole until the bite, then shows a big bite mark for the rest.",
+      "motionNote": "Lemon bite gag, 16-frame completed sequence @10FPS (4.0s; widget rate 0.7, play 1 cycle). From idle she pulls a whole lemon from behind her back, presents it, bites it, her face scrunches up sour and she shivers, shakes it off with a big exhale, grins with a thumbs-up, hides the lemon behind her back and returns to idle. PROP RULES: the lemon is ALWAYS in the hand on the RIGHT side of the image; opaque bright yellow; whole until the bite, then shows a big bite mark for the rest.",
       "poseDescriptions": [
         "Pose: BASE: standing upright and relaxed, feet close together under her hips, both arms resting naturally at her sides with open hands, calm small smile, head level. No props visible. The small lemon-slice hair clip stays on the same side of her bangs as in the reference image, do not mirror the character.",
         "Pose: feet close together, both arms swinging back behind her body with hands hidden behind her back, mischievous closed-mouth smirk, eyes glancing sideways. No props visible yet. The small lemon-slice hair clip stays on the same side of her bangs as in the reference image, do not mirror the character.",
@@ -11367,7 +11380,7 @@
         "seams": true
       },
       "sheet": null,
-      "sourceVideoHash": "32561707ae5b0200bd94b603376d4a2447b0c4d06980cc9fad23473bae0be422",
+      "sourceVideoHash": "40bb35fc92e80823e11af42d8f979ef5361c58236821483e8fcc04ae3c2f05e1",
       "sourceFrameHashes": [
         "1a3d112bb858f6a394199c5767426b9a2245075d991a2b6dc790c76fb1e3ea88",
         "ebc34696aef4d365f6453bde944d413aa3bfeafe747972edd09016ed40864b03",
@@ -11453,7 +11466,7 @@
             }
           ],
           "format": {
-            "duration": "2.200000"
+            "duration": "4.000000"
           }
         },
         "frameCount": 16,
@@ -11621,12 +11634,12 @@
           }
         ],
         "originalsUnchanged": false,
-        "videoSha256": "5ef2499645f01b221fcfa7b2a3877cc148a0ef3dba3b03ac96d48b0701b5eb97",
+        "videoSha256": "85e93f52d35308b5201886875940b29e03beba515f7046ada50bbde3562cfa7d",
         "framesTouchingCanvas": [],
         "exactSeamAnchors": [],
         "decodedAlpha": {
           "decoder": "libvpx-vp9",
-          "frames": 22,
+          "frames": 40,
           "allCornersTransparent": true,
           "allFramesOpaqueForeground": true
         },
@@ -14644,19 +14657,19 @@
     {
       "file": "anim_bounce1_loop.webm",
       "state": "bounce1",
-      "sha256": "49d364765ec8b07e107af0c42d9d374bb9939bbab82ae5197306ee0058b05b51",
+      "sha256": "35c144f2f9ca3e91f6b7756df6c15b80e127e650fb5fa22402e747a878ecbcf1",
       "reason": "ImageGen 챌린지 바운스 전신 춤. 원본/재구성 모드 공통 사용."
     },
     {
       "file": "anim_shuffle1_loop.webm",
       "state": "shuffle1",
-      "sha256": "5a5703db6fca560be9d0f54f2fda1a595fbed2f6f9a88552663f4f604e14a305",
+      "sha256": "d020b40f69a5d85cb961cda3691458984bcb6e13647f32d360bc209fb941b052",
       "reason": "ImageGen 셔플 스텝 전신 춤. 원본/재구성 모드 공통 사용."
     },
     {
       "file": "anim_power1_loop.webm",
       "state": "power1",
-      "sha256": "30e75160b773ef2c546bbeeac77238f06c96a516619249a2d213ac21b7708e1e",
+      "sha256": "d386a87505705bf9342ceec1ad61d3e46673dc513c99dae3a339b898617d507f",
       "reason": "ImageGen 파워 챌린지 전신 춤. 원본/재구성 모드 공통 사용."
     },
     {
@@ -14704,115 +14717,115 @@
     {
       "file": "anim_broom1_loop.webm",
       "state": "broom1",
-      "sha256": "664fa2a2aa8ff1ae2d9e565995daaa71b61a51ebd966100e265cf9e734db5ae1",
+      "sha256": "368f79efb1ca520333a7bf536511ae7f5d9fb48652ddc390184fa73f3e7bd2a0",
       "reason": "ImageGen 할로윈 전용 모션. 원본/재구성 모드에서 공통 사용."
     },
     {
       "file": "anim_lantern1_loop.webm",
       "state": "lantern1",
-      "sha256": "e954e0b3f0d74add7320370a4e6c5e50fcfd630717efa02416250ee87b3174ef",
+      "sha256": "6dba3a5348dd1b5a544cc08c1d1feb5c119691036722b08381f4dc92d4e389bf",
       "reason": "ImageGen 할로윈 전용 모션. 원본/재구성 모드에서 공통 사용."
     },
     {
       "file": "anim_ghost1_loop.webm",
       "state": "ghost1",
-      "sha256": "1485928fef95137badc2b6375310872330cd1f5c29458841c7d56990391410f4",
+      "sha256": "d0233031bba10c9f6e2edfdb6fb2c847f34c369eea5f67b3f7edb2830bf6fa8a",
       "reason": "ImageGen 할로윈 전용 모션. 원본/재구성 모드에서 공통 사용."
     },
     {
       "file": "anim_bat1_loop.webm",
       "state": "bat1",
-      "sha256": "19f1f9add13750e694f6b7feaf555ac0160ba44706dfa4b09eca8ae6871bddab",
+      "sha256": "a1f798a062a1e6b1b427545f0c5f0137c843acbfb44b2a86992d4893ed7c11cc",
       "reason": "ImageGen 할로윈 전용 모션. 원본/재구성 모드에서 공통 사용."
     },
     {
       "file": "anim_candy1_loop.webm",
       "state": "candy1",
-      "sha256": "68b9ce0e70a0f728fbe39611a98cb23a0968cc3a11e7a7491bd966505d165a72",
+      "sha256": "0d9bdbdc49251aa2fabe47cad44c47c9e53b770534b04fc5edacc2a50814ef1d",
       "reason": "ImageGen 할로윈 전용 모션. 원본/재구성 모드에서 공통 사용."
     },
     {
       "file": "anim_spellbook1_loop.webm",
       "state": "spellbook1",
-      "sha256": "168eb533c7611dbadcad1f375bbbcedbceec192ffe29ad778d0d0b17fb98b4a1",
+      "sha256": "f006b74e7e497db68411a3b8bd23f64c81ee3adb501ed371ee5ae6759bc5d4d7",
       "reason": "ImageGen 할로윈 전용 모션. 원본/재구성 모드에서 공통 사용."
     },
     {
       "file": "anim_starspell1_loop.webm",
       "state": "starspell1",
-      "sha256": "c3a25195c0148f21bcef7e1689ef70c516f2cac36ffd2c1b10083709990c354a",
+      "sha256": "22b5fe5cfd0d3b000749c9fad2bd11d084200cea5c7bf7f2c2bf24eab6163431",
       "reason": "ImageGen 할로윈 전용 모션. 원본/재구성 모드에서 공통 사용."
     },
     {
       "file": "anim_crystal1_loop.webm",
       "state": "crystal1",
-      "sha256": "0f1af5f98eea6f8e6bb1be977b4780a2669829b57264dd153e509fcb450a010b",
+      "sha256": "fa1f088af2076a1bd5bb81636824f31414d2c006d30921a81a3e035ef8c0462d",
       "reason": "ImageGen 할로윈 전용 모션. 원본/재구성 모드에서 공통 사용."
     },
     {
       "file": "anim_blackcat1_loop.webm",
       "state": "blackcat1",
-      "sha256": "2af5348ec3f3d551af13525e391e3b7d8ad5ab2341e4ab723c125f7a199f0168",
+      "sha256": "650b105153fb287045394b251ebe20bf4c6c9b6b30f791bef345db3c6992c1c1",
       "reason": "ImageGen 할로윈 전용 모션. 원본/재구성 모드에서 공통 사용."
     },
     {
       "file": "anim_raven1_loop.webm",
       "state": "raven1",
-      "sha256": "e4ffb23e9b1bcb4b5754c4185f27981c02076e5621df19d67952632e9687247b",
+      "sha256": "30e0463e13c049f7531bcd9a65b71e80a8755d1b6f8518166e62a004c69500b3",
       "reason": "ImageGen 할로윈 전용 모션. 원본/재구성 모드에서 공통 사용."
     },
     {
       "file": "anim_spider1_loop.webm",
       "state": "spider1",
-      "sha256": "97c989b679fd30239f950bde82584fa67bd5bf8c88ce6b67ae4994e64b2ba727",
+      "sha256": "b0ada24c31f4b6145ab45a8c975484b90f0908bc39f7de2e55f56a7bc6afeaf4",
       "reason": "ImageGen 할로윈 전용 모션. 원본/재구성 모드에서 공통 사용."
     },
     {
       "file": "anim_potion1_loop.webm",
       "state": "potion1",
-      "sha256": "7cc712031ba23a285b499ca5de23d01de6ca88179fc4dd1480a6816022d26c16",
+      "sha256": "b86e1b36a3613e00c3426124ce52b7b645688e2fafff163266fbd8ed5576fcd0",
       "reason": "ImageGen 할로윈 전용 모션. 원본/재구성 모드에서 공통 사용."
     },
     {
       "file": "anim_moon1_loop.webm",
       "state": "moon1",
-      "sha256": "42758d5d337baa593a049d459d5a68f0b91ca7605fc80957f2926ef6810386ab",
+      "sha256": "5e0d98be37033f76561d2b93d43ca504fabacd968cca95360247066c0deb1fbf",
       "reason": "ImageGen 할로윈 전용 모션. 원본/재구성 모드에서 공통 사용."
     },
     {
       "file": "anim_tarot1_loop.webm",
       "state": "tarot1",
-      "sha256": "f9bd7f921211f2196a0fb310693aada8fbeb802ec44210bd8e68cb7fc5cb1980",
+      "sha256": "b0a51b623ee227efab26c43cccdb03bb8fcc88992324e897b017f5cd7d3b3edc",
       "reason": "ImageGen 할로윈 전용 모션. 원본/재구성 모드에서 공통 사용."
     },
     {
       "file": "anim_umbrella1_loop.webm",
       "state": "umbrella1",
-      "sha256": "2ba4d5928515484c0a509018cd211c95ee08dd6464854017aea80f5421b70d85",
+      "sha256": "d2e11110450dcabf2ccf6f111b390b6ea92e41739f588157aca0e5cc31cc7089",
       "reason": "ImageGen 할로윈 전용 모션. 원본/재구성 모드에서 공통 사용."
     },
     {
       "file": "anim_witchdance1_loop.webm",
       "state": "witchdance1",
-      "sha256": "abfe521e67760300de377f06ac8549a386251c6329ace29677c655e42b000fab",
+      "sha256": "07af87cae6332a4cf1fee27dab40c55d3a60ced99e7d04f74bc108cafff72300",
       "reason": "ImageGen 할로윈 전용 모션. 원본/재구성 모드에서 공통 사용."
     },
     {
       "file": "anim_peekaboo1_loop.webm",
       "state": "peekaboo1",
-      "sha256": "d635ad87e1a9615cabcd71be683e7f2de68cc65f16b5772dcdbee83230bcb526",
+      "sha256": "ebdd5a335e2eb54d3a0eddc30370aaf14e31a9755bbf3a0c53ff0be975a9d66a",
       "reason": "ImageGen 할로윈 전용 모션. 원본/재구성 모드에서 공통 사용."
     },
     {
       "file": "anim_candles1_loop.webm",
       "state": "candles1",
-      "sha256": "2291232eef683d619b8a2d9b79a73082d4c17d6efbaf17a770c746c8b96a6392",
+      "sha256": "549151f658e7e4ac43f050113a8b42942b447e35364e8f40521fc0d09df0d56e",
       "reason": "ImageGen 할로윈 전용 모션. 원본/재구성 모드에서 공통 사용."
     },
     {
       "file": "anim_gift1_loop.webm",
       "state": "gift1",
-      "sha256": "c62d3406ac5673961c124ce945ee6f255eb69a07e43f98f5fa7ec33623974f2a",
+      "sha256": "92946a38749f3dc116c44189e518de09ac88b00027549b496282e478130dfbe8",
       "reason": "ImageGen 할로윈 전용 모션. 원본/재구성 모드에서 공통 사용."
     },
     {
@@ -14866,37 +14879,37 @@
     {
       "file": "anim_seollal_bow1_loop.webm",
       "state": "seollal_bow1",
-      "sha256": "eedc361c3c5948d7f4e5271d0e274f9e1d02a7cdc4b1a7a4ae40898127c63aa2",
+      "sha256": "c050452303caebe4214d1b3603b69c3cced1422f027c57f8867a2a8f7256ecec",
       "reason": "ImageGen 기념일 전용 모션. 원본/재구성 모드에서 공통 사용."
     },
     {
       "file": "anim_seollal_pouch1_loop.webm",
       "state": "seollal_pouch1",
-      "sha256": "1340bb553ff2f0c239ca4a41585ed3ae6999bd6dfd5130e8ea0a704d5faed8f7",
+      "sha256": "2582b241124ce5368e03da234a843b8a57ec1cc0bf0670d6982fdd22bd56b9b0",
       "reason": "ImageGen 기념일 전용 모션. 원본/재구성 모드에서 공통 사용."
     },
     {
       "file": "anim_seollal_yut1_loop.webm",
       "state": "seollal_yut1",
-      "sha256": "d8880b94d962a78a1b2f15da31aae74ac336914957d332c227e5da65f8816b5d",
+      "sha256": "f0451183a5cab3c58508ebd1fb7f18f793b4b8c208b8e338bafd875f27659bff",
       "reason": "ImageGen 기념일 전용 모션. 원본/재구성 모드에서 공통 사용."
     },
     {
       "file": "anim_seollal_soup1_loop.webm",
       "state": "seollal_soup1",
-      "sha256": "ba8eaa177312d81a484fb9923b3210354b650831f3965ef4365b451acfe64a80",
+      "sha256": "32b3ebe18b02919ceb06508fdfdd503585b9a0d9101d08335ab1ca27566194d0",
       "reason": "ImageGen 기념일 전용 모션. 원본/재구성 모드에서 공통 사용."
     },
     {
       "file": "anim_seollal_kite1_loop.webm",
       "state": "seollal_kite1",
-      "sha256": "a8b038a025f76edb6d3490d5a2105e4157bb7dcd84224e1d72282c8ab627f756",
+      "sha256": "83ddec6dab6efab85b634c75695a5ab2e2628a0b36a4faa71fa9f07e56a8ea58",
       "reason": "ImageGen 기념일 전용 모션. 원본/재구성 모드에서 공통 사용."
     },
     {
       "file": "anim_seollal_jegi1_loop.webm",
       "state": "seollal_jegi1",
-      "sha256": "86c40c859d4285a0523347ad921197dc1e845e7d21329151284d245d89456b9b",
+      "sha256": "12410469dd2c643067a9289dd1419691e8bb38d33dfc508c6d9dabfd92e7f511",
       "reason": "ImageGen 기념일 전용 모션. 원본/재구성 모드에서 공통 사용."
     },
     {
@@ -14926,37 +14939,37 @@
     {
       "file": "anim_christmas_gift1_loop.webm",
       "state": "christmas_gift1",
-      "sha256": "92b14d959d7a4dbb5273344d4ea3779ce55a49804180e0970f11fbc1b362ec2f",
+      "sha256": "5d905bdc8994342a08b97ac81604632b6c61805ba0b9c43011034f26929a33a0",
       "reason": "ImageGen 기념일 전용 모션. 원본/재구성 모드에서 공통 사용."
     },
     {
       "file": "anim_christmas_fishbread1_loop.webm",
       "state": "christmas_fishbread1",
-      "sha256": "1b3db2d70e9b89a2e95bba41f6648849d5663ebbe2695cc7589b7a8561189a32",
+      "sha256": "67d2349615c74c46eeedbaab57eb72e579c26ccc10693b3c3706a804b218d354",
       "reason": "ImageGen 기념일 전용 모션. 원본/재구성 모드에서 공통 사용."
     },
     {
       "file": "anim_christmas_snowman1_loop.webm",
       "state": "christmas_snowman1",
-      "sha256": "902933c8a87742034f6a01c5665d4c53c82c9120eb8d27b6d2dd9f2849f5d8ab",
+      "sha256": "902d0816f3058528ab1cf7b26690d903819a38a9e6b99ba53099a7817edd186b",
       "reason": "ImageGen 기념일 전용 모션. 원본/재구성 모드에서 공통 사용."
     },
     {
       "file": "anim_christmas_carol1_loop.webm",
       "state": "christmas_carol1",
-      "sha256": "5602081ebeea8ab62b0b7a2e9c2b22f7b5f097a4d8c28fdca5d1b86f8cfd2f5f",
+      "sha256": "331ad80e710fa349e058c2d251e887fefdb375c9b1ed030b0442d84062c10324",
       "reason": "ImageGen 기념일 전용 모션. 원본/재구성 모드에서 공통 사용."
     },
     {
       "file": "anim_christmas_snowglobe1_loop.webm",
       "state": "christmas_snowglobe1",
-      "sha256": "836bab32141cfbb9f6251f7e0d27c73e1d2eb7625f3c88a5a432511edf46b219",
+      "sha256": "936236a9fa55f2c1aaae4d5c203b57a666bde5e5c372bcdfbbe9d8a0858a874e",
       "reason": "ImageGen 기념일 전용 모션. 원본/재구성 모드에서 공통 사용."
     },
     {
       "file": "anim_christmas_snowcatch1_loop.webm",
       "state": "christmas_snowcatch1",
-      "sha256": "5985630bb62af7699c8feb9d1d36f287e1a3e66077397c4d2591039caa799fc6",
+      "sha256": "cfafa404c49fd145a31e46595cfa115e694beb3bc07a8848044f6931d52942ae",
       "reason": "ImageGen 기념일 전용 모션. 원본/재구성 모드에서 공통 사용."
     },
     {
@@ -14986,37 +14999,37 @@
     {
       "file": "anim_childrensday_bubbles1_loop.webm",
       "state": "childrensday_bubbles1",
-      "sha256": "5fd100bac8ac5d90796b88450e4c7928725bf6b5adb6b9707ee5a42245d4535c",
+      "sha256": "420e90e05598ee255b83646d3e3e3025c75e05252a0c134d8dde0c9516aba812",
       "reason": "ImageGen 기념일 전용 모션. 원본/재구성 모드에서 공통 사용."
     },
     {
       "file": "anim_childrensday_balloon1_loop.webm",
       "state": "childrensday_balloon1",
-      "sha256": "955d09d22864620d68fa105626a098caf290aab5ad697d7c7181d647dc4c545a",
+      "sha256": "894194dd4293aa4e89cdd1e7d1988eac2e1cc8f2c93845611fe565f33dc49794",
       "reason": "ImageGen 기념일 전용 모션. 원본/재구성 모드에서 공통 사용."
     },
     {
       "file": "anim_childrensday_robot1_loop.webm",
       "state": "childrensday_robot1",
-      "sha256": "f63e934963c4e7ec94d4e422ab28e59341d63ba2c327aa3464befd3c60ab9751",
+      "sha256": "0b462f0f3a44b17c118eab8307e3cbb6ca15a114d9baea1a4448d4d1780d4135",
       "reason": "ImageGen 기념일 전용 모션. 원본/재구성 모드에서 공통 사용."
     },
     {
       "file": "anim_childrensday_plane1_loop.webm",
       "state": "childrensday_plane1",
-      "sha256": "cf801e26174ea6a4e459fcf82683a41e11351d48c55acf4be0fa10a2bd3dc9bb",
+      "sha256": "7568423aef3e31c138d6b0eefdfc95f44e6d0b03e1acf903db1c28bef34814ec",
       "reason": "ImageGen 기념일 전용 모션. 원본/재구성 모드에서 공통 사용."
     },
     {
       "file": "anim_childrensday_candyfloss1_loop.webm",
       "state": "childrensday_candyfloss1",
-      "sha256": "1a78b4a080e4e02cb8ed62bbc6b1090b8caa015bf608b4bdfc4af8ad73737d7a",
+      "sha256": "d102d11cc2ded67ea090b01385726a99ed7aa132f9838b6f958a719c125dfcf8",
       "reason": "ImageGen 기념일 전용 모션. 원본/재구성 모드에서 공통 사용."
     },
     {
       "file": "anim_childrensday_pinwheel1_loop.webm",
       "state": "childrensday_pinwheel1",
-      "sha256": "8eaf047d845eb4d98a7bb0787194fe4da96889c7e62220ed129643c58b7aba8a",
+      "sha256": "ed0033345351d00428f95d603b10a1b060237e52434210fe4ff3ea9dc8d8c2b4",
       "reason": "ImageGen 기념일 전용 모션. 원본/재구성 모드에서 공통 사용."
     },
     {
@@ -15046,37 +15059,37 @@
     {
       "file": "anim_summer_tube1_loop.webm",
       "state": "summer_tube1",
-      "sha256": "e9cf3cc15ae7113434c12315f791e7522ec5b53dce086bd73dd225a38a1751d3",
+      "sha256": "f472461b28f41c370677e58d6a687cb622f211b33e9ef03432507b264f73014e",
       "reason": "ImageGen 기념일 전용 모션. 원본/재구성 모드에서 공통 사용."
     },
     {
       "file": "anim_summer_sandcastle1_loop.webm",
       "state": "summer_sandcastle1",
-      "sha256": "c852e2eb2a525a48033eed2abaddb50570de01535d97fea58a8d5ab60e2499a7",
+      "sha256": "4b4c3190e142b649a91cbfbd31eb9bdc0e8c36bddeb194e4cf9e842012feff7c",
       "reason": "ImageGen 기념일 전용 모션. 원본/재구성 모드에서 공통 사용."
     },
     {
       "file": "anim_summer_watermelon1_loop.webm",
       "state": "summer_watermelon1",
-      "sha256": "cafdef16c634f314c0ddef111e1706a620b41fcc2c8b6e2f1b22cdd139951520",
+      "sha256": "98bd54c5cd2f4528981177a6986e2d7dc81fda5e1f70aa56d06918a545de7f87",
       "reason": "ImageGen 기념일 전용 모션. 원본/재구성 모드에서 공통 사용."
     },
     {
       "file": "anim_summer_watergun1_loop.webm",
       "state": "summer_watergun1",
-      "sha256": "3b28094b13d66c68aee095dbf20c9663ddfa27b2924fd001418c456102e9a47d",
+      "sha256": "7c8f76a90383409f0a1174862831f2213ff176817fa90e9dbf027646b3707d76",
       "reason": "ImageGen 기념일 전용 모션. 원본/재구성 모드에서 공통 사용."
     },
     {
       "file": "anim_summer_waves1_loop.webm",
       "state": "summer_waves1",
-      "sha256": "47fa4de8acd9fe9c14a501eb2dd4e0d454e58ac984a85538519bbc5f87c4aec7",
+      "sha256": "ad469b0a10297cead81fd698f70a49e276a6cac77b5fbf91c0e080dccaf2da5f",
       "reason": "ImageGen 기념일 전용 모션. 원본/재구성 모드에서 공통 사용."
     },
     {
       "file": "anim_summer_fan1_loop.webm",
       "state": "summer_fan1",
-      "sha256": "07205c125483ec37d02376fe83c448ab00babee63218681bf70ecd640fbc3d12",
+      "sha256": "2ddd82a72f38059fbadfc4bf1d712004e6f487560b3206dba3722f98a3b80253",
       "reason": "ImageGen 기념일 전용 모션. 원본/재구성 모드에서 공통 사용."
     },
     {

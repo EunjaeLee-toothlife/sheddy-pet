@@ -1,5 +1,6 @@
 """춤의 이동·투명도와 기존 반응 모션의 재현성을 검사한다."""
 import json
+import hashlib
 import tempfile
 import unittest
 from pathlib import Path
@@ -8,6 +9,7 @@ from PIL import Image, ImageDraw
 
 from build_reactions import ROOT, prepare_frames
 from slice_and_key import body_box
+from insert_inbetweens import insert_inbetweens
 
 
 class ReactionFramesTest(unittest.TestCase):
@@ -67,6 +69,27 @@ class ReactionFramesTest(unittest.TestCase):
                        for r, g, b, a in frame.getdata())
         self.assertGreater(blue_pixels(frames[0]), 0)
         self.assertEqual(blue_pixels(frames[4]), 0)
+
+    def test_inbetween_preserves_keyframes_and_loop_closure(self):
+        first = Image.open(self.reference).convert('RGBA')
+        second = Image.new('RGBA', first.size)
+        ImageDraw.Draw(second).rectangle((240, 120, 340, 420), fill=(255, 200, 100, 255))
+        source = Path(self.temp.name) / 'middle.png'
+        second.save(source)
+        plan = {'inbetweens': [{'after': 0, 'source': str(source),
+                               'sha256': hashlib.sha256(source.read_bytes()).hexdigest()}]}
+        result = insert_inbetweens([first, second, first.copy()], plan)
+        self.assertEqual(len(result), 4)
+        for actual, expected in zip([result[0], result[2], result[3]], [first, second, first]):
+            self.assertEqual(actual.tobytes(), expected.tobytes())
+        self.assertEqual(result[1].getchannel('A').getbbox(), (220, 110, 321, 411))
+        self.assertEqual(result[1].getpixel((0, 0))[3], 0)
+
+    def test_inbetween_rejects_changed_source(self):
+        frame = Image.open(self.reference).convert('RGBA')
+        plan = {'inbetweens': [{'after': 0, 'source': str(self.reference), 'sha256': 'changed'}]}
+        with self.assertRaisesRegex(ValueError, '원본 변경'):
+            insert_inbetweens([frame, frame], plan)
 
 
 if __name__ == '__main__':
