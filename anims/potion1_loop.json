@@ -1,106 +1,6 @@
 {
   "name": "potion1_loop",
   "state": "potion1",
-  "sheet": "sprites/raw/halloween/potion1.png",
-  "sha256": "ae7490e9a5460706cffaa6f6d0ed2d269138d9efc24672d8769e44b780a9c46b",
-  "cellBoxes": [
-    [
-      0,
-      0,
-      314,
-      317
-    ],
-    [
-      314,
-      0,
-      627,
-      317
-    ],
-    [
-      627,
-      0,
-      940,
-      317
-    ],
-    [
-      940,
-      0,
-      1254,
-      317
-    ],
-    [
-      0,
-      317,
-      314,
-      627
-    ],
-    [
-      314,
-      317,
-      627,
-      627
-    ],
-    [
-      627,
-      317,
-      940,
-      627
-    ],
-    [
-      940,
-      317,
-      1254,
-      627
-    ],
-    [
-      0,
-      627,
-      314,
-      940
-    ],
-    [
-      314,
-      627,
-      627,
-      936
-    ],
-    [
-      627,
-      627,
-      940,
-      940
-    ],
-    [
-      940,
-      627,
-      1254,
-      940
-    ],
-    [
-      0,
-      940,
-      314,
-      1254
-    ],
-    [
-      314,
-      936,
-      627,
-      1254
-    ],
-    [
-      627,
-      940,
-      940,
-      1254
-    ],
-    [
-      940,
-      940,
-      1254,
-      1254
-    ]
-  ],
   "fps": 12,
   "holds": {
     "0": 6,
@@ -120,5 +20,437 @@
     "14": 3,
     "15": 6
   },
-  "timingNote": "이동 포즈는 최소 3틱(0.25초), 시작·복귀는 6틱. 전체 길이를 늘려 동작 사이 이동도 충분히 보여준다."
+  "timingNote": "이동 포즈는 최소 3틱(0.25초), 시작·복귀는 6틱. 전체 길이를 늘려 동작 사이 이동도 충분히 보여준다.",
+  "nativeSources": [
+    {
+      "anchor": "sprites/hd720/frames/witchidle1_loop/witchidle1_loop_00.png",
+      "sourceSha256": "3d2f802044899c680182cd72a00666d4067da1e1890af240c663a2aa40de30c6"
+    },
+    {
+      "source": "sprites/raw/native-correction/potion1-01-02-03.png",
+      "sourceSha256": "3fbe4c13dee2751f69ead57125659d6acf108a8c25b3d437928d58b8d2396ae1",
+      "cell": [
+        0,
+        0,
+        724,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        157,
+        12,
+        587,
+        699
+      ],
+      "scale": 0.8136826783114993,
+      "position": [
+        66,
+        110
+      ],
+      "target": {
+        "height": 559,
+        "x": 366.0,
+        "bottom": 679
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/potion1-01-02-03.png",
+      "sourceSha256": "3fbe4c13dee2751f69ead57125659d6acf108a8c25b3d437928d58b8d2396ae1",
+      "cell": [
+        724,
+        0,
+        1448,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        139,
+        14,
+        582,
+        699
+      ],
+      "scale": 0.8189781021897811,
+      "position": [
+        50,
+        106
+      ],
+      "target": {
+        "height": 561,
+        "x": 345.0,
+        "bottom": 679
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/potion1-01-02-03.png",
+      "sourceSha256": "3fbe4c13dee2751f69ead57125659d6acf108a8c25b3d437928d58b8d2396ae1",
+      "cell": [
+        1448,
+        0,
+        2172,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        151,
+        14,
+        581,
+        699
+      ],
+      "scale": 0.8131386861313868,
+      "position": [
+        79,
+        110
+      ],
+      "target": {
+        "height": 557,
+        "x": 350.0,
+        "bottom": 679
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/potion1-04-05-06.png",
+      "sourceSha256": "9fbf4013caa3dde0f50f53b3aaad0d494de0ea6763cea2ce6b903ceb11020e62",
+      "cell": [
+        0,
+        0,
+        724,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        156,
+        12,
+        614,
+        696
+      ],
+      "scale": 0.8245614035087719,
+      "position": [
+        75,
+        105
+      ],
+      "target": {
+        "height": 564,
+        "x": 378.0,
+        "bottom": 679
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/potion1-04-05-06.png",
+      "sourceSha256": "9fbf4013caa3dde0f50f53b3aaad0d494de0ea6763cea2ce6b903ceb11020e62",
+      "cell": [
+        724,
+        0,
+        1448,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        138,
+        16,
+        584,
+        693
+      ],
+      "scale": 0.827178729689808,
+      "position": [
+        92,
+        107
+      ],
+      "target": {
+        "height": 560,
+        "x": 391.0,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/potion1-04-05-06.png",
+      "sourceSha256": "9fbf4013caa3dde0f50f53b3aaad0d494de0ea6763cea2ce6b903ceb11020e62",
+      "cell": [
+        1448,
+        0,
+        2172,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        111,
+        12,
+        561,
+        697
+      ],
+      "scale": 0.8218978102189781,
+      "position": [
+        86,
+        107
+      ],
+      "target": {
+        "height": 563,
+        "x": 345.0,
+        "bottom": 679
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/potion1-07-08-09.png",
+      "sourceSha256": "d5f6eb0b2401b5baa684c92fbf003cec54237dd68b5eb0f37d750ea6fcc49e09",
+      "cell": [
+        0,
+        0,
+        724,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        115,
+        24,
+        602,
+        696
+      ],
+      "scale": 0.8318452380952381,
+      "position": [
+        57,
+        100
+      ],
+      "target": {
+        "height": 559,
+        "x": 357.0,
+        "bottom": 679
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/potion1-07-08-09.png",
+      "sourceSha256": "d5f6eb0b2401b5baa684c92fbf003cec54237dd68b5eb0f37d750ea6fcc49e09",
+      "cell": [
+        724,
+        0,
+        1448,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        76,
+        24,
+        607,
+        696
+      ],
+      "scale": 0.7901785714285714,
+      "position": [
+        114,
+        100
+      ],
+      "target": {
+        "height": 531,
+        "x": 415.0,
+        "bottom": 650
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/potion1-07-08-09.png",
+      "sourceSha256": "d5f6eb0b2401b5baa684c92fbf003cec54237dd68b5eb0f37d750ea6fcc49e09",
+      "cell": [
+        1448,
+        0,
+        2172,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        135,
+        24,
+        579,
+        694
+      ],
+      "scale": 0.7940298507462686,
+      "position": [
+        66,
+        128
+      ],
+      "target": {
+        "height": 532,
+        "x": 356.0,
+        "bottom": 679
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/potion1-10-11-12.png",
+      "sourceSha256": "47cf714f85d490504fd59f4eea4270d52262258464a0e58f8eaf418b886a6b77",
+      "cell": [
+        0,
+        0,
+        724,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        187,
+        23,
+        635,
+        675
+      ],
+      "scale": 0.8205521472392638,
+      "position": [
+        6,
+        125
+      ],
+      "target": {
+        "height": 535,
+        "x": 339.0,
+        "bottom": 679
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/potion1-10-11-12.png",
+      "sourceSha256": "47cf714f85d490504fd59f4eea4270d52262258464a0e58f8eaf418b886a6b77",
+      "cell": [
+        724,
+        0,
+        1448,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        155,
+        23,
+        584,
+        675
+      ],
+      "scale": 0.8190184049079755,
+      "position": [
+        50,
+        126
+      ],
+      "target": {
+        "height": 534,
+        "x": 350.0,
+        "bottom": 679
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/potion1-10-11-12.png",
+      "sourceSha256": "47cf714f85d490504fd59f4eea4270d52262258464a0e58f8eaf418b886a6b77",
+      "cell": [
+        1448,
+        0,
+        2172,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        114,
+        33,
+        636,
+        679
+      ],
+      "scale": 0.8513931888544891,
+      "position": [
+        69,
+        103
+      ],
+      "target": {
+        "height": 550,
+        "x": 420.0,
+        "bottom": 681
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/potion1-13-14-00.png",
+      "sourceSha256": "53a50abf53902e40102157f210f6dc927ec9ee3b27b18fd03ae4e9c8d19ed715",
+      "cell": [
+        0,
+        0,
+        724,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        204,
+        12,
+        639,
+        709
+      ],
+      "scale": 0.8034433285509326,
+      "position": [
+        61,
+        111
+      ],
+      "target": {
+        "height": 560,
+        "x": 392.0,
+        "bottom": 681
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/potion1-13-14-00.png",
+      "sourceSha256": "53a50abf53902e40102157f210f6dc927ec9ee3b27b18fd03ae4e9c8d19ed715",
+      "cell": [
+        724,
+        0,
+        1448,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        146,
+        9,
+        583,
+        709
+      ],
+      "scale": 0.7585714285714286,
+      "position": [
+        96,
+        142
+      ],
+      "target": {
+        "height": 531,
+        "x": 375.0,
+        "bottom": 680
+      }
+    },
+    {
+      "anchor": "sprites/hd720/frames/witchidle1_loop/witchidle1_loop_00.png",
+      "sourceSha256": "3d2f802044899c680182cd72a00666d4067da1e1890af240c663a2aa40de30c6"
+    }
+  ],
+  "sourcePipeline": "native-strips-v1",
+  "anchor": "sprites/hd720/frames/witchidle1_loop/witchidle1_loop_00.png"
 }

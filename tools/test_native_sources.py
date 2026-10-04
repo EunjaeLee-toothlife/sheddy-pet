@@ -10,7 +10,7 @@ from verify_native_sources import verify_sources
 class NativeSourceTest(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
-        cls.config = json.loads((ROOT / 'anims/christmas_breathe1_loop.json').read_text())
+        cls.config = json.loads((ROOT / 'anims/christmas_gift1_loop.json').read_text())
 
     def test_real_sources_reproduce_all_frames(self):
         verify_sources(self.config)
@@ -19,7 +19,7 @@ class NativeSourceTest(unittest.TestCase):
         for field, value in [('scale', 1.1), ('sourceSha256', 'tampered'), ('nativeSize', [313, 313])]:
             with self.subTest(field=field):
                 config = copy.deepcopy(self.config)
-                config['nativeSources'][0][field] = value
+                config['nativeSources'][1][field] = value
                 with self.assertRaises(AssertionError):
                     verify_sources(config)
 

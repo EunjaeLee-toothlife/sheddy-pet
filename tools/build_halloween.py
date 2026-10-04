@@ -93,6 +93,9 @@ def build(motion, theme='halloween', anchor_state='witchidle1'):
     state = motion['id']
     name = state + '_loop'
     existing = ROOT / f'anims/{name}.json'
+    if existing.exists() and json.loads(existing.read_text()).get('sourcePipeline') == 'native-strips-v1':
+        from build_native_motion import build as build_native
+        return build_native(state)
     if existing.exists() and json.loads(existing.read_text()).get('sourcePipeline') == 'calm-face-v1':
         from compose_calm_motion import build as build_calm
         return build_calm(state)

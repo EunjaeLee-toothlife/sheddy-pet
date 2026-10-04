@@ -6,7 +6,7 @@
   "nativeSources": [
     {
       "anchor": "sprites/hd720/frames/witchidle1_loop/witchidle1_loop_00.png",
-      "sourceSha256": "daf5e2677a7f084c2c5727a1e28c98c3cb5cb4d9d2a5aa2aa7f7c747352c79bd"
+      "sourceSha256": "3d2f802044899c680182cd72a00666d4067da1e1890af240c663a2aa40de30c6"
     },
     {
       "source": "sprites/raw/native/transform/transform_halloween/00-01.png",

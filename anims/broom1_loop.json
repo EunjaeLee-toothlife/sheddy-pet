@@ -1,106 +1,6 @@
 {
   "name": "broom1_loop",
   "state": "broom1",
-  "sheet": "sprites/raw/halloween/broom1.png",
-  "sha256": "206698324bee920f0b1818c579fc0f40457b7d40f92eb24a0c62f4c8b6eeea8f",
-  "cellBoxes": [
-    [
-      0,
-      0,
-      314,
-      334
-    ],
-    [
-      314,
-      0,
-      615,
-      335
-    ],
-    [
-      615,
-      0,
-      940,
-      334
-    ],
-    [
-      940,
-      0,
-      1254,
-      337
-    ],
-    [
-      0,
-      334,
-      314,
-      629
-    ],
-    [
-      314,
-      335,
-      615,
-      624
-    ],
-    [
-      615,
-      334,
-      940,
-      627
-    ],
-    [
-      940,
-      337,
-      1254,
-      614
-    ],
-    [
-      0,
-      629,
-      314,
-      912
-    ],
-    [
-      314,
-      624,
-      615,
-      904
-    ],
-    [
-      615,
-      627,
-      940,
-      905
-    ],
-    [
-      940,
-      614,
-      1254,
-      911
-    ],
-    [
-      0,
-      912,
-      314,
-      1254
-    ],
-    [
-      314,
-      904,
-      615,
-      1254
-    ],
-    [
-      615,
-      905,
-      940,
-      1254
-    ],
-    [
-      940,
-      911,
-      1254,
-      1254
-    ]
-  ],
   "fps": 12,
   "holds": {
     "0": 6,
@@ -120,5 +20,451 @@
     "14": 3,
     "15": 6
   },
-  "timingNote": "이동 포즈는 최소 3틱(0.25초), 시작·복귀는 6틱. 전체 길이를 늘려 동작 사이 이동도 충분히 보여준다."
+  "timingNote": "이동 포즈는 최소 3틱(0.25초), 시작·복귀는 6틱. 전체 길이를 늘려 동작 사이 이동도 충분히 보여준다.",
+  "nativeSources": [
+    {
+      "anchor": "sprites/hd720/frames/witchidle1_loop/witchidle1_loop_00.png",
+      "sourceSha256": "3d2f802044899c680182cd72a00666d4067da1e1890af240c663a2aa40de30c6"
+    },
+    {
+      "source": "sprites/raw/native-correction/broom1-repair-01-03.png",
+      "sourceSha256": "3bb870b0b2f84f1a82681cb47f7d1a893790f61b49bef88306d8674be00c2313",
+      "cell": [
+        0,
+        0,
+        887,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        129,
+        26,
+        760,
+        855
+      ],
+      "scale": 0.6658624849215923,
+      "position": [
+        10,
+        112
+      ],
+      "target": {
+        "height": 552,
+        "x": 306.5,
+        "bottom": 682,
+        "alignment": "bounds"
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/broom1-repair-02-05.png",
+      "sourceSha256": "ad59d3fcbfedccf88c0b34e4a201b2fb04dcb746856a7a5851693774bd62c506",
+      "cell": [
+        0,
+        0,
+        887,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        80,
+        16,
+        872,
+        866
+      ],
+      "scale": 0.66,
+      "position": [
+        20,
+        111
+      ],
+      "target": {
+        "height": 561,
+        "x": 333.5,
+        "bottom": 682,
+        "alignment": "bounds"
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/broom1-repair-01-03.png",
+      "sourceSha256": "3bb870b0b2f84f1a82681cb47f7d1a893790f61b49bef88306d8674be00c2313",
+      "cell": [
+        887,
+        0,
+        1774,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        58,
+        30,
+        782,
+        855
+      ],
+      "scale": 0.6703030303030303,
+      "position": [
+        62,
+        113
+      ],
+      "target": {
+        "height": 553,
+        "x": 344.0,
+        "bottom": 687,
+        "alignment": "bounds"
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/broom1-04-05-06.png",
+      "sourceSha256": "95af14e167d758d166256c6196c69c783182644a22da9cdd3815e82985e6b5c1",
+      "cell": [
+        0,
+        0,
+        724,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        22,
+        14,
+        684,
+        671
+      ],
+      "scale": 0.7625570776255708,
+      "position": [
+        94,
+        137
+      ],
+      "target": {
+        "height": 501,
+        "x": 363.5,
+        "bottom": 649,
+        "alignment": "bounds"
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/broom1-repair-02-05.png",
+      "sourceSha256": "ad59d3fcbfedccf88c0b34e4a201b2fb04dcb746856a7a5851693774bd62c506",
+      "cell": [
+        887,
+        0,
+        1774,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        62,
+        45,
+        861,
+        824
+      ],
+      "scale": 0.6071887034659821,
+      "position": [
+        68,
+        116
+      ],
+      "target": {
+        "height": 473,
+        "x": 348.0,
+        "bottom": 616,
+        "alignment": "bounds"
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/broom1-repair-06-10.png",
+      "sourceSha256": "8b5030ed2b8b211b932a5d004d3da61c98c72b5a3c614c28e16a05ccf57207b4",
+      "cell": [
+        0,
+        0,
+        887,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        53,
+        16,
+        859,
+        805
+      ],
+      "scale": 0.5741444866920152,
+      "position": [
+        85,
+        132
+      ],
+      "target": {
+        "height": 453,
+        "x": 347.0,
+        "bottom": 594,
+        "alignment": "bounds"
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/broom1-07-08-09.png",
+      "sourceSha256": "b19aca89f2229f8ad97380037483ef1418458bd940e129bead2c8032af54ff52",
+      "cell": [
+        0,
+        0,
+        724,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        26,
+        23,
+        716,
+        672
+      ],
+      "scale": 0.711864406779661,
+      "position": [
+        90,
+        147
+      ],
+      "target": {
+        "height": 462,
+        "x": 353.5,
+        "bottom": 625,
+        "alignment": "bounds"
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/broom1-07-08-09.png",
+      "sourceSha256": "b19aca89f2229f8ad97380037483ef1418458bd940e129bead2c8032af54ff52",
+      "cell": [
+        724,
+        0,
+        1448,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        45,
+        17,
+        708,
+        672
+      ],
+      "scale": 0.7083969465648855,
+      "position": [
+        104,
+        102
+      ],
+      "target": {
+        "height": 464,
+        "x": 371.0,
+        "bottom": 578,
+        "alignment": "bounds"
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/broom1-07-08-09.png",
+      "sourceSha256": "b19aca89f2229f8ad97380037483ef1418458bd940e129bead2c8032af54ff52",
+      "cell": [
+        1448,
+        0,
+        2172,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        47,
+        23,
+        697,
+        666
+      ],
+      "scale": 0.6982892690513219,
+      "position": [
+        104,
+        84
+      ],
+      "target": {
+        "height": 449,
+        "x": 364.5,
+        "bottom": 550,
+        "alignment": "bounds"
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/broom1-repair-06-10.png",
+      "sourceSha256": "8b5030ed2b8b211b932a5d004d3da61c98c72b5a3c614c28e16a05ccf57207b4",
+      "cell": [
+        887,
+        0,
+        1774,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        25,
+        80,
+        860,
+        826
+      ],
+      "scale": 0.6340482573726541,
+      "position": [
+        92,
+        63
+      ],
+      "target": {
+        "height": 473,
+        "x": 372.0,
+        "bottom": 586,
+        "alignment": "bounds"
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/broom1-repair-11-12.png",
+      "sourceSha256": "1274bd9d768233a91e25d6b1d32491b7d1bc24ddd8becf2f742b3b509b4ecadd",
+      "cell": [
+        0,
+        0,
+        887,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        84,
+        62,
+        873,
+        817
+      ],
+      "scale": 0.6728476821192053,
+      "position": [
+        36,
+        41
+      ],
+      "target": {
+        "height": 508,
+        "x": 358.5,
+        "bottom": 591,
+        "alignment": "bounds"
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/broom1-repair-11-12.png",
+      "sourceSha256": "1274bd9d768233a91e25d6b1d32491b7d1bc24ddd8becf2f742b3b509b4ecadd",
+      "cell": [
+        887,
+        0,
+        1774,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        64,
+        52,
+        796,
+        836
+      ],
+      "scale": 0.7002551020408163,
+      "position": [
+        83,
+        19
+      ],
+      "target": {
+        "height": 549,
+        "x": 384.5,
+        "bottom": 604,
+        "alignment": "bounds"
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/broom1-13-14-00.png",
+      "sourceSha256": "ed5ca2cd67faf43e1f47b43acc07206fa9d37a8be209fcd0de9e838d83e3de97",
+      "cell": [
+        0,
+        0,
+        724,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        183,
+        1,
+        645,
+        706
+      ],
+      "scale": 0.7943262411347518,
+      "position": [
+        28,
+        40
+      ],
+      "target": {
+        "height": 560,
+        "x": 356.5,
+        "bottom": 600,
+        "alignment": "bounds"
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/broom1-13-14-00.png",
+      "sourceSha256": "ed5ca2cd67faf43e1f47b43acc07206fa9d37a8be209fcd0de9e838d83e3de97",
+      "cell": [
+        724,
+        0,
+        1448,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        74,
+        3,
+        661,
+        706
+      ],
+      "scale": 0.8079658605974396,
+      "position": [
+        56,
+        37
+      ],
+      "target": {
+        "height": 568,
+        "x": 353.5,
+        "bottom": 608,
+        "alignment": "bounds"
+      }
+    },
+    {
+      "anchor": "sprites/hd720/frames/witchidle1_loop/witchidle1_loop_00.png",
+      "sourceSha256": "3d2f802044899c680182cd72a00666d4067da1e1890af240c663a2aa40de30c6"
+    }
+  ],
+  "sourcePipeline": "native-strips-v1",
+  "anchor": "sprites/hd720/frames/witchidle1_loop/witchidle1_loop_00.png"
 }

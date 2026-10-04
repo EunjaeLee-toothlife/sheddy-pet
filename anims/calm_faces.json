@@ -2,53 +2,53 @@
   "halloween": {
     "eyes": [
       [
-        360.29,
-        310.99
+        362,
+        310
       ],
       [
-        422.83,
-        319.4
+        425,
+        318
       ]
     ],
     "closedEyes": [
       [
-        360,
-        315
+        362,
+        313
       ],
       [
-        423,
-        323
+        425,
+        321
       ]
     ],
     "donorEyes": [
       [
         [
-          351.39,
-          249.02
+          300,
+          445
         ],
         [
-          439.6,
-          259.98
+          465,
+          459
         ]
       ],
       [
         [
-          343.11,
-          243.92
+          287,
+          434
         ],
         [
-          419.21,
-          253.64
+          431,
+          450
         ]
       ],
       [
         [
-          328.47,
-          244.6
+          276,
+          434
         ],
         [
-          404.38,
-          253.78
+          419,
+          450
         ]
       ]
     ],
@@ -67,15 +67,34 @@
       ]
     ],
     "mouthRect": [
-      372,
-      331,
-      407,
-      356
+      378,
+      330,
+      405,
+      350
     ],
     "base": "sprites/raw/calm/halloween-base.png",
-    "baseSha256": "daf5e2677a7f084c2c5727a1e28c98c3cb5cb4d9d2a5aa2aa7f7c747352c79bd",
-    "sheet": "sprites/raw/calm/halloween-expressions.png",
-    "sheetSha256": "4d9c321fc4cbb2225e63f14f4aeb244af0490b8c972dda04bffeb13099dd84b4"
+    "baseSha256": "3d2f802044899c680182cd72a00666d4067da1e1890af240c663a2aa40de30c6",
+    "sheet": "sprites/raw/native-correction/halloween-expressions.png",
+    "sheetSha256": "9dfdcae229f44132855548306b2ab06b4c9cfc7b8b03f0366fb37dd2d04e7521",
+    "nativeBase": {
+      "source": "sprites/raw/native-correction/halloween-base.png",
+      "sourceSha256": "9626c3f355ea8533a0cf6c29912d41dfa24e7afcb1956a0c216763dbe210425d",
+      "size": [
+        1254,
+        1254
+      ],
+      "scale": 0.4836206896551724,
+      "position": [
+        70,
+        105
+      ],
+      "nativeBounds": [
+        317,
+        32,
+        1040,
+        1192
+      ]
+    }
   },
   "seollal": {
     "eyes": [
@@ -153,7 +172,32 @@
     "base": "sprites/raw/calm/seollal-base.png",
     "baseSha256": "ad041795dd715bbd912cb74682cb0c4fad813fd5952eddf743bd1e350e4fb6ab",
     "sheet": "sprites/raw/calm/seollal-expressions.png",
-    "sheetSha256": "7ecbe9831d52dddef84e281f6a036d0ab5432430a111ddf192a5ce0bb4d495c0"
+    "sheetSha256": "7ecbe9831d52dddef84e281f6a036d0ab5432430a111ddf192a5ce0bb4d495c0",
+    "nativeBase": {
+      "source": "sprites/raw/native/seasonal/seollal_breathe1/00-01.png",
+      "sourceSha256": "753cecda19a0f1eb0c5b6df0704d8bf91c788f622595b97428576d6b23d2ab34",
+      "cell": [
+        0,
+        0,
+        887,
+        887
+      ],
+      "nativeBounds": [
+        251,
+        62,
+        741,
+        824
+      ],
+      "scale": 0.7349081364829396,
+      "position": [
+        -7,
+        74
+      ],
+      "size": [
+        1774,
+        887
+      ]
+    }
   },
   "christmas": {
     "eyes": [
@@ -231,7 +275,32 @@
     "base": "sprites/raw/calm/christmas-base.png",
     "baseSha256": "b4accc101d1611b5ae81670d02f5e58a90a578ee4c0898841a7beded206bfe03",
     "sheet": "sprites/raw/calm/christmas-expressions.png",
-    "sheetSha256": "afcf6a72ab891c4db567f2b19968248aeb8bc869996a097299c4aaf7b9699cb2"
+    "sheetSha256": "afcf6a72ab891c4db567f2b19968248aeb8bc869996a097299c4aaf7b9699cb2",
+    "nativeBase": {
+      "source": "sprites/raw/native/seasonal/christmas_breathe1/00-01.png",
+      "sourceSha256": "6b0c3ad25b8945afcaf25a8ac35fc058d36a3d8069753fdadaa2ecadb8a724bf",
+      "cell": [
+        0,
+        0,
+        887,
+        887
+      ],
+      "nativeBounds": [
+        238,
+        27,
+        769,
+        838
+      ],
+      "scale": 0.6905055487053021,
+      "position": [
+        6,
+        102
+      ],
+      "size": [
+        1774,
+        887
+      ]
+    }
   },
   "childrensday": {
     "eyes": [
@@ -313,7 +382,32 @@
     "closedMouthTransform": [
       0.625,
       116.75
-    ]
+    ],
+    "nativeBase": {
+      "source": "sprites/raw/native/seasonal/childrensday_breathe1/00-01.png",
+      "sourceSha256": "2fbeaada052f0487b1b4c6fe81995cfb9e3bf958ba5412271f36e46d67e740a1",
+      "cell": [
+        0,
+        0,
+        887,
+        887
+      ],
+      "nativeBounds": [
+        252,
+        57,
+        764,
+        827
+      ],
+      "scale": 0.7272727272727273,
+      "position": [
+        -5,
+        78
+      ],
+      "size": [
+        1774,
+        887
+      ]
+    }
   },
   "summer": {
     "eyes": [
@@ -391,6 +485,31 @@
     "base": "sprites/raw/calm/summer-base.png",
     "baseSha256": "e50b39adcc8200f5495cd45f252f3ba537f0c091ca863033272e08f47c3d2c1e",
     "sheet": "sprites/raw/calm/summer-expressions.png",
-    "sheetSha256": "a442e1609266c511d234380c387890db5df918e0a1af405352dec3438aba7749"
+    "sheetSha256": "a442e1609266c511d234380c387890db5df918e0a1af405352dec3438aba7749",
+    "nativeBase": {
+      "source": "sprites/raw/native/seasonal/summer_breathe1/00-01.png",
+      "sourceSha256": "2507f9cbe2b5d3473cc84b22f4f11ee5ade930a93a2a8286edb32d1758af1d12",
+      "cell": [
+        0,
+        0,
+        887,
+        887
+      ],
+      "nativeBounds": [
+        148,
+        47,
+        752,
+        846
+      ],
+      "scale": 0.6996245306633292,
+      "position": [
+        38,
+        88
+      ],
+      "size": [
+        1774,
+        887
+      ]
+    }
   }
 }

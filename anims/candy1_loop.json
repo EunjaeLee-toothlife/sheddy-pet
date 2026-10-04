@@ -1,106 +1,6 @@
 {
   "name": "candy1_loop",
   "state": "candy1",
-  "sheet": "sprites/raw/halloween/candy1.png",
-  "sha256": "00bef2547e875e5984f08c834758fd5e156695e6cf1ce18a8cf34570fcd081c5",
-  "cellBoxes": [
-    [
-      0,
-      0,
-      314,
-      317
-    ],
-    [
-      314,
-      0,
-      627,
-      317
-    ],
-    [
-      627,
-      0,
-      940,
-      318
-    ],
-    [
-      940,
-      0,
-      1254,
-      317
-    ],
-    [
-      0,
-      317,
-      314,
-      627
-    ],
-    [
-      314,
-      317,
-      627,
-      628
-    ],
-    [
-      627,
-      318,
-      940,
-      627
-    ],
-    [
-      940,
-      317,
-      1254,
-      629
-    ],
-    [
-      0,
-      627,
-      314,
-      940
-    ],
-    [
-      314,
-      628,
-      627,
-      940
-    ],
-    [
-      627,
-      627,
-      940,
-      940
-    ],
-    [
-      940,
-      629,
-      1254,
-      940
-    ],
-    [
-      0,
-      940,
-      314,
-      1254
-    ],
-    [
-      314,
-      940,
-      627,
-      1254
-    ],
-    [
-      627,
-      940,
-      940,
-      1254
-    ],
-    [
-      940,
-      940,
-      1254,
-      1254
-    ]
-  ],
   "fps": 12,
   "holds": {
     "0": 6,
@@ -120,5 +20,437 @@
     "14": 3,
     "15": 6
   },
-  "timingNote": "이동 포즈는 최소 3틱(0.25초), 시작·복귀는 6틱. 전체 길이를 늘려 동작 사이 이동도 충분히 보여준다."
+  "timingNote": "이동 포즈는 최소 3틱(0.25초), 시작·복귀는 6틱. 전체 길이를 늘려 동작 사이 이동도 충분히 보여준다.",
+  "nativeSources": [
+    {
+      "anchor": "sprites/hd720/frames/witchidle1_loop/witchidle1_loop_00.png",
+      "sourceSha256": "3d2f802044899c680182cd72a00666d4067da1e1890af240c663a2aa40de30c6"
+    },
+    {
+      "source": "sprites/raw/native-correction/candy1-01-02-03.png",
+      "sourceSha256": "289b2a3b9884d32a27b23b5d171b29511900b7e2eaa87d437f24784cbf8239b0",
+      "cell": [
+        0,
+        0,
+        724,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        122,
+        7,
+        621,
+        706
+      ],
+      "scale": 0.7954220314735336,
+      "position": [
+        62,
+        118
+      ],
+      "target": {
+        "height": 556,
+        "x": 314.0,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/candy1-01-02-03.png",
+      "sourceSha256": "289b2a3b9884d32a27b23b5d171b29511900b7e2eaa87d437f24784cbf8239b0",
+      "cell": [
+        724,
+        0,
+        1448,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        60,
+        7,
+        659,
+        709
+      ],
+      "scale": 0.7905982905982906,
+      "position": [
+        112,
+        119
+      ],
+      "target": {
+        "height": 555,
+        "x": 365.0,
+        "bottom": 679
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/candy1-01-02-03.png",
+      "sourceSha256": "289b2a3b9884d32a27b23b5d171b29511900b7e2eaa87d437f24784cbf8239b0",
+      "cell": [
+        1448,
+        0,
+        2172,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        118,
+        7,
+        612,
+        709
+      ],
+      "scale": 0.7962962962962963,
+      "position": [
+        46,
+        114
+      ],
+      "target": {
+        "height": 559,
+        "x": 312.0,
+        "bottom": 679
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/candy1-04-05-06.png",
+      "sourceSha256": "6c921e726ef88e6f401d6ca45ed8b114be611d02000c370a538562ce864b118d",
+      "cell": [
+        0,
+        0,
+        724,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        132,
+        6,
+        629,
+        707
+      ],
+      "scale": 0.7917261055634808,
+      "position": [
+        115,
+        121
+      ],
+      "target": {
+        "height": 555,
+        "x": 380.0,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/candy1-04-05-06.png",
+      "sourceSha256": "6c921e726ef88e6f401d6ca45ed8b114be611d02000c370a538562ce864b118d",
+      "cell": [
+        724,
+        0,
+        1448,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        103,
+        6,
+        586,
+        707
+      ],
+      "scale": 0.7902995720399429,
+      "position": [
+        122,
+        121
+      ],
+      "target": {
+        "height": 554,
+        "x": 363.0,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/candy1-04-05-06.png",
+      "sourceSha256": "6c921e726ef88e6f401d6ca45ed8b114be611d02000c370a538562ce864b118d",
+      "cell": [
+        1448,
+        0,
+        2172,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        109,
+        8,
+        639,
+        707
+      ],
+      "scale": 0.7811158798283262,
+      "position": [
+        111,
+        127
+      ],
+      "target": {
+        "height": 546,
+        "x": 362.0,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/candy1-07-08-09.png",
+      "sourceSha256": "72e315d19c7129434804fce973f93649492a6364f8e9ac29d566d2021a7db14b",
+      "cell": [
+        0,
+        0,
+        724,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        130,
+        13,
+        633,
+        710
+      ],
+      "scale": 0.8249641319942611,
+      "position": [
+        33,
+        95
+      ],
+      "target": {
+        "height": 575,
+        "x": 362.0,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/candy1-07-08-09.png",
+      "sourceSha256": "72e315d19c7129434804fce973f93649492a6364f8e9ac29d566d2021a7db14b",
+      "cell": [
+        724,
+        0,
+        1448,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        112,
+        15,
+        591,
+        709
+      ],
+      "scale": 0.8227665706051873,
+      "position": [
+        118,
+        95
+      ],
+      "target": {
+        "height": 571,
+        "x": 392.0,
+        "bottom": 679
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/candy1-07-08-09.png",
+      "sourceSha256": "72e315d19c7129434804fce973f93649492a6364f8e9ac29d566d2021a7db14b",
+      "cell": [
+        1448,
+        0,
+        2172,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        112,
+        73,
+        553,
+        709
+      ],
+      "scale": 0.85062893081761,
+      "position": [
+        95,
+        76
+      ],
+      "target": {
+        "height": 541,
+        "x": 366.0,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/candy1-10-11-12.png",
+      "sourceSha256": "6738b241cf5b862457798cf1896a7ada20dca4ebd3e017a81e5cb3a4e80b93f7",
+      "cell": [
+        0,
+        0,
+        724,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        112,
+        7,
+        637,
+        715
+      ],
+      "scale": 0.7542372881355932,
+      "position": [
+        100,
+        140
+      ],
+      "target": {
+        "height": 534,
+        "x": 368.0,
+        "bottom": 679
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/candy1-10-11-12.png",
+      "sourceSha256": "6738b241cf5b862457798cf1896a7ada20dca4ebd3e017a81e5cb3a4e80b93f7",
+      "cell": [
+        724,
+        0,
+        1448,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        99,
+        7,
+        604,
+        712
+      ],
+      "scale": 0.7659574468085106,
+      "position": [
+        47,
+        134
+      ],
+      "target": {
+        "height": 540,
+        "x": 328.0,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/candy1-10-11-12.png",
+      "sourceSha256": "6738b241cf5b862457798cf1896a7ada20dca4ebd3e017a81e5cb3a4e80b93f7",
+      "cell": [
+        1448,
+        0,
+        2172,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        93,
+        7,
+        598,
+        712
+      ],
+      "scale": 0.7631205673758865,
+      "position": [
+        120,
+        136
+      ],
+      "target": {
+        "height": 538,
+        "x": 406.0,
+        "bottom": 679
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/candy1-13-14-00.png",
+      "sourceSha256": "094a62848d4f010238846f6b3f6eecacb12248a8b999d5dba2249d7a3fecc5a8",
+      "cell": [
+        0,
+        0,
+        724,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        132,
+        5,
+        608,
+        714
+      ],
+      "scale": 0.7517630465444288,
+      "position": [
+        121,
+        143
+      ],
+      "target": {
+        "height": 533,
+        "x": 370.0,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/candy1-13-14-00.png",
+      "sourceSha256": "094a62848d4f010238846f6b3f6eecacb12248a8b999d5dba2249d7a3fecc5a8",
+      "cell": [
+        724,
+        0,
+        1448,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        96,
+        8,
+        661,
+        714
+      ],
+      "scale": 0.7563739376770539,
+      "position": [
+        81,
+        139
+      ],
+      "target": {
+        "height": 534,
+        "x": 325.0,
+        "bottom": 679
+      }
+    },
+    {
+      "anchor": "sprites/hd720/frames/witchidle1_loop/witchidle1_loop_00.png",
+      "sourceSha256": "3d2f802044899c680182cd72a00666d4067da1e1890af240c663a2aa40de30c6"
+    }
+  ],
+  "sourcePipeline": "native-strips-v1",
+  "anchor": "sprites/hd720/frames/witchidle1_loop/witchidle1_loop_00.png"
 }

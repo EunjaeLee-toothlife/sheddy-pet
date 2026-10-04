@@ -117,6 +117,16 @@ def build_special(manifest, selection=None):
     for clip in SPECIAL:
         if selection and clip not in selection:
             continue
+        config = json.loads((ROOT / f'anims/{clip}.json').read_text())
+        if config.get('sourcePipeline') == 'native-strips-v1':
+            from build_native_motion import build as build_native
+            build_native(clip.removesuffix('_loop'))
+            config = load(f'anims/{clip}.json')
+            proofs[clip] = {'frames': config['nativeSources'], 'sourcePipeline': config['sourcePipeline'],
+                            'count': len(config['nativeSources']), 'fps': config['fps'],
+                            'holds': config.get('holds', {}), 'repeats': config.get('repeats', []),
+                            'rate': manifest[clip].get('rate', 1), 'sourceLimited': False}
+            continue
         records = []
         if clip == 'chem1_end2':
             plan = load('sprites/rebuilt/configs/chem1_end2_plan.json')
@@ -397,6 +407,7 @@ def main():
     parser.add_argument('--clips',nargs='+')
     args=parser.parse_args()
     target=ROOT/'anims/hd720_special.json'
+    previous_sources={}
     if args.verify_only or args.matte_repair_only:
         previous=json.loads(target.read_text(encoding='utf-8'))
         proof=previous['clips']; SOURCES.update(previous['originalSources'])
@@ -405,15 +416,20 @@ def main():
         if not (BASE/'frames/idle1_loop/idle1_loop_00.png').exists():
             raise ValueError('root720 idle anchor가 먼저 필요합니다')
         previous=json.loads(target.read_text(encoding='utf-8')) if args.clips and target.exists() else {}
-        proof=previous.get('clips',{});SOURCES.update(previous.get('originalSources',{}))
+        proof=previous.get('clips',{})
+        # 선택 재생성에서는 이번에 읽은 입력을 검증하고 다른 클립의 과거 증빙은 보존한다.
+        previous_sources=previous.get('originalSources',{})
         proof.update(build_special(manifest,args.clips))
         if not args.clips or any(c in ALCHEMY for c in args.clips):proof.update(build_alchemy())
         if not args.clips or 'note1_loop' in args.clips:proof.update(build_note())
     for clip,p in proof.items():
         if args.clips and clip not in args.clips:continue
-        if not args.verify_only:repair_matte(clip,p)
+        if p.get('sourcePipeline') == 'native-strips-v1':
+            from verify_native_sources import verify_sources
+            verify_sources(json.loads((ROOT / f'anims/{clip}.json').read_text()))
+        elif not args.verify_only:repair_matte(clip,p)
         validate(clip,p,not args.frames_only)
-        target.write_text(json.dumps({'size':SIZE,'clips':proof,'originalSources':SOURCES},ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+        target.write_text(json.dumps({'size':SIZE,'clips':proof,'originalSources':{**previous_sources,**SOURCES}},ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
     for path,sha in SOURCES.items():
         if hashlib.sha256((ROOT/path).read_bytes()).hexdigest()!=sha:raise ValueError('원본 변경 감지 '+path)
 

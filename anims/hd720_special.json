@@ -617,255 +617,510 @@
     "lemon1_loop": {
       "frames": [
         {
-          "source": "sprites/rebuilt/sheets/lemon1_loop_00-01-02-03.png",
-          "sourceCell": 0,
-          "nativeSize": [
-            627,
-            627
+          "source": "sprites/raw/native-correction/lemon1-00-01.png",
+          "sourceSha256": "7b28fbf9845fa9e4d977946563ad6abadb1078fa3a87379b594726fe398e5d57",
+          "cell": [
+            0,
+            0,
+            887,
+            887
           ],
-          "sourceLimited": true,
-          "fallback512": false,
-          "nativeGreenRegion": null,
-          "frame": 0,
-          "scale512": 0.9804772234273319,
-          "dx512": -6,
-          "dy512": 9
+          "nativeSize": [
+            887,
+            887
+          ],
+          "nativeBounds": [
+            245,
+            20,
+            711,
+            869
+          ],
+          "scale": 0.7455830388692579,
+          "position": [
+            2,
+            52
+          ],
+          "target": {
+            "height": 633,
+            "x": 345.0,
+            "bottom": 700
+          }
         },
         {
-          "source": "sprites/rebuilt/sheets/lemon1_loop_00-01-02-03.png",
-          "sourceCell": 1,
-          "nativeSize": [
-            627,
-            627
+          "source": "sprites/raw/native-correction/lemon1-00-01.png",
+          "sourceSha256": "7b28fbf9845fa9e4d977946563ad6abadb1078fa3a87379b594726fe398e5d57",
+          "cell": [
+            887,
+            0,
+            1774,
+            887
           ],
-          "sourceLimited": true,
-          "fallback512": false,
-          "nativeGreenRegion": null,
-          "frame": 1,
-          "scale512": 0.9804772234273319,
-          "dx512": 15,
-          "dy512": 9
+          "nativeSize": [
+            887,
+            887
+          ],
+          "nativeBounds": [
+            204,
+            20,
+            608,
+            869
+          ],
+          "scale": 0.7502944640753828,
+          "position": [
+            55,
+            45
+          ],
+          "target": {
+            "height": 637,
+            "x": 372.0,
+            "bottom": 698
+          }
         },
         {
-          "source": "sprites/rebuilt/sheets/lemon1_loop_00-01-02-03.png",
-          "sourceCell": 2,
-          "nativeSize": [
-            627,
-            627
+          "source": "sprites/raw/native-correction/lemon1-02-03.png",
+          "sourceSha256": "035169018620eb7dc9881e019648b0012e2eac61d3c1fad14dbe7f03da22c472",
+          "cell": [
+            0,
+            0,
+            887,
+            887
           ],
-          "sourceLimited": true,
-          "fallback512": false,
-          "nativeGreenRegion": null,
-          "frame": 2,
-          "scale512": 0.9783549783549783,
-          "dx512": -5,
-          "dy512": 21
+          "nativeSize": [
+            887,
+            887
+          ],
+          "nativeBounds": [
+            242,
+            26,
+            710,
+            862
+          ],
+          "scale": 0.7583732057416268,
+          "position": [
+            -20,
+            43
+          ],
+          "target": {
+            "height": 634,
+            "x": 372.0,
+            "bottom": 697
+          }
         },
         {
-          "source": "sprites/rebuilt/sheets/lemon1_loop_00-01-02-03.png",
-          "sourceCell": 3,
-          "nativeSize": [
-            627,
-            627
+          "source": "sprites/raw/native-correction/lemon1-02-03.png",
+          "sourceSha256": "035169018620eb7dc9881e019648b0012e2eac61d3c1fad14dbe7f03da22c472",
+          "cell": [
+            887,
+            0,
+            1774,
+            887
           ],
-          "sourceLimited": true,
-          "fallback512": false,
-          "nativeGreenRegion": null,
-          "frame": 3,
-          "scale512": 0.9783549783549783,
-          "dx512": 15,
-          "dy512": 21
+          "nativeSize": [
+            887,
+            887
+          ],
+          "nativeBounds": [
+            149,
+            27,
+            616,
+            862
+          ],
+          "scale": 0.7592814371257485,
+          "position": [
+            48,
+            43
+          ],
+          "target": {
+            "height": 634,
+            "x": 370.5,
+            "bottom": 697
+          }
         },
         {
-          "source": "sprites/rebuilt/sheets/lemon1_loop_04-05-06-07.png",
-          "sourceCell": 0,
-          "nativeSize": [
-            627,
-            627
+          "source": "sprites/raw/native-correction/lemon1-04-05.png",
+          "sourceSha256": "f50ef6bbb6d622dd98f7f23027b35a22f5fdbea44cf1c9f93a4e5de526acbc2e",
+          "cell": [
+            0,
+            0,
+            887,
+            887
           ],
-          "sourceLimited": true,
-          "fallback512": false,
-          "nativeGreenRegion": null,
-          "frame": 4,
-          "scale512": 0.9720430107526882,
-          "dx512": -18,
-          "dy512": 17
+          "nativeSize": [
+            887,
+            887
+          ],
+          "nativeBounds": [
+            285,
+            23,
+            730,
+            875
+          ],
+          "scale": 0.7429577464788732,
+          "position": [
+            -13,
+            46
+          ],
+          "target": {
+            "height": 633,
+            "x": 342.0,
+            "bottom": 696
+          }
         },
         {
-          "source": "sprites/rebuilt/sheets/lemon1_loop_04-05-06-07.png",
-          "sourceCell": 1,
-          "nativeSize": [
-            627,
-            627
+          "source": "sprites/raw/native-correction/lemon1-04-05.png",
+          "sourceSha256": "f50ef6bbb6d622dd98f7f23027b35a22f5fdbea44cf1c9f93a4e5de526acbc2e",
+          "cell": [
+            887,
+            0,
+            1774,
+            887
           ],
-          "sourceLimited": true,
-          "fallback512": false,
-          "nativeGreenRegion": null,
-          "frame": 5,
-          "scale512": 0.9720430107526882,
-          "dx512": 33,
-          "dy512": 17
+          "nativeSize": [
+            887,
+            887
+          ],
+          "nativeBounds": [
+            149,
+            24,
+            592,
+            876
+          ],
+          "scale": 0.7429577464788732,
+          "position": [
+            89,
+            46
+          ],
+          "target": {
+            "height": 633,
+            "x": 342.0,
+            "bottom": 696
+          }
         },
         {
-          "source": "sprites/rebuilt/sheets/lemon1_loop_04-05-06-07.png",
-          "sourceCell": 2,
-          "nativeSize": [
-            627,
-            627
+          "source": "sprites/raw/native-correction/lemon1-06-07.png",
+          "sourceSha256": "49b6c2bc031176928862ae82dea948451642091e2f5fdb3aade4614f631ccad7",
+          "cell": [
+            0,
+            0,
+            887,
+            887
           ],
-          "sourceLimited": true,
-          "fallback512": false,
-          "nativeGreenRegion": null,
-          "frame": 6,
-          "scale512": 0.9596602972399151,
-          "dx512": -17,
-          "dy512": 33
+          "nativeSize": [
+            887,
+            887
+          ],
+          "nativeBounds": [
+            243,
+            42,
+            683,
+            866
+          ],
+          "scale": 0.7694174757281553,
+          "position": [
+            -9,
+            34
+          ],
+          "target": {
+            "height": 634,
+            "x": 340.0,
+            "bottom": 700
+          }
         },
         {
-          "source": "sprites/rebuilt/sheets/lemon1_loop_04-05-06-07.png",
-          "sourceCell": 3,
-          "nativeSize": [
-            627,
-            627
+          "source": "sprites/raw/native-correction/lemon1-06-07.png",
+          "sourceSha256": "49b6c2bc031176928862ae82dea948451642091e2f5fdb3aade4614f631ccad7",
+          "cell": [
+            887,
+            0,
+            1774,
+            887
           ],
-          "sourceLimited": true,
-          "fallback512": false,
-          "nativeGreenRegion": null,
-          "frame": 7,
-          "scale512": 0.9596602972399151,
-          "dx512": 36,
-          "dy512": 33
+          "nativeSize": [
+            887,
+            887
+          ],
+          "nativeBounds": [
+            101,
+            43,
+            663,
+            865
+          ],
+          "scale": 0.7688564476885644,
+          "position": [
+            30,
+            33
+          ],
+          "target": {
+            "height": 632,
+            "x": 343.0,
+            "bottom": 698
+          }
         },
         {
-          "source": "sprites/rebuilt/sheets/lemon1_loop_08-09-10-11.png",
-          "sourceCell": 0,
-          "nativeSize": [
-            627,
-            627
+          "source": "sprites/raw/native-correction/lemon1-08-09.png",
+          "sourceSha256": "fc4aff4e3105ab31184e27dd8579fc8f003594dc8504350e916e41dfff6c7e21",
+          "cell": [
+            0,
+            0,
+            887,
+            887
           ],
-          "sourceLimited": true,
-          "fallback512": false,
-          "nativeGreenRegion": null,
-          "frame": 8,
-          "scale512": 0.9658119658119658,
-          "dx512": -21,
-          "dy512": 20
+          "nativeSize": [
+            887,
+            887
+          ],
+          "nativeBounds": [
+            171,
+            24,
+            688,
+            873
+          ],
+          "scale": 0.7479387514723204,
+          "position": [
+            26,
+            45
+          ],
+          "target": {
+            "height": 635,
+            "x": 369.0,
+            "bottom": 698
+          }
         },
         {
-          "source": "sprites/rebuilt/sheets/lemon1_loop_08-09-10-11.png",
-          "sourceCell": 1,
-          "nativeSize": [
-            627,
-            627
+          "source": "sprites/raw/native-correction/lemon1-08-09.png",
+          "sourceSha256": "fc4aff4e3105ab31184e27dd8579fc8f003594dc8504350e916e41dfff6c7e21",
+          "cell": [
+            887,
+            0,
+            1774,
+            887
           ],
-          "sourceLimited": true,
-          "fallback512": false,
-          "nativeGreenRegion": null,
-          "frame": 9,
-          "scale512": 0.9637526652452025,
-          "dx512": 36,
-          "dy512": 21
+          "nativeSize": [
+            887,
+            887
+          ],
+          "nativeBounds": [
+            174,
+            24,
+            679,
+            873
+          ],
+          "scale": 0.7479387514723204,
+          "position": [
+            58,
+            46
+          ],
+          "target": {
+            "height": 635,
+            "x": 373.0,
+            "bottom": 699
+          }
         },
         {
-          "source": "sprites/rebuilt/sheets/lemon1_loop_08-09-10-11.png",
-          "sourceCell": 2,
-          "nativeSize": [
-            627,
-            627
+          "source": "sprites/raw/native-correction/lemon1-10-11.png",
+          "sourceSha256": "91291eaee21d3f897ddef6f1b37b36090f25a3e091982620f1339d4b302e0ab3",
+          "cell": [
+            0,
+            0,
+            887,
+            887
           ],
-          "sourceLimited": true,
-          "fallback512": false,
-          "nativeGreenRegion": null,
-          "frame": 10,
-          "scale512": 0.9515789473684211,
-          "dx512": -15,
-          "dy512": 34
+          "nativeSize": [
+            887,
+            887
+          ],
+          "nativeBounds": [
+            274,
+            29,
+            742,
+            872
+          ],
+          "scale": 0.7520759193357058,
+          "position": [
+            -33,
+            41
+          ],
+          "target": {
+            "height": 634,
+            "x": 344.0,
+            "bottom": 697
+          }
         },
         {
-          "source": "sprites/rebuilt/sheets/lemon1_loop_08-09-10-11.png",
-          "sourceCell": 3,
-          "nativeSize": [
-            627,
-            627
+          "source": "sprites/raw/native-correction/lemon1-10-11.png",
+          "sourceSha256": "91291eaee21d3f897ddef6f1b37b36090f25a3e091982620f1339d4b302e0ab3",
+          "cell": [
+            887,
+            0,
+            1774,
+            887
           ],
-          "sourceLimited": true,
-          "fallback512": false,
-          "nativeGreenRegion": null,
-          "frame": 11,
-          "scale512": 0.9515789473684211,
-          "dx512": 38,
-          "dy512": 34
+          "nativeSize": [
+            887,
+            887
+          ],
+          "nativeBounds": [
+            135,
+            29,
+            625,
+            872
+          ],
+          "scale": 0.7520759193357058,
+          "position": [
+            69,
+            41
+          ],
+          "target": {
+            "height": 634,
+            "x": 343.0,
+            "bottom": 697
+          }
         },
         {
-          "source": "sprites/rebuilt/sheets/lemon1_loop_12-13-14-15.png",
-          "sourceCell": 0,
-          "nativeSize": [
-            627,
-            627
+          "source": "sprites/raw/native-correction/lemon1-12-13.png",
+          "sourceSha256": "bc4af7b2df4dbc00732a62004b057f033cbc1f052bfcd405f2cdeb995e0c259e",
+          "cell": [
+            0,
+            0,
+            887,
+            887
           ],
-          "sourceLimited": true,
-          "fallback512": false,
-          "nativeGreenRegion": null,
-          "frame": 12,
-          "scale512": 0.9637526652452025,
-          "dx512": -17,
-          "dy512": 20
+          "nativeSize": [
+            887,
+            887
+          ],
+          "nativeBounds": [
+            258,
+            30,
+            676,
+            864
+          ],
+          "scale": 0.762589928057554,
+          "position": [
+            -8,
+            40
+          ],
+          "target": {
+            "height": 636,
+            "x": 346.0,
+            "bottom": 698
+          }
         },
         {
-          "source": "sprites/rebuilt/sheets/lemon1_loop_12-13-14-15.png",
-          "sourceCell": 1,
-          "nativeSize": [
-            627,
-            627
+          "source": "sprites/raw/native-correction/lemon1-12-13.png",
+          "sourceSha256": "bc4af7b2df4dbc00732a62004b057f033cbc1f052bfcd405f2cdeb995e0c259e",
+          "cell": [
+            887,
+            0,
+            1774,
+            887
           ],
-          "sourceLimited": true,
-          "fallback512": false,
-          "nativeGreenRegion": null,
-          "frame": 13,
-          "scale512": 0.9637526652452025,
-          "dx512": 37,
-          "dy512": 20
+          "nativeSize": [
+            887,
+            887
+          ],
+          "nativeBounds": [
+            206,
+            30,
+            620,
+            864
+          ],
+          "scale": 0.7613908872901679,
+          "position": [
+            43,
+            41
+          ],
+          "target": {
+            "height": 635,
+            "x": 347.0,
+            "bottom": 698
+          }
         },
         {
-          "source": "sprites/rebuilt/sheets/lemon1_loop_12-13-14-15.png",
-          "sourceCell": 2,
-          "nativeSize": [
-            627,
-            627
+          "source": "sprites/raw/native-correction/lemon1-14-15.png",
+          "sourceSha256": "05bf82b4965ea2f252b950ad3ad39bf6b1ec054d5a74243df84fbe7120e9afe2",
+          "cell": [
+            0,
+            0,
+            887,
+            887
           ],
-          "sourceLimited": true,
-          "fallback512": false,
-          "nativeGreenRegion": null,
-          "frame": 14,
-          "scale512": 0.9576271186440678,
-          "dx512": -15,
-          "dy512": 34
+          "nativeSize": [
+            887,
+            887
+          ],
+          "nativeBounds": [
+            250,
+            26,
+            699,
+            872
+          ],
+          "scale": 0.7494089834515366,
+          "position": [
+            -3,
+            43
+          ],
+          "target": {
+            "height": 634,
+            "x": 346.0,
+            "bottom": 697
+          }
         },
         {
-          "source": "sprites/rebuilt/sheets/lemon1_loop_12-13-14-15.png",
-          "sourceCell": 3,
-          "nativeSize": [
-            627,
-            627
+          "source": "sprites/raw/native-correction/lemon1-00-01.png",
+          "sourceSha256": "7b28fbf9845fa9e4d977946563ad6abadb1078fa3a87379b594726fe398e5d57",
+          "cell": [
+            0,
+            0,
+            887,
+            887
           ],
-          "sourceLimited": true,
-          "fallback512": false,
-          "nativeGreenRegion": null,
-          "frame": 15,
-          "scale512": 0.9576271186440678,
-          "dx512": 39,
-          "dy512": 34
+          "nativeSize": [
+            887,
+            887
+          ],
+          "nativeBounds": [
+            245,
+            20,
+            711,
+            869
+          ],
+          "scale": 0.7455830388692579,
+          "position": [
+            2,
+            52
+          ],
+          "target": {
+            "height": 633,
+            "x": 345.0,
+            "bottom": 700
+          }
         }
       ],
-      "exactAnchors": {
-        "0": "idle1_loop:0",
-        "15": "idle1_loop:0"
-      },
-      "rate": 0.7,
+      "sourcePipeline": "native-strips-v1",
       "count": 16,
       "fps": 10,
-      "holds": {},
+      "holds": {
+        "0": 2,
+        "1": 2,
+        "2": 2,
+        "3": 4,
+        "4": 2,
+        "5": 2,
+        "6": 2,
+        "7": 5,
+        "8": 2,
+        "9": 2,
+        "10": 2,
+        "11": 5,
+        "12": 2,
+        "13": 2,
+        "14": 2,
+        "15": 2
+      },
       "repeats": [],
+      "rate": 0.7,
+      "sourceLimited": false,
       "size": [
         720,
         720
@@ -874,181 +1129,178 @@
       "frameHashes": [
         {
           "frame": 0,
-          "sha256": "9ec4a182aef2d98aa0a2e28c7ac01036ea56a3d76af144c9dc6ad2c16571f645",
+          "sha256": "db055418facdf6053dc6cbf4276ef35d32fe078825db048adea33d896e8f3340",
           "bbox": [
-            189,
-            66,
-            526,
-            701
-          ]
-        },
-        {
-          "frame": 1,
-          "sha256": "2b3fda76b0611fe5ce20726475687eff506e7f97551b445dc8f8ac7962cd6408",
-          "bbox": [
-            209,
-            58,
-            510,
-            701
-          ]
-        },
-        {
-          "frame": 2,
-          "sha256": "a233ce8c35f03cdc49dedd6784f51dcc5d9c259ded2e860e1c5c0b2bf334719a",
-          "bbox": [
-            155,
-            59,
-            510,
-            701
-          ]
-        },
-        {
-          "frame": 3,
-          "sha256": "e031960dd043f1d710993b06a0b7407131cd625347cbe93db193041cfc2636a3",
-          "bbox": [
-            158,
-            59,
-            510,
-            701
-          ]
-        },
-        {
-          "frame": 4,
-          "sha256": "bdd1a81b9b668b2a436f510971fb1e85d5e0dda8d93bce3890e7ce1e46ac1dd6",
-          "bbox": [
-            208,
-            59,
-            519,
-            700
-          ]
-        },
-        {
-          "frame": 5,
-          "sha256": "c6e7fc819acfcde1883135d382a88923f1df20b6b9ce68b1bb9f56a9dc5d4d9b",
-          "bbox": [
-            209,
-            59,
-            519,
-            700
-          ]
-        },
-        {
-          "frame": 6,
-          "sha256": "a78d29cfa579514291bbfb696ff94b52a18dc4722c9c2959742aa9e58ab5ae5f",
-          "bbox": [
-            205,
-            62,
-            513,
+            181,
+            64,
+            535,
             703
           ]
         },
         {
-          "frame": 7,
-          "sha256": "953b974110a01a0b3d24f3d7d08cfb6f69e0521378cae819da3d3082239282c4",
+          "frame": 1,
+          "sha256": "e0428fce9280551efb166360ea6c0e3f6af01f6a5f790b202504c117b676a879",
           "bbox": [
-            118,
-            62,
-            515,
-            702
-          ]
-        },
-        {
-          "frame": 8,
-          "sha256": "e2f70d21b957e863dd2634f91073ca3d34fdca9a79dfa39e639ab121d3df1e09",
-          "bbox": [
-            151,
-            60,
-            517,
-            701
-          ]
-        },
-        {
-          "frame": 9,
-          "sha256": "bf40b8b98405802b996ccffc006bc4f06cd88ae8019159696f0873e60a3df811",
-          "bbox": [
-            199,
-            61,
-            548,
-            702
-          ]
-        },
-        {
-          "frame": 10,
-          "sha256": "9a775593a0ef35cdc94ddc264359fe79215ec42b097d603c71f3ce906b5f7a9f",
-          "bbox": [
-            199,
-            60,
-            524,
-            701
-          ]
-        },
-        {
-          "frame": 11,
-          "sha256": "84069f9730e20d17b91308a8720100b366bd8e76bb2a6ae1b8b7fa2178b5a518",
-          "bbox": [
-            199,
-            60,
-            525,
-            701
-          ]
-        },
-        {
-          "frame": 12,
-          "sha256": "3c73cdd7b09a6b04e9a0995963e8bcfa891ea2835d5b6934dda692d9c51e5192",
-          "bbox": [
-            204,
-            59,
+            206,
+            57,
             514,
             701
           ]
         },
         {
-          "frame": 13,
-          "sha256": "91ea962889a3bdb7710229b5d5bcfc7a34c8429948363c7f7a2a8f6d697bc3aa",
+          "frame": 2,
+          "sha256": "cca12d6b289fb695284044901a2324f7c2aea7fdc07c2385f166e3364a174d5b",
           "bbox": [
-            208,
+            160,
             60,
-            515,
+            522,
+            699
+          ]
+        },
+        {
+          "frame": 3,
+          "sha256": "1a0162fb8100385cec1df83c1389a7fd33cf6ec2cfd4abb5acd7765ce8d56032",
+          "bbox": [
+            158,
+            60,
+            518,
+            699
+          ]
+        },
+        {
+          "frame": 4,
+          "sha256": "0f0536edb8c37c05eb37688d585cdc0af52c167b7c669d9ac30224aef858d51a",
+          "bbox": [
+            196,
+            60,
+            532,
+            699
+          ]
+        },
+        {
+          "frame": 5,
+          "sha256": "4d5b03706b0c5d346e7b82ca1da80439f65f13373730377e787d51e88a1edd19",
+          "bbox": [
+            197,
+            61,
+            531,
+            699
+          ]
+        },
+        {
+          "frame": 6,
+          "sha256": "24c34f15cb7af7f62dad9389236b41917b91d751f3bd327a745b6fa116fab917",
+          "bbox": [
+            175,
+            64,
+            519,
+            702
+          ]
+        },
+        {
+          "frame": 7,
+          "sha256": "f0420e291ea4f0357e374d51cb47c38549c307ca787cc2fdf9038fcdada08dbf",
+          "bbox": [
+            105,
+            63,
+            543,
+            701
+          ]
+        },
+        {
+          "frame": 8,
+          "sha256": "f6ca330ba298a82a993f8be893ed14737dd4fcb79ca4c3296354729a3e381329",
+          "bbox": [
+            151,
+            61,
+            543,
+            701
+          ]
+        },
+        {
+          "frame": 9,
+          "sha256": "80b0657e1097b34cd891e38170d5a69fac487f317420353078354276a31cb6d1",
+          "bbox": [
+            185,
+            61,
+            568,
+            702
+          ]
+        },
+        {
+          "frame": 10,
+          "sha256": "72044bbae363572198996aa31f0664a7f73183c084a059fdd50d1540400c5f5b",
+          "bbox": [
+            171,
+            60,
+            528,
+            700
+          ]
+        },
+        {
+          "frame": 11,
+          "sha256": "a4a86a1a55b93deddd1cd0e7273e9e6662dc098ccf283b497c9cdabe58e1fa94",
+          "bbox": [
+            167,
+            60,
+            542,
+            700
+          ]
+        },
+        {
+          "frame": 12,
+          "sha256": "8b0bb6c5456866b21e9d1e9287f46d803fb04949b422499a0888f2c5f3d81875",
+          "bbox": [
+            186,
+            60,
+            510,
+            701
+          ]
+        },
+        {
+          "frame": 13,
+          "sha256": "72228bf53ab212cf21668c495f525c816916ea7d37fbfe2ba32e42ec0676ec37",
+          "bbox": [
+            197,
+            61,
+            517,
             701
           ]
         },
         {
           "frame": 14,
-          "sha256": "c87ee2a4aa8ce3e27ccbb7167f1215b314a02e0ccfc247dc8234384aed3455aa",
+          "sha256": "9b021639d7cb7e4f59c01522b2cc1589982b60dba304d8a36a5262ada501cced",
           "bbox": [
-            187,
+            181,
             60,
-            529,
-            701
+            524,
+            699
           ]
         },
         {
           "frame": 15,
-          "sha256": "9ec4a182aef2d98aa0a2e28c7ac01036ea56a3d76af144c9dc6ad2c16571f645",
+          "sha256": "db055418facdf6053dc6cbf4276ef35d32fe078825db048adea33d896e8f3340",
           "bbox": [
-            189,
-            66,
-            526,
-            701
+            181,
+            64,
+            535,
+            703
           ]
         }
       ],
-      "ticks": 16,
-      "expectedDuration": 1.6,
+      "ticks": 40,
+      "expectedDuration": 4.0,
       "review": {
         "staticVisual": true,
-        "runtime": false,
-        "evidence": [
-          "sprites/hd720/qa/special_green_repair/doze06_white_dark_native_compare.png"
-        ]
+        "runtime": true
       },
       "video": "sprites/hd720/videos/anim_lemon1_loop.webm",
-      "videoSHA256": "79db286a3869b30be7d8f28f0befbaea0d2a4622854e04a900f1529dd791f47c",
-      "bytes": 358217,
-      "duration": 1.6,
+      "videoSHA256": "15a1b15e0789aeab43423da56128eec1631f24e2a9474add061c4a70c0acaf5b",
+      "bytes": 525160,
+      "duration": 4.0,
       "decodedAlpha": {
         "decoder": "libvpx-vp9",
-        "frames": 16,
+        "frames": 40,
         "allCornersTransparent": true,
         "opaqueForegroundEveryFrame": true
       },
@@ -1056,337 +1308,7 @@
         "crf": 24,
         "pixFmt": "yuva420p"
       },
-      "previous512Video": {
-        "path": "sprites/rebuilt/videos/anim_lemon1_loop.webm",
-        "bytes": 232545,
-        "sha256": "f1e0d718a16acd7e3a24769f6a7abdd2ff0bbc602abbe67b8dd48477c8b3e23b"
-      },
-      "exactAnchorChecks": [
-        {
-          "frame": 0,
-          "reference": "idle1_loop:0",
-          "byteExact": true
-        },
-        {
-          "frame": 15,
-          "reference": "idle1_loop:0",
-          "byteExact": true
-        }
-      ],
-      "matteRepair": {
-        "condition": "minimum_filter(alpha,size=9)<250 & G-max(R,B)>20 & 20<alpha<250; protectedROIs excluded",
-        "operation": "G=max(R,B) only",
-        "frames": [
-          {
-            "frame": 0,
-            "changedPixels": 0,
-            "changedBBox": null,
-            "beforeSHA256": "9ec4a182aef2d98aa0a2e28c7ac01036ea56a3d76af144c9dc6ad2c16571f645",
-            "beforePixelsSHA256": "fa76d98c31c3e7a925ee147cb72842a130a08622c6f3f4a90da15226dd0094a0",
-            "afterSHA256": "9ec4a182aef2d98aa0a2e28c7ac01036ea56a3d76af144c9dc6ad2c16571f645",
-            "protectedROIs720": [],
-            "alphaRBOutsideMaskOpaqueBBoxExact": true
-          },
-          {
-            "frame": 1,
-            "changedPixels": 242,
-            "changedBBox": [
-              211,
-              61,
-              508,
-              699
-            ],
-            "beforeSHA256": "8f900250beee7b54276778be14f347e93b98273cf188c5f3227895662548b1c4",
-            "beforePixelsSHA256": "78e7ee0fc024eed5155a037062b56f2aad83c4c79213ae6419aced1ebecbb4f2",
-            "afterSHA256": "2b3fda76b0611fe5ce20726475687eff506e7f97551b445dc8f8ac7962cd6408",
-            "protectedROIs720": [],
-            "alphaRBOutsideMaskOpaqueBBoxExact": true
-          },
-          {
-            "frame": 2,
-            "changedPixels": 211,
-            "changedBBox": [
-              179,
-              61,
-              504,
-              696
-            ],
-            "beforeSHA256": "cf6d15bba9e14f58bcb7cc2d56bfd0fbfc27e4c1b6b9e20049d4f0b94c1ce24b",
-            "beforePixelsSHA256": "4d5c961462b1a7149ece4d2390d690ba3eb962dee05ad66c090a99db110238a9",
-            "afterSHA256": "a233ce8c35f03cdc49dedd6784f51dcc5d9c259ded2e860e1c5c0b2bf334719a",
-            "protectedROIs720": [
-              [
-                145,
-                360,
-                250,
-                460
-              ]
-            ],
-            "alphaRBOutsideMaskOpaqueBBoxExact": true
-          },
-          {
-            "frame": 3,
-            "changedPixels": 239,
-            "changedBBox": [
-              190,
-              61,
-              504,
-              695
-            ],
-            "beforeSHA256": "e58d63f5ae12daf20721726a824b167a22414a59a83dec24e61f9eab56965800",
-            "beforePixelsSHA256": "7d969b9e878708281a09dfbca03a9fed270b58d8bb4bd94b0327ea05cc31f4db",
-            "afterSHA256": "e031960dd043f1d710993b06a0b7407131cd625347cbe93db193041cfc2636a3",
-            "protectedROIs720": [
-              [
-                205,
-                220,
-                320,
-                355
-              ]
-            ],
-            "alphaRBOutsideMaskOpaqueBBoxExact": true
-          },
-          {
-            "frame": 4,
-            "changedPixels": 275,
-            "changedBBox": [
-              210,
-              63,
-              517,
-              689
-            ],
-            "beforeSHA256": "4985281332d31603baf4cd7b1d353767ebc7e73446089f7e067dcf7f9ac81793",
-            "beforePixelsSHA256": "d9f86ef69a7afe66a2f6fd23fd87eb01a71162336ef4a7c959c57d6869c4e4e1",
-            "afterSHA256": "bdd1a81b9b668b2a436f510971fb1e85d5e0dda8d93bce3890e7ce1e46ac1dd6",
-            "protectedROIs720": [
-              [
-                260,
-                220,
-                355,
-                335
-              ]
-            ],
-            "alphaRBOutsideMaskOpaqueBBoxExact": true
-          },
-          {
-            "frame": 5,
-            "changedPixels": 354,
-            "changedBBox": [
-              211,
-              65,
-              514,
-              692
-            ],
-            "beforeSHA256": "01bcb2247d687c56df88e21642c880af4b8e075c1b27b0ba9bb29b1a7b2bf93d",
-            "beforePixelsSHA256": "77222658e8580a19f5a0741a2048d4ec8944885bdb91756b421c3f6f8e0c81ce",
-            "afterSHA256": "c6e7fc819acfcde1883135d382a88923f1df20b6b9ce68b1bb9f56a9dc5d4d9b",
-            "protectedROIs720": [
-              [
-                260,
-                220,
-                355,
-                335
-              ]
-            ],
-            "alphaRBOutsideMaskOpaqueBBoxExact": true
-          },
-          {
-            "frame": 6,
-            "changedPixels": 339,
-            "changedBBox": [
-              207,
-              70,
-              511,
-              701
-            ],
-            "beforeSHA256": "5d15968ad67746a232f05bf50b5ff8ced292b907cfabb2c942f8b957ed449a81",
-            "beforePixelsSHA256": "e16df6483019d0d99be2c57d3cd5da76c813c9ecf0f09fe5609f2df1a5203666",
-            "afterSHA256": "a78d29cfa579514291bbfb696ff94b52a18dc4722c9c2959742aa9e58ab5ae5f",
-            "protectedROIs720": [
-              [
-                260,
-                260,
-                355,
-                380
-              ]
-            ],
-            "alphaRBOutsideMaskOpaqueBBoxExact": true
-          },
-          {
-            "frame": 7,
-            "changedPixels": 283,
-            "changedBBox": [
-              227,
-              65,
-              512,
-              700
-            ],
-            "beforeSHA256": "f81a3aaad9276a03b85935c069d0ffa69e2a0004bbf56a64f7e3096a135226c5",
-            "beforePixelsSHA256": "8fdaf930bd1232a8ca69da3dddcea8dee3dfd745dfc6debc50230e371757ad82",
-            "afterSHA256": "953b974110a01a0b3d24f3d7d08cfb6f69e0521378cae819da3d3082239282c4",
-            "protectedROIs720": [
-              [
-                105,
-                270,
-                235,
-                400
-              ]
-            ],
-            "alphaRBOutsideMaskOpaqueBBoxExact": true
-          },
-          {
-            "frame": 8,
-            "changedPixels": 309,
-            "changedBBox": [
-              187,
-              62,
-              511,
-              698
-            ],
-            "beforeSHA256": "4caf0253731b8c5d5a03dc6f7cfcb26879252eafffe2a9aefc54a7275c84e866",
-            "beforePixelsSHA256": "d564f522853bc224f9dc71281b4b989fef3989ca499294e096418f2e7b51b90b",
-            "afterSHA256": "e2f70d21b957e863dd2634f91073ca3d34fdca9a79dfa39e639ab121d3df1e09",
-            "protectedROIs720": [
-              [
-                110,
-                270,
-                245,
-                410
-              ]
-            ],
-            "alphaRBOutsideMaskOpaqueBBoxExact": true
-          },
-          {
-            "frame": 9,
-            "changedPixels": 423,
-            "changedBBox": [
-              201,
-              63,
-              546,
-              700
-            ],
-            "beforeSHA256": "3984fc35f10eb1549e6feefc7eef98fde53ff618f5b7944feac1022c5ead4d1c",
-            "beforePixelsSHA256": "7b3b5859764f4072c0873ac88a3f811818201a93eb0d29eeb4f6f734757020f5",
-            "afterSHA256": "bf40b8b98405802b996ccffc006bc4f06cd88ae8019159696f0873e60a3df811",
-            "protectedROIs720": [
-              [
-                235,
-                260,
-                350,
-                405
-              ]
-            ],
-            "alphaRBOutsideMaskOpaqueBBoxExact": true
-          },
-          {
-            "frame": 10,
-            "changedPixels": 290,
-            "changedBBox": [
-              207,
-              63,
-              519,
-              694
-            ],
-            "beforeSHA256": "27796c23a114c6562412d17b15a1b9cf03b2970bbe5e42f3d08744cf1b2ca028",
-            "beforePixelsSHA256": "a5b9712ced11a388d7870f9cef242e33afd5d3cb1fabdf1eda7fbf4fb70cc6e7",
-            "afterSHA256": "9a775593a0ef35cdc94ddc264359fe79215ec42b097d603c71f3ce906b5f7a9f",
-            "protectedROIs720": [
-              [
-                200,
-                310,
-                325,
-                440
-              ]
-            ],
-            "alphaRBOutsideMaskOpaqueBBoxExact": true
-          },
-          {
-            "frame": 11,
-            "changedPixels": 286,
-            "changedBBox": [
-              210,
-              63,
-              518,
-              694
-            ],
-            "beforeSHA256": "a6bbf3b06cf23b579606d1b3415bd9a1fb02091d09e142679377fa88bc18fdce",
-            "beforePixelsSHA256": "6a29ddb997b43cb867194e38ea2ecfc309221e8072c3cbbdb34cfed9c7eeee86",
-            "afterSHA256": "84069f9730e20d17b91308a8720100b366bd8e76bb2a6ae1b8b7fa2178b5a518",
-            "protectedROIs720": [
-              [
-                205,
-                285,
-                335,
-                430
-              ]
-            ],
-            "alphaRBOutsideMaskOpaqueBBoxExact": true
-          },
-          {
-            "frame": 12,
-            "changedPixels": 267,
-            "changedBBox": [
-              206,
-              62,
-              512,
-              699
-            ],
-            "beforeSHA256": "2258c38f6696a806688a31f6a02e9a22f0e780a4a1bc042831063cb6e5151cbc",
-            "beforePixelsSHA256": "d65dcb555f5141fd9ab4e9e3b5e517ada7e370a622d706c0f8358437eff0b6c4",
-            "afterSHA256": "3c73cdd7b09a6b04e9a0995963e8bcfa891ea2835d5b6934dda692d9c51e5192",
-            "protectedROIs720": [
-              [
-                195,
-                460,
-                295,
-                595
-              ]
-            ],
-            "alphaRBOutsideMaskOpaqueBBoxExact": true
-          },
-          {
-            "frame": 13,
-            "changedPixels": 244,
-            "changedBBox": [
-              209,
-              62,
-              513,
-              699
-            ],
-            "beforeSHA256": "9670abd517d6dc0a1288a41636856694309166362f0d407549c236720321ecbe",
-            "beforePixelsSHA256": "805b27005ddee5ede3c5a5a8b0fe57016a2b57e8130ccaee616e4c407254ef86",
-            "afterSHA256": "91ea962889a3bdb7710229b5d5bcfc7a34c8429948363c7f7a2a8f6d697bc3aa",
-            "protectedROIs720": [],
-            "alphaRBOutsideMaskOpaqueBBoxExact": true
-          },
-          {
-            "frame": 14,
-            "changedPixels": 211,
-            "changedBBox": [
-              199,
-              62,
-              521,
-              699
-            ],
-            "beforeSHA256": "a074d8a83f959462ade6d82b4039f112d9340893adb368593338c92aeab8fe36",
-            "beforePixelsSHA256": "8a428522089ea87015f2a8926947fe03e11e72c4f7475bee556bc05038dc6fef",
-            "afterSHA256": "c87ee2a4aa8ce3e27ccbb7167f1215b314a02e0ccfc247dc8234384aed3455aa",
-            "protectedROIs720": [],
-            "alphaRBOutsideMaskOpaqueBBoxExact": true
-          },
-          {
-            "frame": 15,
-            "changedPixels": 0,
-            "changedBBox": null,
-            "beforeSHA256": "9ec4a182aef2d98aa0a2e28c7ac01036ea56a3d76af144c9dc6ad2c16571f645",
-            "beforePixelsSHA256": "fa76d98c31c3e7a925ee147cb72842a130a08622c6f3f4a90da15226dd0094a0",
-            "afterSHA256": "9ec4a182aef2d98aa0a2e28c7ac01036ea56a3d76af144c9dc6ad2c16571f645",
-            "protectedROIs720": [],
-            "alphaRBOutsideMaskOpaqueBBoxExact": true
-          }
-        ],
-        "changedPixels": 3973
-      }
+      "reviewRecord": "anims/calm_motion_review.md"
     },
     "chem1_loop": {
       "frames": [
@@ -9267,12 +9189,12 @@
     }
   },
   "originalSources": {
-    "anims/rebuild_manifest.json": "c0c91f9c856d4953f262553f340ffb6b86839da681a2a523807764729042611a",
+    "anims/rebuild_manifest.json": "4c1f77c503597411714e356491a82dd44efd29ac8029e8b024322226ed5935a4",
     "sprites/rebuilt/configs/doze1_registration.json": "60ca8cbad77783a80f39e7a97b988ca6977f11ce6b10c09fe20e591f9c01a92d",
     "sprites/rebuilt/sheets/doze1_loop_00-01-02-03.png": "75021ed2951c10f2eb5ffcdc586585df1505b3487cbed810fec7b9d009e09397",
     "sprites/rebuilt/sheets/doze1_loop_04-05-06-07.png": "c607d7c4cffea83dac4b7f216bdbcb44d4c81fabe4483e8579651d4d42612e1a",
     "sprites/rebuilt/sheets/doze1_loop_08-09-10-11.png": "5c4288c02c3ceb5bbbd95a15fd86fa962cb19925e853ed37232dae9f1928cb91",
-    "sprites/rebuilt/configs/lemon1_loop_registration.json": "29b15e7c40e6bdc45c31c3914502fa16e30a0c681c887b092f5668a2100d9935",
+    "sprites/rebuilt/configs/lemon1_loop_registration.json": "cd7e60dc747bd906b5784ccac3cd8a5bb64b3312d5e3f13f35247710a9050baf",
     "sprites/rebuilt/sheets/lemon1_loop_00-01-02-03.png": "8afe12c3954e6de74ef47e00c42ffe48d18f8014d1899c5cf579b02f1205a0da",
     "sprites/rebuilt/sheets/lemon1_loop_04-05-06-07.png": "3552dd533970599901b642e80f75a67086b3c491e9086d87b28e2ff00649161e",
     "sprites/rebuilt/sheets/lemon1_loop_08-09-10-11.png": "520089e1394a3df17615d3077a3226681bbda6194940e1a9382c8b2d256c4beb",
@@ -9354,21 +9276,7 @@
     "sprites/raw/note1_loop_15.jpg": "a2bfa046ea22853f4dda107efa7da4ab3599521eb24f644def7cef24958698e3",
     "sprites/raw/note1_loop_16.jpg": "27deeb3c173372939e1b8ea50fb2de9cee0e7a9ac49f3fceea132be6763194df",
     "sprites/raw/note1_loop_17.jpg": "f12c0d048683013ccae2c52b2a44c077bc0be00c37cf76c390369e1444d18afd",
-    "sprites/raw/note1_loop_18.jpg": "52e96d885d6d894a9ab070d1ebfc159f90bafb16e67b7f0f654a83fb4352e7cd"
-  },
-  "byteTotals": {
-    "previous512": 4784539,
-    "new720": 7358343,
-    "ratio": 1.5379418999406211
-  },
-  "matteRepairFinal": {
-    "changedPixels": 31057,
-    "doze06ChangedPixels": 518,
-    "originalSourcesUnchanged": true,
-    "alchemySixPNGAndVideoByteExactToPreviousHead": true,
-    "allSharedAnchorsExact": true,
-    "nativeDozeFourteenReproductionExact": true,
-    "whiteDarkNativeComparisonInspected": true,
-    "eightUpdatedContactsInspected": true
+    "sprites/raw/note1_loop_18.jpg": "52e96d885d6d894a9ab070d1ebfc159f90bafb16e67b7f0f654a83fb4352e7cd",
+    "anims/lemon1_loop.json": "4bfbde8244273a2d6b782c7fe8b2927b3f254bf1c3b8ec4dfaf86bb99faa0db3"
   }
 }

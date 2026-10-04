@@ -111,7 +111,7 @@ F3 선택기·자동 추첨·외부 상태 명령도 같은 모드 안에서만 
 마이크 입력 시 해당 복장의 말하기로 전환하고 무음이 되면 같은 복장의 대기로 복귀한다.
 대기는 발을 고정한 4초 주기이며, 말하기는 몸체를 고정하고 입 모양만 바꾼다. 테마 동작은 5.67~6.67초로, 이동 포즈는 최소 0.25초, 시작·복귀는 0.5초 유지하고 핵심 포즈에는 더 긴 시간을 둔다.
 
-대기·말하기의 얼굴 원본은 내장 ImageGen으로 생성했다. 프롬프트는 `prompts/calm/`, 원본 시트와 기준 몸체는 `sprites/raw/calm/`, 합성 좌표·원본 해시는 `anims/calm_faces.json`에 보관한다. `python tools/compose_calm_motion.py witchidle1 witchbreathe1 witchtalk1`처럼 해당 상태를 지정하면 720/512 PNG와 영상을 재생성한다. Python에는 NumPy·Pillow, FFmpeg에는 `libvpx-vp9` 인코더와 디코더가 필요하다.
+대기·말하기의 얼굴 원본은 내장 ImageGen으로 생성했다. 기념일 4종의 몸체는 기존 고해상도 원본을 사용하며, 마녀의 몸체와 표정은 고해상도로 다시 제작했다. 프롬프트는 `prompts/calm/`과 `prompts/native-correction/`, 새 원본은 `sprites/raw/native-correction/`, 합성 좌표·원본 해시는 `anims/calm_faces.json`에 보관한다. `python tools/compose_calm_motion.py witchidle1 witchbreathe1 witchtalk1`처럼 해당 상태를 지정하면 720/512 PNG와 영상을 재생성한다. Python에는 NumPy·Pillow, FFmpeg에는 `libvpx-vp9` 인코더와 디코더가 필요하다.
 
 `python tools/test_calm_motion.py`는 얼굴 밖 픽셀·발 고정·루프 연결을, `node --test tools/motion_policy.test.js`는 자동 반복 상한과 수동 유지 동작을 검사한다. `preview.html`은 위젯과 같은 프레임 유지 시간·구간 반복·재생 배율을 반영한다.
 예: `?mode=seollal&state=seollal_bow1`, `setPetState("christmas_fishbread1")`.
@@ -167,8 +167,8 @@ window.postMessage({ type: "pet-state", state: "heart1" }, "*");
 
 F3에서 선택하거나 `setPetState`로 실행한다. 18포즈·4.67초 단발 재생 뒤 복귀하며 **계속 유지**로 반복한다.
 챌린지에서 착안해 캐릭터용으로 재구성한 춤이다. 좌우 이동·무릎 반동·발동작을 포함한다.
-기존 16개 키 포즈를 보존하고 춤마다 중간 포즈 2개를 추가했다. 키 포즈는 약 0.267초, 중간 포즈는 0.2초 유지한다.
-내장 ImageGen 원본은 `sprites/raw/inbetweens/`, 프롬프트는 `prompts/inbetweens/`, 삽입 위치와 해시는 `anims/obs_reactions.json`에 있다.
+기존 안무의 키 포즈를 고해상도로 다시 제작하고 춤마다 중간 포즈 2개를 사용한다. 키 포즈는 약 0.267초, 중간 포즈는 0.2초 유지한다. 한 사이클은 18포즈·4.67초다.
+내장 ImageGen 재제작 원본은 `sprites/raw/native-correction/`, 프롬프트는 `prompts/native-correction/`에 있다. 재사용한 중간 포즈는 `sprites/raw/inbetweens/`와 `prompts/inbetweens/`, 삽입 위치와 해시는 `anims/obs_reactions.json`에 있다.
 
 | 상태 | 춤 | 동작 방향 |
 | --- | --- | --- |
@@ -273,30 +273,27 @@ python tools/deploy_pages.py
 
 ## 모션 추가하기
 
-현재 위젯의 기본 리소스는 전체 **62클립 / 846 PNG / 720×720 VP9 알파**다.
-기존 동작·FPS·holds·repeats·상태 재생 속도를 유지하며, 원시 이미지에서 직접 720으로 키잉·정합했다.
-영상 총용량은 기존 14.2MiB에서 21.7MiB로 약 53% 증가했다. 실제로 필요한 영상만 받는 4MiB 캐시는 유지한다.
-1254px 개별 원본과 1024px 필기 원본은 세부 선이 개선되지만, 627px/약314px 시트 셀은 원본 해상도 한계가 남는다.
+현재 위젯의 기본 리소스는 전체 **138클립 / 2,068 PNG / 720×720 VP9 알파**다.
+대기·속도 개선 대상 60클립은 실제 고해상도 원본을 확인했다. 작은 시트 셀을 확대했던 28클립은 다시 제작했고, 기존 고해상도 32클립은 유지했다. 마녀 대기와 연결되는 변신 2클립도 새 기준 포즈에 맞췄다.
+원본 포즈 셀은 최소 720px이며 최종 720px를 만들 때 확대하지 않는다. 512px 호환 자산은 완성된 720px에서 축소한다. 원본 해시·셀 경계·축소 비율은 각 `anims/*.json`과 `anims/native/resolution-correction.json`에 기록한다.
+이번 범위 밖의 일부 기본 모션에는 예전 314/627px 원본의 해상도 한계가 남는다. 필요한 영상만 받는 4MiB 캐시는 유지한다.
 
-전체 재현·검증:
+전체 자산 검증:
 
 720 재현 도구는 `numpy`, `Pillow`, `scipy`와 `ffmpeg`/`ffprobe`가 필요하다.
 
 ```bash
-python tools/build_hd720_root.py
-python tools/build_hd720_dance.py
-python tools/build_hd720_special.py
-python tools/build_hd720_pastry.py
-python tools/audit_hd720.py
+python tools/audit_animation_assets.py --report output/native-correction/asset-audit.json
 node tools/widget_check.js
 node tools/widget_hd720_check.js
 node tools/widget_hd720_check.js --endings
 python tools/deploy_pages.py
 ```
 
-`anims/hd720_manifest.json`이 62개 영상의 프레임·해시·원본·타이밍을 기록한다.
+`anims/hd720_manifest.json`이 138개 영상의 프레임·해시·원본·타이밍을 기록한다.
 재생성 후에는 720 PNG를 육안 검수하고 런타임 검사를 다시 진행한다.
-이전 512 PNG/WebM은 비교와 원본 보존을 위해 유지하며, 기존 생성 절차는 아래와 같다.
+고해상도 재제작 포즈는 `python tools/build_native_motion.py broom1 bounce1 shuffle1 power1 lemon1`처럼 상태를 지정해 조립한다. 전체 대상·원본 검증·현재 검사 결과는 [대기·모션 검수 기록](anims/calm_motion_review.md)에 정리한다.
+512 PNG/WebM도 호환 경로로 제공한다. 고해상도 재제작 항목은 두 해상도를 함께 갱신한다. 과거 저해상도 프레임은 Git 이력에 남아 있으며, 기존 생성 절차는 아래와 같다.
 
 필요한 것: Python 3(`numpy`, `Pillow`, 선택 `scipy`), `ffmpeg`(libvpx-vp9), 환경변수 `GEMINI_API_KEY`.
 

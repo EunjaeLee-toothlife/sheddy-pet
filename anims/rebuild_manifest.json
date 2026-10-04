@@ -11372,82 +11372,32 @@
         "Pose: both arms swinging back down to her sides, hands opening, eyes opening, calm happy smile. Feet close together. No props visible. The small lemon-slice hair clip stays on the same side of her bangs as in the reference image, do not mirror the character.",
         "Pose: SEAMLESS LOOP CLOSER — must match frame 0 exactly: standing upright and relaxed, feet close together under her hips, both arms resting naturally at her sides with open hands, calm small smile, head level. No props visible. The small lemon-slice hair clip stays on the same side of her bangs as in the reference image, do not mirror the character."
       ],
-      "status": "generated",
+      "status": "reviewed",
       "review": {
         "style": true,
-        "motion": false,
+        "motion": true,
         "alpha": true,
         "seams": true
       },
       "sheet": null,
-      "sourceVideoHash": "40bb35fc92e80823e11af42d8f979ef5361c58236821483e8fcc04ae3c2f05e1",
+      "sourceVideoHash": "a712f7cc86f584594e9f0cdaee6f6a16d0a2c5a0db3335f6d611ba72debf21bc",
       "sourceFrameHashes": [
-        "1a3d112bb858f6a394199c5767426b9a2245075d991a2b6dc790c76fb1e3ea88",
-        "ebc34696aef4d365f6453bde944d413aa3bfeafe747972edd09016ed40864b03",
-        "b4c0807010482681f7907790970717922aa1e5bd789716a3ce4e530c8cc8b052",
-        "7ff34849c110a66fba44d1c5988d53a332f9544e99d4d8bab0c9e53513854492",
-        "4dd22650f231bf4f6c26a53b6901b061e2922027432729b187e9079091942af1",
-        "d28988d265dc15e9c80c4a6c8d3cc81184f799fb8d3bda0e96481b9c424688b5",
-        "612775a5fdcaaf9eb792c5f0a1ab3c3900a09c8c209ee3c646a6262f0a37dfbf",
-        "8016b2a4d8a0d60871069bc68a999130cc91a25ee88a288682834464334c96c7",
-        "8d398a7c3c195d870b8c74c25cd768e41b301c70dfecf7e1523214376a3de08f",
-        "da9d4d175ec28923f3bf2e56ddaec4322ad8d02a18aafdc34d1f2c17072cd503",
-        "cca137102f3767d0c4b2c44431162a555b679071b8649a36cfadf2eef6a72789",
-        "ba7c8f095326ead3d443fe20c618a28725ef8065ee6efa8c426fcab2b0475c56",
-        "2b772aa083121fd5d503bd8694fd3b64f53b5d536f31a62b9d6f7f3b8538f75a",
-        "725dd8a83b401807cb990f21dc743ead42167f340d3fd5f8e6b59a6ad53b8e0a",
-        "9993ba992d8ca193d531bf4b05e4b42516659cd3b5451503caf50aef9723c3bf",
-        "9c549b2f454fd1328d0ba4073c0cbc95e5c6753e5ed11798b0a995071733df5b"
-      ],
-      "frameBatches": [
-        {
-          "indices": [
-            0,
-            1,
-            2,
-            3
-          ],
-          "source": "sprites/rebuilt/sheets/lemon1_loop_00-01-02-03.png",
-          "cols": 2,
-          "rows": 2,
-          "keepComponents": true
-        },
-        {
-          "indices": [
-            4,
-            5,
-            6,
-            7
-          ],
-          "source": "sprites/rebuilt/sheets/lemon1_loop_04-05-06-07.png",
-          "cols": 2,
-          "rows": 2,
-          "keepComponents": true
-        },
-        {
-          "indices": [
-            8,
-            9,
-            10,
-            11
-          ],
-          "source": "sprites/rebuilt/sheets/lemon1_loop_08-09-10-11.png",
-          "cols": 2,
-          "rows": 2,
-          "keepComponents": true
-        },
-        {
-          "indices": [
-            12,
-            13,
-            14,
-            15
-          ],
-          "source": "sprites/rebuilt/sheets/lemon1_loop_12-13-14-15.png",
-          "cols": 2,
-          "rows": 2,
-          "keepComponents": true
-        }
+        "25b83a1582d79dbf1b995061e0a89f278ecfaea7d317db74b46e50fcd61b3f0f",
+        "0997d867ee568fc978126ad1d8fea49c137250745a37fac167d642eab7afc5d6",
+        "5411289c05b9fe4fa61946b602d4110bcd060453548fe0a2c80b032fb3b27101",
+        "baa5687eba2ba457625806b378570db21851404238e24303597a62abf1221e02",
+        "3357d1f95ab8a45bf94a9a4cf6b9a6630d82590fc8a7eccb1951f932e286071b",
+        "46a2aa957635286bb272179f74fac659887d008221df681d2ed048825d09b244",
+        "5a74ccdb75c4484b524271fdcc84a929c3a06fe9419f6879ba01ca82dcb95ce9",
+        "d6ccdd1284bb5b4af837912d5824521113af3836a1f812c3885251765621cc42",
+        "16728648d0f0e00914e39cc0e748139b17c094e44d18146c07eea3bda5d4ec22",
+        "1ddc97d064b5a7ec6190a615749a4b2cd8d208b8288dbc8f20ca68c1da0587d0",
+        "0fd83a838bdcfb646c4eb77e364039d468a1c0182cb3f9b07425d4ffebe7f254",
+        "b471cc945c934b88c1829132882a38fb1418b7ad7f314411ae0940cf50200b3c",
+        "519b34a76c1a61da71ffbe2a5f33b3f7859303496b2d87017feab744005a7c92",
+        "a47d7a17d607e1796c182fed6a29ce5871cb3fa39a49e2f53eaa6f840226d00a",
+        "e21893f7f595ac7abe38303942c0e3435a5868d7c546bf8b372e7790dd150bf1",
+        "25b83a1582d79dbf1b995061e0a89f278ecfaea7d317db74b46e50fcd61b3f0f"
       ],
       "candidate": "sprites/rebuilt/videos/anim_lemon1_loop.webm",
       "fps": 10,
@@ -11470,171 +11420,171 @@
           }
         },
         "frameCount": 16,
-        "timingPreserved": false,
+        "timingPreserved": true,
         "frames": [
           {
             "file": "lemon1_loop_00.png",
             "bbox": [
-              134,
-              47,
-              374,
-              499
+              128,
+              45,
+              381,
+              501
             ],
-            "sha256": "bb8fd83bfa72fe4b7607873af7aa7140fe08b57cd037a2696f7e24ecdfa3bdaa"
+            "sha256": "25b83a1582d79dbf1b995061e0a89f278ecfaea7d317db74b46e50fcd61b3f0f"
           },
           {
             "file": "lemon1_loop_01.png",
             "bbox": [
-              147,
+              145,
               40,
-              362,
+              366,
               499
             ],
-            "sha256": "1bc9e639271561a36522e699b15942ca5b81846f588add354afc8f7c06d8d502"
+            "sha256": "0997d867ee568fc978126ad1d8fea49c137250745a37fac167d642eab7afc5d6"
           },
           {
             "file": "lemon1_loop_02.png",
             "bbox": [
-              110,
-              41,
-              361,
-              499
+              113,
+              42,
+              372,
+              498
             ],
-            "sha256": "9eae6746f060f4b587f646f0d71e7d58ed267c552de114fcb0ab8f390bbcc07f"
+            "sha256": "5411289c05b9fe4fa61946b602d4110bcd060453548fe0a2c80b032fb3b27101"
           },
           {
             "file": "lemon1_loop_03.png",
             "bbox": [
-              112,
-              41,
-              364,
-              499
+              111,
+              42,
+              369,
+              498
             ],
-            "sha256": "813d95b7b670c110281b877a8774c38181e64f32439fb903721da70d29fde3ce"
+            "sha256": "baa5687eba2ba457625806b378570db21851404238e24303597a62abf1221e02"
           },
           {
             "file": "lemon1_loop_04.png",
             "bbox": [
-              147,
-              41,
-              369,
-              499
+              138,
+              42,
+              379,
+              498
             ],
-            "sha256": "71f843926232508800b7b61bc675e6a78f71a325592c64e7dbe6a8180262bf11"
+            "sha256": "3357d1f95ab8a45bf94a9a4cf6b9a6630d82590fc8a7eccb1951f932e286071b"
           },
           {
             "file": "lemon1_loop_05.png",
             "bbox": [
-              147,
-              41,
-              370,
-              499
+              139,
+              42,
+              379,
+              498
             ],
-            "sha256": "f01034c1706abe0191ce554fb6d0d691bcbb29d20a5e607ecb3700791695d46c"
+            "sha256": "46a2aa957635286bb272179f74fac659887d008221df681d2ed048825d09b244"
           },
           {
             "file": "lemon1_loop_06.png",
             "bbox": [
-              147,
-              44,
-              366,
-              499
+              124,
+              45,
+              370,
+              500
             ],
-            "sha256": "d0339ab4c7343cae7c7ee7dba34be3421f9bbf90e5bafc9b623c364eb6aaa930"
+            "sha256": "5a74ccdb75c4484b524271fdcc84a929c3a06fe9419f6879ba01ca82dcb95ce9"
           },
           {
             "file": "lemon1_loop_07.png",
             "bbox": [
-              84,
+              74,
               44,
-              368,
+              387,
               499
             ],
-            "sha256": "d485fefb0c239da4c77d6a07766eb56fa463cca5d9992fbac169dcc022dea013"
+            "sha256": "d6ccdd1284bb5b4af837912d5824521113af3836a1f812c3885251765621cc42"
           },
           {
             "file": "lemon1_loop_08.png",
             "bbox": [
-              108,
+              107,
               42,
-              368,
+              387,
               499
             ],
-            "sha256": "29171f9609163b81bd507cb3a59014563da64507584a299c03e883bb72d56bfb"
+            "sha256": "16728648d0f0e00914e39cc0e748139b17c094e44d18146c07eea3bda5d4ec22"
           },
           {
             "file": "lemon1_loop_09.png",
             "bbox": [
-              142,
-              42,
-              391,
-              499
+              131,
+              43,
+              405,
+              500
             ],
-            "sha256": "7768f2a1cbd67e80bf922527275391f6c2ded8bd4cdb526894b75c6c0e8a4be0"
+            "sha256": "1ddc97d064b5a7ec6190a615749a4b2cd8d208b8288dbc8f20ca68c1da0587d0"
           },
           {
             "file": "lemon1_loop_10.png",
             "bbox": [
-              142,
-              41,
-              372,
-              499
+              121,
+              42,
+              376,
+              498
             ],
-            "sha256": "ec8d8eee3613d9468a623a567c5d365c780b77e420a562d970da73bc298d71f6"
+            "sha256": "0fd83a838bdcfb646c4eb77e364039d468a1c0182cb3f9b07425d4ffebe7f254"
           },
           {
             "file": "lemon1_loop_11.png",
             "bbox": [
-              141,
-              41,
-              375,
-              499
+              118,
+              42,
+              386,
+              498
             ],
-            "sha256": "2d5fa3f7f029d31384f1f8dbcb0dc17c02dfaa5297a6ebb7ec7d21fda7892922"
+            "sha256": "b471cc945c934b88c1829132882a38fb1418b7ad7f314411ae0940cf50200b3c"
           },
           {
             "file": "lemon1_loop_12.png",
             "bbox": [
-              143,
+              131,
               42,
-              367,
+              364,
               499
             ],
-            "sha256": "ed78e880ff692618199b769e4e088c4120c93be5bf9a10daf8ac57eb898eb616"
+            "sha256": "519b34a76c1a61da71ffbe2a5f33b3f7859303496b2d87017feab744005a7c92"
           },
           {
             "file": "lemon1_loop_13.png",
             "bbox": [
-              145,
-              42,
-              367,
+              139,
+              43,
+              369,
               499
             ],
-            "sha256": "f8350a6b59677e1cc7edbde8c0f6fcace1b66f8d43e72554ba672ee136934bf0"
+            "sha256": "a47d7a17d607e1796c182fed6a29ce5871cb3fa39a49e2f53eaa6f840226d00a"
           },
           {
             "file": "lemon1_loop_14.png",
             "bbox": [
-              132,
-              41,
-              376,
-              499
+              128,
+              42,
+              374,
+              498
             ],
-            "sha256": "77a44241582d5cca9525444ae8e4684ab7319e536a09ed58b0bc432a78389079"
+            "sha256": "e21893f7f595ac7abe38303942c0e3435a5868d7c546bf8b372e7790dd150bf1"
           },
           {
             "file": "lemon1_loop_15.png",
             "bbox": [
-              134,
-              47,
-              374,
-              499
+              128,
+              45,
+              381,
+              501
             ],
-            "sha256": "bb8fd83bfa72fe4b7607873af7aa7140fe08b57cd037a2696f7e24ecdfa3bdaa"
+            "sha256": "25b83a1582d79dbf1b995061e0a89f278ecfaea7d317db74b46e50fcd61b3f0f"
           }
         ],
-        "originalsUnchanged": false,
-        "videoSha256": "85e93f52d35308b5201886875940b29e03beba515f7046ada50bbde3562cfa7d",
+        "originalsUnchanged": true,
+        "videoSha256": "919f3326ceb4b6a987306bf692ba77c4f8515700d94129a8894af4a916709bec",
         "framesTouchingCanvas": [],
         "exactSeamAnchors": [],
         "decodedAlpha": {
@@ -11650,43 +11600,506 @@
           ]
         }
       },
-      "method": "Four sharp 2x2 ImageGen batches plus narrow hand-continuity edits; standing body height and foot baseline registered to canonical reference",
+      "method": "ImageGen 고해상도 원본에서 확대 없이 720/512로 조립",
       "pixelInvariants": {
-        "base": "sprites/rebuilt/poses/idle_open_00.png",
+        "base": "sprites/rebuilt/frames/lemon1_loop/lemon1_loop_00.png",
         "canonicalFrames": [
           0,
           15
         ]
       },
-      "reviewNotes": "Final source/action, clean interior/anatomy, alpha/timing, loop/state-boundary review approved for current hashes. Actual32-case runtime covers39 clips; five priority families additionally inspected from the real widget canvas. See finalReview evidence and its stated observation limits.",
-      "compositionPlan": "sprites/rebuilt/configs/lemon1_loop_registration.json",
-      "reviewHistoryNote": "Visual action comparison preserves reveal/present/bite/chew/sour tremble/head shake/exhale/thumbs-up/prop hiding. Corrects original sudden hand switch and whole lemon changing into slice. Browser replay and transitions pending.",
+      "compositionPlan": "anims/native/geometry.json",
+      "sourcePipeline": "native-strips-v1",
+      "nativeSources": [
+        {
+          "source": "sprites/raw/native-correction/lemon1-00-01.png",
+          "sourceSha256": "7b28fbf9845fa9e4d977946563ad6abadb1078fa3a87379b594726fe398e5d57",
+          "cell": [
+            0,
+            0,
+            887,
+            887
+          ],
+          "nativeSize": [
+            887,
+            887
+          ],
+          "nativeBounds": [
+            245,
+            20,
+            711,
+            869
+          ],
+          "scale": 0.7455830388692579,
+          "position": [
+            2,
+            52
+          ],
+          "target": {
+            "height": 633,
+            "x": 345.0,
+            "bottom": 700
+          }
+        },
+        {
+          "source": "sprites/raw/native-correction/lemon1-00-01.png",
+          "sourceSha256": "7b28fbf9845fa9e4d977946563ad6abadb1078fa3a87379b594726fe398e5d57",
+          "cell": [
+            887,
+            0,
+            1774,
+            887
+          ],
+          "nativeSize": [
+            887,
+            887
+          ],
+          "nativeBounds": [
+            204,
+            20,
+            608,
+            869
+          ],
+          "scale": 0.7502944640753828,
+          "position": [
+            55,
+            45
+          ],
+          "target": {
+            "height": 637,
+            "x": 372.0,
+            "bottom": 698
+          }
+        },
+        {
+          "source": "sprites/raw/native-correction/lemon1-02-03.png",
+          "sourceSha256": "035169018620eb7dc9881e019648b0012e2eac61d3c1fad14dbe7f03da22c472",
+          "cell": [
+            0,
+            0,
+            887,
+            887
+          ],
+          "nativeSize": [
+            887,
+            887
+          ],
+          "nativeBounds": [
+            242,
+            26,
+            710,
+            862
+          ],
+          "scale": 0.7583732057416268,
+          "position": [
+            -20,
+            43
+          ],
+          "target": {
+            "height": 634,
+            "x": 372.0,
+            "bottom": 697
+          }
+        },
+        {
+          "source": "sprites/raw/native-correction/lemon1-02-03.png",
+          "sourceSha256": "035169018620eb7dc9881e019648b0012e2eac61d3c1fad14dbe7f03da22c472",
+          "cell": [
+            887,
+            0,
+            1774,
+            887
+          ],
+          "nativeSize": [
+            887,
+            887
+          ],
+          "nativeBounds": [
+            149,
+            27,
+            616,
+            862
+          ],
+          "scale": 0.7592814371257485,
+          "position": [
+            48,
+            43
+          ],
+          "target": {
+            "height": 634,
+            "x": 370.5,
+            "bottom": 697
+          }
+        },
+        {
+          "source": "sprites/raw/native-correction/lemon1-04-05.png",
+          "sourceSha256": "f50ef6bbb6d622dd98f7f23027b35a22f5fdbea44cf1c9f93a4e5de526acbc2e",
+          "cell": [
+            0,
+            0,
+            887,
+            887
+          ],
+          "nativeSize": [
+            887,
+            887
+          ],
+          "nativeBounds": [
+            285,
+            23,
+            730,
+            875
+          ],
+          "scale": 0.7429577464788732,
+          "position": [
+            -13,
+            46
+          ],
+          "target": {
+            "height": 633,
+            "x": 342.0,
+            "bottom": 696
+          }
+        },
+        {
+          "source": "sprites/raw/native-correction/lemon1-04-05.png",
+          "sourceSha256": "f50ef6bbb6d622dd98f7f23027b35a22f5fdbea44cf1c9f93a4e5de526acbc2e",
+          "cell": [
+            887,
+            0,
+            1774,
+            887
+          ],
+          "nativeSize": [
+            887,
+            887
+          ],
+          "nativeBounds": [
+            149,
+            24,
+            592,
+            876
+          ],
+          "scale": 0.7429577464788732,
+          "position": [
+            89,
+            46
+          ],
+          "target": {
+            "height": 633,
+            "x": 342.0,
+            "bottom": 696
+          }
+        },
+        {
+          "source": "sprites/raw/native-correction/lemon1-06-07.png",
+          "sourceSha256": "49b6c2bc031176928862ae82dea948451642091e2f5fdb3aade4614f631ccad7",
+          "cell": [
+            0,
+            0,
+            887,
+            887
+          ],
+          "nativeSize": [
+            887,
+            887
+          ],
+          "nativeBounds": [
+            243,
+            42,
+            683,
+            866
+          ],
+          "scale": 0.7694174757281553,
+          "position": [
+            -9,
+            34
+          ],
+          "target": {
+            "height": 634,
+            "x": 340.0,
+            "bottom": 700
+          }
+        },
+        {
+          "source": "sprites/raw/native-correction/lemon1-06-07.png",
+          "sourceSha256": "49b6c2bc031176928862ae82dea948451642091e2f5fdb3aade4614f631ccad7",
+          "cell": [
+            887,
+            0,
+            1774,
+            887
+          ],
+          "nativeSize": [
+            887,
+            887
+          ],
+          "nativeBounds": [
+            101,
+            43,
+            663,
+            865
+          ],
+          "scale": 0.7688564476885644,
+          "position": [
+            30,
+            33
+          ],
+          "target": {
+            "height": 632,
+            "x": 343.0,
+            "bottom": 698
+          }
+        },
+        {
+          "source": "sprites/raw/native-correction/lemon1-08-09.png",
+          "sourceSha256": "fc4aff4e3105ab31184e27dd8579fc8f003594dc8504350e916e41dfff6c7e21",
+          "cell": [
+            0,
+            0,
+            887,
+            887
+          ],
+          "nativeSize": [
+            887,
+            887
+          ],
+          "nativeBounds": [
+            171,
+            24,
+            688,
+            873
+          ],
+          "scale": 0.7479387514723204,
+          "position": [
+            26,
+            45
+          ],
+          "target": {
+            "height": 635,
+            "x": 369.0,
+            "bottom": 698
+          }
+        },
+        {
+          "source": "sprites/raw/native-correction/lemon1-08-09.png",
+          "sourceSha256": "fc4aff4e3105ab31184e27dd8579fc8f003594dc8504350e916e41dfff6c7e21",
+          "cell": [
+            887,
+            0,
+            1774,
+            887
+          ],
+          "nativeSize": [
+            887,
+            887
+          ],
+          "nativeBounds": [
+            174,
+            24,
+            679,
+            873
+          ],
+          "scale": 0.7479387514723204,
+          "position": [
+            58,
+            46
+          ],
+          "target": {
+            "height": 635,
+            "x": 373.0,
+            "bottom": 699
+          }
+        },
+        {
+          "source": "sprites/raw/native-correction/lemon1-10-11.png",
+          "sourceSha256": "91291eaee21d3f897ddef6f1b37b36090f25a3e091982620f1339d4b302e0ab3",
+          "cell": [
+            0,
+            0,
+            887,
+            887
+          ],
+          "nativeSize": [
+            887,
+            887
+          ],
+          "nativeBounds": [
+            274,
+            29,
+            742,
+            872
+          ],
+          "scale": 0.7520759193357058,
+          "position": [
+            -33,
+            41
+          ],
+          "target": {
+            "height": 634,
+            "x": 344.0,
+            "bottom": 697
+          }
+        },
+        {
+          "source": "sprites/raw/native-correction/lemon1-10-11.png",
+          "sourceSha256": "91291eaee21d3f897ddef6f1b37b36090f25a3e091982620f1339d4b302e0ab3",
+          "cell": [
+            887,
+            0,
+            1774,
+            887
+          ],
+          "nativeSize": [
+            887,
+            887
+          ],
+          "nativeBounds": [
+            135,
+            29,
+            625,
+            872
+          ],
+          "scale": 0.7520759193357058,
+          "position": [
+            69,
+            41
+          ],
+          "target": {
+            "height": 634,
+            "x": 343.0,
+            "bottom": 697
+          }
+        },
+        {
+          "source": "sprites/raw/native-correction/lemon1-12-13.png",
+          "sourceSha256": "bc4af7b2df4dbc00732a62004b057f033cbc1f052bfcd405f2cdeb995e0c259e",
+          "cell": [
+            0,
+            0,
+            887,
+            887
+          ],
+          "nativeSize": [
+            887,
+            887
+          ],
+          "nativeBounds": [
+            258,
+            30,
+            676,
+            864
+          ],
+          "scale": 0.762589928057554,
+          "position": [
+            -8,
+            40
+          ],
+          "target": {
+            "height": 636,
+            "x": 346.0,
+            "bottom": 698
+          }
+        },
+        {
+          "source": "sprites/raw/native-correction/lemon1-12-13.png",
+          "sourceSha256": "bc4af7b2df4dbc00732a62004b057f033cbc1f052bfcd405f2cdeb995e0c259e",
+          "cell": [
+            887,
+            0,
+            1774,
+            887
+          ],
+          "nativeSize": [
+            887,
+            887
+          ],
+          "nativeBounds": [
+            206,
+            30,
+            620,
+            864
+          ],
+          "scale": 0.7613908872901679,
+          "position": [
+            43,
+            41
+          ],
+          "target": {
+            "height": 635,
+            "x": 347.0,
+            "bottom": 698
+          }
+        },
+        {
+          "source": "sprites/raw/native-correction/lemon1-14-15.png",
+          "sourceSha256": "05bf82b4965ea2f252b950ad3ad39bf6b1ec054d5a74243df84fbe7120e9afe2",
+          "cell": [
+            0,
+            0,
+            887,
+            887
+          ],
+          "nativeSize": [
+            887,
+            887
+          ],
+          "nativeBounds": [
+            250,
+            26,
+            699,
+            872
+          ],
+          "scale": 0.7494089834515366,
+          "position": [
+            -3,
+            43
+          ],
+          "target": {
+            "height": 634,
+            "x": 346.0,
+            "bottom": 697
+          }
+        },
+        {
+          "source": "sprites/raw/native-correction/lemon1-00-01.png",
+          "sourceSha256": "7b28fbf9845fa9e4d977946563ad6abadb1078fa3a87379b594726fe398e5d57",
+          "cell": [
+            0,
+            0,
+            887,
+            887
+          ],
+          "nativeSize": [
+            887,
+            887
+          ],
+          "nativeBounds": [
+            245,
+            20,
+            711,
+            869
+          ],
+          "scale": 0.7455830388692579,
+          "position": [
+            2,
+            52
+          ],
+          "target": {
+            "height": 633,
+            "x": 345.0,
+            "bottom": 700
+          }
+        }
+      ],
+      "reviewRecord": "anims/calm_motion_review.md",
       "finalReview": {
-        "date": "2026-09-30",
-        "evidence": [
-          "sprites/rebuilt/qa/final_visual_review_20260930.json",
-          "sprites/rebuilt/qa/seam_final_review.md",
-          "sprites/rebuilt/qa/runtime_dom_summary_latest_20260930.json"
-        ],
-        "candidateVideoSHA256": "f1e0d718a16acd7e3a24769f6a7abdd2ff0bbc602abbe67b8dd48477c8b3e23b",
-        "candidateFrameSHA256": [
-          "bb8fd83bfa72fe4b7607873af7aa7140fe08b57cd037a2696f7e24ecdfa3bdaa",
-          "1bc9e639271561a36522e699b15942ca5b81846f588add354afc8f7c06d8d502",
-          "9eae6746f060f4b587f646f0d71e7d58ed267c552de114fcb0ab8f390bbcc07f",
-          "813d95b7b670c110281b877a8774c38181e64f32439fb903721da70d29fde3ce",
-          "71f843926232508800b7b61bc675e6a78f71a325592c64e7dbe6a8180262bf11",
-          "f01034c1706abe0191ce554fb6d0d691bcbb29d20a5e607ecb3700791695d46c",
-          "d0339ab4c7343cae7c7ee7dba34be3421f9bbf90e5bafc9b623c364eb6aaa930",
-          "d485fefb0c239da4c77d6a07766eb56fa463cca5d9992fbac169dcc022dea013",
-          "29171f9609163b81bd507cb3a59014563da64507584a299c03e883bb72d56bfb",
-          "7768f2a1cbd67e80bf922527275391f6c2ded8bd4cdb526894b75c6c0e8a4be0",
-          "ec8d8eee3613d9468a623a567c5d365c780b77e420a562d970da73bc298d71f6",
-          "2d5fa3f7f029d31384f1f8dbcb0dc17c02dfaa5297a6ebb7ec7d21fda7892922",
-          "ed78e880ff692618199b769e4e088c4120c93be5bf9a10daf8ac57eb898eb616",
-          "f8350a6b59677e1cc7edbde8c0f6fcace1b66f8d43e72554ba672ee136934bf0",
-          "77a44241582d5cca9525444ae8e4684ab7319e536a09ed58b0bc432a78389079",
-          "bb8fd83bfa72fe4b7607873af7aa7140fe08b57cd037a2696f7e24ecdfa3bdaa"
-        ]
+        "date": "2026-10-05",
+        "record": "anims/calm_motion_review.md",
+        "sourceValidation": "anims/native/resolution-correction.json",
+        "candidateSha256": "919f3326ceb4b6a987306bf692ba77c4f8515700d94129a8894af4a916709bec",
+        "assetAudit": "output/native-correction/asset-audit.json",
+        "runtime": "output/native-correction/runtime-checks.txt"
       }
     },
     {
@@ -14657,19 +15070,19 @@
     {
       "file": "anim_bounce1_loop.webm",
       "state": "bounce1",
-      "sha256": "35c144f2f9ca3e91f6b7756df6c15b80e127e650fb5fa22402e747a878ecbcf1",
+      "sha256": "5ae3dff5ebf66c75b1ecf6b0e7d5f39eb7757a6c218d38ad0f1f4f2f46fb74ae",
       "reason": "ImageGen 챌린지 바운스 전신 춤. 원본/재구성 모드 공통 사용."
     },
     {
       "file": "anim_shuffle1_loop.webm",
       "state": "shuffle1",
-      "sha256": "d020b40f69a5d85cb961cda3691458984bcb6e13647f32d360bc209fb941b052",
+      "sha256": "3d37c7957333947bd7f31343a94ad3aa384b6d71ebf2039627f76a29ce9291e1",
       "reason": "ImageGen 셔플 스텝 전신 춤. 원본/재구성 모드 공통 사용."
     },
     {
       "file": "anim_power1_loop.webm",
       "state": "power1",
-      "sha256": "d386a87505705bf9342ceec1ad61d3e46673dc513c99dae3a339b898617d507f",
+      "sha256": "4beef550a0f7e00b15c300bb0717c270b7f142d1f11a3688882180972814b5ed",
       "reason": "ImageGen 파워 챌린지 전신 춤. 원본/재구성 모드 공통 사용."
     },
     {
@@ -14711,145 +15124,145 @@
     {
       "file": "anim_witchidle1_loop.webm",
       "state": "witchidle1",
-      "sha256": "22a059462e0bdd09cd21282256224d06e68e873e865af463391fa2576ccbd2b1",
+      "sha256": "376ed52e81358958f81f2aa862902407d517a63219f433bb8e88050ff54a7825",
       "reason": "ImageGen 할로윈 전용 모션. 원본/재구성 모드에서 공통 사용."
     },
     {
       "file": "anim_broom1_loop.webm",
       "state": "broom1",
-      "sha256": "368f79efb1ca520333a7bf536511ae7f5d9fb48652ddc390184fa73f3e7bd2a0",
+      "sha256": "e2ec2f4500d10c5051d75ceb8d513417ed69126bc2b962365a3729b6c3fb5109",
       "reason": "ImageGen 할로윈 전용 모션. 원본/재구성 모드에서 공통 사용."
     },
     {
       "file": "anim_lantern1_loop.webm",
       "state": "lantern1",
-      "sha256": "6dba3a5348dd1b5a544cc08c1d1feb5c119691036722b08381f4dc92d4e389bf",
+      "sha256": "db19abaf570fad425f0a0116fe9c535b55bde1c922f834b23fdb45a90957e1cd",
       "reason": "ImageGen 할로윈 전용 모션. 원본/재구성 모드에서 공통 사용."
     },
     {
       "file": "anim_ghost1_loop.webm",
       "state": "ghost1",
-      "sha256": "d0233031bba10c9f6e2edfdb6fb2c847f34c369eea5f67b3f7edb2830bf6fa8a",
+      "sha256": "5aed04a90ead86daae15a09195a6f1708d8e83c120f5a72487522884c7f3b3d0",
       "reason": "ImageGen 할로윈 전용 모션. 원본/재구성 모드에서 공통 사용."
     },
     {
       "file": "anim_bat1_loop.webm",
       "state": "bat1",
-      "sha256": "a1f798a062a1e6b1b427545f0c5f0137c843acbfb44b2a86992d4893ed7c11cc",
+      "sha256": "83d1724b8312f9d2f5b1a3ab37a81e8b869cd0d0830bcec6385d3f277e0134ce",
       "reason": "ImageGen 할로윈 전용 모션. 원본/재구성 모드에서 공통 사용."
     },
     {
       "file": "anim_candy1_loop.webm",
       "state": "candy1",
-      "sha256": "0d9bdbdc49251aa2fabe47cad44c47c9e53b770534b04fc5edacc2a50814ef1d",
+      "sha256": "92e12fb3776434876f705516399dee1e8afec06386377448dc62604e8fbb2d62",
       "reason": "ImageGen 할로윈 전용 모션. 원본/재구성 모드에서 공통 사용."
     },
     {
       "file": "anim_spellbook1_loop.webm",
       "state": "spellbook1",
-      "sha256": "f006b74e7e497db68411a3b8bd23f64c81ee3adb501ed371ee5ae6759bc5d4d7",
+      "sha256": "efecc83420b2f8e443a8a97005bba0a3bc73669c3c65ce745dbf3d8f9dc2dce8",
       "reason": "ImageGen 할로윈 전용 모션. 원본/재구성 모드에서 공통 사용."
     },
     {
       "file": "anim_starspell1_loop.webm",
       "state": "starspell1",
-      "sha256": "22b5fe5cfd0d3b000749c9fad2bd11d084200cea5c7bf7f2c2bf24eab6163431",
+      "sha256": "948b73c658098475d4404c4881d06973f9da4d991bc78129b1bec564200fe548",
       "reason": "ImageGen 할로윈 전용 모션. 원본/재구성 모드에서 공통 사용."
     },
     {
       "file": "anim_crystal1_loop.webm",
       "state": "crystal1",
-      "sha256": "fa1f088af2076a1bd5bb81636824f31414d2c006d30921a81a3e035ef8c0462d",
+      "sha256": "95a769d1046606a87d8443c2809fb42c8b945958e694979348f5b6c7a3cde3f4",
       "reason": "ImageGen 할로윈 전용 모션. 원본/재구성 모드에서 공통 사용."
     },
     {
       "file": "anim_blackcat1_loop.webm",
       "state": "blackcat1",
-      "sha256": "650b105153fb287045394b251ebe20bf4c6c9b6b30f791bef345db3c6992c1c1",
+      "sha256": "65e9ec9bf89a9ed4c59eadc566873954cc3c4c865c95eb5430daade586e31594",
       "reason": "ImageGen 할로윈 전용 모션. 원본/재구성 모드에서 공통 사용."
     },
     {
       "file": "anim_raven1_loop.webm",
       "state": "raven1",
-      "sha256": "30e0463e13c049f7531bcd9a65b71e80a8755d1b6f8518166e62a004c69500b3",
+      "sha256": "ed0260d5a41668bf5c8f908378ed0fcfa1c1efc4ad63132fb4e92b279fe5e759",
       "reason": "ImageGen 할로윈 전용 모션. 원본/재구성 모드에서 공통 사용."
     },
     {
       "file": "anim_spider1_loop.webm",
       "state": "spider1",
-      "sha256": "b0ada24c31f4b6145ab45a8c975484b90f0908bc39f7de2e55f56a7bc6afeaf4",
+      "sha256": "ef31216ef0ce145ff3d33feabd3e0a8017f21bce9955adca1e07100bfa680a22",
       "reason": "ImageGen 할로윈 전용 모션. 원본/재구성 모드에서 공통 사용."
     },
     {
       "file": "anim_potion1_loop.webm",
       "state": "potion1",
-      "sha256": "b86e1b36a3613e00c3426124ce52b7b645688e2fafff163266fbd8ed5576fcd0",
+      "sha256": "cf04efdcc6d9592d65bb74634735af2b0d9831fe5ab88d3bc72532ae1b48b076",
       "reason": "ImageGen 할로윈 전용 모션. 원본/재구성 모드에서 공통 사용."
     },
     {
       "file": "anim_moon1_loop.webm",
       "state": "moon1",
-      "sha256": "5e0d98be37033f76561d2b93d43ca504fabacd968cca95360247066c0deb1fbf",
+      "sha256": "04658f90ad6c55cd6a4bbf8aae288bb2cb0c0f952132bffddb2b11a3b2ea73b6",
       "reason": "ImageGen 할로윈 전용 모션. 원본/재구성 모드에서 공통 사용."
     },
     {
       "file": "anim_tarot1_loop.webm",
       "state": "tarot1",
-      "sha256": "b0a51b623ee227efab26c43cccdb03bb8fcc88992324e897b017f5cd7d3b3edc",
+      "sha256": "88027ebdaf95fa3a9a363ca0cd2918d3d70249cdf2280842e2b84ceb164a4620",
       "reason": "ImageGen 할로윈 전용 모션. 원본/재구성 모드에서 공통 사용."
     },
     {
       "file": "anim_umbrella1_loop.webm",
       "state": "umbrella1",
-      "sha256": "d2e11110450dcabf2ccf6f111b390b6ea92e41739f588157aca0e5cc31cc7089",
+      "sha256": "e057047beab1bdea505a4f3c367b7a1febfc658d9f5d83e451158bf6280f43b2",
       "reason": "ImageGen 할로윈 전용 모션. 원본/재구성 모드에서 공통 사용."
     },
     {
       "file": "anim_witchdance1_loop.webm",
       "state": "witchdance1",
-      "sha256": "07af87cae6332a4cf1fee27dab40c55d3a60ced99e7d04f74bc108cafff72300",
+      "sha256": "9feb36b2d43dd83a2b2f35148eb3c3e629d61ced92a62c9d1ddfd2da810c5b87",
       "reason": "ImageGen 할로윈 전용 모션. 원본/재구성 모드에서 공통 사용."
     },
     {
       "file": "anim_peekaboo1_loop.webm",
       "state": "peekaboo1",
-      "sha256": "ebdd5a335e2eb54d3a0eddc30370aaf14e31a9755bbf3a0c53ff0be975a9d66a",
+      "sha256": "65e4945b52ea1f495f6ac38ca25f1aa091d96ff4ad9e151f348486013b194948",
       "reason": "ImageGen 할로윈 전용 모션. 원본/재구성 모드에서 공통 사용."
     },
     {
       "file": "anim_candles1_loop.webm",
       "state": "candles1",
-      "sha256": "549151f658e7e4ac43f050113a8b42942b447e35364e8f40521fc0d09df0d56e",
+      "sha256": "f330c78ce580323a32b4a3bfc61be3c0d9cdd78beeb4408998ecf115ca961c30",
       "reason": "ImageGen 할로윈 전용 모션. 원본/재구성 모드에서 공통 사용."
     },
     {
       "file": "anim_gift1_loop.webm",
       "state": "gift1",
-      "sha256": "92946a38749f3dc116c44189e518de09ac88b00027549b496282e478130dfbe8",
+      "sha256": "0e0f2fd07e049024678eb642aba53c211755a14e68d8c62cb6650b1ec8fb2f16",
       "reason": "ImageGen 할로윈 전용 모션. 원본/재구성 모드에서 공통 사용."
     },
     {
       "file": "anim_witchbreathe1_loop.webm",
       "state": "witchbreathe1",
-      "sha256": "6afcd995bdde072419a3dbfbb2a080d7f01c59bf1a40a59e78bfd774065a8972",
+      "sha256": "9897801cf68d62812806da0ea0aa84ad64c03e73790fdc4d4636f47c333139c6",
       "reason": "ImageGen 할로윈 전용 모션. 원본/재구성 모드에서 공통 사용."
     },
     {
       "file": "anim_witchlook1_loop.webm",
       "state": "witchlook1",
-      "sha256": "7880cbade4a91d2ffebee1addfe2a589759cf24b49064232ec430d40318f0556",
+      "sha256": "ca01999d13900c12e68caf98af4f3292d23db59af72e2a268caa8fb9a0ff84f9",
       "reason": "ImageGen 할로윈 전용 모션. 원본/재구성 모드에서 공통 사용."
     },
     {
       "file": "anim_witchtidy1_loop.webm",
       "state": "witchtidy1",
-      "sha256": "d3c514871e300b5b57d187604a5fcad7a999fd9242f8ac4c5cbfe50f035b0137",
+      "sha256": "d71233d85254ce4c1ae9a5eb65437d008554748bfff96ef0071e1d23f512f117",
       "reason": "ImageGen 할로윈 전용 모션. 원본/재구성 모드에서 공통 사용."
     },
     {
       "file": "anim_witchtalk1_loop.webm",
       "state": "witchtalk1",
-      "sha256": "740534d3b2c144ffd44bf3c86211a3b2c821f5828706aaf83f45c1aef7ca7c34",
+      "sha256": "1733223fca69f2ff1d909b184539bf63962817602b8250619e249bf3568fa0dd",
       "reason": "ImageGen 할로윈 전용 모션. 원본/재구성 모드에서 공통 사용."
     },
     {
@@ -15107,13 +15520,13 @@
     {
       "file": "anim_transform_halloween_start.webm",
       "state": "transform_halloween",
-      "sha256": "134390f39df67554c4665a0554cf6d3ff3041d9a3775ef79062619acd57f6f01",
+      "sha256": "af41ed9c6d6d619720848d39ab1401f3404a46ac582b8a034880b16eb86b6fb2",
       "reason": "ImageGen 고해상도 원본에서 축소한 기념일·변신 모션. 원본/재구성 모드 공통 사용."
     },
     {
       "file": "anim_transform_halloween_loop.webm",
       "state": "transform_halloween",
-      "sha256": "7374d84844c7fa1eb34f2f3e7ed9b001978d936fe109f8fb29916323bbd0b6f3",
+      "sha256": "aef524481de0a02031fe57b597c1b68bc07a6c8ebbdcdb0ca413dbb06fb3864c",
       "reason": "ImageGen 고해상도 원본에서 축소한 기념일·변신 모션. 원본/재구성 모드 공통 사용."
     },
     {

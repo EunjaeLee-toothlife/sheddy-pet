@@ -1,106 +1,6 @@
 {
   "name": "umbrella1_loop",
   "state": "umbrella1",
-  "sheet": "sprites/raw/halloween/umbrella1.png",
-  "sha256": "62dc9b0e6f72573a64e857b86c6c9fcf6b99073bbb58de099932710126dc2803",
-  "cellBoxes": [
-    [
-      0,
-      0,
-      314,
-      317
-    ],
-    [
-      314,
-      0,
-      627,
-      317
-    ],
-    [
-      627,
-      0,
-      940,
-      317
-    ],
-    [
-      940,
-      0,
-      1254,
-      317
-    ],
-    [
-      0,
-      317,
-      314,
-      629
-    ],
-    [
-      314,
-      317,
-      627,
-      629
-    ],
-    [
-      627,
-      317,
-      940,
-      629
-    ],
-    [
-      940,
-      317,
-      1254,
-      629
-    ],
-    [
-      0,
-      629,
-      314,
-      940
-    ],
-    [
-      314,
-      629,
-      627,
-      940
-    ],
-    [
-      627,
-      629,
-      940,
-      940
-    ],
-    [
-      940,
-      629,
-      1254,
-      940
-    ],
-    [
-      0,
-      940,
-      314,
-      1254
-    ],
-    [
-      314,
-      940,
-      627,
-      1254
-    ],
-    [
-      627,
-      940,
-      940,
-      1254
-    ],
-    [
-      940,
-      940,
-      1254,
-      1254
-    ]
-  ],
   "fps": 12,
   "holds": {
     "0": 6,
@@ -120,5 +20,437 @@
     "14": 3,
     "15": 6
   },
-  "timingNote": "이동 포즈는 최소 3틱(0.25초), 시작·복귀는 6틱. 전체 길이를 늘려 동작 사이 이동도 충분히 보여준다."
+  "timingNote": "이동 포즈는 최소 3틱(0.25초), 시작·복귀는 6틱. 전체 길이를 늘려 동작 사이 이동도 충분히 보여준다.",
+  "nativeSources": [
+    {
+      "anchor": "sprites/hd720/frames/witchidle1_loop/witchidle1_loop_00.png",
+      "sourceSha256": "3d2f802044899c680182cd72a00666d4067da1e1890af240c663a2aa40de30c6"
+    },
+    {
+      "source": "sprites/raw/native-correction/umbrella1-01-02-03.png",
+      "sourceSha256": "094104ccc52dbb6ef56b0942e5d9dba4781005bdc22c3cda08c91c211bbbba6d",
+      "cell": [
+        0,
+        0,
+        724,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        111,
+        13,
+        619,
+        705
+      ],
+      "scale": 0.7398843930635838,
+      "position": [
+        107,
+        158
+      ],
+      "target": {
+        "height": 512,
+        "x": 383.0,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/umbrella1-01-02-03.png",
+      "sourceSha256": "094104ccc52dbb6ef56b0942e5d9dba4781005bdc22c3cda08c91c211bbbba6d",
+      "cell": [
+        724,
+        0,
+        1448,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        127,
+        13,
+        575,
+        705
+      ],
+      "scale": 0.7471098265895953,
+      "position": [
+        89,
+        153
+      ],
+      "target": {
+        "height": 517,
+        "x": 351.0,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/umbrella1-01-02-03.png",
+      "sourceSha256": "094104ccc52dbb6ef56b0942e5d9dba4781005bdc22c3cda08c91c211bbbba6d",
+      "cell": [
+        1448,
+        0,
+        2172,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        117,
+        18,
+        614,
+        701
+      ],
+      "scale": 0.8184480234260615,
+      "position": [
+        54,
+        106
+      ],
+      "target": {
+        "height": 559,
+        "x": 316.0,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/umbrella1-04-05-06.png",
+      "sourceSha256": "b2b5a547b96ac50330a067bc3de47800e2acbd8c4b163fcac5ae351d2fd7bb02",
+      "cell": [
+        0,
+        0,
+        724,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        161,
+        9,
+        599,
+        712
+      ],
+      "scale": 0.8748221906116643,
+      "position": [
+        38,
+        57
+      ],
+      "target": {
+        "height": 615,
+        "x": 370.0,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/umbrella1-04-05-06.png",
+      "sourceSha256": "b2b5a547b96ac50330a067bc3de47800e2acbd8c4b163fcac5ae351d2fd7bb02",
+      "cell": [
+        724,
+        0,
+        1448,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        124,
+        22,
+        591,
+        712
+      ],
+      "scale": 0.8521739130434782,
+      "position": [
+        77,
+        72
+      ],
+      "target": {
+        "height": 588,
+        "x": 349.0,
+        "bottom": 679
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/umbrella1-04-05-06.png",
+      "sourceSha256": "b2b5a547b96ac50330a067bc3de47800e2acbd8c4b163fcac5ae351d2fd7bb02",
+      "cell": [
+        1448,
+        0,
+        2172,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        117,
+        37,
+        593,
+        709
+      ],
+      "scale": 0.8333333333333334,
+      "position": [
+        58,
+        89
+      ],
+      "target": {
+        "height": 560,
+        "x": 322.0,
+        "bottom": 679
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/umbrella1-07-08-09.png",
+      "sourceSha256": "ad4976f84c204c570ebd8b4c4368471518de1324e288b47f368e36eae651d655",
+      "cell": [
+        0,
+        0,
+        724,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        97,
+        5,
+        656,
+        709
+      ],
+      "scale": 0.8181818181818182,
+      "position": [
+        53,
+        100
+      ],
+      "target": {
+        "height": 576,
+        "x": 339.0,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/umbrella1-07-08-09.png",
+      "sourceSha256": "ad4976f84c204c570ebd8b4c4368471518de1324e288b47f368e36eae651d655",
+      "cell": [
+        724,
+        0,
+        1448,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        101,
+        6,
+        570,
+        713
+      ],
+      "scale": 0.7807637906647807,
+      "position": [
+        114,
+        125
+      ],
+      "target": {
+        "height": 552,
+        "x": 364.0,
+        "bottom": 681
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/umbrella1-07-08-09.png",
+      "sourceSha256": "ad4976f84c204c570ebd8b4c4368471518de1324e288b47f368e36eae651d655",
+      "cell": [
+        1448,
+        0,
+        2172,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        125,
+        11,
+        557,
+        711
+      ],
+      "scale": 0.7842857142857143,
+      "position": [
+        68,
+        123
+      ],
+      "target": {
+        "height": 549,
+        "x": 353.0,
+        "bottom": 681
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/umbrella1-10-11-12.png",
+      "sourceSha256": "2a2d725d346b6e6d1afe360cf55c9906d81abf6d6139e527d4f8df9e107925ff",
+      "cell": [
+        0,
+        0,
+        724,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        72,
+        31,
+        646,
+        696
+      ],
+      "scale": 0.8150375939849624,
+      "position": [
+        85,
+        114
+      ],
+      "target": {
+        "height": 542,
+        "x": 359.0,
+        "bottom": 681
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/umbrella1-10-11-12.png",
+      "sourceSha256": "2a2d725d346b6e6d1afe360cf55c9906d81abf6d6139e527d4f8df9e107925ff",
+      "cell": [
+        724,
+        0,
+        1448,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        109,
+        21,
+        656,
+        692
+      ],
+      "scale": 0.7928464977645305,
+      "position": [
+        77,
+        133
+      ],
+      "target": {
+        "height": 532,
+        "x": 328.0,
+        "bottom": 681
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/umbrella1-10-11-12.png",
+      "sourceSha256": "2a2d725d346b6e6d1afe360cf55c9906d81abf6d6139e527d4f8df9e107925ff",
+      "cell": [
+        1448,
+        0,
+        2172,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        125,
+        19,
+        615,
+        696
+      ],
+      "scale": 0.7991137370753324,
+      "position": [
+        81,
+        124
+      ],
+      "target": {
+        "height": 541,
+        "x": 353.0,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/umbrella1-13-14-00.png",
+      "sourceSha256": "23c59099c336062eb90415e7a01649b0a96301474d2a39fb4b5b8c7c4e0b3ea8",
+      "cell": [
+        0,
+        0,
+        724,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        130,
+        20,
+        599,
+        699
+      ],
+      "scale": 0.7496318114874816,
+      "position": [
+        88,
+        156
+      ],
+      "target": {
+        "height": 509,
+        "x": 350.0,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/umbrella1-13-14-00.png",
+      "sourceSha256": "23c59099c336062eb90415e7a01649b0a96301474d2a39fb4b5b8c7c4e0b3ea8",
+      "cell": [
+        724,
+        0,
+        1448,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        94,
+        19,
+        624,
+        700
+      ],
+      "scale": 0.7430249632892805,
+      "position": [
+        108,
+        159
+      ],
+      "target": {
+        "height": 506,
+        "x": 385.0,
+        "bottom": 679
+      }
+    },
+    {
+      "anchor": "sprites/hd720/frames/witchidle1_loop/witchidle1_loop_00.png",
+      "sourceSha256": "3d2f802044899c680182cd72a00666d4067da1e1890af240c663a2aa40de30c6"
+    }
+  ],
+  "sourcePipeline": "native-strips-v1",
+  "anchor": "sprites/hd720/frames/witchidle1_loop/witchidle1_loop_00.png"
 }

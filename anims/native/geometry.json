@@ -4048,5 +4048,4441 @@
         "bottom": 679
       }
     ]
+  },
+  "bat1": {
+    "theme": "halloween",
+    "mode": "halloween",
+    "anchor": "sprites/hd720/frames/witchidle1_loop/witchidle1_loop_00.png",
+    "poses": [
+      {
+        "height": 561,
+        "x": 374.0,
+        "bottom": 681
+      },
+      {
+        "height": 543,
+        "x": 365.0,
+        "bottom": 682
+      },
+      {
+        "height": 577,
+        "x": 356.0,
+        "bottom": 680
+      },
+      {
+        "height": 523,
+        "x": 348.0,
+        "bottom": 680
+      },
+      {
+        "height": 534,
+        "x": 357.0,
+        "bottom": 680
+      },
+      {
+        "height": 564,
+        "x": 369.0,
+        "bottom": 679
+      },
+      {
+        "height": 536,
+        "x": 358.0,
+        "bottom": 679
+      },
+      {
+        "height": 499,
+        "x": 287.0,
+        "bottom": 681
+      },
+      {
+        "height": 496,
+        "x": 385.0,
+        "bottom": 680
+      },
+      {
+        "height": 501,
+        "x": 365.0,
+        "bottom": 679
+      },
+      {
+        "height": 491,
+        "x": 338.0,
+        "bottom": 680
+      },
+      {
+        "height": 583,
+        "x": 314.0,
+        "bottom": 681
+      },
+      {
+        "height": 557,
+        "x": 330.0,
+        "bottom": 680
+      },
+      {
+        "height": 499,
+        "x": 368.0,
+        "bottom": 679
+      },
+      {
+        "height": 535,
+        "x": 299.0,
+        "bottom": 679
+      },
+      {
+        "height": 561,
+        "x": 374.0,
+        "bottom": 681
+      }
+    ],
+    "sources": [
+      {
+        "path": "sprites/raw/native-correction/halloween-base.png",
+        "columns": 1,
+        "cell": 0
+      },
+      {
+        "path": "sprites/raw/native-correction/bat1-01-02-03.png",
+        "columns": 3,
+        "cell": 0
+      },
+      {
+        "path": "sprites/raw/native-correction/bat1-01-02-03.png",
+        "columns": 3,
+        "cell": 1
+      },
+      {
+        "path": "sprites/raw/native-correction/bat1-01-02-03.png",
+        "columns": 3,
+        "cell": 2
+      },
+      {
+        "path": "sprites/raw/native-correction/bat1-04-05-06.png",
+        "columns": 3,
+        "cell": 0
+      },
+      {
+        "path": "sprites/raw/native-correction/bat1-04-05-06.png",
+        "columns": 3,
+        "cell": 1
+      },
+      {
+        "path": "sprites/raw/native-correction/bat1-04-05-06.png",
+        "columns": 3,
+        "cell": 2
+      },
+      {
+        "path": "sprites/raw/native-correction/bat1-repair-07-08.png",
+        "columns": 2,
+        "cell": 0,
+        "box": [
+          0,
+          0,
+          932,
+          887
+        ]
+      },
+      {
+        "path": "sprites/raw/native-correction/bat1-repair-07-08.png",
+        "columns": 2,
+        "cell": 1,
+        "box": [
+          932,
+          0,
+          1774,
+          887
+        ]
+      },
+      {
+        "path": "sprites/raw/native-correction/bat1-07-08-09.png",
+        "columns": 3,
+        "cell": 2
+      },
+      {
+        "path": "sprites/raw/native-correction/bat1-10-11-12.png",
+        "columns": 3,
+        "cell": 0
+      },
+      {
+        "path": "sprites/raw/native-correction/bat1-repair-11-12.png",
+        "columns": 2,
+        "cell": 0,
+        "box": [
+          0,
+          0,
+          912,
+          887
+        ]
+      },
+      {
+        "path": "sprites/raw/native-correction/bat1-repair-11-12.png",
+        "columns": 2,
+        "cell": 1,
+        "box": [
+          912,
+          0,
+          1774,
+          887
+        ]
+      },
+      {
+        "path": "sprites/raw/native-correction/bat1-13-14-00.png",
+        "columns": 3,
+        "cell": 0
+      },
+      {
+        "path": "sprites/raw/native-correction/bat1-13-14-00.png",
+        "columns": 3,
+        "cell": 1
+      },
+      {
+        "path": "sprites/raw/native-correction/halloween-base.png",
+        "columns": 1,
+        "cell": 0
+      }
+    ]
+  },
+  "blackcat1": {
+    "theme": "halloween",
+    "mode": "halloween",
+    "anchor": "sprites/hd720/frames/witchidle1_loop/witchidle1_loop_00.png",
+    "poses": [
+      {
+        "height": 561,
+        "x": 374.0,
+        "bottom": 681
+      },
+      {
+        "height": 549,
+        "x": 332.0,
+        "bottom": 680
+      },
+      {
+        "height": 555,
+        "x": 361.0,
+        "bottom": 679
+      },
+      {
+        "height": 559,
+        "x": 350.0,
+        "bottom": 679
+      },
+      {
+        "height": 467,
+        "x": 342.0,
+        "bottom": 680
+      },
+      {
+        "height": 447,
+        "x": 331.0,
+        "bottom": 680
+      },
+      {
+        "height": 535,
+        "x": 327.0,
+        "bottom": 680
+      },
+      {
+        "height": 552,
+        "x": 341.0,
+        "bottom": 679
+      },
+      {
+        "height": 537,
+        "x": 366.0,
+        "bottom": 681
+      },
+      {
+        "height": 530,
+        "x": 343.0,
+        "bottom": 679
+      },
+      {
+        "height": 531,
+        "x": 339.0,
+        "bottom": 680
+      },
+      {
+        "height": 441,
+        "x": 358.0,
+        "bottom": 680
+      },
+      {
+        "height": 449,
+        "x": 475.0,
+        "bottom": 680
+      },
+      {
+        "height": 483,
+        "x": 350.0,
+        "bottom": 680
+      },
+      {
+        "height": 485,
+        "x": 302.0,
+        "bottom": 681
+      },
+      {
+        "height": 561,
+        "x": 374.0,
+        "bottom": 681
+      }
+    ],
+    "sources": [
+      {
+        "path": "sprites/raw/native-correction/halloween-base.png",
+        "columns": 1,
+        "cell": 0
+      },
+      {
+        "path": "sprites/raw/native-correction/blackcat1-01-02-03.png",
+        "columns": 3,
+        "cell": 0
+      },
+      {
+        "path": "sprites/raw/native-correction/blackcat1-01-02-03.png",
+        "columns": 3,
+        "cell": 1
+      },
+      {
+        "path": "sprites/raw/native-correction/blackcat1-01-02-03.png",
+        "columns": 3,
+        "cell": 2
+      },
+      {
+        "path": "sprites/raw/native-correction/blackcat1-04-05-06.png",
+        "columns": 3,
+        "cell": 0
+      },
+      {
+        "path": "sprites/raw/native-correction/blackcat1-04-05-06.png",
+        "columns": 3,
+        "cell": 1
+      },
+      {
+        "path": "sprites/raw/native-correction/blackcat1-04-05-06.png",
+        "columns": 3,
+        "cell": 2
+      },
+      {
+        "path": "sprites/raw/native-correction/blackcat1-07-08-09.png",
+        "columns": 3,
+        "cell": 0
+      },
+      {
+        "path": "sprites/raw/native-correction/blackcat1-07-08-09.png",
+        "columns": 3,
+        "cell": 1
+      },
+      {
+        "path": "sprites/raw/native-correction/blackcat1-07-08-09.png",
+        "columns": 3,
+        "cell": 2
+      },
+      {
+        "path": "sprites/raw/native-correction/blackcat1-10-11-12.png",
+        "columns": 3,
+        "cell": 0
+      },
+      {
+        "path": "sprites/raw/native-correction/blackcat1-10-11-12.png",
+        "columns": 3,
+        "cell": 1
+      },
+      {
+        "path": "sprites/raw/native-correction/blackcat1-10-11-12.png",
+        "columns": 3,
+        "cell": 2
+      },
+      {
+        "path": "sprites/raw/native-correction/blackcat1-13-14-00.png",
+        "columns": 3,
+        "cell": 0
+      },
+      {
+        "path": "sprites/raw/native-correction/blackcat1-13-14-00.png",
+        "columns": 3,
+        "cell": 1
+      },
+      {
+        "path": "sprites/raw/native-correction/halloween-base.png",
+        "columns": 1,
+        "cell": 0
+      }
+    ]
+  },
+  "bounce1": {
+    "theme": "dance",
+    "mode": "normal",
+    "anchor": "sprites/hd720/frames/bounce1_loop/bounce1_loop_00.png",
+    "poses": [
+      {
+        "height": 633,
+        "x": 358.0,
+        "bottom": 697,
+        "alignment": "bounds"
+      },
+      {
+        "height": 574,
+        "x": 327.0,
+        "bottom": 697,
+        "alignment": "bounds"
+      },
+      {
+        "height": 610,
+        "x": 313.5,
+        "bottom": 698,
+        "alignment": "bounds"
+      },
+      {
+        "height": 627,
+        "x": 314.0,
+        "bottom": 697,
+        "alignment": "bounds"
+      },
+      {
+        "height": 618,
+        "x": 357.0,
+        "bottom": 688,
+        "alignment": "bounds"
+      },
+      {
+        "height": 588,
+        "x": 338.0,
+        "bottom": 689,
+        "alignment": "bounds"
+      },
+      {
+        "height": 622,
+        "x": 326.0,
+        "bottom": 693,
+        "alignment": "bounds"
+      },
+      {
+        "height": 631,
+        "x": 266.0,
+        "bottom": 693,
+        "alignment": "bounds"
+      },
+      {
+        "height": 591,
+        "x": 320.5,
+        "bottom": 684,
+        "alignment": "bounds"
+      },
+      {
+        "height": 551,
+        "x": 374.5,
+        "bottom": 675,
+        "alignment": "bounds"
+      },
+      {
+        "height": 627,
+        "x": 321.5,
+        "bottom": 674,
+        "alignment": "bounds"
+      },
+      {
+        "height": 622,
+        "x": 287.5,
+        "bottom": 678,
+        "alignment": "bounds"
+      },
+      {
+        "height": 616,
+        "x": 272.0,
+        "bottom": 674,
+        "alignment": "bounds"
+      },
+      {
+        "height": 618,
+        "x": 331.5,
+        "bottom": 668,
+        "alignment": "bounds"
+      },
+      {
+        "height": 620,
+        "x": 390.0,
+        "bottom": 663,
+        "alignment": "bounds"
+      },
+      {
+        "height": 529,
+        "x": 341.5,
+        "bottom": 570,
+        "alignment": "bounds"
+      },
+      {
+        "height": 562,
+        "x": 315.5,
+        "bottom": 662,
+        "alignment": "bounds"
+      },
+      {
+        "height": 633,
+        "x": 358.0,
+        "bottom": 697,
+        "alignment": "bounds"
+      }
+    ],
+    "sources": [
+      {
+        "path": "sprites/raw/native-correction/bounce1-00-01.png",
+        "columns": 2,
+        "cell": 0
+      },
+      {
+        "path": "sprites/raw/native-correction/bounce1-00-01.png",
+        "columns": 2,
+        "cell": 1
+      },
+      {
+        "path": "sprites/raw/native-correction/bounce1-02-03-04.png",
+        "columns": 3,
+        "cell": 0
+      },
+      {
+        "path": "sprites/raw/native-correction/bounce1-02-03-04.png",
+        "columns": 3,
+        "cell": 1
+      },
+      {
+        "path": "sprites/raw/native-correction/bounce1-02-03-04.png",
+        "columns": 3,
+        "cell": 2
+      },
+      {
+        "path": "sprites/raw/native-correction/bounce1-05-06-07.png",
+        "columns": 3,
+        "cell": 0
+      },
+      {
+        "path": "sprites/raw/native-correction/bounce1-05-06-07.png",
+        "columns": 3,
+        "cell": 1
+      },
+      {
+        "path": "sprites/raw/native-correction/bounce1-05-06-07.png",
+        "columns": 3,
+        "cell": 2
+      },
+      {
+        "path": "sprites/raw/inbetweens/bounce1-7-midpoint.png",
+        "columns": 1,
+        "cell": 0
+      },
+      {
+        "path": "sprites/raw/native-correction/bounce1-08-09-10.png",
+        "columns": 3,
+        "cell": 0
+      },
+      {
+        "path": "sprites/raw/native-correction/bounce1-08-09-10.png",
+        "columns": 3,
+        "cell": 1
+      },
+      {
+        "path": "sprites/raw/native-correction/bounce1-08-09-10.png",
+        "columns": 3,
+        "cell": 2
+      },
+      {
+        "path": "sprites/raw/native-correction/bounce1-11-12-13.png",
+        "columns": 3,
+        "cell": 0
+      },
+      {
+        "path": "sprites/raw/inbetweens/bounce1-11-midpoint.png",
+        "columns": 1,
+        "cell": 0
+      },
+      {
+        "path": "sprites/raw/native-correction/bounce1-11-12-13.png",
+        "columns": 3,
+        "cell": 1
+      },
+      {
+        "path": "sprites/raw/native-correction/bounce1-11-12-13.png",
+        "columns": 3,
+        "cell": 2
+      },
+      {
+        "path": "sprites/raw/native-correction/bounce1-14-15-00.png",
+        "columns": 3,
+        "cell": 0
+      },
+      {
+        "path": "sprites/raw/native-correction/bounce1-00-01.png",
+        "columns": 2,
+        "cell": 0
+      }
+    ]
+  },
+  "broom1": {
+    "theme": "halloween",
+    "mode": "halloween",
+    "anchor": "sprites/hd720/frames/witchidle1_loop/witchidle1_loop_00.png",
+    "poses": [
+      {
+        "height": 561,
+        "x": 398.0,
+        "bottom": 681,
+        "alignment": "bounds"
+      },
+      {
+        "height": 552,
+        "x": 306.5,
+        "bottom": 682,
+        "alignment": "bounds"
+      },
+      {
+        "height": 561,
+        "x": 333.5,
+        "bottom": 682,
+        "alignment": "bounds"
+      },
+      {
+        "height": 553,
+        "x": 344.0,
+        "bottom": 687,
+        "alignment": "bounds"
+      },
+      {
+        "height": 501,
+        "x": 363.5,
+        "bottom": 649,
+        "alignment": "bounds"
+      },
+      {
+        "height": 473,
+        "x": 348.0,
+        "bottom": 616,
+        "alignment": "bounds"
+      },
+      {
+        "height": 453,
+        "x": 347.0,
+        "bottom": 594,
+        "alignment": "bounds"
+      },
+      {
+        "height": 462,
+        "x": 353.5,
+        "bottom": 625,
+        "alignment": "bounds"
+      },
+      {
+        "height": 464,
+        "x": 371.0,
+        "bottom": 578,
+        "alignment": "bounds"
+      },
+      {
+        "height": 449,
+        "x": 364.5,
+        "bottom": 550,
+        "alignment": "bounds"
+      },
+      {
+        "height": 473,
+        "x": 372.0,
+        "bottom": 586,
+        "alignment": "bounds"
+      },
+      {
+        "height": 508,
+        "x": 358.5,
+        "bottom": 591,
+        "alignment": "bounds"
+      },
+      {
+        "height": 549,
+        "x": 384.5,
+        "bottom": 604,
+        "alignment": "bounds"
+      },
+      {
+        "height": 560,
+        "x": 356.5,
+        "bottom": 600,
+        "alignment": "bounds"
+      },
+      {
+        "height": 568,
+        "x": 353.5,
+        "bottom": 608,
+        "alignment": "bounds"
+      },
+      {
+        "height": 561,
+        "x": 398.0,
+        "bottom": 681,
+        "alignment": "bounds"
+      }
+    ],
+    "sources": [
+      {
+        "path": "sprites/raw/native-correction/halloween-base.png",
+        "columns": 1,
+        "cell": 0
+      },
+      {
+        "path": "sprites/raw/native-correction/broom1-repair-01-03.png",
+        "columns": 2,
+        "cell": 0
+      },
+      {
+        "path": "sprites/raw/native-correction/broom1-repair-02-05.png",
+        "columns": 2,
+        "cell": 0
+      },
+      {
+        "path": "sprites/raw/native-correction/broom1-repair-01-03.png",
+        "columns": 2,
+        "cell": 1
+      },
+      {
+        "path": "sprites/raw/native-correction/broom1-04-05-06.png",
+        "columns": 3,
+        "cell": 0
+      },
+      {
+        "path": "sprites/raw/native-correction/broom1-repair-02-05.png",
+        "columns": 2,
+        "cell": 1
+      },
+      {
+        "path": "sprites/raw/native-correction/broom1-repair-06-10.png",
+        "columns": 2,
+        "cell": 0
+      },
+      {
+        "path": "sprites/raw/native-correction/broom1-07-08-09.png",
+        "columns": 3,
+        "cell": 0
+      },
+      {
+        "path": "sprites/raw/native-correction/broom1-07-08-09.png",
+        "columns": 3,
+        "cell": 1
+      },
+      {
+        "path": "sprites/raw/native-correction/broom1-07-08-09.png",
+        "columns": 3,
+        "cell": 2
+      },
+      {
+        "path": "sprites/raw/native-correction/broom1-repair-06-10.png",
+        "columns": 2,
+        "cell": 1
+      },
+      {
+        "path": "sprites/raw/native-correction/broom1-repair-11-12.png",
+        "columns": 2,
+        "cell": 0
+      },
+      {
+        "path": "sprites/raw/native-correction/broom1-repair-11-12.png",
+        "columns": 2,
+        "cell": 1
+      },
+      {
+        "path": "sprites/raw/native-correction/broom1-13-14-00.png",
+        "columns": 3,
+        "cell": 0
+      },
+      {
+        "path": "sprites/raw/native-correction/broom1-13-14-00.png",
+        "columns": 3,
+        "cell": 1
+      },
+      {
+        "path": "sprites/raw/native-correction/halloween-base.png",
+        "columns": 1,
+        "cell": 0
+      }
+    ]
+  },
+  "candles1": {
+    "theme": "halloween",
+    "mode": "halloween",
+    "anchor": "sprites/hd720/frames/witchidle1_loop/witchidle1_loop_00.png",
+    "poses": [
+      {
+        "height": 561,
+        "x": 374.0,
+        "bottom": 681
+      },
+      {
+        "height": 560,
+        "x": 337.0,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 325.0,
+        "bottom": 680
+      },
+      {
+        "height": 561,
+        "x": 342.0,
+        "bottom": 680
+      },
+      {
+        "height": 553,
+        "x": 351.0,
+        "bottom": 680
+      },
+      {
+        "height": 545,
+        "x": 353.0,
+        "bottom": 680
+      },
+      {
+        "height": 551,
+        "x": 331.0,
+        "bottom": 669
+      },
+      {
+        "height": 550,
+        "x": 273.0,
+        "bottom": 680
+      },
+      {
+        "height": 547,
+        "x": 371.5,
+        "bottom": 680
+      },
+      {
+        "height": 548,
+        "x": 325.0,
+        "bottom": 681
+      },
+      {
+        "height": 587,
+        "x": 332.0,
+        "bottom": 679
+      },
+      {
+        "height": 537,
+        "x": 317.0,
+        "bottom": 681
+      },
+      {
+        "height": 542,
+        "x": 324.0,
+        "bottom": 680
+      },
+      {
+        "height": 554,
+        "x": 341.0,
+        "bottom": 679
+      },
+      {
+        "height": 547,
+        "x": 333.0,
+        "bottom": 679
+      },
+      {
+        "height": 561,
+        "x": 374.0,
+        "bottom": 681
+      }
+    ],
+    "sources": [
+      {
+        "path": "sprites/raw/native-correction/halloween-base.png",
+        "columns": 1,
+        "cell": 0
+      },
+      {
+        "path": "sprites/raw/native-correction/candles1-01-02-03.png",
+        "columns": 3,
+        "cell": 0
+      },
+      {
+        "path": "sprites/raw/native-correction/candles1-01-02-03.png",
+        "columns": 3,
+        "cell": 1
+      },
+      {
+        "path": "sprites/raw/native-correction/candles1-01-02-03.png",
+        "columns": 3,
+        "cell": 2
+      },
+      {
+        "path": "sprites/raw/native-correction/candles1-04-05-06.png",
+        "columns": 3,
+        "cell": 0
+      },
+      {
+        "path": "sprites/raw/native-correction/candles1-04-05-06.png",
+        "columns": 3,
+        "cell": 1
+      },
+      {
+        "path": "sprites/raw/native-correction/candles1-04-05-06.png",
+        "columns": 3,
+        "cell": 2
+      },
+      {
+        "path": "sprites/raw/native-correction/candles1-07-08-09.png",
+        "columns": 3,
+        "cell": 0
+      },
+      {
+        "path": "sprites/raw/native-correction/candles1-07-08-09.png",
+        "columns": 3,
+        "cell": 1
+      },
+      {
+        "path": "sprites/raw/native-correction/candles1-07-08-09.png",
+        "columns": 3,
+        "cell": 2
+      },
+      {
+        "path": "sprites/raw/native-correction/candles1-10-11-12.png",
+        "columns": 3,
+        "cell": 0
+      },
+      {
+        "path": "sprites/raw/native-correction/candles1-10-11-12.png",
+        "columns": 3,
+        "cell": 1
+      },
+      {
+        "path": "sprites/raw/native-correction/candles1-10-11-12.png",
+        "columns": 3,
+        "cell": 2
+      },
+      {
+        "path": "sprites/raw/native-correction/candles1-13-14-00.png",
+        "columns": 3,
+        "cell": 0
+      },
+      {
+        "path": "sprites/raw/native-correction/candles1-13-14-00.png",
+        "columns": 3,
+        "cell": 1
+      },
+      {
+        "path": "sprites/raw/native-correction/halloween-base.png",
+        "columns": 1,
+        "cell": 0
+      }
+    ]
+  },
+  "candy1": {
+    "theme": "halloween",
+    "mode": "halloween",
+    "anchor": "sprites/hd720/frames/witchidle1_loop/witchidle1_loop_00.png",
+    "poses": [
+      {
+        "height": 561,
+        "x": 374.0,
+        "bottom": 681
+      },
+      {
+        "height": 556,
+        "x": 314.0,
+        "bottom": 680
+      },
+      {
+        "height": 555,
+        "x": 365.0,
+        "bottom": 679
+      },
+      {
+        "height": 559,
+        "x": 312.0,
+        "bottom": 679
+      },
+      {
+        "height": 555,
+        "x": 380.0,
+        "bottom": 680
+      },
+      {
+        "height": 554,
+        "x": 363.0,
+        "bottom": 680
+      },
+      {
+        "height": 546,
+        "x": 362.0,
+        "bottom": 680
+      },
+      {
+        "height": 575,
+        "x": 362.0,
+        "bottom": 680
+      },
+      {
+        "height": 571,
+        "x": 392.0,
+        "bottom": 679
+      },
+      {
+        "height": 541,
+        "x": 366.0,
+        "bottom": 680
+      },
+      {
+        "height": 534,
+        "x": 368.0,
+        "bottom": 679
+      },
+      {
+        "height": 540,
+        "x": 328.0,
+        "bottom": 680
+      },
+      {
+        "height": 538,
+        "x": 406.0,
+        "bottom": 679
+      },
+      {
+        "height": 533,
+        "x": 370.0,
+        "bottom": 680
+      },
+      {
+        "height": 534,
+        "x": 325.0,
+        "bottom": 679
+      },
+      {
+        "height": 561,
+        "x": 374.0,
+        "bottom": 681
+      }
+    ],
+    "sources": [
+      {
+        "path": "sprites/raw/native-correction/halloween-base.png",
+        "columns": 1,
+        "cell": 0
+      },
+      {
+        "path": "sprites/raw/native-correction/candy1-01-02-03.png",
+        "columns": 3,
+        "cell": 0
+      },
+      {
+        "path": "sprites/raw/native-correction/candy1-01-02-03.png",
+        "columns": 3,
+        "cell": 1
+      },
+      {
+        "path": "sprites/raw/native-correction/candy1-01-02-03.png",
+        "columns": 3,
+        "cell": 2
+      },
+      {
+        "path": "sprites/raw/native-correction/candy1-04-05-06.png",
+        "columns": 3,
+        "cell": 0
+      },
+      {
+        "path": "sprites/raw/native-correction/candy1-04-05-06.png",
+        "columns": 3,
+        "cell": 1
+      },
+      {
+        "path": "sprites/raw/native-correction/candy1-04-05-06.png",
+        "columns": 3,
+        "cell": 2
+      },
+      {
+        "path": "sprites/raw/native-correction/candy1-07-08-09.png",
+        "columns": 3,
+        "cell": 0
+      },
+      {
+        "path": "sprites/raw/native-correction/candy1-07-08-09.png",
+        "columns": 3,
+        "cell": 1
+      },
+      {
+        "path": "sprites/raw/native-correction/candy1-07-08-09.png",
+        "columns": 3,
+        "cell": 2
+      },
+      {
+        "path": "sprites/raw/native-correction/candy1-10-11-12.png",
+        "columns": 3,
+        "cell": 0
+      },
+      {
+        "path": "sprites/raw/native-correction/candy1-10-11-12.png",
+        "columns": 3,
+        "cell": 1
+      },
+      {
+        "path": "sprites/raw/native-correction/candy1-10-11-12.png",
+        "columns": 3,
+        "cell": 2
+      },
+      {
+        "path": "sprites/raw/native-correction/candy1-13-14-00.png",
+        "columns": 3,
+        "cell": 0
+      },
+      {
+        "path": "sprites/raw/native-correction/candy1-13-14-00.png",
+        "columns": 3,
+        "cell": 1
+      },
+      {
+        "path": "sprites/raw/native-correction/halloween-base.png",
+        "columns": 1,
+        "cell": 0
+      }
+    ]
+  },
+  "crystal1": {
+    "theme": "halloween",
+    "mode": "halloween",
+    "anchor": "sprites/hd720/frames/witchidle1_loop/witchidle1_loop_00.png",
+    "poses": [
+      {
+        "height": 561,
+        "x": 374.0,
+        "bottom": 681
+      },
+      {
+        "height": 563,
+        "x": 347.0,
+        "bottom": 680
+      },
+      {
+        "height": 567,
+        "x": 355.0,
+        "bottom": 680
+      },
+      {
+        "height": 567,
+        "x": 346.0,
+        "bottom": 679
+      },
+      {
+        "height": 559,
+        "x": 412.0,
+        "bottom": 679
+      },
+      {
+        "height": 517,
+        "x": 337.0,
+        "bottom": 680
+      },
+      {
+        "height": 535,
+        "x": 346.0,
+        "bottom": 678
+      },
+      {
+        "height": 542,
+        "x": 350.0,
+        "bottom": 679
+      },
+      {
+        "height": 562,
+        "x": 337.0,
+        "bottom": 680
+      },
+      {
+        "height": 551,
+        "x": 401.0,
+        "bottom": 680
+      },
+      {
+        "height": 537,
+        "x": 372.0,
+        "bottom": 680
+      },
+      {
+        "height": 537,
+        "x": 353.0,
+        "bottom": 679
+      },
+      {
+        "height": 545,
+        "x": 340.0,
+        "bottom": 680
+      },
+      {
+        "height": 547,
+        "x": 351.0,
+        "bottom": 681
+      },
+      {
+        "height": 546,
+        "x": 346.0,
+        "bottom": 681
+      },
+      {
+        "height": 561,
+        "x": 374.0,
+        "bottom": 681
+      }
+    ],
+    "sources": [
+      {
+        "path": "sprites/raw/native-correction/halloween-base.png",
+        "columns": 1,
+        "cell": 0
+      },
+      {
+        "path": "sprites/raw/native-correction/crystal1-01-02-03.png",
+        "columns": 3,
+        "cell": 0
+      },
+      {
+        "path": "sprites/raw/native-correction/crystal1-01-02-03.png",
+        "columns": 3,
+        "cell": 1
+      },
+      {
+        "path": "sprites/raw/native-correction/crystal1-01-02-03.png",
+        "columns": 3,
+        "cell": 2
+      },
+      {
+        "path": "sprites/raw/native-correction/crystal1-04-05-06.png",
+        "columns": 3,
+        "cell": 0
+      },
+      {
+        "path": "sprites/raw/native-correction/crystal1-04-05-06.png",
+        "columns": 3,
+        "cell": 1
+      },
+      {
+        "path": "sprites/raw/native-correction/crystal1-04-05-06.png",
+        "columns": 3,
+        "cell": 2
+      },
+      {
+        "path": "sprites/raw/native-correction/crystal1-07-08-09.png",
+        "columns": 3,
+        "cell": 0
+      },
+      {
+        "path": "sprites/raw/native-correction/crystal1-07-08-09.png",
+        "columns": 3,
+        "cell": 1
+      },
+      {
+        "path": "sprites/raw/native-correction/crystal1-07-08-09.png",
+        "columns": 3,
+        "cell": 2
+      },
+      {
+        "path": "sprites/raw/native-correction/crystal1-10-11-12.png",
+        "columns": 3,
+        "cell": 0
+      },
+      {
+        "path": "sprites/raw/native-correction/crystal1-10-11-12.png",
+        "columns": 3,
+        "cell": 1
+      },
+      {
+        "path": "sprites/raw/native-correction/crystal1-10-11-12.png",
+        "columns": 3,
+        "cell": 2
+      },
+      {
+        "path": "sprites/raw/native-correction/crystal1-13-14-00.png",
+        "columns": 3,
+        "cell": 0
+      },
+      {
+        "path": "sprites/raw/native-correction/crystal1-13-14-00.png",
+        "columns": 3,
+        "cell": 1
+      },
+      {
+        "path": "sprites/raw/native-correction/halloween-base.png",
+        "columns": 1,
+        "cell": 0
+      }
+    ]
+  },
+  "ghost1": {
+    "theme": "halloween",
+    "mode": "halloween",
+    "anchor": "sprites/hd720/frames/witchidle1_loop/witchidle1_loop_00.png",
+    "poses": [
+      {
+        "height": 561,
+        "x": 374.0,
+        "bottom": 681
+      },
+      {
+        "height": 564,
+        "x": 361.0,
+        "bottom": 681
+      },
+      {
+        "height": 563,
+        "x": 330.0,
+        "bottom": 680
+      },
+      {
+        "height": 531,
+        "x": 333.0,
+        "bottom": 679
+      },
+      {
+        "height": 537,
+        "x": 434.0,
+        "bottom": 681
+      },
+      {
+        "height": 502,
+        "x": 348.0,
+        "bottom": 681
+      },
+      {
+        "height": 526,
+        "x": 328.0,
+        "bottom": 680
+      },
+      {
+        "height": 514,
+        "x": 321.0,
+        "bottom": 680
+      },
+      {
+        "height": 516,
+        "x": 349.0,
+        "bottom": 680
+      },
+      {
+        "height": 529,
+        "x": 349.0,
+        "bottom": 681
+      },
+      {
+        "height": 518,
+        "x": 339.0,
+        "bottom": 679
+      },
+      {
+        "height": 524,
+        "x": 344.0,
+        "bottom": 680
+      },
+      {
+        "height": 539,
+        "x": 381.0,
+        "bottom": 680
+      },
+      {
+        "height": 562,
+        "x": 355.0,
+        "bottom": 681
+      },
+      {
+        "height": 560,
+        "x": 322.0,
+        "bottom": 680
+      },
+      {
+        "height": 561,
+        "x": 374.0,
+        "bottom": 681
+      }
+    ],
+    "sources": [
+      {
+        "path": "sprites/raw/native-correction/halloween-base.png",
+        "columns": 1,
+        "cell": 0
+      },
+      {
+        "path": "sprites/raw/native-correction/ghost1-01-02-03.png",
+        "columns": 3,
+        "cell": 0
+      },
+      {
+        "path": "sprites/raw/native-correction/ghost1-01-02-03.png",
+        "columns": 3,
+        "cell": 1
+      },
+      {
+        "path": "sprites/raw/native-correction/ghost1-01-02-03.png",
+        "columns": 3,
+        "cell": 2
+      },
+      {
+        "path": "sprites/raw/native-correction/ghost1-04-05-06.png",
+        "columns": 3,
+        "cell": 0
+      },
+      {
+        "path": "sprites/raw/native-correction/ghost1-04-05-06.png",
+        "columns": 3,
+        "cell": 1
+      },
+      {
+        "path": "sprites/raw/native-correction/ghost1-04-05-06.png",
+        "columns": 3,
+        "cell": 2
+      },
+      {
+        "path": "sprites/raw/native-correction/ghost1-07-08-09.png",
+        "columns": 3,
+        "cell": 0
+      },
+      {
+        "path": "sprites/raw/native-correction/ghost1-07-08-09.png",
+        "columns": 3,
+        "cell": 1
+      },
+      {
+        "path": "sprites/raw/native-correction/ghost1-07-08-09.png",
+        "columns": 3,
+        "cell": 2
+      },
+      {
+        "path": "sprites/raw/native-correction/ghost1-10-11-12.png",
+        "columns": 3,
+        "cell": 0
+      },
+      {
+        "path": "sprites/raw/native-correction/ghost1-10-11-12.png",
+        "columns": 3,
+        "cell": 1
+      },
+      {
+        "path": "sprites/raw/native-correction/ghost1-10-11-12.png",
+        "columns": 3,
+        "cell": 2
+      },
+      {
+        "path": "sprites/raw/native-correction/ghost1-13-14-00.png",
+        "columns": 3,
+        "cell": 0
+      },
+      {
+        "path": "sprites/raw/native-correction/ghost1-repair-14-00.png",
+        "columns": 2,
+        "cell": 0
+      },
+      {
+        "path": "sprites/raw/native-correction/halloween-base.png",
+        "columns": 1,
+        "cell": 0
+      }
+    ]
+  },
+  "gift1": {
+    "theme": "halloween",
+    "mode": "halloween",
+    "anchor": "sprites/hd720/frames/witchidle1_loop/witchidle1_loop_00.png",
+    "poses": [
+      {
+        "height": 561,
+        "x": 374.0,
+        "bottom": 681
+      },
+      {
+        "height": 559,
+        "x": 356.0,
+        "bottom": 680
+      },
+      {
+        "height": 559,
+        "x": 322.0,
+        "bottom": 680
+      },
+      {
+        "height": 554,
+        "x": 337.0,
+        "bottom": 681
+      },
+      {
+        "height": 548,
+        "x": 375.0,
+        "bottom": 680
+      },
+      {
+        "height": 542,
+        "x": 357.0,
+        "bottom": 680
+      },
+      {
+        "height": 550,
+        "x": 350.0,
+        "bottom": 680
+      },
+      {
+        "height": 549,
+        "x": 344.0,
+        "bottom": 680
+      },
+      {
+        "height": 536,
+        "x": 396.0,
+        "bottom": 679
+      },
+      {
+        "height": 509,
+        "x": 358.0,
+        "bottom": 679
+      },
+      {
+        "height": 525,
+        "x": 335.0,
+        "bottom": 680
+      },
+      {
+        "height": 517,
+        "x": 352.0,
+        "bottom": 681
+      },
+      {
+        "height": 541,
+        "x": 354.0,
+        "bottom": 680
+      },
+      {
+        "height": 542,
+        "x": 332.0,
+        "bottom": 680
+      },
+      {
+        "height": 519,
+        "x": 318.0,
+        "bottom": 681
+      },
+      {
+        "height": 561,
+        "x": 374.0,
+        "bottom": 681
+      }
+    ],
+    "sources": [
+      {
+        "path": "sprites/raw/native-correction/halloween-base.png",
+        "columns": 1,
+        "cell": 0
+      },
+      {
+        "path": "sprites/raw/native-correction/gift1-01-02-03.png",
+        "columns": 3,
+        "cell": 0
+      },
+      {
+        "path": "sprites/raw/native-correction/gift1-01-02-03.png",
+        "columns": 3,
+        "cell": 1
+      },
+      {
+        "path": "sprites/raw/native-correction/gift1-01-02-03.png",
+        "columns": 3,
+        "cell": 2
+      },
+      {
+        "path": "sprites/raw/native-correction/gift1-04-05-06.png",
+        "columns": 3,
+        "cell": 0
+      },
+      {
+        "path": "sprites/raw/native-correction/gift1-04-05-06.png",
+        "columns": 3,
+        "cell": 1
+      },
+      {
+        "path": "sprites/raw/native-correction/gift1-04-05-06.png",
+        "columns": 3,
+        "cell": 2
+      },
+      {
+        "path": "sprites/raw/native-correction/gift1-07-08-09.png",
+        "columns": 3,
+        "cell": 0
+      },
+      {
+        "path": "sprites/raw/native-correction/gift1-07-08-09.png",
+        "columns": 3,
+        "cell": 1
+      },
+      {
+        "path": "sprites/raw/native-correction/gift1-07-08-09.png",
+        "columns": 3,
+        "cell": 2
+      },
+      {
+        "path": "sprites/raw/native-correction/gift1-10-11-12.png",
+        "columns": 3,
+        "cell": 0
+      },
+      {
+        "path": "sprites/raw/native-correction/gift1-10-11-12.png",
+        "columns": 3,
+        "cell": 1
+      },
+      {
+        "path": "sprites/raw/native-correction/gift1-10-11-12.png",
+        "columns": 3,
+        "cell": 2
+      },
+      {
+        "path": "sprites/raw/native-correction/gift1-13-14-00.png",
+        "columns": 3,
+        "cell": 0
+      },
+      {
+        "path": "sprites/raw/native-correction/gift1-13-14-00.png",
+        "columns": 3,
+        "cell": 1
+      },
+      {
+        "path": "sprites/raw/native-correction/halloween-base.png",
+        "columns": 1,
+        "cell": 0
+      }
+    ]
+  },
+  "lantern1": {
+    "theme": "halloween",
+    "mode": "halloween",
+    "anchor": "sprites/hd720/frames/witchidle1_loop/witchidle1_loop_00.png",
+    "poses": [
+      {
+        "height": 561,
+        "x": 374.0,
+        "bottom": 681
+      },
+      {
+        "height": 556,
+        "x": 299.0,
+        "bottom": 678
+      },
+      {
+        "height": 548,
+        "x": 316.0,
+        "bottom": 680
+      },
+      {
+        "height": 556,
+        "x": 351.0,
+        "bottom": 680
+      },
+      {
+        "height": 559,
+        "x": 350.0,
+        "bottom": 681
+      },
+      {
+        "height": 559,
+        "x": 326.0,
+        "bottom": 680
+      },
+      {
+        "height": 531,
+        "x": 304.0,
+        "bottom": 681
+      },
+      {
+        "height": 559,
+        "x": 325.0,
+        "bottom": 680
+      },
+      {
+        "height": 549,
+        "x": 334.0,
+        "bottom": 680
+      },
+      {
+        "height": 550,
+        "x": 400.0,
+        "bottom": 680
+      },
+      {
+        "height": 548,
+        "x": 286.0,
+        "bottom": 680
+      },
+      {
+        "height": 547,
+        "x": 386.0,
+        "bottom": 680
+      },
+      {
+        "height": 559,
+        "x": 333.0,
+        "bottom": 680
+      },
+      {
+        "height": 562,
+        "x": 331.0,
+        "bottom": 681
+      },
+      {
+        "height": 562,
+        "x": 298.0,
+        "bottom": 680
+      },
+      {
+        "height": 561,
+        "x": 374.0,
+        "bottom": 681
+      }
+    ],
+    "sources": [
+      {
+        "path": "sprites/raw/native-correction/halloween-base.png",
+        "columns": 1,
+        "cell": 0
+      },
+      {
+        "path": "sprites/raw/native-correction/lantern1-01-07-08.png",
+        "columns": 3,
+        "cell": 0
+      },
+      {
+        "path": "sprites/raw/native-correction/lantern1-02-03.png",
+        "columns": 2,
+        "cell": 0
+      },
+      {
+        "path": "sprites/raw/native-correction/lantern1-02-03.png",
+        "columns": 2,
+        "cell": 1
+      },
+      {
+        "path": "sprites/raw/native-correction/lantern1-04-05-06.png",
+        "columns": 3,
+        "cell": 0
+      },
+      {
+        "path": "sprites/raw/native-correction/lantern1-04-05-06.png",
+        "columns": 3,
+        "cell": 1
+      },
+      {
+        "path": "sprites/raw/native-correction/lantern1-04-05-06.png",
+        "columns": 3,
+        "cell": 2
+      },
+      {
+        "path": "sprites/raw/native-correction/lantern1-01-07-08.png",
+        "columns": 3,
+        "cell": 1
+      },
+      {
+        "path": "sprites/raw/native-correction/lantern1-01-07-08.png",
+        "columns": 3,
+        "cell": 2
+      },
+      {
+        "path": "sprites/raw/native-correction/lantern1-09-10-11.png",
+        "columns": 3,
+        "cell": 0
+      },
+      {
+        "path": "sprites/raw/native-correction/lantern1-09-10-11.png",
+        "columns": 3,
+        "cell": 1
+      },
+      {
+        "path": "sprites/raw/native-correction/lantern1-09-10-11.png",
+        "columns": 3,
+        "cell": 2
+      },
+      {
+        "path": "sprites/raw/native-correction/lantern1-12-13-14.png",
+        "columns": 3,
+        "cell": 0
+      },
+      {
+        "path": "sprites/raw/native-correction/lantern1-12-13-14.png",
+        "columns": 3,
+        "cell": 1
+      },
+      {
+        "path": "sprites/raw/native-correction/lantern1-12-13-14.png",
+        "columns": 3,
+        "cell": 2
+      },
+      {
+        "path": "sprites/raw/native-correction/halloween-base.png",
+        "columns": 1,
+        "cell": 0
+      }
+    ]
+  },
+  "moon1": {
+    "theme": "halloween",
+    "mode": "halloween",
+    "anchor": "sprites/hd720/frames/witchidle1_loop/witchidle1_loop_00.png",
+    "poses": [
+      {
+        "height": 561,
+        "x": 398.0,
+        "bottom": 681,
+        "alignment": "bounds"
+      },
+      {
+        "height": 548,
+        "x": 346.5,
+        "bottom": 677,
+        "alignment": "bounds"
+      },
+      {
+        "height": 551,
+        "x": 345.0,
+        "bottom": 677,
+        "alignment": "bounds"
+      },
+      {
+        "height": 527,
+        "x": 314.5,
+        "bottom": 676,
+        "alignment": "bounds"
+      },
+      {
+        "height": 500,
+        "x": 370.0,
+        "bottom": 614,
+        "alignment": "bounds"
+      },
+      {
+        "height": 509,
+        "x": 377.0,
+        "bottom": 624,
+        "alignment": "bounds"
+      },
+      {
+        "height": 489,
+        "x": 307.0,
+        "bottom": 609,
+        "alignment": "bounds"
+      },
+      {
+        "height": 491,
+        "x": 364.5,
+        "bottom": 611,
+        "alignment": "bounds"
+      },
+      {
+        "height": 475,
+        "x": 369.5,
+        "bottom": 568,
+        "alignment": "bounds"
+      },
+      {
+        "height": 472,
+        "x": 405.0,
+        "bottom": 566,
+        "alignment": "bounds"
+      },
+      {
+        "height": 469,
+        "x": 358.5,
+        "bottom": 554,
+        "alignment": "bounds"
+      },
+      {
+        "height": 495,
+        "x": 334.0,
+        "bottom": 567,
+        "alignment": "bounds"
+      },
+      {
+        "height": 522,
+        "x": 381.5,
+        "bottom": 554,
+        "alignment": "bounds"
+      },
+      {
+        "height": 494,
+        "x": 356.5,
+        "bottom": 553,
+        "alignment": "bounds"
+      },
+      {
+        "height": 494,
+        "x": 348.5,
+        "bottom": 554,
+        "alignment": "bounds"
+      },
+      {
+        "height": 561,
+        "x": 398.0,
+        "bottom": 681,
+        "alignment": "bounds"
+      }
+    ],
+    "sources": [
+      {
+        "path": "sprites/raw/native-correction/halloween-base.png",
+        "columns": 1,
+        "cell": 0
+      },
+      {
+        "path": "sprites/raw/native-correction/moon1-01-02-03.png",
+        "columns": 3,
+        "cell": 0
+      },
+      {
+        "path": "sprites/raw/native-correction/moon1-01-02-03.png",
+        "columns": 3,
+        "cell": 1
+      },
+      {
+        "path": "sprites/raw/native-correction/moon1-01-02-03.png",
+        "columns": 3,
+        "cell": 2
+      },
+      {
+        "path": "sprites/raw/native-correction/moon1-04-05-06.png",
+        "columns": 3,
+        "cell": 0
+      },
+      {
+        "path": "sprites/raw/native-correction/moon1-04-05-06.png",
+        "columns": 3,
+        "cell": 1
+      },
+      {
+        "path": "sprites/raw/native-correction/moon1-04-05-06.png",
+        "columns": 3,
+        "cell": 2
+      },
+      {
+        "path": "sprites/raw/native-correction/moon1-07-08-09.png",
+        "columns": 3,
+        "cell": 0
+      },
+      {
+        "path": "sprites/raw/native-correction/moon1-07-08-09.png",
+        "columns": 3,
+        "cell": 1
+      },
+      {
+        "path": "sprites/raw/native-correction/moon1-07-08-09.png",
+        "columns": 3,
+        "cell": 2
+      },
+      {
+        "path": "sprites/raw/native-correction/moon1-10-11-12.png",
+        "columns": 3,
+        "cell": 0
+      },
+      {
+        "path": "sprites/raw/native-correction/moon1-10-11-12.png",
+        "columns": 3,
+        "cell": 1
+      },
+      {
+        "path": "sprites/raw/native-correction/moon1-10-11-12.png",
+        "columns": 3,
+        "cell": 2
+      },
+      {
+        "path": "sprites/raw/native-correction/moon1-repair-13-14.png",
+        "columns": 2,
+        "cell": 0,
+        "box": [
+          0,
+          0,
+          933,
+          887
+        ]
+      },
+      {
+        "path": "sprites/raw/native-correction/moon1-repair-13-14.png",
+        "columns": 2,
+        "cell": 1,
+        "box": [
+          933,
+          0,
+          1774,
+          887
+        ]
+      },
+      {
+        "path": "sprites/raw/native-correction/halloween-base.png",
+        "columns": 1,
+        "cell": 0
+      }
+    ]
+  },
+  "peekaboo1": {
+    "theme": "halloween",
+    "mode": "halloween",
+    "anchor": "sprites/hd720/frames/witchidle1_loop/witchidle1_loop_00.png",
+    "poses": [
+      {
+        "height": 561,
+        "x": 374.0,
+        "bottom": 681
+      },
+      {
+        "height": 563,
+        "x": 350.0,
+        "bottom": 681
+      },
+      {
+        "height": 557,
+        "x": 339.0,
+        "bottom": 679
+      },
+      {
+        "height": 561,
+        "x": 340.0,
+        "bottom": 681
+      },
+      {
+        "height": 524,
+        "x": 346.0,
+        "bottom": 680
+      },
+      {
+        "height": 513,
+        "x": 387.0,
+        "bottom": 680
+      },
+      {
+        "height": 430,
+        "x": 346.0,
+        "bottom": 681
+      },
+      {
+        "height": 545,
+        "x": 400.0,
+        "bottom": 680
+      },
+      {
+        "height": 524,
+        "x": 302.0,
+        "bottom": 681
+      },
+      {
+        "height": 522,
+        "x": 381.0,
+        "bottom": 680
+      },
+      {
+        "height": 510,
+        "x": 335.0,
+        "bottom": 680
+      },
+      {
+        "height": 507,
+        "x": 333.0,
+        "bottom": 680
+      },
+      {
+        "height": 544,
+        "x": 385.0,
+        "bottom": 680
+      },
+      {
+        "height": 515,
+        "x": 373.0,
+        "bottom": 680
+      },
+      {
+        "height": 559,
+        "x": 348.0,
+        "bottom": 680
+      },
+      {
+        "height": 561,
+        "x": 374.0,
+        "bottom": 681
+      }
+    ],
+    "sources": [
+      {
+        "path": "sprites/raw/native-correction/halloween-base.png",
+        "columns": 1,
+        "cell": 0
+      },
+      {
+        "path": "sprites/raw/native-correction/peekaboo1-01-02-03.png",
+        "columns": 3,
+        "cell": 0
+      },
+      {
+        "path": "sprites/raw/native-correction/peekaboo1-01-02-03.png",
+        "columns": 3,
+        "cell": 1
+      },
+      {
+        "path": "sprites/raw/native-correction/peekaboo1-01-02-03.png",
+        "columns": 3,
+        "cell": 2
+      },
+      {
+        "path": "sprites/raw/native-correction/peekaboo1-04-05-06.png",
+        "columns": 3,
+        "cell": 0
+      },
+      {
+        "path": "sprites/raw/native-correction/peekaboo1-04-05-06.png",
+        "columns": 3,
+        "cell": 1
+      },
+      {
+        "path": "sprites/raw/native-correction/peekaboo1-04-05-06.png",
+        "columns": 3,
+        "cell": 2
+      },
+      {
+        "path": "sprites/raw/native-correction/peekaboo1-07-08-09.png",
+        "columns": 3,
+        "cell": 0
+      },
+      {
+        "path": "sprites/raw/native-correction/peekaboo1-07-08-09.png",
+        "columns": 3,
+        "cell": 1
+      },
+      {
+        "path": "sprites/raw/native-correction/peekaboo1-07-08-09.png",
+        "columns": 3,
+        "cell": 2
+      },
+      {
+        "path": "sprites/raw/native-correction/peekaboo1-10-11-12.png",
+        "columns": 3,
+        "cell": 0
+      },
+      {
+        "path": "sprites/raw/native-correction/peekaboo1-10-11-12.png",
+        "columns": 3,
+        "cell": 1
+      },
+      {
+        "path": "sprites/raw/native-correction/peekaboo1-10-11-12.png",
+        "columns": 3,
+        "cell": 2
+      },
+      {
+        "path": "sprites/raw/native-correction/peekaboo1-13-14-00.png",
+        "columns": 3,
+        "cell": 0
+      },
+      {
+        "path": "sprites/raw/native-correction/peekaboo1-13-14-00.png",
+        "columns": 3,
+        "cell": 1
+      },
+      {
+        "path": "sprites/raw/native-correction/halloween-base.png",
+        "columns": 1,
+        "cell": 0
+      }
+    ]
+  },
+  "potion1": {
+    "theme": "halloween",
+    "mode": "halloween",
+    "anchor": "sprites/hd720/frames/witchidle1_loop/witchidle1_loop_00.png",
+    "poses": [
+      {
+        "height": 561,
+        "x": 374.0,
+        "bottom": 681
+      },
+      {
+        "height": 559,
+        "x": 366.0,
+        "bottom": 679
+      },
+      {
+        "height": 561,
+        "x": 345.0,
+        "bottom": 679
+      },
+      {
+        "height": 557,
+        "x": 350.0,
+        "bottom": 679
+      },
+      {
+        "height": 564,
+        "x": 378.0,
+        "bottom": 679
+      },
+      {
+        "height": 560,
+        "x": 391.0,
+        "bottom": 680
+      },
+      {
+        "height": 563,
+        "x": 345.0,
+        "bottom": 679
+      },
+      {
+        "height": 559,
+        "x": 357.0,
+        "bottom": 679
+      },
+      {
+        "height": 531,
+        "x": 415.0,
+        "bottom": 650
+      },
+      {
+        "height": 532,
+        "x": 356.0,
+        "bottom": 679
+      },
+      {
+        "height": 535,
+        "x": 339.0,
+        "bottom": 679
+      },
+      {
+        "height": 534,
+        "x": 350.0,
+        "bottom": 679
+      },
+      {
+        "height": 550,
+        "x": 420.0,
+        "bottom": 681
+      },
+      {
+        "height": 560,
+        "x": 392.0,
+        "bottom": 681
+      },
+      {
+        "height": 531,
+        "x": 375.0,
+        "bottom": 680
+      },
+      {
+        "height": 561,
+        "x": 374.0,
+        "bottom": 681
+      }
+    ],
+    "sources": [
+      {
+        "path": "sprites/raw/native-correction/halloween-base.png",
+        "columns": 1,
+        "cell": 0
+      },
+      {
+        "path": "sprites/raw/native-correction/potion1-01-02-03.png",
+        "columns": 3,
+        "cell": 0
+      },
+      {
+        "path": "sprites/raw/native-correction/potion1-01-02-03.png",
+        "columns": 3,
+        "cell": 1
+      },
+      {
+        "path": "sprites/raw/native-correction/potion1-01-02-03.png",
+        "columns": 3,
+        "cell": 2
+      },
+      {
+        "path": "sprites/raw/native-correction/potion1-04-05-06.png",
+        "columns": 3,
+        "cell": 0
+      },
+      {
+        "path": "sprites/raw/native-correction/potion1-04-05-06.png",
+        "columns": 3,
+        "cell": 1
+      },
+      {
+        "path": "sprites/raw/native-correction/potion1-04-05-06.png",
+        "columns": 3,
+        "cell": 2
+      },
+      {
+        "path": "sprites/raw/native-correction/potion1-07-08-09.png",
+        "columns": 3,
+        "cell": 0
+      },
+      {
+        "path": "sprites/raw/native-correction/potion1-07-08-09.png",
+        "columns": 3,
+        "cell": 1
+      },
+      {
+        "path": "sprites/raw/native-correction/potion1-07-08-09.png",
+        "columns": 3,
+        "cell": 2
+      },
+      {
+        "path": "sprites/raw/native-correction/potion1-10-11-12.png",
+        "columns": 3,
+        "cell": 0
+      },
+      {
+        "path": "sprites/raw/native-correction/potion1-10-11-12.png",
+        "columns": 3,
+        "cell": 1
+      },
+      {
+        "path": "sprites/raw/native-correction/potion1-10-11-12.png",
+        "columns": 3,
+        "cell": 2
+      },
+      {
+        "path": "sprites/raw/native-correction/potion1-13-14-00.png",
+        "columns": 3,
+        "cell": 0
+      },
+      {
+        "path": "sprites/raw/native-correction/potion1-13-14-00.png",
+        "columns": 3,
+        "cell": 1
+      },
+      {
+        "path": "sprites/raw/native-correction/halloween-base.png",
+        "columns": 1,
+        "cell": 0
+      }
+    ]
+  },
+  "power1": {
+    "theme": "dance",
+    "mode": "normal",
+    "anchor": "sprites/hd720/frames/power1_loop/power1_loop_00.png",
+    "poses": [
+      {
+        "height": 565,
+        "x": 364.5,
+        "bottom": 695,
+        "alignment": "bounds"
+      },
+      {
+        "height": 558,
+        "x": 342.5,
+        "bottom": 695,
+        "alignment": "bounds"
+      },
+      {
+        "height": 572,
+        "x": 323.5,
+        "bottom": 697,
+        "alignment": "bounds"
+      },
+      {
+        "height": 570,
+        "x": 313.0,
+        "bottom": 697,
+        "alignment": "bounds"
+      },
+      {
+        "height": 571,
+        "x": 380.0,
+        "bottom": 692,
+        "alignment": "bounds"
+      },
+      {
+        "height": 527,
+        "x": 357.0,
+        "bottom": 690,
+        "alignment": "bounds"
+      },
+      {
+        "height": 589,
+        "x": 353.5,
+        "bottom": 697,
+        "alignment": "bounds"
+      },
+      {
+        "height": 548,
+        "x": 308.0,
+        "bottom": 698,
+        "alignment": "bounds"
+      },
+      {
+        "height": 473,
+        "x": 363.0,
+        "bottom": 644,
+        "alignment": "bounds"
+      },
+      {
+        "height": 534,
+        "x": 356.0,
+        "bottom": 648,
+        "alignment": "bounds"
+      },
+      {
+        "height": 481,
+        "x": 339.0,
+        "bottom": 590,
+        "alignment": "bounds"
+      },
+      {
+        "height": 476,
+        "x": 335.0,
+        "bottom": 619,
+        "alignment": "bounds"
+      },
+      {
+        "height": 472,
+        "x": 331.0,
+        "bottom": 648,
+        "alignment": "bounds"
+      },
+      {
+        "height": 506,
+        "x": 350.0,
+        "bottom": 609,
+        "alignment": "bounds"
+      },
+      {
+        "height": 538,
+        "x": 368.5,
+        "bottom": 570,
+        "alignment": "bounds"
+      },
+      {
+        "height": 549,
+        "x": 364.0,
+        "bottom": 571,
+        "alignment": "bounds"
+      },
+      {
+        "height": 525,
+        "x": 341.0,
+        "bottom": 571,
+        "alignment": "bounds"
+      },
+      {
+        "height": 565,
+        "x": 364.5,
+        "bottom": 695,
+        "alignment": "bounds"
+      }
+    ],
+    "sources": [
+      {
+        "path": "sprites/raw/native-correction/power1-00-01.png",
+        "columns": 2,
+        "cell": 0
+      },
+      {
+        "path": "sprites/raw/native-correction/power1-00-01.png",
+        "columns": 2,
+        "cell": 1
+      },
+      {
+        "path": "sprites/raw/native-correction/power1-02-03-04.png",
+        "columns": 3,
+        "cell": 0
+      },
+      {
+        "path": "sprites/raw/native-correction/power1-02-03-04.png",
+        "columns": 3,
+        "cell": 1
+      },
+      {
+        "path": "sprites/raw/native-correction/power1-02-03-04.png",
+        "columns": 3,
+        "cell": 2
+      },
+      {
+        "path": "sprites/raw/native-correction/power1-05-06-07.png",
+        "columns": 3,
+        "cell": 0
+      },
+      {
+        "path": "sprites/raw/native-correction/power1-05-06-07.png",
+        "columns": 3,
+        "cell": 1
+      },
+      {
+        "path": "sprites/raw/native-correction/power1-05-06-07.png",
+        "columns": 3,
+        "cell": 2
+      },
+      {
+        "path": "sprites/raw/native-correction/power1-repair-08-09.png",
+        "columns": 2,
+        "cell": 0
+      },
+      {
+        "path": "sprites/raw/native-correction/power1-repair-08-09.png",
+        "columns": 2,
+        "cell": 1
+      },
+      {
+        "path": "sprites/raw/native-correction/power1-repair-10-00.png",
+        "columns": 2,
+        "cell": 0
+      },
+      {
+        "path": "sprites/raw/native-correction/power1-midpoints.png",
+        "columns": 2,
+        "cell": 0
+      },
+      {
+        "path": "sprites/raw/native-correction/power1-11-12-13.png",
+        "columns": 3,
+        "cell": 0
+      },
+      {
+        "path": "sprites/raw/native-correction/power1-midpoints.png",
+        "columns": 2,
+        "cell": 1
+      },
+      {
+        "path": "sprites/raw/native-correction/power1-11-12-13.png",
+        "columns": 3,
+        "cell": 1
+      },
+      {
+        "path": "sprites/raw/native-correction/power1-11-12-13.png",
+        "columns": 3,
+        "cell": 2
+      },
+      {
+        "path": "sprites/raw/native-correction/power1-14-15-00.png",
+        "columns": 3,
+        "cell": 0
+      },
+      {
+        "path": "sprites/raw/native-correction/power1-00-01.png",
+        "columns": 2,
+        "cell": 0
+      }
+    ]
+  },
+  "raven1": {
+    "theme": "halloween",
+    "mode": "halloween",
+    "anchor": "sprites/hd720/frames/witchidle1_loop/witchidle1_loop_00.png",
+    "poses": [
+      {
+        "height": 561,
+        "x": 374.0,
+        "bottom": 681
+      },
+      {
+        "height": 518,
+        "x": 389.0,
+        "bottom": 681
+      },
+      {
+        "height": 623,
+        "x": 326.0,
+        "bottom": 681
+      },
+      {
+        "height": 577,
+        "x": 347.0,
+        "bottom": 681
+      },
+      {
+        "height": 583,
+        "x": 349.5,
+        "bottom": 679
+      },
+      {
+        "height": 559,
+        "x": 363.0,
+        "bottom": 680
+      },
+      {
+        "height": 582,
+        "x": 374.0,
+        "bottom": 680
+      },
+      {
+        "height": 551,
+        "x": 345.0,
+        "bottom": 680
+      },
+      {
+        "height": 547,
+        "x": 359.0,
+        "bottom": 681
+      },
+      {
+        "height": 564,
+        "x": 356.0,
+        "bottom": 681
+      },
+      {
+        "height": 524,
+        "x": 354.0,
+        "bottom": 681
+      },
+      {
+        "height": 543,
+        "x": 353.0,
+        "bottom": 681
+      },
+      {
+        "height": 508,
+        "x": 393.0,
+        "bottom": 680
+      },
+      {
+        "height": 546,
+        "x": 320.0,
+        "bottom": 680
+      },
+      {
+        "height": 573,
+        "x": 285.0,
+        "bottom": 681
+      },
+      {
+        "height": 561,
+        "x": 374.0,
+        "bottom": 681
+      }
+    ],
+    "sources": [
+      {
+        "path": "sprites/raw/native-correction/halloween-base.png",
+        "columns": 1,
+        "cell": 0
+      },
+      {
+        "path": "sprites/raw/native-correction/raven1-01-02-03.png",
+        "columns": 3,
+        "cell": 0
+      },
+      {
+        "path": "sprites/raw/native-correction/raven1-01-02-03.png",
+        "columns": 3,
+        "cell": 1
+      },
+      {
+        "path": "sprites/raw/native-correction/raven1-01-02-03.png",
+        "columns": 3,
+        "cell": 2
+      },
+      {
+        "path": "sprites/raw/native-correction/raven1-04-05-06.png",
+        "columns": 3,
+        "cell": 0
+      },
+      {
+        "path": "sprites/raw/native-correction/raven1-04-05-06.png",
+        "columns": 3,
+        "cell": 1
+      },
+      {
+        "path": "sprites/raw/native-correction/raven1-04-05-06.png",
+        "columns": 3,
+        "cell": 2
+      },
+      {
+        "path": "sprites/raw/native-correction/raven1-07-08-09.png",
+        "columns": 3,
+        "cell": 0
+      },
+      {
+        "path": "sprites/raw/native-correction/raven1-07-08-09.png",
+        "columns": 3,
+        "cell": 1
+      },
+      {
+        "path": "sprites/raw/native-correction/raven1-07-08-09.png",
+        "columns": 3,
+        "cell": 2
+      },
+      {
+        "path": "sprites/raw/native-correction/raven1-10-11-12.png",
+        "columns": 3,
+        "cell": 0
+      },
+      {
+        "path": "sprites/raw/native-correction/raven1-10-11-12.png",
+        "columns": 3,
+        "cell": 1
+      },
+      {
+        "path": "sprites/raw/native-correction/raven1-10-11-12.png",
+        "columns": 3,
+        "cell": 2
+      },
+      {
+        "path": "sprites/raw/native-correction/raven1-13-14-00.png",
+        "columns": 3,
+        "cell": 0,
+        "box": [
+          0,
+          0,
+          775,
+          724
+        ]
+      },
+      {
+        "path": "sprites/raw/native-correction/raven1-13-14-00.png",
+        "columns": 3,
+        "cell": 1,
+        "box": [
+          775,
+          0,
+          1517,
+          724
+        ]
+      },
+      {
+        "path": "sprites/raw/native-correction/halloween-base.png",
+        "columns": 1,
+        "cell": 0
+      }
+    ]
+  },
+  "shuffle1": {
+    "theme": "dance",
+    "mode": "normal",
+    "anchor": "sprites/hd720/frames/shuffle1_loop/shuffle1_loop_00.png",
+    "poses": [
+      {
+        "height": 633,
+        "x": 359.5,
+        "bottom": 695,
+        "alignment": "bounds"
+      },
+      {
+        "height": 634,
+        "x": 369.5,
+        "bottom": 695,
+        "alignment": "bounds"
+      },
+      {
+        "height": 626,
+        "x": 335.0,
+        "bottom": 692,
+        "alignment": "bounds"
+      },
+      {
+        "height": 622,
+        "x": 345.0,
+        "bottom": 691,
+        "alignment": "bounds"
+      },
+      {
+        "height": 641,
+        "x": 360.0,
+        "bottom": 697,
+        "alignment": "bounds"
+      },
+      {
+        "height": 638,
+        "x": 395.5,
+        "bottom": 696,
+        "alignment": "bounds"
+      },
+      {
+        "height": 626,
+        "x": 364.5,
+        "bottom": 695,
+        "alignment": "bounds"
+      },
+      {
+        "height": 643,
+        "x": 371.0,
+        "bottom": 697,
+        "alignment": "bounds"
+      },
+      {
+        "height": 615,
+        "x": 366.5,
+        "bottom": 676,
+        "alignment": "bounds"
+      },
+      {
+        "height": 637,
+        "x": 344.0,
+        "bottom": 684,
+        "alignment": "bounds"
+      },
+      {
+        "height": 580,
+        "x": 352.5,
+        "bottom": 630,
+        "alignment": "bounds"
+      },
+      {
+        "height": 602,
+        "x": 366.0,
+        "bottom": 676,
+        "alignment": "bounds"
+      },
+      {
+        "height": 596,
+        "x": 379.5,
+        "bottom": 650,
+        "alignment": "bounds"
+      },
+      {
+        "height": 590,
+        "x": 392.5,
+        "bottom": 625,
+        "alignment": "bounds"
+      },
+      {
+        "height": 597,
+        "x": 376.5,
+        "bottom": 648,
+        "alignment": "bounds"
+      },
+      {
+        "height": 604,
+        "x": 360.5,
+        "bottom": 672,
+        "alignment": "bounds"
+      },
+      {
+        "height": 647,
+        "x": 381.5,
+        "bottom": 681,
+        "alignment": "bounds"
+      },
+      {
+        "height": 633,
+        "x": 359.5,
+        "bottom": 695,
+        "alignment": "bounds"
+      }
+    ],
+    "sources": [
+      {
+        "path": "sprites/raw/native-correction/shuffle1-00-01.png",
+        "columns": 2,
+        "cell": 0
+      },
+      {
+        "path": "sprites/raw/native-correction/shuffle1-00-01.png",
+        "columns": 2,
+        "cell": 1
+      },
+      {
+        "path": "sprites/raw/native-correction/shuffle1-02-03-04.png",
+        "columns": 3,
+        "cell": 0
+      },
+      {
+        "path": "sprites/raw/native-correction/shuffle1-02-03-04.png",
+        "columns": 3,
+        "cell": 1
+      },
+      {
+        "path": "sprites/raw/native-correction/shuffle1-02-03-04.png",
+        "columns": 3,
+        "cell": 2
+      },
+      {
+        "path": "sprites/raw/native-correction/shuffle1-05-06-07.png",
+        "columns": 3,
+        "cell": 0
+      },
+      {
+        "path": "sprites/raw/native-correction/shuffle1-05-06-07.png",
+        "columns": 3,
+        "cell": 1
+      },
+      {
+        "path": "sprites/raw/native-correction/shuffle1-05-06-07.png",
+        "columns": 3,
+        "cell": 2
+      },
+      {
+        "path": "sprites/raw/native-correction/shuffle1-08-09-10.png",
+        "columns": 3,
+        "cell": 0
+      },
+      {
+        "path": "sprites/raw/native-correction/shuffle1-08-09-10.png",
+        "columns": 3,
+        "cell": 1
+      },
+      {
+        "path": "sprites/raw/native-correction/shuffle1-08-09-10.png",
+        "columns": 3,
+        "cell": 2
+      },
+      {
+        "path": "sprites/raw/native-correction/shuffle1-11-12-13.png",
+        "columns": 3,
+        "cell": 0
+      },
+      {
+        "path": "sprites/raw/inbetweens/shuffle1-11-midpoint.png",
+        "columns": 1,
+        "cell": 0
+      },
+      {
+        "path": "sprites/raw/native-correction/shuffle1-11-12-13.png",
+        "columns": 3,
+        "cell": 1
+      },
+      {
+        "path": "sprites/raw/inbetweens/shuffle1-12-midpoint.png",
+        "columns": 1,
+        "cell": 0
+      },
+      {
+        "path": "sprites/raw/native-correction/shuffle1-11-12-13.png",
+        "columns": 3,
+        "cell": 2
+      },
+      {
+        "path": "sprites/raw/native-correction/shuffle1-14-15-00.png",
+        "columns": 3,
+        "cell": 0
+      },
+      {
+        "path": "sprites/raw/native-correction/shuffle1-00-01.png",
+        "columns": 2,
+        "cell": 0
+      }
+    ]
+  },
+  "spellbook1": {
+    "theme": "halloween",
+    "mode": "halloween",
+    "anchor": "sprites/hd720/frames/witchidle1_loop/witchidle1_loop_00.png",
+    "poses": [
+      {
+        "height": 561,
+        "x": 374.0,
+        "bottom": 681
+      },
+      {
+        "height": 558,
+        "x": 375.0,
+        "bottom": 679
+      },
+      {
+        "height": 550,
+        "x": 320.5,
+        "bottom": 679
+      },
+      {
+        "height": 549,
+        "x": 308.0,
+        "bottom": 680
+      },
+      {
+        "height": 546,
+        "x": 382.0,
+        "bottom": 679
+      },
+      {
+        "height": 546,
+        "x": 335.0,
+        "bottom": 679
+      },
+      {
+        "height": 546,
+        "x": 317.5,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 315.0,
+        "bottom": 680
+      },
+      {
+        "height": 552,
+        "x": 349.0,
+        "bottom": 680
+      },
+      {
+        "height": 544,
+        "x": 336.0,
+        "bottom": 679
+      },
+      {
+        "height": 545,
+        "x": 327.0,
+        "bottom": 679
+      },
+      {
+        "height": 555,
+        "x": 317.0,
+        "bottom": 680
+      },
+      {
+        "height": 539,
+        "x": 352.0,
+        "bottom": 679
+      },
+      {
+        "height": 543,
+        "x": 346.0,
+        "bottom": 680
+      },
+      {
+        "height": 548,
+        "x": 321.0,
+        "bottom": 680
+      },
+      {
+        "height": 561,
+        "x": 374.0,
+        "bottom": 681
+      }
+    ],
+    "sources": [
+      {
+        "path": "sprites/raw/native-correction/halloween-base.png",
+        "columns": 1,
+        "cell": 0
+      },
+      {
+        "path": "sprites/raw/native-correction/spellbook1-01-02-03.png",
+        "columns": 3,
+        "cell": 0
+      },
+      {
+        "path": "sprites/raw/native-correction/spellbook1-01-02-03.png",
+        "columns": 3,
+        "cell": 1
+      },
+      {
+        "path": "sprites/raw/native-correction/spellbook1-01-02-03.png",
+        "columns": 3,
+        "cell": 2
+      },
+      {
+        "path": "sprites/raw/native-correction/spellbook1-04-05-06.png",
+        "columns": 3,
+        "cell": 0
+      },
+      {
+        "path": "sprites/raw/native-correction/spellbook1-04-05-06.png",
+        "columns": 3,
+        "cell": 1
+      },
+      {
+        "path": "sprites/raw/native-correction/spellbook1-04-05-06.png",
+        "columns": 3,
+        "cell": 2
+      },
+      {
+        "path": "sprites/raw/native-correction/spellbook1-07-08-09.png",
+        "columns": 3,
+        "cell": 0
+      },
+      {
+        "path": "sprites/raw/native-correction/spellbook1-07-08-09.png",
+        "columns": 3,
+        "cell": 1
+      },
+      {
+        "path": "sprites/raw/native-correction/spellbook1-07-08-09.png",
+        "columns": 3,
+        "cell": 2
+      },
+      {
+        "path": "sprites/raw/native-correction/spellbook1-10-11-12.png",
+        "columns": 3,
+        "cell": 0
+      },
+      {
+        "path": "sprites/raw/native-correction/spellbook1-10-11-12.png",
+        "columns": 3,
+        "cell": 1
+      },
+      {
+        "path": "sprites/raw/native-correction/spellbook1-10-11-12.png",
+        "columns": 3,
+        "cell": 2
+      },
+      {
+        "path": "sprites/raw/native-correction/spellbook1-13-14-00.png",
+        "columns": 3,
+        "cell": 0
+      },
+      {
+        "path": "sprites/raw/native-correction/spellbook1-13-14-00.png",
+        "columns": 3,
+        "cell": 1
+      },
+      {
+        "path": "sprites/raw/native-correction/halloween-base.png",
+        "columns": 1,
+        "cell": 0
+      }
+    ]
+  },
+  "spider1": {
+    "theme": "halloween",
+    "mode": "halloween",
+    "anchor": "sprites/hd720/frames/witchidle1_loop/witchidle1_loop_00.png",
+    "poses": [
+      {
+        "height": 561,
+        "x": 374.0,
+        "bottom": 681
+      },
+      {
+        "height": 605,
+        "x": 385.0,
+        "bottom": 680
+      },
+      {
+        "height": 609,
+        "x": 339.0,
+        "bottom": 681
+      },
+      {
+        "height": 606,
+        "x": 340.0,
+        "bottom": 680
+      },
+      {
+        "height": 562,
+        "x": 423.0,
+        "bottom": 680
+      },
+      {
+        "height": 566,
+        "x": 370.0,
+        "bottom": 681
+      },
+      {
+        "height": 560,
+        "x": 361.0,
+        "bottom": 679
+      },
+      {
+        "height": 554,
+        "x": 359.0,
+        "bottom": 681
+      },
+      {
+        "height": 530,
+        "x": 353.0,
+        "bottom": 681
+      },
+      {
+        "height": 542,
+        "x": 356.0,
+        "bottom": 681
+      },
+      {
+        "height": 537,
+        "x": 363.0,
+        "bottom": 681
+      },
+      {
+        "height": 576,
+        "x": 317.0,
+        "bottom": 680
+      },
+      {
+        "height": 576,
+        "x": 366.0,
+        "bottom": 681
+      },
+      {
+        "height": 585,
+        "x": 342.0,
+        "bottom": 681
+      },
+      {
+        "height": 543,
+        "x": 330.0,
+        "bottom": 680
+      },
+      {
+        "height": 561,
+        "x": 374.0,
+        "bottom": 681
+      }
+    ],
+    "sources": [
+      {
+        "path": "sprites/raw/native-correction/halloween-base.png",
+        "columns": 1,
+        "cell": 0
+      },
+      {
+        "path": "sprites/raw/native-correction/spider1-01-02-03.png",
+        "columns": 3,
+        "cell": 0
+      },
+      {
+        "path": "sprites/raw/native-correction/spider1-01-02-03.png",
+        "columns": 3,
+        "cell": 1
+      },
+      {
+        "path": "sprites/raw/native-correction/spider1-01-02-03.png",
+        "columns": 3,
+        "cell": 2
+      },
+      {
+        "path": "sprites/raw/native-correction/spider1-04-05-06.png",
+        "columns": 3,
+        "cell": 0
+      },
+      {
+        "path": "sprites/raw/native-correction/spider1-04-05-06.png",
+        "columns": 3,
+        "cell": 1
+      },
+      {
+        "path": "sprites/raw/native-correction/spider1-04-05-06.png",
+        "columns": 3,
+        "cell": 2
+      },
+      {
+        "path": "sprites/raw/native-correction/spider1-07-08-09.png",
+        "columns": 3,
+        "cell": 0
+      },
+      {
+        "path": "sprites/raw/native-correction/spider1-07-08-09.png",
+        "columns": 3,
+        "cell": 1
+      },
+      {
+        "path": "sprites/raw/native-correction/spider1-07-08-09.png",
+        "columns": 3,
+        "cell": 2
+      },
+      {
+        "path": "sprites/raw/native-correction/spider1-10-11-12.png",
+        "columns": 3,
+        "cell": 0
+      },
+      {
+        "path": "sprites/raw/native-correction/spider1-10-11-12.png",
+        "columns": 3,
+        "cell": 1
+      },
+      {
+        "path": "sprites/raw/native-correction/spider1-10-11-12.png",
+        "columns": 3,
+        "cell": 2
+      },
+      {
+        "path": "sprites/raw/native-correction/spider1-repair-13-14.png",
+        "columns": 2,
+        "cell": 0
+      },
+      {
+        "path": "sprites/raw/native-correction/spider1-repair-13-14.png",
+        "columns": 2,
+        "cell": 1
+      },
+      {
+        "path": "sprites/raw/native-correction/halloween-base.png",
+        "columns": 1,
+        "cell": 0
+      }
+    ]
+  },
+  "starspell1": {
+    "theme": "halloween",
+    "mode": "halloween",
+    "anchor": "sprites/hd720/frames/witchidle1_loop/witchidle1_loop_00.png",
+    "poses": [
+      {
+        "height": 561,
+        "x": 374.0,
+        "bottom": 681
+      },
+      {
+        "height": 555,
+        "x": 349.0,
+        "bottom": 680
+      },
+      {
+        "height": 565,
+        "x": 343.0,
+        "bottom": 681
+      },
+      {
+        "height": 562,
+        "x": 357.0,
+        "bottom": 679
+      },
+      {
+        "height": 531,
+        "x": 417.0,
+        "bottom": 680
+      },
+      {
+        "height": 560,
+        "x": 342.0,
+        "bottom": 680
+      },
+      {
+        "height": 528,
+        "x": 374.0,
+        "bottom": 680
+      },
+      {
+        "height": 583,
+        "x": 355.5,
+        "bottom": 680
+      },
+      {
+        "height": 534,
+        "x": 420.0,
+        "bottom": 679
+      },
+      {
+        "height": 524,
+        "x": 344.0,
+        "bottom": 679
+      },
+      {
+        "height": 524,
+        "x": 372.0,
+        "bottom": 679
+      },
+      {
+        "height": 521,
+        "x": 323.0,
+        "bottom": 680
+      },
+      {
+        "height": 522,
+        "x": 387.0,
+        "bottom": 680
+      },
+      {
+        "height": 543,
+        "x": 352.0,
+        "bottom": 680
+      },
+      {
+        "height": 536,
+        "x": 371.0,
+        "bottom": 680
+      },
+      {
+        "height": 561,
+        "x": 374.0,
+        "bottom": 681
+      }
+    ],
+    "sources": [
+      {
+        "path": "sprites/raw/native-correction/halloween-base.png",
+        "columns": 1,
+        "cell": 0
+      },
+      {
+        "path": "sprites/raw/native-correction/starspell1-01-02-03.png",
+        "columns": 3,
+        "cell": 0
+      },
+      {
+        "path": "sprites/raw/native-correction/starspell1-01-02-03.png",
+        "columns": 3,
+        "cell": 1
+      },
+      {
+        "path": "sprites/raw/native-correction/starspell1-01-02-03.png",
+        "columns": 3,
+        "cell": 2
+      },
+      {
+        "path": "sprites/raw/native-correction/starspell1-04-05-06.png",
+        "columns": 3,
+        "cell": 0
+      },
+      {
+        "path": "sprites/raw/native-correction/starspell1-04-05-06.png",
+        "columns": 3,
+        "cell": 1
+      },
+      {
+        "path": "sprites/raw/native-correction/starspell1-04-05-06.png",
+        "columns": 3,
+        "cell": 2
+      },
+      {
+        "path": "sprites/raw/native-correction/starspell1-07-08-09.png",
+        "columns": 3,
+        "cell": 0
+      },
+      {
+        "path": "sprites/raw/native-correction/starspell1-07-08-09.png",
+        "columns": 3,
+        "cell": 1
+      },
+      {
+        "path": "sprites/raw/native-correction/starspell1-07-08-09.png",
+        "columns": 3,
+        "cell": 2
+      },
+      {
+        "path": "sprites/raw/native-correction/starspell1-10-11-12.png",
+        "columns": 3,
+        "cell": 0
+      },
+      {
+        "path": "sprites/raw/native-correction/starspell1-10-11-12.png",
+        "columns": 3,
+        "cell": 1
+      },
+      {
+        "path": "sprites/raw/native-correction/starspell1-10-11-12.png",
+        "columns": 3,
+        "cell": 2
+      },
+      {
+        "path": "sprites/raw/native-correction/starspell1-13-14-00.png",
+        "columns": 3,
+        "cell": 0
+      },
+      {
+        "path": "sprites/raw/native-correction/starspell1-13-14-00.png",
+        "columns": 3,
+        "cell": 1
+      },
+      {
+        "path": "sprites/raw/native-correction/halloween-base.png",
+        "columns": 1,
+        "cell": 0
+      }
+    ]
+  },
+  "tarot1": {
+    "theme": "halloween",
+    "mode": "halloween",
+    "anchor": "sprites/hd720/frames/witchidle1_loop/witchidle1_loop_00.png",
+    "poses": [
+      {
+        "height": 561,
+        "x": 374.0,
+        "bottom": 681
+      },
+      {
+        "height": 560,
+        "x": 356.5,
+        "bottom": 679
+      },
+      {
+        "height": 575,
+        "x": 368.0,
+        "bottom": 679
+      },
+      {
+        "height": 571,
+        "x": 331.0,
+        "bottom": 681
+      },
+      {
+        "height": 572,
+        "x": 355.0,
+        "bottom": 680
+      },
+      {
+        "height": 571,
+        "x": 407.0,
+        "bottom": 680
+      },
+      {
+        "height": 561,
+        "x": 410.0,
+        "bottom": 680
+      },
+      {
+        "height": 568,
+        "x": 399.0,
+        "bottom": 681
+      },
+      {
+        "height": 558,
+        "x": 393.0,
+        "bottom": 679
+      },
+      {
+        "height": 550,
+        "x": 402.0,
+        "bottom": 679
+      },
+      {
+        "height": 546,
+        "x": 338.0,
+        "bottom": 680
+      },
+      {
+        "height": 547,
+        "x": 410.0,
+        "bottom": 679
+      },
+      {
+        "height": 546,
+        "x": 407.0,
+        "bottom": 680
+      },
+      {
+        "height": 557,
+        "x": 359.0,
+        "bottom": 680
+      },
+      {
+        "height": 550,
+        "x": 370.0,
+        "bottom": 681
+      },
+      {
+        "height": 561,
+        "x": 374.0,
+        "bottom": 681
+      }
+    ],
+    "sources": [
+      {
+        "path": "sprites/raw/native-correction/halloween-base.png",
+        "columns": 1,
+        "cell": 0
+      },
+      {
+        "path": "sprites/raw/native-correction/tarot1-01-02-03.png",
+        "columns": 3,
+        "cell": 0
+      },
+      {
+        "path": "sprites/raw/native-correction/tarot1-01-02-03.png",
+        "columns": 3,
+        "cell": 1
+      },
+      {
+        "path": "sprites/raw/native-correction/tarot1-01-02-03.png",
+        "columns": 3,
+        "cell": 2
+      },
+      {
+        "path": "sprites/raw/native-correction/tarot1-04-05-06.png",
+        "columns": 3,
+        "cell": 0
+      },
+      {
+        "path": "sprites/raw/native-correction/tarot1-04-05-06.png",
+        "columns": 3,
+        "cell": 1
+      },
+      {
+        "path": "sprites/raw/native-correction/tarot1-04-05-06.png",
+        "columns": 3,
+        "cell": 2
+      },
+      {
+        "path": "sprites/raw/native-correction/tarot1-07-08-09.png",
+        "columns": 3,
+        "cell": 0
+      },
+      {
+        "path": "sprites/raw/native-correction/tarot1-07-08-09.png",
+        "columns": 3,
+        "cell": 1
+      },
+      {
+        "path": "sprites/raw/native-correction/tarot1-07-08-09.png",
+        "columns": 3,
+        "cell": 2
+      },
+      {
+        "path": "sprites/raw/native-correction/tarot1-10-11-12.png",
+        "columns": 3,
+        "cell": 0
+      },
+      {
+        "path": "sprites/raw/native-correction/tarot1-10-11-12.png",
+        "columns": 3,
+        "cell": 1
+      },
+      {
+        "path": "sprites/raw/native-correction/tarot1-10-11-12.png",
+        "columns": 3,
+        "cell": 2
+      },
+      {
+        "path": "sprites/raw/native-correction/tarot1-13-14-00.png",
+        "columns": 3,
+        "cell": 0
+      },
+      {
+        "path": "sprites/raw/native-correction/tarot1-13-14-00.png",
+        "columns": 3,
+        "cell": 1
+      },
+      {
+        "path": "sprites/raw/native-correction/halloween-base.png",
+        "columns": 1,
+        "cell": 0
+      }
+    ]
+  },
+  "umbrella1": {
+    "theme": "halloween",
+    "mode": "halloween",
+    "anchor": "sprites/hd720/frames/witchidle1_loop/witchidle1_loop_00.png",
+    "poses": [
+      {
+        "height": 561,
+        "x": 374.0,
+        "bottom": 681
+      },
+      {
+        "height": 512,
+        "x": 383.0,
+        "bottom": 680
+      },
+      {
+        "height": 517,
+        "x": 351.0,
+        "bottom": 680
+      },
+      {
+        "height": 559,
+        "x": 316.0,
+        "bottom": 680
+      },
+      {
+        "height": 615,
+        "x": 370.0,
+        "bottom": 680
+      },
+      {
+        "height": 588,
+        "x": 349.0,
+        "bottom": 679
+      },
+      {
+        "height": 560,
+        "x": 322.0,
+        "bottom": 679
+      },
+      {
+        "height": 576,
+        "x": 339.0,
+        "bottom": 680
+      },
+      {
+        "height": 552,
+        "x": 364.0,
+        "bottom": 681
+      },
+      {
+        "height": 549,
+        "x": 353.0,
+        "bottom": 681
+      },
+      {
+        "height": 542,
+        "x": 359.0,
+        "bottom": 681
+      },
+      {
+        "height": 532,
+        "x": 328.0,
+        "bottom": 681
+      },
+      {
+        "height": 541,
+        "x": 353.0,
+        "bottom": 680
+      },
+      {
+        "height": 509,
+        "x": 350.0,
+        "bottom": 680
+      },
+      {
+        "height": 506,
+        "x": 385.0,
+        "bottom": 679
+      },
+      {
+        "height": 561,
+        "x": 374.0,
+        "bottom": 681
+      }
+    ],
+    "sources": [
+      {
+        "path": "sprites/raw/native-correction/halloween-base.png",
+        "columns": 1,
+        "cell": 0
+      },
+      {
+        "path": "sprites/raw/native-correction/umbrella1-01-02-03.png",
+        "columns": 3,
+        "cell": 0
+      },
+      {
+        "path": "sprites/raw/native-correction/umbrella1-01-02-03.png",
+        "columns": 3,
+        "cell": 1
+      },
+      {
+        "path": "sprites/raw/native-correction/umbrella1-01-02-03.png",
+        "columns": 3,
+        "cell": 2
+      },
+      {
+        "path": "sprites/raw/native-correction/umbrella1-04-05-06.png",
+        "columns": 3,
+        "cell": 0
+      },
+      {
+        "path": "sprites/raw/native-correction/umbrella1-04-05-06.png",
+        "columns": 3,
+        "cell": 1
+      },
+      {
+        "path": "sprites/raw/native-correction/umbrella1-04-05-06.png",
+        "columns": 3,
+        "cell": 2
+      },
+      {
+        "path": "sprites/raw/native-correction/umbrella1-07-08-09.png",
+        "columns": 3,
+        "cell": 0
+      },
+      {
+        "path": "sprites/raw/native-correction/umbrella1-07-08-09.png",
+        "columns": 3,
+        "cell": 1
+      },
+      {
+        "path": "sprites/raw/native-correction/umbrella1-07-08-09.png",
+        "columns": 3,
+        "cell": 2
+      },
+      {
+        "path": "sprites/raw/native-correction/umbrella1-10-11-12.png",
+        "columns": 3,
+        "cell": 0
+      },
+      {
+        "path": "sprites/raw/native-correction/umbrella1-10-11-12.png",
+        "columns": 3,
+        "cell": 1
+      },
+      {
+        "path": "sprites/raw/native-correction/umbrella1-10-11-12.png",
+        "columns": 3,
+        "cell": 2
+      },
+      {
+        "path": "sprites/raw/native-correction/umbrella1-13-14-00.png",
+        "columns": 3,
+        "cell": 0
+      },
+      {
+        "path": "sprites/raw/native-correction/umbrella1-13-14-00.png",
+        "columns": 3,
+        "cell": 1
+      },
+      {
+        "path": "sprites/raw/native-correction/halloween-base.png",
+        "columns": 1,
+        "cell": 0
+      }
+    ]
+  },
+  "witchdance1": {
+    "theme": "halloween",
+    "mode": "halloween",
+    "anchor": "sprites/hd720/frames/witchidle1_loop/witchidle1_loop_00.png",
+    "poses": [
+      {
+        "height": 561,
+        "x": 398.0,
+        "bottom": 681,
+        "alignment": "bounds"
+      },
+      {
+        "height": 524,
+        "x": 377.5,
+        "bottom": 679,
+        "alignment": "bounds"
+      },
+      {
+        "height": 539,
+        "x": 334.5,
+        "bottom": 676,
+        "alignment": "bounds"
+      },
+      {
+        "height": 545,
+        "x": 324.5,
+        "bottom": 678,
+        "alignment": "bounds"
+      },
+      {
+        "height": 543,
+        "x": 421.0,
+        "bottom": 661,
+        "alignment": "bounds"
+      },
+      {
+        "height": 540,
+        "x": 374.5,
+        "bottom": 660,
+        "alignment": "bounds"
+      },
+      {
+        "height": 544,
+        "x": 350.5,
+        "bottom": 665,
+        "alignment": "bounds"
+      },
+      {
+        "height": 560,
+        "x": 329.0,
+        "bottom": 667,
+        "alignment": "bounds"
+      },
+      {
+        "height": 517,
+        "x": 375.5,
+        "bottom": 625,
+        "alignment": "bounds"
+      },
+      {
+        "height": 511,
+        "x": 395.5,
+        "bottom": 624,
+        "alignment": "bounds"
+      },
+      {
+        "height": 528,
+        "x": 342.0,
+        "bottom": 624,
+        "alignment": "bounds"
+      },
+      {
+        "height": 532,
+        "x": 332.5,
+        "bottom": 624,
+        "alignment": "bounds"
+      },
+      {
+        "height": 541,
+        "x": 398.5,
+        "bottom": 594,
+        "alignment": "bounds"
+      },
+      {
+        "height": 500,
+        "x": 388.5,
+        "bottom": 598,
+        "alignment": "bounds"
+      },
+      {
+        "height": 539,
+        "x": 331.5,
+        "bottom": 596,
+        "alignment": "bounds"
+      },
+      {
+        "height": 561,
+        "x": 398.0,
+        "bottom": 681,
+        "alignment": "bounds"
+      }
+    ],
+    "sources": [
+      {
+        "path": "sprites/raw/native-correction/halloween-base.png",
+        "columns": 1,
+        "cell": 0
+      },
+      {
+        "path": "sprites/raw/native-correction/witchdance1-01-02-03.png",
+        "columns": 3,
+        "cell": 0
+      },
+      {
+        "path": "sprites/raw/native-correction/witchdance1-01-02-03.png",
+        "columns": 3,
+        "cell": 1
+      },
+      {
+        "path": "sprites/raw/native-correction/witchdance1-01-02-03.png",
+        "columns": 3,
+        "cell": 2
+      },
+      {
+        "path": "sprites/raw/native-correction/witchdance1-04-05-06.png",
+        "columns": 3,
+        "cell": 0
+      },
+      {
+        "path": "sprites/raw/native-correction/witchdance1-04-05-06.png",
+        "columns": 3,
+        "cell": 1
+      },
+      {
+        "path": "sprites/raw/native-correction/witchdance1-04-05-06.png",
+        "columns": 3,
+        "cell": 2
+      },
+      {
+        "path": "sprites/raw/native-correction/witchdance1-07-08-09.png",
+        "columns": 3,
+        "cell": 0
+      },
+      {
+        "path": "sprites/raw/native-correction/witchdance1-07-08-09.png",
+        "columns": 3,
+        "cell": 1
+      },
+      {
+        "path": "sprites/raw/native-correction/witchdance1-07-08-09.png",
+        "columns": 3,
+        "cell": 2
+      },
+      {
+        "path": "sprites/raw/native-correction/witchdance1-10-11-12.png",
+        "columns": 3,
+        "cell": 0
+      },
+      {
+        "path": "sprites/raw/native-correction/witchdance1-10-11-12.png",
+        "columns": 3,
+        "cell": 1
+      },
+      {
+        "path": "sprites/raw/native-correction/witchdance1-10-11-12.png",
+        "columns": 3,
+        "cell": 2
+      },
+      {
+        "path": "sprites/raw/native-correction/witchdance1-13-14-00.png",
+        "columns": 3,
+        "cell": 0
+      },
+      {
+        "path": "sprites/raw/native-correction/witchdance1-13-14-00.png",
+        "columns": 3,
+        "cell": 1
+      },
+      {
+        "path": "sprites/raw/native-correction/halloween-base.png",
+        "columns": 1,
+        "cell": 0
+      }
+    ]
+  },
+  "witchlook1": {
+    "theme": "halloween",
+    "mode": "halloween",
+    "anchor": "sprites/hd720/frames/witchidle1_loop/witchidle1_loop_00.png",
+    "poses": [
+      {
+        "height": 561,
+        "x": 374.0,
+        "bottom": 681
+      },
+      {
+        "height": 560,
+        "x": 374.0,
+        "bottom": 679
+      },
+      {
+        "height": 561,
+        "x": 374.0,
+        "bottom": 680
+      },
+      {
+        "height": 559,
+        "x": 374.0,
+        "bottom": 679
+      },
+      {
+        "height": 567,
+        "x": 374.0,
+        "bottom": 680
+      },
+      {
+        "height": 567,
+        "x": 374.0,
+        "bottom": 680
+      },
+      {
+        "height": 568,
+        "x": 374.0,
+        "bottom": 680
+      },
+      {
+        "height": 567,
+        "x": 374.0,
+        "bottom": 679
+      },
+      {
+        "height": 558,
+        "x": 374.0,
+        "bottom": 680
+      },
+      {
+        "height": 548,
+        "x": 374.0,
+        "bottom": 680
+      },
+      {
+        "height": 559,
+        "x": 374.0,
+        "bottom": 680
+      },
+      {
+        "height": 559,
+        "x": 374.0,
+        "bottom": 680
+      },
+      {
+        "height": 571,
+        "x": 374.0,
+        "bottom": 679
+      },
+      {
+        "height": 571,
+        "x": 374.0,
+        "bottom": 679
+      },
+      {
+        "height": 571,
+        "x": 374.0,
+        "bottom": 680
+      },
+      {
+        "height": 561,
+        "x": 374.0,
+        "bottom": 681
+      }
+    ],
+    "sources": [
+      {
+        "path": "sprites/raw/native-correction/halloween-base.png",
+        "columns": 1,
+        "cell": 0
+      },
+      {
+        "path": "sprites/raw/native-correction/witchlook1-01-02-03.png",
+        "columns": 3,
+        "cell": 0
+      },
+      {
+        "path": "sprites/raw/native-correction/witchlook1-01-02-03.png",
+        "columns": 3,
+        "cell": 1
+      },
+      {
+        "path": "sprites/raw/native-correction/witchlook1-01-02-03.png",
+        "columns": 3,
+        "cell": 2
+      },
+      {
+        "path": "sprites/raw/native-correction/witchlook1-04-05-06.png",
+        "columns": 3,
+        "cell": 0
+      },
+      {
+        "path": "sprites/raw/native-correction/witchlook1-04-05-06.png",
+        "columns": 3,
+        "cell": 1
+      },
+      {
+        "path": "sprites/raw/native-correction/witchlook1-04-05-06.png",
+        "columns": 3,
+        "cell": 2
+      },
+      {
+        "path": "sprites/raw/native-correction/witchlook1-07-08-09.png",
+        "columns": 3,
+        "cell": 0
+      },
+      {
+        "path": "sprites/raw/native-correction/witchlook1-07-08-09.png",
+        "columns": 3,
+        "cell": 1
+      },
+      {
+        "path": "sprites/raw/native-correction/witchlook1-07-08-09.png",
+        "columns": 3,
+        "cell": 2
+      },
+      {
+        "path": "sprites/raw/native-correction/witchlook1-10-11-12.png",
+        "columns": 3,
+        "cell": 0
+      },
+      {
+        "path": "sprites/raw/native-correction/witchlook1-10-11-12.png",
+        "columns": 3,
+        "cell": 1
+      },
+      {
+        "path": "sprites/raw/native-correction/witchlook1-10-11-12.png",
+        "columns": 3,
+        "cell": 2
+      },
+      {
+        "path": "sprites/raw/native-correction/witchlook1-13-14-00.png",
+        "columns": 3,
+        "cell": 0
+      },
+      {
+        "path": "sprites/raw/native-correction/witchlook1-13-14-00.png",
+        "columns": 3,
+        "cell": 1
+      },
+      {
+        "path": "sprites/raw/native-correction/halloween-base.png",
+        "columns": 1,
+        "cell": 0
+      }
+    ]
+  },
+  "witchtidy1": {
+    "theme": "halloween",
+    "mode": "halloween",
+    "anchor": "sprites/hd720/frames/witchidle1_loop/witchidle1_loop_00.png",
+    "poses": [
+      {
+        "height": 561,
+        "x": 374.0,
+        "bottom": 681
+      },
+      {
+        "height": 561,
+        "x": 374.0,
+        "bottom": 681
+      },
+      {
+        "height": 560,
+        "x": 374.0,
+        "bottom": 681
+      },
+      {
+        "height": 560,
+        "x": 374.0,
+        "bottom": 681
+      },
+      {
+        "height": 563,
+        "x": 374.0,
+        "bottom": 680
+      },
+      {
+        "height": 563,
+        "x": 374.0,
+        "bottom": 680
+      },
+      {
+        "height": 562,
+        "x": 374.0,
+        "bottom": 680
+      },
+      {
+        "height": 563,
+        "x": 374.0,
+        "bottom": 680
+      },
+      {
+        "height": 561,
+        "x": 374.0,
+        "bottom": 682
+      },
+      {
+        "height": 559,
+        "x": 374.0,
+        "bottom": 681
+      },
+      {
+        "height": 561,
+        "x": 374.0,
+        "bottom": 680
+      },
+      {
+        "height": 561,
+        "x": 374.0,
+        "bottom": 680
+      },
+      {
+        "height": 566,
+        "x": 374.0,
+        "bottom": 680
+      },
+      {
+        "height": 565,
+        "x": 374.0,
+        "bottom": 680
+      },
+      {
+        "height": 567,
+        "x": 374.0,
+        "bottom": 680
+      },
+      {
+        "height": 561,
+        "x": 374.0,
+        "bottom": 681
+      }
+    ],
+    "sources": [
+      {
+        "path": "sprites/raw/native-correction/halloween-base.png",
+        "columns": 1,
+        "cell": 0
+      },
+      {
+        "path": "sprites/raw/native-correction/witchtidy1-01-02-03.png",
+        "columns": 3,
+        "cell": 0
+      },
+      {
+        "path": "sprites/raw/native-correction/witchtidy1-01-02-03.png",
+        "columns": 3,
+        "cell": 1
+      },
+      {
+        "path": "sprites/raw/native-correction/witchtidy1-01-02-03.png",
+        "columns": 3,
+        "cell": 2
+      },
+      {
+        "path": "sprites/raw/native-correction/witchtidy1-04-05-06.png",
+        "columns": 3,
+        "cell": 0
+      },
+      {
+        "path": "sprites/raw/native-correction/witchtidy1-04-05-06.png",
+        "columns": 3,
+        "cell": 1
+      },
+      {
+        "path": "sprites/raw/native-correction/witchtidy1-04-05-06.png",
+        "columns": 3,
+        "cell": 2
+      },
+      {
+        "path": "sprites/raw/native-correction/witchtidy1-07-08-09.png",
+        "columns": 3,
+        "cell": 0
+      },
+      {
+        "path": "sprites/raw/native-correction/witchtidy1-07-08-09.png",
+        "columns": 3,
+        "cell": 1
+      },
+      {
+        "path": "sprites/raw/native-correction/witchtidy1-07-08-09.png",
+        "columns": 3,
+        "cell": 2
+      },
+      {
+        "path": "sprites/raw/native-correction/witchtidy1-10-11-12.png",
+        "columns": 3,
+        "cell": 0
+      },
+      {
+        "path": "sprites/raw/native-correction/witchtidy1-10-11-12.png",
+        "columns": 3,
+        "cell": 1
+      },
+      {
+        "path": "sprites/raw/native-correction/witchtidy1-10-11-12.png",
+        "columns": 3,
+        "cell": 2
+      },
+      {
+        "path": "sprites/raw/native-correction/witchtidy1-13-14-00.png",
+        "columns": 3,
+        "cell": 0
+      },
+      {
+        "path": "sprites/raw/native-correction/witchtidy1-13-14-00.png",
+        "columns": 3,
+        "cell": 1
+      },
+      {
+        "path": "sprites/raw/native-correction/halloween-base.png",
+        "columns": 1,
+        "cell": 0
+      }
+    ]
+  },
+  "lemon1": {
+    "theme": "lemon",
+    "mode": "normal",
+    "anchor": "sprites/hd720/frames/lemon1_loop/lemon1_loop_00.png",
+    "poses": [
+      {
+        "height": 633,
+        "x": 345.0,
+        "bottom": 700
+      },
+      {
+        "height": 637,
+        "x": 372.0,
+        "bottom": 698
+      },
+      {
+        "height": 634,
+        "x": 372.0,
+        "bottom": 697
+      },
+      {
+        "height": 634,
+        "x": 370.5,
+        "bottom": 697
+      },
+      {
+        "height": 633,
+        "x": 342.0,
+        "bottom": 696
+      },
+      {
+        "height": 633,
+        "x": 342.0,
+        "bottom": 696
+      },
+      {
+        "height": 634,
+        "x": 340.0,
+        "bottom": 700
+      },
+      {
+        "height": 632,
+        "x": 343.0,
+        "bottom": 698
+      },
+      {
+        "height": 635,
+        "x": 369.0,
+        "bottom": 698
+      },
+      {
+        "height": 635,
+        "x": 373.0,
+        "bottom": 699
+      },
+      {
+        "height": 634,
+        "x": 344.0,
+        "bottom": 697
+      },
+      {
+        "height": 634,
+        "x": 343.0,
+        "bottom": 697
+      },
+      {
+        "height": 636,
+        "x": 346.0,
+        "bottom": 698
+      },
+      {
+        "height": 635,
+        "x": 347.0,
+        "bottom": 698
+      },
+      {
+        "height": 634,
+        "x": 346.0,
+        "bottom": 697
+      },
+      {
+        "height": 633,
+        "x": 345.0,
+        "bottom": 700
+      }
+    ],
+    "sources": [
+      {
+        "path": "sprites/raw/native-correction/lemon1-00-01.png",
+        "columns": 2,
+        "cell": 0
+      },
+      {
+        "path": "sprites/raw/native-correction/lemon1-00-01.png",
+        "columns": 2,
+        "cell": 1
+      },
+      {
+        "path": "sprites/raw/native-correction/lemon1-02-03.png",
+        "columns": 2,
+        "cell": 0
+      },
+      {
+        "path": "sprites/raw/native-correction/lemon1-02-03.png",
+        "columns": 2,
+        "cell": 1
+      },
+      {
+        "path": "sprites/raw/native-correction/lemon1-04-05.png",
+        "columns": 2,
+        "cell": 0
+      },
+      {
+        "path": "sprites/raw/native-correction/lemon1-04-05.png",
+        "columns": 2,
+        "cell": 1
+      },
+      {
+        "path": "sprites/raw/native-correction/lemon1-06-07.png",
+        "columns": 2,
+        "cell": 0
+      },
+      {
+        "path": "sprites/raw/native-correction/lemon1-06-07.png",
+        "columns": 2,
+        "cell": 1
+      },
+      {
+        "path": "sprites/raw/native-correction/lemon1-08-09.png",
+        "columns": 2,
+        "cell": 0
+      },
+      {
+        "path": "sprites/raw/native-correction/lemon1-08-09.png",
+        "columns": 2,
+        "cell": 1
+      },
+      {
+        "path": "sprites/raw/native-correction/lemon1-10-11.png",
+        "columns": 2,
+        "cell": 0
+      },
+      {
+        "path": "sprites/raw/native-correction/lemon1-10-11.png",
+        "columns": 2,
+        "cell": 1
+      },
+      {
+        "path": "sprites/raw/native-correction/lemon1-12-13.png",
+        "columns": 2,
+        "cell": 0
+      },
+      {
+        "path": "sprites/raw/native-correction/lemon1-12-13.png",
+        "columns": 2,
+        "cell": 1
+      },
+      {
+        "path": "sprites/raw/native-correction/lemon1-14-15.png",
+        "columns": 2,
+        "cell": 0
+      },
+      {
+        "path": "sprites/raw/native-correction/lemon1-00-01.png",
+        "columns": 2,
+        "cell": 0
+      }
+    ],
+    "rebuilt": true
   }
 }

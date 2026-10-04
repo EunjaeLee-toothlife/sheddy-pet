@@ -1,106 +1,6 @@
 {
   "name": "spider1_loop",
   "state": "spider1",
-  "sheet": "sprites/raw/halloween/spider1.png",
-  "sha256": "af792edb3811757b0e54ddbd7234b4aff73351023a52ecb4d1ed72bbf68e7cbc",
-  "cellBoxes": [
-    [
-      0,
-      0,
-      314,
-      324
-    ],
-    [
-      314,
-      0,
-      627,
-      324
-    ],
-    [
-      627,
-      0,
-      940,
-      325
-    ],
-    [
-      940,
-      0,
-      1254,
-      325
-    ],
-    [
-      0,
-      324,
-      314,
-      627
-    ],
-    [
-      314,
-      324,
-      627,
-      627
-    ],
-    [
-      627,
-      325,
-      940,
-      627
-    ],
-    [
-      940,
-      325,
-      1254,
-      627
-    ],
-    [
-      0,
-      627,
-      314,
-      922
-    ],
-    [
-      314,
-      627,
-      627,
-      920
-    ],
-    [
-      627,
-      627,
-      940,
-      940
-    ],
-    [
-      940,
-      627,
-      1254,
-      940
-    ],
-    [
-      0,
-      922,
-      314,
-      1254
-    ],
-    [
-      314,
-      920,
-      627,
-      1254
-    ],
-    [
-      627,
-      940,
-      940,
-      1254
-    ],
-    [
-      940,
-      940,
-      1254,
-      1254
-    ]
-  ],
   "fps": 12,
   "holds": {
     "0": 6,
@@ -120,5 +20,437 @@
     "14": 3,
     "15": 6
   },
-  "timingNote": "이동 포즈는 최소 3틱(0.25초), 시작·복귀는 6틱. 전체 길이를 늘려 동작 사이 이동도 충분히 보여준다."
+  "timingNote": "이동 포즈는 최소 3틱(0.25초), 시작·복귀는 6틱. 전체 길이를 늘려 동작 사이 이동도 충분히 보여준다.",
+  "nativeSources": [
+    {
+      "anchor": "sprites/hd720/frames/witchidle1_loop/witchidle1_loop_00.png",
+      "sourceSha256": "3d2f802044899c680182cd72a00666d4067da1e1890af240c663a2aa40de30c6"
+    },
+    {
+      "source": "sprites/raw/native-correction/spider1-01-02-03.png",
+      "sourceSha256": "073dd5d019c7e90c0404925a98bd4cc8a269223cb8629f6d74736488eb2df9f9",
+      "cell": [
+        0,
+        0,
+        724,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        141,
+        15,
+        617,
+        696
+      ],
+      "scale": 0.8883994126284875,
+      "position": [
+        60,
+        61
+      ],
+      "target": {
+        "height": 605,
+        "x": 385.0,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/spider1-01-02-03.png",
+      "sourceSha256": "073dd5d019c7e90c0404925a98bd4cc8a269223cb8629f6d74736488eb2df9f9",
+      "cell": [
+        724,
+        0,
+        1448,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        107,
+        16,
+        589,
+        698
+      ],
+      "scale": 0.8929618768328446,
+      "position": [
+        41,
+        57
+      ],
+      "target": {
+        "height": 609,
+        "x": 339.0,
+        "bottom": 681
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/spider1-01-02-03.png",
+      "sourceSha256": "073dd5d019c7e90c0404925a98bd4cc8a269223cb8629f6d74736488eb2df9f9",
+      "cell": [
+        1448,
+        0,
+        2172,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        71,
+        26,
+        573,
+        698
+      ],
+      "scale": 0.9017857142857143,
+      "position": [
+        59,
+        51
+      ],
+      "target": {
+        "height": 606,
+        "x": 340.0,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/spider1-04-05-06.png",
+      "sourceSha256": "af299dd6d6f87f2f24202f77c01871d6e4d3ca6eb2aa4662d0fd7a5c58bc32d6",
+      "cell": [
+        0,
+        0,
+        724,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        90,
+        27,
+        610,
+        699
+      ],
+      "scale": 0.8363095238095238,
+      "position": [
+        86,
+        96
+      ],
+      "target": {
+        "height": 562,
+        "x": 423.0,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/spider1-04-05-06.png",
+      "sourceSha256": "af299dd6d6f87f2f24202f77c01871d6e4d3ca6eb2aa4662d0fd7a5c58bc32d6",
+      "cell": [
+        724,
+        0,
+        1448,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        129,
+        22,
+        576,
+        699
+      ],
+      "scale": 0.8360413589364845,
+      "position": [
+        77,
+        97
+      ],
+      "target": {
+        "height": 566,
+        "x": 370.0,
+        "bottom": 681
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/spider1-04-05-06.png",
+      "sourceSha256": "af299dd6d6f87f2f24202f77c01871d6e4d3ca6eb2aa4662d0fd7a5c58bc32d6",
+      "cell": [
+        1448,
+        0,
+        2172,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        97,
+        24,
+        649,
+        699
+      ],
+      "scale": 0.8296296296296296,
+      "position": [
+        70,
+        99
+      ],
+      "target": {
+        "height": 560,
+        "x": 361.0,
+        "bottom": 679
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/spider1-07-08-09.png",
+      "sourceSha256": "9afd2ff544c54ff54bb5fa81ceb66ba6c0191cd052679d4f8808182bcbeb0393",
+      "cell": [
+        0,
+        0,
+        724,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        110,
+        19,
+        616,
+        697
+      ],
+      "scale": 0.8171091445427728,
+      "position": [
+        81,
+        111
+      ],
+      "target": {
+        "height": 554,
+        "x": 359.0,
+        "bottom": 681
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/spider1-07-08-09.png",
+      "sourceSha256": "9afd2ff544c54ff54bb5fa81ceb66ba6c0191cd052679d4f8808182bcbeb0393",
+      "cell": [
+        724,
+        0,
+        1448,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        112,
+        19,
+        576,
+        698
+      ],
+      "scale": 0.780559646539028,
+      "position": [
+        80,
+        136
+      ],
+      "target": {
+        "height": 530,
+        "x": 353.0,
+        "bottom": 681
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/spider1-07-08-09.png",
+      "sourceSha256": "9afd2ff544c54ff54bb5fa81ceb66ba6c0191cd052679d4f8808182bcbeb0393",
+      "cell": [
+        1448,
+        0,
+        2172,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        108,
+        22,
+        574,
+        698
+      ],
+      "scale": 0.8017751479289941,
+      "position": [
+        72,
+        122
+      ],
+      "target": {
+        "height": 542,
+        "x": 356.0,
+        "bottom": 681
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/spider1-10-11-12.png",
+      "sourceSha256": "e76ece4ad401f061573034c60d9c558a3ba65c5b8ed5e11a2b44bea6e44d9963",
+      "cell": [
+        0,
+        0,
+        724,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        130,
+        16,
+        642,
+        707
+      ],
+      "scale": 0.7771345875542692,
+      "position": [
+        79,
+        131
+      ],
+      "target": {
+        "height": 537,
+        "x": 363.0,
+        "bottom": 681
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/spider1-10-11-12.png",
+      "sourceSha256": "e76ece4ad401f061573034c60d9c558a3ba65c5b8ed5e11a2b44bea6e44d9963",
+      "cell": [
+        724,
+        0,
+        1448,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        91,
+        15,
+        607,
+        707
+      ],
+      "scale": 0.8323699421965318,
+      "position": [
+        39,
+        91
+      ],
+      "target": {
+        "height": 576,
+        "x": 317.0,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/spider1-10-11-12.png",
+      "sourceSha256": "e76ece4ad401f061573034c60d9c558a3ba65c5b8ed5e11a2b44bea6e44d9963",
+      "cell": [
+        1448,
+        0,
+        2172,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        63,
+        14,
+        592,
+        707
+      ],
+      "scale": 0.8311688311688312,
+      "position": [
+        115,
+        93
+      ],
+      "target": {
+        "height": 576,
+        "x": 366.0,
+        "bottom": 681
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/spider1-repair-13-14.png",
+      "sourceSha256": "ad06535f7271a4f1969ada91153fa2751fc3daf10f43be368aa7769f3f505a5c",
+      "cell": [
+        0,
+        0,
+        887,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        255,
+        73,
+        799,
+        833
+      ],
+      "scale": 0.7697368421052632,
+      "position": [
+        -48,
+        40
+      ],
+      "target": {
+        "height": 585,
+        "x": 342.0,
+        "bottom": 681
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/spider1-repair-13-14.png",
+      "sourceSha256": "ad06535f7271a4f1969ada91153fa2751fc3daf10f43be368aa7769f3f505a5c",
+      "cell": [
+        887,
+        0,
+        1774,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        146,
+        99,
+        630,
+        828
+      ],
+      "scale": 0.7448559670781894,
+      "position": [
+        48,
+        63
+      ],
+      "target": {
+        "height": 543,
+        "x": 330.0,
+        "bottom": 680
+      }
+    },
+    {
+      "anchor": "sprites/hd720/frames/witchidle1_loop/witchidle1_loop_00.png",
+      "sourceSha256": "3d2f802044899c680182cd72a00666d4067da1e1890af240c663a2aa40de30c6"
+    }
+  ],
+  "sourcePipeline": "native-strips-v1",
+  "anchor": "sprites/hd720/frames/witchidle1_loop/witchidle1_loop_00.png"
 }

@@ -20,7 +20,7 @@ def verify(motion, anchor_state='witchidle1', part='loop', transform=False):
     if calm:
         from compose_calm_motion import verify_sources
         verify_sources(config)
-    elif config.get('sourcePipeline') == 'native-pairs-v1':
+    elif config.get('sourcePipeline') in ('native-pairs-v1', 'native-strips-v1'):
         from verify_native_sources import verify_sources
         verify_sources(config)
     else:

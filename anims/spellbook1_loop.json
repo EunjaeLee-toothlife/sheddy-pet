@@ -1,106 +1,6 @@
 {
   "name": "spellbook1_loop",
   "state": "spellbook1",
-  "sheet": "sprites/raw/halloween/spellbook1.png",
-  "sha256": "33d76b03cb2c257b2b9fa559c5ea6e05d142d63313f61498bf8ae3a30d8e6406",
-  "cellBoxes": [
-    [
-      0,
-      0,
-      314,
-      314
-    ],
-    [
-      314,
-      0,
-      627,
-      314
-    ],
-    [
-      627,
-      0,
-      940,
-      314
-    ],
-    [
-      940,
-      0,
-      1254,
-      314
-    ],
-    [
-      0,
-      314,
-      314,
-      627
-    ],
-    [
-      314,
-      314,
-      627,
-      627
-    ],
-    [
-      627,
-      314,
-      940,
-      627
-    ],
-    [
-      940,
-      314,
-      1254,
-      627
-    ],
-    [
-      0,
-      627,
-      314,
-      940
-    ],
-    [
-      314,
-      627,
-      627,
-      940
-    ],
-    [
-      627,
-      627,
-      940,
-      940
-    ],
-    [
-      940,
-      627,
-      1254,
-      940
-    ],
-    [
-      0,
-      940,
-      314,
-      1254
-    ],
-    [
-      314,
-      940,
-      627,
-      1254
-    ],
-    [
-      627,
-      940,
-      940,
-      1254
-    ],
-    [
-      940,
-      940,
-      1254,
-      1254
-    ]
-  ],
   "fps": 12,
   "holds": {
     "0": 6,
@@ -120,5 +20,437 @@
     "14": 3,
     "15": 6
   },
-  "timingNote": "이동 포즈는 최소 3틱(0.25초), 시작·복귀는 6틱. 전체 길이를 늘려 동작 사이 이동도 충분히 보여준다."
+  "timingNote": "이동 포즈는 최소 3틱(0.25초), 시작·복귀는 6틱. 전체 길이를 늘려 동작 사이 이동도 충분히 보여준다.",
+  "nativeSources": [
+    {
+      "anchor": "sprites/hd720/frames/witchidle1_loop/witchidle1_loop_00.png",
+      "sourceSha256": "3d2f802044899c680182cd72a00666d4067da1e1890af240c663a2aa40de30c6"
+    },
+    {
+      "source": "sprites/raw/native-correction/spellbook1-01-02-03.png",
+      "sourceSha256": "a18c97c988f491db2e0c828fd5f2449937a902cacce3306e1fd5a8dc569f4eb8",
+      "cell": [
+        0,
+        0,
+        724,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        119,
+        10,
+        592,
+        702
+      ],
+      "scale": 0.8063583815028902,
+      "position": [
+        121,
+        113
+      ],
+      "target": {
+        "height": 558,
+        "x": 375.0,
+        "bottom": 679
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/spellbook1-01-02-03.png",
+      "sourceSha256": "a18c97c988f491db2e0c828fd5f2449937a902cacce3306e1fd5a8dc569f4eb8",
+      "cell": [
+        724,
+        0,
+        1448,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        55,
+        11,
+        655,
+        700
+      ],
+      "scale": 0.7982583454281568,
+      "position": [
+        110,
+        120
+      ],
+      "target": {
+        "height": 550,
+        "x": 320.5,
+        "bottom": 679
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/spellbook1-01-02-03.png",
+      "sourceSha256": "a18c97c988f491db2e0c828fd5f2449937a902cacce3306e1fd5a8dc569f4eb8",
+      "cell": [
+        1448,
+        0,
+        2172,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        81,
+        13,
+        636,
+        701
+      ],
+      "scale": 0.7979651162790697,
+      "position": [
+        78,
+        121
+      ],
+      "target": {
+        "height": 549,
+        "x": 308.0,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/spellbook1-04-05-06.png",
+      "sourceSha256": "2f862a787abeb5e1128d4291c6f0da6aa0699ac33ea54c6a089a69b36c543f40",
+      "cell": [
+        0,
+        0,
+        724,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        58,
+        17,
+        661,
+        697
+      ],
+      "scale": 0.8029411764705883,
+      "position": [
+        146,
+        119
+      ],
+      "target": {
+        "height": 546,
+        "x": 382.0,
+        "bottom": 679
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/spellbook1-04-05-06.png",
+      "sourceSha256": "2f862a787abeb5e1128d4291c6f0da6aa0699ac33ea54c6a089a69b36c543f40",
+      "cell": [
+        724,
+        0,
+        1448,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        53,
+        15,
+        652,
+        697
+      ],
+      "scale": 0.8005865102639296,
+      "position": [
+        101,
+        120
+      ],
+      "target": {
+        "height": 546,
+        "x": 335.0,
+        "bottom": 679
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/spellbook1-04-05-06.png",
+      "sourceSha256": "2f862a787abeb5e1128d4291c6f0da6aa0699ac33ea54c6a089a69b36c543f40",
+      "cell": [
+        1448,
+        0,
+        2172,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        54,
+        15,
+        655,
+        697
+      ],
+      "scale": 0.8005865102639296,
+      "position": [
+        90,
+        121
+      ],
+      "target": {
+        "height": 546,
+        "x": 317.5,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/spellbook1-07-08-09.png",
+      "sourceSha256": "c8efc6ac6966959c0dadc937777864e0bf493b521d9047849ebd21381dc87509",
+      "cell": [
+        0,
+        0,
+        724,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        68,
+        11,
+        707,
+        707
+      ],
+      "scale": 0.8045977011494253,
+      "position": [
+        64,
+        111
+      ],
+      "target": {
+        "height": 560,
+        "x": 315.0,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/spellbook1-07-08-09.png",
+      "sourceSha256": "c8efc6ac6966959c0dadc937777864e0bf493b521d9047849ebd21381dc87509",
+      "cell": [
+        724,
+        0,
+        1448,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        76,
+        11,
+        638,
+        702
+      ],
+      "scale": 0.7988422575976846,
+      "position": [
+        104,
+        119
+      ],
+      "target": {
+        "height": 552,
+        "x": 349.0,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/spellbook1-07-08-09.png",
+      "sourceSha256": "c8efc6ac6966959c0dadc937777864e0bf493b521d9047849ebd21381dc87509",
+      "cell": [
+        1448,
+        0,
+        2172,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        67,
+        11,
+        606,
+        704
+      ],
+      "scale": 0.784992784992785,
+      "position": [
+        113,
+        127
+      ],
+      "target": {
+        "height": 544,
+        "x": 336.0,
+        "bottom": 679
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/spellbook1-10-11-12.png",
+      "sourceSha256": "af471751c633b56e393224ee23bc8d93ebf4d192526b3707d83527d0d8c0f513",
+      "cell": [
+        0,
+        0,
+        724,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        128,
+        13,
+        663,
+        707
+      ],
+      "scale": 0.7853025936599424,
+      "position": [
+        45,
+        123
+      ],
+      "target": {
+        "height": 545,
+        "x": 327.0,
+        "bottom": 679
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/spellbook1-10-11-12.png",
+      "sourceSha256": "af471751c633b56e393224ee23bc8d93ebf4d192526b3707d83527d0d8c0f513",
+      "cell": [
+        724,
+        0,
+        1448,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        93,
+        8,
+        637,
+        707
+      ],
+      "scale": 0.7939914163090128,
+      "position": [
+        59,
+        119
+      ],
+      "target": {
+        "height": 555,
+        "x": 317.0,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/spellbook1-10-11-12.png",
+      "sourceSha256": "af471751c633b56e393224ee23bc8d93ebf4d192526b3707d83527d0d8c0f513",
+      "cell": [
+        1448,
+        0,
+        2172,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        69,
+        12,
+        582,
+        707
+      ],
+      "scale": 0.7755395683453238,
+      "position": [
+        123,
+        131
+      ],
+      "target": {
+        "height": 539,
+        "x": 352.0,
+        "bottom": 679
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/spellbook1-13-14-00.png",
+      "sourceSha256": "d3a23057a34384ac964beb77c35d22eddbba0a6db71965146c7ee46ef5ebd9fb",
+      "cell": [
+        0,
+        0,
+        724,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        129,
+        15,
+        601,
+        704
+      ],
+      "scale": 0.7880986937590712,
+      "position": [
+        59,
+        125
+      ],
+      "target": {
+        "height": 543,
+        "x": 346.0,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/spellbook1-13-14-00.png",
+      "sourceSha256": "d3a23057a34384ac964beb77c35d22eddbba0a6db71965146c7ee46ef5ebd9fb",
+      "cell": [
+        724,
+        0,
+        1448,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        77,
+        15,
+        623,
+        704
+      ],
+      "scale": 0.795355587808418,
+      "position": [
+        41,
+        120
+      ],
+      "target": {
+        "height": 548,
+        "x": 321.0,
+        "bottom": 680
+      }
+    },
+    {
+      "anchor": "sprites/hd720/frames/witchidle1_loop/witchidle1_loop_00.png",
+      "sourceSha256": "3d2f802044899c680182cd72a00666d4067da1e1890af240c663a2aa40de30c6"
+    }
+  ],
+  "sourcePipeline": "native-strips-v1",
+  "anchor": "sprites/hd720/frames/witchidle1_loop/witchidle1_loop_00.png"
 }

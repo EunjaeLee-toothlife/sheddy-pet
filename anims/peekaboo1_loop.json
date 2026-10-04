@@ -1,106 +1,6 @@
 {
   "name": "peekaboo1_loop",
   "state": "peekaboo1",
-  "sheet": "sprites/raw/halloween/peekaboo1.png",
-  "sha256": "01620481ca3497960322da9309b6d8d68c84f3b838089d88791d3dc91a95e2a3",
-  "cellBoxes": [
-    [
-      0,
-      0,
-      314,
-      314
-    ],
-    [
-      314,
-      0,
-      627,
-      314
-    ],
-    [
-      627,
-      0,
-      940,
-      314
-    ],
-    [
-      940,
-      0,
-      1254,
-      314
-    ],
-    [
-      0,
-      314,
-      314,
-      627
-    ],
-    [
-      314,
-      314,
-      627,
-      627
-    ],
-    [
-      627,
-      314,
-      940,
-      627
-    ],
-    [
-      940,
-      314,
-      1254,
-      627
-    ],
-    [
-      0,
-      627,
-      314,
-      940
-    ],
-    [
-      314,
-      627,
-      627,
-      940
-    ],
-    [
-      627,
-      627,
-      940,
-      940
-    ],
-    [
-      940,
-      627,
-      1254,
-      940
-    ],
-    [
-      0,
-      940,
-      314,
-      1254
-    ],
-    [
-      314,
-      940,
-      627,
-      1254
-    ],
-    [
-      627,
-      940,
-      940,
-      1254
-    ],
-    [
-      940,
-      940,
-      1254,
-      1254
-    ]
-  ],
   "fps": 12,
   "holds": {
     "0": 6,
@@ -120,5 +20,437 @@
     "14": 3,
     "15": 6
   },
-  "timingNote": "이동 포즈는 최소 3틱(0.25초), 시작·복귀는 6틱. 전체 길이를 늘려 동작 사이 이동도 충분히 보여준다."
+  "timingNote": "이동 포즈는 최소 3틱(0.25초), 시작·복귀는 6틱. 전체 길이를 늘려 동작 사이 이동도 충분히 보여준다.",
+  "nativeSources": [
+    {
+      "anchor": "sprites/hd720/frames/witchidle1_loop/witchidle1_loop_00.png",
+      "sourceSha256": "3d2f802044899c680182cd72a00666d4067da1e1890af240c663a2aa40de30c6"
+    },
+    {
+      "source": "sprites/raw/native-correction/peekaboo1-01-02-03.png",
+      "sourceSha256": "008456eb971c1ccd78825e1c7e19142afa33c8f7737f01f90b335cc8fe886afc",
+      "cell": [
+        0,
+        0,
+        724,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        130,
+        4,
+        591,
+        709
+      ],
+      "scale": 0.798581560283688,
+      "position": [
+        63,
+        115
+      ],
+      "target": {
+        "height": 563,
+        "x": 350.0,
+        "bottom": 681
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/peekaboo1-01-02-03.png",
+      "sourceSha256": "008456eb971c1ccd78825e1c7e19142afa33c8f7737f01f90b335cc8fe886afc",
+      "cell": [
+        724,
+        0,
+        1448,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        137,
+        4,
+        597,
+        707
+      ],
+      "scale": 0.7923186344238976,
+      "position": [
+        50,
+        119
+      ],
+      "target": {
+        "height": 557,
+        "x": 339.0,
+        "bottom": 679
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/peekaboo1-01-02-03.png",
+      "sourceSha256": "008456eb971c1ccd78825e1c7e19142afa33c8f7737f01f90b335cc8fe886afc",
+      "cell": [
+        1448,
+        0,
+        2172,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        135,
+        4,
+        595,
+        707
+      ],
+      "scale": 0.7980085348506402,
+      "position": [
+        54,
+        117
+      ],
+      "target": {
+        "height": 561,
+        "x": 340.0,
+        "bottom": 681
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/peekaboo1-04-05-06.png",
+      "sourceSha256": "53c1b5f7e87f0bc66e0fb0221107421c5a1a567a76634092e7278ad2905d0737",
+      "cell": [
+        0,
+        0,
+        724,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        125,
+        13,
+        642,
+        709
+      ],
+      "scale": 0.7528735632183908,
+      "position": [
+        77,
+        146
+      ],
+      "target": {
+        "height": 524,
+        "x": 346.0,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/peekaboo1-04-05-06.png",
+      "sourceSha256": "53c1b5f7e87f0bc66e0fb0221107421c5a1a567a76634092e7278ad2905d0737",
+      "cell": [
+        724,
+        0,
+        1448,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        107,
+        13,
+        599,
+        709
+      ],
+      "scale": 0.7370689655172413,
+      "position": [
+        104,
+        157
+      ],
+      "target": {
+        "height": 513,
+        "x": 387.0,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/peekaboo1-04-05-06.png",
+      "sourceSha256": "53c1b5f7e87f0bc66e0fb0221107421c5a1a567a76634092e7278ad2905d0737",
+      "cell": [
+        1448,
+        0,
+        2172,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        78,
+        94,
+        615,
+        686
+      ],
+      "scale": 0.7263513513513513,
+      "position": [
+        101,
+        183
+      ],
+      "target": {
+        "height": 430,
+        "x": 346.0,
+        "bottom": 681
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/peekaboo1-07-08-09.png",
+      "sourceSha256": "c7630ea36db8dac465dc1d30e53540fc8a321b4ad5354003b0d9c076cc586b1d",
+      "cell": [
+        0,
+        0,
+        724,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        100,
+        16,
+        645,
+        699
+      ],
+      "scale": 0.7979502196193266,
+      "position": [
+        70,
+        122
+      ],
+      "target": {
+        "height": 545,
+        "x": 400.0,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/peekaboo1-07-08-09.png",
+      "sourceSha256": "c7630ea36db8dac465dc1d30e53540fc8a321b4ad5354003b0d9c076cc586b1d",
+      "cell": [
+        724,
+        0,
+        1448,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        92,
+        18,
+        600,
+        701
+      ],
+      "scale": 0.767203513909224,
+      "position": [
+        122,
+        144
+      ],
+      "target": {
+        "height": 524,
+        "x": 302.0,
+        "bottom": 681
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/peekaboo1-07-08-09.png",
+      "sourceSha256": "c7630ea36db8dac465dc1d30e53540fc8a321b4ad5354003b0d9c076cc586b1d",
+      "cell": [
+        1448,
+        0,
+        2172,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        116,
+        19,
+        584,
+        705
+      ],
+      "scale": 0.760932944606414,
+      "position": [
+        147,
+        144
+      ],
+      "target": {
+        "height": 522,
+        "x": 381.0,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/peekaboo1-10-11-12.png",
+      "sourceSha256": "6f5f7c6655cd6fe9c15bb101bb1b80a39f7fdae3341412c796ffe1accded79b6",
+      "cell": [
+        0,
+        0,
+        724,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        134,
+        24,
+        637,
+        698
+      ],
+      "scale": 0.7566765578635015,
+      "position": [
+        58,
+        152
+      ],
+      "target": {
+        "height": 510,
+        "x": 335.0,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/peekaboo1-10-11-12.png",
+      "sourceSha256": "6f5f7c6655cd6fe9c15bb101bb1b80a39f7fdae3341412c796ffe1accded79b6",
+      "cell": [
+        724,
+        0,
+        1448,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        116,
+        21,
+        594,
+        697
+      ],
+      "scale": 0.75,
+      "position": [
+        78,
+        158
+      ],
+      "target": {
+        "height": 507,
+        "x": 333.0,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/peekaboo1-10-11-12.png",
+      "sourceSha256": "6f5f7c6655cd6fe9c15bb101bb1b80a39f7fdae3341412c796ffe1accded79b6",
+      "cell": [
+        1448,
+        0,
+        2172,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        71,
+        20,
+        642,
+        695
+      ],
+      "scale": 0.8059259259259259,
+      "position": [
+        185,
+        120
+      ],
+      "target": {
+        "height": 544,
+        "x": 385.0,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/peekaboo1-13-14-00.png",
+      "sourceSha256": "0e338c33d0e6a80474d3da5cb14be3bac6debef72db930af0050f6f15930919d",
+      "cell": [
+        0,
+        0,
+        724,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        129,
+        19,
+        585,
+        702
+      ],
+      "scale": 0.7540263543191801,
+      "position": [
+        108,
+        151
+      ],
+      "target": {
+        "height": 515,
+        "x": 373.0,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/peekaboo1-13-14-00.png",
+      "sourceSha256": "0e338c33d0e6a80474d3da5cb14be3bac6debef72db930af0050f6f15930919d",
+      "cell": [
+        724,
+        0,
+        1448,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        96,
+        10,
+        623,
+        711
+      ],
+      "scale": 0.797432239657632,
+      "position": [
+        88,
+        113
+      ],
+      "target": {
+        "height": 559,
+        "x": 348.0,
+        "bottom": 680
+      }
+    },
+    {
+      "anchor": "sprites/hd720/frames/witchidle1_loop/witchidle1_loop_00.png",
+      "sourceSha256": "3d2f802044899c680182cd72a00666d4067da1e1890af240c663a2aa40de30c6"
+    }
+  ],
+  "sourcePipeline": "native-strips-v1",
+  "anchor": "sprites/hd720/frames/witchidle1_loop/witchidle1_loop_00.png"
 }

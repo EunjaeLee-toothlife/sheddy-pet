@@ -7,7 +7,8 @@ from build_native_motion import bounds, foot_center
 
 def verify_sources(config):
     sources = config['nativeSources']
-    assert len(sources) == 16, '원본 증빙 프레임 수'
+    frames = list((ROOT / f'sprites/hd720/frames/{config["name"]}').glob('*.png'))
+    assert len(sources) == len(frames), '원본 증빙 프레임 수'
     for i, source in enumerate(sources):
         path = ROOT / source.get('anchor', source.get('source', ''))
         assert sha(path) == source['sourceSha256'], f'원본 해시: {path}'
