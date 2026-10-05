@@ -1,106 +1,6 @@
 {
   "name": "witchlook1_loop",
   "state": "witchlook1",
-  "sheet": "sprites/raw/halloween/witchlook1.png",
-  "sha256": "0fd02dfe7af6e5f177451401b54dca746cd414e5be5f89ae032299a6823ba790",
-  "cellBoxes": [
-    [
-      0,
-      0,
-      314,
-      314
-    ],
-    [
-      314,
-      0,
-      627,
-      314
-    ],
-    [
-      627,
-      0,
-      940,
-      314
-    ],
-    [
-      940,
-      0,
-      1254,
-      314
-    ],
-    [
-      0,
-      314,
-      314,
-      627
-    ],
-    [
-      314,
-      314,
-      627,
-      627
-    ],
-    [
-      627,
-      314,
-      940,
-      627
-    ],
-    [
-      940,
-      314,
-      1254,
-      627
-    ],
-    [
-      0,
-      627,
-      314,
-      935
-    ],
-    [
-      314,
-      627,
-      627,
-      935
-    ],
-    [
-      627,
-      627,
-      940,
-      936
-    ],
-    [
-      940,
-      627,
-      1254,
-      936
-    ],
-    [
-      0,
-      935,
-      314,
-      1254
-    ],
-    [
-      314,
-      935,
-      627,
-      1254
-    ],
-    [
-      627,
-      936,
-      940,
-      1254
-    ],
-    [
-      940,
-      936,
-      1254,
-      1254
-    ]
-  ],
   "fps": 12,
   "holds": {
     "0": 3,
@@ -119,5 +19,437 @@
     "13": 3,
     "14": 3,
     "15": 3
-  }
+  },
+  "nativeSources": [
+    {
+      "anchor": "sprites/hd720/frames/witchidle1_loop/witchidle1_loop_00.png",
+      "sourceSha256": "3d2f802044899c680182cd72a00666d4067da1e1890af240c663a2aa40de30c6"
+    },
+    {
+      "source": "sprites/raw/native-correction/witchlook1-01-02-03.png",
+      "sourceSha256": "9ba99a9788abecd4b1e4b7e5a4da1cc0b64b1d5e85b1b5760145fe9ce9374bd9",
+      "cell": [
+        0,
+        0,
+        724,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        157,
+        5,
+        595,
+        700
+      ],
+      "scale": 0.8057553956834532,
+      "position": [
+        89,
+        115
+      ],
+      "target": {
+        "height": 560,
+        "x": 374.0,
+        "bottom": 679
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/witchlook1-01-02-03.png",
+      "sourceSha256": "9ba99a9788abecd4b1e4b7e5a4da1cc0b64b1d5e85b1b5760145fe9ce9374bd9",
+      "cell": [
+        724,
+        0,
+        1448,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        137,
+        13,
+        573,
+        702
+      ],
+      "scale": 0.8142235123367199,
+      "position": [
+        87,
+        109
+      ],
+      "target": {
+        "height": 561,
+        "x": 374.0,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/witchlook1-01-02-03.png",
+      "sourceSha256": "9ba99a9788abecd4b1e4b7e5a4da1cc0b64b1d5e85b1b5760145fe9ce9374bd9",
+      "cell": [
+        1448,
+        0,
+        2172,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        144,
+        6,
+        581,
+        701
+      ],
+      "scale": 0.8043165467625899,
+      "position": [
+        92,
+        116
+      ],
+      "target": {
+        "height": 559,
+        "x": 374.0,
+        "bottom": 679
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/witchlook1-04-05-06.png",
+      "sourceSha256": "be613dcc03684a3c0e2924ad8a234c53eedcc455860cc6b690015f644d515459",
+      "cell": [
+        0,
+        0,
+        724,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        148,
+        13,
+        576,
+        696
+      ],
+      "scale": 0.8301610541727672,
+      "position": [
+        80,
+        102
+      ],
+      "target": {
+        "height": 567,
+        "x": 374.0,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/witchlook1-04-05-06.png",
+      "sourceSha256": "be613dcc03684a3c0e2924ad8a234c53eedcc455860cc6b690015f644d515459",
+      "cell": [
+        724,
+        0,
+        1448,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        134,
+        5,
+        571,
+        697
+      ],
+      "scale": 0.819364161849711,
+      "position": [
+        87,
+        110
+      ],
+      "target": {
+        "height": 567,
+        "x": 374.0,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/witchlook1-04-05-06.png",
+      "sourceSha256": "be613dcc03684a3c0e2924ad8a234c53eedcc455860cc6b690015f644d515459",
+      "cell": [
+        1448,
+        0,
+        2172,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        144,
+        9,
+        576,
+        697
+      ],
+      "scale": 0.8255813953488372,
+      "position": [
+        80,
+        105
+      ],
+      "target": {
+        "height": 568,
+        "x": 374.0,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/witchlook1-07-08-09.png",
+      "sourceSha256": "e14467a2696cc7290daad010c9837ce39d8fe4c74372040ddee67bc7a63998af",
+      "cell": [
+        0,
+        0,
+        724,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        166,
+        10,
+        613,
+        693
+      ],
+      "scale": 0.8301610541727672,
+      "position": [
+        67,
+        103
+      ],
+      "target": {
+        "height": 567,
+        "x": 374.0,
+        "bottom": 679
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/witchlook1-07-08-09.png",
+      "sourceSha256": "e14467a2696cc7290daad010c9837ce39d8fe4c74372040ddee67bc7a63998af",
+      "cell": [
+        724,
+        0,
+        1448,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        113,
+        10,
+        555,
+        693
+      ],
+      "scale": 0.8169838945827232,
+      "position": [
+        110,
+        114
+      ],
+      "target": {
+        "height": 558,
+        "x": 374.0,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/witchlook1-07-08-09.png",
+      "sourceSha256": "e14467a2696cc7290daad010c9837ce39d8fe4c74372040ddee67bc7a63998af",
+      "cell": [
+        1448,
+        0,
+        2172,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        93,
+        17,
+        542,
+        693
+      ],
+      "scale": 0.8106508875739645,
+      "position": [
+        148,
+        118
+      ],
+      "target": {
+        "height": 548,
+        "x": 374.0,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/witchlook1-10-11-12.png",
+      "sourceSha256": "857e4d46ec5284da0974a92ada35311eb41088831fd210279c858d271d491e49",
+      "cell": [
+        0,
+        0,
+        724,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        160,
+        9,
+        612,
+        713
+      ],
+      "scale": 0.7940340909090909,
+      "position": [
+        70,
+        114
+      ],
+      "target": {
+        "height": 559,
+        "x": 374.0,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/witchlook1-10-11-12.png",
+      "sourceSha256": "857e4d46ec5284da0974a92ada35311eb41088831fd210279c858d271d491e49",
+      "cell": [
+        724,
+        0,
+        1448,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        126,
+        12,
+        603,
+        712
+      ],
+      "scale": 0.7985714285714286,
+      "position": [
+        84,
+        111
+      ],
+      "target": {
+        "height": 559,
+        "x": 374.0,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/witchlook1-10-11-12.png",
+      "sourceSha256": "857e4d46ec5284da0974a92ada35311eb41088831fd210279c858d271d491e49",
+      "cell": [
+        1448,
+        0,
+        2172,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        110,
+        8,
+        556,
+        712
+      ],
+      "scale": 0.8110795454545454,
+      "position": [
+        101,
+        101
+      ],
+      "target": {
+        "height": 571,
+        "x": 374.0,
+        "bottom": 679
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/witchlook1-13-14-00.png",
+      "sourceSha256": "38a3ecc799553d4f40244ea327df0464ef275773225f5a86443e418f7fafa604",
+      "cell": [
+        0,
+        0,
+        724,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        150,
+        17,
+        597,
+        704
+      ],
+      "scale": 0.8311499272197962,
+      "position": [
+        63,
+        94
+      ],
+      "target": {
+        "height": 571,
+        "x": 374.0,
+        "bottom": 679
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/witchlook1-13-14-00.png",
+      "sourceSha256": "38a3ecc799553d4f40244ea327df0464ef275773225f5a86443e418f7fafa604",
+      "cell": [
+        724,
+        0,
+        1448,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        126,
+        16,
+        570,
+        705
+      ],
+      "scale": 0.8287373004354136,
+      "position": [
+        86,
+        96
+      ],
+      "target": {
+        "height": 571,
+        "x": 374.0,
+        "bottom": 680
+      }
+    },
+    {
+      "anchor": "sprites/hd720/frames/witchidle1_loop/witchidle1_loop_00.png",
+      "sourceSha256": "3d2f802044899c680182cd72a00666d4067da1e1890af240c663a2aa40de30c6"
+    }
+  ],
+  "sourcePipeline": "native-strips-v1",
+  "anchor": "sprites/hd720/frames/witchidle1_loop/witchidle1_loop_00.png"
 }

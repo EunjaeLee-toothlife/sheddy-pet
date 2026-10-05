@@ -1,106 +1,6 @@
 {
   "name": "candles1_loop",
   "state": "candles1",
-  "sheet": "sprites/raw/halloween/candles1.png",
-  "sha256": "af462f79da773601edc4321a47d361eb44e53a3257dabca2cbe356195658a2bb",
-  "cellBoxes": [
-    [
-      0,
-      0,
-      314,
-      316
-    ],
-    [
-      314,
-      0,
-      627,
-      316
-    ],
-    [
-      627,
-      0,
-      940,
-      316
-    ],
-    [
-      940,
-      0,
-      1254,
-      316
-    ],
-    [
-      0,
-      316,
-      314,
-      627
-    ],
-    [
-      314,
-      316,
-      627,
-      627
-    ],
-    [
-      627,
-      316,
-      940,
-      627
-    ],
-    [
-      940,
-      316,
-      1254,
-      627
-    ],
-    [
-      0,
-      627,
-      314,
-      940
-    ],
-    [
-      314,
-      627,
-      627,
-      940
-    ],
-    [
-      627,
-      627,
-      940,
-      940
-    ],
-    [
-      940,
-      627,
-      1254,
-      940
-    ],
-    [
-      0,
-      940,
-      314,
-      1254
-    ],
-    [
-      314,
-      940,
-      627,
-      1254
-    ],
-    [
-      627,
-      940,
-      940,
-      1254
-    ],
-    [
-      940,
-      940,
-      1254,
-      1254
-    ]
-  ],
   "fps": 12,
   "holds": {
     "0": 6,
@@ -120,5 +20,437 @@
     "14": 3,
     "15": 6
   },
-  "timingNote": "이동 포즈는 최소 3틱(0.25초), 시작·복귀는 6틱. 전체 길이를 늘려 동작 사이 이동도 충분히 보여준다."
+  "timingNote": "이동 포즈는 최소 3틱(0.25초), 시작·복귀는 6틱. 전체 길이를 늘려 동작 사이 이동도 충분히 보여준다.",
+  "nativeSources": [
+    {
+      "anchor": "sprites/hd720/frames/witchidle1_loop/witchidle1_loop_00.png",
+      "sourceSha256": "3d2f802044899c680182cd72a00666d4067da1e1890af240c663a2aa40de30c6"
+    },
+    {
+      "source": "sprites/raw/native-correction/candles1-01-02-03.png",
+      "sourceSha256": "e604e52d8496542a28ee01fd55c8f6e8dd214c4b674d21258a546991e69b6b46",
+      "cell": [
+        0,
+        0,
+        724,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        115,
+        16,
+        581,
+        708
+      ],
+      "scale": 0.8092485549132948,
+      "position": [
+        67,
+        107
+      ],
+      "target": {
+        "height": 560,
+        "x": 337.0,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/candles1-01-02-03.png",
+      "sourceSha256": "e604e52d8496542a28ee01fd55c8f6e8dd214c4b674d21258a546991e69b6b46",
+      "cell": [
+        724,
+        0,
+        1448,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        53,
+        16,
+        643,
+        708
+      ],
+      "scale": 0.8092485549132948,
+      "position": [
+        111,
+        107
+      ],
+      "target": {
+        "height": 560,
+        "x": 325.0,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/candles1-01-02-03.png",
+      "sourceSha256": "e604e52d8496542a28ee01fd55c8f6e8dd214c4b674d21258a546991e69b6b46",
+      "cell": [
+        1448,
+        0,
+        2172,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        38,
+        16,
+        688,
+        708
+      ],
+      "scale": 0.8106936416184971,
+      "position": [
+        74,
+        106
+      ],
+      "target": {
+        "height": 561,
+        "x": 342.0,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/candles1-04-05-06.png",
+      "sourceSha256": "6aafdd8cdc5dab14670a199e23dc5f6badd96566b62b805c829fb83b1be12850",
+      "cell": [
+        0,
+        0,
+        724,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        58,
+        53,
+        658,
+        671
+      ],
+      "scale": 0.8948220064724919,
+      "position": [
+        60,
+        80
+      ],
+      "target": {
+        "height": 553,
+        "x": 351.0,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/candles1-04-05-06.png",
+      "sourceSha256": "6aafdd8cdc5dab14670a199e23dc5f6badd96566b62b805c829fb83b1be12850",
+      "cell": [
+        724,
+        0,
+        1448,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        79,
+        57,
+        678,
+        668
+      ],
+      "scale": 0.8919803600654664,
+      "position": [
+        82,
+        84
+      ],
+      "target": {
+        "height": 545,
+        "x": 353.0,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/candles1-04-05-06.png",
+      "sourceSha256": "6aafdd8cdc5dab14670a199e23dc5f6badd96566b62b805c829fb83b1be12850",
+      "cell": [
+        1448,
+        0,
+        2172,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        65,
+        53,
+        647,
+        669
+      ],
+      "scale": 0.8944805194805194,
+      "position": [
+        -26,
+        70
+      ],
+      "target": {
+        "height": 551,
+        "x": 331.0,
+        "bottom": 669
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/candles1-07-08-09.png",
+      "sourceSha256": "6dc821950e5d6c6b03e2b6df5193f7e856e863e108f2af0d35c4b8b9e26617ec",
+      "cell": [
+        0,
+        0,
+        724,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        79,
+        20,
+        707,
+        698
+      ],
+      "scale": 0.8112094395280236,
+      "position": [
+        12,
+        114
+      ],
+      "target": {
+        "height": 550,
+        "x": 273.0,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/candles1-07-08-09.png",
+      "sourceSha256": "6dc821950e5d6c6b03e2b6df5193f7e856e863e108f2af0d35c4b8b9e26617ec",
+      "cell": [
+        724,
+        0,
+        1448,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        81,
+        25,
+        688,
+        698
+      ],
+      "scale": 0.812778603268945,
+      "position": [
+        133,
+        113
+      ],
+      "target": {
+        "height": 547,
+        "x": 371.5,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/candles1-07-08-09.png",
+      "sourceSha256": "6dc821950e5d6c6b03e2b6df5193f7e856e863e108f2af0d35c4b8b9e26617ec",
+      "cell": [
+        1448,
+        0,
+        2172,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        91,
+        22,
+        655,
+        696
+      ],
+      "scale": 0.8130563798219584,
+      "position": [
+        77,
+        115
+      ],
+      "target": {
+        "height": 548,
+        "x": 325.0,
+        "bottom": 681
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/candles1-10-11-12.png",
+      "sourceSha256": "78fc291d09641647a214d975522a15076a2aaa5e83b62a66f61e06fc4cc3c844",
+      "cell": [
+        0,
+        0,
+        724,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        80,
+        17,
+        689,
+        700
+      ],
+      "scale": 0.8594436310395315,
+      "position": [
+        59,
+        78
+      ],
+      "target": {
+        "height": 587,
+        "x": 332.0,
+        "bottom": 679
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/candles1-10-11-12.png",
+      "sourceSha256": "78fc291d09641647a214d975522a15076a2aaa5e83b62a66f61e06fc4cc3c844",
+      "cell": [
+        724,
+        0,
+        1448,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        54,
+        46,
+        656,
+        701
+      ],
+      "scale": 0.8198473282442749,
+      "position": [
+        15,
+        106
+      ],
+      "target": {
+        "height": 537,
+        "x": 317.0,
+        "bottom": 681
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/candles1-10-11-12.png",
+      "sourceSha256": "78fc291d09641647a214d975522a15076a2aaa5e83b62a66f61e06fc4cc3c844",
+      "cell": [
+        1448,
+        0,
+        2172,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        56,
+        45,
+        685,
+        699
+      ],
+      "scale": 0.8287461773700305,
+      "position": [
+        126,
+        101
+      ],
+      "target": {
+        "height": 542,
+        "x": 324.0,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/candles1-13-14-00.png",
+      "sourceSha256": "41cc5d09b13340aadcefff301c9616d1a9fd7cad0609a5d918cc93dc1bd3158f",
+      "cell": [
+        0,
+        0,
+        724,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        96,
+        26,
+        686,
+        697
+      ],
+      "scale": 0.8256333830104322,
+      "position": [
+        141,
+        103
+      ],
+      "target": {
+        "height": 554,
+        "x": 341.0,
+        "bottom": 679
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/candles1-13-14-00.png",
+      "sourceSha256": "41cc5d09b13340aadcefff301c9616d1a9fd7cad0609a5d918cc93dc1bd3158f",
+      "cell": [
+        724,
+        0,
+        1448,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        84,
+        26,
+        601,
+        698
+      ],
+      "scale": 0.8139880952380952,
+      "position": [
+        56,
+        111
+      ],
+      "target": {
+        "height": 547,
+        "x": 333.0,
+        "bottom": 679
+      }
+    },
+    {
+      "anchor": "sprites/hd720/frames/witchidle1_loop/witchidle1_loop_00.png",
+      "sourceSha256": "3d2f802044899c680182cd72a00666d4067da1e1890af240c663a2aa40de30c6"
+    }
+  ],
+  "sourcePipeline": "native-strips-v1",
+  "anchor": "sprites/hd720/frames/witchidle1_loop/witchidle1_loop_00.png"
 }

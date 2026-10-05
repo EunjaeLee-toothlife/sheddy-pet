@@ -1,0 +1,80 @@
+CHECK widget.html assets=hd720 fallback=false clips=138
+PASS canvas 1280×720 DPR1 → 720²
+PASS canvas 720×1280 DPR1 → 720²
+PASS canvas 320×640 DPR1 → 320²
+PASS canvas 1280×720 DPR2 → 720²
+PASS state normal/basic1 2 cycles / 3 ended / idle return
+PASS state normal/basic2 2 cycles / 3 ended / idle return
+PASS state normal/basic3 2 cycles / 3 ended / idle return
+PASS state normal/doze1 2 cycles / 3 ended / idle return
+PASS state normal/happy1 2 cycles / 5 ended / idle return
+PASS state normal/happy2 2 cycles / 3 ended / idle return
+PASS state normal/happy3 2 cycles / 3 ended / idle return
+PASS state normal/excited1 2 cycles / 3 ended / idle return
+PASS state normal/boxing1 2 cycles / 3 ended / idle return
+PASS state normal/dance1 2 cycles / 3 ended / idle return
+PASS state normal/yaho1 2 cycles / 3 ended / idle return
+PASS state normal/parapara1 2 cycles / 3 ended / idle return
+PASS state normal/dance2 2 cycles / 3 ended / idle return
+PASS state normal/dance3 2 cycles / 3 ended / idle return
+PASS state normal/chem1 2 cycles / 5 ended / idle return
+PASS state normal/pastry1 2 cycles / 6 ended / idle return
+PASS state normal/alchemy1 2 cycles / 6 ended / idle return
+PASS state normal/lemon1 2 cycles / 3 ended / idle return
+PASS state normal/note1 2 cycles / 3 ended / idle return
+PASS state normal/sad1 2 cycles / 3 ended / idle return
+PASS state normal/sad2 2 cycles / 3 ended / idle return
+PASS state normal/clap1 2 cycles / 3 ended / idle return
+PASS state normal/heart1 2 cycles / 3 ended / idle return
+PASS state normal/surprise1 2 cycles / 3 ended / idle return
+PASS state normal/thumbsup1 2 cycles / 3 ended / idle return
+PASS state normal/salute1 2 cycles / 3 ended / idle return
+PASS state normal/shrug1 2 cycles / 3 ended / idle return
+PASS state normal/think1 2 cycles / 3 ended / idle return
+PASS state normal/listen1 2 cycles / 3 ended / idle return
+PASS state normal/facepalm1 2 cycles / 3 ended / idle return
+PASS state normal/shush1 2 cycles / 3 ended / idle return
+PASS state normal/cheer1 2 cycles / 3 ended / idle return
+PASS state normal/pout1 2 cycles / 3 ended / idle return
+PASS state normal/kiss1 2 cycles / 3 ended / idle return
+PASS state normal/bounce1 2 cycles / 3 ended / idle return
+PASS state normal/shuffle1 2 cycles / 3 ended / idle return
+PASS state normal/power1 2 cycles / 3 ended / idle return
+PASS state normal/talk 2 cycles / 3 ended / idle return
+PASS state normal/idle1 2 cycles / 2 ended / idle return
+PASS state halloween/broom1 2 cycles / 3 ended / idle return
+PASS state halloween/lantern1 2 cycles / 3 ended / idle return
+PASS state halloween/ghost1 2 cycles / 3 ended / idle return
+PASS state halloween/bat1 2 cycles / 3 ended / idle return
+PASS state halloween/candy1 2 cycles / 3 ended / idle return
+PASS state halloween/spellbook1 2 cycles / 3 ended / idle return
+PASS state halloween/starspell1 2 cycles / 3 ended / idle return
+PASS state halloween/crystal1 2 cycles / 3 ended / idle return
+PASS state halloween/blackcat1 2 cycles / 3 ended / idle return
+PASS state halloween/raven1 2 cycles / 3 ended / idle return
+PASS state halloween/spider1 2 cycles / 3 ended / idle return
+PASS state halloween/potion1 2 cycles / 3 ended / idle return
+PASS state halloween/moon1 2 cycles / 3 ended / idle return
+PASS state halloween/tarot1 2 cycles / 3 ended / idle return
+PASS state halloween/umbrella1 2 cycles / 3 ended / idle return
+PASS state halloween/witchdance1 2 cycles / 3 ended / idle return
+PASS state halloween/peekaboo1 2 cycles / 3 ended / idle return
+PASS state halloween/candles1 2 cycles / 3 ended / idle return
+PASS state halloween/gift1 2 cycles / 3 ended / idle return
+PASS state halloween/witchbreathe1 2 cycles / 3 ended / idle return
+PASS state halloween/witchlook1 2 cycles / 3 ended / idle return
+PASS state halloween/witchtidy1 2 cycles / 3 ended / idle return
+PASS state halloween/witchtalk1 2 cycles / 3 ended / idle return
+PASS state halloween/alchemy1 2 cycles / 3 ended / idle return
+PASS state halloween/alchemygold1 2 cycles / 3 ended / idle return
+PASS state halloween/alchemyboom1 2 cycles / 3 ended / idle return
+PASS state halloween/alchemyslime1 2 cycles / 3 ended / idle return
+PASS state halloween/witchidle1 2 cycles / 2 ended / idle return
+PASS state seollal/seollal_look1 2 cycles / 3 ended / idle return
+PASS state seollal/seollal_tidy1 2 cycles / 3 ended / idle return
+PASS state seollal/seollal_talk1 2 cycles / 3 ended / idle return
+PASS state seollal/seollal_bow1 2 cycles / 3 ended / idle return
+Error: Error: 실제 완주 오류 seollal_pouch1
+    at <anonymous>:14:130
+    at evaluate (/Users/toonation-eunjaelee/.codex/worktrees/a09f/SP/tools/widget_hd720_check.js:44:49)
+    at async main (/Users/toonation-eunjaelee/.codex/worktrees/a09f/SP/tools/widget_hd720_check.js:141:26)

@@ -1,0 +1,830 @@
+[
+  {
+    "clip": "idle1_loop",
+    "file": "anim_idle1_loop.webm",
+    "rate": 1,
+    "duration": 1.8
+  },
+  {
+    "clip": "basic1_loop",
+    "file": "anim_basic1_loop.webm",
+    "rate": 1,
+    "duration": 3.6
+  },
+  {
+    "clip": "basic2_loop",
+    "file": "anim_basic2_loop.webm",
+    "rate": 0.85,
+    "duration": 1.8
+  },
+  {
+    "clip": "basic3_loop",
+    "file": "anim_basic3_loop.webm",
+    "rate": 1,
+    "duration": 1.8
+  },
+  {
+    "clip": "doze1_loop",
+    "file": "anim_doze1_loop.webm",
+    "rate": 0.7,
+    "duration": 1.4
+  },
+  {
+    "clip": "happy1_start",
+    "file": "anim_happy1_start.webm",
+    "rate": 1,
+    "duration": 0.6
+  },
+  {
+    "clip": "happy1_loop",
+    "file": "anim_happy1_loop.webm",
+    "rate": 1,
+    "duration": 1.8
+  },
+  {
+    "clip": "happy1_end",
+    "file": "anim_happy1_end.webm",
+    "rate": 1,
+    "duration": 0.6
+  },
+  {
+    "clip": "happy2_loop",
+    "file": "anim_happy2_loop.webm",
+    "rate": 0.85,
+    "duration": 1.8
+  },
+  {
+    "clip": "happy3_loop",
+    "file": "anim_happy3_loop.webm",
+    "rate": 0.8,
+    "duration": 2.0
+  },
+  {
+    "clip": "excited1_loop",
+    "file": "anim_excited1_loop.webm",
+    "rate": 0.85,
+    "duration": 1.8
+  },
+  {
+    "clip": "boxing1_loop",
+    "file": "anim_boxing1_loop.webm",
+    "rate": 0.7,
+    "duration": 2.4
+  },
+  {
+    "clip": "dance1_loop",
+    "file": "anim_dance1_loop.webm",
+    "rate": 0.45,
+    "duration": 1.001
+  },
+  {
+    "clip": "yaho1_loop",
+    "file": "anim_yaho1_loop.webm",
+    "rate": 0.53,
+    "duration": 1.4
+  },
+  {
+    "clip": "parapara1_loop",
+    "file": "anim_parapara1_loop.webm",
+    "rate": 0.55,
+    "duration": 2.0
+  },
+  {
+    "clip": "dance2_loop",
+    "file": "anim_dance2_loop.webm",
+    "rate": 0.55,
+    "duration": 1.333
+  },
+  {
+    "clip": "dance3_loop",
+    "file": "anim_dance3_loop.webm",
+    "rate": 0.45,
+    "duration": 1.333
+  },
+  {
+    "clip": "chem1_start",
+    "file": "anim_chem1_start.webm",
+    "rate": 0.7,
+    "duration": 1.2
+  },
+  {
+    "clip": "chem1_loop",
+    "file": "anim_chem1_loop.webm",
+    "rate": 0.7,
+    "duration": 1.9
+  },
+  {
+    "clip": "chem1_end1",
+    "file": "anim_chem1_end1.webm",
+    "rate": 0.7,
+    "duration": 2.0
+  },
+  {
+    "clip": "chem1_end2",
+    "file": "anim_chem1_end2.webm",
+    "rate": 0.7,
+    "duration": 1.2
+  },
+  {
+    "clip": "chem1_end3",
+    "file": "anim_chem1_end3.webm",
+    "rate": 0.7,
+    "duration": 1.8
+  },
+  {
+    "clip": "pastry1_start",
+    "file": "anim_pastry1_start.webm",
+    "rate": 0.7,
+    "duration": 1.4
+  },
+  {
+    "clip": "pastry1_loop",
+    "file": "anim_pastry1_loop.webm",
+    "rate": 0.7,
+    "duration": 1.4
+  },
+  {
+    "clip": "pastry1_end1",
+    "file": "anim_pastry1_end1.webm",
+    "rate": 0.7,
+    "duration": 2.3
+  },
+  {
+    "clip": "pastry1_end2",
+    "file": "anim_pastry1_end2.webm",
+    "rate": 0.7,
+    "duration": 2.3
+  },
+  {
+    "clip": "pastry1_end3",
+    "file": "anim_pastry1_end3.webm",
+    "rate": 0.7,
+    "duration": 2.3
+  },
+  {
+    "clip": "pastry1_end4",
+    "file": "anim_pastry1_end4.webm",
+    "rate": 0.7,
+    "duration": 2.3
+  },
+  {
+    "clip": "pastry1_end5",
+    "file": "anim_pastry1_end5.webm",
+    "rate": 0.7,
+    "duration": 2.3
+  },
+  {
+    "clip": "pastry1_end6",
+    "file": "anim_pastry1_end6.webm",
+    "rate": 0.7,
+    "duration": 2.3
+  },
+  {
+    "clip": "pastry1_end7",
+    "file": "anim_pastry1_end7.webm",
+    "rate": 0.7,
+    "duration": 2.3
+  },
+  {
+    "clip": "pastry1_end8",
+    "file": "anim_pastry1_end8.webm",
+    "rate": 0.7,
+    "duration": 2.3
+  },
+  {
+    "clip": "pastry1_end9",
+    "file": "anim_pastry1_end9.webm",
+    "rate": 0.7,
+    "duration": 2.3
+  },
+  {
+    "clip": "pastry1_end10",
+    "file": "anim_pastry1_end10.webm",
+    "rate": 0.7,
+    "duration": 2.3
+  },
+  {
+    "clip": "pastry1_outro",
+    "file": "anim_pastry1_outro.webm",
+    "rate": 0.7,
+    "duration": 1.0
+  },
+  {
+    "clip": "alchemy1_start",
+    "file": "anim_alchemy1_start.webm",
+    "rate": 1,
+    "duration": 3.4
+  },
+  {
+    "clip": "alchemy1_loop",
+    "file": "anim_alchemy1_loop.webm",
+    "rate": 1,
+    "duration": 2.666
+  },
+  {
+    "clip": "alchemy1_end1",
+    "file": "anim_alchemy1_end1.webm",
+    "rate": 1,
+    "duration": 3.333
+  },
+  {
+    "clip": "alchemy1_end2",
+    "file": "anim_alchemy1_end2.webm",
+    "rate": 1,
+    "duration": 3.333
+  },
+  {
+    "clip": "alchemy1_end3",
+    "file": "anim_alchemy1_end3.webm",
+    "rate": 1,
+    "duration": 3.333
+  },
+  {
+    "clip": "alchemy1_outro",
+    "file": "anim_alchemy1_outro.webm",
+    "rate": 1,
+    "duration": 2.75
+  },
+  {
+    "clip": "lemon1_loop",
+    "file": "anim_lemon1_loop.webm",
+    "rate": 0.7,
+    "duration": 4.0
+  },
+  {
+    "clip": "note1_loop",
+    "file": "anim_note1_loop.webm",
+    "rate": 1,
+    "duration": 7.4
+  },
+  {
+    "clip": "sad1_loop",
+    "file": "anim_sad1_loop.webm",
+    "rate": 1,
+    "duration": 1.8
+  },
+  {
+    "clip": "sad2_loop",
+    "file": "anim_sad2_loop.webm",
+    "rate": 1,
+    "duration": 1.8
+  },
+  {
+    "clip": "clap1_loop",
+    "file": "anim_clap1_loop.webm",
+    "rate": 1,
+    "duration": 3.2
+  },
+  {
+    "clip": "heart1_loop",
+    "file": "anim_heart1_loop.webm",
+    "rate": 1,
+    "duration": 2.0
+  },
+  {
+    "clip": "surprise1_loop",
+    "file": "anim_surprise1_loop.webm",
+    "rate": 1,
+    "duration": 2.0
+  },
+  {
+    "clip": "thumbsup1_loop",
+    "file": "anim_thumbsup1_loop.webm",
+    "rate": 1,
+    "duration": 2.4
+  },
+  {
+    "clip": "salute1_loop",
+    "file": "anim_salute1_loop.webm",
+    "rate": 1,
+    "duration": 2.4
+  },
+  {
+    "clip": "shrug1_loop",
+    "file": "anim_shrug1_loop.webm",
+    "rate": 1,
+    "duration": 2.4
+  },
+  {
+    "clip": "think1_loop",
+    "file": "anim_think1_loop.webm",
+    "rate": 1,
+    "duration": 2.4
+  },
+  {
+    "clip": "listen1_loop",
+    "file": "anim_listen1_loop.webm",
+    "rate": 1,
+    "duration": 2.4
+  },
+  {
+    "clip": "facepalm1_loop",
+    "file": "anim_facepalm1_loop.webm",
+    "rate": 1,
+    "duration": 2.4
+  },
+  {
+    "clip": "shush1_loop",
+    "file": "anim_shush1_loop.webm",
+    "rate": 1,
+    "duration": 2.4
+  },
+  {
+    "clip": "cheer1_loop",
+    "file": "anim_cheer1_loop.webm",
+    "rate": 1,
+    "duration": 2.4
+  },
+  {
+    "clip": "pout1_loop",
+    "file": "anim_pout1_loop.webm",
+    "rate": 1,
+    "duration": 2.4
+  },
+  {
+    "clip": "kiss1_loop",
+    "file": "anim_kiss1_loop.webm",
+    "rate": 1,
+    "duration": 2.4
+  },
+  {
+    "clip": "bounce1_loop",
+    "file": "anim_bounce1_loop.webm",
+    "rate": 1,
+    "duration": 4.666666666666667
+  },
+  {
+    "clip": "shuffle1_loop",
+    "file": "anim_shuffle1_loop.webm",
+    "rate": 1,
+    "duration": 4.666666666666667
+  },
+  {
+    "clip": "power1_loop",
+    "file": "anim_power1_loop.webm",
+    "rate": 1,
+    "duration": 4.666666666666667
+  },
+  {
+    "clip": "talk_loop",
+    "file": "anim_talk_loop.webm",
+    "rate": 1,
+    "duration": 1.8
+  },
+  {
+    "clip": "witchidle1_loop",
+    "file": "anim_witchidle1_loop.webm",
+    "rate": 1,
+    "duration": 4.0
+  },
+  {
+    "clip": "broom1_loop",
+    "file": "anim_broom1_loop.webm",
+    "rate": 1,
+    "duration": 6.166
+  },
+  {
+    "clip": "lantern1_loop",
+    "file": "anim_lantern1_loop.webm",
+    "rate": 1,
+    "duration": 6.083
+  },
+  {
+    "clip": "ghost1_loop",
+    "file": "anim_ghost1_loop.webm",
+    "rate": 1,
+    "duration": 6.0
+  },
+  {
+    "clip": "bat1_loop",
+    "file": "anim_bat1_loop.webm",
+    "rate": 1,
+    "duration": 6.0
+  },
+  {
+    "clip": "candy1_loop",
+    "file": "anim_candy1_loop.webm",
+    "rate": 1,
+    "duration": 6.0
+  },
+  {
+    "clip": "spellbook1_loop",
+    "file": "anim_spellbook1_loop.webm",
+    "rate": 1,
+    "duration": 6.083
+  },
+  {
+    "clip": "starspell1_loop",
+    "file": "anim_starspell1_loop.webm",
+    "rate": 1,
+    "duration": 6.0
+  },
+  {
+    "clip": "crystal1_loop",
+    "file": "anim_crystal1_loop.webm",
+    "rate": 1,
+    "duration": 6.25
+  },
+  {
+    "clip": "blackcat1_loop",
+    "file": "anim_blackcat1_loop.webm",
+    "rate": 1,
+    "duration": 6.166
+  },
+  {
+    "clip": "raven1_loop",
+    "file": "anim_raven1_loop.webm",
+    "rate": 1,
+    "duration": 6.0
+  },
+  {
+    "clip": "spider1_loop",
+    "file": "anim_spider1_loop.webm",
+    "rate": 1,
+    "duration": 6.083
+  },
+  {
+    "clip": "potion1_loop",
+    "file": "anim_potion1_loop.webm",
+    "rate": 1,
+    "duration": 6.083
+  },
+  {
+    "clip": "moon1_loop",
+    "file": "anim_moon1_loop.webm",
+    "rate": 1,
+    "duration": 6.25
+  },
+  {
+    "clip": "tarot1_loop",
+    "file": "anim_tarot1_loop.webm",
+    "rate": 1,
+    "duration": 6.166
+  },
+  {
+    "clip": "umbrella1_loop",
+    "file": "anim_umbrella1_loop.webm",
+    "rate": 1,
+    "duration": 6.166
+  },
+  {
+    "clip": "witchdance1_loop",
+    "file": "anim_witchdance1_loop.webm",
+    "rate": 1,
+    "duration": 5.416
+  },
+  {
+    "clip": "peekaboo1_loop",
+    "file": "anim_peekaboo1_loop.webm",
+    "rate": 1,
+    "duration": 6.25
+  },
+  {
+    "clip": "candles1_loop",
+    "file": "anim_candles1_loop.webm",
+    "rate": 1,
+    "duration": 6.166
+  },
+  {
+    "clip": "gift1_loop",
+    "file": "anim_gift1_loop.webm",
+    "rate": 1,
+    "duration": 6.416
+  },
+  {
+    "clip": "witchbreathe1_loop",
+    "file": "anim_witchbreathe1_loop.webm",
+    "rate": 1,
+    "duration": 4.0
+  },
+  {
+    "clip": "witchlook1_loop",
+    "file": "anim_witchlook1_loop.webm",
+    "rate": 1,
+    "duration": 4.0
+  },
+  {
+    "clip": "witchtidy1_loop",
+    "file": "anim_witchtidy1_loop.webm",
+    "rate": 1,
+    "duration": 4.0
+  },
+  {
+    "clip": "witchtalk1_loop",
+    "file": "anim_witchtalk1_loop.webm",
+    "rate": 1,
+    "duration": 1.333
+  },
+  {
+    "clip": "seollal_breathe1_loop",
+    "file": "anim_seollal_breathe1_loop.webm",
+    "rate": 1,
+    "duration": 4.0
+  },
+  {
+    "clip": "seollal_look1_loop",
+    "file": "anim_seollal_look1_loop.webm",
+    "rate": 1,
+    "duration": 4.0
+  },
+  {
+    "clip": "seollal_tidy1_loop",
+    "file": "anim_seollal_tidy1_loop.webm",
+    "rate": 1,
+    "duration": 4.0
+  },
+  {
+    "clip": "seollal_talk1_loop",
+    "file": "anim_seollal_talk1_loop.webm",
+    "rate": 1,
+    "duration": 1.333
+  },
+  {
+    "clip": "seollal_bow1_loop",
+    "file": "anim_seollal_bow1_loop.webm",
+    "rate": 1,
+    "duration": 6.666666666666667
+  },
+  {
+    "clip": "seollal_pouch1_loop",
+    "file": "anim_seollal_pouch1_loop.webm",
+    "rate": 1,
+    "duration": 6.333333333333333
+  },
+  {
+    "clip": "seollal_yut1_loop",
+    "file": "anim_seollal_yut1_loop.webm",
+    "rate": 1,
+    "duration": 6.25
+  },
+  {
+    "clip": "seollal_soup1_loop",
+    "file": "anim_seollal_soup1_loop.webm",
+    "rate": 1,
+    "duration": 6.166666666666667
+  },
+  {
+    "clip": "seollal_kite1_loop",
+    "file": "anim_seollal_kite1_loop.webm",
+    "rate": 1,
+    "duration": 6.25
+  },
+  {
+    "clip": "seollal_jegi1_loop",
+    "file": "anim_seollal_jegi1_loop.webm",
+    "rate": 1,
+    "duration": 5.75
+  },
+  {
+    "clip": "christmas_breathe1_loop",
+    "file": "anim_christmas_breathe1_loop.webm",
+    "rate": 1,
+    "duration": 4.0
+  },
+  {
+    "clip": "christmas_look1_loop",
+    "file": "anim_christmas_look1_loop.webm",
+    "rate": 1,
+    "duration": 4.0
+  },
+  {
+    "clip": "christmas_tidy1_loop",
+    "file": "anim_christmas_tidy1_loop.webm",
+    "rate": 1,
+    "duration": 4.0
+  },
+  {
+    "clip": "christmas_talk1_loop",
+    "file": "anim_christmas_talk1_loop.webm",
+    "rate": 1,
+    "duration": 1.333
+  },
+  {
+    "clip": "christmas_gift1_loop",
+    "file": "anim_christmas_gift1_loop.webm",
+    "rate": 1,
+    "duration": 6.333333333333333
+  },
+  {
+    "clip": "christmas_fishbread1_loop",
+    "file": "anim_christmas_fishbread1_loop.webm",
+    "rate": 1,
+    "duration": 6.166666666666667
+  },
+  {
+    "clip": "christmas_snowman1_loop",
+    "file": "anim_christmas_snowman1_loop.webm",
+    "rate": 1,
+    "duration": 6.333333333333333
+  },
+  {
+    "clip": "christmas_carol1_loop",
+    "file": "anim_christmas_carol1_loop.webm",
+    "rate": 1,
+    "duration": 5.666666666666667
+  },
+  {
+    "clip": "christmas_snowglobe1_loop",
+    "file": "anim_christmas_snowglobe1_loop.webm",
+    "rate": 1,
+    "duration": 6.583333333333333
+  },
+  {
+    "clip": "christmas_snowcatch1_loop",
+    "file": "anim_christmas_snowcatch1_loop.webm",
+    "rate": 1,
+    "duration": 6.25
+  },
+  {
+    "clip": "childrensday_breathe1_loop",
+    "file": "anim_childrensday_breathe1_loop.webm",
+    "rate": 1,
+    "duration": 4.0
+  },
+  {
+    "clip": "childrensday_look1_loop",
+    "file": "anim_childrensday_look1_loop.webm",
+    "rate": 1,
+    "duration": 4.0
+  },
+  {
+    "clip": "childrensday_tidy1_loop",
+    "file": "anim_childrensday_tidy1_loop.webm",
+    "rate": 1,
+    "duration": 4.0
+  },
+  {
+    "clip": "childrensday_talk1_loop",
+    "file": "anim_childrensday_talk1_loop.webm",
+    "rate": 1,
+    "duration": 1.333
+  },
+  {
+    "clip": "childrensday_bubbles1_loop",
+    "file": "anim_childrensday_bubbles1_loop.webm",
+    "rate": 1,
+    "duration": 6.416666666666667
+  },
+  {
+    "clip": "childrensday_balloon1_loop",
+    "file": "anim_childrensday_balloon1_loop.webm",
+    "rate": 1,
+    "duration": 6.333333333333333
+  },
+  {
+    "clip": "childrensday_robot1_loop",
+    "file": "anim_childrensday_robot1_loop.webm",
+    "rate": 1,
+    "duration": 6.416666666666667
+  },
+  {
+    "clip": "childrensday_plane1_loop",
+    "file": "anim_childrensday_plane1_loop.webm",
+    "rate": 1,
+    "duration": 6.416666666666667
+  },
+  {
+    "clip": "childrensday_candyfloss1_loop",
+    "file": "anim_childrensday_candyfloss1_loop.webm",
+    "rate": 1,
+    "duration": 6.333333333333333
+  },
+  {
+    "clip": "childrensday_pinwheel1_loop",
+    "file": "anim_childrensday_pinwheel1_loop.webm",
+    "rate": 1,
+    "duration": 6.25
+  },
+  {
+    "clip": "summer_breathe1_loop",
+    "file": "anim_summer_breathe1_loop.webm",
+    "rate": 1,
+    "duration": 4.0
+  },
+  {
+    "clip": "summer_look1_loop",
+    "file": "anim_summer_look1_loop.webm",
+    "rate": 1,
+    "duration": 4.0
+  },
+  {
+    "clip": "summer_tidy1_loop",
+    "file": "anim_summer_tidy1_loop.webm",
+    "rate": 1,
+    "duration": 4.0
+  },
+  {
+    "clip": "summer_talk1_loop",
+    "file": "anim_summer_talk1_loop.webm",
+    "rate": 1,
+    "duration": 1.333
+  },
+  {
+    "clip": "summer_tube1_loop",
+    "file": "anim_summer_tube1_loop.webm",
+    "rate": 1,
+    "duration": 6.583333333333333
+  },
+  {
+    "clip": "summer_sandcastle1_loop",
+    "file": "anim_summer_sandcastle1_loop.webm",
+    "rate": 1,
+    "duration": 6.416666666666667
+  },
+  {
+    "clip": "summer_watermelon1_loop",
+    "file": "anim_summer_watermelon1_loop.webm",
+    "rate": 1,
+    "duration": 6.25
+  },
+  {
+    "clip": "summer_watergun1_loop",
+    "file": "anim_summer_watergun1_loop.webm",
+    "rate": 1,
+    "duration": 6.0
+  },
+  {
+    "clip": "summer_waves1_loop",
+    "file": "anim_summer_waves1_loop.webm",
+    "rate": 1,
+    "duration": 5.916666666666667
+  },
+  {
+    "clip": "summer_fan1_loop",
+    "file": "anim_summer_fan1_loop.webm",
+    "rate": 1,
+    "duration": 6.416666666666667
+  },
+  {
+    "clip": "transform_normal_start",
+    "file": "anim_transform_normal_start.webm",
+    "rate": 1,
+    "duration": 1.333
+  },
+  {
+    "clip": "transform_normal_loop",
+    "file": "anim_transform_normal_loop.webm",
+    "rate": 1,
+    "duration": 1.333
+  },
+  {
+    "clip": "transform_halloween_start",
+    "file": "anim_transform_halloween_start.webm",
+    "rate": 1,
+    "duration": 1.333
+  },
+  {
+    "clip": "transform_halloween_loop",
+    "file": "anim_transform_halloween_loop.webm",
+    "rate": 1,
+    "duration": 1.333
+  },
+  {
+    "clip": "transform_seollal_start",
+    "file": "anim_transform_seollal_start.webm",
+    "rate": 1,
+    "duration": 1.333
+  },
+  {
+    "clip": "transform_seollal_loop",
+    "file": "anim_transform_seollal_loop.webm",
+    "rate": 1,
+    "duration": 1.333
+  },
+  {
+    "clip": "transform_christmas_start",
+    "file": "anim_transform_christmas_start.webm",
+    "rate": 1,
+    "duration": 1.333
+  },
+  {
+    "clip": "transform_christmas_loop",
+    "file": "anim_transform_christmas_loop.webm",
+    "rate": 1,
+    "duration": 1.333
+  },
+  {
+    "clip": "transform_childrensday_start",
+    "file": "anim_transform_childrensday_start.webm",
+    "rate": 1,
+    "duration": 1.333
+  },
+  {
+    "clip": "transform_childrensday_loop",
+    "file": "anim_transform_childrensday_loop.webm",
+    "rate": 1,
+    "duration": 1.333
+  },
+  {
+    "clip": "transform_summer_start",
+    "file": "anim_transform_summer_start.webm",
+    "rate": 1,
+    "duration": 1.333
+  },
+  {
+    "clip": "transform_summer_loop",
+    "file": "anim_transform_summer_loop.webm",
+    "rate": 1,
+    "duration": 1.333
+  }
+]

@@ -38,5 +38,490 @@
     "13": 2,
     "14": 2,
     "15": 2
-  }
+  },
+  "fps": 10,
+  "nativeSources": [
+    {
+      "source": "sprites/raw/native-correction/lemon1-00-01.png",
+      "sourceSha256": "7b28fbf9845fa9e4d977946563ad6abadb1078fa3a87379b594726fe398e5d57",
+      "cell": [
+        0,
+        0,
+        887,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        245,
+        20,
+        711,
+        869
+      ],
+      "scale": 0.7455830388692579,
+      "position": [
+        2,
+        52
+      ],
+      "target": {
+        "height": 633,
+        "x": 345.0,
+        "bottom": 700
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/lemon1-00-01.png",
+      "sourceSha256": "7b28fbf9845fa9e4d977946563ad6abadb1078fa3a87379b594726fe398e5d57",
+      "cell": [
+        887,
+        0,
+        1774,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        204,
+        20,
+        608,
+        869
+      ],
+      "scale": 0.7502944640753828,
+      "position": [
+        55,
+        45
+      ],
+      "target": {
+        "height": 637,
+        "x": 372.0,
+        "bottom": 698
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/lemon1-02-03.png",
+      "sourceSha256": "035169018620eb7dc9881e019648b0012e2eac61d3c1fad14dbe7f03da22c472",
+      "cell": [
+        0,
+        0,
+        887,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        242,
+        26,
+        710,
+        862
+      ],
+      "scale": 0.7583732057416268,
+      "position": [
+        -20,
+        43
+      ],
+      "target": {
+        "height": 634,
+        "x": 372.0,
+        "bottom": 697
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/lemon1-02-03.png",
+      "sourceSha256": "035169018620eb7dc9881e019648b0012e2eac61d3c1fad14dbe7f03da22c472",
+      "cell": [
+        887,
+        0,
+        1774,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        149,
+        27,
+        616,
+        862
+      ],
+      "scale": 0.7592814371257485,
+      "position": [
+        48,
+        43
+      ],
+      "target": {
+        "height": 634,
+        "x": 370.5,
+        "bottom": 697
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/lemon1-04-05.png",
+      "sourceSha256": "f50ef6bbb6d622dd98f7f23027b35a22f5fdbea44cf1c9f93a4e5de526acbc2e",
+      "cell": [
+        0,
+        0,
+        887,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        285,
+        23,
+        730,
+        875
+      ],
+      "scale": 0.7429577464788732,
+      "position": [
+        -13,
+        46
+      ],
+      "target": {
+        "height": 633,
+        "x": 342.0,
+        "bottom": 696
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/lemon1-04-05.png",
+      "sourceSha256": "f50ef6bbb6d622dd98f7f23027b35a22f5fdbea44cf1c9f93a4e5de526acbc2e",
+      "cell": [
+        887,
+        0,
+        1774,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        149,
+        24,
+        592,
+        876
+      ],
+      "scale": 0.7429577464788732,
+      "position": [
+        89,
+        46
+      ],
+      "target": {
+        "height": 633,
+        "x": 342.0,
+        "bottom": 696
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/lemon1-06-07.png",
+      "sourceSha256": "49b6c2bc031176928862ae82dea948451642091e2f5fdb3aade4614f631ccad7",
+      "cell": [
+        0,
+        0,
+        887,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        243,
+        42,
+        683,
+        866
+      ],
+      "scale": 0.7694174757281553,
+      "position": [
+        -9,
+        34
+      ],
+      "target": {
+        "height": 634,
+        "x": 340.0,
+        "bottom": 700
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/lemon1-06-07.png",
+      "sourceSha256": "49b6c2bc031176928862ae82dea948451642091e2f5fdb3aade4614f631ccad7",
+      "cell": [
+        887,
+        0,
+        1774,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        101,
+        43,
+        663,
+        865
+      ],
+      "scale": 0.7688564476885644,
+      "position": [
+        30,
+        33
+      ],
+      "target": {
+        "height": 632,
+        "x": 343.0,
+        "bottom": 698
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/lemon1-08-09.png",
+      "sourceSha256": "fc4aff4e3105ab31184e27dd8579fc8f003594dc8504350e916e41dfff6c7e21",
+      "cell": [
+        0,
+        0,
+        887,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        171,
+        24,
+        688,
+        873
+      ],
+      "scale": 0.7479387514723204,
+      "position": [
+        26,
+        45
+      ],
+      "target": {
+        "height": 635,
+        "x": 369.0,
+        "bottom": 698
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/lemon1-08-09.png",
+      "sourceSha256": "fc4aff4e3105ab31184e27dd8579fc8f003594dc8504350e916e41dfff6c7e21",
+      "cell": [
+        887,
+        0,
+        1774,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        174,
+        24,
+        679,
+        873
+      ],
+      "scale": 0.7479387514723204,
+      "position": [
+        58,
+        46
+      ],
+      "target": {
+        "height": 635,
+        "x": 373.0,
+        "bottom": 699
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/lemon1-10-11.png",
+      "sourceSha256": "91291eaee21d3f897ddef6f1b37b36090f25a3e091982620f1339d4b302e0ab3",
+      "cell": [
+        0,
+        0,
+        887,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        274,
+        29,
+        742,
+        872
+      ],
+      "scale": 0.7520759193357058,
+      "position": [
+        -33,
+        41
+      ],
+      "target": {
+        "height": 634,
+        "x": 344.0,
+        "bottom": 697
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/lemon1-10-11.png",
+      "sourceSha256": "91291eaee21d3f897ddef6f1b37b36090f25a3e091982620f1339d4b302e0ab3",
+      "cell": [
+        887,
+        0,
+        1774,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        135,
+        29,
+        625,
+        872
+      ],
+      "scale": 0.7520759193357058,
+      "position": [
+        69,
+        41
+      ],
+      "target": {
+        "height": 634,
+        "x": 343.0,
+        "bottom": 697
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/lemon1-12-13.png",
+      "sourceSha256": "bc4af7b2df4dbc00732a62004b057f033cbc1f052bfcd405f2cdeb995e0c259e",
+      "cell": [
+        0,
+        0,
+        887,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        258,
+        30,
+        676,
+        864
+      ],
+      "scale": 0.762589928057554,
+      "position": [
+        -8,
+        40
+      ],
+      "target": {
+        "height": 636,
+        "x": 346.0,
+        "bottom": 698
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/lemon1-12-13.png",
+      "sourceSha256": "bc4af7b2df4dbc00732a62004b057f033cbc1f052bfcd405f2cdeb995e0c259e",
+      "cell": [
+        887,
+        0,
+        1774,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        206,
+        30,
+        620,
+        864
+      ],
+      "scale": 0.7613908872901679,
+      "position": [
+        43,
+        41
+      ],
+      "target": {
+        "height": 635,
+        "x": 347.0,
+        "bottom": 698
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/lemon1-14-15.png",
+      "sourceSha256": "05bf82b4965ea2f252b950ad3ad39bf6b1ec054d5a74243df84fbe7120e9afe2",
+      "cell": [
+        0,
+        0,
+        887,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        250,
+        26,
+        699,
+        872
+      ],
+      "scale": 0.7494089834515366,
+      "position": [
+        -3,
+        43
+      ],
+      "target": {
+        "height": 634,
+        "x": 346.0,
+        "bottom": 697
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/lemon1-00-01.png",
+      "sourceSha256": "7b28fbf9845fa9e4d977946563ad6abadb1078fa3a87379b594726fe398e5d57",
+      "cell": [
+        0,
+        0,
+        887,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        245,
+        20,
+        711,
+        869
+      ],
+      "scale": 0.7455830388692579,
+      "position": [
+        2,
+        52
+      ],
+      "target": {
+        "height": 633,
+        "x": 345.0,
+        "bottom": 700
+      }
+    }
+  ],
+  "sourcePipeline": "native-strips-v1",
+  "anchor": "sprites/hd720/frames/lemon1_loop/lemon1_loop_00.png"
 }

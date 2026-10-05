@@ -1,106 +1,6 @@
 {
   "name": "lantern1_loop",
   "state": "lantern1",
-  "sheet": "sprites/raw/halloween/lantern1.png",
-  "sha256": "da97924161347870eb303998443dc51092d60f74f2cc10e7a5996d2ba1fa189e",
-  "cellBoxes": [
-    [
-      0,
-      0,
-      314,
-      314
-    ],
-    [
-      314,
-      0,
-      627,
-      313
-    ],
-    [
-      627,
-      0,
-      940,
-      314
-    ],
-    [
-      940,
-      0,
-      1254,
-      313
-    ],
-    [
-      0,
-      314,
-      314,
-      626
-    ],
-    [
-      314,
-      313,
-      627,
-      626
-    ],
-    [
-      627,
-      314,
-      940,
-      626
-    ],
-    [
-      940,
-      313,
-      1254,
-      627
-    ],
-    [
-      0,
-      626,
-      314,
-      933
-    ],
-    [
-      314,
-      626,
-      627,
-      933
-    ],
-    [
-      627,
-      626,
-      940,
-      933
-    ],
-    [
-      940,
-      627,
-      1254,
-      933
-    ],
-    [
-      0,
-      933,
-      314,
-      1254
-    ],
-    [
-      314,
-      933,
-      627,
-      1254
-    ],
-    [
-      627,
-      933,
-      940,
-      1254
-    ],
-    [
-      940,
-      933,
-      1254,
-      1254
-    ]
-  ],
   "fps": 12,
   "holds": {
     "0": 6,
@@ -120,5 +20,437 @@
     "14": 3,
     "15": 6
   },
-  "timingNote": "이동 포즈는 최소 3틱(0.25초), 시작·복귀는 6틱. 전체 길이를 늘려 동작 사이 이동도 충분히 보여준다."
+  "timingNote": "이동 포즈는 최소 3틱(0.25초), 시작·복귀는 6틱. 전체 길이를 늘려 동작 사이 이동도 충분히 보여준다.",
+  "nativeSources": [
+    {
+      "anchor": "sprites/hd720/frames/witchidle1_loop/witchidle1_loop_00.png",
+      "sourceSha256": "3d2f802044899c680182cd72a00666d4067da1e1890af240c663a2aa40de30c6"
+    },
+    {
+      "source": "sprites/raw/native-correction/lantern1-01-07-08.png",
+      "sourceSha256": "55b09ee0025b144797892f5eef201171fbc5de9d1ccc004d49ad5495491e4afb",
+      "cell": [
+        0,
+        0,
+        724,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        177,
+        1,
+        660,
+        715
+      ],
+      "scale": 0.7787114845938375,
+      "position": [
+        18,
+        121
+      ],
+      "target": {
+        "height": 556,
+        "x": 299.0,
+        "bottom": 678
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/lantern1-02-03.png",
+      "sourceSha256": "174955697f5ed6584c8e6bf07510b09e0aeaf464b4ac79fc0d114f229c6adc52",
+      "cell": [
+        0,
+        0,
+        887,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        140,
+        8,
+        821,
+        876
+      ],
+      "scale": 0.631336405529954,
+      "position": [
+        19,
+        127
+      ],
+      "target": {
+        "height": 548,
+        "x": 316.0,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/lantern1-02-03.png",
+      "sourceSha256": "174955697f5ed6584c8e6bf07510b09e0aeaf464b4ac79fc0d114f229c6adc52",
+      "cell": [
+        887,
+        0,
+        1774,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        91,
+        8,
+        774,
+        876
+      ],
+      "scale": 0.6405529953917051,
+      "position": [
+        78,
+        119
+      ],
+      "target": {
+        "height": 556,
+        "x": 351.0,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/lantern1-04-05-06.png",
+      "sourceSha256": "0aeba52c11d8f4c6f29a5900c846ab1c0aeada23acf0304b3f5775d833482cb6",
+      "cell": [
+        0,
+        0,
+        724,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        130,
+        7,
+        598,
+        714
+      ],
+      "scale": 0.7906647807637907,
+      "position": [
+        74,
+        117
+      ],
+      "target": {
+        "height": 559,
+        "x": 350.0,
+        "bottom": 681
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/lantern1-04-05-06.png",
+      "sourceSha256": "0aeba52c11d8f4c6f29a5900c846ab1c0aeada23acf0304b3f5775d833482cb6",
+      "cell": [
+        724,
+        0,
+        1448,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        123,
+        6,
+        591,
+        714
+      ],
+      "scale": 0.78954802259887,
+      "position": [
+        62,
+        116
+      ],
+      "target": {
+        "height": 559,
+        "x": 326.0,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/lantern1-04-05-06.png",
+      "sourceSha256": "0aeba52c11d8f4c6f29a5900c846ab1c0aeada23acf0304b3f5775d833482cb6",
+      "cell": [
+        1448,
+        0,
+        2172,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        99,
+        14,
+        591,
+        714
+      ],
+      "scale": 0.7585714285714286,
+      "position": [
+        40,
+        140
+      ],
+      "target": {
+        "height": 531,
+        "x": 304.0,
+        "bottom": 681
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/lantern1-01-07-08.png",
+      "sourceSha256": "55b09ee0025b144797892f5eef201171fbc5de9d1ccc004d49ad5495491e4afb",
+      "cell": [
+        724,
+        0,
+        1448,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        132,
+        1,
+        606,
+        714
+      ],
+      "scale": 0.7840112201963534,
+      "position": [
+        70,
+        120
+      ],
+      "target": {
+        "height": 559,
+        "x": 325.0,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/lantern1-01-07-08.png",
+      "sourceSha256": "55b09ee0025b144797892f5eef201171fbc5de9d1ccc004d49ad5495491e4afb",
+      "cell": [
+        1448,
+        0,
+        2172,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        74,
+        1,
+        548,
+        714
+      ],
+      "scale": 0.7699859747545582,
+      "position": [
+        88,
+        131
+      ],
+      "target": {
+        "height": 549,
+        "x": 334.0,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/lantern1-09-10-11.png",
+      "sourceSha256": "dd31e929bdd2c3427990b4cb8c9927e9379c14efaabdb21f9ed6369b0c4e312e",
+      "cell": [
+        0,
+        0,
+        724,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        20,
+        3,
+        626,
+        712
+      ],
+      "scale": 0.7757404795486601,
+      "position": [
+        95,
+        127
+      ],
+      "target": {
+        "height": 550,
+        "x": 400.0,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/lantern1-09-10-11.png",
+      "sourceSha256": "dd31e929bdd2c3427990b4cb8c9927e9379c14efaabdb21f9ed6369b0c4e312e",
+      "cell": [
+        724,
+        0,
+        1448,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        63,
+        8,
+        720,
+        712
+      ],
+      "scale": 0.7784090909090909,
+      "position": [
+        62,
+        125
+      ],
+      "target": {
+        "height": 548,
+        "x": 286.0,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/lantern1-09-10-11.png",
+      "sourceSha256": "dd31e929bdd2c3427990b4cb8c9927e9379c14efaabdb21f9ed6369b0c4e312e",
+      "cell": [
+        1448,
+        0,
+        2172,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        96,
+        11,
+        704,
+        712
+      ],
+      "scale": 0.7803138373751783,
+      "position": [
+        135,
+        124
+      ],
+      "target": {
+        "height": 547,
+        "x": 386.0,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/lantern1-12-13-14.png",
+      "sourceSha256": "7fbea9c5194499ce1cfb0aec1112e2da0b480718379493a6be4f5506904b2ba3",
+      "cell": [
+        0,
+        0,
+        724,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        100,
+        5,
+        571,
+        710
+      ],
+      "scale": 0.7929078014184398,
+      "position": [
+        87,
+        117
+      ],
+      "target": {
+        "height": 559,
+        "x": 333.0,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/lantern1-12-13-14.png",
+      "sourceSha256": "7fbea9c5194499ce1cfb0aec1112e2da0b480718379493a6be4f5506904b2ba3",
+      "cell": [
+        724,
+        0,
+        1448,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        84,
+        8,
+        563,
+        710
+      ],
+      "scale": 0.8005698005698005,
+      "position": [
+        90,
+        112
+      ],
+      "target": {
+        "height": 562,
+        "x": 331.0,
+        "bottom": 681
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/lantern1-12-13-14.png",
+      "sourceSha256": "7fbea9c5194499ce1cfb0aec1112e2da0b480718379493a6be4f5506904b2ba3",
+      "cell": [
+        1448,
+        0,
+        2172,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        66,
+        11,
+        676,
+        711
+      ],
+      "scale": 0.8028571428571428,
+      "position": [
+        75,
+        109
+      ],
+      "target": {
+        "height": 562,
+        "x": 298.0,
+        "bottom": 680
+      }
+    },
+    {
+      "anchor": "sprites/hd720/frames/witchidle1_loop/witchidle1_loop_00.png",
+      "sourceSha256": "3d2f802044899c680182cd72a00666d4067da1e1890af240c663a2aa40de30c6"
+    }
+  ],
+  "sourcePipeline": "native-strips-v1",
+  "anchor": "sprites/hd720/frames/witchidle1_loop/witchidle1_loop_00.png"
 }

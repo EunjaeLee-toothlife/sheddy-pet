@@ -1,106 +1,6 @@
 {
   "name": "tarot1_loop",
   "state": "tarot1",
-  "sheet": "sprites/raw/halloween/tarot1.png",
-  "sha256": "a55aa4acaed617705cc33c012cd6192145ae74956babaad3834155d9c74d480d",
-  "cellBoxes": [
-    [
-      0,
-      0,
-      314,
-      317
-    ],
-    [
-      314,
-      0,
-      627,
-      318
-    ],
-    [
-      627,
-      0,
-      940,
-      317
-    ],
-    [
-      940,
-      0,
-      1254,
-      319
-    ],
-    [
-      0,
-      317,
-      314,
-      634
-    ],
-    [
-      314,
-      318,
-      627,
-      634
-    ],
-    [
-      627,
-      317,
-      940,
-      633
-    ],
-    [
-      940,
-      319,
-      1254,
-      634
-    ],
-    [
-      0,
-      634,
-      314,
-      940
-    ],
-    [
-      314,
-      634,
-      627,
-      940
-    ],
-    [
-      627,
-      633,
-      940,
-      940
-    ],
-    [
-      940,
-      634,
-      1254,
-      940
-    ],
-    [
-      0,
-      940,
-      314,
-      1254
-    ],
-    [
-      314,
-      940,
-      627,
-      1254
-    ],
-    [
-      627,
-      940,
-      940,
-      1254
-    ],
-    [
-      940,
-      940,
-      1254,
-      1254
-    ]
-  ],
   "fps": 12,
   "holds": {
     "0": 6,
@@ -120,5 +20,437 @@
     "14": 3,
     "15": 6
   },
-  "timingNote": "이동 포즈는 최소 3틱(0.25초), 시작·복귀는 6틱. 전체 길이를 늘려 동작 사이 이동도 충분히 보여준다."
+  "timingNote": "이동 포즈는 최소 3틱(0.25초), 시작·복귀는 6틱. 전체 길이를 늘려 동작 사이 이동도 충분히 보여준다.",
+  "nativeSources": [
+    {
+      "anchor": "sprites/hd720/frames/witchidle1_loop/witchidle1_loop_00.png",
+      "sourceSha256": "3d2f802044899c680182cd72a00666d4067da1e1890af240c663a2aa40de30c6"
+    },
+    {
+      "source": "sprites/raw/native-correction/tarot1-01-02-03.png",
+      "sourceSha256": "b5df271e1744d4389dde783ba2c91d36408366cc81f3df927db9c7623df5eb0a",
+      "cell": [
+        0,
+        0,
+        724,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        171,
+        19,
+        628,
+        706
+      ],
+      "scale": 0.8151382823871907,
+      "position": [
+        38,
+        104
+      ],
+      "target": {
+        "height": 560,
+        "x": 356.5,
+        "bottom": 679
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/tarot1-01-02-03.png",
+      "sourceSha256": "b5df271e1744d4389dde783ba2c91d36408366cc81f3df927db9c7623df5eb0a",
+      "cell": [
+        724,
+        0,
+        1448,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        123,
+        14,
+        576,
+        706
+      ],
+      "scale": 0.8309248554913294,
+      "position": [
+        96,
+        92
+      ],
+      "target": {
+        "height": 575,
+        "x": 368.0,
+        "bottom": 679
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/tarot1-01-02-03.png",
+      "sourceSha256": "b5df271e1744d4389dde783ba2c91d36408366cc81f3df927db9c7623df5eb0a",
+      "cell": [
+        1448,
+        0,
+        2172,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        89,
+        15,
+        552,
+        706
+      ],
+      "scale": 0.8263386396526773,
+      "position": [
+        83,
+        98
+      ],
+      "target": {
+        "height": 571,
+        "x": 331.0,
+        "bottom": 681
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/tarot1-04-05-06.png",
+      "sourceSha256": "d2376752178dc375e3f49f89ab94a9629d9e576a35d3ffef36eb02915ca211f6",
+      "cell": [
+        0,
+        0,
+        724,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        111,
+        14,
+        559,
+        712
+      ],
+      "scale": 0.8194842406876791,
+      "position": [
+        59,
+        97
+      ],
+      "target": {
+        "height": 572,
+        "x": 355.0,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/tarot1-04-05-06.png",
+      "sourceSha256": "d2376752178dc375e3f49f89ab94a9629d9e576a35d3ffef36eb02915ca211f6",
+      "cell": [
+        724,
+        0,
+        1448,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        45,
+        14,
+        621,
+        711
+      ],
+      "scale": 0.8192252510760402,
+      "position": [
+        73,
+        97
+      ],
+      "target": {
+        "height": 571,
+        "x": 407.0,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/tarot1-04-05-06.png",
+      "sourceSha256": "d2376752178dc375e3f49f89ab94a9629d9e576a35d3ffef36eb02915ca211f6",
+      "cell": [
+        1448,
+        0,
+        2172,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        50,
+        13,
+        627,
+        711
+      ],
+      "scale": 0.8037249283667621,
+      "position": [
+        80,
+        108
+      ],
+      "target": {
+        "height": 561,
+        "x": 410.0,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/tarot1-07-08-09.png",
+      "sourceSha256": "dd43a372c209941b23b102dcfc307931f7faad9b9988129b3d563484f4af6175",
+      "cell": [
+        0,
+        0,
+        724,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        88,
+        10,
+        640,
+        699
+      ],
+      "scale": 0.8243831640058055,
+      "position": [
+        36,
+        105
+      ],
+      "target": {
+        "height": 568,
+        "x": 399.0,
+        "bottom": 681
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/tarot1-07-08-09.png",
+      "sourceSha256": "dd43a372c209941b23b102dcfc307931f7faad9b9988129b3d563484f4af6175",
+      "cell": [
+        724,
+        0,
+        1448,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        102,
+        11,
+        602,
+        699
+      ],
+      "scale": 0.811046511627907,
+      "position": [
+        86,
+        113
+      ],
+      "target": {
+        "height": 558,
+        "x": 393.0,
+        "bottom": 679
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/tarot1-07-08-09.png",
+      "sourceSha256": "dd43a372c209941b23b102dcfc307931f7faad9b9988129b3d563484f4af6175",
+      "cell": [
+        1448,
+        0,
+        2172,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        119,
+        22,
+        594,
+        699
+      ],
+      "scale": 0.8124076809453471,
+      "position": [
+        84,
+        111
+      ],
+      "target": {
+        "height": 550,
+        "x": 402.0,
+        "bottom": 679
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/tarot1-10-11-12.png",
+      "sourceSha256": "b9689456aef0f0eccc2a8e6933d429a2f74c8857728e02a493064b596b12b2da",
+      "cell": [
+        0,
+        0,
+        724,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        132,
+        11,
+        623,
+        708
+      ],
+      "scale": 0.7833572453371592,
+      "position": [
+        58,
+        126
+      ],
+      "target": {
+        "height": 546,
+        "x": 338.0,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/tarot1-10-11-12.png",
+      "sourceSha256": "b9689456aef0f0eccc2a8e6933d429a2f74c8857728e02a493064b596b12b2da",
+      "cell": [
+        724,
+        0,
+        1448,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        134,
+        11,
+        600,
+        708
+      ],
+      "scale": 0.7847919655667145,
+      "position": [
+        139,
+        124
+      ],
+      "target": {
+        "height": 547,
+        "x": 410.0,
+        "bottom": 679
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/tarot1-10-11-12.png",
+      "sourceSha256": "b9689456aef0f0eccc2a8e6933d429a2f74c8857728e02a493064b596b12b2da",
+      "cell": [
+        1448,
+        0,
+        2172,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        82,
+        11,
+        593,
+        708
+      ],
+      "scale": 0.7833572453371592,
+      "position": [
+        113,
+        126
+      ],
+      "target": {
+        "height": 546,
+        "x": 407.0,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/tarot1-13-14-00.png",
+      "sourceSha256": "85fc2d5a1300a0473a37e83d451600125b6731a1b04bc7c4e6c7240475f627fe",
+      "cell": [
+        0,
+        0,
+        724,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        159,
+        20,
+        627,
+        704
+      ],
+      "scale": 0.814327485380117,
+      "position": [
+        37,
+        106
+      ],
+      "target": {
+        "height": 557,
+        "x": 359.0,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/tarot1-13-14-00.png",
+      "sourceSha256": "85fc2d5a1300a0473a37e83d451600125b6731a1b04bc7c4e6c7240475f627fe",
+      "cell": [
+        724,
+        0,
+        1448,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        120,
+        23,
+        578,
+        705
+      ],
+      "scale": 0.8064516129032258,
+      "position": [
+        86,
+        113
+      ],
+      "target": {
+        "height": 550,
+        "x": 370.0,
+        "bottom": 681
+      }
+    },
+    {
+      "anchor": "sprites/hd720/frames/witchidle1_loop/witchidle1_loop_00.png",
+      "sourceSha256": "3d2f802044899c680182cd72a00666d4067da1e1890af240c663a2aa40de30c6"
+    }
+  ],
+  "sourcePipeline": "native-strips-v1",
+  "anchor": "sprites/hd720/frames/witchidle1_loop/witchidle1_loop_00.png"
 }

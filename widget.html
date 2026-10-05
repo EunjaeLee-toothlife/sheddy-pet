@@ -620,7 +620,9 @@ async function playClip(file, { loop = false, onEnded = null, rate = 1 } = {}) {
       loaded = true;
       clearTimeout(loadTimer);
       v.oncanplaythrough = null;
-      v.onended = ended;
+      // 워치독이 먼저 되감은 사이클의 지연 이벤트는 다시 소비하지 않는다.
+      // 로드 실패는 video.ended가 거짓이어도 위 fail()에서 직접 완료한다.
+      v.onended = () => { if (v.ended) ended(); };
       // 재생이 실제로 첫 프레임을 '표시'한 순간에 전환 → 프레임 0부터 이어져
       // 앞부분이 잘려 튀는 현상까지 줄인다. (rVFC는 play 전에 등록)
       if (typeof v.requestVideoFrameCallback === "function") {
@@ -931,8 +933,15 @@ setInterval(() => {
     current = null;
     setState(DEFAULT_STATE, { pin: false });
   } else if (v.ended) {
-    console.warn("watchdog: ended clip left on screen — re-running cycle end");
-    onCycleEnd();
+    // ended 플래그가 먼저 바뀌고 이벤트는 아직 큐에 있을 수 있다.
+    // 정상 이벤트에 처리 여유를 주고, 같은 버퍼가 여전히 끝난 경우만 복구한다.
+    const owner = clipOwner.get(v);
+    setTimeout(() => {
+      if (suspended || transitioning || modeSwitching || vids[front] !== v ||
+          clipOwner.get(v) !== owner || !v.ended) return;
+      console.warn("watchdog: ended clip left on screen — re-running cycle end");
+      onCycleEnd();
+    }, 100);
   } else if (v.paused && v.readyState >= 2 && !document.hidden) {
     // 보이는 상태인데 정지돼 있으면(브라우저 절전에서 복귀 직후 등) 재생 재개
     v.play().catch(() => {});

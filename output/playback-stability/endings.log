@@ -1,0 +1,18 @@
+PASS canvas 1280×720 DPR1 → 720²
+PASS canvas 720×1280 DPR1 → 720²
+PASS canvas 320×640 DPR1 → 320²
+PASS canvas 1280×720 DPR2 → 720²
+PASS ending chem1/1 anim_chem1_start.webm -> anim_chem1_loop.webm -> anim_chem1_end1.webm -> anim_idle1_loop.webm (4 ended, warnings 0)
+PASS ending chem1/2 anim_chem1_start.webm -> anim_chem1_loop.webm -> anim_chem1_end2.webm -> anim_idle1_loop.webm (4 ended, warnings 0)
+PASS ending chem1/3 anim_chem1_start.webm -> anim_chem1_loop.webm -> anim_chem1_end3.webm -> anim_idle1_loop.webm (4 ended, warnings 0)
+PASS ending pastry1/1 anim_pastry1_start.webm -> anim_pastry1_loop.webm -> anim_pastry1_end1.webm -> anim_pastry1_outro.webm -> anim_idle1_loop.webm (5 ended, warnings 0)
+PASS ending pastry1/2 anim_pastry1_start.webm -> anim_pastry1_loop.webm -> anim_pastry1_end2.webm -> anim_pastry1_outro.webm -> anim_idle1_loop.webm (5 ended, warnings 0)
+PASS ending pastry1/3 anim_pastry1_start.webm -> anim_pastry1_loop.webm -> anim_pastry1_end3.webm -> anim_pastry1_outro.webm -> anim_idle1_loop.webm (5 ended, warnings 0)
+PASS ending pastry1/4 anim_pastry1_start.webm -> anim_pastry1_loop.webm -> anim_pastry1_end4.webm -> anim_pastry1_outro.webm -> anim_idle1_loop.webm (5 ended, warnings 0)
+PASS ending pastry1/5 anim_pastry1_start.webm -> anim_pastry1_loop.webm -> anim_pastry1_end5.webm -> anim_pastry1_outro.webm -> anim_idle1_loop.webm (5 ended, warnings 0)
+PASS ending pastry1/6 anim_pastry1_start.webm -> anim_pastry1_loop.webm -> anim_pastry1_end6.webm -> anim_pastry1_outro.webm -> anim_idle1_loop.webm (5 ended, warnings 0)
+PASS ending pastry1/7 anim_pastry1_start.webm -> anim_pastry1_loop.webm -> anim_pastry1_end7.webm -> anim_pastry1_outro.webm -> anim_idle1_loop.webm (5 ended, warnings 0)
+PASS ending pastry1/8 anim_pastry1_start.webm -> anim_pastry1_loop.webm -> anim_pastry1_end8.webm -> anim_pastry1_outro.webm -> anim_idle1_loop.webm (5 ended, warnings 0)
+PASS ending pastry1/9 anim_pastry1_start.webm -> anim_pastry1_loop.webm -> anim_pastry1_end9.webm -> anim_pastry1_outro.webm -> anim_idle1_loop.webm (5 ended, warnings 0)
+PASS ending pastry1/10 anim_pastry1_start.webm -> anim_pastry1_loop.webm -> anim_pastry1_end10.webm -> anim_pastry1_outro.webm -> anim_idle1_loop.webm (5 ended, warnings 0)
+PASS all 13 actual state ending transitions / idle return

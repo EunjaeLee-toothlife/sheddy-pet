@@ -1,0 +1,16 @@
+CHECK widget.html assets=hd720 fallback=false clips=138
+PASS canvas 1280×720 DPR1 → 720²
+PASS canvas 720×1280 DPR1 → 720²
+PASS canvas 320×640 DPR1 → 320²
+PASS canvas 1280×720 DPR2 → 720²
+PASS state christmas/christmas_look1 2 cycles / 3 ended / idle return
+PASS state christmas/christmas_tidy1 2 cycles / 3 ended / idle return
+PASS state christmas/christmas_talk1 2 cycles / 3 ended / idle return
+PASS state christmas/christmas_gift1 2 cycles / 3 ended / idle return
+PASS state christmas/christmas_fishbread1 2 cycles / 3 ended / idle return
+PASS state christmas/christmas_snowman1 2 cycles / 3 ended / idle return
+PASS state christmas/christmas_carol1 2 cycles / 3 ended / idle return
+PASS state christmas/christmas_snowglobe1 2 cycles / 3 ended / idle return
+PASS state christmas/christmas_snowcatch1 2 cycles / 3 ended / idle return
+PASS state christmas/christmas_breathe1 2 cycles / 2 ended / idle return
+PASS all 10 actual states / 1 modes (hd720)

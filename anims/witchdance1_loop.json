@@ -1,106 +1,6 @@
 {
   "name": "witchdance1_loop",
   "state": "witchdance1",
-  "sheet": "sprites/raw/halloween/witchdance1.png",
-  "sha256": "4dd36ac39fc1f3f5b71fe00b56ac10f9b3b4ac6d31c44a07c165d3ac5f3d96ac",
-  "cellBoxes": [
-    [
-      0,
-      0,
-      314,
-      320
-    ],
-    [
-      314,
-      0,
-      627,
-      320
-    ],
-    [
-      627,
-      0,
-      940,
-      319
-    ],
-    [
-      940,
-      0,
-      1254,
-      319
-    ],
-    [
-      0,
-      320,
-      314,
-      627
-    ],
-    [
-      314,
-      320,
-      627,
-      627
-    ],
-    [
-      627,
-      319,
-      940,
-      627
-    ],
-    [
-      940,
-      319,
-      1254,
-      627
-    ],
-    [
-      0,
-      627,
-      314,
-      940
-    ],
-    [
-      314,
-      627,
-      627,
-      940
-    ],
-    [
-      627,
-      627,
-      940,
-      940
-    ],
-    [
-      940,
-      627,
-      1254,
-      940
-    ],
-    [
-      0,
-      940,
-      314,
-      1254
-    ],
-    [
-      314,
-      940,
-      627,
-      1254
-    ],
-    [
-      627,
-      940,
-      940,
-      1254
-    ],
-    [
-      940,
-      940,
-      1254,
-      1254
-    ]
-  ],
   "fps": 12,
   "holds": {
     "0": 6,
@@ -120,5 +20,451 @@
     "14": 3,
     "15": 6
   },
-  "timingNote": "이동 포즈는 최소 3틱(0.25초), 시작·복귀는 6틱. 전체 길이를 늘려 동작 사이 이동도 충분히 보여준다."
+  "timingNote": "이동 포즈는 최소 3틱(0.25초), 시작·복귀는 6틱. 전체 길이를 늘려 동작 사이 이동도 충분히 보여준다.",
+  "nativeSources": [
+    {
+      "anchor": "sprites/hd720/frames/witchidle1_loop/witchidle1_loop_00.png",
+      "sourceSha256": "3d2f802044899c680182cd72a00666d4067da1e1890af240c663a2aa40de30c6"
+    },
+    {
+      "source": "sprites/raw/native-correction/witchdance1-01-02-03.png",
+      "sourceSha256": "7f2865e581b218bf899de86f2daa482288eb66f8611a6aeff5aa70ee75c26634",
+      "cell": [
+        0,
+        0,
+        724,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        83,
+        17,
+        582,
+        701
+      ],
+      "scale": 0.7660818713450293,
+      "position": [
+        122,
+        142
+      ],
+      "target": {
+        "height": 524,
+        "x": 377.5,
+        "bottom": 679,
+        "alignment": "bounds"
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/witchdance1-01-02-03.png",
+      "sourceSha256": "7f2865e581b218bf899de86f2daa482288eb66f8611a6aeff5aa70ee75c26634",
+      "cell": [
+        724,
+        0,
+        1448,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        109,
+        13,
+        618,
+        708
+      ],
+      "scale": 0.7755395683453238,
+      "position": [
+        52,
+        127
+      ],
+      "target": {
+        "height": 539,
+        "x": 334.5,
+        "bottom": 676,
+        "alignment": "bounds"
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/witchdance1-01-02-03.png",
+      "sourceSha256": "7f2865e581b218bf899de86f2daa482288eb66f8611a6aeff5aa70ee75c26634",
+      "cell": [
+        1448,
+        0,
+        2172,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        154,
+        16,
+        657,
+        707
+      ],
+      "scale": 0.788712011577424,
+      "position": [
+        4,
+        120
+      ],
+      "target": {
+        "height": 545,
+        "x": 324.5,
+        "bottom": 678,
+        "alignment": "bounds"
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/witchdance1-04-05-06.png",
+      "sourceSha256": "0a06db1a88fcea06d54baf6c9424188682defef499e5932950b7eeb25db6aaff",
+      "cell": [
+        0,
+        0,
+        724,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        93,
+        9,
+        603,
+        700
+      ],
+      "scale": 0.7858176555716353,
+      "position": [
+        148,
+        111
+      ],
+      "target": {
+        "height": 543,
+        "x": 421.0,
+        "bottom": 661,
+        "alignment": "bounds"
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/witchdance1-04-05-06.png",
+      "sourceSha256": "0a06db1a88fcea06d54baf6c9424188682defef499e5932950b7eeb25db6aaff",
+      "cell": [
+        724,
+        0,
+        1448,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        69,
+        15,
+        648,
+        703
+      ],
+      "scale": 0.7848837209302325,
+      "position": [
+        94,
+        108
+      ],
+      "target": {
+        "height": 540,
+        "x": 374.5,
+        "bottom": 660,
+        "alignment": "bounds"
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/witchdance1-04-05-06.png",
+      "sourceSha256": "0a06db1a88fcea06d54baf6c9424188682defef499e5932950b7eeb25db6aaff",
+      "cell": [
+        1448,
+        0,
+        2172,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        136,
+        15,
+        641,
+        704
+      ],
+      "scale": 0.7895500725689405,
+      "position": [
+        43,
+        109
+      ],
+      "target": {
+        "height": 544,
+        "x": 350.5,
+        "bottom": 665,
+        "alignment": "bounds"
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/witchdance1-07-08-09.png",
+      "sourceSha256": "168036ff6c218b13e70f366674fd6a9354b37fac289776afd3a92c63d58317e2",
+      "cell": [
+        0,
+        0,
+        724,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        113,
+        14,
+        576,
+        692
+      ],
+      "scale": 0.8259587020648967,
+      "position": [
+        44,
+        95
+      ],
+      "target": {
+        "height": 560,
+        "x": 329.0,
+        "bottom": 667,
+        "alignment": "bounds"
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/witchdance1-07-08-09.png",
+      "sourceSha256": "168036ff6c218b13e70f366674fd6a9354b37fac289776afd3a92c63d58317e2",
+      "cell": [
+        724,
+        0,
+        1448,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        113,
+        14,
+        590,
+        693
+      ],
+      "scale": 0.7614138438880707,
+      "position": [
+        108,
+        98
+      ],
+      "target": {
+        "height": 517,
+        "x": 375.5,
+        "bottom": 625,
+        "alignment": "bounds"
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/witchdance1-07-08-09.png",
+      "sourceSha256": "168036ff6c218b13e70f366674fd6a9354b37fac289776afd3a92c63d58317e2",
+      "cell": [
+        1448,
+        0,
+        2172,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        118,
+        14,
+        606,
+        692
+      ],
+      "scale": 0.7536873156342183,
+      "position": [
+        122,
+        102
+      ],
+      "target": {
+        "height": 511,
+        "x": 395.5,
+        "bottom": 624,
+        "alignment": "bounds"
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/witchdance1-10-11-12.png",
+      "sourceSha256": "00e729208427422fd35ea13ba0dbf158ec06a506297225e0efd91de3766ef709",
+      "cell": [
+        0,
+        0,
+        724,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        137,
+        13,
+        636,
+        701
+      ],
+      "scale": 0.7674418604651163,
+      "position": [
+        46,
+        85
+      ],
+      "target": {
+        "height": 528,
+        "x": 342.0,
+        "bottom": 624,
+        "alignment": "bounds"
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/witchdance1-10-11-12.png",
+      "sourceSha256": "00e729208427422fd35ea13ba0dbf158ec06a506297225e0efd91de3766ef709",
+      "cell": [
+        724,
+        0,
+        1448,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        113,
+        13,
+        604,
+        701
+      ],
+      "scale": 0.7732558139534884,
+      "position": [
+        56,
+        82
+      ],
+      "target": {
+        "height": 532,
+        "x": 332.5,
+        "bottom": 624,
+        "alignment": "bounds"
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/witchdance1-10-11-12.png",
+      "sourceSha256": "00e729208427422fd35ea13ba0dbf158ec06a506297225e0efd91de3766ef709",
+      "cell": [
+        1448,
+        0,
+        2172,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        92,
+        13,
+        620,
+        704
+      ],
+      "scale": 0.7829232995658466,
+      "position": [
+        120,
+        43
+      ],
+      "target": {
+        "height": 541,
+        "x": 398.5,
+        "bottom": 594,
+        "alignment": "bounds"
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/witchdance1-13-14-00.png",
+      "sourceSha256": "22bd169e8e03453f910a54095fec4a8c3bd16810428746a268b4f0faa7154a25",
+      "cell": [
+        0,
+        0,
+        724,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        163,
+        43,
+        693,
+        699
+      ],
+      "scale": 0.7621951219512195,
+      "position": [
+        62,
+        65
+      ],
+      "target": {
+        "height": 500,
+        "x": 388.5,
+        "bottom": 598,
+        "alignment": "bounds"
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/witchdance1-13-14-00.png",
+      "sourceSha256": "22bd169e8e03453f910a54095fec4a8c3bd16810428746a268b4f0faa7154a25",
+      "cell": [
+        724,
+        0,
+        1448,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        122,
+        24,
+        583,
+        699
+      ],
+      "scale": 0.7985185185185185,
+      "position": [
+        50,
+        38
+      ],
+      "target": {
+        "height": 539,
+        "x": 331.5,
+        "bottom": 596,
+        "alignment": "bounds"
+      }
+    },
+    {
+      "anchor": "sprites/hd720/frames/witchidle1_loop/witchidle1_loop_00.png",
+      "sourceSha256": "3d2f802044899c680182cd72a00666d4067da1e1890af240c663a2aa40de30c6"
+    }
+  ],
+  "sourcePipeline": "native-strips-v1",
+  "anchor": "sprites/hd720/frames/witchidle1_loop/witchidle1_loop_00.png"
 }

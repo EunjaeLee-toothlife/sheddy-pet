@@ -1,106 +1,6 @@
 {
   "name": "gift1_loop",
   "state": "gift1",
-  "sheet": "sprites/raw/halloween/gift1.png",
-  "sha256": "8b918ead35d7eb8cea30f0a33c391476726879f0c337ce7c12c6cbdf7576611a",
-  "cellBoxes": [
-    [
-      0,
-      0,
-      326,
-      329
-    ],
-    [
-      326,
-      0,
-      627,
-      329
-    ],
-    [
-      627,
-      0,
-      948,
-      328
-    ],
-    [
-      948,
-      0,
-      1254,
-      328
-    ],
-    [
-      0,
-      329,
-      326,
-      635
-    ],
-    [
-      326,
-      329,
-      627,
-      635
-    ],
-    [
-      627,
-      328,
-      948,
-      635
-    ],
-    [
-      948,
-      328,
-      1254,
-      635
-    ],
-    [
-      0,
-      635,
-      326,
-      940
-    ],
-    [
-      326,
-      635,
-      627,
-      940
-    ],
-    [
-      627,
-      635,
-      948,
-      940
-    ],
-    [
-      948,
-      635,
-      1254,
-      940
-    ],
-    [
-      0,
-      940,
-      326,
-      1254
-    ],
-    [
-      326,
-      940,
-      627,
-      1254
-    ],
-    [
-      627,
-      940,
-      948,
-      1254
-    ],
-    [
-      948,
-      940,
-      1254,
-      1254
-    ]
-  ],
   "fps": 12,
   "holds": {
     "0": 6,
@@ -120,5 +20,437 @@
     "14": 3,
     "15": 6
   },
-  "timingNote": "이동 포즈는 최소 3틱(0.25초), 시작·복귀는 6틱. 전체 길이를 늘려 동작 사이 이동도 충분히 보여준다."
+  "timingNote": "이동 포즈는 최소 3틱(0.25초), 시작·복귀는 6틱. 전체 길이를 늘려 동작 사이 이동도 충분히 보여준다.",
+  "nativeSources": [
+    {
+      "anchor": "sprites/hd720/frames/witchidle1_loop/witchidle1_loop_00.png",
+      "sourceSha256": "3d2f802044899c680182cd72a00666d4067da1e1890af240c663a2aa40de30c6"
+    },
+    {
+      "source": "sprites/raw/native-correction/gift1-01-02-03.png",
+      "sourceSha256": "c9a3c2c22d920abd5b05dd0eb03995fd1235533d6334d1e126089497ee9e0017",
+      "cell": [
+        0,
+        0,
+        724,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        185,
+        11,
+        633,
+        710
+      ],
+      "scale": 0.7997138769670958,
+      "position": [
+        34,
+        112
+      ],
+      "target": {
+        "height": 559,
+        "x": 356.0,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/gift1-01-02-03.png",
+      "sourceSha256": "c9a3c2c22d920abd5b05dd0eb03995fd1235533d6334d1e126089497ee9e0017",
+      "cell": [
+        724,
+        0,
+        1448,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        125,
+        11,
+        595,
+        710
+      ],
+      "scale": 0.7997138769670958,
+      "position": [
+        35,
+        112
+      ],
+      "target": {
+        "height": 559,
+        "x": 322.0,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/gift1-01-02-03.png",
+      "sourceSha256": "c9a3c2c22d920abd5b05dd0eb03995fd1235533d6334d1e126089497ee9e0017",
+      "cell": [
+        1448,
+        0,
+        2172,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        89,
+        13,
+        519,
+        710
+      ],
+      "scale": 0.7948350071736011,
+      "position": [
+        95,
+        117
+      ],
+      "target": {
+        "height": 554,
+        "x": 337.0,
+        "bottom": 681
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/gift1-04-05-06.png",
+      "sourceSha256": "8246ad2c6e301eb9d71d56a79b72986de831e47871fbc21394318df52bd38c7f",
+      "cell": [
+        0,
+        0,
+        724,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        124,
+        20,
+        636,
+        701
+      ],
+      "scale": 0.8046989720998532,
+      "position": [
+        70,
+        115
+      ],
+      "target": {
+        "height": 548,
+        "x": 375.0,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/gift1-04-05-06.png",
+      "sourceSha256": "8246ad2c6e301eb9d71d56a79b72986de831e47871fbc21394318df52bd38c7f",
+      "cell": [
+        724,
+        0,
+        1448,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        126,
+        19,
+        600,
+        701
+      ],
+      "scale": 0.7947214076246334,
+      "position": [
+        88,
+        123
+      ],
+      "target": {
+        "height": 542,
+        "x": 357.0,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/gift1-04-05-06.png",
+      "sourceSha256": "8246ad2c6e301eb9d71d56a79b72986de831e47871fbc21394318df52bd38c7f",
+      "cell": [
+        1448,
+        0,
+        2172,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        118,
+        18,
+        583,
+        701
+      ],
+      "scale": 0.8052708638360175,
+      "position": [
+        64,
+        115
+      ],
+      "target": {
+        "height": 550,
+        "x": 350.0,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/gift1-07-08-09.png",
+      "sourceSha256": "2f05bb33e3e75870863c0708ca1b4fe6d645b68d614af0d49a52f343945c2a42",
+      "cell": [
+        0,
+        0,
+        724,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        121,
+        18,
+        584,
+        712
+      ],
+      "scale": 0.7910662824207493,
+      "position": [
+        83,
+        117
+      ],
+      "target": {
+        "height": 549,
+        "x": 344.0,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/gift1-07-08-09.png",
+      "sourceSha256": "2f05bb33e3e75870863c0708ca1b4fe6d645b68d614af0d49a52f343945c2a42",
+      "cell": [
+        724,
+        0,
+        1448,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        45,
+        32,
+        681,
+        701
+      ],
+      "scale": 0.8011958146487295,
+      "position": [
+        152,
+        118
+      ],
+      "target": {
+        "height": 536,
+        "x": 396.0,
+        "bottom": 679
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/gift1-07-08-09.png",
+      "sourceSha256": "2f05bb33e3e75870863c0708ca1b4fe6d645b68d614af0d49a52f343945c2a42",
+      "cell": [
+        1448,
+        0,
+        2172,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        96,
+        23,
+        620,
+        702
+      ],
+      "scale": 0.7496318114874816,
+      "position": [
+        77,
+        153
+      ],
+      "target": {
+        "height": 509,
+        "x": 358.0,
+        "bottom": 679
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/gift1-10-11-12.png",
+      "sourceSha256": "d9a90a38975c81324b36719114ac3296f922c7646cbd11cd3a83c1f48b9b9b5d",
+      "cell": [
+        0,
+        0,
+        724,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        119,
+        18,
+        691,
+        701
+      ],
+      "scale": 0.7686676427525623,
+      "position": [
+        87,
+        141
+      ],
+      "target": {
+        "height": 525,
+        "x": 335.0,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/gift1-10-11-12.png",
+      "sourceSha256": "d9a90a38975c81324b36719114ac3296f922c7646cbd11cd3a83c1f48b9b9b5d",
+      "cell": [
+        724,
+        0,
+        1448,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        81,
+        16,
+        687,
+        701
+      ],
+      "scale": 0.7547445255474453,
+      "position": [
+        109,
+        152
+      ],
+      "target": {
+        "height": 517,
+        "x": 352.0,
+        "bottom": 681
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/gift1-10-11-12.png",
+      "sourceSha256": "d9a90a38975c81324b36719114ac3296f922c7646cbd11cd3a83c1f48b9b9b5d",
+      "cell": [
+        1448,
+        0,
+        2172,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        124,
+        19,
+        559,
+        699
+      ],
+      "scale": 0.7955882352941176,
+      "position": [
+        85,
+        124
+      ],
+      "target": {
+        "height": 541,
+        "x": 354.0,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/gift1-13-14-00.png",
+      "sourceSha256": "5eef0c1114988ecd4a7bf7e5e7cb3ba340681922fb8433061058ae1f7e983297",
+      "cell": [
+        0,
+        0,
+        724,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        177,
+        12,
+        609,
+        706
+      ],
+      "scale": 0.7809798270893372,
+      "position": [
+        46,
+        129
+      ],
+      "target": {
+        "height": 542,
+        "x": 332.0,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/gift1-13-14-00.png",
+      "sourceSha256": "5eef0c1114988ecd4a7bf7e5e7cb3ba340681922fb8433061058ae1f7e983297",
+      "cell": [
+        724,
+        0,
+        1448,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        64,
+        50,
+        706,
+        704
+      ],
+      "scale": 0.7935779816513762,
+      "position": [
+        100,
+        122
+      ],
+      "target": {
+        "height": 519,
+        "x": 318.0,
+        "bottom": 681
+      }
+    },
+    {
+      "anchor": "sprites/hd720/frames/witchidle1_loop/witchidle1_loop_00.png",
+      "sourceSha256": "3d2f802044899c680182cd72a00666d4067da1e1890af240c663a2aa40de30c6"
+    }
+  ],
+  "sourcePipeline": "native-strips-v1",
+  "anchor": "sprites/hd720/frames/witchidle1_loop/witchidle1_loop_00.png"
 }

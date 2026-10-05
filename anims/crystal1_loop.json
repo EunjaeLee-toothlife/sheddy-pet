@@ -1,106 +1,6 @@
 {
   "name": "crystal1_loop",
   "state": "crystal1",
-  "sheet": "sprites/raw/halloween/crystal1.png",
-  "sha256": "4431c42ffaaf4fe814aa0d3bea412d77213818794b0fe0621ce83790bb691c57",
-  "cellBoxes": [
-    [
-      0,
-      0,
-      314,
-      314
-    ],
-    [
-      314,
-      0,
-      627,
-      314
-    ],
-    [
-      627,
-      0,
-      940,
-      317
-    ],
-    [
-      940,
-      0,
-      1254,
-      317
-    ],
-    [
-      0,
-      314,
-      314,
-      627
-    ],
-    [
-      314,
-      314,
-      627,
-      627
-    ],
-    [
-      627,
-      317,
-      940,
-      627
-    ],
-    [
-      940,
-      317,
-      1254,
-      627
-    ],
-    [
-      0,
-      627,
-      314,
-      940
-    ],
-    [
-      314,
-      627,
-      627,
-      940
-    ],
-    [
-      627,
-      627,
-      940,
-      940
-    ],
-    [
-      940,
-      627,
-      1254,
-      940
-    ],
-    [
-      0,
-      940,
-      314,
-      1254
-    ],
-    [
-      314,
-      940,
-      627,
-      1254
-    ],
-    [
-      627,
-      940,
-      940,
-      1254
-    ],
-    [
-      940,
-      940,
-      1254,
-      1254
-    ]
-  ],
   "fps": 12,
   "holds": {
     "0": 6,
@@ -120,5 +20,437 @@
     "14": 3,
     "15": 6
   },
-  "timingNote": "이동 포즈는 최소 3틱(0.25초), 시작·복귀는 6틱. 전체 길이를 늘려 동작 사이 이동도 충분히 보여준다."
+  "timingNote": "이동 포즈는 최소 3틱(0.25초), 시작·복귀는 6틱. 전체 길이를 늘려 동작 사이 이동도 충분히 보여준다.",
+  "nativeSources": [
+    {
+      "anchor": "sprites/hd720/frames/witchidle1_loop/witchidle1_loop_00.png",
+      "sourceSha256": "3d2f802044899c680182cd72a00666d4067da1e1890af240c663a2aa40de30c6"
+    },
+    {
+      "source": "sprites/raw/native-correction/crystal1-01-02-03.png",
+      "sourceSha256": "4b42e575aff4c2fbcf9b425a1240a54135cf97059ef11811c62612f47dd4dce3",
+      "cell": [
+        0,
+        0,
+        724,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        172,
+        12,
+        597,
+        703
+      ],
+      "scale": 0.8147612156295224,
+      "position": [
+        52,
+        107
+      ],
+      "target": {
+        "height": 563,
+        "x": 347.0,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/crystal1-01-02-03.png",
+      "sourceSha256": "4b42e575aff4c2fbcf9b425a1240a54135cf97059ef11811c62612f47dd4dce3",
+      "cell": [
+        724,
+        0,
+        1448,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        145,
+        12,
+        583,
+        703
+      ],
+      "scale": 0.8205499276410999,
+      "position": [
+        74,
+        103
+      ],
+      "target": {
+        "height": 567,
+        "x": 355.0,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/crystal1-01-02-03.png",
+      "sourceSha256": "4b42e575aff4c2fbcf9b425a1240a54135cf97059ef11811c62612f47dd4dce3",
+      "cell": [
+        1448,
+        0,
+        2172,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        138,
+        12,
+        564,
+        703
+      ],
+      "scale": 0.8205499276410999,
+      "position": [
+        74,
+        102
+      ],
+      "target": {
+        "height": 567,
+        "x": 346.0,
+        "bottom": 679
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/crystal1-04-05-06.png",
+      "sourceSha256": "4d943e740c46e8c1f70c03b569cccfa5cb7a716351352cf1ac54c24d42044283",
+      "cell": [
+        0,
+        0,
+        724,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        143,
+        18,
+        607,
+        703
+      ],
+      "scale": 0.8160583941605839,
+      "position": [
+        139,
+        105
+      ],
+      "target": {
+        "height": 559,
+        "x": 412.0,
+        "bottom": 679
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/crystal1-04-05-06.png",
+      "sourceSha256": "4d943e740c46e8c1f70c03b569cccfa5cb7a716351352cf1ac54c24d42044283",
+      "cell": [
+        724,
+        0,
+        1448,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        112,
+        21,
+        572,
+        707
+      ],
+      "scale": 0.7536443148688047,
+      "position": [
+        97,
+        147
+      ],
+      "target": {
+        "height": 517,
+        "x": 337.0,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/crystal1-04-05-06.png",
+      "sourceSha256": "4d943e740c46e8c1f70c03b569cccfa5cb7a716351352cf1ac54c24d42044283",
+      "cell": [
+        1448,
+        0,
+        2172,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        105,
+        21,
+        565,
+        707
+      ],
+      "scale": 0.7798833819241983,
+      "position": [
+        77,
+        126
+      ],
+      "target": {
+        "height": 535,
+        "x": 346.0,
+        "bottom": 678
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/crystal1-07-08-09.png",
+      "sourceSha256": "f73056b04d8360a6cee114e58931327da33dfc857fe572617b9549666b466fac",
+      "cell": [
+        0,
+        0,
+        724,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        146,
+        4,
+        611,
+        709
+      ],
+      "scale": 0.7687943262411348,
+      "position": [
+        78,
+        134
+      ],
+      "target": {
+        "height": 542,
+        "x": 350.0,
+        "bottom": 679
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/crystal1-07-08-09.png",
+      "sourceSha256": "f73056b04d8360a6cee114e58931327da33dfc857fe572617b9549666b466fac",
+      "cell": [
+        724,
+        0,
+        1448,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        123,
+        4,
+        590,
+        708
+      ],
+      "scale": 0.7982954545454546,
+      "position": [
+        61,
+        115
+      ],
+      "target": {
+        "height": 562,
+        "x": 337.0,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/crystal1-07-08-09.png",
+      "sourceSha256": "f73056b04d8360a6cee114e58931327da33dfc857fe572617b9549666b466fac",
+      "cell": [
+        1448,
+        0,
+        2172,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        82,
+        10,
+        545,
+        710
+      ],
+      "scale": 0.7871428571428571,
+      "position": [
+        124,
+        121
+      ],
+      "target": {
+        "height": 551,
+        "x": 401.0,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/crystal1-10-11-12.png",
+      "sourceSha256": "97fab1796453a3435a05233f253f050d7929dde497e2d9ecc0b4807296d0b38d",
+      "cell": [
+        0,
+        0,
+        724,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        170,
+        30,
+        622,
+        696
+      ],
+      "scale": 0.8063063063063063,
+      "position": [
+        75,
+        119
+      ],
+      "target": {
+        "height": 537,
+        "x": 372.0,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/crystal1-10-11-12.png",
+      "sourceSha256": "97fab1796453a3435a05233f253f050d7929dde497e2d9ecc0b4807296d0b38d",
+      "cell": [
+        724,
+        0,
+        1448,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        98,
+        16,
+        555,
+        697
+      ],
+      "scale": 0.788546255506608,
+      "position": [
+        70,
+        129
+      ],
+      "target": {
+        "height": 537,
+        "x": 353.0,
+        "bottom": 679
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/crystal1-10-11-12.png",
+      "sourceSha256": "97fab1796453a3435a05233f253f050d7929dde497e2d9ecc0b4807296d0b38d",
+      "cell": [
+        1448,
+        0,
+        2172,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        109,
+        16,
+        571,
+        697
+      ],
+      "scale": 0.8002936857562408,
+      "position": [
+        71,
+        123
+      ],
+      "target": {
+        "height": 545,
+        "x": 340.0,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/crystal1-13-14-00.png",
+      "sourceSha256": "b0931a080fb4a8c2a61e0b99b1aed7fa9c11c5c9c46b1ccffd56ddeeeeb3b05a",
+      "cell": [
+        0,
+        0,
+        724,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        169,
+        12,
+        631,
+        709
+      ],
+      "scale": 0.7847919655667145,
+      "position": [
+        52,
+        125
+      ],
+      "target": {
+        "height": 547,
+        "x": 351.0,
+        "bottom": 681
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/crystal1-13-14-00.png",
+      "sourceSha256": "b0931a080fb4a8c2a61e0b99b1aed7fa9c11c5c9c46b1ccffd56ddeeeeb3b05a",
+      "cell": [
+        724,
+        0,
+        1448,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        134,
+        12,
+        582,
+        709
+      ],
+      "scale": 0.7833572453371592,
+      "position": [
+        65,
+        126
+      ],
+      "target": {
+        "height": 546,
+        "x": 346.0,
+        "bottom": 681
+      }
+    },
+    {
+      "anchor": "sprites/hd720/frames/witchidle1_loop/witchidle1_loop_00.png",
+      "sourceSha256": "3d2f802044899c680182cd72a00666d4067da1e1890af240c663a2aa40de30c6"
+    }
+  ],
+  "sourcePipeline": "native-strips-v1",
+  "anchor": "sprites/hd720/frames/witchidle1_loop/witchidle1_loop_00.png"
 }

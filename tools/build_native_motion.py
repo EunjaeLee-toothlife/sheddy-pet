@@ -1,4 +1,4 @@
-"""2포즈 고해상도 원본을 확대 없이 기존 타이밍의 720/512 모션으로 조립한다."""
+"""고해상도 포즈 원본을 확대 없이 기존 타이밍의 720/512 모션으로 조립한다."""
 import argparse
 import json
 from pathlib import Path
@@ -25,16 +25,23 @@ def foot_center(image, box):
 def build(state):
     geometry = json.loads((ROOT / 'anims/native/geometry.json').read_text())[state]
     source_dir = ROOT / f'sprites/raw/native/{geometry["theme"]}/{state}'
+    sources = geometry.get('sources', [None] * len(geometry['poses']))
+    assert len(sources) == len(geometry['poses']), f'원본 목록 길이: {state}'
     frames, evidence = [], []
     for i, target in enumerate(geometry['poses']):
         first = i // 2 * 2
-        path = source_dir / f'{first:02}-{first + 1:02}.png'
+        source = sources[i]
+        path = ROOT / source['path'] if source else source_dir / f'{first:02}-{first + 1:02}.png'
+        columns = source['columns'] if source else 2
+        cell = source['cell'] if source else i % 2
         sheet = Image.open(path)
         assert sheet.mode == 'RGBA' and sheet.getchannel('A').getextrema()[0] == 0, path
         w, h = sheet.size
-        assert w >= 1440 and h >= 720, f'원본 셀 규격 미달: {path} {sheet.size}'
-        box = (i % 2 * w // 2, 0, (i % 2 + 1) * w // 2, h)
+        assert columns > 0 and 0 <= cell < columns and w % columns == 0, f'원본 셀 배치: {path}'
+        box = source.get('box') if source and 'box' in source else (cell * w // columns, 0, (cell + 1) * w // columns, h)
+        assert len(box) == 4 and 0 <= box[0] < box[2] <= w and 0 <= box[1] < box[3] <= h, f'원본 셀 범위: {path}'
         tile = sheet.crop(box)
+        assert min(tile.size) >= 720, f'원본 셀 규격 미달: {path} {tile.size}'
         tile.putalpha(tile.getchannel('A').point(lambda a: 0 if a < 8 else a))
         solid = bounds(tile)
         assert solid and solid[0] > 0 and solid[1] > 0 and solid[2] < tile.width and solid[3] < tile.height, f'원본 잘림: {path} {i}'
@@ -58,12 +65,12 @@ def build(state):
                          'nativeSize': tile.size, 'nativeBounds': solid, 'scale': scale,
                          'position': [px, py], 'target': target})
     mode = geometry['mode']
-    if geometry['theme'] == 'seasonal':
-        if state.endswith('_breathe1'):
+    if geometry['theme'] != 'transform':
+        if state.endswith('_breathe1') or geometry['theme'] in ('dance', 'lemon'):
             frames[-1] = frames[0].copy()
             evidence[-1] = dict(evidence[0])
         else:
-            anchor_path = ROOT / f'sprites/hd720/frames/{mode}_breathe1_loop/{mode}_breathe1_loop_00.png'
+            anchor_path = ROOT / geometry['anchor']
             anchor = Image.open(anchor_path).convert('RGBA')
             frames[0] = anchor.copy()
             frames[-1] = anchor.copy()
@@ -84,19 +91,23 @@ def build(state):
         cfg = json.loads(cfg_path.read_text())
         for obsolete in ('sheet', 'sha256', 'cellBoxes'):
             cfg.pop(obsolete, None)
-        cfg['nativeSources'] = evidence if part != 'loop' or geometry['theme'] == 'seasonal' else list(reversed(evidence))
-        cfg['sourcePipeline'] = 'native-pairs-v1'
+        cfg['nativeSources'] = evidence if part != 'loop' or geometry['theme'] != 'transform' else list(reversed(evidence))
+        cfg['sourcePipeline'] = 'native-strips-v1' if geometry.get('sources') else 'native-pairs-v1'
         cfg['anchor'] = geometry['anchor']
         write_json(cfg_path, cfg)
-        for size, directory, out in [(720, ROOT / 'sprites/hd720/frames' / name, ROOT / f'sprites/hd720/videos/anim_{name}.webm'),
-                                     (512, ROOT / 'sprites' / name, ROOT / f'sprites/anim_{name}.webm')]:
+        outputs = [(720, ROOT / 'sprites/hd720/frames' / name, ROOT / f'sprites/hd720/videos/anim_{name}.webm'),
+                   (512, ROOT / 'sprites' / name, ROOT / f'sprites/anim_{name}.webm')]
+        if geometry.get('rebuilt'):
+            outputs.append((512, ROOT / 'sprites/rebuilt/frames' / name, ROOT / f'sprites/rebuilt/videos/anim_{name}.webm'))
+            write_json(ROOT / f'sprites/rebuilt/configs/{name}.json', cfg)
+        for size, directory, out in outputs:
             directory.mkdir(parents=True, exist_ok=True)
             for i, frame in enumerate(ordered):
                 frame.resize((size, size), Image.Resampling.LANCZOS).save(directory / f'{name}_{i:02}.png')
             subprocess.run([sys.executable, str(ROOT / 'tools/encode_holds.py'), str(cfg_path), '--fps', str(cfg['fps']), '--frames-dir', str(directory), '--out', str(out)], check=True)
         qa = ROOT / 'sprites/hd720/qa/native'
         qa.mkdir(parents=True, exist_ok=True)
-        contact = Image.new('RGB', (1440, 1440), '#48444e')
+        contact = Image.new('RGB', (1440, ((len(ordered) + 3) // 4) * 360), '#48444e')
         for i, frame in enumerate(ordered):
             thumb = frame.resize((360, 360))
             contact.paste(thumb, ((i % 4) * 360, (i // 4) * 360), thumb)

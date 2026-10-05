@@ -1,106 +1,6 @@
 {
   "name": "moon1_loop",
   "state": "moon1",
-  "sheet": "sprites/raw/halloween/moon1.png",
-  "sha256": "2a662346c4e143733107627a5bf0835182ad35077faf910ad68f33c1af56faac",
-  "cellBoxes": [
-    [
-      0,
-      0,
-      314,
-      336
-    ],
-    [
-      314,
-      0,
-      627,
-      335
-    ],
-    [
-      627,
-      0,
-      940,
-      335
-    ],
-    [
-      940,
-      0,
-      1254,
-      334
-    ],
-    [
-      0,
-      336,
-      314,
-      627
-    ],
-    [
-      314,
-      335,
-      627,
-      627
-    ],
-    [
-      627,
-      335,
-      940,
-      627
-    ],
-    [
-      940,
-      334,
-      1254,
-      627
-    ],
-    [
-      0,
-      627,
-      314,
-      931
-    ],
-    [
-      314,
-      627,
-      627,
-      940
-    ],
-    [
-      627,
-      627,
-      940,
-      940
-    ],
-    [
-      940,
-      627,
-      1254,
-      931
-    ],
-    [
-      0,
-      931,
-      314,
-      1254
-    ],
-    [
-      314,
-      940,
-      627,
-      1254
-    ],
-    [
-      627,
-      940,
-      940,
-      1254
-    ],
-    [
-      940,
-      931,
-      1254,
-      1254
-    ]
-  ],
   "fps": 12,
   "holds": {
     "0": 6,
@@ -120,5 +20,451 @@
     "14": 3,
     "15": 6
   },
-  "timingNote": "이동 포즈는 최소 3틱(0.25초), 시작·복귀는 6틱. 전체 길이를 늘려 동작 사이 이동도 충분히 보여준다."
+  "timingNote": "이동 포즈는 최소 3틱(0.25초), 시작·복귀는 6틱. 전체 길이를 늘려 동작 사이 이동도 충분히 보여준다.",
+  "nativeSources": [
+    {
+      "anchor": "sprites/hd720/frames/witchidle1_loop/witchidle1_loop_00.png",
+      "sourceSha256": "3d2f802044899c680182cd72a00666d4067da1e1890af240c663a2aa40de30c6"
+    },
+    {
+      "source": "sprites/raw/native-correction/moon1-01-02-03.png",
+      "sourceSha256": "3cf767de5efe03e413522fe689ed254dc8819abdd1a60f749fb29d2e424b9cc5",
+      "cell": [
+        0,
+        0,
+        724,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        129,
+        27,
+        659,
+        703
+      ],
+      "scale": 0.8106508875739645,
+      "position": [
+        27,
+        107
+      ],
+      "target": {
+        "height": 548,
+        "x": 346.5,
+        "bottom": 677,
+        "alignment": "bounds"
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/moon1-01-02-03.png",
+      "sourceSha256": "3cf767de5efe03e413522fe689ed254dc8819abdd1a60f749fb29d2e424b9cc5",
+      "cell": [
+        724,
+        0,
+        1448,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        83,
+        27,
+        646,
+        704
+      ],
+      "scale": 0.8138847858197932,
+      "position": [
+        48,
+        104
+      ],
+      "target": {
+        "height": 551,
+        "x": 345.0,
+        "bottom": 677,
+        "alignment": "bounds"
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/moon1-01-02-03.png",
+      "sourceSha256": "3cf767de5efe03e413522fe689ed254dc8819abdd1a60f749fb29d2e424b9cc5",
+      "cell": [
+        1448,
+        0,
+        2172,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        63,
+        31,
+        611,
+        694
+      ],
+      "scale": 0.7948717948717948,
+      "position": [
+        46,
+        125
+      ],
+      "target": {
+        "height": 527,
+        "x": 314.5,
+        "bottom": 676,
+        "alignment": "bounds"
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/moon1-04-05-06.png",
+      "sourceSha256": "6795ea54692d2754678b411da8e86f4af39bb57a5e979cf06ac06d7f6742305f",
+      "cell": [
+        0,
+        0,
+        724,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        105,
+        30,
+        600,
+        680
+      ],
+      "scale": 0.7692307692307693,
+      "position": [
+        99,
+        91
+      ],
+      "target": {
+        "height": 500,
+        "x": 370.0,
+        "bottom": 614,
+        "alignment": "bounds"
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/moon1-04-05-06.png",
+      "sourceSha256": "6795ea54692d2754678b411da8e86f4af39bb57a5e979cf06ac06d7f6742305f",
+      "cell": [
+        724,
+        0,
+        1448,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        109,
+        14,
+        595,
+        665
+      ],
+      "scale": 0.7818740399385561,
+      "position": [
+        102,
+        104
+      ],
+      "target": {
+        "height": 509,
+        "x": 377.0,
+        "bottom": 624,
+        "alignment": "bounds"
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/moon1-04-05-06.png",
+      "sourceSha256": "6795ea54692d2754678b411da8e86f4af39bb57a5e979cf06ac06d7f6742305f",
+      "cell": [
+        1448,
+        0,
+        2172,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        118,
+        32,
+        612,
+        685
+      ],
+      "scale": 0.7488514548238897,
+      "position": [
+        34,
+        96
+      ],
+      "target": {
+        "height": 489,
+        "x": 307.0,
+        "bottom": 609,
+        "alignment": "bounds"
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/moon1-07-08-09.png",
+      "sourceSha256": "df719b5c43de3141926b94b7c312d276af0fb09c1e2ece559def85e74c4b3274",
+      "cell": [
+        0,
+        0,
+        724,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        76,
+        28,
+        634,
+        682
+      ],
+      "scale": 0.7507645259938838,
+      "position": [
+        98,
+        99
+      ],
+      "target": {
+        "height": 491,
+        "x": 364.5,
+        "bottom": 611,
+        "alignment": "bounds"
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/moon1-07-08-09.png",
+      "sourceSha256": "df719b5c43de3141926b94b7c312d276af0fb09c1e2ece559def85e74c4b3274",
+      "cell": [
+        724,
+        0,
+        1448,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        80,
+        27,
+        595,
+        681
+      ],
+      "scale": 0.7262996941896025,
+      "position": [
+        124,
+        73
+      ],
+      "target": {
+        "height": 475,
+        "x": 369.5,
+        "bottom": 568,
+        "alignment": "bounds"
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/moon1-07-08-09.png",
+      "sourceSha256": "df719b5c43de3141926b94b7c312d276af0fb09c1e2ece559def85e74c4b3274",
+      "cell": [
+        1448,
+        0,
+        2172,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        79,
+        26,
+        675,
+        643
+      ],
+      "scale": 0.7649918962722853,
+      "position": [
+        117,
+        74
+      ],
+      "target": {
+        "height": 472,
+        "x": 405.0,
+        "bottom": 566,
+        "alignment": "bounds"
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/moon1-10-11-12.png",
+      "sourceSha256": "1144d1ca248156ca951a2524996c75538f36c0cc79d89bd372c84e528751a2a3",
+      "cell": [
+        0,
+        0,
+        724,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        101,
+        7,
+        665,
+        670
+      ],
+      "scale": 0.7073906485671192,
+      "position": [
+        88,
+        80
+      ],
+      "target": {
+        "height": 469,
+        "x": 358.5,
+        "bottom": 554,
+        "alignment": "bounds"
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/moon1-10-11-12.png",
+      "sourceSha256": "1144d1ca248156ca951a2524996c75538f36c0cc79d89bd372c84e528751a2a3",
+      "cell": [
+        724,
+        0,
+        1448,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        117,
+        10,
+        646,
+        673
+      ],
+      "scale": 0.746606334841629,
+      "position": [
+        49,
+        64
+      ],
+      "target": {
+        "height": 495,
+        "x": 334.0,
+        "bottom": 567,
+        "alignment": "bounds"
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/moon1-10-11-12.png",
+      "sourceSha256": "1144d1ca248156ca951a2524996c75538f36c0cc79d89bd372c84e528751a2a3",
+      "cell": [
+        1448,
+        0,
+        2172,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        130,
+        8,
+        611,
+        697
+      ],
+      "scale": 0.7576197387518142,
+      "position": [
+        101,
+        25
+      ],
+      "target": {
+        "height": 522,
+        "x": 381.5,
+        "bottom": 554,
+        "alignment": "bounds"
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/moon1-repair-13-14.png",
+      "sourceSha256": "2f6d78ef3fb4b68487d70c4265b4bfa9bc10afb1438fff8510f4088047ded659",
+      "cell": [
+        0,
+        0,
+        933,
+        887
+      ],
+      "nativeSize": [
+        933,
+        887
+      ],
+      "nativeBounds": [
+        148,
+        25,
+        881,
+        862
+      ],
+      "scale": 0.5902031063321386,
+      "position": [
+        52,
+        44
+      ],
+      "target": {
+        "height": 494,
+        "x": 356.5,
+        "bottom": 553,
+        "alignment": "bounds"
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/moon1-repair-13-14.png",
+      "sourceSha256": "2f6d78ef3fb4b68487d70c4265b4bfa9bc10afb1438fff8510f4088047ded659",
+      "cell": [
+        933,
+        0,
+        1774,
+        887
+      ],
+      "nativeSize": [
+        841,
+        887
+      ],
+      "nativeBounds": [
+        24,
+        25,
+        746,
+        862
+      ],
+      "scale": 0.5902031063321386,
+      "position": [
+        122,
+        45
+      ],
+      "target": {
+        "height": 494,
+        "x": 348.5,
+        "bottom": 554,
+        "alignment": "bounds"
+      }
+    },
+    {
+      "anchor": "sprites/hd720/frames/witchidle1_loop/witchidle1_loop_00.png",
+      "sourceSha256": "3d2f802044899c680182cd72a00666d4067da1e1890af240c663a2aa40de30c6"
+    }
+  ],
+  "sourcePipeline": "native-strips-v1",
+  "anchor": "sprites/hd720/frames/witchidle1_loop/witchidle1_loop_00.png"
 }

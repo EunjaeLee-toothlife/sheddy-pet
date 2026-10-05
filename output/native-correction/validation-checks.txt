@@ -1,0 +1,120 @@
+=== tests ===
+.PASS native sample max scale 0.7352941176470589
+......
+----------------------------------------------------------------------
+Ran 7 tests in 1.182s
+
+OK
+
+=== calm-tests ===
+...
+----------------------------------------------------------------------
+Ran 3 tests in 4.592s
+
+OK
+
+=== reaction-tests ===
+...../Users/toonation-eunjaelee/.codex/worktrees/a09f/SP/tools/test_build_reactions.py:69: DeprecationWarning: Image.Image.getdata is deprecated and will be removed in Pillow 14 (2027-10-15). Use get_flattened_data instead.
+  for r, g, b, a in frame.getdata())
+.
+----------------------------------------------------------------------
+Ran 6 tests in 1.159s
+
+OK
+match /Users/toonation-eunjaelee/.codex/worktrees/a09f/SP/sprites/rebuilt/frames/idle1_loop/idle1_loop_00.png: scale 0.9934, shift (+0.7, +28.1)
+
+=== final-source-register ===
+PASS SOURCE bat1_loop 724 0.8196022727272727
+PASS SOURCE blackcat1_loop 724 0.8368263473053892
+PASS SOURCE bounce1_loop 724 0.9171511627906976
+PASS SOURCE broom1_loop 724 0.8079658605974396
+PASS SOURCE candles1_loop 724 0.8948220064724919
+PASS SOURCE candy1_loop 724 0.85062893081761
+PASS SOURCE childrensday_balloon1_loop 887 0.7933579335793358
+PASS SOURCE childrensday_breathe1_loop 887 0.7272727272727273
+PASS SOURCE childrensday_bubbles1_loop 887 0.7622841965471447
+PASS SOURCE childrensday_candyfloss1_loop 887 0.7401055408970977
+PASS SOURCE childrensday_pinwheel1_loop 887 0.7341269841269841
+PASS SOURCE childrensday_plane1_loop 887 0.7157490396927016
+PASS SOURCE childrensday_robot1_loop 887 0.7432216905901117
+PASS SOURCE childrensday_talk1_loop 887 0.7272727272727273
+PASS SOURCE christmas_breathe1_loop 887 0.6905055487053021
+PASS SOURCE christmas_carol1_loop 887 0.7016434892541087
+PASS SOURCE christmas_fishbread1_loop 887 0.7282051282051282
+PASS SOURCE christmas_gift1_loop 886 0.7310252996005326
+PASS SOURCE christmas_snowcatch1_loop 887 0.7208672086720868
+PASS SOURCE christmas_snowglobe1_loop 887 0.7311385459533608
+PASS SOURCE christmas_snowman1_loop 887 0.777947932618683
+PASS SOURCE christmas_talk1_loop 887 0.6905055487053021
+PASS SOURCE crystal1_loop 724 0.8205499276410999
+PASS SOURCE ghost1_loop 724 0.8133140376266281
+PASS SOURCE gift1_loop 724 0.8052708638360175
+PASS SOURCE lantern1_loop 724 0.8028571428571428
+PASS SOURCE lemon1_loop 887 0.7694174757281553
+PASS SOURCE moon1_loop 724 0.8138847858197932
+PASS SOURCE peekaboo1_loop 724 0.8059259259259259
+PASS SOURCE potion1_loop 724 0.8513931888544891
+PASS SOURCE power1_loop 724 0.871301775147929
+PASS SOURCE raven1_loop 724 0.9340329835082459
+PASS SOURCE seollal_bow1_loop 887 0.7310606060606061
+PASS SOURCE seollal_breathe1_loop 887 0.7349081364829396
+PASS SOURCE seollal_jegi1_loop 887 0.7704011065006916
+PASS SOURCE seollal_kite1_loop 887 0.7547892720306514
+PASS SOURCE seollal_pouch1_loop 887 0.7701612903225806
+PASS SOURCE seollal_soup1_loop 887 0.7576974564926372
+PASS SOURCE seollal_talk1_loop 887 0.7349081364829396
+PASS SOURCE seollal_yut1_loop 887 0.8120184899845917
+PASS SOURCE shuffle1_loop 724 0.968562874251497
+PASS SOURCE spellbook1_loop 724 0.8063583815028902
+PASS SOURCE spider1_loop 724 0.9017857142857143
+PASS SOURCE starspell1_loop 724 0.8421052631578947
+PASS SOURCE summer_breathe1_loop 887 0.6996245306633292
+PASS SOURCE summer_fan1_loop 887 0.7612137203166227
+PASS SOURCE summer_sandcastle1_loop 887 0.7347611202635914
+PASS SOURCE summer_talk1_loop 887 0.6996245306633292
+PASS SOURCE summer_tube1_loop 887 0.7384615384615385
+PASS SOURCE summer_watergun1_loop 887 0.7241379310344828
+PASS SOURCE summer_watermelon1_loop 887 0.7417503586800573
+PASS SOURCE summer_waves1_loop 887 0.7332490518331226
+PASS SOURCE tarot1_loop 724 0.8309248554913294
+PASS SOURCE umbrella1_loop 724 0.8748221906116643
+PASS SOURCE witchbreathe1_loop 1254 0.4836206896551724
+PASS SOURCE witchdance1_loop 724 0.8259587020648967
+PASS SOURCE witchidle1_loop 1254 0.4836206896551724
+PASS SOURCE witchlook1_loop 724 0.8311499272197962
+PASS SOURCE witchtalk1_loop 1254 0.4836206896551724
+PASS SOURCE witchtidy1_loop 724 0.8201754385964912
+PASS SOURCE transform_halloween_start 887 0.7167325428194994
+PASS SOURCE transform_halloween_loop 887 0.7167325428194994
+
+=== halloween-verify ===
+PASS witchidle1: 16 poses, 48 ticks, 512/720 RGBA VP9, 130447 bytes
+PASS broom1: 16 poses, 74 ticks, 512/720 RGBA VP9, 786696 bytes
+PASS lantern1: 16 poses, 73 ticks, 512/720 RGBA VP9, 647674 bytes
+PASS ghost1: 16 poses, 72 ticks, 512/720 RGBA VP9, 659110 bytes
+PASS bat1: 16 poses, 72 ticks, 512/720 RGBA VP9, 708433 bytes
+PASS candy1: 16 poses, 72 ticks, 512/720 RGBA VP9, 684828 bytes
+PASS spellbook1: 16 poses, 73 ticks, 512/720 RGBA VP9, 729471 bytes
+PASS starspell1: 16 poses, 72 ticks, 512/720 RGBA VP9, 700803 bytes
+PASS crystal1: 16 poses, 75 ticks, 512/720 RGBA VP9, 597666 bytes
+PASS blackcat1: 16 poses, 74 ticks, 512/720 RGBA VP9, 592753 bytes
+PASS raven1: 16 poses, 72 ticks, 512/720 RGBA VP9, 666139 bytes
+PASS spider1: 16 poses, 73 ticks, 512/720 RGBA VP9, 656116 bytes
+PASS potion1: 16 poses, 73 ticks, 512/720 RGBA VP9, 588610 bytes
+PASS moon1: 16 poses, 75 ticks, 512/720 RGBA VP9, 717550 bytes
+PASS tarot1: 16 poses, 74 ticks, 512/720 RGBA VP9, 664828 bytes
+PASS umbrella1: 16 poses, 74 ticks, 512/720 RGBA VP9, 646853 bytes
+PASS witchdance1: 16 poses, 65 ticks, 512/720 RGBA VP9, 622574 bytes
+PASS peekaboo1: 16 poses, 75 ticks, 512/720 RGBA VP9, 632989 bytes
+PASS candles1: 16 poses, 74 ticks, 512/720 RGBA VP9, 772289 bytes
+PASS gift1: 16 poses, 77 ticks, 512/720 RGBA VP9, 710223 bytes
+PASS witchbreathe1: 16 poses, 48 ticks, 512/720 RGBA VP9, 130447 bytes
+PASS witchlook1: 16 poses, 48 ticks, 512/720 RGBA VP9, 501038 bytes
+PASS witchtidy1: 16 poses, 48 ticks, 512/720 RGBA VP9, 497701 bytes
+PASS witchtalk1: 16 poses, 16 ticks, 512/720 RGBA VP9, 68373 bytes
+PASS 24 clips / 384 poses / 14113611 HD bytes
+
+=== transform-verify ===
+PASS transform_halloween: 16 poses, 16 ticks, 512/720 RGBA VP9, 658985 bytes
+PASS transform_halloween: 16 poses, 16 ticks, 512/720 RGBA VP9, 658323 bytes
+PASS 2 clips / 32 poses

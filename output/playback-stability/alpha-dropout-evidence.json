@@ -1,0 +1,50 @@
+[
+  {
+    "frame": "sprites/chem1_end1/chem1_end1_03.png",
+    "maxAlpha": 255,
+    "opaquePixels": 68972,
+    "visiblePixels": 72521
+  },
+  {
+    "frame": "sprites/chem1_end1/chem1_end1_04.png",
+    "maxAlpha": 28,
+    "opaquePixels": 0,
+    "visiblePixels": 1
+  },
+  {
+    "frame": "sprites/chem1_end1/chem1_end1_05.png",
+    "maxAlpha": 255,
+    "opaquePixels": 59485,
+    "visiblePixels": 63954
+  },
+  {
+    "frame": "sprites/rebuilt/frames/chem1_end1/chem1_end1_04.png",
+    "maxAlpha": 255,
+    "opaquePixels": 74019,
+    "visiblePixels": 80598
+  },
+  {
+    "frame": "sprites/chem1_end3/chem1_end3_15.png",
+    "maxAlpha": 255,
+    "opaquePixels": 56493,
+    "visiblePixels": 59907
+  },
+  {
+    "frame": "sprites/chem1_end3/chem1_end3_16.png",
+    "maxAlpha": 255,
+    "opaquePixels": 15,
+    "visiblePixels": 111
+  },
+  {
+    "frame": "sprites/chem1_end3/chem1_end3_17.png",
+    "maxAlpha": 255,
+    "opaquePixels": 61280,
+    "visiblePixels": 65934
+  },
+  {
+    "frame": "sprites/rebuilt/frames/chem1_end3/chem1_end3_16.png",
+    "maxAlpha": 255,
+    "opaquePixels": 48118,
+    "visiblePixels": 51592
+  }
+]

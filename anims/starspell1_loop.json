@@ -1,106 +1,6 @@
 {
   "name": "starspell1_loop",
   "state": "starspell1",
-  "sheet": "sprites/raw/halloween/starspell1.png",
-  "sha256": "9d8e638ef3e4502e8a4c98a8962a658effd0039a7629c720a5967d488f34b98d",
-  "cellBoxes": [
-    [
-      0,
-      0,
-      314,
-      319
-    ],
-    [
-      314,
-      0,
-      627,
-      320
-    ],
-    [
-      627,
-      0,
-      940,
-      321
-    ],
-    [
-      940,
-      0,
-      1254,
-      319
-    ],
-    [
-      0,
-      319,
-      314,
-      627
-    ],
-    [
-      314,
-      320,
-      627,
-      627
-    ],
-    [
-      627,
-      321,
-      940,
-      627
-    ],
-    [
-      940,
-      319,
-      1254,
-      627
-    ],
-    [
-      0,
-      627,
-      314,
-      940
-    ],
-    [
-      314,
-      627,
-      627,
-      940
-    ],
-    [
-      627,
-      627,
-      940,
-      940
-    ],
-    [
-      940,
-      627,
-      1254,
-      940
-    ],
-    [
-      0,
-      940,
-      314,
-      1254
-    ],
-    [
-      314,
-      940,
-      627,
-      1254
-    ],
-    [
-      627,
-      940,
-      940,
-      1254
-    ],
-    [
-      940,
-      940,
-      1254,
-      1254
-    ]
-  ],
   "fps": 12,
   "holds": {
     "0": 6,
@@ -120,5 +20,437 @@
     "14": 3,
     "15": 6
   },
-  "timingNote": "이동 포즈는 최소 3틱(0.25초), 시작·복귀는 6틱. 전체 길이를 늘려 동작 사이 이동도 충분히 보여준다."
+  "timingNote": "이동 포즈는 최소 3틱(0.25초), 시작·복귀는 6틱. 전체 길이를 늘려 동작 사이 이동도 충분히 보여준다.",
+  "nativeSources": [
+    {
+      "anchor": "sprites/hd720/frames/witchidle1_loop/witchidle1_loop_00.png",
+      "sourceSha256": "3d2f802044899c680182cd72a00666d4067da1e1890af240c663a2aa40de30c6"
+    },
+    {
+      "source": "sprites/raw/native-correction/starspell1-01-02-03.png",
+      "sourceSha256": "96390c723288e60dc67da131b5cf05183e56495e35970e51b2ac3f2d64d51fbd",
+      "cell": [
+        0,
+        0,
+        724,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        127,
+        24,
+        572,
+        699
+      ],
+      "scale": 0.8222222222222222,
+      "position": [
+        89,
+        106
+      ],
+      "target": {
+        "height": 555,
+        "x": 349.0,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/starspell1-01-02-03.png",
+      "sourceSha256": "96390c723288e60dc67da131b5cf05183e56495e35970e51b2ac3f2d64d51fbd",
+      "cell": [
+        724,
+        0,
+        1448,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        88,
+        25,
+        571,
+        697
+      ],
+      "scale": 0.8407738095238095,
+      "position": [
+        47,
+        94
+      ],
+      "target": {
+        "height": 565,
+        "x": 343.0,
+        "bottom": 681
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/starspell1-01-02-03.png",
+      "sourceSha256": "96390c723288e60dc67da131b5cf05183e56495e35970e51b2ac3f2d64d51fbd",
+      "cell": [
+        1448,
+        0,
+        2172,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        118,
+        26,
+        669,
+        698
+      ],
+      "scale": 0.8363095238095238,
+      "position": [
+        37,
+        95
+      ],
+      "target": {
+        "height": 562,
+        "x": 357.0,
+        "bottom": 679
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/starspell1-04-05-06.png",
+      "sourceSha256": "6c7c74f5039a5a68efcafcf85b47313d7118459ed7969b41b239a6eb8601764b",
+      "cell": [
+        0,
+        0,
+        724,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        56,
+        24,
+        639,
+        696
+      ],
+      "scale": 0.7901785714285714,
+      "position": [
+        107,
+        130
+      ],
+      "target": {
+        "height": 531,
+        "x": 417.0,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/starspell1-04-05-06.png",
+      "sourceSha256": "6c7c74f5039a5a68efcafcf85b47313d7118459ed7969b41b239a6eb8601764b",
+      "cell": [
+        724,
+        0,
+        1448,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        36,
+        27,
+        614,
+        692
+      ],
+      "scale": 0.8421052631578947,
+      "position": [
+        2,
+        97
+      ],
+      "target": {
+        "height": 560,
+        "x": 342.0,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/starspell1-04-05-06.png",
+      "sourceSha256": "6c7c74f5039a5a68efcafcf85b47313d7118459ed7969b41b239a6eb8601764b",
+      "cell": [
+        1448,
+        0,
+        2172,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        41,
+        36,
+        678,
+        696
+      ],
+      "scale": 0.8,
+      "position": [
+        156,
+        124
+      ],
+      "target": {
+        "height": 528,
+        "x": 374.0,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/starspell1-07-08-09.png",
+      "sourceSha256": "6ab17bcd6d44a1831aaf7f4c26dc65f18846400741c26ee41de59ff93bf81152",
+      "cell": [
+        0,
+        0,
+        724,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        146,
+        15,
+        603,
+        709
+      ],
+      "scale": 0.840057636887608,
+      "position": [
+        60,
+        85
+      ],
+      "target": {
+        "height": 583,
+        "x": 355.5,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/starspell1-07-08-09.png",
+      "sourceSha256": "6ab17bcd6d44a1831aaf7f4c26dc65f18846400741c26ee41de59ff93bf81152",
+      "cell": [
+        724,
+        0,
+        1448,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        65,
+        57,
+        653,
+        707
+      ],
+      "scale": 0.8215384615384616,
+      "position": [
+        155,
+        98
+      ],
+      "target": {
+        "height": 534,
+        "x": 420.0,
+        "bottom": 679
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/starspell1-07-08-09.png",
+      "sourceSha256": "6ab17bcd6d44a1831aaf7f4c26dc65f18846400741c26ee41de59ff93bf81152",
+      "cell": [
+        1448,
+        0,
+        2172,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        127,
+        54,
+        565,
+        709
+      ],
+      "scale": 0.8,
+      "position": [
+        60,
+        112
+      ],
+      "target": {
+        "height": 524,
+        "x": 344.0,
+        "bottom": 679
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/starspell1-10-11-12.png",
+      "sourceSha256": "24c130a56aab8007ce1ca82b897150979c4e552302ae297dadfcfa25dc6ff0f9",
+      "cell": [
+        0,
+        0,
+        724,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        173,
+        9,
+        632,
+        695
+      ],
+      "scale": 0.7638483965014577,
+      "position": [
+        87,
+        148
+      ],
+      "target": {
+        "height": 524,
+        "x": 372.0,
+        "bottom": 679
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/starspell1-10-11-12.png",
+      "sourceSha256": "24c130a56aab8007ce1ca82b897150979c4e552302ae297dadfcfa25dc6ff0f9",
+      "cell": [
+        724,
+        0,
+        1448,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        115,
+        15,
+        584,
+        695
+      ],
+      "scale": 0.7661764705882353,
+      "position": [
+        61,
+        147
+      ],
+      "target": {
+        "height": 521,
+        "x": 323.0,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/starspell1-10-11-12.png",
+      "sourceSha256": "24c130a56aab8007ce1ca82b897150979c4e552302ae297dadfcfa25dc6ff0f9",
+      "cell": [
+        1448,
+        0,
+        2172,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        18,
+        28,
+        642,
+        695
+      ],
+      "scale": 0.782608695652174,
+      "position": [
+        195,
+        136
+      ],
+      "target": {
+        "height": 522,
+        "x": 387.0,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/starspell1-13-14-00.png",
+      "sourceSha256": "498e54c919f7b195ad5cbf204ff3e5059e35929a6e0bbf9f652caaa599700c76",
+      "cell": [
+        0,
+        0,
+        724,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        106,
+        16,
+        665,
+        697
+      ],
+      "scale": 0.7973568281938326,
+      "position": [
+        22,
+        125
+      ],
+      "target": {
+        "height": 543,
+        "x": 352.0,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/starspell1-13-14-00.png",
+      "sourceSha256": "498e54c919f7b195ad5cbf204ff3e5059e35929a6e0bbf9f652caaa599700c76",
+      "cell": [
+        724,
+        0,
+        1448,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        139,
+        16,
+        584,
+        697
+      ],
+      "scale": 0.7870778267254038,
+      "position": [
+        87,
+        131
+      ],
+      "target": {
+        "height": 536,
+        "x": 371.0,
+        "bottom": 680
+      }
+    },
+    {
+      "anchor": "sprites/hd720/frames/witchidle1_loop/witchidle1_loop_00.png",
+      "sourceSha256": "3d2f802044899c680182cd72a00666d4067da1e1890af240c663a2aa40de30c6"
+    }
+  ],
+  "sourcePipeline": "native-strips-v1",
+  "anchor": "sprites/hd720/frames/witchidle1_loop/witchidle1_loop_00.png"
 }

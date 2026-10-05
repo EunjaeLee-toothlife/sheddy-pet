@@ -1,7 +1,7 @@
 """담당 댄스·OBS 후보를 원본 셀에서 직접 추출해 720px로 조립한다.
 
-원본·512px 자산과 중앙 장부는 수정하지 않는다. 314/627px 원본 셀의
-해상도 한계를 기록하며 새로 생성한 고해상도 디테일이라고 주장하지 않는다.
+고해상도 재제작 항목은 원본 검증 후 720/512px를 함께 조립한다.
+나머지 항목은 기존 512px를 보존하고 314/627px 원본의 해상도 한계를 기록한다.
 """
 import argparse
 import hashlib
@@ -250,6 +250,31 @@ def main():
     for cfg in reactions.values():sources.append((cfg['name'],cfg,False))
     for name,cfg,is_dance in sources:
         if args.clip and name not in args.clip:continue
+        if cfg.get('sourcePipeline') == 'native-strips-v1':
+            from build_native_motion import build as build_native
+            from verify_native_sources import verify_sources
+            build_native(name.removesuffix('_loop'))
+            settings=json.loads((ROOT/'anims'/f'{name}.json').read_text())
+            verify_sources(settings)
+            dest=OUT/'frames'/name
+            paths=sorted(dest.glob('*.png'))
+            order=expand(len(paths),settings)
+            video=OUT/'videos'/f'anim_{name}.webm'
+            fps=settings['fps']
+            entry={'clip':name,'framesDir':dest.relative_to(ROOT).as_posix(),'video':video.relative_to(ROOT).as_posix(),
+                   'count':len(paths),'fps':fps,'rate':cfg.get('rate',1),'holds':settings.get('holds',{}),'repeats':settings.get('repeats',[]),
+                   'expandedTicks':len(order),'sourceLimited':False,'sourcePipeline':'native-strips-v1',
+                   'method':'고해상도 원본을 확대 없이 조립하며 안무와 중간 포즈·재생 시간을 유지한다.',
+                   'sourceCells':settings['nativeSources'],'generatedFrameSHA256':[sha(p) for p in paths],
+                   'original512FrameHashes':{p.relative_to(ROOT).as_posix():sha(p) for p in sorted((ROOT/'sprites'/name).glob('*.png'))},
+                   'inbetweens':cfg.get('inbetweens',[]),'contact':f'sprites/hd720/qa/native/{name}.jpg',
+                   'audit':audit_video(video,len(order),len(order)/fps),
+                   'review':{'staticVisual':False,'alphaTechnical':True,'runtimeSeams':False}}
+            ledger['clips']=[x for x in ledger['clips'] if x['clip']!=name]+[entry]
+            ledger.setdefault('summary',{}).update(clips=len(ledger['clips']),frames=sum(x['count'] for x in ledger['clips']),
+                                                  expandedTicks=sum(x['expandedTicks'] for x in ledger['clips']))
+            ledger_path.write_text(json.dumps(ledger,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+            continue
         old=ROOT/('sprites/rebuilt/frames' if is_dance else 'sprites')/name
         preserved={p.relative_to(ROOT).as_posix():sha(p) for p in sorted(old.glob('*.png'))}
         if is_dance:

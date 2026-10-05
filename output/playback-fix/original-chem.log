@@ -1,0 +1,9 @@
+CHECK docs/index.html assets=original fallback=true clips=3
+PASS canvas 1280×720 DPR1 → 720²
+PASS canvas 720×1280 DPR1 → 720²
+PASS canvas 320×640 DPR1 → 320²
+PASS canvas 1280×720 DPR2 → 720²
+PASS chem1_end1 512² 2 cycles 123 draws maxGap=53ms
+PASS chem1_end2 512² 2 cycles 76 draws maxGap=53ms
+PASS chem1_end3 512² 2 cycles 108 draws maxGap=53ms
+PASS all 3 runtime clips / 6 ended (original, fallback) (chem1_end)

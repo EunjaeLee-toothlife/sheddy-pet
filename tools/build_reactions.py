@@ -68,6 +68,10 @@ def main():
     for state, config in configs.items():
         if args.states and state not in args.states:
             continue
+        if config.get('sourcePipeline') == 'native-strips-v1':
+            from build_native_motion import build as build_native
+            build_native(state)
+            continue
         source = ROOT / config['sheet']
         if hashlib.sha256(source.read_bytes()).hexdigest() != config['sha256']:
             raise ValueError(f'원본 시트 해시 불일치: {source}')

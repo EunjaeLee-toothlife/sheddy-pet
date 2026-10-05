@@ -51,12 +51,32 @@ def transplant(base, donor, rectangles):
 
 def variants(config):
     base = Image.open(ROOT / config['base']).convert('RGBA')
+    if 'nativeBase' in config:
+        source = config['nativeBase']
+        path = ROOT / source['source']
+        assert sha(path) == source['sourceSha256'], '고해상도 몸체 원본 변경'
+        native = Image.open(path).convert('RGBA')
+        assert min(native.size) >= 720 and list(native.size) == source['size'], '몸체 원본 규격'
+        if 'cell' in source:
+            native = native.crop(source['cell'])
+        assert min(native.size) >= 720, '몸체 원본 셀 규격'
+        scale = source['scale']
+        assert 0 < scale <= 1, '몸체 원본 확대 금지'
+        native.putalpha(native.getchannel('A').point(lambda a: 0 if a < 8 else a))
+        native = native.resize((round(native.width * scale), round(native.height * scale)), Image.Resampling.LANCZOS)
+        expected = Image.new('RGBA', (720, 720))
+        expected.alpha_composite(native, tuple(source['position']))
+        assert base.tobytes() == expected.tobytes(), '고해상도 몸체 합성 재현성'
     sheet = Image.open(ROOT / config['sheet']).convert('RGBA')
     width = sheet.width // 3
+    assert min(width, sheet.height) >= 720, '표정 원본 셀 규격'
     result = {'base': base}
     for i, name in enumerate(['blink', 'ah', 'o']):
         donor = sheet.crop((i * width, 0, (i + 1) * width, sheet.height))
         points = config['closedEyes'] if name == 'blink' else config['eyes']
+        source_points = [complex(*point) for point in config['donorEyes'][i]]
+        target_points = [complex(*point) for point in points]
+        assert abs(target_points[1] - target_points[0]) <= abs(source_points[1] - source_points[0]), '표정 원본 확대 금지'
         aligned = align(donor, config['donorEyes'][i], points)
         boxes = config['eyeRects'] if name == 'blink' else [config['mouthRect']]
         result[name] = transplant(base, aligned, boxes)

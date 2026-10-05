@@ -1,5 +1,26 @@
 {
   "name": "lemon1_loop",
+  "ref": "refs/chibi_base.png",
+  "chain": true,
+  "note": "Lemon bite gag, 16-frame completed sequence @10FPS (4.0s; widget rate 0.7, play 1 cycle). From idle she pulls a whole lemon from behind her back, presents it, bites it, her face scrunches up sour and she shivers, shakes it off with a big exhale, grins with a thumbs-up, hides the lemon behind her back and returns to idle. PROP RULES: the lemon is ALWAYS in the hand on the RIGHT side of the image; opaque bright yellow; whole until the bite, then shows a big bite mark for the rest.",
+  "frames": [
+    "Pose: BASE: standing upright and relaxed, feet close together under her hips, both arms resting naturally at her sides with open hands, calm small smile, head level. No props visible. The small lemon-slice hair clip stays on the same side of her bangs as in the reference image, do not mirror the character.",
+    "Pose: feet close together, both arms swinging back behind her body with hands hidden behind her back, mischievous closed-mouth smirk, eyes glancing sideways. No props visible yet. The small lemon-slice hair clip stays on the same side of her bangs as in the reference image, do not mirror the character.",
+    "Pose: the reveal: the hand on the RIGHT side of the image swinging forward from behind her back holding a whole bright yellow lemon (opaque, with a small green leaf stub on top) at hip height, the other hand still behind her back, excited open-mouth grin, eyes bright. Feet close together. The small lemon-slice hair clip stays on the same side of her bangs as in the reference image, do not mirror the character.",
+    "Pose: presenting: the hand on the RIGHT side of the image holding a whole bright yellow lemon (opaque, with a small green leaf stub on top) up at chest height toward the viewer, the other hand on her hip, proud beaming smile, a couple of small star sparkles touching the lemon. Feet close together. The small lemon-slice hair clip stays on the same side of her bangs as in the reference image, do not mirror the character.",
+    "Pose: the hand on the RIGHT side of the image raising a whole bright yellow lemon (opaque, with a small green leaf stub on top) up to her mouth, her mouth opening WIDE, eyes gleaming with anticipation, the other hand on her hip. Feet close together. The small lemon-slice hair clip stays on the same side of her bangs as in the reference image, do not mirror the character.",
+    "Pose: BITE key frame: her teeth sunk into the lemon held at her mouth by the hand on the RIGHT side of the image, eyes squeezed shut, cheeks bulging, the other hand on her hip. Feet close together. The small lemon-slice hair clip stays on the same side of her bangs as in the reference image, do not mirror the character.",
+    "Pose: chewing: the hand on the RIGHT side of the image lowering the bright yellow lemon with a big bite taken out of it showing pale yellow flesh to chest height, her cheeks puffed, eyes squeezed shut, eyebrows twitching, the first hint of a sour grimace pulling at her mouth. Feet close together. The small lemon-slice hair clip stays on the same side of her bangs as in the reference image, do not mirror the character.",
+    "Pose: SOUR key frame: her entire face scrunched up — eyes squeezed shut into tight lines, nose wrinkled, lips puckered into a tiny pout, cheeks sucked in, shoulders raised high, whole body shivering with small vibration lines around her, holding the bright yellow lemon with a big bite taken out of it showing pale yellow flesh out to the side in the hand on the RIGHT side of the image, the other hand clenched at her chest. Feet close together. The small lemon-slice hair clip stays on the same side of her bangs as in the reference image, do not mirror the character.",
+    "Pose: still puckered and trembling: face scrunched, one eye cracked open and watery, a tear at its corner, lips puckered, shoulders up, shivering lines, holding the bright yellow lemon with a big bite taken out of it showing pale yellow flesh out to the side in the hand on the RIGHT side of the image. Feet close together. The small lemon-slice hair clip stays on the same side of her bangs as in the reference image, do not mirror the character.",
+    "Pose: shaking her head quickly side to side with motion arcs, eyes still squeezed shut, lips puckered, hair swinging, holding the bright yellow lemon with a big bite taken out of it showing pale yellow flesh at chest height in the hand on the RIGHT side of the image, the other hand fanning her mouth. Feet close together. The small lemon-slice hair clip stays on the same side of her bangs as in the reference image, do not mirror the character.",
+    "Pose: the sourness fading: a big shuddering exhale with a puff of breath at her mouth, eyes opening watery, shoulders dropping back down, face relaxing, holding the bright yellow lemon with a big bite taken out of it showing pale yellow flesh at chest height in the hand on the RIGHT side of the image. Feet close together. The small lemon-slice hair clip stays on the same side of her bangs as in the reference image, do not mirror the character.",
+    "Pose: satisfied: a wide happy grin with slightly watery sparkling eyes and pink cheeks, the hand on the LEFT side of the image giving a thumbs-up, the hand on the RIGHT side of the image holding the bright yellow lemon with a big bite taken out of it showing pale yellow flesh up proudly. Feet close together. The small lemon-slice hair clip stays on the same side of her bangs as in the reference image, do not mirror the character.",
+    "Pose: the hand on the RIGHT side of the image swinging the bright yellow lemon with a big bite taken out of it showing pale yellow flesh back behind her body, the other hand also moving behind her back, content closed-eye smile. Feet close together. The small lemon-slice hair clip stays on the same side of her bangs as in the reference image, do not mirror the character.",
+    "Pose: both hands hidden behind her back, lemon no longer visible, content closed-eye smile with pink cheeks, a small satisfied 'hmm~' expression. Feet close together. The small lemon-slice hair clip stays on the same side of her bangs as in the reference image, do not mirror the character.",
+    "Pose: both arms swinging back down to her sides, hands opening, eyes opening, calm happy smile. Feet close together. No props visible. The small lemon-slice hair clip stays on the same side of her bangs as in the reference image, do not mirror the character.",
+    "Pose: SEAMLESS LOOP CLOSER — must match frame 0 exactly: standing upright and relaxed, feet close together under her hips, both arms resting naturally at her sides with open hands, calm small smile, head level. No props visible. The small lemon-slice hair clip stays on the same side of her bangs as in the reference image, do not mirror the character."
+  ],
   "holds": {
     "0": 2,
     "1": 2,
@@ -18,5 +39,489 @@
     "14": 2,
     "15": 2
   },
-  "repeats": []
+  "fps": 10,
+  "nativeSources": [
+    {
+      "source": "sprites/raw/native-correction/lemon1-00-01.png",
+      "sourceSha256": "7b28fbf9845fa9e4d977946563ad6abadb1078fa3a87379b594726fe398e5d57",
+      "cell": [
+        0,
+        0,
+        887,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        245,
+        20,
+        711,
+        869
+      ],
+      "scale": 0.7455830388692579,
+      "position": [
+        2,
+        52
+      ],
+      "target": {
+        "height": 633,
+        "x": 345.0,
+        "bottom": 700
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/lemon1-00-01.png",
+      "sourceSha256": "7b28fbf9845fa9e4d977946563ad6abadb1078fa3a87379b594726fe398e5d57",
+      "cell": [
+        887,
+        0,
+        1774,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        204,
+        20,
+        608,
+        869
+      ],
+      "scale": 0.7502944640753828,
+      "position": [
+        55,
+        45
+      ],
+      "target": {
+        "height": 637,
+        "x": 372.0,
+        "bottom": 698
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/lemon1-02-03.png",
+      "sourceSha256": "035169018620eb7dc9881e019648b0012e2eac61d3c1fad14dbe7f03da22c472",
+      "cell": [
+        0,
+        0,
+        887,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        242,
+        26,
+        710,
+        862
+      ],
+      "scale": 0.7583732057416268,
+      "position": [
+        -20,
+        43
+      ],
+      "target": {
+        "height": 634,
+        "x": 372.0,
+        "bottom": 697
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/lemon1-02-03.png",
+      "sourceSha256": "035169018620eb7dc9881e019648b0012e2eac61d3c1fad14dbe7f03da22c472",
+      "cell": [
+        887,
+        0,
+        1774,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        149,
+        27,
+        616,
+        862
+      ],
+      "scale": 0.7592814371257485,
+      "position": [
+        48,
+        43
+      ],
+      "target": {
+        "height": 634,
+        "x": 370.5,
+        "bottom": 697
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/lemon1-04-05.png",
+      "sourceSha256": "f50ef6bbb6d622dd98f7f23027b35a22f5fdbea44cf1c9f93a4e5de526acbc2e",
+      "cell": [
+        0,
+        0,
+        887,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        285,
+        23,
+        730,
+        875
+      ],
+      "scale": 0.7429577464788732,
+      "position": [
+        -13,
+        46
+      ],
+      "target": {
+        "height": 633,
+        "x": 342.0,
+        "bottom": 696
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/lemon1-04-05.png",
+      "sourceSha256": "f50ef6bbb6d622dd98f7f23027b35a22f5fdbea44cf1c9f93a4e5de526acbc2e",
+      "cell": [
+        887,
+        0,
+        1774,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        149,
+        24,
+        592,
+        876
+      ],
+      "scale": 0.7429577464788732,
+      "position": [
+        89,
+        46
+      ],
+      "target": {
+        "height": 633,
+        "x": 342.0,
+        "bottom": 696
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/lemon1-06-07.png",
+      "sourceSha256": "49b6c2bc031176928862ae82dea948451642091e2f5fdb3aade4614f631ccad7",
+      "cell": [
+        0,
+        0,
+        887,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        243,
+        42,
+        683,
+        866
+      ],
+      "scale": 0.7694174757281553,
+      "position": [
+        -9,
+        34
+      ],
+      "target": {
+        "height": 634,
+        "x": 340.0,
+        "bottom": 700
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/lemon1-06-07.png",
+      "sourceSha256": "49b6c2bc031176928862ae82dea948451642091e2f5fdb3aade4614f631ccad7",
+      "cell": [
+        887,
+        0,
+        1774,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        101,
+        43,
+        663,
+        865
+      ],
+      "scale": 0.7688564476885644,
+      "position": [
+        30,
+        33
+      ],
+      "target": {
+        "height": 632,
+        "x": 343.0,
+        "bottom": 698
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/lemon1-08-09.png",
+      "sourceSha256": "fc4aff4e3105ab31184e27dd8579fc8f003594dc8504350e916e41dfff6c7e21",
+      "cell": [
+        0,
+        0,
+        887,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        171,
+        24,
+        688,
+        873
+      ],
+      "scale": 0.7479387514723204,
+      "position": [
+        26,
+        45
+      ],
+      "target": {
+        "height": 635,
+        "x": 369.0,
+        "bottom": 698
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/lemon1-08-09.png",
+      "sourceSha256": "fc4aff4e3105ab31184e27dd8579fc8f003594dc8504350e916e41dfff6c7e21",
+      "cell": [
+        887,
+        0,
+        1774,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        174,
+        24,
+        679,
+        873
+      ],
+      "scale": 0.7479387514723204,
+      "position": [
+        58,
+        46
+      ],
+      "target": {
+        "height": 635,
+        "x": 373.0,
+        "bottom": 699
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/lemon1-10-11.png",
+      "sourceSha256": "91291eaee21d3f897ddef6f1b37b36090f25a3e091982620f1339d4b302e0ab3",
+      "cell": [
+        0,
+        0,
+        887,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        274,
+        29,
+        742,
+        872
+      ],
+      "scale": 0.7520759193357058,
+      "position": [
+        -33,
+        41
+      ],
+      "target": {
+        "height": 634,
+        "x": 344.0,
+        "bottom": 697
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/lemon1-10-11.png",
+      "sourceSha256": "91291eaee21d3f897ddef6f1b37b36090f25a3e091982620f1339d4b302e0ab3",
+      "cell": [
+        887,
+        0,
+        1774,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        135,
+        29,
+        625,
+        872
+      ],
+      "scale": 0.7520759193357058,
+      "position": [
+        69,
+        41
+      ],
+      "target": {
+        "height": 634,
+        "x": 343.0,
+        "bottom": 697
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/lemon1-12-13.png",
+      "sourceSha256": "bc4af7b2df4dbc00732a62004b057f033cbc1f052bfcd405f2cdeb995e0c259e",
+      "cell": [
+        0,
+        0,
+        887,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        258,
+        30,
+        676,
+        864
+      ],
+      "scale": 0.762589928057554,
+      "position": [
+        -8,
+        40
+      ],
+      "target": {
+        "height": 636,
+        "x": 346.0,
+        "bottom": 698
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/lemon1-12-13.png",
+      "sourceSha256": "bc4af7b2df4dbc00732a62004b057f033cbc1f052bfcd405f2cdeb995e0c259e",
+      "cell": [
+        887,
+        0,
+        1774,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        206,
+        30,
+        620,
+        864
+      ],
+      "scale": 0.7613908872901679,
+      "position": [
+        43,
+        41
+      ],
+      "target": {
+        "height": 635,
+        "x": 347.0,
+        "bottom": 698
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/lemon1-14-15.png",
+      "sourceSha256": "05bf82b4965ea2f252b950ad3ad39bf6b1ec054d5a74243df84fbe7120e9afe2",
+      "cell": [
+        0,
+        0,
+        887,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        250,
+        26,
+        699,
+        872
+      ],
+      "scale": 0.7494089834515366,
+      "position": [
+        -3,
+        43
+      ],
+      "target": {
+        "height": 634,
+        "x": 346.0,
+        "bottom": 697
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/lemon1-00-01.png",
+      "sourceSha256": "7b28fbf9845fa9e4d977946563ad6abadb1078fa3a87379b594726fe398e5d57",
+      "cell": [
+        0,
+        0,
+        887,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        245,
+        20,
+        711,
+        869
+      ],
+      "scale": 0.7455830388692579,
+      "position": [
+        2,
+        52
+      ],
+      "target": {
+        "height": 633,
+        "x": 345.0,
+        "bottom": 700
+      }
+    }
+  ],
+  "sourcePipeline": "native-strips-v1",
+  "anchor": "sprites/hd720/frames/lemon1_loop/lemon1_loop_00.png"
 }

@@ -1,6 +1,4 @@
 {
-  "sheet": "sprites/raw/power1_imagegen_sheet_v2.png",
-  "sha256": "9576857da0dedff70424ee1ae00bbc01f1019c3034e4557cf67e54651ca7ef45",
   "name": "power1_loop",
   "grid": [
     4,
@@ -33,25 +31,587 @@
   "inbetweens": [
     {
       "after": 10,
-      "source": "sprites/raw/inbetweens/power1.png",
-      "sha256": "8b2a073ab47a00393788ee11c4a3f14a23448393453073e1fcad1fe59b7fb771",
+      "source": "sprites/raw/native-correction/power1-midpoints.png",
+      "sha256": "e31ee1e62bda618ade0c439e7304ca5290702d72f44962e1df2c648952d913c9",
       "box": [
         0,
         0,
-        627,
-        627
+        887,
+        887
       ]
     },
     {
       "after": 11,
-      "source": "sprites/raw/inbetweens/power1.png",
-      "sha256": "8b2a073ab47a00393788ee11c4a3f14a23448393453073e1fcad1fe59b7fb771",
+      "source": "sprites/raw/native-correction/power1-midpoints.png",
+      "sha256": "e31ee1e62bda618ade0c439e7304ca5290702d72f44962e1df2c648952d913c9",
       "box": [
+        887,
         0,
-        627,
-        627,
-        1254
+        1774,
+        887
       ]
     }
-  ]
+  ],
+  "nativeSources": [
+    {
+      "source": "sprites/raw/native-correction/power1-00-01.png",
+      "sourceSha256": "7f43ddd734cd1a7d453e5472002f8ef931ff1758c0f6dd3e34fee18a3b80aede",
+      "cell": [
+        0,
+        0,
+        887,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        161,
+        9,
+        725,
+        874
+      ],
+      "scale": 0.653179190751445,
+      "position": [
+        75,
+        124
+      ],
+      "target": {
+        "height": 565,
+        "x": 364.5,
+        "bottom": 695,
+        "alignment": "bounds"
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/power1-00-01.png",
+      "sourceSha256": "7f43ddd734cd1a7d453e5472002f8ef931ff1758c0f6dd3e34fee18a3b80aede",
+      "cell": [
+        887,
+        0,
+        1774,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        144,
+        12,
+        735,
+        869
+      ],
+      "scale": 0.6511085180863477,
+      "position": [
+        56,
+        129
+      ],
+      "target": {
+        "height": 558,
+        "x": 342.5,
+        "bottom": 695,
+        "alignment": "bounds"
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/power1-02-03-04.png",
+      "sourceSha256": "49dbf1d1c3807714405bc4f47661df5e0bad5c67026b39975538772873f4c17d",
+      "cell": [
+        0,
+        0,
+        724,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        84,
+        17,
+        645,
+        708
+      ],
+      "scale": 0.8277858176555717,
+      "position": [
+        22,
+        111
+      ],
+      "target": {
+        "height": 572,
+        "x": 323.5,
+        "bottom": 697,
+        "alignment": "bounds"
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/power1-02-03-04.png",
+      "sourceSha256": "49dbf1d1c3807714405bc4f47661df5e0bad5c67026b39975538772873f4c17d",
+      "cell": [
+        724,
+        0,
+        1448,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        110,
+        16,
+        620,
+        707
+      ],
+      "scale": 0.8248914616497829,
+      "position": [
+        12,
+        114
+      ],
+      "target": {
+        "height": 570,
+        "x": 313.0,
+        "bottom": 697,
+        "alignment": "bounds"
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/power1-02-03-04.png",
+      "sourceSha256": "49dbf1d1c3807714405bc4f47661df5e0bad5c67026b39975538772873f4c17d",
+      "cell": [
+        1448,
+        0,
+        2172,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        71,
+        18,
+        671,
+        707
+      ],
+      "scale": 0.8287373004354136,
+      "position": [
+        72,
+        106
+      ],
+      "target": {
+        "height": 571,
+        "x": 380.0,
+        "bottom": 692,
+        "alignment": "bounds"
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/power1-05-06-07.png",
+      "sourceSha256": "8b1f443128ae44b77f779b1df6bf78eda2725fa2e2e7e1ce95398de557ce177c",
+      "cell": [
+        0,
+        0,
+        724,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        138,
+        41,
+        659,
+        679
+      ],
+      "scale": 0.8260188087774295,
+      "position": [
+        28,
+        129
+      ],
+      "target": {
+        "height": 527,
+        "x": 357.0,
+        "bottom": 690,
+        "alignment": "bounds"
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/power1-05-06-07.png",
+      "sourceSha256": "8b1f443128ae44b77f779b1df6bf78eda2725fa2e2e7e1ce95398de557ce177c",
+      "cell": [
+        724,
+        0,
+        1448,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        107,
+        17,
+        646,
+        693
+      ],
+      "scale": 0.871301775147929,
+      "position": [
+        26,
+        93
+      ],
+      "target": {
+        "height": 589,
+        "x": 353.5,
+        "bottom": 697,
+        "alignment": "bounds"
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/power1-05-06-07.png",
+      "sourceSha256": "8b1f443128ae44b77f779b1df6bf78eda2725fa2e2e7e1ce95398de557ce177c",
+      "cell": [
+        1448,
+        0,
+        2172,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        67,
+        33,
+        569,
+        701
+      ],
+      "scale": 0.8203592814371258,
+      "position": [
+        47,
+        123
+      ],
+      "target": {
+        "height": 548,
+        "x": 308.0,
+        "bottom": 698,
+        "alignment": "bounds"
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/power1-repair-08-09.png",
+      "sourceSha256": "39610a288e81606b4526573dcc6f40ae77d355c7ea74e943a4cd95e85a19fc45",
+      "cell": [
+        0,
+        0,
+        887,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        156,
+        168,
+        764,
+        833
+      ],
+      "scale": 0.7112781954887218,
+      "position": [
+        36,
+        52
+      ],
+      "target": {
+        "height": 473,
+        "x": 363.0,
+        "bottom": 644,
+        "alignment": "bounds"
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/power1-repair-08-09.png",
+      "sourceSha256": "39610a288e81606b4526573dcc6f40ae77d355c7ea74e943a4cd95e85a19fc45",
+      "cell": [
+        887,
+        0,
+        1774,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        22,
+        81,
+        786,
+        838
+      ],
+      "scale": 0.7054161162483488,
+      "position": [
+        71,
+        57
+      ],
+      "target": {
+        "height": 534,
+        "x": 356.0,
+        "bottom": 648,
+        "alignment": "bounds"
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/power1-repair-10-00.png",
+      "sourceSha256": "76963b334227758e31818f79df58ce65d703c133345e80342d44037b5f6d915f",
+      "cell": [
+        0,
+        0,
+        887,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        163,
+        72,
+        825,
+        748
+      ],
+      "scale": 0.7115384615384616,
+      "position": [
+        -12,
+        58
+      ],
+      "target": {
+        "height": 481,
+        "x": 339.0,
+        "bottom": 590,
+        "alignment": "bounds"
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/power1-midpoints.png",
+      "sourceSha256": "e31ee1e62bda618ade0c439e7304ca5290702d72f44962e1df2c648952d913c9",
+      "cell": [
+        0,
+        0,
+        887,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        71,
+        28,
+        837,
+        787
+      ],
+      "scale": 0.6271409749670619,
+      "position": [
+        50,
+        125
+      ],
+      "target": {
+        "height": 476,
+        "x": 335.0,
+        "bottom": 619,
+        "alignment": "bounds"
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/power1-11-12-13.png",
+      "sourceSha256": "fb6e6f28f4c352c9286e81352ce882747a3b1f1e11f533b76db0159e681655d4",
+      "cell": [
+        0,
+        0,
+        724,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        85,
+        42,
+        707,
+        687
+      ],
+      "scale": 0.7317829457364341,
+      "position": [
+        42,
+        145
+      ],
+      "target": {
+        "height": 472,
+        "x": 331.0,
+        "bottom": 648,
+        "alignment": "bounds"
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/power1-midpoints.png",
+      "sourceSha256": "e31ee1e62bda618ade0c439e7304ca5290702d72f44962e1df2c648952d913c9",
+      "cell": [
+        887,
+        0,
+        1774,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        54,
+        97,
+        825,
+        854
+      ],
+      "scale": 0.6684280052840158,
+      "position": [
+        56,
+        38
+      ],
+      "target": {
+        "height": 506,
+        "x": 350.0,
+        "bottom": 609,
+        "alignment": "bounds"
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/power1-11-12-13.png",
+      "sourceSha256": "fb6e6f28f4c352c9286e81352ce882747a3b1f1e11f533b76db0159e681655d4",
+      "cell": [
+        724,
+        0,
+        1448,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        86,
+        18,
+        653,
+        689
+      ],
+      "scale": 0.8017883755588674,
+      "position": [
+        72,
+        18
+      ],
+      "target": {
+        "height": 538,
+        "x": 368.5,
+        "bottom": 570,
+        "alignment": "bounds"
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/power1-11-12-13.png",
+      "sourceSha256": "fb6e6f28f4c352c9286e81352ce882747a3b1f1e11f533b76db0159e681655d4",
+      "cell": [
+        1448,
+        0,
+        2172,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        92,
+        13,
+        642,
+        708
+      ],
+      "scale": 0.7899280575539568,
+      "position": [
+        74,
+        12
+      ],
+      "target": {
+        "height": 549,
+        "x": 364.0,
+        "bottom": 571,
+        "alignment": "bounds"
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/power1-14-15-00.png",
+      "sourceSha256": "bce57786a62fb5e06587f0b415c08a081e6f6038891a83a5e81ffac28dda9b43",
+      "cell": [
+        0,
+        0,
+        724,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        71,
+        36,
+        672,
+        650
+      ],
+      "scale": 0.8550488599348535,
+      "position": [
+        24,
+        16
+      ],
+      "target": {
+        "height": 525,
+        "x": 341.0,
+        "bottom": 571,
+        "alignment": "bounds"
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/power1-00-01.png",
+      "sourceSha256": "7f43ddd734cd1a7d453e5472002f8ef931ff1758c0f6dd3e34fee18a3b80aede",
+      "cell": [
+        0,
+        0,
+        887,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        161,
+        9,
+        725,
+        874
+      ],
+      "scale": 0.653179190751445,
+      "position": [
+        75,
+        124
+      ],
+      "target": {
+        "height": 565,
+        "x": 364.5,
+        "bottom": 695,
+        "alignment": "bounds"
+      }
+    }
+  ],
+  "sourcePipeline": "native-strips-v1",
+  "anchor": "sprites/hd720/frames/power1_loop/power1_loop_00.png"
 }

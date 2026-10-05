@@ -1,0 +1,96 @@
+[
+  {
+    "name": "pages-normal-fallback",
+    "command": [
+      "node",
+      "tools/widget_check.js",
+      "--page",
+      "docs/index.html",
+      "--fallback"
+    ],
+    "exitCode": 0,
+    "log": "output/playback-stability/pages-normal-fallback.log"
+  },
+  {
+    "name": "pages-mode-switch",
+    "command": [
+      "node",
+      "tools/widget_check.js",
+      "--page",
+      "docs/index.html",
+      "--mode-switch",
+      "--fallback"
+    ],
+    "exitCode": 0,
+    "log": "output/playback-stability/pages-mode-switch.log"
+  },
+  {
+    "name": "theme-halloween",
+    "command": [
+      "node",
+      "tools/widget_check.js",
+      "--page",
+      "docs/index.html",
+      "--fallback",
+      "--halloween"
+    ],
+    "exitCode": 0,
+    "log": "output/playback-stability/theme-halloween.log"
+  },
+  {
+    "name": "theme-seollal",
+    "command": [
+      "node",
+      "tools/widget_check.js",
+      "--page",
+      "docs/index.html",
+      "--fallback",
+      "--mode",
+      "seollal"
+    ],
+    "exitCode": 0,
+    "log": "output/playback-stability/theme-seollal.log"
+  },
+  {
+    "name": "theme-christmas",
+    "command": [
+      "node",
+      "tools/widget_check.js",
+      "--page",
+      "docs/index.html",
+      "--fallback",
+      "--mode",
+      "christmas"
+    ],
+    "exitCode": 0,
+    "log": "output/playback-stability/theme-christmas.log"
+  },
+  {
+    "name": "theme-childrensday",
+    "command": [
+      "node",
+      "tools/widget_check.js",
+      "--page",
+      "docs/index.html",
+      "--fallback",
+      "--mode",
+      "childrensday"
+    ],
+    "exitCode": 0,
+    "log": "output/playback-stability/theme-childrensday.log"
+  },
+  {
+    "name": "theme-summer",
+    "command": [
+      "node",
+      "tools/widget_check.js",
+      "--page",
+      "docs/index.html",
+      "--fallback",
+      "--mode",
+      "summer"
+    ],
+    "exitCode": 0,
+    "log": "output/playback-stability/theme-summer.log"
+  }
+]

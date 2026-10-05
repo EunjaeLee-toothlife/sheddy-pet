@@ -1,6 +1,4 @@
 {
-  "sheet": "sprites/raw/bounce1_imagegen_sheet.png",
-  "sha256": "4d84e47ce37088272c6cb250b6c3f83e95c1e0584a861dee7135449e944593e7",
   "name": "bounce1_loop",
   "grid": [
     4,
@@ -40,5 +38,567 @@
       "source": "sprites/raw/inbetweens/bounce1-11-midpoint.png",
       "sha256": "4f4318de71db3612c477949c8ae0d004f9855dc665ba77f9d6e452374de56f05"
     }
-  ]
+  ],
+  "nativeSources": [
+    {
+      "source": "sprites/raw/native-correction/bounce1-00-01.png",
+      "sourceSha256": "bba3ea37d8e17ada98a5a4222dd1b113a1b12462165ee0ae9c52da52f86e700b",
+      "cell": [
+        0,
+        0,
+        887,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        209,
+        16,
+        742,
+        876
+      ],
+      "scale": 0.736046511627907,
+      "position": [
+        8,
+        52
+      ],
+      "target": {
+        "height": 633,
+        "x": 358.0,
+        "bottom": 697,
+        "alignment": "bounds"
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/bounce1-00-01.png",
+      "sourceSha256": "bba3ea37d8e17ada98a5a4222dd1b113a1b12462165ee0ae9c52da52f86e700b",
+      "cell": [
+        887,
+        0,
+        1774,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        105,
+        29,
+        695,
+        873
+      ],
+      "scale": 0.6800947867298578,
+      "position": [
+        55,
+        104
+      ],
+      "target": {
+        "height": 574,
+        "x": 327.0,
+        "bottom": 697,
+        "alignment": "bounds"
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/bounce1-02-03-04.png",
+      "sourceSha256": "85640832af47ecddb52e1ebcdab77fa613f0b41145d4d573591aa59e9f18f4ec",
+      "cell": [
+        0,
+        0,
+        724,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        134,
+        15,
+        678,
+        703
+      ],
+      "scale": 0.8866279069767442,
+      "position": [
+        -46,
+        75
+      ],
+      "target": {
+        "height": 610,
+        "x": 313.5,
+        "bottom": 698,
+        "alignment": "bounds"
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/bounce1-02-03-04.png",
+      "sourceSha256": "85640832af47ecddb52e1ebcdab77fa613f0b41145d4d573591aa59e9f18f4ec",
+      "cell": [
+        724,
+        0,
+        1448,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        165,
+        10,
+        594,
+        703
+      ],
+      "scale": 0.9047619047619048,
+      "position": [
+        -30,
+        61
+      ],
+      "target": {
+        "height": 627,
+        "x": 314.0,
+        "bottom": 697,
+        "alignment": "bounds"
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/bounce1-02-03-04.png",
+      "sourceSha256": "85640832af47ecddb52e1ebcdab77fa613f0b41145d4d573591aa59e9f18f4ec",
+      "cell": [
+        1448,
+        0,
+        2172,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        119,
+        23,
+        580,
+        703
+      ],
+      "scale": 0.9088235294117647,
+      "position": [
+        40,
+        49
+      ],
+      "target": {
+        "height": 618,
+        "x": 357.0,
+        "bottom": 688,
+        "alignment": "bounds"
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/bounce1-05-06-07.png",
+      "sourceSha256": "f4a5b6b854c8d153abbe8283e604a4b2672f70b0070a8c92d220adb10ee3d518",
+      "cell": [
+        0,
+        0,
+        724,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        195,
+        19,
+        682,
+        698
+      ],
+      "scale": 0.865979381443299,
+      "position": [
+        -42,
+        85
+      ],
+      "target": {
+        "height": 588,
+        "x": 338.0,
+        "bottom": 689,
+        "alignment": "bounds"
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/bounce1-05-06-07.png",
+      "sourceSha256": "f4a5b6b854c8d153abbe8283e604a4b2672f70b0070a8c92d220adb10ee3d518",
+      "cell": [
+        724,
+        0,
+        1448,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        148,
+        19,
+        636,
+        698
+      ],
+      "scale": 0.9160530191458026,
+      "position": [
+        -33,
+        54
+      ],
+      "target": {
+        "height": 622,
+        "x": 326.0,
+        "bottom": 693,
+        "alignment": "bounds"
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/bounce1-05-06-07.png",
+      "sourceSha256": "f4a5b6b854c8d153abbe8283e604a4b2672f70b0070a8c92d220adb10ee3d518",
+      "cell": [
+        1448,
+        0,
+        2172,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        127,
+        11,
+        550,
+        699
+      ],
+      "scale": 0.9171511627906976,
+      "position": [
+        -44,
+        52
+      ],
+      "target": {
+        "height": 631,
+        "x": 266.0,
+        "bottom": 693,
+        "alignment": "bounds"
+      }
+    },
+    {
+      "source": "sprites/raw/inbetweens/bounce1-7-midpoint.png",
+      "sourceSha256": "df1942ba90e827b97d14c3c938aa763f4a3d6ccf06029403644412b6afb46210",
+      "cell": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "nativeBounds": [
+        225,
+        104,
+        1007,
+        1177
+      ],
+      "scale": 0.5507921714818267,
+      "position": [
+        -19,
+        36
+      ],
+      "target": {
+        "height": 591,
+        "x": 320.5,
+        "bottom": 684,
+        "alignment": "bounds"
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/bounce1-08-09-10.png",
+      "sourceSha256": "8322671ef7b12d1ccbe49eb60699ba959e47d71590fc3ef4fb6585631c50d14d",
+      "cell": [
+        0,
+        0,
+        724,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        109,
+        10,
+        668,
+        707
+      ],
+      "scale": 0.7905308464849354,
+      "position": [
+        68,
+        116
+      ],
+      "target": {
+        "height": 551,
+        "x": 374.5,
+        "bottom": 675,
+        "alignment": "bounds"
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/bounce1-08-09-10.png",
+      "sourceSha256": "8322671ef7b12d1ccbe49eb60699ba959e47d71590fc3ef4fb6585631c50d14d",
+      "cell": [
+        724,
+        0,
+        1448,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        113,
+        6,
+        611,
+        722
+      ],
+      "scale": 0.8756983240223464,
+      "position": [
+        4,
+        42
+      ],
+      "target": {
+        "height": 627,
+        "x": 321.5,
+        "bottom": 674,
+        "alignment": "bounds"
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/bounce1-08-09-10.png",
+      "sourceSha256": "8322671ef7b12d1ccbe49eb60699ba959e47d71590fc3ef4fb6585631c50d14d",
+      "cell": [
+        1448,
+        0,
+        2172,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        63,
+        9,
+        591,
+        715
+      ],
+      "scale": 0.8810198300283286,
+      "position": [
+        0,
+        48
+      ],
+      "target": {
+        "height": 622,
+        "x": 287.5,
+        "bottom": 678,
+        "alignment": "bounds"
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/bounce1-11-12-13.png",
+      "sourceSha256": "0b0acbaecfde3b21aa5d54df982f0fd12138e9aae26da2dd1f1886414e297ac4",
+      "cell": [
+        0,
+        0,
+        724,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        186,
+        16,
+        644,
+        709
+      ],
+      "scale": 0.8888888888888888,
+      "position": [
+        -98,
+        43
+      ],
+      "target": {
+        "height": 616,
+        "x": 272.0,
+        "bottom": 674,
+        "alignment": "bounds"
+      }
+    },
+    {
+      "source": "sprites/raw/inbetweens/bounce1-11-midpoint.png",
+      "sourceSha256": "4f4318de71db3612c477949c8ae0d004f9855dc665ba77f9d6e452374de56f05",
+      "cell": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "nativeBounds": [
+        348,
+        75,
+        1048,
+        1177
+      ],
+      "scale": 0.5607985480943739,
+      "position": [
+        -60,
+        8
+      ],
+      "target": {
+        "height": 618,
+        "x": 331.5,
+        "bottom": 668,
+        "alignment": "bounds"
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/bounce1-11-12-13.png",
+      "sourceSha256": "0b0acbaecfde3b21aa5d54df982f0fd12138e9aae26da2dd1f1886414e297ac4",
+      "cell": [
+        724,
+        0,
+        1448,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        168,
+        17,
+        607,
+        707
+      ],
+      "scale": 0.8985507246376812,
+      "position": [
+        42,
+        28
+      ],
+      "target": {
+        "height": 620,
+        "x": 390.0,
+        "bottom": 663,
+        "alignment": "bounds"
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/bounce1-11-12-13.png",
+      "sourceSha256": "0b0acbaecfde3b21aa5d54df982f0fd12138e9aae26da2dd1f1886414e297ac4",
+      "cell": [
+        1448,
+        0,
+        2172,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        81,
+        16,
+        578,
+        688
+      ],
+      "scale": 0.7872023809523809,
+      "position": [
+        82,
+        28
+      ],
+      "target": {
+        "height": 529,
+        "x": 341.5,
+        "bottom": 570,
+        "alignment": "bounds"
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/bounce1-14-15-00.png",
+      "sourceSha256": "65c8fef61f8bb985a0a9dc885b18732d0b72a4611888f95adc6fc2fe69341e7a",
+      "cell": [
+        0,
+        0,
+        724,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        172,
+        19,
+        677,
+        713
+      ],
+      "scale": 0.8097982708933718,
+      "position": [
+        -28,
+        85
+      ],
+      "target": {
+        "height": 562,
+        "x": 315.5,
+        "bottom": 662,
+        "alignment": "bounds"
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/bounce1-00-01.png",
+      "sourceSha256": "bba3ea37d8e17ada98a5a4222dd1b113a1b12462165ee0ae9c52da52f86e700b",
+      "cell": [
+        0,
+        0,
+        887,
+        887
+      ],
+      "nativeSize": [
+        887,
+        887
+      ],
+      "nativeBounds": [
+        209,
+        16,
+        742,
+        876
+      ],
+      "scale": 0.736046511627907,
+      "position": [
+        8,
+        52
+      ],
+      "target": {
+        "height": 633,
+        "x": 358.0,
+        "bottom": 697,
+        "alignment": "bounds"
+      }
+    }
+  ],
+  "sourcePipeline": "native-strips-v1",
+  "anchor": "sprites/hd720/frames/bounce1_loop/bounce1_loop_00.png"
 }

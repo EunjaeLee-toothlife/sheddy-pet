@@ -1,106 +1,6 @@
 {
   "name": "blackcat1_loop",
   "state": "blackcat1",
-  "sheet": "sprites/raw/halloween/blackcat1.png",
-  "sha256": "b45621c71681e9bba10888775210b13345aa131c8a346e44f5c24eb00f893587",
-  "cellBoxes": [
-    [
-      0,
-      0,
-      314,
-      318
-    ],
-    [
-      314,
-      0,
-      627,
-      319
-    ],
-    [
-      627,
-      0,
-      940,
-      317
-    ],
-    [
-      940,
-      0,
-      1254,
-      318
-    ],
-    [
-      0,
-      318,
-      314,
-      627
-    ],
-    [
-      314,
-      319,
-      627,
-      627
-    ],
-    [
-      627,
-      317,
-      940,
-      628
-    ],
-    [
-      940,
-      318,
-      1254,
-      628
-    ],
-    [
-      0,
-      627,
-      314,
-      940
-    ],
-    [
-      314,
-      627,
-      627,
-      940
-    ],
-    [
-      627,
-      628,
-      940,
-      940
-    ],
-    [
-      940,
-      628,
-      1254,
-      940
-    ],
-    [
-      0,
-      940,
-      314,
-      1254
-    ],
-    [
-      314,
-      940,
-      627,
-      1254
-    ],
-    [
-      627,
-      940,
-      940,
-      1254
-    ],
-    [
-      940,
-      940,
-      1254,
-      1254
-    ]
-  ],
   "fps": 12,
   "holds": {
     "0": 6,
@@ -120,5 +20,437 @@
     "14": 5,
     "15": 6
   },
-  "timingNote": "이동 포즈는 최소 3틱(0.25초), 시작·복귀는 6틱. 전체 길이를 늘려 동작 사이 이동도 충분히 보여준다."
+  "timingNote": "이동 포즈는 최소 3틱(0.25초), 시작·복귀는 6틱. 전체 길이를 늘려 동작 사이 이동도 충분히 보여준다.",
+  "nativeSources": [
+    {
+      "anchor": "sprites/hd720/frames/witchidle1_loop/witchidle1_loop_00.png",
+      "sourceSha256": "3d2f802044899c680182cd72a00666d4067da1e1890af240c663a2aa40de30c6"
+    },
+    {
+      "source": "sprites/raw/native-correction/blackcat1-01-02-03.png",
+      "sourceSha256": "0a40a41ecf562677191bf749a312711d9743c5abd2ddfd64613a972b1a6b7527",
+      "cell": [
+        0,
+        0,
+        724,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        113,
+        11,
+        571,
+        685
+      ],
+      "scale": 0.814540059347181,
+      "position": [
+        80,
+        121
+      ],
+      "target": {
+        "height": 549,
+        "x": 332.0,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/blackcat1-01-02-03.png",
+      "sourceSha256": "0a40a41ecf562677191bf749a312711d9743c5abd2ddfd64613a972b1a6b7527",
+      "cell": [
+        724,
+        0,
+        1448,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        99,
+        20,
+        621,
+        688
+      ],
+      "scale": 0.8308383233532934,
+      "position": [
+        84,
+        107
+      ],
+      "target": {
+        "height": 555,
+        "x": 361.0,
+        "bottom": 679
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/blackcat1-01-02-03.png",
+      "sourceSha256": "0a40a41ecf562677191bf749a312711d9743c5abd2ddfd64613a972b1a6b7527",
+      "cell": [
+        1448,
+        0,
+        2172,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        124,
+        23,
+        579,
+        691
+      ],
+      "scale": 0.8368263473053892,
+      "position": [
+        46,
+        101
+      ],
+      "target": {
+        "height": 559,
+        "x": 350.0,
+        "bottom": 679
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/blackcat1-04-05-06.png",
+      "sourceSha256": "dafaeccf2ef548b6889578cb4520a959174c2ded4f57a6dad4aacf1bb2c7a94b",
+      "cell": [
+        0,
+        0,
+        724,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        75,
+        61,
+        688,
+        658
+      ],
+      "scale": 0.7822445561139029,
+      "position": [
+        83,
+        165
+      ],
+      "target": {
+        "height": 467,
+        "x": 342.0,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/blackcat1-04-05-06.png",
+      "sourceSha256": "dafaeccf2ef548b6889578cb4520a959174c2ded4f57a6dad4aacf1bb2c7a94b",
+      "cell": [
+        724,
+        0,
+        1448,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        98,
+        73,
+        623,
+        658
+      ],
+      "scale": 0.764102564102564,
+      "position": [
+        97,
+        178
+      ],
+      "target": {
+        "height": 447,
+        "x": 331.0,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/blackcat1-04-05-06.png",
+      "sourceSha256": "dafaeccf2ef548b6889578cb4520a959174c2ded4f57a6dad4aacf1bb2c7a94b",
+      "cell": [
+        1448,
+        0,
+        2172,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        143,
+        21,
+        609,
+        696
+      ],
+      "scale": 0.7925925925925926,
+      "position": [
+        42,
+        128
+      ],
+      "target": {
+        "height": 535,
+        "x": 327.0,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/blackcat1-07-08-09.png",
+      "sourceSha256": "cd7edad8920cc3eb6f80faab11cc769cb01ee1973c24583467053af214264bb9",
+      "cell": [
+        0,
+        0,
+        724,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        96,
+        6,
+        593,
+        710
+      ],
+      "scale": 0.7840909090909091,
+      "position": [
+        82,
+        122
+      ],
+      "target": {
+        "height": 552,
+        "x": 341.0,
+        "bottom": 679
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/blackcat1-07-08-09.png",
+      "sourceSha256": "cd7edad8920cc3eb6f80faab11cc769cb01ee1973c24583467053af214264bb9",
+      "cell": [
+        724,
+        0,
+        1448,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        91,
+        11,
+        581,
+        710
+      ],
+      "scale": 0.7682403433476395,
+      "position": [
+        104,
+        136
+      ],
+      "target": {
+        "height": 537,
+        "x": 366.0,
+        "bottom": 681
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/blackcat1-07-08-09.png",
+      "sourceSha256": "cd7edad8920cc3eb6f80faab11cc769cb01ee1973c24583467053af214264bb9",
+      "cell": [
+        1448,
+        0,
+        2172,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        100,
+        14,
+        597,
+        710
+      ],
+      "scale": 0.7614942528735632,
+      "position": [
+        82,
+        138
+      ],
+      "target": {
+        "height": 530,
+        "x": 343.0,
+        "bottom": 679
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/blackcat1-10-11-12.png",
+      "sourceSha256": "37358dd398474098db84fd03b8c59ce06ca09b2e0493c589d7f61c4bcf59dd7b",
+      "cell": [
+        0,
+        0,
+        724,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        110,
+        17,
+        610,
+        696
+      ],
+      "scale": 0.7820324005891016,
+      "position": [
+        89,
+        136
+      ],
+      "target": {
+        "height": 531,
+        "x": 339.0,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/blackcat1-10-11-12.png",
+      "sourceSha256": "37358dd398474098db84fd03b8c59ce06ca09b2e0493c589d7f61c4bcf59dd7b",
+      "cell": [
+        724,
+        0,
+        1448,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        89,
+        50,
+        639,
+        665
+      ],
+      "scale": 0.7170731707317073,
+      "position": [
+        142,
+        203
+      ],
+      "target": {
+        "height": 441,
+        "x": 358.0,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/blackcat1-10-11-12.png",
+      "sourceSha256": "37358dd398474098db84fd03b8c59ce06ca09b2e0493c589d7f61c4bcf59dd7b",
+      "cell": [
+        1448,
+        0,
+        2172,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        120,
+        29,
+        649,
+        693
+      ],
+      "scale": 0.6762048192771084,
+      "position": [
+        243,
+        211
+      ],
+      "target": {
+        "height": 449,
+        "x": 475.0,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/blackcat1-13-14-00.png",
+      "sourceSha256": "34bb2b29d860c4cb13567bcf505dc519dc04a8ab6a87a0e5883b26f2ec94a2cb",
+      "cell": [
+        0,
+        0,
+        724,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        121,
+        8,
+        617,
+        710
+      ],
+      "scale": 0.688034188034188,
+      "position": [
+        109,
+        192
+      ],
+      "target": {
+        "height": 483,
+        "x": 350.0,
+        "bottom": 680
+      }
+    },
+    {
+      "source": "sprites/raw/native-correction/blackcat1-13-14-00.png",
+      "sourceSha256": "34bb2b29d860c4cb13567bcf505dc519dc04a8ab6a87a0e5883b26f2ec94a2cb",
+      "cell": [
+        724,
+        0,
+        1448,
+        724
+      ],
+      "nativeSize": [
+        724,
+        724
+      ],
+      "nativeBounds": [
+        127,
+        7,
+        596,
+        710
+      ],
+      "scale": 0.689900426742532,
+      "position": [
+        59,
+        192
+      ],
+      "target": {
+        "height": 485,
+        "x": 302.0,
+        "bottom": 681
+      }
+    },
+    {
+      "anchor": "sprites/hd720/frames/witchidle1_loop/witchidle1_loop_00.png",
+      "sourceSha256": "3d2f802044899c680182cd72a00666d4067da1e1890af240c663a2aa40de30c6"
+    }
+  ],
+  "sourcePipeline": "native-strips-v1",
+  "anchor": "sprites/hd720/frames/witchidle1_loop/witchidle1_loop_00.png"
 }
