@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="ko">
+<meta charset="utf-8">
+<title>셰디펫 방송 화면 렌더러</title>
+<style>html,body{margin:0;background:#111;overflow:hidden}canvas{width:100vw;height:100vh;object-fit:contain;display:block}</style>
+<canvas id="screen" width="1920" height="1080"></canvas>
+<script>
+"use strict";
+const WIDTH = 1920, HEIGHT = 1080, FPS = 15, DURATION = 24, TAU = Math.PI * 2;
+const scenes = {
+  lab: { file: "01-university-lab.png", name: "연구실", head: [.564,.459,.126,.166], chest: [.566,.598,.13,.08], eyes: [[.526,.463,.555,.498],[.565,.473,.596,.508]], light: [.20,.25,.30,.39], dust: true },
+  lecture: { file: "02-university-lecture.png", name: "강의실", head: [.55,.445,.072,.10], chest: [.551,.548,.076,.093], eyes: [[.519,.414,.550,.455],[.544,.416,.578,.460]], light: [.19,.29,.29,.43], dust: true },
+  cafe: { file: "03-renaissance-modern-cafe.png", name: "카페", head: [.551,.486,.085,.127], chest: [.552,.61,.077,.07], eyes: [[.505,.478,.528,.510],[.536,.485,.560,.518]], light: [.19,.31,.29,.46], dust: true, steam: [[.492,.600,.8],[.515,.532,.45]] },
+  mountain: { file: "04-midnight-mountain-walk.png", name: "달빛 산책길", head: [.341,.488,.058,.10], chest: [.346,.591,.05,.11], eyes: [[.361,.448,.373,.470],[.361,.448,.373,.470]], light: [.56,.45,.40,.50], night: true }
+};
+const canvas = document.querySelector("canvas"), ctx = canvas.getContext("2d", {alpha:false});
+const surface = document.createElement("canvas"); surface.width = WIDTH; surface.height = HEIGHT;
+const gl = surface.getContext("webgl", {alpha:false, antialias:false, preserveDrawingBuffer:true});
+if (!gl) throw new Error("WebGL을 사용할 수 없다.");
+const vertex = `attribute vec2 position; varying vec2 uv;
+void main(){gl_Position=vec4(position,0.,1.);uv=vec2(position.x*.5+.5,.5-position.y*.5);}`;
+const fragment = `precision highp float;
+varying vec2 uv; uniform sampler2D baseImage, halfImage, blinkImage;
+uniform float time, blink, night; uniform vec4 head, chest, eye1, eye2, lightArea;
+float area(vec2 p,vec4 r){vec2 q=(p-r.xy)/r.zw;return 1.-smoothstep(.20,1.,dot(q,q));}
+float patch(vec2 p,vec4 r){vec2 d=min(p-r.xy,r.zw-p);return smoothstep(0.,.0025,min(d.x,d.y));}
+void main(){
+  vec2 p=uv;
+  float h=area(p,head), b=area(p,chest);
+  float breath=sin(time*6.28318530718/6.);
+  p.y+=.00125*breath*(h*.85+b*.45);
+  p.x+=.00035*sin(time*6.28318530718/8.)*h;
+  if(night>.5){
+    float leaves=(1.-smoothstep(.12,.43,p.x))*(1.-smoothstep(.3,.64,p.y));
+    p.x+=.00032*sin(time*6.28318530718/8.+p.y*11.)*leaves;
+  }
+  vec3 color=texture2D(baseImage,p).rgb;
+  float mask=max(patch(p,eye1),patch(p,eye2));
+  // 반투명 표정 혼합은 홍채 잔상을 만들므로 세 가지 원화를 프레임별로 사용한다.
+  vec3 pose=blink>.75?texture2D(blinkImage,p).rgb:(blink>.25?texture2D(halfImage,p).rgb:color);
+  color=mix(color,pose,mask);
+  float light=area(uv,lightArea)*sin(time*6.28318530718/24.);
+  color+=light*(night>.5?vec3(.002,.003,.005):vec3(.005,.0035,.0015));
+  gl_FragColor=vec4(color,1.);
+}`;
+function shader(type, source){const s=gl.createShader(type);gl.shaderSource(s,source);gl.compileShader(s);if(!gl.getShaderParameter(s,gl.COMPILE_STATUS))throw new Error(gl.getShaderInfoLog(s));return s;}
+const program=gl.createProgram();gl.attachShader(program,shader(gl.VERTEX_SHADER,vertex));gl.attachShader(program,shader(gl.FRAGMENT_SHADER,fragment));gl.linkProgram(program);
+if(!gl.getProgramParameter(program,gl.LINK_STATUS))throw new Error(gl.getProgramInfoLog(program));
+gl.useProgram(program);
+const buffer=gl.createBuffer();gl.bindBuffer(gl.ARRAY_BUFFER,buffer);gl.bufferData(gl.ARRAY_BUFFER,new Float32Array([-1,-1,1,-1,-1,1,-1,1,1,-1,1,1]),gl.STATIC_DRAW);
+const pos=gl.getAttribLocation(program,"position");gl.enableVertexAttribArray(pos);gl.vertexAttribPointer(pos,2,gl.FLOAT,false,0,0);
+const loc=Object.fromEntries(["baseImage","halfImage","blinkImage","time","blink","night","head","chest","eye1","eye2","lightArea"].map(n=>[n,gl.getUniformLocation(program,n)]));
+const textures=[];
+function texture(image, unit){
+  gl.activeTexture(gl.TEXTURE0+unit);
+  if(textures[unit])gl.deleteTexture(textures[unit]);
+  const t=gl.createTexture();textures[unit]=t;gl.bindTexture(gl.TEXTURE_2D,t);
+  gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_MIN_FILTER,gl.LINEAR);gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_MAG_FILTER,gl.LINEAR);
+  gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_WRAP_S,gl.CLAMP_TO_EDGE);gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_WRAP_T,gl.CLAMP_TO_EDGE);
+  gl.texImage2D(gl.TEXTURE_2D,0,gl.RGB,gl.RGB,gl.UNSIGNED_BYTE,image);
+}
+function loadImage(src){return new Promise((resolve,reject)=>{const img=new Image();img.onload=()=>resolve(img);img.onerror=()=>reject(new Error(src));img.src=src;});}
+let scene;
+async function loadScene(key){
+  if(!scenes[key])throw new Error("알 수 없는 장면: "+key);
+  scene=scenes[key];
+  const [base,half,closed]=await Promise.all([loadImage("../output/imagegen/chzzk-concepts-20261008-v2/"+scene.file),loadImage("../output/broadcast/sheddy-just-chatting/assets/"+key+"-half.png"),loadImage("../output/broadcast/sheddy-just-chatting/assets/"+key+"-blink.png")]);
+  texture(base,0);texture(half,1);texture(closed,2);gl.uniform1i(loc.baseImage,0);gl.uniform1i(loc.halfImage,1);gl.uniform1i(loc.blinkImage,2);
+  for(const key of ["head","chest"])gl.uniform4fv(loc[key],scene[key]);
+  gl.uniform4fv(loc.eye1,scene.eyes[0]);gl.uniform4fv(loc.eye2,scene.eyes[1]);gl.uniform4fv(loc.lightArea,scene.light);
+  gl.uniform1f(loc.night,scene.night?1:0);renderAt(0);
+  return {key,width:WIDTH,height:HEIGHT,fps:FPS,duration:DURATION};
+}
+function blinkAt(t){
+  // 2프레임 감기 → 1프레임 유지 → 2프레임 뜨기. 마지막 구간은 완전히 열린 눈이다.
+  const tick=Math.round(t*FPS);
+  for(const start of [48,132,227,321]){
+    const offset=tick-start;
+    if(offset>=0&&offset<5)return [.5,1,1,.5,0][offset];
+  }
+  return 0;
+}
+function dust(t){
+  for(let i=0;i<22;i++){
+    const phase=(t/DURATION+i*.381966)%1;
+    const opacity=Math.sin(Math.PI*phase)**2;
+    const x=(.07+((i*0.139)%0.85))*WIDTH+Math.sin(phase*TAU+i)*13;
+    const y=(.86-phase*.79)*HEIGHT;
+    ctx.fillStyle=`rgba(255,239,201,${.13*opacity})`;ctx.beginPath();ctx.arc(x,y,i%3===0?1.5:.85,0,TAU);ctx.fill();
+  }
+}
+function steam(t, origin){
+  const [ox,oy,scale]=origin, x=ox*WIDTH,y=oy*HEIGHT;
+  for(let strand=0;strand<3;strand++){
+    for(let i=0;i<20;i++){
+      const a=i/20,b=(i+1)/20;
+      const drift=(u)=>Math.sin(u*5.7-t*TAU/8+strand*1.9)*10*u*scale;
+      const alpha=.025*Math.sin(Math.PI*a)*(1+.22*Math.sin(t*TAU/12+strand));
+      ctx.strokeStyle=`rgba(255,246,224,${alpha})`;ctx.lineWidth=(2.4+a*6)*scale;ctx.lineCap="round";
+      ctx.beginPath();ctx.moveTo(x+drift(a)+strand*2,y-a*100*scale);ctx.lineTo(x+drift(b)+strand*2,y-b*100*scale);ctx.stroke();
+    }
+  }
+}
+function stars(t){
+  for(const [i,x,y] of [[0,.533,.027],[1,.704,.094],[2,.925,.018],[3,.658,.05],[4,.861,.123],[5,.742,.19]]){
+    const pulse=(.5+.5*Math.sin(t*TAU/8+i*2.1))**2;
+    ctx.fillStyle=`rgba(228,237,255,${.28*pulse})`;ctx.beginPath();ctx.arc(x*WIDTH,y*HEIGHT,.9,0,TAU);ctx.fill();
+  }
+}
+function glow(x,y,r,color,opacity){
+  const gradient=ctx.createRadialGradient(x,y,0,x,y,r);
+  gradient.addColorStop(0,`rgba(${color},${opacity})`);
+  gradient.addColorStop(.35,`rgba(${color},${opacity*.45})`);
+  gradient.addColorStop(1,`rgba(${color},0)`);
+  ctx.fillStyle=gradient;ctx.fillRect(x-r,y-r,r*2,r*2);
+}
+function indoorLight(t){
+  // 얼굴 중심을 비워 둔, 아주 낮은 밝기의 가장자리 보케.
+  const spots=scene.steam?[[.045,.73,18],[.96,.76,22],[.08,.29,13],[.93,.15,15],[.18,.91,20]]:
+    [[.045,.73,13],[.96,.79,16],[.08,.29,10]];
+  spots.forEach(([x,y,r],i)=>{
+    const phase=t*TAU/24+i*1.8,alpha=.065*(.5+.5*Math.sin(phase))**2;
+    glow(x*WIDTH+Math.sin(phase)*10,y*HEIGHT+Math.cos(phase)*8,r,"255,222,153",alpha);
+  });
+  const strength=.008+.003*Math.sin(t*TAU/24);
+  const beam=ctx.createLinearGradient(WIDTH*.08,0,WIDTH*.46,HEIGHT*.83);
+  beam.addColorStop(0,`rgba(255,230,174,${strength})`);
+  beam.addColorStop(.65,`rgba(255,230,174,${strength*.3})`);
+  beam.addColorStop(1,"rgba(255,230,174,0)");
+  ctx.fillStyle=beam;ctx.beginPath();ctx.moveTo(WIDTH*.08,0);ctx.lineTo(WIDTH*.12,0);ctx.lineTo(WIDTH*.52,HEIGHT*.84);ctx.lineTo(WIDTH*.43,HEIGHT*.84);ctx.closePath();ctx.fill();
+}
+function fireflies(t){
+  // 안개를 다시 덮지 않고 숲 가장자리에 작은 반딧불만 드문드문 놓는다.
+  [[.105,.68],[.17,.83],[.255,.65],[.72,.89],[.90,.72],[.945,.83]].forEach(([x,y],i)=>{
+    const phase=t*TAU/24+i*2.3;
+    const alpha=.18*(.5+.5*Math.sin(phase*2+i))**3;
+    const px=x*WIDTH+Math.sin(phase)*14,py=y*HEIGHT+Math.cos(phase*2)*7;
+    glow(px,py,7,"230,237,163",alpha*.7);
+    ctx.fillStyle=`rgba(246,245,187,${alpha})`;ctx.beginPath();ctx.arc(px,py,1.2,0,TAU);ctx.fill();
+  });
+}
+function renderAt(seconds, forcedBlink){
+  if(!scene)return;
+  const t=((seconds%DURATION)+DURATION)%DURATION;
+  gl.uniform1f(loc.time,t);gl.uniform1f(loc.blink,forcedBlink===undefined?blinkAt(t):forcedBlink);
+  gl.drawArrays(gl.TRIANGLES,0,6);ctx.drawImage(surface,0,0);
+  if(scene.dust){dust(t);indoorLight(t);}
+  if(scene.steam)for(const origin of scene.steam)steam(t,origin);
+  if(scene.night){stars(t);fireflies(t);}
+}
+window.broadcast={loadScene,renderAt,scenes,fps:FPS,duration:DURATION,canvas};
+window.ready=loadScene(new URLSearchParams(location.search).get("scene")||"lab");
+</script>
+</html>

@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>셰디펫 · Just Chatting</title>
+<style>
+:root{color-scheme:dark;font-family:"Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif;background:#121513;color:#eee9dc}*{box-sizing:border-box}body{margin:0;padding:30px clamp(18px,4vw,64px) 36px}header{display:flex;justify-content:space-between;align-items:center;gap:20px;margin-bottom:24px}.brand{font-size:12px;letter-spacing:2px;color:#bec591}h1{font-size:clamp(21px,3vw,32px);font-weight:500;margin:9px 0 0;letter-spacing:-1px}.spec{font-size:12px;line-height:1.9;color:#a5aea4;text-align:right}.player{overflow:hidden;aspect-ratio:16/9;background:#090b09;border:1px solid #30382d;border-radius:8px;box-shadow:0 12px 48px #0005}video{width:100%;height:100%;display:block;object-fit:contain}nav{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:18px 0 24px}button{font:inherit;text-align:left;border:1px solid #343b31;color:#e3e3d7;background:#1b201a;padding:16px 18px;border-radius:7px;cursor:pointer;transition:background .2s,border-color .2s}button:hover{background:#282f24}button[aria-pressed=true]{background:#323c28;border-color:#a4b478}button:focus-visible,a:focus-visible{outline:2px solid #dae5ae;outline-offset:4px}button strong{display:block;font-size:15px;font-weight:500}button span{display:block;margin-top:7px;font-size:12px;color:#aab39f}footer{display:flex;justify-content:space-between;gap:25px;align-items:start;font-size:13px;color:#aab0a5;line-height:1.8}footer p{margin:0}a{color:#d5dfa6;text-underline-offset:4px}.error{color:#ffb7a6;min-height:1.5em;margin:10px 0} @media(max-width:650px){body{padding:18px 14px}nav{grid-template-columns:repeat(2,1fr)}.spec{font-size:10px}footer{flex-direction:column}button{padding:12px}.player{border-radius:4px}}
+</style>
+</head>
+<body>
+<header><div><div class="brand">SHEDDY PET / JUST CHATTING</div><h1>셰디펫의 조용한 하루</h1></div><div class="spec">1920 × 1080 · 15 fps<br>24초 반복 · 무음</div></header>
+<main>
+<div class="player"><video id="video" src="sheddy-cafe-1080p15.mp4" autoplay muted loop playsinline controls preload="auto" aria-label="셰디펫 카페 애니메이션"></video></div>
+<nav aria-label="장면 선택">
+<button type="button" data-scene="lab" aria-pressed="false"><strong>01 · 연구실</strong><span>노을빛 · 먼지 · 조용한 호흡</span></button>
+<button type="button" data-scene="lecture" aria-pressed="false"><strong>02 · 강의실</strong><span>햇살 · 빛 번짐 · 눈 깜빡임</span></button>
+<button type="button" data-scene="cafe" aria-pressed="true"><strong>03 · 르네상스 카페</strong><span>보케 · 따뜻한 빛 · 찻잔의 김</span></button>
+<button type="button" data-scene="mountain" aria-pressed="false"><strong>04 · 달빛 산책길</strong><span>산들바람 · 별빛 · 반딧불</span></button>
+</nav>
+<p id="error" class="error" role="status"></p>
+</main>
+<footer><p>OBS에서 <strong>미디어 소스 → 로컬 파일 → 반복</strong>을 켜면 된다.<br>채팅창과 카메라는 OBS에서 영상 위에 배치하면 된다. <a href="OBS-사용법.txt">사용법</a></p><p><a id="download" href="sheddy-cafe-1080p15.mp4" download>현재 장면 MP4 저장</a><br><a href="https://obsproject.com/kb/media-sources" target="_blank" rel="noreferrer">OBS 미디어 소스 안내</a></p></footer>
+<script>
+const video=document.querySelector('video'),download=document.querySelector('#download'),error=document.querySelector('#error');
+const names={lab:'연구실',lecture:'강의실',cafe:'르네상스 카페',mountain:'달빛 산책길'};
+let selection=0;
+async function selectScene(key){
+  if(!Object.hasOwn(names,key))return;
+  const token=++selection;error.textContent='';
+  for(const button of document.querySelectorAll('nav button'))button.setAttribute('aria-pressed',String(button.dataset.scene===key));
+  const file=`sheddy-${key}-1080p15.mp4`;video.src=file;download.href=file;
+  video.setAttribute('aria-label',`셰디펫 ${names[key]} 애니메이션`);
+  try{await video.play();}catch(e){if(token===selection&&e.name!=='AbortError')error.textContent='재생 버튼을 누르면 미리보기가 시작된다.';}
+}
+for(const button of document.querySelectorAll('nav button'))button.addEventListener('click',()=>selectScene(button.dataset.scene));
+video.addEventListener('error',()=>{error.textContent='MP4 파일이 이 HTML 파일과 같은 폴더에 있는지 확인해줘.';});
+const initial=new URLSearchParams(location.search).get('scene');if(initial)selectScene(initial);
+</script>
+</body></html>
