@@ -1,0 +1,25 @@
+{
+  "tool": "built-in image_gen",
+  "prompts": [
+    {
+      "key": "lab",
+      "file": "01-university-lab.png",
+      "prompt": "Use case: identity-preserve, highly localized eyelid edit for a calm animation loop.\nEdit this exact image. Change ONLY Sheddy's visible eye(s) into gently CLOSED eyelids at the same eye positions for a natural brief blink. Sheddy is the blonde mascot in the white lab coat. Use delicate relaxed curved brown eyelid lines matching the original anime linework, not squeezed shut, not exaggerated happy crescents.\nPreserve exact framing, canvas aspect ratio, camera, head angle, head silhouette, face position, eyebrows, mouth expression, nose, cheeks, skin lighting, bangs, long blonde hair, lemon hair clip, outfit, hands, pose, all props, all background architecture/landscape, lighting, colors and texture. Do not move the head or alter the smile. No eyelashes dangling onto the cheeks. No other changes, no captions or extra panels.\nThis is a matching blink donor image; alignment with the original eyes is more important than any other improvement. Retain 16:9 widescreen composition and original resolution. Full original scene, NOT a close-up."
+    },
+    {
+      "key": "lecture",
+      "file": "02-university-lecture.png",
+      "prompt": "Use case: identity-preserve, highly localized eyelid edit for a calm animation loop.\nEdit this exact image. Change ONLY Sheddy's visible eye(s) into gently CLOSED eyelids at the same eye positions for a natural brief blink. Sheddy is the blonde mascot in the white lab coat. Use delicate relaxed curved brown eyelid lines matching the original anime linework, not squeezed shut, not exaggerated happy crescents.\nPreserve exact framing, canvas aspect ratio, camera, head angle, head silhouette, face position, eyebrows, mouth expression, nose, cheeks, skin lighting, bangs, long blonde hair, lemon hair clip, outfit, hands, pose, all props, all background architecture/landscape, lighting, colors and texture. Do not move the head or alter the smile. No eyelashes dangling onto the cheeks. No other changes, no captions or extra panels.\nThis is a matching blink donor image; alignment with the original eyes is more important than any other improvement. Retain 16:9 widescreen composition and original resolution. Full original scene, NOT a close-up."
+    },
+    {
+      "key": "cafe",
+      "file": "03-renaissance-modern-cafe.png",
+      "prompt": "Use case: identity-preserve, highly localized eyelid edit for a calm animation loop.\nEdit this exact image. Change ONLY Sheddy's visible eye(s) into gently CLOSED eyelids at the same eye positions for a natural brief blink. Sheddy is the blonde mascot in the white lab coat. Use delicate relaxed curved brown eyelid lines matching the original anime linework, not squeezed shut, not exaggerated happy crescents.\nPreserve exact framing, canvas aspect ratio, camera, head angle, head silhouette, face position, eyebrows, mouth expression, nose, cheeks, skin lighting, bangs, long blonde hair, lemon hair clip, outfit, hands, pose, all props, all background architecture/landscape, lighting, colors and texture. Do not move the head or alter the smile. No eyelashes dangling onto the cheeks. No other changes, no captions or extra panels.\nThis is a matching blink donor image; alignment with the original eyes is more important than any other improvement. Retain 16:9 widescreen composition and original resolution. Full original scene, NOT a close-up."
+    },
+    {
+      "key": "mountain",
+      "file": "04-midnight-mountain-walk.png",
+      "prompt": "Use case: identity-preserve, highly localized eyelid edit for a calm animation loop.\nEdit this exact image. Change ONLY Sheddy's visible eye(s) into gently CLOSED eyelids at the same eye positions for a natural brief blink. Sheddy is the blonde mascot in the white lab coat. Use delicate relaxed curved brown eyelid lines matching the original anime linework, not squeezed shut, not exaggerated happy crescents.\nPreserve exact framing, canvas aspect ratio, camera, head angle, head silhouette, face position, eyebrows, mouth expression, nose, cheeks, skin lighting, bangs, long blonde hair, lemon hair clip, outfit, hands, pose, all props, all background architecture/landscape, lighting, colors and texture. Do not move the head or alter the smile. No eyelashes dangling onto the cheeks. No other changes, no captions or extra panels.\nThis is a matching blink donor image; alignment with the original eyes is more important than any other improvement. Retain 16:9 widescreen composition and original resolution. Full original scene, NOT a close-up. She is walking away in side/rear three-quarter view; close only the small visible profile eye, do not turn her head or body."
+    }
+  ]
+}

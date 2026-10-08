@@ -23,3 +23,9 @@ PLAN_LOG.md
 sprites/rebuilt/inputs/
 sprites/rebuilt/qa/
 sprites/hd720/qa/
+
+# 방송 영상의 재생성 가능한 전수 검수 이미지
+output/broadcast/sheddy-just-chatting/qa/*.png
+output/broadcast/sheddy-just-chatting/qa/*-encoded-check.jpg
+output/broadcast/sheddy-just-chatting/qa/render-checks.json
+output/broadcast/sheddy-just-chatting/qa/frame-review/*/all-frames-*.jpg

@@ -185,6 +185,31 @@ window.postMessage({ type: "pet-state", state: "happy1" }, "*");     // iframe �
 new BroadcastChannel("sheddy-pet").postMessage("happy1");            // 같은 출처의 컨트롤 페이지
 ```
 
+## Just Chatting 방송 화면
+
+셰디펫이 등장하는 연구실·강의실·르네상스 카페·달빛 산책길의 풀스크린 배경이다.
+각각 **1920×1080, 고정 15fps, 24초/360프레임, 무음 H.264 MP4**이며 반복해서 사용한다.
+호흡·눈 깜빡임과 잔잔한 먼지·빛·보케·김·별빛·반딧불을 더했다.
+
+- [전체 영상·미리보기·사용법 ZIP](output/broadcast/sheddy-just-chatting-1080p15.zip)
+- [장면 선택 미리보기](output/broadcast/sheddy-just-chatting/preview.html) — 로컬 브라우저에서 열기
+- [OBS 사용법](output/broadcast/sheddy-just-chatting/OBS-사용법.txt)
+- [프레임 전수 검수 기록](reports/broadcast/review.md)
+
+OBS의 **미디어 소스 → 로컬 파일**로 MP4를 선택하고 **반복**을 켠다.
+채팅·카메라·마이크는 별도 소스로 배치한다. 기존 위젯의 모션 선택·마이크 연동과는 독립된 영상이다.
+입력 콘셉트는 약 1672×941이며 Full HD로 맞춘 결과물이다. 발걸음·필기·립싱크 같은 큰 동작은 포함하지 않는다.
+
+```bash
+node tools/render_broadcast.js          # 원본 그림·표정에서 네 영상 재생성
+python3 tools/audit_broadcast.py        # 1,440프레임 검사, 검수판과 ZIP 생성
+```
+
+재생성에는 Node 22+, Chrome, FFmpeg/FFprobe와 Python Pillow가 필요하다.
+`node tools/render_broadcast.js --qa`는 정지 검수판만 생성한다.
+전수 검수판은 `output/broadcast/sheddy-just-chatting/qa/frame-review/`에 생성되며,
+프레임별 해시·PTS·표정 비교값과 눈 깜빡임 확대판은 저장소에도 보관한다.
+
 ## 동작 방식
 
 - **상태 머신 + 2중 가중치 주사위.** loop 한 사이클이 끝날 때마다 주사위를 굴린다. 먼저 분류(`CATEGORY_WEIGHTS`:
