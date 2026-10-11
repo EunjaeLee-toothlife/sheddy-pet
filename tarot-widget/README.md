@@ -7,12 +7,12 @@
 Pages 게시 후 주소는 `https://eunjaelee-toothlife.github.io/sheddy-pet/tarot-widget/`이다. 이 주소는 배포본이 `master`에 반영되고 Pages 게시가 끝난 뒤 사용할 수 있다.
 
 1. OBS에 **브라우저** 소스를 추가하고 위 주소를 입력한다.
-2. 소스 크기를 **800 × 600**으로 설정한다. URL에 `preview=1`을 넣지 않는다. 녹색 타로 테이블 바깥은 투명하며, 테이블 안쪽에는 읽기 쉬운 어두운 배경이 표시된다.
-3. 소스의 **변환 → 변환 편집 → 하단 자르기**를 **150px**로 설정한다. 남는 방송 영역은 **800 × 450**이다. ‘자르기/패딩’ 필터 대신 장면의 변환 자르기를 사용한다.
+2. 소스 크기를 **1200 × 900**으로 설정한다. URL에 `preview=1`을 넣지 않는다. 녹색 타로 테이블 바깥은 투명하며, 테이블 안쪽에는 읽기 쉬운 어두운 배경이 표시된다.
+3. 소스의 **변환 → 변환 편집 → 하단 자르기**를 **225px**로 설정한다. 남는 방송 영역은 **1200 × 675**이다. ‘자르기/패딩’ 필터 대신 장면의 변환 자르기를 사용한다.
 4. 소스 우클릭 → **상호작용**에서 위쪽 카드와 아래쪽 패널을 클릭한다. 조작 패널은 잘라낸 하단에 있으므로 송출되지 않는다.
 5. ‘소스가 보이지 않을 때 종료’, ‘장면이 활성화될 때 브라우저 새로고침’은 끈 상태를 권장한다. 진행 상태는 같은 OBS 브라우저 저장소에서 복원된다.
 
-창의 스크롤 위치를 바꾸면 송출 화면에도 영향을 준다. 800 × 600 설정에서는 전체 위젯이 한 화면에 들어가며, 패널에 추가 알림이 많을 때만 패널 내부에서 스크롤된다. 일반 브라우저에서도 최대 너비 800px로 표시한다.
+창의 스크롤 위치를 바꾸면 송출 화면에도 영향을 준다. 1200 × 900 설정에서는 전체 위젯이 한 화면에 들어가며, 패널에 추가 알림이 많을 때만 패널 내부에서 스크롤된다. 일반 브라우저에서도 최대 너비 1200px로 표시한다.
 
 ## 점보기 흐름
 
@@ -53,6 +53,7 @@ node tools/build_tarot_widget.cjs --pages
 node tools/check_tarot_widget.cjs
 node tools/check_tarot_widget.cjs --pages
 node tools/check_tarot_salon.cjs --pages
+node tools/check_tarot_salon.cjs --pages --width=800
 node tools/record_tarot_motion.cjs --pages
 node tools/check_tarot_widget_assets.cjs
 node tools/widget_check.js
