@@ -1,8 +1,8 @@
 @charset "UTF-8";
-/* 800×600 소스의 위쪽 800×450만 송출하고 하단 150px은 잘라낸다. */
+/* 1200×900 소스의 위쪽 1200×675만 송출하고 하단 225px은 잘라낸다. */
 :root{color-scheme:dark;--motion:1;--ink:#f4e8cf;--muted:#bdad8d;--gold:#d9bb76}
 html,body{margin:0;min-height:0;background:transparent;background-image:none;overflow-x:hidden}
-body{width:min(100%,800px);margin:0 auto;font:14px/1.5 "Malgun Gothic",sans-serif}
+body{width:min(100%,1200px);margin:0 auto;font:14px/1.5 "Malgun Gothic",sans-serif;container-type:inline-size}
 button:disabled{cursor:default}
 button:focus-visible,input:focus-visible{outline:3px solid #f5d48a;outline-offset:5px}
 .stage{width:100%;aspect-ratio:16/9;position:relative;container-type:inline-size;overflow:hidden;color:var(--ink)}
@@ -47,11 +47,11 @@ button:focus-visible,input:focus-visible{outline:3px solid #f5d48a;outline-offse
 .widget-card{width:100%;margin:0;padding:0}
 .widget-card .card-button{border-radius:10px}
 .widget-card .card-button:disabled{opacity:1;cursor:default}
-/* 공개할 때 뒤집기나 날아오는 효과 없이 앞면으로 즉시 교체한다. */
+/* 원화의 회전은 고정하고 공개 연출은 별도의 show-turn 레이어에서 처리한다. */
 .widget-card .card-rotor,.widget-card.revealed .card-rotor{aspect-ratio:7/12;transform:none;transition:none;transform-style:flat}
 .widget-card .card-front,.widget-card .card-back{transform:none;backface-visibility:visible;border-radius:10px;box-shadow:0 12px 28px #0005}
 .widget-card .card-front:after,.widget-card .card-back:after{border-radius:5px}
-.controller{height:150px;padding:10px 14px;background:#12221e;color:#f3e7cd;border-top:1px solid #9e834566;box-sizing:border-box;overflow:auto}
+.controller{height:18.75cqw;padding:10px 14px;background:#12221e;color:#f3e7cd;border-top:1px solid #9e834566;box-sizing:border-box;overflow:auto}
 .control-top{display:flex;align-items:center;justify-content:space-between;gap:12px}
 .control-top strong{color:#e7cb8d;font-size:14px;font-weight:500}
 #status{margin:4px 0 0;font-size:12px;color:#b9aa8c}
