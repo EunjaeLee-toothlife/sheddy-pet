@@ -1,0 +1,2284 @@
+{
+  "version": 1,
+  "back": "frame-study/art/a-classic-back-v1.webp",
+  "cards": [
+    {
+      "id": "major-00",
+      "numeral": "0",
+      "title": "THE FOOL",
+      "korean": "바보",
+      "tone": "GOLDEN DAWN",
+      "atlas": "art/fool-redrawn-atlas.webp",
+      "description": "흰 장미와 작은 친구, 그리고 첫걸음.",
+      "effect": "sun-halo",
+      "category": "MAJOR ARCANA"
+    },
+    {
+      "id": "major-01",
+      "numeral": "I",
+      "title": "THE MAGICIAN",
+      "korean": "마법사",
+      "tone": "LEMON MAGIC",
+      "atlas": "art/magician-atlas.webp",
+      "description": "위로 든 지팡이와 네 수트의 상징.",
+      "effect": "magic-light",
+      "category": "MAJOR ARCANA"
+    },
+    {
+      "id": "major-02",
+      "numeral": "II",
+      "title": "THE HIGH PRIESTESS",
+      "korean": "여사제",
+      "tone": "MIDNIGHT VEIL",
+      "description": "검고 흰 기둥, 석류 장막과 초승달. 고요한 달빛 속 여사제.",
+      "effect": "moon",
+      "atlas": "art/major-02-atlas-v2.webp",
+      "category": "MAJOR ARCANA"
+    },
+    {
+      "id": "major-03",
+      "numeral": "III",
+      "title": "THE EMPRESS",
+      "korean": "여황제",
+      "tone": "GOLDEN HARVEST",
+      "description": "별 왕관과 밀밭, 금빛 홀을 든 여황제.",
+      "effect": "petal",
+      "atlas": "art/major-03-atlas.webp",
+      "category": "MAJOR ARCANA"
+    },
+    {
+      "id": "major-04",
+      "numeral": "IV",
+      "title": "THE EMPEROR",
+      "korean": "황제",
+      "tone": "STONE & GOLD",
+      "description": "양 머리 왕좌, 홀과 보주가 만드는 단단한 중심.",
+      "effect": "glow",
+      "atlas": "art/major-04-atlas.webp",
+      "category": "MAJOR ARCANA"
+    },
+    {
+      "id": "major-05",
+      "numeral": "V",
+      "title": "THE HIEROPHANT",
+      "korean": "교황",
+      "tone": "IVORY RITUAL",
+      "description": "세 겹 왕관과 교차한 열쇠, 두 제자를 맞는 교황.",
+      "effect": "glow",
+      "atlas": "art/major-05-atlas.webp",
+      "category": "MAJOR ARCANA"
+    },
+    {
+      "id": "major-06",
+      "numeral": "VI",
+      "title": "THE LOVERS",
+      "korean": "연인",
+      "tone": "TENDER DAWN",
+      "description": "두 사람과 축복의 천사, 선택과 조화를 담은 연인.",
+      "effect": "petal",
+      "atlas": "art/major-06-atlas.webp",
+      "category": "MAJOR ARCANA"
+    },
+    {
+      "id": "major-07",
+      "numeral": "VII",
+      "title": "THE CHARIOT",
+      "korean": "전차",
+      "tone": "STAR CANOPY",
+      "description": "별 천막 아래 전차와 검고 흰 스핑크스.",
+      "effect": "glow",
+      "atlas": "art/major-07-atlas.webp",
+      "category": "MAJOR ARCANA"
+    },
+    {
+      "id": "major-08",
+      "numeral": "VIII",
+      "title": "STRENGTH",
+      "korean": "힘",
+      "tone": "GENTLE COURAGE",
+      "description": "사자를 다정히 어루만지는 레몬과 무한대의 상징.",
+      "effect": "petal",
+      "atlas": "art/major-08-atlas.webp",
+      "category": "MAJOR ARCANA"
+    },
+    {
+      "id": "major-09",
+      "numeral": "IX",
+      "title": "THE HERMIT",
+      "korean": "은둔자",
+      "tone": "LANTERN IN SNOW",
+      "description": "설산 위의 등불, 별빛을 품은 은둔자.",
+      "effect": "lantern",
+      "atlas": "art/major-09-atlas-v3.webp",
+      "category": "MAJOR ARCANA"
+    },
+    {
+      "id": "major-10",
+      "numeral": "X",
+      "title": "WHEEL OF FORTUNE",
+      "korean": "운명의 수레바퀴",
+      "tone": "TURNING HEAVENS",
+      "description": "수레바퀴와 네 모서리의 수호자, 변화의 흐름.",
+      "effect": "wheel",
+      "atlas": "art/major-10-atlas-v3.webp",
+      "foreground_clip": "inset(0 0 0 50.41436464%)",
+      "overlays": [
+        {
+          "file": "art/major-10-corner-symbols-v2.webp",
+          "clip": "inset(0 50% 0 0)",
+          "scale": 0.7,
+          "origin": "0% 100%",
+          "description": "책을 든 날개 달린 황소"
+        },
+        {
+          "file": "art/major-10-corner-symbols-v2.webp",
+          "clip": "inset(0 0 0 50%)",
+          "scale": 0.7,
+          "origin": "100% 100%",
+          "description": "책을 든 날개 달린 사자"
+        }
+      ],
+      "category": "MAJOR ARCANA"
+    },
+    {
+      "id": "major-11",
+      "numeral": "XI",
+      "title": "JUSTICE",
+      "korean": "정의",
+      "tone": "BALANCED LIGHT",
+      "description": "곧게 든 검과 수평의 저울, 공정한 판단.",
+      "effect": "glow",
+      "atlas": "art/major-11-atlas.webp",
+      "category": "MAJOR ARCANA"
+    },
+    {
+      "id": "major-12",
+      "numeral": "XII",
+      "title": "THE HANGED MAN",
+      "korean": "매달린 사람",
+      "tone": "QUIET PERSPECTIVE",
+      "description": "한쪽 발로 매달린 레몬, 시선을 바꾸는 고요한 순간.",
+      "effect": "halo",
+      "atlas": "art/major-12-atlas-v2.webp",
+      "foreground_clip": "inset(0 0 0 51.24395301%)",
+      "category": "MAJOR ARCANA"
+    },
+    {
+      "id": "major-13",
+      "numeral": "XIII",
+      "title": "DEATH",
+      "korean": "죽음",
+      "tone": "A NEW DAWN",
+      "description": "왕의 종결과 서로 다른 응답, 두 탑 사이로 떠오르는 해.",
+      "effect": "petal",
+      "atlas": "art/major-13-atlas-v2.webp",
+      "foreground_clip": "inset(0 0 0 50.20718232%)",
+      "foreground_scale": 0.68,
+      "foreground_origin": "0% 96%",
+      "foreground_offset_y": -15,
+      "category": "MAJOR ARCANA"
+    },
+    {
+      "id": "major-14",
+      "numeral": "XIV",
+      "title": "TEMPERANCE",
+      "korean": "절제",
+      "tone": "FLOWING HARMONY",
+      "description": "두 잔 사이로 흐르는 물, 물가와 땅의 균형.",
+      "effect": "water",
+      "atlas": "art/major-14-atlas-v3.webp",
+      "fixed_foreground": {
+        "split": 82,
+        "role": "물가·육지의 발 접점 고정"
+      },
+      "category": "MAJOR ARCANA"
+    },
+    {
+      "id": "major-15",
+      "numeral": "XV",
+      "title": "THE DEVIL",
+      "korean": "악마",
+      "tone": "VELVET SHADOW",
+      "description": "뿔과 날개, 느슨한 사슬로 표현한 악마의 상징.",
+      "effect": "ember",
+      "atlas": "art/major-15-atlas.webp",
+      "category": "MAJOR ARCANA"
+    },
+    {
+      "id": "major-16",
+      "numeral": "XVI",
+      "title": "THE TOWER",
+      "korean": "탑",
+      "tone": "A SUDDEN SPARK",
+      "description": "번개와 흔들린 왕관, 갑작스러운 변화를 담은 탑.",
+      "effect": "lightning",
+      "atlas": "art/major-16-atlas-v4.webp",
+      "foreground_clip": "inset(0 0 0 50.27662517%)",
+      "foreground_scale": 0.66,
+      "foreground_origin": "90% 94%",
+      "category": "MAJOR ARCANA"
+    },
+    {
+      "id": "major-17",
+      "numeral": "XVII",
+      "title": "THE STAR",
+      "korean": "별",
+      "tone": "HOPE BY WATER",
+      "description": "큰 별과 일곱 작은 별, 두 물병에 담은 희망.",
+      "effect": "water",
+      "atlas": "art/major-17-atlas-v4.webp",
+      "fixed_foreground": {
+        "split": 88,
+        "role": "무릎·얕은 물·붓는 물의 착지점 고정"
+      },
+      "category": "MAJOR ARCANA"
+    },
+    {
+      "id": "major-18",
+      "numeral": "XVIII",
+      "title": "THE MOON",
+      "korean": "달",
+      "tone": "DREAMING PATH",
+      "description": "달과 두 탑, 개와 늑대가 지키는 밤의 길.",
+      "effect": "moon",
+      "atlas": "art/major-18-atlas-v4.webp",
+      "foreground_clip": "inset(0 0 0 50.69060773%)",
+      "foreground_scale": 0.82,
+      "foreground_origin": "85% 94%",
+      "scene_file": "art/major-18-path-scenery-v2.webp",
+      "category": "MAJOR ARCANA"
+    },
+    {
+      "id": "major-19",
+      "numeral": "XIX",
+      "title": "THE SUN",
+      "korean": "태양",
+      "tone": "LEMON SUMMER",
+      "description": "햇살과 해바라기, 흰 말을 타고 든 붉은 깃발.",
+      "effect": "sun",
+      "atlas": "art/major-19-atlas.webp",
+      "foreground_clip": "inset(0 0 0 50.27624309%)",
+      "foreground_scale": 0.9,
+      "foreground_origin": "50% 96%",
+      "category": "MAJOR ARCANA"
+    },
+    {
+      "id": "major-20",
+      "numeral": "XX",
+      "title": "JUDGEMENT",
+      "korean": "심판",
+      "tone": "THE AWAKENING",
+      "description": "나팔과 붉은 십자 깃발, 깨어나는 사람들.",
+      "effect": "glow",
+      "atlas": "art/major-20-atlas.webp",
+      "foreground_clip": "inset(0 0 0 50.20718232%)",
+      "fixed_foreground": {
+        "split": 86,
+        "role": "인물이 일어나는 석관은 전경 하단에만 고정"
+      },
+      "scene_atlas": "art/major-20-atlas-v2.webp",
+      "category": "MAJOR ARCANA"
+    },
+    {
+      "id": "major-21",
+      "numeral": "XXI",
+      "title": "THE WORLD",
+      "korean": "세계",
+      "tone": "A COMPLETE CIRCLE",
+      "description": "월계수 고리와 두 지팡이, 여행의 완성과 새로운 시작.",
+      "effect": "petal",
+      "atlas": "art/major-21-atlas.webp",
+      "category": "MAJOR ARCANA"
+    },
+    {
+      "id": "wands-01",
+      "numeral": "ACE",
+      "title": "ACE OF WANDS",
+      "korean": "완드 에이스",
+      "tone": "FIRST SPARK",
+      "description": "구름에서 나온 손과 새싹이 돋은 지팡이 하나. 인물을 추가하지 않았습니다.",
+      "effect": "none",
+      "atlas": "art/wands-01-atlas.webp",
+      "category": "MINOR · WANDS",
+      "foreground_clip": "inset(0 0 0 50.55248619%)"
+    },
+    {
+      "id": "wands-02",
+      "numeral": "II",
+      "title": "TWO OF WANDS",
+      "korean": "완드 2",
+      "tone": "BEYOND THE WALL",
+      "description": "성벽 위에서 지구본을 바라보며 바깥세계를 가늠하는 모습. 지팡이 둘 중 하나는 고정되어 있습니다.",
+      "effect": "none",
+      "atlas": "art/wands-02-atlas-v2.webp",
+      "category": "MINOR · WANDS",
+      "foreground_clip": "inset(0 0 0 51.03591160%)"
+    },
+    {
+      "id": "wands-03",
+      "numeral": "III",
+      "title": "THREE OF WANDS",
+      "korean": "완드 3",
+      "tone": "SHIPS ON THE HORIZON",
+      "description": "등을 보인 인물이 바다의 배들을 바라봅니다. 세 지팡이와 수평선의 전망을 남겼습니다.",
+      "effect": "none",
+      "atlas": "art/wands-03-atlas.webp",
+      "category": "MINOR · WANDS",
+      "foreground_clip": "inset(0 0 0 50.55248619%)",
+      "foreground_scale": 0.6,
+      "foreground_origin": "52% 96%"
+    },
+    {
+      "id": "wands-04",
+      "numeral": "IV",
+      "title": "FOUR OF WANDS",
+      "korean": "완드 4",
+      "tone": "A SHARED WELCOME",
+      "description": "네 지팡이에 걸린 꽃과 과일 화환, 꽃다발을 든 두 축하 인물과 성의 공동체.",
+      "effect": "none",
+      "atlas": "art/wands-04-atlas.webp",
+      "category": "MINOR · WANDS",
+      "foreground_clip": "inset(0 0 0 50.55248619%)"
+    },
+    {
+      "id": "wands-05",
+      "numeral": "V",
+      "title": "FIVE OF WANDS",
+      "korean": "완드 5",
+      "tone": "VOICES CROSSING",
+      "description": "다섯 인물이 각자의 지팡이를 맞대는 경쟁 장면. 전투보다 혼선과 힘겨루기가 읽히게 했습니다.",
+      "effect": "none",
+      "atlas": "art/wands-05-atlas.webp",
+      "category": "MINOR · WANDS",
+      "foreground_clip": "inset(0 0 0 50.55248619%)",
+      "foreground_scale": 0.88,
+      "foreground_origin": "50% 96%"
+    },
+    {
+      "id": "wands-06",
+      "numeral": "VI",
+      "title": "SIX OF WANDS",
+      "korean": "완드 6",
+      "tone": "A VISIBLE VICTORY",
+      "description": "흰 말을 탄 월계관의 인물과 다섯 동행 지팡이. 손의 지팡이에도 승리의 화환이 있습니다.",
+      "effect": "none",
+      "atlas": "art/wands-06-atlas.webp",
+      "category": "MINOR · WANDS",
+      "foreground_clip": "inset(0 0 0 50.55248619%)"
+    },
+    {
+      "id": "wands-07",
+      "numeral": "VII",
+      "title": "SEVEN OF WANDS",
+      "korean": "완드 7",
+      "tone": "HOLDING HIGH GROUND",
+      "description": "높은 지형의 방어자 한 명이 아래에서 올라오는 여섯 지팡이에 맞섭니다.",
+      "effect": "none",
+      "atlas": "art/wands-07-atlas.webp",
+      "category": "MINOR · WANDS",
+      "foreground_clip": "inset(0 0 0 50.55248619%)"
+    },
+    {
+      "id": "wands-08",
+      "numeral": "VIII",
+      "title": "EIGHT OF WANDS",
+      "korean": "완드 8",
+      "tone": "SWIFTLY THROUGH THE AIR",
+      "description": "여덟 지팡이가 하늘 위를 같은 방향으로 날아갑니다. 가까운 두 개는 화면 밖에서 이어지고, 아래의 강과 언덕은 간결하게 정리했습니다.",
+      "effect": "none",
+      "atlas": "art/wands-08-atlas-v7.webp",
+      "category": "MINOR · WANDS",
+      "foreground_clip": "inset(0 0 0 51.51933702%)",
+      "foreground_scale": 1.04,
+      "foreground_scale_y": 0.84,
+      "foreground_origin": "50% 0%",
+      "foreground_offset_x": -2.8
+    },
+    {
+      "id": "wands-09",
+      "numeral": "IX",
+      "title": "NINE OF WANDS",
+      "korean": "완드 9",
+      "tone": "WEARY BUT WATCHFUL",
+      "description": "머리의 붕대와 경계하는 표정, 뒤의 여덟 지팡이와 손의 한 지팡이를 구분했습니다.",
+      "effect": "none",
+      "atlas": "art/wands-09-atlas.webp",
+      "category": "MINOR · WANDS",
+      "foreground_clip": "inset(0 0 0 50.55248619%)"
+    },
+    {
+      "id": "wands-10",
+      "numeral": "X",
+      "title": "TEN OF WANDS",
+      "korean": "완드 10",
+      "tone": "THE WEIGHT OF DUTY",
+      "description": "열 지팡이의 무게에 상체를 숙이고 마을을 향해 나아갑니다. 얼굴을 억지로 드러내지 않았습니다.",
+      "effect": "none",
+      "atlas": "art/wands-10-atlas-v2.webp",
+      "category": "MINOR · WANDS",
+      "foreground_clip": "inset(0 0 0 50.55248619%)"
+    },
+    {
+      "id": "wands-11",
+      "numeral": "PAGE",
+      "title": "PAGE OF WANDS",
+      "korean": "완드 시종",
+      "tone": "A CURIOUS BEGINNING",
+      "description": "사막의 시종이 새싹이 돋은 지팡이를 살펴봅니다. 깃털 모자와 도롱뇽 문양을 남겼습니다.",
+      "effect": "none",
+      "atlas": "art/wands-11-atlas.webp",
+      "category": "MINOR · WANDS",
+      "foreground_clip": "inset(0 0 0 50.55248619%)",
+      "foreground_scale": 0.86,
+      "foreground_origin": "0% 96%"
+    },
+    {
+      "id": "wands-12",
+      "numeral": "KNIGHT",
+      "title": "KNIGHT OF WANDS",
+      "korean": "완드 기사",
+      "tone": "READY TO DEPART",
+      "description": "앞발을 든 말의 역동성과 여행하는 기사. 지팡이·갑옷·붉은 깃털·사막을 살렸습니다.",
+      "effect": "none",
+      "atlas": "art/wands-12-atlas-v2.webp",
+      "category": "MINOR · WANDS",
+      "foreground_clip": "inset(0 0 0 50.55248619%)",
+      "foreground_scale": 0.8,
+      "foreground_origin": "90% 96%",
+      "scene_file": "art/wands-12-scene.webp"
+    },
+    {
+      "id": "wands-13",
+      "numeral": "QUEEN",
+      "title": "QUEEN OF WANDS",
+      "korean": "완드 여왕",
+      "tone": "WARM AND SELF-POSSESSED",
+      "description": "지팡이와 해바라기를 든 여왕. 사자 왕좌와 발 앞의 검은 고양이를 가리지 않았습니다.",
+      "effect": "none",
+      "atlas": "art/wands-13-atlas.webp",
+      "category": "MINOR · WANDS",
+      "foreground_clip": "inset(0 0 0 50.55248619%)"
+    },
+    {
+      "id": "wands-14",
+      "numeral": "KING",
+      "title": "KING OF WANDS",
+      "korean": "완드 왕",
+      "tone": "A STEADY WILL",
+      "description": "왼쪽을 바라보는 왕과 새싹 지팡이. 사자·도롱뇽의 왕좌 문양과 바닥의 도롱뇽을 보존했습니다.",
+      "effect": "none",
+      "atlas": "art/wands-14-atlas.webp",
+      "category": "MINOR · WANDS",
+      "foreground_clip": "inset(0 0 0 50.55248619%)",
+      "foreground_scale": 0.92,
+      "foreground_origin": "50% 96%"
+    },
+    {
+      "id": "cups-01",
+      "numeral": "ACE",
+      "title": "ACE OF CUPS",
+      "korean": "성배 에이스",
+      "tone": "water",
+      "description": "구름의 손, 넘치는 잔, 비둘기와 십자 성체, 수련 연못.",
+      "effect": "none",
+      "atlas": "art/cups-01-atlas.webp",
+      "category": "MINOR · CUPS",
+      "foreground_clip": "inset(0 0 0 50.69060773%)",
+      "foreground_scale": 1.025,
+      "foreground_origin": "50% 96%"
+    },
+    {
+      "id": "cups-02",
+      "numeral": "II",
+      "title": "TWO OF CUPS",
+      "korean": "성배 2",
+      "tone": "water",
+      "description": "서로 마주 보며 잔을 나누는 두 사람과 카두케우스·날개 달린 사자.",
+      "effect": "none",
+      "atlas": "art/cups-02-atlas.webp",
+      "category": "MINOR · CUPS",
+      "foreground_clip": "inset(0 0 0 50.55248619%)",
+      "foreground_scale": 0.76,
+      "foreground_origin": "50% 96%",
+      "foreground_offset_y": 2.5
+    },
+    {
+      "id": "cups-03",
+      "numeral": "III",
+      "title": "THREE OF CUPS",
+      "korean": "성배 3",
+      "tone": "water",
+      "description": "세 사람이 잔을 높이 들고 함께 기뻐하는 수확의 장면.",
+      "effect": "none",
+      "atlas": "art/cups-03-atlas.webp",
+      "category": "MINOR · CUPS",
+      "foreground_clip": "inset(0 0 0 51.03591160%)",
+      "foreground_scale": 0.91,
+      "foreground_origin": "50% 96%"
+    },
+    {
+      "id": "cups-04",
+      "numeral": "IV",
+      "title": "FOUR OF CUPS",
+      "korean": "성배 4",
+      "tone": "water",
+      "description": "나무 아래 팔짱 낀 인물, 앞의 세 잔과 구름에서 제시되는 네 번째 잔.",
+      "effect": "none",
+      "atlas": "art/cups-04-atlas-v3.webp",
+      "category": "MINOR · CUPS",
+      "foreground_clip": "inset(0 0 0 53.03867403%)",
+      "foreground_scale": 0.78,
+      "foreground_origin": "0% 93%",
+      "foreground_offset_x": -4.84,
+      "foreground_offset_y": -19.4
+    },
+    {
+      "id": "cups-05",
+      "numeral": "V",
+      "title": "FIVE OF CUPS",
+      "korean": "성배 5",
+      "tone": "water",
+      "description": "엎어진 세 잔을 바라보며, 등 뒤의 두 잔과 강 너머 다리를 남긴 장면.",
+      "effect": "none",
+      "atlas": "art/cups-05-atlas-v2.webp",
+      "category": "MINOR · CUPS",
+      "foreground_clip": "inset(0 0 0 50.55248619%)",
+      "foreground_scale": 0.78,
+      "foreground_origin": "50% 96%",
+      "foreground_offset_x": -1.5,
+      "scene_file": "art/cups-05-scenery-v3.webp"
+    },
+    {
+      "id": "cups-06",
+      "numeral": "VI",
+      "title": "SIX OF CUPS",
+      "korean": "성배 6",
+      "tone": "water",
+      "description": "아이의 꽃잔 선물, 다섯 잔의 흰 꽃과 안전한 마을 안뜰.",
+      "effect": "none",
+      "atlas": "art/cups-06-atlas.webp",
+      "category": "MINOR · CUPS",
+      "foreground_clip": "inset(0 0 0 50.55248619%)",
+      "foreground_scale": 0.6,
+      "foreground_origin": "50% 96%",
+      "foreground_offset_x": 14,
+      "foreground_offset_y": -22
+    },
+    {
+      "id": "cups-07",
+      "numeral": "VII",
+      "title": "SEVEN OF CUPS",
+      "korean": "성배 7",
+      "tone": "water",
+      "description": "구름 속 일곱 환상과 선택 앞에 선 인물의 뒷모습.",
+      "effect": "none",
+      "atlas": "art/cups-07-atlas.webp",
+      "category": "MINOR · CUPS",
+      "foreground_clip": "inset(0 0 0 50.82872928%)",
+      "foreground_scale": 0.42,
+      "foreground_origin": "50% 96%",
+      "foreground_offset_y": 2
+    },
+    {
+      "id": "cups-08",
+      "numeral": "VIII",
+      "title": "EIGHT OF CUPS",
+      "korean": "성배 8",
+      "tone": "water",
+      "description": "아래 다섯·위 세 잔의 빈자리, 달 아래 산으로 떠나는 인물.",
+      "effect": "none",
+      "atlas": "art/cups-08-atlas.webp",
+      "category": "MINOR · CUPS",
+      "foreground_clip": "inset(0 0 0 50.55248619%)",
+      "foreground_scale": 0.52,
+      "foreground_origin": "70% 68%",
+      "foreground_offset_x": 9,
+      "foreground_offset_y": -10
+    },
+    {
+      "id": "cups-09",
+      "numeral": "IX",
+      "title": "NINE OF CUPS",
+      "korean": "성배 9",
+      "tone": "water",
+      "description": "아홉 잔의 전시와 팔짱을 낀 만족스러운 인물.",
+      "effect": "none",
+      "atlas": "art/cups-09-atlas.webp",
+      "category": "MINOR · CUPS",
+      "foreground_clip": "inset(0 0 0 50.55248619%)",
+      "foreground_scale": 0.56,
+      "foreground_origin": "50% 96%"
+    },
+    {
+      "id": "cups-10",
+      "numeral": "X",
+      "title": "TEN OF CUPS",
+      "korean": "성배 10",
+      "tone": "water",
+      "description": "열 잔의 무지개 아래 환호하는 두 어른과 손잡고 노는 두 아이.",
+      "effect": "none",
+      "atlas": "art/cups-10-atlas-v2.webp",
+      "category": "MINOR · CUPS",
+      "foreground_clip": "inset(0 0 0 50.69060773%)",
+      "foreground_scale": 0.68,
+      "foreground_origin": "50% 96%",
+      "scene_file": "art/cups-10-scenery-v3.webp"
+    },
+    {
+      "id": "cups-11",
+      "numeral": "PAGE",
+      "title": "PAGE OF CUPS",
+      "korean": "성배 시종",
+      "tone": "water",
+      "description": "한 잔에서 고개를 내민 물고기를 놀랍게 바라보는 시종.",
+      "effect": "none",
+      "atlas": "art/cups-11-atlas.webp",
+      "category": "MINOR · CUPS",
+      "foreground_clip": "inset(0 0 0 50.55248619%)",
+      "foreground_scale": 0.89,
+      "foreground_origin": "50% 96%"
+    },
+    {
+      "id": "cups-12",
+      "numeral": "KNIGHT",
+      "title": "KNIGHT OF CUPS",
+      "korean": "성배 기사",
+      "tone": "water",
+      "description": "천천히 걷는 흰 말 위에서 한 잔을 앞으로 내미는 기사.",
+      "effect": "none",
+      "atlas": "art/cups-12-atlas.webp",
+      "category": "MINOR · CUPS",
+      "foreground_clip": "inset(0 0 0 50.69060773%)",
+      "foreground_scale": 1.03,
+      "foreground_origin": "50% 96%",
+      "foreground_offset_x": -0.6
+    },
+    {
+      "id": "cups-13",
+      "numeral": "QUEEN",
+      "title": "QUEEN OF CUPS",
+      "korean": "성배 여왕",
+      "tone": "water",
+      "description": "닫힌 뚜껑의 장식 잔을 바라보는 여왕, 천사·조개 왕좌와 바다.",
+      "effect": "none",
+      "atlas": "art/queen-cups-atlas.webp",
+      "category": "MINOR · CUPS",
+      "foreground_clip": "inset(0 0 0 50.55248619%)",
+      "foreground_scale": 0.94,
+      "foreground_origin": "50% 96%"
+    },
+    {
+      "id": "cups-14",
+      "numeral": "KING",
+      "title": "KING OF CUPS",
+      "korean": "성배 왕",
+      "tone": "water",
+      "description": "파도 가운데 단단한 왕좌, 한 잔과 홀·물고기·붉은 배.",
+      "effect": "none",
+      "atlas": "art/cups-14-atlas.webp",
+      "category": "MINOR · CUPS",
+      "foreground_clip": "inset(0 0 0 50.69060773%)",
+      "foreground_scale": 0.94,
+      "foreground_origin": "50% 96%",
+      "scene_file": "art/cups-14-scenery-v2.webp"
+    },
+    {
+      "id": "swords-01",
+      "numeral": "ACE",
+      "title": "ACE OF SWORDS",
+      "korean": "검 에이스",
+      "tone": "air",
+      "description": "구름에서 나온 손과 곧게 선 검, 왕관·올리브·종려나무 가지.",
+      "effect": "none",
+      "atlas": "art/swords-01-atlas.webp",
+      "category": "MINOR · SWORDS",
+      "foreground_clip": "inset(0 0 0 50.55248619%)",
+      "foreground_scale": 1.02,
+      "foreground_origin": "0% 96%",
+      "foreground_offset_x": -1.11
+    },
+    {
+      "id": "swords-02",
+      "numeral": "II",
+      "title": "TWO OF SWORDS",
+      "korean": "검 2",
+      "tone": "air",
+      "description": "눈가리개를 한 인물의 교차한 두 검과 초승달, 바다.",
+      "effect": "none",
+      "atlas": "art/swords-02-atlas.webp",
+      "category": "MINOR · SWORDS",
+      "foreground_clip": "inset(0 0 0 50.55248619%)",
+      "foreground_offset_x": 2.5
+    },
+    {
+      "id": "swords-03",
+      "numeral": "III",
+      "title": "THREE OF SWORDS",
+      "korean": "검 3",
+      "tone": "air",
+      "description": "비구름 아래 세 검이 관통한 붉은 하트. 인물을 추가하지 않습니다.",
+      "effect": "none",
+      "atlas": "art/swords-03-atlas.webp",
+      "category": "MINOR · SWORDS",
+      "foreground_clip": "inset(0 0 0 50.55248619%)"
+    },
+    {
+      "id": "swords-04",
+      "numeral": "IV",
+      "title": "FOUR OF SWORDS",
+      "korean": "검 4",
+      "tone": "air",
+      "description": "기도 자세로 누운 기사 형상, 벽의 세 검과 아래 가로 놓인 한 검.",
+      "effect": "none",
+      "atlas": "art/swords-04-atlas.webp",
+      "category": "MINOR · SWORDS",
+      "foreground_clip": "inset(0 0 0 50.55248619%)"
+    },
+    {
+      "id": "swords-05",
+      "numeral": "V",
+      "title": "FIVE OF SWORDS",
+      "korean": "검 5",
+      "tone": "air",
+      "description": "세 검을 거둔 인물, 물러나는 두 사람과 바닥에 남은 두 검.",
+      "effect": "none",
+      "atlas": "art/swords-05-atlas.webp",
+      "category": "MINOR · SWORDS",
+      "foreground_clip": "inset(0 0 0 50.55248619%)",
+      "foreground_scale": 0.9,
+      "foreground_origin": "50% 96%",
+      "foreground_offset_x": 22
+    },
+    {
+      "id": "swords-06",
+      "numeral": "VI",
+      "title": "SIX OF SWORDS",
+      "korean": "검 6",
+      "tone": "air",
+      "description": "여섯 검을 싣고 이동하는 배, 뱃사공과 몸을 감싼 어른·아이.",
+      "effect": "none",
+      "atlas": "art/swords-06-atlas.webp",
+      "category": "MINOR · SWORDS",
+      "foreground_clip": "inset(0 0 0 50.55248619%)"
+    },
+    {
+      "id": "swords-07",
+      "numeral": "VII",
+      "title": "SEVEN OF SWORDS",
+      "korean": "검 7",
+      "tone": "air",
+      "description": "다섯 검을 들고 빠져나가며 뒤를 보는 인물, 야영지에 남은 두 검.",
+      "effect": "none",
+      "atlas": "art/swords-07-atlas.webp",
+      "category": "MINOR · SWORDS",
+      "foreground_clip": "inset(0 0 0 50.55210490%)",
+      "foreground_scale": 0.8,
+      "foreground_origin": "100% 96%",
+      "foreground_offset_x": -28
+    },
+    {
+      "id": "swords-08",
+      "numeral": "VIII",
+      "title": "EIGHT OF SWORDS",
+      "korean": "검 8",
+      "tone": "air",
+      "description": "눈가리개와 몸의 묶임, 주변 여덟 검. 발과 앞쪽 길은 열려 있습니다.",
+      "effect": "none",
+      "atlas": "art/swords-08-atlas-v2.webp",
+      "category": "MINOR · SWORDS",
+      "foreground_clip": "inset(0 0 0 50.55248619%)"
+    },
+    {
+      "id": "swords-09",
+      "numeral": "IX",
+      "title": "NINE OF SWORDS",
+      "korean": "검 9",
+      "tone": "air",
+      "description": "침대에서 얼굴을 감싸는 인물, 아홉 가로 검과 장미·별자리 이불.",
+      "effect": "none",
+      "atlas": "art/swords-09-atlas-v2.webp",
+      "category": "MINOR · SWORDS",
+      "foreground_clip": "inset(0 0 0 50.55248619%)",
+      "foreground_scale": 0.64,
+      "foreground_origin": "50% 96%",
+      "foreground_offset_x": 12
+    },
+    {
+      "id": "swords-10",
+      "numeral": "X",
+      "title": "TEN OF SWORDS",
+      "korean": "검 10",
+      "tone": "air",
+      "description": "열 검과 엎드린 인물, 어두운 하늘 아래 새벽빛. 비유혈 상징으로 표현합니다.",
+      "effect": "none",
+      "atlas": "art/swords-10-atlas-v2.webp",
+      "category": "MINOR · SWORDS",
+      "foreground_clip": "inset(0 0 0 50.55248619%)",
+      "scene_file": "art/swords-10-scene-v3.webp"
+    },
+    {
+      "id": "swords-11",
+      "numeral": "PAGE",
+      "title": "PAGE OF SWORDS",
+      "korean": "검 시종",
+      "tone": "air",
+      "description": "바람 속에서 한 검을 두 손으로 들고 주위를 살피는 시종.",
+      "effect": "none",
+      "atlas": "art/swords-11-atlas.webp",
+      "category": "MINOR · SWORDS",
+      "foreground_clip": "inset(0 0 0 50.55248619%)"
+    },
+    {
+      "id": "swords-12",
+      "numeral": "KNIGHT",
+      "title": "KNIGHT OF SWORDS",
+      "korean": "검 기사",
+      "tone": "air",
+      "description": "왼쪽으로 돌진하는 흰 말과 기사가 든 한 검, 뒤로 날리는 붉은 망토.",
+      "effect": "none",
+      "atlas": "art/swords-12-atlas-v2.webp",
+      "category": "MINOR · SWORDS",
+      "foreground_clip": "inset(0 0 0 50.55248619%)"
+    },
+    {
+      "id": "swords-13",
+      "numeral": "QUEEN",
+      "title": "QUEEN OF SWORDS",
+      "korean": "검 여왕",
+      "tone": "air",
+      "description": "오른쪽을 바라보며 곧은 검을 들고 다른 손을 펼치는 여왕.",
+      "effect": "none",
+      "atlas": "art/swords-13-atlas.webp",
+      "category": "MINOR · SWORDS",
+      "foreground_clip": "inset(0 0 0 50.55248619%)",
+      "foreground_scale": 0.94,
+      "foreground_origin": "50% 96%"
+    },
+    {
+      "id": "swords-14",
+      "numeral": "KING",
+      "title": "KING OF SWORDS",
+      "korean": "검 왕",
+      "tone": "air",
+      "description": "정면을 바라보는 왕과 곧은 검, 나비·초승달·천사 장식의 왕좌.",
+      "effect": "none",
+      "atlas": "art/swords-14-atlas.webp",
+      "category": "MINOR · SWORDS",
+      "foreground_clip": "inset(0 0 0 50.55248619%)",
+      "foreground_scale": 0.94,
+      "foreground_origin": "50% 96%"
+    },
+    {
+      "id": "pentacles-01",
+      "numeral": "ACE",
+      "title": "ACE OF PENTACLES",
+      "korean": "동전 에이스",
+      "tone": "earth",
+      "description": "구름의 손이 받친 한 동전, 백합 정원과 산으로 이어지는 아치 길.",
+      "effect": "none",
+      "atlas": "art/pentacles-01-atlas.webp",
+      "category": "MINOR · PENTACLES",
+      "foreground_clip": "inset(0 0 0 50.55248619%)",
+      "foreground_scale": 1.02,
+      "foreground_origin": "0% 96%",
+      "foreground_offset_x": -1.11
+    },
+    {
+      "id": "pentacles-02",
+      "numeral": "II",
+      "title": "TWO OF PENTACLES",
+      "korean": "동전 2",
+      "tone": "earth",
+      "description": "두 동전을 잇는 무한대 리본과 균형을 잡는 인물, 파도 위 두 배.",
+      "effect": "none",
+      "atlas": "art/pentacles-02-atlas.webp",
+      "category": "MINOR · PENTACLES",
+      "foreground_clip": "inset(0 0 0 50.55248619%)",
+      "foreground_scale": 0.92,
+      "foreground_origin": "50% 96%",
+      "foreground_offset_x": -4,
+      "scene_file": "art/pentacles-02-scene-v2.webp"
+    },
+    {
+      "id": "pentacles-03",
+      "numeral": "III",
+      "title": "THREE OF PENTACLES",
+      "korean": "동전 3",
+      "tone": "earth",
+      "description": "세 동전이 새겨진 성당 아치 아래 장인과 도면을 보는 두 사람.",
+      "effect": "none",
+      "atlas": "art/pentacles-03-atlas.webp",
+      "category": "MINOR · PENTACLES",
+      "foreground_clip": "inset(0 0 0 50.55248619%)"
+    },
+    {
+      "id": "pentacles-04",
+      "numeral": "IV",
+      "title": "FOUR OF PENTACLES",
+      "korean": "동전 4",
+      "tone": "earth",
+      "description": "머리 위·가슴·두 발 아래의 네 동전을 꼭 붙들고 앉은 인물.",
+      "effect": "none",
+      "atlas": "art/pentacles-04-atlas.webp",
+      "category": "MINOR · PENTACLES",
+      "foreground_clip": "inset(0 0 0 50.55248619%)"
+    },
+    {
+      "id": "pentacles-05",
+      "numeral": "V",
+      "title": "FIVE OF PENTACLES",
+      "korean": "동전 5",
+      "tone": "earth",
+      "description": "다섯 동전의 따뜻한 창 밖, 눈 속을 지나가는 두 사람과 목발.",
+      "effect": "none",
+      "atlas": "art/pentacles-05-atlas.webp",
+      "category": "MINOR · PENTACLES",
+      "foreground_clip": "inset(0 0 0 50.55248619%)"
+    },
+    {
+      "id": "pentacles-06",
+      "numeral": "VI",
+      "title": "SIX OF PENTACLES",
+      "korean": "동전 6",
+      "tone": "earth",
+      "description": "저울을 들고 동전을 나누는 인물, 두 수혜자와 여섯 동전의 배치.",
+      "effect": "none",
+      "atlas": "art/pentacles-06-atlas-v2.webp",
+      "category": "MINOR · PENTACLES",
+      "foreground_clip": "inset(0 0 0 50.55248619%)",
+      "foreground_scale": 0.9,
+      "foreground_origin": "50% 96%"
+    },
+    {
+      "id": "pentacles-07",
+      "numeral": "VII",
+      "title": "SEVEN OF PENTACLES",
+      "korean": "동전 7",
+      "tone": "earth",
+      "description": "도구에 기대어 작물을 살피는 인물, 덤불 여섯 동전과 발치 하나.",
+      "effect": "none",
+      "atlas": "art/pentacles-07-atlas.webp",
+      "category": "MINOR · PENTACLES",
+      "foreground_clip": "inset(0 0 0 50.55248619%)"
+    },
+    {
+      "id": "pentacles-08",
+      "numeral": "VIII",
+      "title": "EIGHT OF PENTACLES",
+      "korean": "동전 8",
+      "tone": "earth",
+      "description": "집중해서 동전을 새기는 장인, 완성된 여섯 개와 작업 중 하나·바닥 하나.",
+      "effect": "none",
+      "atlas": "art/pentacles-08-atlas-v2.webp",
+      "category": "MINOR · PENTACLES",
+      "foreground_clip": "inset(0 0 0 50.55248619%)"
+    },
+    {
+      "id": "pentacles-09",
+      "numeral": "IX",
+      "title": "NINE OF PENTACLES",
+      "korean": "동전 9",
+      "tone": "earth",
+      "description": "풍성한 포도밭의 아홉 동전, 장갑 위 매와 발치 달팽이.",
+      "effect": "none",
+      "atlas": "art/pentacles-09-atlas.webp",
+      "category": "MINOR · PENTACLES",
+      "foreground_clip": "inset(0 0 0 50.55248619%)",
+      "overlays": [
+        {
+          "file": "art/pentacles-09-scene-v2.webp",
+          "description": "원본의 작은 달팽이를 드레스 아래 정원 길에 표시",
+          "offset_y": 4.8,
+          "mask": "radial-gradient(ellipse 2.65% 1.75% at 50.2% 93.45%,black 96%,transparent 100%),radial-gradient(ellipse 4.6% .72% at 49.5% 94.6%,black 95%,transparent 100%),radial-gradient(ellipse .9% 1.5% at 45.9% 93.55%,black 90%,transparent 100%)"
+        }
+      ],
+      "scene_file": "art/pentacles-09-scene-v2.webp"
+    },
+    {
+      "id": "pentacles-10",
+      "numeral": "X",
+      "title": "TEN OF PENTACLES",
+      "korean": "동전 10",
+      "tone": "earth",
+      "description": "아치 안의 여러 세대와 두 개, 열 동전과 가문의 문장.",
+      "effect": "none",
+      "atlas": "art/pentacles-10-atlas-v2.webp",
+      "category": "MINOR · PENTACLES",
+      "foreground_clip": "inset(0 0 0 50.55248619%)",
+      "overlays": [
+        {
+          "file": "art/pentacles-10-atlas.webp",
+          "atlas_scene": true,
+          "mask": "radial-gradient(ellipse 8.83977901% 5.89318600% at 50.41436464% 7.09023941%,black 98%,transparent 100%),radial-gradient(ellipse 8.83977901% 5.89318600% at 15.05524862% 16.94290976%,black 98%,transparent 100%),radial-gradient(ellipse 8.83977901% 5.89318600% at 85.22099448% 16.94290976%,black 98%,transparent 100%),radial-gradient(ellipse 8.83977901% 5.89318600% at 14.91712707% 37.47697974%,black 98%,transparent 100%),radial-gradient(ellipse 8.83977901% 5.89318600% at 85.22099448% 37.47697974%,black 98%,transparent 100%),radial-gradient(ellipse 8.83977901% 5.89318600% at 50.27624309% 43.27808471%,black 98%,transparent 100%),radial-gradient(ellipse 8.83977901% 5.89318600% at 14.91712707% 64.08839779%,black 98%,transparent 100%),radial-gradient(ellipse 8.83977901% 5.89318600% at 85.22099448% 64.08839779%,black 98%,transparent 100%),radial-gradient(ellipse 8.83977901% 5.89318600% at 50.41436464% 74.30939227%,black 98%,transparent 100%),radial-gradient(ellipse 8.83977901% 5.89318600% at 50.41436464% 87.66114180%,black 98%,transparent 100%)",
+          "description": "원본처럼 인물보다 앞에 표시하는 열 동전"
+        }
+      ],
+      "scene_atlas": "art/pentacles-10-atlas.webp"
+    },
+    {
+      "id": "pentacles-11",
+      "numeral": "PAGE",
+      "title": "PAGE OF PENTACLES",
+      "korean": "동전 시종",
+      "tone": "earth",
+      "description": "한 동전을 두 손으로 올려 관찰하는 시종, 밭과 먼 산.",
+      "effect": "none",
+      "atlas": "art/pentacles-11-atlas.webp",
+      "category": "MINOR · PENTACLES",
+      "foreground_clip": "inset(0 0 0 50.55248619%)"
+    },
+    {
+      "id": "pentacles-12",
+      "numeral": "KNIGHT",
+      "title": "KNIGHT OF PENTACLES",
+      "korean": "동전 기사",
+      "tone": "earth",
+      "description": "움직임을 멈춘 검은 말 위 기사, 앞에 내민 한 동전과 경작한 땅.",
+      "effect": "none",
+      "atlas": "art/pentacles-12-atlas-v5.webp",
+      "category": "MINOR · PENTACLES",
+      "foreground_clip": "inset(0 0 0 51.93370166%)"
+    },
+    {
+      "id": "pentacles-13",
+      "numeral": "QUEEN",
+      "title": "QUEEN OF PENTACLES",
+      "korean": "동전 여왕",
+      "tone": "earth",
+      "description": "한 동전을 무릎 위에서 보살피는 여왕, 장미와 생명의 왕좌·토끼.",
+      "effect": "none",
+      "atlas": "art/pentacles-13-atlas.webp",
+      "category": "MINOR · PENTACLES",
+      "foreground_clip": "inset(0 0 0 50.55248619%)",
+      "foreground_scale": 0.9,
+      "foreground_origin": "50% 96%",
+      "foreground_offset_x": -10.5
+    },
+    {
+      "id": "pentacles-14",
+      "numeral": "KING",
+      "title": "KING OF PENTACLES",
+      "korean": "동전 왕",
+      "tone": "earth",
+      "description": "포도와 황소 왕좌에 앉은 왕, 한 동전·홀·갑옷 발과 성.",
+      "effect": "none",
+      "atlas": "art/pentacles-14-atlas-v2.webp",
+      "category": "MINOR · PENTACLES",
+      "foreground_clip": "inset(0 0 0 50.55248619%)",
+      "foreground_scale": 0.94,
+      "foreground_origin": "50% 96%"
+    }
+  ],
+  "blinks": {
+    "major-00": {
+      "file": "art/fool-blink.webp",
+      "eyes": [
+        [
+          264,
+          290,
+          38,
+          43
+        ],
+        [
+          350,
+          311,
+          40,
+          43
+        ]
+      ]
+    },
+    "major-01": {
+      "file": "art/magician-blink.webp",
+      "eyes": [
+        [
+          283,
+          334,
+          38,
+          44
+        ],
+        [
+          374,
+          351,
+          40,
+          44
+        ]
+      ]
+    },
+    "cups-13": {
+      "file": "art/queen-cups-blink.webp",
+      "eyes": [
+        [
+          294,
+          356,
+          34,
+          43
+        ],
+        [
+          374,
+          381,
+          39,
+          43
+        ]
+      ],
+      "panel": [
+        724,
+        1086
+      ]
+    },
+    "major-02": {
+      "file": "art/major-02-blink-v2.webp",
+      "eyes": [
+        [
+          304,
+          344,
+          38,
+          43
+        ],
+        [
+          386,
+          348,
+          38,
+          43
+        ]
+      ],
+      "panel": [
+        723.5,
+        1087
+      ]
+    },
+    "major-03": {
+      "file": "art/major-03-blink.webp",
+      "eyes": [
+        [
+          299,
+          328,
+          38,
+          43
+        ],
+        [
+          381,
+          349,
+          38,
+          43
+        ]
+      ],
+      "panel": [
+        724,
+        1086
+      ]
+    },
+    "major-04": {
+      "file": "art/major-04-blink.webp",
+      "eyes": [
+        [
+          295,
+          352,
+          38,
+          43
+        ],
+        [
+          380,
+          361,
+          38,
+          43
+        ]
+      ],
+      "panel": [
+        724,
+        1086
+      ]
+    },
+    "major-05": {
+      "file": "art/major-05-blink.webp",
+      "eyes": [
+        [
+          308,
+          332,
+          34,
+          39
+        ],
+        [
+          383,
+          342,
+          34,
+          39
+        ]
+      ],
+      "panel": [
+        724,
+        1086
+      ]
+    },
+    "major-06": {
+      "file": "art/major-06-blink.webp",
+      "eyes": [
+        [
+          183,
+          582,
+          29,
+          35
+        ],
+        [
+          245,
+          568,
+          29,
+          35
+        ],
+        [
+          496,
+          550,
+          28,
+          34
+        ],
+        [
+          554,
+          555,
+          28,
+          34
+        ]
+      ],
+      "panel": [
+        724,
+        1086
+      ]
+    },
+    "major-07": {
+      "file": "art/major-07-blink.webp",
+      "eyes": [
+        [
+          312,
+          346,
+          37,
+          43
+        ],
+        [
+          389,
+          355,
+          37,
+          43
+        ]
+      ],
+      "panel": [
+        724,
+        1086
+      ]
+    },
+    "major-08": {
+      "file": "art/major-08-blink.webp",
+      "eyes": [
+        [
+          318,
+          367,
+          38,
+          45
+        ],
+        [
+          405,
+          395,
+          38,
+          45
+        ]
+      ],
+      "panel": [
+        724,
+        1086
+      ]
+    },
+    "major-09": {
+      "file": "art/major-09-blink-v2.webp",
+      "eyes": [
+        [
+          292,
+          328,
+          38,
+          43
+        ],
+        [
+          374,
+          350,
+          38,
+          43
+        ]
+      ],
+      "panel": [
+        723.5,
+        1087
+      ]
+    },
+    "major-10": {
+      "file": "art/major-10-blink.webp",
+      "eyes": [
+        [
+          326,
+          243,
+          31,
+          37
+        ],
+        [
+          395,
+          258,
+          31,
+          37
+        ]
+      ],
+      "panel": [
+        724,
+        1086
+      ]
+    },
+    "major-11": {
+      "file": "art/major-11-blink.webp",
+      "eyes": [
+        [
+          297,
+          367,
+          38,
+          45
+        ],
+        [
+          379,
+          375,
+          38,
+          45
+        ]
+      ],
+      "panel": [
+        724,
+        1086
+      ]
+    },
+    "major-12": {
+      "file": "art/major-12-blink-v2.webp",
+      "eyes": [
+        [
+          316,
+          703,
+          33,
+          39
+        ],
+        [
+          386,
+          713,
+          33,
+          39
+        ]
+      ],
+      "panel": [
+        723.5,
+        1087
+      ]
+    },
+    "major-13": {
+      "file": "art/major-13-blink-v2.webp",
+      "eyes": [
+        [
+          285,
+          425,
+          23,
+          27
+        ],
+        [
+          329,
+          438,
+          16,
+          24
+        ]
+      ],
+      "panel": [
+        724,
+        1086
+      ]
+    },
+    "major-14": {
+      "file": "art/major-14-blink-v2.webp",
+      "eyes": [
+        [
+          349,
+          323,
+          38,
+          43
+        ],
+        [
+          431,
+          348,
+          38,
+          43
+        ]
+      ],
+      "panel": [
+        723.5,
+        1087
+      ]
+    },
+    "major-15": {
+      "file": "art/major-15-blink.webp",
+      "eyes": [
+        [
+          304,
+          314,
+          37,
+          42
+        ],
+        [
+          381,
+          331,
+          37,
+          42
+        ]
+      ],
+      "panel": [
+        724,
+        1086
+      ]
+    },
+    "major-16": {
+      "file": "art/major-16-blink-v2.webp",
+      "eyes": [
+        [
+          500,
+          551,
+          28,
+          33
+        ],
+        [
+          552,
+          585,
+          28,
+          33
+        ]
+      ],
+      "panel": [
+        723,
+        1088
+      ]
+    },
+    "major-17": {
+      "file": "art/major-17-blink-v2.webp",
+      "eyes": [
+        [
+          326,
+          531,
+          31,
+          35
+        ],
+        [
+          400,
+          556,
+          31,
+          35
+        ]
+      ],
+      "panel": [
+        723,
+        1087
+      ]
+    },
+    "major-18": {
+      "file": "art/major-18-blink-v2.webp",
+      "eyes": [
+        [
+          304,
+          402,
+          34,
+          41
+        ],
+        [
+          376,
+          424,
+          34,
+          41
+        ]
+      ],
+      "panel": [
+        724,
+        1086
+      ]
+    },
+    "major-19": {
+      "file": "art/major-19-blink.webp",
+      "eyes": [
+        [
+          300,
+          337,
+          34,
+          41
+        ],
+        [
+          374,
+          353,
+          34,
+          41
+        ]
+      ],
+      "panel": [
+        724,
+        1086
+      ]
+    },
+    "major-20": {
+      "file": "art/major-20-blink.webp",
+      "eyes": [
+        [
+          315,
+          276,
+          31,
+          37
+        ],
+        [
+          382,
+          291,
+          31,
+          37
+        ]
+      ],
+      "panel": [
+        724,
+        1086
+      ]
+    },
+    "major-21": {
+      "file": "art/major-21-blink.webp",
+      "eyes": [
+        [
+          299,
+          344,
+          38,
+          45
+        ],
+        [
+          381,
+          369,
+          38,
+          45
+        ]
+      ],
+      "panel": [
+        724,
+        1086
+      ]
+    },
+    "wands-02": {
+      "file": "art/wands-02-blink.webp",
+      "eyes": [
+        [
+          327,
+          382,
+          24,
+          30
+        ]
+      ],
+      "panel": [
+        724,
+        1086
+      ]
+    },
+    "wands-05": {
+      "file": "art/wands-05-blink.webp",
+      "eyes": [
+        [
+          268,
+          540,
+          14,
+          19
+        ],
+        [
+          313,
+          525,
+          14,
+          18
+        ]
+      ],
+      "panel": [
+        724,
+        1086
+      ]
+    },
+    "wands-06": {
+      "file": "art/wands-06-blink.webp",
+      "eyes": [
+        [
+          370,
+          428,
+          17,
+          22
+        ],
+        [
+          414,
+          424,
+          12,
+          20
+        ]
+      ],
+      "panel": [
+        724,
+        1086
+      ]
+    },
+    "wands-07": {
+      "file": "art/wands-07-blink.webp",
+      "eyes": [
+        [
+          337,
+          320,
+          20,
+          26
+        ],
+        [
+          405,
+          337,
+          19,
+          25
+        ]
+      ],
+      "panel": [
+        724,
+        1086
+      ]
+    },
+    "wands-09": {
+      "file": "art/wands-09-blink.webp",
+      "eyes": [
+        [
+          312,
+          424,
+          21,
+          26
+        ],
+        [
+          383,
+          442,
+          15,
+          22
+        ]
+      ],
+      "panel": [
+        724,
+        1086
+      ]
+    },
+    "wands-11": {
+      "file": "art/wands-11-blink.webp",
+      "eyes": [
+        [
+          356,
+          336,
+          21,
+          28
+        ],
+        [
+          402,
+          319,
+          16,
+          24
+        ]
+      ],
+      "panel": [
+        724,
+        1086
+      ]
+    },
+    "wands-12": {
+      "file": "art/wands-12-blink.webp",
+      "eyes": [
+        [
+          354,
+          358,
+          20,
+          28
+        ],
+        [
+          413,
+          351,
+          23,
+          29
+        ]
+      ],
+      "panel": [
+        724,
+        1086
+      ]
+    },
+    "wands-13": {
+      "file": "art/wands-13-blink.webp",
+      "eyes": [
+        [
+          298,
+          359,
+          26,
+          32
+        ],
+        [
+          381,
+          375,
+          27,
+          32
+        ]
+      ],
+      "panel": [
+        724,
+        1086
+      ]
+    },
+    "wands-14": {
+      "file": "art/wands-14-blink.webp",
+      "eyes": [
+        [
+          281,
+          371,
+          16,
+          27
+        ],
+        [
+          337,
+          358,
+          25,
+          32
+        ]
+      ],
+      "panel": [
+        724,
+        1086
+      ]
+    },
+    "cups-02": {
+      "file": "art/cups-02-blink.webp",
+      "eyes": [
+        [
+          242,
+          445,
+          22,
+          28
+        ],
+        [
+          282,
+          441,
+          17,
+          24
+        ]
+      ],
+      "panel": [
+        724,
+        1086
+      ]
+    },
+    "cups-03": {
+      "file": "art/cups-03-blink.webp",
+      "eyes": [
+        [
+          137,
+          426,
+          23,
+          28
+        ],
+        [
+          192,
+          411,
+          22,
+          28
+        ]
+      ],
+      "panel": [
+        724,
+        1086
+      ]
+    },
+    "cups-06": {
+      "file": "art/cups-06-blink.webp",
+      "eyes": [
+        [
+          260,
+          377,
+          26,
+          30
+        ],
+        [
+          317,
+          403,
+          22,
+          28
+        ]
+      ],
+      "panel": [
+        724,
+        1086
+      ]
+    },
+    "cups-09": {
+      "file": "art/cups-09-blink.webp",
+      "eyes": [
+        [
+          297,
+          441,
+          27,
+          31
+        ],
+        [
+          381,
+          456,
+          28,
+          31
+        ]
+      ],
+      "panel": [
+        724,
+        1086
+      ]
+    },
+    "cups-11": {
+      "file": "art/cups-11-blink.webp",
+      "eyes": [
+        [
+          265,
+          299,
+          24,
+          28
+        ],
+        [
+          335,
+          331,
+          25,
+          30
+        ]
+      ],
+      "panel": [
+        724,
+        1086
+      ]
+    },
+    "cups-12": {
+      "file": "art/cups-12-blink.webp",
+      "eyes": [
+        [
+          349,
+          310,
+          18,
+          24
+        ],
+        [
+          392,
+          308,
+          13,
+          21
+        ]
+      ],
+      "panel": [
+        724,
+        1086
+      ]
+    },
+    "cups-14": {
+      "file": "art/cups-14-blink.webp",
+      "eyes": [
+        [
+          283,
+          357,
+          25,
+          29
+        ],
+        [
+          358,
+          364,
+          25,
+          29
+        ]
+      ],
+      "panel": [
+        724,
+        1086
+      ]
+    },
+    "swords-05": {
+      "file": "art/swords-05-blink.webp",
+      "eyes": [
+        [
+          204,
+          266,
+          27,
+          33
+        ],
+        [
+          254,
+          247,
+          31,
+          37
+        ]
+      ],
+      "panel": [
+        724,
+        1086
+      ]
+    },
+    "swords-07": {
+      "file": "art/swords-07-blink.webp",
+      "eyes": [
+        [
+          394,
+          358,
+          36,
+          39
+        ],
+        [
+          475,
+          382,
+          31,
+          34
+        ]
+      ],
+      "panel": [
+        724.5,
+        1086
+      ]
+    },
+    "swords-11": {
+      "file": "art/swords-11-blink.webp",
+      "eyes": [
+        [
+          247,
+          329,
+          28,
+          35
+        ],
+        [
+          319,
+          318,
+          33,
+          37
+        ]
+      ],
+      "panel": [
+        724,
+        1086
+      ]
+    },
+    "swords-12": {
+      "file": "art/swords-12-blink.webp",
+      "eyes": [
+        [
+          328,
+          357,
+          25,
+          31
+        ],
+        [
+          376,
+          358,
+          27,
+          31
+        ]
+      ],
+      "panel": [
+        724,
+        1086
+      ]
+    },
+    "swords-13": {
+      "file": "art/swords-13-blink.webp",
+      "eyes": [
+        [
+          298,
+          333,
+          34,
+          35
+        ],
+        [
+          344,
+          332,
+          18,
+          30
+        ]
+      ],
+      "panel": [
+        724,
+        1086
+      ]
+    },
+    "swords-14": {
+      "file": "art/swords-14-blink.webp",
+      "eyes": [
+        [
+          296,
+          369,
+          37,
+          37
+        ],
+        [
+          374,
+          369,
+          38,
+          37
+        ]
+      ],
+      "panel": [
+        724,
+        1086
+      ]
+    },
+    "pentacles-02": {
+      "file": "art/pentacles-02-blink.webp",
+      "eyes": [
+        [
+          324,
+          347,
+          32,
+          36
+        ],
+        [
+          391,
+          365,
+          34,
+          38
+        ]
+      ],
+      "panel": [
+        724,
+        1086
+      ]
+    },
+    "pentacles-03": {
+      "file": "art/pentacles-03-blink.webp",
+      "eyes": [
+        [
+          217,
+          407,
+          23,
+          28
+        ],
+        [
+          254,
+          393,
+          21,
+          28
+        ]
+      ],
+      "panel": [
+        724,
+        1086
+      ]
+    },
+    "pentacles-04": {
+      "file": "art/pentacles-04-blink.webp",
+      "eyes": [
+        [
+          302,
+          398,
+          28,
+          32
+        ],
+        [
+          386,
+          405,
+          29,
+          32
+        ]
+      ],
+      "panel": [
+        724,
+        1086
+      ]
+    },
+    "pentacles-05": {
+      "file": "art/pentacles-05-blink.webp",
+      "eyes": [
+        [
+          592,
+          566,
+          24,
+          26
+        ],
+        [
+          634,
+          577,
+          24,
+          26
+        ]
+      ],
+      "panel": [
+        724,
+        1086
+      ]
+    },
+    "pentacles-06": {
+      "file": "art/pentacles-06-blink.webp",
+      "eyes": [
+        [
+          301,
+          286,
+          28,
+          30
+        ],
+        [
+          368,
+          298,
+          28,
+          30
+        ]
+      ],
+      "panel": [
+        724,
+        1086
+      ]
+    },
+    "pentacles-07": {
+      "file": "art/pentacles-07-blink.webp",
+      "eyes": [
+        [
+          373,
+          352,
+          25,
+          25
+        ],
+        [
+          441,
+          342,
+          27,
+          25
+        ]
+      ],
+      "panel": [
+        724,
+        1086
+      ]
+    },
+    "pentacles-08": {
+      "file": "art/pentacles-08-blink.webp",
+      "eyes": [
+        [
+          323,
+          424,
+          29,
+          33
+        ],
+        [
+          387,
+          450,
+          26,
+          30
+        ]
+      ],
+      "panel": [
+        724,
+        1086
+      ]
+    },
+    "pentacles-09": {
+      "file": "art/pentacles-09-blink.webp",
+      "eyes": [
+        [
+          294,
+          317,
+          30,
+          35
+        ],
+        [
+          369,
+          335,
+          31,
+          35
+        ]
+      ],
+      "panel": [
+        724,
+        1086
+      ]
+    },
+    "pentacles-10": {
+      "file": "art/pentacles-10-blink.webp",
+      "eyes": [
+        [
+          450,
+          407,
+          18,
+          23
+        ],
+        [
+          480,
+          416,
+          20,
+          23
+        ]
+      ],
+      "panel": [
+        724,
+        1086
+      ]
+    },
+    "pentacles-11": {
+      "file": "art/pentacles-11-blink.webp",
+      "eyes": [
+        [
+          342,
+          257,
+          30,
+          35
+        ],
+        [
+          395,
+          246,
+          24,
+          33
+        ]
+      ],
+      "panel": [
+        724,
+        1086
+      ]
+    },
+    "pentacles-12": {
+      "file": "art/pentacles-12-blink.webp",
+      "eyes": [
+        [
+          293,
+          247,
+          22,
+          28
+        ]
+      ],
+      "panel": [
+        724,
+        1086
+      ]
+    },
+    "pentacles-13": {
+      "file": "art/pentacles-13-blink.webp",
+      "eyes": [
+        [
+          251,
+          307,
+          27,
+          25
+        ],
+        [
+          307,
+          283,
+          30,
+          28
+        ]
+      ],
+      "panel": [
+        724,
+        1086
+      ]
+    },
+    "pentacles-14": {
+      "file": "art/pentacles-14-blink.webp",
+      "eyes": [
+        [
+          280,
+          301,
+          31,
+          31
+        ],
+        [
+          357,
+          313,
+          32,
+          31
+        ]
+      ],
+      "panel": [
+        724,
+        1086
+      ]
+    }
+  }
+}

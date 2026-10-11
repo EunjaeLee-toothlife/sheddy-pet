@@ -1,0 +1,747 @@
+{
+  "version": 1,
+  "encoding": "lossless-webp",
+  "cards": 78,
+  "assets": [
+    {
+      "file": "art/cups-01-atlas.webp",
+      "source_sha256": "042234df2634f8a8dd360db648f49c5744b170a504c1541dfcb6ef38e4593f9e",
+      "bytes": 1667622
+    },
+    {
+      "file": "art/cups-02-atlas.webp",
+      "source_sha256": "b24492adae098d778fa7521e907898a7bd976ea26c38b6da9dcc86d04d90ed94",
+      "bytes": 1947682
+    },
+    {
+      "file": "art/cups-02-blink.webp",
+      "source_sha256": "01cb564a8c48470878ba0200ed4895d476d0b483bdddaa510d8f91513feee786",
+      "bytes": 1762602
+    },
+    {
+      "file": "art/cups-03-atlas.webp",
+      "source_sha256": "60f1fc8f4b3b95ba2b0cfeb89a8969a508fc29107794272880d728ca49cfea97",
+      "bytes": 2158700
+    },
+    {
+      "file": "art/cups-03-blink.webp",
+      "source_sha256": "1ca3536da6f7e7e03ba0abdcdd4b876682aadc25d5d639c62a80cbdcaf488332",
+      "bytes": 1872204
+    },
+    {
+      "file": "art/cups-04-atlas-v3.webp",
+      "source_sha256": "ffe65d3b684ddb6d5406c9c25133308576353ce403cc79803722baaec0befe23",
+      "bytes": 1726638
+    },
+    {
+      "file": "art/cups-05-atlas-v2.webp",
+      "source_sha256": "e34db79b881f6caca229331276ec2eb84625c41221710865f2a3932293930d34",
+      "bytes": 1774606
+    },
+    {
+      "file": "art/cups-05-scenery-v3.webp",
+      "source_sha256": "59f9825827631ae2f0b706588556d6e557d1d091c809e83b29d71c55c7420e80",
+      "bytes": 2289326
+    },
+    {
+      "file": "art/cups-06-atlas.webp",
+      "source_sha256": "b8ed11ebdee6ce0c898486435f0c9019cc4a04967ca73cb99720fed1c77e2e95",
+      "bytes": 1957930
+    },
+    {
+      "file": "art/cups-06-blink.webp",
+      "source_sha256": "f26eb5e0e479ce310adcaed1eb6bbad843c6f7751603564d7784849527821ddd",
+      "bytes": 1746506
+    },
+    {
+      "file": "art/cups-07-atlas.webp",
+      "source_sha256": "25aaf0d9e183d47e68ecfa81eec54a985dfccfcacf8bbaa07fc285a68a18e77b",
+      "bytes": 1549732
+    },
+    {
+      "file": "art/cups-08-atlas.webp",
+      "source_sha256": "ed3bff8bbe0eedaf8f32f5582dd41ea0322759f51f7b7d8ee19356bcc909d856",
+      "bytes": 1558782
+    },
+    {
+      "file": "art/cups-09-atlas.webp",
+      "source_sha256": "d32a241677dc7c0af76bcfc88c69757b0b4d006c68ccfdd44ab652493c224d44",
+      "bytes": 1750864
+    },
+    {
+      "file": "art/cups-09-blink.webp",
+      "source_sha256": "a475b47cd542345d8eacc806cfc1a073e2008dbb2071e923c8e86211e6c3d3f3",
+      "bytes": 1570324
+    },
+    {
+      "file": "art/cups-10-atlas-v2.webp",
+      "source_sha256": "6c636823edbc9c1f23f46b9f9a4588a808ccf0f1ae7b4c0bd85926cd8730b5c5",
+      "bytes": 1576314
+    },
+    {
+      "file": "art/cups-10-scenery-v3.webp",
+      "source_sha256": "56da3d1edd3571003ef876444a4c54d5da989170b01e4cd8d08c7201d20323b0",
+      "bytes": 2299206
+    },
+    {
+      "file": "art/cups-11-atlas.webp",
+      "source_sha256": "11359eefe72b8d834508b5abf23f970ce5af39cc22bb7176386609b3f14cc4ef",
+      "bytes": 1675240
+    },
+    {
+      "file": "art/cups-11-blink.webp",
+      "source_sha256": "3ec4349db1182f0934ddd72d52027cb544ccf89ebe3d30bdafcbb74e7f1a74aa",
+      "bytes": 1531344
+    },
+    {
+      "file": "art/cups-12-atlas.webp",
+      "source_sha256": "2675d5a1e200875b68864737d5939fba89aefcd4c3dc828fd6c1ca709c40a88c",
+      "bytes": 2003966
+    },
+    {
+      "file": "art/cups-12-blink.webp",
+      "source_sha256": "b55171f58d462780d894367b1344f453c0dde164c52fe847ddc6964d15e07bb3",
+      "bytes": 1800332
+    },
+    {
+      "file": "art/cups-14-atlas.webp",
+      "source_sha256": "2581db1ff5620ace15993dfc983a1ce165fa3e3d1cf063e6067f1fd8734915f1",
+      "bytes": 1888790
+    },
+    {
+      "file": "art/cups-14-blink.webp",
+      "source_sha256": "3507d22f87d7e87180e0e7dc3afc8f75a40173d2b80e22fd77ca308c03307d3d",
+      "bytes": 1678312
+    },
+    {
+      "file": "art/cups-14-scenery-v2.webp",
+      "source_sha256": "dfb3181294c90feed46f192f5dcd56b903ffeca88d0fe9a48a9ea0f6de0368c3",
+      "bytes": 2307834
+    },
+    {
+      "file": "art/fool-blink.webp",
+      "source_sha256": "8d3b0905eb181e65ed9192f84ab26877ca9e88c67145b6bf05ec7f3b2b1998ce",
+      "bytes": 1588692
+    },
+    {
+      "file": "art/fool-redrawn-atlas.webp",
+      "source_sha256": "9481b05b996036c62dd711d4d37beb3bdd3dab1cf8beee5210da6eb494b9d8ee",
+      "bytes": 1778020
+    },
+    {
+      "file": "art/magician-atlas.webp",
+      "source_sha256": "fc2c407d352d46635ced46fbe770721c62d284cc01f2bed1c8a500674398fb8a",
+      "bytes": 2022308
+    },
+    {
+      "file": "art/magician-blink.webp",
+      "source_sha256": "307ae63c6e769662cab1c0512e069fddd8fca946c62716e912fbe4c6c2e56f85",
+      "bytes": 1817120
+    },
+    {
+      "file": "art/major-02-atlas-v2.webp",
+      "source_sha256": "365e8d0c2d6be8455ab6c657ca00e545907a4459aefd5633f5e1f01658099aa5",
+      "bytes": 2018906
+    },
+    {
+      "file": "art/major-02-blink-v2.webp",
+      "source_sha256": "a091bcbf18cb7dc222f0d6670040d5de1f4b79340e7968df6c9a5eb69602a128",
+      "bytes": 1876322
+    },
+    {
+      "file": "art/major-03-atlas.webp",
+      "source_sha256": "79f0c35c5585581c636206ea91befe1f15395137a2291357ba839b34e67d15af",
+      "bytes": 2296888
+    },
+    {
+      "file": "art/major-03-blink.webp",
+      "source_sha256": "ed8e70db32b98c12edae7995d93279a453dae8218e977aca31ef2db665ee3ed9",
+      "bytes": 2091062
+    },
+    {
+      "file": "art/major-04-atlas.webp",
+      "source_sha256": "4aba082608c09d00243ef2f79b3b86d7ce9b612065d059f4553326f3d73bd904",
+      "bytes": 2207782
+    },
+    {
+      "file": "art/major-04-blink.webp",
+      "source_sha256": "b1b7dd4d7a2cb56964babbc84e166a5152d4c047fb00561e305990aa7ed96ad4",
+      "bytes": 1919978
+    },
+    {
+      "file": "art/major-05-atlas.webp",
+      "source_sha256": "fcd07a55e54c7c2a98c2d8e46fd72f8473ef2bb756e382ee793d289053a1b061",
+      "bytes": 2084572
+    },
+    {
+      "file": "art/major-05-blink.webp",
+      "source_sha256": "d0a3fdd26bb94866b6e8595936dcc00b06975d0a5deb0e64a0f495743488e3a6",
+      "bytes": 1796978
+    },
+    {
+      "file": "art/major-06-atlas.webp",
+      "source_sha256": "50cdf8920b871682ca1e089cec629debbcd92ef00c623db7de181eca1f6b145d",
+      "bytes": 2331640
+    },
+    {
+      "file": "art/major-06-blink.webp",
+      "source_sha256": "6c144bae3bcab701b451c5e235c322ae5937f5c89f685cb7dd6d806aa13cfc8f",
+      "bytes": 2095986
+    },
+    {
+      "file": "art/major-07-atlas.webp",
+      "source_sha256": "f5df5784152c21b965230a31bd05108b4db7d45e2e3c2405179c7141bc85bf30",
+      "bytes": 2388514
+    },
+    {
+      "file": "art/major-07-blink.webp",
+      "source_sha256": "dae9a4c1ca6713c55969586afa3e08270573e1d08f66238c9bc9327489c4c3c8",
+      "bytes": 2131426
+    },
+    {
+      "file": "art/major-08-atlas.webp",
+      "source_sha256": "77790c533feb50a245b29c35c823ebd808edcf4d0dbc794368eead43e72690e6",
+      "bytes": 2196638
+    },
+    {
+      "file": "art/major-08-blink.webp",
+      "source_sha256": "8f52655e8bece839282d6ad9e27b3682cf4a35e55690e8112541d377b82eaf96",
+      "bytes": 1989038
+    },
+    {
+      "file": "art/major-09-atlas-v3.webp",
+      "source_sha256": "1254aca66da6766d9575b8d8bd9f104a9d7432a5d8b68be1bae2105d153f07e3",
+      "bytes": 1771490
+    },
+    {
+      "file": "art/major-09-blink-v2.webp",
+      "source_sha256": "29cb68eb759f088058bb5116a90e39859ec044ca2988859e31c99ab36ef276b4",
+      "bytes": 1634112
+    },
+    {
+      "file": "art/major-10-atlas-v3.webp",
+      "source_sha256": "ca14581aedf8936be484f3ff1f9b8541737565ad2d4019cc728c1627e01958d9",
+      "bytes": 1798616
+    },
+    {
+      "file": "art/major-10-blink.webp",
+      "source_sha256": "79aa97a1c25b0b259623e4fd93b8d92e185526ae556db0df1f67d46097851df4",
+      "bytes": 1856424
+    },
+    {
+      "file": "art/major-10-corner-symbols-v2.webp",
+      "source_sha256": "caa28f6a79022c0365c98da80ebc0b7b58efd303f558c4ae5bdf7ab5aac5c070",
+      "bytes": 470754
+    },
+    {
+      "file": "art/major-11-atlas.webp",
+      "source_sha256": "0183cdbfa81b81cd88479a43773a015d8c7234ab3a2beb4dec1bf928e67014e5",
+      "bytes": 1835092
+    },
+    {
+      "file": "art/major-11-blink.webp",
+      "source_sha256": "83a509eaa52195d74156fe18f00c035f757994a0db6d44d9a29abca9b87fd1b9",
+      "bytes": 1626932
+    },
+    {
+      "file": "art/major-12-atlas-v2.webp",
+      "source_sha256": "b2fe402227adba49df1cc883692729fc7faf68f28c9bd29830535c8ce9f0ee39",
+      "bytes": 1598752
+    },
+    {
+      "file": "art/major-12-blink-v2.webp",
+      "source_sha256": "9edc3469dd1e20bc1b9fdee2a8ceaa0d987b0b44ca49b30ec030eca8264b4d9b",
+      "bytes": 1524944
+    },
+    {
+      "file": "art/major-13-atlas-v2.webp",
+      "source_sha256": "2923176064b6eac0c501ca757bd90d6ef783c1d3f06901b833455bbc6a81ea80",
+      "bytes": 2087914
+    },
+    {
+      "file": "art/major-13-blink-v2.webp",
+      "source_sha256": "93e4ea4c637074f30b99de68e0cafabf368ea1fbf12fe4044a0adf38ad81d2ac",
+      "bytes": 1827502
+    },
+    {
+      "file": "art/major-14-atlas-v3.webp",
+      "source_sha256": "e24a109f677694e2c3328bb2fe33fb860b68919ad73ebfc2524451c162198e17",
+      "bytes": 2136110
+    },
+    {
+      "file": "art/major-14-blink-v2.webp",
+      "source_sha256": "6ddc738b5a62a7d7ebdd85535d81e1b573d4c517cff9e3a3f6ca1e5eec6aca5a",
+      "bytes": 1749334
+    },
+    {
+      "file": "art/major-15-atlas.webp",
+      "source_sha256": "ef5a4aa72e4b2cc3be7799a4244e3551029e278fc963b90957630947f917c6d8",
+      "bytes": 2176120
+    },
+    {
+      "file": "art/major-15-blink.webp",
+      "source_sha256": "ca6744f87345dacdedc4597c92ced5e277028f5b6322d2ace32b3073f0500e1b",
+      "bytes": 1920860
+    },
+    {
+      "file": "art/major-16-atlas-v4.webp",
+      "source_sha256": "d1893788ccba1a33aac9f0de39fc9f746f63a4643a342b5045811db169065a58",
+      "bytes": 1722384
+    },
+    {
+      "file": "art/major-16-blink-v2.webp",
+      "source_sha256": "ad12f00364d238ba2ab37c1c1dee560b055fe4d32ba581c33338372bd009282b",
+      "bytes": 1710320
+    },
+    {
+      "file": "art/major-17-atlas-v4.webp",
+      "source_sha256": "0b64e850063e58f611dae2cb331322b78d9f4991246e3699f2edd47c518d5b05",
+      "bytes": 1731926
+    },
+    {
+      "file": "art/major-17-blink-v2.webp",
+      "source_sha256": "dce8d7c2a65076b0fcceca00c2891338783d03f6600952150341a6b50ae99122",
+      "bytes": 1516550
+    },
+    {
+      "file": "art/major-18-atlas-v4.webp",
+      "source_sha256": "07c8c1c45018cd1f9843cf707888dbc242eb7eeffd96d9ec89dcd766fdb4edbb",
+      "bytes": 1718908
+    },
+    {
+      "file": "art/major-18-blink-v2.webp",
+      "source_sha256": "8c8ca542f7cc8ce4228ec9a1d1e297b47a02f83c15d22547b3394ef7784ebf6c",
+      "bytes": 1624040
+    },
+    {
+      "file": "art/major-18-path-scenery-v2.webp",
+      "source_sha256": "dc76755fc2a2aec914423bc6377145dbcc69d580f56a4e94a8d0445ddc06cbd4",
+      "bytes": 2227590
+    },
+    {
+      "file": "art/major-19-atlas.webp",
+      "source_sha256": "264431e7956245f2d461cdb5cf4df4b9e566da346a0c96d2bdc67c391cdec15f",
+      "bytes": 1981064
+    },
+    {
+      "file": "art/major-19-blink.webp",
+      "source_sha256": "29f8dd4376a344df41414bcd91f4679b67923f41c6d58402d59b19306290cc9d",
+      "bytes": 1762336
+    },
+    {
+      "file": "art/major-20-atlas-v2.webp",
+      "source_sha256": "ecf361e31887dad547e3bd53ad0bb040e615b9b3f027ed5825b9885394775e31",
+      "bytes": 2150620
+    },
+    {
+      "file": "art/major-20-atlas.webp",
+      "source_sha256": "5327dc9535193de0988ced586faa7366065c86b4fad6e0ec10a5f4200d3329ec",
+      "bytes": 2185726
+    },
+    {
+      "file": "art/major-20-blink.webp",
+      "source_sha256": "d5fc608fd6db68d295580cfc11a7e8a5fffff2378d6376d29c53e2f183a184ea",
+      "bytes": 1989928
+    },
+    {
+      "file": "art/major-21-atlas.webp",
+      "source_sha256": "ca89896ddb5d5950a6ef6bbb08a52bc23445f2900c3ca5473084fbd37265bb9d",
+      "bytes": 1902826
+    },
+    {
+      "file": "art/major-21-blink.webp",
+      "source_sha256": "bc641187ba1f25ac94a836bca726a6fc1f417936aa9ceb1d3ac4543978b74dd0",
+      "bytes": 1681746
+    },
+    {
+      "file": "art/pentacles-01-atlas.webp",
+      "source_sha256": "167253e5d0d158607aca5b2f442241e5e963fcd4c7d735cd048205c3696b6a6a",
+      "bytes": 1678802
+    },
+    {
+      "file": "art/pentacles-02-atlas.webp",
+      "source_sha256": "3c07046b89f41d8566dc180fbdb19b8b9a0804216817f4e970d0af169d09fd8b",
+      "bytes": 1721488
+    },
+    {
+      "file": "art/pentacles-02-blink.webp",
+      "source_sha256": "2d73b37dbaffb11a811595762b70e0383b2ccc5b0dd8f02ac48cb2d86a2d334a",
+      "bytes": 1541436
+    },
+    {
+      "file": "art/pentacles-02-scene-v2.webp",
+      "source_sha256": "6fa808beeffa5dc786da08fe9a768b6af6792a645379d9f78a9711c0f9a1d8e1",
+      "bytes": 2149656
+    },
+    {
+      "file": "art/pentacles-03-atlas.webp",
+      "source_sha256": "b2ec2b71bf2f44c7f7c704c2767bc8483158ed6682477308245e74f027b662fc",
+      "bytes": 1853482
+    },
+    {
+      "file": "art/pentacles-03-blink.webp",
+      "source_sha256": "e7301dac95a6242d50c75be437056bad5b29f7c2250f77c78066b36685b45ba0",
+      "bytes": 1597898
+    },
+    {
+      "file": "art/pentacles-04-atlas.webp",
+      "source_sha256": "967dd5f8664e6d49ff03ac7c3abbfb8918a451fa3e439e90855a40e5ac1a9043",
+      "bytes": 1800880
+    },
+    {
+      "file": "art/pentacles-04-blink.webp",
+      "source_sha256": "cfd607d83ac21de9ea67a549bacd45dad33b030e235c31eac5fbce97f8ae5823",
+      "bytes": 1602180
+    },
+    {
+      "file": "art/pentacles-05-atlas.webp",
+      "source_sha256": "bb8d0e1b3b442b5a0970938dd585758ee5dc014a4bc7cc405caeec615d99bd7f",
+      "bytes": 1963450
+    },
+    {
+      "file": "art/pentacles-05-blink.webp",
+      "source_sha256": "1160f71485855acfc37de47ee271fc6e267d69c2deb63772e796fcf3abd3dd3b",
+      "bytes": 1716260
+    },
+    {
+      "file": "art/pentacles-06-atlas-v2.webp",
+      "source_sha256": "a0ef76f293bba77e2315472325806f0b3f8ff9d387b2117fe7f39e63caf7c83e",
+      "bytes": 1827620
+    },
+    {
+      "file": "art/pentacles-06-blink.webp",
+      "source_sha256": "47bd83528afc5bcd413ca21679e7ab596715471649e1a7215c5ec3d3a7d6c9fa",
+      "bytes": 1735728
+    },
+    {
+      "file": "art/pentacles-07-atlas.webp",
+      "source_sha256": "4eebb0f599bc3b47283ee4d84d578c6756c97506857f2b7270ecc57a08154fca",
+      "bytes": 2158858
+    },
+    {
+      "file": "art/pentacles-07-blink.webp",
+      "source_sha256": "1ff12d7e9f62351b83d2b7a22d6ad153b695721a0cf10b98eca0a9a3145624e6",
+      "bytes": 1912454
+    },
+    {
+      "file": "art/pentacles-08-atlas-v2.webp",
+      "source_sha256": "e67b0575572ec9022d964d4e0aa84358b82a6dcc76162e3ad82110e099e132f0",
+      "bytes": 2035354
+    },
+    {
+      "file": "art/pentacles-08-blink.webp",
+      "source_sha256": "bd7cdf68669323d41e1385ccfe74b306fca92d67cf7e0a0d0bd52b0dab738ad6",
+      "bytes": 1837478
+    },
+    {
+      "file": "art/pentacles-09-atlas.webp",
+      "source_sha256": "022187cba3ee19e58238b8c9b828c4c32e8d4194065e8f40846c2f313fbedba7",
+      "bytes": 2204366
+    },
+    {
+      "file": "art/pentacles-09-blink.webp",
+      "source_sha256": "77355e49540c967a81bdf25d3c035b0380387f99c292355803838115b802d166",
+      "bytes": 1980002
+    },
+    {
+      "file": "art/pentacles-09-scene-v2.webp",
+      "source_sha256": "7071c9ab6d2d527d9f3f6aa0519e94358ca54853365ce9fe91c72fae44ec5086",
+      "bytes": 2381828
+    },
+    {
+      "file": "art/pentacles-10-atlas-v2.webp",
+      "source_sha256": "0c9fe3bd96d26478ecc9e3015806c7872f90bd7bde27b9ce87b27fbcf3be7c83",
+      "bytes": 1944248
+    },
+    {
+      "file": "art/pentacles-10-atlas.webp",
+      "source_sha256": "eb236789e9a3309d85bfd2f1a6be3d13a9d30fdaff3b4b61e42d7b74c8e745f9",
+      "bytes": 2221018
+    },
+    {
+      "file": "art/pentacles-10-blink.webp",
+      "source_sha256": "4425bbcfcbe942a0c784b7f2125aaad4714056d1e87f8e5c4e606231e9b4d4fc",
+      "bytes": 1912714
+    },
+    {
+      "file": "art/pentacles-11-atlas.webp",
+      "source_sha256": "992cab50080c76aaf7f06cc675bb1550df50728cfa14d1988a0209f914a9953d",
+      "bytes": 1774322
+    },
+    {
+      "file": "art/pentacles-11-blink.webp",
+      "source_sha256": "a85ed13f4d2be92b074dbe59893f1d77ca318f641ea116eb9e80d130ece5757e",
+      "bytes": 1609952
+    },
+    {
+      "file": "art/pentacles-12-atlas-v5.webp",
+      "source_sha256": "fc742e952b4ae5b1cd6ffcca81c11bc88fcbb5ff01b09936642f8f8828effeef",
+      "bytes": 1946702
+    },
+    {
+      "file": "art/pentacles-12-blink.webp",
+      "source_sha256": "5854e919adf9a081ec745aeccb6131b98d8e43c26a0a7b246c16b5bea7163efb",
+      "bytes": 1769844
+    },
+    {
+      "file": "art/pentacles-13-atlas.webp",
+      "source_sha256": "c26db5a78eb890e203503775e70c7b52a424fa73e431509fa7d43aaf5d840a57",
+      "bytes": 2364666
+    },
+    {
+      "file": "art/pentacles-13-blink.webp",
+      "source_sha256": "c84b043e360cd44d1c8d6d11cb27406bccac201d2925f4ce6eb2396c178a2599",
+      "bytes": 2045008
+    },
+    {
+      "file": "art/pentacles-14-atlas-v2.webp",
+      "source_sha256": "9e3eebf318d1958e58c6df73f63afc12ccd99f598ff431c7e56dc08d62ed05c1",
+      "bytes": 2002734
+    },
+    {
+      "file": "art/pentacles-14-blink.webp",
+      "source_sha256": "cb28a76beca0fe16c7e575e5daab32831c1c8cc05e32db7bcd2ca69fb255ee5e",
+      "bytes": 1992176
+    },
+    {
+      "file": "art/queen-cups-atlas.webp",
+      "source_sha256": "eee38ea23e619c7d38a560fcbcb0baf2356ef61f8d2838a78d06f25149123eea",
+      "bytes": 1941666
+    },
+    {
+      "file": "art/queen-cups-blink.webp",
+      "source_sha256": "501bba3ffff76b68d2ddd277e8bbb92bb14241a3e7a2b254d6dffb0263594c85",
+      "bytes": 1674470
+    },
+    {
+      "file": "art/swords-01-atlas.webp",
+      "source_sha256": "05a8a9d7d780ee0e2a52874dc493cdf3421fe2c5d340b6f5b129e7ffea62cfe2",
+      "bytes": 1653574
+    },
+    {
+      "file": "art/swords-02-atlas.webp",
+      "source_sha256": "6ab9a1b78adbeaff4089cc55457c022a901160a4fb7aa33af55288eca2009645",
+      "bytes": 1864678
+    },
+    {
+      "file": "art/swords-03-atlas.webp",
+      "source_sha256": "1fff453b8a1d7c3a1d803cb1861b3cc35c037b55c9432d1fa08aee838491b8d5",
+      "bytes": 1473576
+    },
+    {
+      "file": "art/swords-04-atlas.webp",
+      "source_sha256": "65acb61676fb44af3eba7e98e2793ce02915ead3e79d71a1aa5a1d761dc60d1f",
+      "bytes": 1800370
+    },
+    {
+      "file": "art/swords-05-atlas.webp",
+      "source_sha256": "c0869d78e5e955d2187978ccf038377d920f3c911503950c3e96e3d3c60ef87e",
+      "bytes": 1977166
+    },
+    {
+      "file": "art/swords-05-blink.webp",
+      "source_sha256": "fc0ba51f179160c6fac4dfee9f5e2ef81da013d4330dac51cd43e7e69c0ba809",
+      "bytes": 1679834
+    },
+    {
+      "file": "art/swords-06-atlas.webp",
+      "source_sha256": "dfd943da1b0c47b5f1714cbfe17f8354b46ad41eeede291b38d7ecff234c0cdf",
+      "bytes": 1887134
+    },
+    {
+      "file": "art/swords-07-atlas.webp",
+      "source_sha256": "30f018beae66a2ffc3a07cda863ffd44247188b71fcd8e6b00a1777698af7271",
+      "bytes": 1902888
+    },
+    {
+      "file": "art/swords-07-blink.webp",
+      "source_sha256": "68b951e0a742f7addba797a494ff5c3d892b5b3e588c2f0e2d009b8b8bb9dad7",
+      "bytes": 1714552
+    },
+    {
+      "file": "art/swords-08-atlas-v2.webp",
+      "source_sha256": "e22d44e6b6d4bebf147f28a45b177d9a1a29ca9bb52872a98f4d7ce956a8d32e",
+      "bytes": 1953286
+    },
+    {
+      "file": "art/swords-09-atlas-v2.webp",
+      "source_sha256": "9fb715c07e8316fd2dc23c82ea7c909fc29468dc8808b544cf0bb69ff963690c",
+      "bytes": 1735292
+    },
+    {
+      "file": "art/swords-10-atlas-v2.webp",
+      "source_sha256": "14b396575185d158133fd686de14a60d2e62a4cde224ed27b0fcac1240fe432c",
+      "bytes": 1557896
+    },
+    {
+      "file": "art/swords-10-scene-v3.webp",
+      "source_sha256": "2ff79054e74fff6b69254ddbd8b012296987c05883b6968a3f5e7d08e81811b1",
+      "bytes": 1881834
+    },
+    {
+      "file": "art/swords-11-atlas.webp",
+      "source_sha256": "2297f2165fe13c03b690e0aa391171597c5fff81ecbb6dc43791947c452aabe4",
+      "bytes": 1660616
+    },
+    {
+      "file": "art/swords-11-blink.webp",
+      "source_sha256": "33d2c7d1ab72a417457cc0cc193cb21a4e1d451fab045da2ebb82caf57c67c2d",
+      "bytes": 1429270
+    },
+    {
+      "file": "art/swords-12-atlas-v2.webp",
+      "source_sha256": "343afa211f1094feaf4e870bcd10bcfb810552c44b71dd7a21e2e218b66527b0",
+      "bytes": 2033046
+    },
+    {
+      "file": "art/swords-12-blink.webp",
+      "source_sha256": "07c3106853772abf7d9ca32fd0e5273025b3ce06af586daf46ea66c5a1245b09",
+      "bytes": 1736826
+    },
+    {
+      "file": "art/swords-13-atlas.webp",
+      "source_sha256": "f42b62878e4f274f8bacffebc822808511a15365164e75fc26bb2b853e04b38f",
+      "bytes": 1761388
+    },
+    {
+      "file": "art/swords-13-blink.webp",
+      "source_sha256": "ebca74c6648aefe50a4209e1487e79705aed470892436c236c39bebe4c2b455c",
+      "bytes": 1577326
+    },
+    {
+      "file": "art/swords-14-atlas.webp",
+      "source_sha256": "6b8ccbf0536488e67612e484a7c5c5783003291fd1ca293448393013bb82e6cc",
+      "bytes": 2042330
+    },
+    {
+      "file": "art/swords-14-blink.webp",
+      "source_sha256": "cc9d045fe60edcbc49ed339f60008a07c8411659da05bee586ef85195cb781a8",
+      "bytes": 1801348
+    },
+    {
+      "file": "art/wands-01-atlas.webp",
+      "source_sha256": "3e1c23708b2d74b3b6930afa9987122672b19c72e4dd450316040f65e2faa716",
+      "bytes": 1774216
+    },
+    {
+      "file": "art/wands-02-atlas-v2.webp",
+      "source_sha256": "a3426b1e74a9e21b98e9fb9c80ea8ac8c9334736d6031fe7c0f6a14f638ee5f7",
+      "bytes": 1587412
+    },
+    {
+      "file": "art/wands-02-blink.webp",
+      "source_sha256": "3a23656d36e44878873b33cba37cb72c25bd0a8b99c9b7b4fc0850a8915f6264",
+      "bytes": 1540864
+    },
+    {
+      "file": "art/wands-03-atlas.webp",
+      "source_sha256": "ca54576611a4314a2108d964896c795cbd1420e04f6ae52245bfeeae2b583844",
+      "bytes": 1926480
+    },
+    {
+      "file": "art/wands-04-atlas.webp",
+      "source_sha256": "5bbd7ec345c12773b7a0004202dac2adec480eeaecdc3a80a4abb895e1839e0a",
+      "bytes": 2326288
+    },
+    {
+      "file": "art/wands-05-atlas.webp",
+      "source_sha256": "d63a6fd12f52670f1d7b6ea48627946338a0ae7602917509b00280eee4cd229f",
+      "bytes": 1867464
+    },
+    {
+      "file": "art/wands-05-blink.webp",
+      "source_sha256": "272007d5ba8f9c08b0ba101b8a6244dcf597910e3981d43709c17d67c2eb3a2d",
+      "bytes": 1622928
+    },
+    {
+      "file": "art/wands-06-atlas.webp",
+      "source_sha256": "9906926d141b803d73601de6b57ebd3ff97caaa35e71943fc2bf6cb1235265fb",
+      "bytes": 2081182
+    },
+    {
+      "file": "art/wands-06-blink.webp",
+      "source_sha256": "e928751909f8dc5439cb2ea746dc80bf3ea8095b72958025f6080a3a2fece508",
+      "bytes": 1802508
+    },
+    {
+      "file": "art/wands-07-atlas.webp",
+      "source_sha256": "19ef8973bf6fc367d154119b9ac369954b6eab761014340e4792f49974da4ad2",
+      "bytes": 1932140
+    },
+    {
+      "file": "art/wands-07-blink.webp",
+      "source_sha256": "6aec61feabfc678d0c0abf263c1ff46cf562f04790f2a4a9f875ee6a28f491c8",
+      "bytes": 1670468
+    },
+    {
+      "file": "art/wands-08-atlas-v7.webp",
+      "source_sha256": "ca34396e6a60e60146081999ac721ed7710f0061cdd3dbcdaba6f4aacbbb0202",
+      "bytes": 1339900
+    },
+    {
+      "file": "art/wands-09-atlas.webp",
+      "source_sha256": "9ac9b22cd7bae5ce7152b30039b21ab1e6f1254e5f233d638ccd0ec408cbb44f",
+      "bytes": 1990406
+    },
+    {
+      "file": "art/wands-09-blink.webp",
+      "source_sha256": "801d71f7d78fba530cfbd13e6f429568224d46b5ee6f1abe4618acbc76558b50",
+      "bytes": 1736120
+    },
+    {
+      "file": "art/wands-10-atlas-v2.webp",
+      "source_sha256": "513853d744d894495769ee501b6658888fb40c2f18879a0b741b97db7c4293cb",
+      "bytes": 1748456
+    },
+    {
+      "file": "art/wands-11-atlas.webp",
+      "source_sha256": "e716ed4abd54bba167a6574dfa4e1d9360213777d06911ca0d77fa2f098c02d3",
+      "bytes": 1557162
+    },
+    {
+      "file": "art/wands-11-blink.webp",
+      "source_sha256": "aed32658d63e1b89764b086fbadd4167fa851ec4520cd3b811df65b05de1b508",
+      "bytes": 1406816
+    },
+    {
+      "file": "art/wands-12-atlas-v2.webp",
+      "source_sha256": "ec57cf795d0fe167dcbd7e37a8e78f58e6c06c7851f570ed1dcbbe1aa33967d8",
+      "bytes": 1854384
+    },
+    {
+      "file": "art/wands-12-blink.webp",
+      "source_sha256": "8d62b74f638ddb490740a8ddf0031f6bd620ddefdc1bcf6d608be8888810f2f6",
+      "bytes": 1701272
+    },
+    {
+      "file": "art/wands-12-scene.webp",
+      "source_sha256": "d07bcc26fdb27a6e8bab9da1e3b64bb53683dc3c3cfa2deba317b520a4c8fc7f",
+      "bytes": 2096960
+    },
+    {
+      "file": "art/wands-13-atlas.webp",
+      "source_sha256": "471656e416cd78edd1d2fcaf0009f412655e673b0ec2d1e21a7d5dfa85c0778c",
+      "bytes": 2106454
+    },
+    {
+      "file": "art/wands-13-blink.webp",
+      "source_sha256": "cc3dcc92931eb7f82f2b2b3479a4b62b85cffc680a9f66f2575672ae95291f6a",
+      "bytes": 1899940
+    },
+    {
+      "file": "art/wands-14-atlas.webp",
+      "source_sha256": "a13ada37e06ae94d05f57316e96b390cb14da1e0e66f4a2faf65bbbcd681dc38",
+      "bytes": 2200214
+    },
+    {
+      "file": "art/wands-14-blink.webp",
+      "source_sha256": "37166d8f137c8d167c62c39e0a9b45658714b59a688905dbc67d165bf5a4b7f6",
+      "bytes": 1904448
+    },
+    {
+      "file": "frame-study/art/a-classic-back-v1.webp",
+      "source_sha256": "a86eb13862e53c47d597cf8c2df7a351e0069073e034b39318abb449b75bd933",
+      "bytes": 2076266
+    }
+  ]
+}

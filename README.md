@@ -5,6 +5,7 @@ OBS 브라우저 소스나 웹페이지에 그대로 올려 쓴다.
 
 - 위젯: <https://eunjaelee-toothlife.github.io/sheddy-pet/>
 - 본체는 [`widget.html`](widget.html) 파일 하나 + [`sprites/anim_*.webm`](sprites/) (VP9 + 알파) 클립들
+- 레몬 타로: 78장 고전 금박 카드로 한 장 / 세 장을 뽑는 별도 [방송 위젯](tarot-widget/README.md). OBS ‘상호작용’으로 조작하며 추가 서버가 필요 없다.
 
 ## OBS에서 쓰기
 
