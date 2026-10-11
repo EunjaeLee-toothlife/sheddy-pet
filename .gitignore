@@ -23,3 +23,25 @@ PLAN_LOG.md
 sprites/rebuilt/inputs/
 sprites/rebuilt/qa/
 sprites/hd720/qa/
+
+# 타로 스타일 미리보기 서버의 로컬 로그
+output/tarot-study/server*.log
+output/tarot-study/motion-frames/
+output/tarot-study/major-motion-frames/
+
+# 재생성 가능한 고해상도 타로 출력은 로컬 파일로 보관한다.
+output/tarot-cards/classic-gilt/*/PNG/
+output/tarot-cards/classic-gilt/*/SVG/
+output/pdf/레몬타로_고전금박_인쇄용_70x120mm.pdf
+output/pdf/레몬타로_고전금박_A0_79장_인쇄용.pdf
+tmp/pdfs/tarot-a0/
+
+# MPC에 업로드할 PNG 및 재생성 가능한 시안 이미지
+output/tarot-cards/mpc-tarot-proof/*/PNG/
+output/tarot-cards/mpc-tarot-proof/preview/
+output/tarot-cards/mpc-tarot-proof/*.zip
+tmp/tarot-mpc/
+
+# 타로 위젯 검수 화면과 배포 이미지의 로컬 압축 캐시
+output/tarot-widget/qa/
+docs/tarot-study/**/*.source-sha256

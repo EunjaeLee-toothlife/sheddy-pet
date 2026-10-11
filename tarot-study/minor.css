@@ -1,0 +1,52 @@
+/* 인물 없는 카드도 소품 전경을 재생하며 원본의 의미를 유지한다. */
+.sample[data-id^="wands-"] .character{animation-name:wands-breathe;transform-origin:var(--figure-origin,50% 96%);animation-duration:5.8s}
+.sample[data-id="wands-01"] .character{animation-name:wand-cloud-float}
+.sample[data-id="wands-08"] .character{animation-name:wands-flight;animation-duration:4.8s}
+.sample[data-id="wands-07"] .character{transform-origin:50% 74%}
+.sample[data-id="wands-13"] .character,.sample[data-id="wands-14"] .character{animation-name:royal-breathe}
+@keyframes wands-breathe{0%,100%{transform:scale(var(--figure-scale,1)) scaleY(1)}50%{transform:scale(var(--figure-scale,1)) scaleY(calc(1 + .008 * var(--motion)))}}
+@keyframes royal-breathe{0%,100%{transform:scale(var(--figure-scale,1)) scaleY(1)}50%{transform:scale(var(--figure-scale,1)) scaleY(calc(1 + .003 * var(--motion)))}}
+@keyframes wand-cloud-float{0%,100%{transform:translateY(calc(-2px * var(--motion)))}50%{transform:translateY(calc(2px * var(--motion)))}}
+/* 가장 가까운 막대는 화면 밖으로 이어진다. 미세 이동에도 왼쪽 절단면이 안으로 들어오지 않게 여유를 둔다. */
+@keyframes wands-flight{0%,100%{transform:translate(calc(-.3% * var(--motion)),calc(-.25% * var(--motion))) scale(var(--figure-scale,1)) scaleY(var(--figure-scale-y,1))}50%{transform:translate(calc(.3% * var(--motion)),calc(.25% * var(--motion))) scale(var(--figure-scale,1)) scaleY(var(--figure-scale-y,1))}}
+.suit-note{font-size:12px;line-height:1.8;color:var(--muted)}
+
+/* 잔·환상은 고정된 배경에 두고 인물의 접점 위쪽만 느리게 움직인다. */
+.sample[data-id^="cups-"] .character{animation-name:cups-breathe;animation-duration:6.4s;transform-origin:var(--figure-origin,50% 96%)}
+.sample[data-id="cups-01"] .character{animation-name:cups-water-pulse;animation-duration:5.2s}
+.sample[data-id="cups-09"] .character,.sample[data-id="cups-13"] .character,.sample[data-id="cups-14"] .character{animation-name:royal-breathe}
+.sample[data-id="cups-04"] .character{transform-origin:var(--figure-origin,50% 80%)}
+/* 앉은 발의 접점에 옅은 그림자를 두어 언덕 위의 인물이 떠 보이지 않게 한다. */
+.sample[data-id="cups-04"] .scene::after,.sheet-card[data-id="cups-04"] .scene::after{content:"";position:absolute;left:23%;top:71.4%;width:46%;height:3.2%;background:radial-gradient(ellipse,#272c1b47,transparent 70%);pointer-events:none}
+.sample[data-id="cups-08"] .character{transform-origin:var(--figure-origin,70% 68%)}
+@keyframes cups-breathe{0%,100%{transform:scale(var(--figure-scale,1)) scaleY(1)}50%{transform:scale(var(--figure-scale,1)) scaleY(calc(1 + .008 * var(--motion)))}}
+@keyframes cups-water-pulse{0%,100%{transform:scale(var(--figure-scale,1)) scaleY(1)}50%{transform:scale(var(--figure-scale,1)) scaleX(calc(1 + .006 * var(--motion))) scaleY(calc(1 + .004 * var(--motion)))}}
+
+/* 일곱 환상을 바라보는 뒷모습은 원본처럼 오른쪽으로 손을 내민다. */
+.sample[data-id="cups-07"] .character{animation-name:cups-observer}
+.sheet-card[data-id="cups-07"] .character{transform:scale(var(--figure-scale,1)) scaleX(-1)!important}
+@keyframes cups-observer{0%,100%{transform:scale(var(--figure-scale,1)) scaleX(-1) scaleY(1)}50%{transform:scale(var(--figure-scale,1)) scaleX(-1) scaleY(calc(1 + .008 * var(--motion)))}}
+
+/* 검의 자세와 방향을 함께 유지한다. 석상과 엎드린 인물은 빛만 변화한다. */
+.sample[data-id^="swords-"] .character{animation-name:swords-breathe;animation-duration:6.6s;transform-origin:var(--figure-origin,50% 96%)}
+.sample[data-id="swords-01"] .character{animation-name:swords-cloud;animation-duration:5.8s}
+.sample[data-id="swords-03"] .character{animation-name:swords-heart;animation-duration:6s;transform-origin:50% 52%}
+.sample[data-id="swords-04"] .character,.sample[data-id="swords-10"] .character{animation-name:swords-light;transform:scale(var(--figure-scale,1));animation-duration:7s}
+.sample[data-id="swords-06"] .character{animation-name:swords-ferry;animation-duration:6.8s}
+.sample[data-id="swords-13"] .character,.sample[data-id="swords-14"] .character{animation-name:royal-breathe}
+/* 깜빡임 원화의 작은 위치 차이를 눈 마스크 안에서만 정렬한다. */
+.sample[data-id="swords-13"] .blink-layer .atlas{translate:-1.519337% -.920810%}
+@keyframes swords-breathe{0%,100%{transform:scale(var(--figure-scale,1)) scaleY(1)}50%{transform:scale(var(--figure-scale,1)) scaleY(calc(1 + .006 * var(--motion)))}}
+@keyframes swords-cloud{0%,100%{transform:scale(var(--figure-scale,1)) scaleY(1)}50%{transform:scale(var(--figure-scale,1)) scaleX(calc(1 + .004 * var(--motion))) scaleY(calc(1 + .004 * var(--motion)))}}
+@keyframes swords-heart{0%,100%{transform:scale(var(--figure-scale,1)) translateY(0)}50%{transform:scale(var(--figure-scale,1)) translateY(calc(-1.2px * var(--motion)))}}
+@keyframes swords-light{0%,100%{filter:brightness(1)}50%{filter:brightness(calc(1 + .055 * var(--motion)))}}
+@keyframes swords-ferry{0%,100%{transform:scale(var(--figure-scale,1)) translateY(0)}50%{transform:scale(var(--figure-scale,1)) translateY(calc(1px * var(--motion)))}}
+
+/* 동전·손·도구의 접점을 함께 유지하고 땅에 닿은 발은 움직임의 기준으로 둔다. */
+.sample[data-id^="pentacles-"] .character{animation-name:pentacles-breathe;animation-duration:6.8s;transform-origin:var(--figure-origin,50% 96%)}
+.sample[data-id="pentacles-01"] .character{animation-name:pentacles-cloud;animation-duration:6s}
+.sample[data-id="pentacles-02"] .character{animation-name:pentacles-balance;animation-duration:5.8s}
+.sample[data-id="pentacles-12"] .character,.sample[data-id="pentacles-13"] .character,.sample[data-id="pentacles-14"] .character{animation-name:royal-breathe}
+@keyframes pentacles-breathe{0%,100%{transform:scale(var(--figure-scale,1)) scaleY(1)}50%{transform:scale(var(--figure-scale,1)) scaleY(calc(1 + .006 * var(--motion)))}}
+@keyframes pentacles-cloud{0%,100%{transform:scale(var(--figure-scale,1)) scaleY(1)}50%{transform:scale(var(--figure-scale,1)) scaleX(calc(1 + .004 * var(--motion))) scaleY(calc(1 + .004 * var(--motion)))}}
+@keyframes pentacles-balance{0%,100%{transform:scale(var(--figure-scale,1)) rotate(calc(-.2deg * var(--motion)))}50%{transform:scale(var(--figure-scale,1)) rotate(calc(.2deg * var(--motion)))}}

@@ -1,0 +1,25 @@
+@charset "UTF-8";
+@font-face{font-family:"Pirata One";src:url("fonts/PirataOne-Regular.ttf") format("truetype");font-style:normal;font-weight:400;font-display:swap}
+@font-face{font-family:"Nanum Myeongjo";src:url("fonts/NanumMyeongjo-ExtraBold.ttf") format("truetype");font-style:normal;font-weight:800;font-display:swap}
+@font-face{font-family:"Cinzel Decorative";src:url("fonts/CinzelDecorative-Regular.ttf") format("truetype");font-style:normal;font-weight:400;font-display:swap}
+/* 장식은 원화 가장자리의 독립된 고정 레이어로 표시한다. */
+.gilt-art-overlay{position:absolute;inset:0;width:100%;height:100%;z-index:30;pointer-events:none;opacity:.88}
+.gilt-margin{position:absolute;width:16%;height:auto;color:#a28348;z-index:1;pointer-events:none;opacity:.85}
+.gilt-margin.tl{top:2%;left:2%}.gilt-margin.tr{top:2%;right:2%;transform:scaleX(-1)}.gilt-margin.bl{bottom:2%;left:2%;transform:scaleY(-1)}.gilt-margin.br{bottom:2%;right:2%;transform:scale(-1)}
+.classic .rank,.classic-gilt .card-numeral{font-family:"Cinzel Decorative",Georgia,serif;font-weight:400;font-size:3.8cqw;letter-spacing:.12em}
+.classic .title-ko,.classic-gilt .card-title-ko{font-family:"Nanum Myeongjo","Batang",serif;font-weight:800;font-size:6cqw;line-height:1.2;letter-spacing:.035em;color:#57422c;white-space:nowrap}
+.classic .title-en,.classic-gilt .card-title{font-family:"Pirata One",Georgia,serif;font-weight:400;font-size:6.2cqw;line-height:1.12;letter-spacing:.012em;color:#72542b;white-space:nowrap}
+.classic .title-block{gap:1.5cqw}
+/* 모든 수트에서 승인된 2:3 그림 비율과 기존 움직임을 유지한다. */
+.classic-gilt .card-front{padding:0;align-items:center;container-type:inline-size;background:#f2e7cd;border:1px solid #c9b080;color:#4f4032;isolation:isolate}
+.classic-gilt .card-front:after{inset:6px;border-color:#b49964aa;border-radius:8px;z-index:4}
+.classic-gilt .card-numeral{flex:none;height:6.2%;width:86%;margin:0;display:grid;place-items:center;line-height:1;color:#8c713d;position:relative;z-index:2}
+.classic-gilt .art-window{width:86%;height:auto;flex:none;aspect-ratio:2/3;border:0;box-shadow:0 0 0 1px #a88a5266;z-index:2}
+.classic-gilt .card-title-block{flex:1;min-height:0;width:86%;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:1.5cqw;position:relative;z-index:2}
+.classic-gilt .card-title{margin:0;max-width:100%;text-align:center}
+.classic-gilt .card-back{padding:0;border:1px solid #c9b080;background:#203c31}
+.gilt-back-print,.gilt-back-half{position:absolute;inset:0}.gilt-back-half{clip-path:inset(0 0 50% 0)}.gilt-back-half:last-child{transform:rotate(180deg)}.gilt-back-half img{display:block;width:100%;height:100%;object-fit:fill}
+.classic-gilt .card-back:after{content:"";position:absolute;inset:5px;border:1px solid #d0b17188;border-radius:8px;pointer-events:none}
+.show-source .gilt-art-overlay{display:none}
+body.classic-focus .candidates{grid-template-columns:1fr;max-width:1000px;margin:auto}body.classic-focus .pair{max-width:850px;margin:auto;gap:36px;padding-top:24px}body.classic-focus .candidate-bottom{max-width:850px;margin:auto;padding-bottom:25px}.design-link{display:inline-block;margin-top:12px;font-size:11px;color:var(--gold)}
+@media(max-width:760px){body.classic-focus .pair{grid-template-columns:1fr;max-width:340px;gap:24px}body.classic-focus .candidate-bottom{align-items:flex-start;gap:10px}}

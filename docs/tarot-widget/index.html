@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>레몬 타로 · 방송 위젯</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="../tarot-study/study.css">
+  <link rel="stylesheet" href="../tarot-study/major.css">
+  <link rel="stylesheet" href="../tarot-study/minor.css">
+  <link rel="stylesheet" href="../tarot-study/classic-gilt.css">
+  <link rel="stylesheet" href="widget.css?v=motion-2">
+  <link rel="stylesheet" href="salon.css?v=motion-2">
+  <script src="../tarot-study/classic-gilt.js" defer></script>
+  <script src="game.js" defer></script>
+  <script src="cards.js" defer></script>
+  <script src="show.js?v=motion-2" defer></script>
+  <script src="widget.js?v=motion-2" defer></script>
+</head>
+<body>
+  <main id="stage" class="stage" aria-label="타로 방송 화면">
+    <div class="stage-surface" aria-hidden="true"><div class="table-orbit orbit-one"></div><div class="table-orbit orbit-two"></div><div class="ambient-light"></div><div class="ambient-dust"></div><span class="surface-corner corner-tl">✧</span><span class="surface-corner corner-tr">✧</span><span class="surface-corner corner-bl">✧</span><span class="surface-corner corner-br">✧</span></div>
+    <div class="stage-topbar">
+      <div class="stage-brand"><svg class="lemon-seal" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="18"/><circle cx="20" cy="20" r="12"/><path d="M20 8v24M8 20h24M11.5 11.5l17 17M11.5 28.5l17-17"/><circle cx="20" cy="20" r="3"/></svg><span>Lemon Tarot<small>레몬의 작은 타로 살롱</small></span></div>
+      <ol class="stage-steps" aria-label="점보기 진행"><li data-step="ready"><span>01</span>준비</li><li data-step="pile"><span>02</span>덱 선택</li><li data-step="pick"><span>03</span>카드 선택</li><li data-step="reading"><span>04</span>이야기</li></ol>
+    </div>
+    <header class="stage-heading">
+      <p id="eyebrow" class="stage-eyebrow">A LITTLE MAGIC, A LITTLE LEMON</p>
+      <h1 id="heading">오늘의 이야기를 펼쳐볼까요</h1>
+      <p id="instruction">카드를 준비하고 있습니다.</p>
+      <p id="reading-title" hidden></p>
+    </header>
+    <div id="table" class="table"></div>
+    <aside id="focus-caption" class="focus-caption" hidden><p id="focus-topic" class="stage-eyebrow">YOUR CARD, YOUR STORY</p><h2 id="focus-name"></h2><p id="focus-english"></p><div class="caption-divider"></div><p class="focus-guide">작은 상징에서 이야기를 펼쳐보세요.</p></aside>
+    <div id="presentation" class="presentation-layer" aria-hidden="true"></div>
+    <footer class="stage-footer"><span class="progress-group"><i class="live-dot" aria-hidden="true"></i><span id="progress"></span></span><div id="selection-rail" class="selection-rail" aria-label="선택한 카드"></div><span class="stage-signature">SHEDDY · UPRIGHT ONLY</span></footer>
+  </main>
+  <section class="controller" aria-label="방송에 표시하지 않는 조작 패널">
+    <div class="control-top"><div class="control-identity"><strong><span class="desk-light" aria-hidden="true"></span>리더의 데스크</strong><p id="status" role="status" aria-live="polite">준비 중</p></div>
+      <div class="control-actions">
+        <button id="back" hidden>덱 다시 선택</button>
+        <button id="motion" aria-pressed="true">움직임 켜짐</button>
+        <button id="sound" aria-pressed="false">효과음 끔</button>
+        <button id="overview" hidden>전체 카드 보기</button>
+        <button id="skip" hidden>연출 건너뛰기</button>
+        <button id="visibility" aria-pressed="true">화면 숨기기</button>
+        <button id="reset">새 점보기</button>
+      </div>
+    </div>
+    <div class="control-bottom">
+      <label for="title">오늘의 주인공 / 질문 <input id="title" maxlength="60" placeholder="누구의 이야기를 들려드릴까요?" autocomplete="off"></label>
+      <button id="set-title">적용</button>
+      <div id="reveal-controls" class="reveal-controls" aria-label="한 장씩 공개"></div>
+    </div>
+    <p class="setup-note">OBS 브라우저 소스: <b>800 × 600</b> · 변환 → 변환 편집 → 하단 자르기 <b>150px</b> · 조작은 ‘상호작용’ 창에서.</p>
+    <p id="error" class="widget-error" role="alert" hidden></p>
+  </section>
+</body>
+</html>
