@@ -1,0 +1,60 @@
+{
+  "width": 1920,
+  "height": 1080,
+  "fps": 15,
+  "duration": 24,
+  "scenes": {
+    "lab": {
+      "exactPeriodic": true,
+      "seamMax": 22,
+      "seamMean": 0.06479263117283951,
+      "movingPixels": 57554,
+      "video": {
+        "file": "sheddy-lab-1080p15.mp4",
+        "frames": 360,
+        "duration": 24,
+        "codec": "h264",
+        "bytes": 3778213
+      }
+    },
+    "lecture": {
+      "exactPeriodic": true,
+      "seamMax": 26,
+      "seamMean": 0.04268518518518519,
+      "movingPixels": 30533,
+      "video": {
+        "file": "sheddy-lecture-1080p15.mp4",
+        "frames": 360,
+        "duration": 24,
+        "codec": "h264",
+        "bytes": 3166181
+      }
+    },
+    "cafe": {
+      "exactPeriodic": true,
+      "seamMax": 29,
+      "seamMean": 0.054483024691358024,
+      "movingPixels": 38176,
+      "video": {
+        "file": "sheddy-cafe-1080p15.mp4",
+        "frames": 360,
+        "duration": 24,
+        "codec": "h264",
+        "bytes": 4055752
+      }
+    },
+    "mountain": {
+      "exactPeriodic": true,
+      "seamMax": 10,
+      "seamMean": 0.13161265432098765,
+      "movingPixels": 109379,
+      "video": {
+        "file": "sheddy-mountain-1080p15.mp4",
+        "frames": 360,
+        "duration": 24,
+        "codec": "h264",
+        "bytes": 5998900
+      }
+    }
+  }
+}

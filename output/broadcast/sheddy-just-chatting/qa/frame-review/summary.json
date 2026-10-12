@@ -1,0 +1,138 @@
+{
+  "scope": "all 1440 decoded frames",
+  "scenes": {
+    "lab": {
+      "file": "output/broadcast/sheddy-just-chatting/sheddy-lab-1080p15.mp4",
+      "sha256": "20a429081b71a9c5ceb9a1d19b4d6dfd3d168850ca2390a89442a0ec2a6ed037",
+      "frameCount": 360,
+      "uniqueFrames": 360,
+      "fps": 15,
+      "duration": 24,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "silent": true,
+      "maxFrameDeltaMeanRGB": 1.141062,
+      "loopSeamMeanRGB": 1.6903901427469137,
+      "lumaRange": [
+        110.791488,
+        111.208762
+      ],
+      "closedEyeEvents": 4,
+      "sheets": [
+        "all-frames-1.jpg",
+        "all-frames-2.jpg",
+        "all-frames-3.jpg",
+        "all-frames-4.jpg",
+        "all-frames-5.jpg",
+        "all-frames-6.jpg",
+        "blink-details.jpg"
+      ]
+    },
+    "lecture": {
+      "file": "output/broadcast/sheddy-just-chatting/sheddy-lecture-1080p15.mp4",
+      "sha256": "fe2a383af321cd336080d867910b6e69b11390d3f7aaf669a61671efe768f295",
+      "frameCount": 360,
+      "uniqueFrames": 360,
+      "fps": 15,
+      "duration": 24,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "silent": true,
+      "maxFrameDeltaMeanRGB": 0.907193,
+      "loopSeamMeanRGB": 1.4240943287037038,
+      "lumaRange": [
+        97.485387,
+        97.915624
+      ],
+      "closedEyeEvents": 4,
+      "sheets": [
+        "all-frames-1.jpg",
+        "all-frames-2.jpg",
+        "all-frames-3.jpg",
+        "all-frames-4.jpg",
+        "all-frames-5.jpg",
+        "all-frames-6.jpg",
+        "blink-details.jpg"
+      ]
+    },
+    "cafe": {
+      "file": "output/broadcast/sheddy-just-chatting/sheddy-cafe-1080p15.mp4",
+      "sha256": "2e6e5e26b0578707829fd160327d4bf2a7329e1b7c232971048b64bf1326c5e1",
+      "frameCount": 360,
+      "uniqueFrames": 360,
+      "fps": 15,
+      "duration": 24,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "silent": true,
+      "maxFrameDeltaMeanRGB": 1.296843,
+      "loopSeamMeanRGB": 1.870262506430041,
+      "lumaRange": [
+        118.891377,
+        119.353255
+      ],
+      "closedEyeEvents": 4,
+      "sheets": [
+        "all-frames-1.jpg",
+        "all-frames-2.jpg",
+        "all-frames-3.jpg",
+        "all-frames-4.jpg",
+        "all-frames-5.jpg",
+        "all-frames-6.jpg",
+        "blink-details.jpg"
+      ]
+    },
+    "mountain": {
+      "file": "output/broadcast/sheddy-just-chatting/sheddy-mountain-1080p15.mp4",
+      "sha256": "8954f7e2d0119869fdd1ee04469d7d4b4881ad5ae4136381dbed884db73b62ec",
+      "frameCount": 360,
+      "uniqueFrames": 360,
+      "fps": 15,
+      "duration": 24,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "silent": true,
+      "maxFrameDeltaMeanRGB": 1.257577,
+      "loopSeamMeanRGB": 1.9058539094650204,
+      "lumaRange": [
+        56.958924,
+        57.56058
+      ],
+      "closedEyeEvents": 4,
+      "sheets": [
+        "all-frames-1.jpg",
+        "all-frames-2.jpg",
+        "all-frames-3.jpg",
+        "all-frames-4.jpg",
+        "all-frames-5.jpg",
+        "all-frames-6.jpg",
+        "blink-details.jpg"
+      ]
+    }
+  },
+  "sourceHashes": {
+    "tools/broadcast_renderer.html": "6b06682fc869fa5ccc915c2b9a488f4f6ed06f5515d97869029cae004d51440b",
+    "tools/render_broadcast.js": "c9d89167cc91917f919e7d0f07de79ed815c69233cff6a702d56fd67c8680cd5",
+    "tools/audit_broadcast.py": "b5929a6a4d225e1c55964ddaac2ef99e6a2e49629f5a00db990829f44a27b4a5",
+    "output/broadcast/sheddy-just-chatting/assets/cafe-blink.png": "5a959c61572039afd1567e647b8eee2cc3920de836a3c68f94ee9da6e130a6c5",
+    "output/broadcast/sheddy-just-chatting/assets/cafe-half.png": "9661794260a994e0e3e36c47c7317331f0c1210db1df42f351d18919494216c5",
+    "output/broadcast/sheddy-just-chatting/assets/lab-blink.png": "7e7a71102ac27ca67b9f528c21ad666f1c263bb0eb5230f52eef1071f5114eb0",
+    "output/broadcast/sheddy-just-chatting/assets/lab-half.png": "5260cd9fd74536c294334c990d85c616f26d67d1c4394e4c755209bca91ed1d1",
+    "output/broadcast/sheddy-just-chatting/assets/lecture-blink.png": "5d9c0f48dac2aad81569b355ccaf9f9ec5b3677d647723845ec022fe83d6b0b7",
+    "output/broadcast/sheddy-just-chatting/assets/lecture-half.png": "a8fe9d387cdf5371044ce612263b5239de4984196732f1a915e0f68d773633ab",
+    "output/broadcast/sheddy-just-chatting/assets/mountain-blink.png": "f876e3295889454e40625675cd30666363b4cea35d29a03730db65fb5dfd33c5",
+    "output/broadcast/sheddy-just-chatting/assets/mountain-half.png": "d623638dd226e417a01be48ca756122c883bd685ef3cd35c34c5f0166368a066",
+    "output/imagegen/chzzk-concepts-20261008-v2/01-university-lab.png": "3933152c3a75a7c56db1ff769aaa60fadad3640dbef6031cc56a306d0d416f64",
+    "output/imagegen/chzzk-concepts-20261008-v2/02-university-lecture.png": "59390cc96226912a33717ffa101371096eb29c568de7c2cad443d36c4498842e",
+    "output/imagegen/chzzk-concepts-20261008-v2/03-renaissance-modern-cafe.png": "1043237983eea25cd460f4282eda87189e403922130d75bd71e317eb2d28c001",
+    "output/imagegen/chzzk-concepts-20261008-v2/04-midnight-mountain-walk.png": "b537e4a3f8cf146e487b6cbeae181fa08cefde02cfc8f63f6b9b433c7ab383ee"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "before": {
+    "videoSha256": "9c6b764c1c7dae132a9fb54a7dba44f60f607eba2554312dd3d698927660ad92",
+    "frame": 49,
+    "distancesMeanRGB": {
+      "open": 7.559027777777778,
+      "half": 8.667242063492063,
+      "blink": 7.693710317460318,
+      "transparentBlend": 4.934503968253968
+    },
+    "nearestPose": "transparentBlend"
+  },
+  "after": {
+    "videoSha256": "2e6e5e26b0578707829fd160327d4bf2a7329e1b7c232971048b64bf1326c5e1",
+    "frame": 48,
+    "distancesMeanRGB": {
+      "open": 9.332500000000001,
+      "half": 5.019047619047619,
+      "blink": 9.376071428571429,
+      "transparentBlend": 8.686746031746031
+    },
+    "nearestPose": "half"
+  },
+  "crop": [
+    965,
+    495,
+    1115,
+    607
+  ],
+  "finding": "기존 중간 프레임은 open/closed 50% 혼합에 가장 가깝고 수정본은 불투명한 반감은 눈 표정에 가장 가깝다."
+}
