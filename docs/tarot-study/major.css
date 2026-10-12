@@ -1,0 +1,35 @@
+/* 메이저 전용 갤러리: 현재 세 장만 재생해 큰 이미지의 메모리 사용을 제한한다. */
+.gallery-nav{display:flex;align-items:center;justify-content:space-between;gap:16px;margin:0 0 24px;padding:14px 18px;border:1px solid var(--line);border-radius:9px;background:#ffffff03}
+.gallery-nav select{background:#232928;color:var(--ink);border:1px solid #d8bd7966;padding:8px 12px;border-radius:6px;font:12px "Malgun Gothic",sans-serif;max-width:240px}
+.paging{display:flex;align-items:center;gap:14px}.paging button{padding:5px 10px;font-size:20px;color:var(--gold)}.paging button:disabled{cursor:default}.paging span{font-size:11px;color:var(--muted)}
+.gallery-nav a{font-size:11px;color:var(--gold)}
+.character,.blink-layer{animation-delay:var(--phase,0s)!important}
+.fixed-foreground,.symbol-layer{position:absolute;inset:0;overflow:hidden;pointer-events:none;z-index:2}
+.fixed-foreground .atlas{left:-100%}
+.symbol-layer img{display:block;width:100%;height:100%;object-fit:fill}
+.symbol-layer img.atlas{position:absolute;top:0;left:0;width:200%;height:100%;max-width:none}
+.scenery-image{width:100%;height:100%;display:block;object-fit:fill}
+.effect.glow,.effect.moon,.effect.halo,.effect.lantern,.effect.sun{top:4%;left:24%;width:52%;height:35%;border-radius:50%;background:radial-gradient(ellipse,#fff6c778,transparent 72%);animation:glow 4.4s ease-in-out infinite;mix-blend-mode:screen}
+.effect.moon{background:radial-gradient(ellipse,#bbd6ff88,transparent 72%)}
+.effect.lantern{top:25%;left:8%;width:40%;height:32%;background:radial-gradient(ellipse,#ffc97788,transparent 74%)}
+.effect.halo{top:61%;left:24%;height:23%}
+.effect.water{position:absolute;top:64%;left:0;width:100%;height:31%;background:repeating-linear-gradient(176deg,transparent,transparent 9px,#c5fff677 10px,#fff6ce44 11px,transparent 13px);mask-image:linear-gradient(transparent,#000 45%,transparent);animation:visible-water 4.4s ease-in-out infinite}
+.effect.ember{inset:40% 10% 5%;background:radial-gradient(ellipse at bottom,#ff983744,transparent 65%);animation:glow 4.4s ease-in-out infinite;mix-blend-mode:screen}
+.effect.lightning{inset:0;background:linear-gradient(140deg,transparent 20%,#f7eaca55 45%,transparent 75%);animation:storm-light 8.8s infinite;mix-blend-mode:screen}
+.effect.wheel{inset:28% 12% 16%;border-radius:50%;background:conic-gradient(transparent,#ffd88733,transparent,#ffefbd22,transparent);animation:wheel-light 8.8s linear infinite;mix-blend-mode:screen}
+.effect.petal:not(span){display:none}
+/* 접점은 고정하고 위쪽으로 호흡한다. 배경 이동으로 발·왕좌·물가가 미끄러지지 않게 한다. */
+.scene{animation:none;transform:none}
+.character{transform-origin:var(--figure-origin,50% 94%);animation-name:grounded-breathe}
+.sample[data-id="major-02"] .character,.sample[data-id="major-03"] .character,.sample[data-id="major-04"] .character,.sample[data-id="major-05"] .character,.sample[data-id="major-07"] .character,.sample[data-id="major-11"] .character,.sample[data-id="major-15"] .character{animation-name:seated-breathe}
+.sample[data-id="major-12"] .character{transform-origin:50% 7%;animation-name:suspended-sway}
+.sample[data-id="major-16"] .character,.sample[data-id="major-10"] .character,.sample[data-id="major-21"] .character{animation-name:air-float}
+.sample[data-id="major-16"] .character{transform-origin:var(--figure-origin,90% 94%);animation-name:tower-float}
+@keyframes grounded-breathe{0%,100%{transform:scale(var(--figure-scale,1)) scaleY(1)}50%{transform:scale(var(--figure-scale,1)) scaleY(calc(1 + .012 * var(--motion)))}}
+@keyframes seated-breathe{0%,100%{transform:scaleY(1)}50%{transform:scaleY(calc(1 + .004 * var(--motion)))}}
+@keyframes suspended-sway{0%,100%{transform:rotate(calc(-.7deg * var(--motion)))}50%{transform:rotate(calc(.7deg * var(--motion)))}}
+@keyframes air-float{0%,100%{transform:translateY(calc(-3px * var(--motion))) rotate(calc(-.5deg * var(--motion)))}50%{transform:translateY(calc(3px * var(--motion))) rotate(calc(.5deg * var(--motion)))}}
+@keyframes tower-float{0%,100%{transform:translateY(calc(-3px * var(--motion))) rotate(calc(-.5deg * var(--motion))) scale(var(--figure-scale,.66))}50%{transform:translateY(calc(3px * var(--motion))) rotate(calc(.5deg * var(--motion))) scale(var(--figure-scale,.66))}}
+@keyframes storm-light{0%,59%,63%,66%,100%{opacity:0}60%,64%{opacity:.6}61%,65%{opacity:.2}}
+@keyframes wheel-light{to{transform:rotate(360deg)}}
+@media(max-width:680px){.gallery-nav{flex-wrap:wrap;padding:12px}.gallery-nav select{max-width:190px}.paging{gap:8px}.gallery-nav>a{width:100%}}
